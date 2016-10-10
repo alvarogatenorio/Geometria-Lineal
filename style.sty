@@ -1,0 +1,84 @@
+\ProvidesPackage{style}
+
+%Paquetes de Márgenes
+\usepackage[a4paper,margin=3cm]{geometry}
+
+%Paquetes de Idioma
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+%Paquetes para Referencias Cruzadas
+\usepackage[linktoc=all]{hyperref}
+
+%Símbolos Adicionales
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{latexsym}
+
+%Cajas.
+\usepackage{fancybox}
+
+%Paquetes para Entornos
+\usepackage{amsthm}
+
+%Entornos sin Cursiva
+\theoremstyle{definition}
+\newtheorem{defi}{Definición}[section]
+\newtheorem{obs}[defi]{Observación}
+\newtheorem{exa}{Ejemplo}[section]
+
+%Entornos con Cursiva
+\theoremstyle{plain}
+\newtheorem{theo}{Teorema}[section]
+\newtheorem{lem}[theo]{Lema}
+\newtheorem{prop}[theo]{Proposición}
+\newtheorem{cor}[theo]{Corolario}
+
+%Cuadrado Negro
+\renewcommand\qedsymbol{$\blacksquare$}
+
+%Conjuntos Usuales
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+
+%Implicaciones
+\newcommand{\ra}{\Rightarrow}
+\newcommand{\la}{\Leftarrow}
+\newcommand{\sii}{\Leftrightarrow}
+\newcommand{\siidef}{\stackrel{\textrm{def}}{\sii}}
+
+%Igualdades Especiales
+\newcommand{\equals}[1]{\stackrel{\textrm{#1}}{=}}
+
+%Implicaciones y Contenidos con Recuadros
+\newcommand{\bra}{\fbox{$\ra$}}
+\newcommand{\bla}{\fbox{$\la$}}
+\newcommand{\bsubset}{\fbox{$\subset$}}
+\newcommand{\bsetsub}{\fbox{$\supset$}}
+
+%Tal Que de Anibal
+\newcommand{\tq}{\shortparallel}
+
+%Tipos de Letra
+\newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\ti}[1]{\textit{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mb}[1]{\mathbb{#1}}
+\newcommand{\mf}[1]{\mathfrak{#1}}
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+
+%Cero y Vacío
+\newcommand{\smz}{\setminus\{0\}}
+\newcommand{\zset}{\{0\}}
+\newcommand{\emset}{\emptyset}
+
+%Cosas Específicas
+\newcommand{\class}[1]{	 \left [ #1 \right ]}
+\newcommand{\proy}[1]{\mathbb{P}(#1)}
+\newcommand{\engen}[1]{\mc{V}(#1)}
+\newcommand{\lengen}[1]{\mc{L}(#1)}

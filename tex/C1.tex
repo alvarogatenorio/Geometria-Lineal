@@ -1,0 +1,427 @@
+\chapter{Espacio Proyectivo y Variedades Proyectivas}
+\label{C1}
+\section{El Espacio Proyectivo}
+\label{C1_espacioProyectivo}
+Sea $E$ un $\K$--espacio vectorial arbitrario.
+
+Podemos realizar dos aproximaciones equivalentes a la noción de espacio proyectivo, que confundiremos según nos convenga. Cabe destacar que la segunda de estas aproximaciones tiene especial interés en la \ti{topología}, por estar basada en conjuntos cociente.
+\subsection{Primera Aproximación}
+\label{C1_S1_primeraAprox}
+\begin{defi}[Espacio Proyectivo]
+	\label{C1_def_espacioProyectivo1}
+	Se define el \ti{espacio proyectivo} asociado a $E$ como el conjunto de los subespacios vectoriales de dimensión $1$ de $E$. Lo denotaremos por $\proy{E}$.
+\end{defi}
+Expresando el contenido de la definición \ref{C1_def_espacioProyectivo1} con una notación conjuntista obtenemos lo siguiente.
+\begin{equation}
+\label{C1_eq_espacioProyectivoConjuntista}
+	\proy{E}:\equals{def.}\{\class{u}\tq u\in E\smz\}
+\end{equation}
+En la ecuación \ref{C1_eq_espacioProyectivoConjuntista} hay una notación implícita que pasamos a explicar a continuación.
+\begin{defi}[Rayo]
+	\label{C1_def_rayo}
+	Sea $u\in E\smz$, se denomina \ti{rayo} engendrado por $u$ al conjunto de todos los vectores proporcionales a $u$, es decir:
+	\[\class{u}:\equals{def.}\{\lambda u\tq \lambda\in\K\}\] 
+\end{defi}
+Consideraremos, a partir de ahora, a los rayos como los \ti{puntos} del espacio proyectivo.
+
+Antes de continuar, notemos algunos casos curiosos.
+\begin{obs}[Casos Extremos]
+	\label{C1_obs_casosExtremos}
+	\begin{enumerate}
+		\item Si $E=\zset$ entonces, por definición $\proy{E}=\emset$, ya que no hay ningún subespacio de dimensión 1.
+		\item Si $\dim(E)=1$ entonces $\proy{E}$ consta de ún único elemento, el rayo generado por el vector de la base de $E$ (o cualquier otro no nulo).
+	\end{enumerate}
+\end{obs}
+\subsection{Segunda Aproximación}
+\label{C1_S1_segundaAprox}
+La definición \ref{C1_def_espacioProyectivo1} tiene una traducción natural en términos de relaciones de equivalencia y conjuntos cociente.
+\begin{defi}[Relación de Proporcionalidad]
+	\label{C1_def_proporcionalidad}
+	Se comprueba inmediatamente que la relación $\mc{R}$ definida en $E\smz$ como:
+	\[u\mc{R}v\siidef \exists \lambda\in\K^*\tq u = \lambda v\]
+	es de equivalencia, siendo la clase de equivalencia de un vector $v$ el conjunto de todos los proporcionales a él, es decir el \ti{cuasirayo} generado por $v$ (rayo al que se le ha sustraído el $0$).
+\end{defi}
+La clase del vector $u$ según la relación de equivalencia definida en \ref{C1_def_proporcionalidad} será denotada por $u\mc{R}$. Es trivial ver que se cumple:
+\[u\mc{R}=\class{u}\smz\]
+\begin{defi}[Espacio Proyectivo]
+	\label{C1_def_espacioProyectivo2}
+	Definimos espacio proyectivo asociado a $E$ como el conjunto de las clases de equivalencia de $\mc{R}$, es decir, el conjunto cociente $\frac{E\smz}{\mc{R}}$.
+\end{defi}
+\subsection{Equivalencia de las Aproximaciones}
+\label{C1_S1_equivalenciaAprox}
+Veamos ahora que, intuitivamente, podemos confundir ambas aproximaciones a la noción de espacio proyectivo, estableciendo una biyección entre los conjuntos resultantes de las definiciones \ref{C1_def_espacioProyectivo1} y \ref{C1_def_espacioProyectivo2}. La aplicación natural entre ambos conjuntos es la de asociar al cuasirayo engendrado por un vector su rayo correspondiente, es decir:
+\begin{equation}
+\label{C1_eq_indentificacionNociones}
+	\begin{array}{ccc}
+	\frac{E\smz}{\mc{R}} & \stackrel{\Phi}{\to} & \proy{E}\\
+	u\mc{R} & \mapsto & \class{u}
+	\end{array}
+\end{equation}
+Ver que es una biyección y que está bien definida es un ejercicio fácil que se deja al lector.
+\subsection{Proyección Canónica}
+\label{C1_S1_proyeccionCanonica}
+Una nueva forma muy útil de identificar el espacio proyectivo asociado a $E$ es mediante la imágen de la llamada \ti{proyección canónica}, que es la aplicación (evidentemente sobreyectiva) que a cada vector le asocia su rayo engendrado.
+\begin{equation}
+\label{C1_eq_proyeccionCanonica}
+	\begin{array}{ccc}
+	E\smz & \stackrel{\pi}{\to} & \proy{E}\\
+	u & \mapsto & \class{u}\equiv u\mc{R}
+	\end{array}
+\end{equation}
+\section{Variedades Proyectivas}
+\label{C1_variedadesProyectivas}
+Como es típico en álgebra, trataremos de estudiar los subconjuntos de una estructura que mantienen dicha estructura, en este caso, estudiaremos las variedades o subespacios de espacios proyectivos. Este es un concepto que puede resultar lioso en una primera lectura, pero que es de importancia crucial.
+\begin{defi}[Variedad Proyectiva]
+	\label{C1_def_variedadProyectiva}
+	Dado un subconjunto $X$ de un espacio proyectivo $\proy{E}$, se dirá que $X$ es una variedad proyectiva de $\proy{E}$ si existe una variedad lineal de $E$, a la que llamaremos $\hat{X}$ de manera que el espacio proyectivo asociado a $\hat{X}$ coincide con $X$. Escrito de otra forma:
+	\[
+		X=\proy{\hat{X}}=\pi(\hat{X}\smz)
+	\]
+\end{defi}
+
+El siguiente lema demuestra que hay dos enfoques equivalentes a la idea de variedad proyectiva.
+
+Es muy probable que la demostración pueda reducirse mucho.
+\begin{lem}[Caracterización de las Variedades]
+	\label{C1_lem_caracterizacionVariedades}
+	$X$ es variedad proyectiva si y solo si $\pi^{-1}(X)\cup\zset$ es un subespacio vectorial de $E$.
+\end{lem}
+\begin{proof}
+\begin{itemize}
+	\item[$\bra$] Para esta implicación basta ver que $\pi^{-1}(X)\cup\zset$ es un subespacio vectorial. Como $X$ es variedad proyectiva existe cierta variedad lineal $\hat{X}$ de forma que $\pi(\hat{X}\smz)=X$. Si Dios existe y está de nuestra parte se tendrá  $\hat{X}=\pi^{-1}(X)\cup\zset$, con lo que habríamos terminado. En efecto, la igualdad que queremos obtener es equivalente (quitando el cero y aplicando la proyección canónica) a la igualdad $\pi(\hat{X})=\pi(\pi^{-1}(X))=X$, lo cual tenemos por hipótesis.
+	\item[$\bla$] Si $\pi^{-1}(X)\cup\zset$ es un espacio vectorial, su proyectivo asociado será $\pi(\pi^{-1}(X))=X$, con lo que hemos encontrado una variedad lineal de $E$ de forma que $X$ es su espacio proyectivo asociado. Por la definición \ref{C1_def_variedadProyectiva} hemos terminado.
+\end{itemize}
+\end{proof}
+Del lema \ref{C1_lem_caracterizacionVariedades} se deduce que los subespacios vectoriales de $E$ y los subespacios proyectivos de $\proy{E}$ están en biyección, siendo este un resultado análogo al del llamado \ti{lema de la correspondencia} de la teoría de grupos y anillos. Estudiemos más a fondo este hecho.
+
+\begin{obs}[Lema de la Correspondencia]
+	\label{C1_obs_lemaCorrespondencia}
+	Sea $\mc{P}$ el conjunto de las variedades proyectivas de $\proy{E}$. Asimismo sea el conjunto $\mc{L}$ compuesto por las variedades lineales de $E$. Es claro, por la definición de variedad proyectiva \ref{C1_def_variedadProyectiva}y por el lema \ref{C1_lem_caracterizacionVariedades} que la siguiente aplicación es una biyección.
+	\[
+		\begin{array}{ccc}
+		\mc{P} & \stackrel{\Phi}{\to} & \mc{L}\\
+		X & \mapsto & \pi^{-1}(X)\cup\zset
+		\end{array}
+	\]
+	Aunque trivial, es recomendable recordar, que se preservan las contenciones, es decir:
+	\[X\subset Y \sii \pi^{-1}(X)\subset \pi^{-1}(Y)\]
+\end{obs}
+\subsection{Operaciones con Variedades Proyectivas}
+Tras estas observaciones estamos en condiciones de abordar dos problemas elementales pero importantes. Estos son:
+\begin{enumerate}
+	\item Determinar si la intersección de variedades proyectivas es variedad proyectiva.
+	\item Obtener una descripción explícita de los elementos que conforman la mínima variedad que contiene a un subconjunto del espacio proyectivo.
+\end{enumerate}
+\begin{lem}[Intersección de Variedades Proyectivas]
+	\label{C1_lem_interseccionVariedades}
+	Sea la familia de variedades proyectivas $\{X_i\tq i\in I\}$, se tiene que la intersección $\bigcap_{i\in I}X_i$ es una variedad proyectiva.
+	
+	Además, se verifica $\hat{X}=\bigcap_{i\in I}\hat{X_i}$
+\end{lem}
+\begin{proof}
+	Debemos demostrar que $\bigcap_{i\in I}X_i$ es variedad proyectiva. Esto pasa, por el lema \ref{C1_lem_caracterizacionVariedades} si y solo si $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\cup\zset$ es un espacio vectorial. Si tenemos suerte, se cumplirá que $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)=\bigcap_{i\in I}\pi^{-1}(X_i)$. Supongamos que tenemos suerte, en tal caso, por ser cada $X_i$ una variedad proyectiva y por tanto $\pi^{-1}(X_i)\cup\zset$ un subespacio vectorial, y por ser la intersección arbitraria de espacios vectoriales un espacio vectorial, se tiene que $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\cup\zset$ es un subespacio vectorial, como queríamos demostrar.
+	
+	Finalmente, comprobemos que, efectivamente, hemos tenido suerte.
+	\begin{multline*}
+		x\in\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\sii \pi(x)=\class{x}\in\bigcap_{i\in I}X_i\sii\class{x}\in X_i\ \forall i\in I\sii\\\pi^{-1}(\class{x})=x\in\pi^{-1}(X_i)\forall i\in I\sii x\in\bigcap_{i\in I}\pi^{-1}(X_i)
+	\end{multline*}
+	con lo que se obtiene la igualdad deseada.
+	
+	El \ti{además} se obtiene muy fácilmente:\[\hat{X}=\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\cup\zset=\bigcap\pi^{-1}(X_i)\cup\zset=\bigcap_{i\in I}\hat{X_i}\]
+\end{proof}
+Con el lema \ref{C1_lem_interseccionVariedades} queda resuelto el primer problema planteado en esta sección. Pasemos ahora a estudiar la noción de variedad proyectiva engendrada por un subconjunto cualquiera $A$ de $\proy{E}$ así como sus propiedades.
+\begin{defi}[Variedad Engendrada por un Subconjunto]
+	\label{C1_def_variedadEngendrada}
+	Sea $A\subset\proy{E}$ no vacío. Se define la \ti{variedad proyectiva engendrada por $A$} al menor subespacio proyectivo que contiene a $A$. A esta, se la denotará por $\engen{A}$.
+\end{defi}
+Vamos a demostrar la existencia de dicha variedad construyéndola mediante un truco muy habitual en matemáticas.
+\begin{obs}[Existencia de la Variedad Engendrada]
+	\label{C1_obs_variedadEngendrada}
+	Sea $\mc{L}$ la familia de las variedades proyectivas de $\proy{E}$ que contienen a $A$. Es trivial demostrar que $\bigcap_{X\in\mc{L}}X$ es la menor variedad proyectiva que contiene a $A$.
+	
+	Que es variedad proyectiva es evidente por el lema \ref{C1_lem_interseccionVariedades}. Es la menor variedad ya que, dada cualquer otra variedad que contenga a $A$, esta pertenecerá a la familia $\mc{L}$, por lo que su intersección estará contenida en la variedad.
+\end{obs}
+La \ref{C1_obs_variedadEngendrada} demuestra la existencia de la variedad engendrada de la misma forma que demostramos la existencia de un subespacio vectorial engendrado por un conjunto, o del subgrupo generado por un conjunto, lo que deja claro la importancia de este truco. Sin embargo, esta demostración no nos da una descripción explícita de los elementos de la variedad.
+
+Una forma de resolver este problema es, a la luz del lema \ref{C1_lem_caracterizacionVariedades}, encontrar la variedad lineal asociada a la variedad engendrada.
+\begin{lem}[Variedad Lineal Asociada a una Variedad Engendrada]
+	\label{C1_lem_variedadLinealAsociada}Se tiene que \[\widehat{\engen{A}}=\lengen{\pi^{-1}(A)}\]
+	Es decir, la variedad lineal asociada a la variedad proyectiva engendrada por $A$ es aquella que engendra la preproyección de $A$ sobre $E$.
+\end{lem}
+\begin{proof}\begin{itemize}
+		\item[\bsetsub] Como $A\subset\engen{A}$ entonces $\pi^{-1}(A)\subset\widehat{\engen{A}}\ra\lengen{\pi^{-1}(A)}\subset\widehat{\engen{A}}$
+		\item[\bsubset]$A\subset\pi({\lengen{\pi^{-1}(A)}})$ ya que $\lengen{\pi^{-1}(A)}\supset\pi^{-1}(A)$. Como $\lengen{\pi^{-1}(A)}$ es un subespacio vectorial, su proyectivizado será una subvariedad proyectiva $X$, por lo cual $X=\pi({\lengen{\pi^{-1}(A)}})$. Como por la primera desigualdad conjusista de esta segunda parte de la demostración nos dice que $A\subset X$, tenemos la desigualdad: \[A\subset\engen{A}\subset X=\pi({\lengen{\pi^{-1}(A)}})\]
+		Aplicando $\pi^{-1}$ a la desigualdad obtenemos:
+		\[\pi^{-1}(\engen{A})=\widehat{\engen{A}}\smz\subset\lengen{\pi^{-1}(A)}\smz\]
+	\end{itemize}
+\end{proof}
+El lema \ref{C1_lem_variedadLinealAsociada} nos da una descripción explícita de los elementos de la variedad engendrada por un conjunto, basta aplicar la proyección canónica para obtener:
+\begin{equation}\label{C1_eq_explicitaEngendrados}
+	\engen{A}=\pi(\lengen{\pi^{-1}(A)})
+\end{equation}
+
+Tengamos especialmente en cuenta el caso de las variedades engendradas por conjuntos finitos.
+\begin{exa}[Variedades Engendradas por Conjuntos Finitos]
+	\label{C1_exa_generadoresFinitos}
+	Sea $A=\{p_1,\dots,p_n\}$, denotaremos $\engen{A}=\engen{p_1,\dots,p_n}$, escogiendo un representante arbitrario para cada $p_i=\class{u_i}$ obtenemos, por \ref{C1_eq_explicitaEngendrados} que
+	\[\engen{p_1,\dots,p_n}=\pi(\lengen{u_1,\dots,u_n})\]
+\end{exa}
+\section{Dimensiones y Fórmula de Grassmann}
+Prosiguiendo en nuestra traducción de los conceptos del mundo vectorial al idioma proyectivo introduciremos el concepto de dimensión de un espacio proyectivo y deduciremos la llamada fórmula de Grassmann.
+
+\subsection{Dimensiones y Fórmula de Grassmann}
+Es importante tener claro que los espacios proyectivos \tb{no} son espacios vectoriales, ya que no hemos definido la noción de suma de rayos o producto de rayos por escalares. Sin embargo, parece razonable extender la noción de dimensión a los espacios proyectivos.
+
+Intuitivamente, al considerar las rectas vectoriales como puntos, estamos, entre comillas, perdiendo un grado de libertad. Esta idea es recogida por la siguiente definición. 
+\begin{defi}[Dimensión de un Espacio Proyectivo]
+	\label{C1_def_dimension}
+	Si $E$ es un espacio vectorial de dimensión $n$, se define la dimensión de $\proy{E}$ como $n-1$. Es decir, la \ti{codimensión} de un espacio proyectivo respecto de su espacio lineal asociado es $1$.
+\end{defi}
+
+Usualmente nos referiremos a los espacios proyectivos de dimensión $1$ como \ti{rectas proyectivas}, a los de dimensión $2$ como \ti{planos proyectivos} y a los de dimensión $3$ como \ti{espacios proyectivos}.
+
+Es importante distinguir algunos casos extremos que pueden parecer chocantes.
+\begin{obs}[Casos Extremos]
+	\label{C1_obs_casosExtremosDim}
+	\begin{enumerate}
+		\item Si $E$ es un espacio vectorial de dimensión $1$, entonces $\proy{E}$ tiene dimensión nula, lo cual tiene sentido al estar conformado por un solo punto.
+		\item Si $E =\zset$, es decir, un espacio vectorial de dimensión $0$, resulta que su espacio proyectivo tiene dimensión $-1$.
+	\end{enumerate}
+\end{obs}
+Estamos ahora en condiciones de presentar el ejemplo de \ti{espacio canónico}, cuya notación no hubiéramos entendido hasta ahora.
+\begin{exa}[Espacio Canónico]
+	\label{C1_exa_espacioCanonico}
+	El espacio proyectivo asociado a un espacio vectorial de la forma $E=\K^{n+1}$ se denomina \ti{espacio canónico} y se denota por:\[\proy{E}:\equals{not.}\mb{P}^n\]
+\end{exa}
+Una igualdad recurrente en matemáticas es la llamada \ti{fórmula de Grassmann}, que se presenta con diversas versiones en áreas tan dispersas de las matemáticas como la teoría de conjuntos, la probabilidad, la teoría de grupos, el álgebra lineal,... Como no podía ser de otra manera, también está presente en los espacios proyectivos.
+\begin{theo}[Fórmula de Grassmann, Teorema de la Incidencia]
+	\label{C1_teo_grassmann}
+	Sean $X,Y\subset\proy{E}$ dos variedades proyectivas. Se tiene que:
+	\[\dim(\engen{X,Y})=\dim(X)+\dim(Y)-\dim(X\cap Y)\]
+\end{theo}
+\begin{proof}
+	Apoyándonos en la fórmula de Grassmann para espacios vectoriales, sale fácilmente. En efecto, como  \[\dim(\engen{X,Y})=\dim(\widehat{\engen{X,Y}})-1\] y además \[\dim(X)+\dim(Y)-\dim(X\cap Y)=\dim(\widehat{X})-1+\dim(\widehat{Y})-1-\dim(\widehat{X\cap Y})+1\] por la fórmula de Grassmann en espacios vectoriales sabemos que los dos miembros de la derecha de sendas igualdades coinciden.
+\end{proof}
+Este teorema arroja un corolario importante, del que debemos extraer la idea de que en los espacios proyectivos las cosas se cortan muy fácilmente. Es por esto que se conoce a la geometría proyectiva como \ti{geometría de la incidencia}.
+\begin{cor}[Hiperplanos y Rectas]
+	\label{C1_cor_rectaHiperplano}
+	Una recta y un hiperplano proyectivos siempre se cortan.
+\end{cor}
+\begin{proof}
+	Basta sustituir las dimensiones en la fórmula de Grassmann teniendo en cuenta que $\dim(\proy{E})\geq\dim(\engen{X,Y})$, despejando se concluye que $\dim(\engen{X,Y})\geq 0$, y por tanto hay al menos un punto común.
+\end{proof}
+\section{Referencias Proyectivas}
+En esta sección trataremos de extrapolar el concepto de \ti{base} de un espacio vectorial a los espacios proyectivos.
+
+Sea $E$ un $\K$--espacio vectorial cualquiera de dimensión $n+1$. Sabemos por álgebra lineal que, dada $\mc{B}:=\{e_0,\dots,e_n\}$ una base de $E$, cualquier vector $x\in E$ puede escribirse de manera única como combinación lineal de los vectores que conforman la base, es decir, para ciertos $\lambda_i$ con $i\in\{0,\dots,n\}$ se tiene:
+\begin{equation}
+\label{C1_eq_combinacionLineal}
+x=\sum_{i=0}^{n}\lambda_ie_i\stackrel{\textrm{not.}}{\equiv}(\lambda_0,\dots,\lambda_n)_{\mc{B}}\stackrel{\textrm{not.}}{\equiv}\mc{B}X
+\end{equation}
+Nótese que la tercera equivalencia de la ecuación \ref{C1_eq_combinacionLineal}, es un mero abuso de notación muy extendido para hacer la notación más compacta.
+
+Volviendo al mundo proyectivo, queremos encontrar cierta colección de \ti{entes} en función de los cuales poder escribir todos los demás. 
+\subsection{Coordenadas Homogéneas}
+\label{C1_coordenadasHomogeneas}
+Si tomamos un punto proyectivo $x:=\class{u}$, por la ecuación \ref{C1_eq_combinacionLineal} podremos escribir:
+\begin{equation}
+	\label{C1_eq_coordenadasHomogeneas}
+	x:\class{u}=\class{(\lambda_0,\dots,\lambda_n)_{\mc{B}}}:\stackrel{\textrm{not.}}{\equiv}(\lambda_0:\dots:\lambda_n)
+\end{equation}
+Al último miembro de la ecuación \ref{C1_eq_coordenadasHomogeneas} se le llama \ti{escritura de $x$ en coordenadas homogéneas}.
+
+Nótese que, fijada una base, las coordenadas homogéneas de un punto proyectivo son únicas salvo proporcionalidad, ya que si se toma un representante $u'$ distinto del rayo vectorial, su escritura respecto de la base $\mc{B}$ será proporcional a la de $u$.
+
+Con esto podría decirse que hemos cumplido el objetivo de la sección, ya que, dada una base de $E$, podemos escribir en función de ella a cualquier punto proyectivo.
+
+Sin embargo, estamos creando una referencia en base a otra ya existente, lo cual no es muy recomendable salvo si nuestra referencia base (base del espacio vectorial) es \ti{estándar} o \ti{canónica}, lo cual sólo ocurre en contadas ocasiones, por ejemplo, en los espacios canónicos.
+\subsection{Referencias Proyectivas}
+Para evitar los problemas derivados de la aproximación presentada en el apartado anterior, debemos concentrarnos en la idea de que lo que debemos hacer es encontrar una colección de elementos del espacio proyectivo en función de los cuales poder escribir todos los demás. A ese conjunto de puntos lo llamaremos \ti{referencia proyectiva}.
+\begin{defi}[Independencia Proyectiva]
+	\label{C1_def_independenciaProyectiva}
+	Sea un conjunto $\{p_0,\dots,p_r\}\subset\proy{E}$, diremos que son \ti{proyectivamente independientes} si ninguno de ellos está en la variedad proyectiva engendrada por los restantes.
+\end{defi}
+Con un poco de trabajo adicional extraemos la siguiente caracterización de la independencia proyectiva.
+\begin{lem}[Caracterización de la Indepencia Proyectiva]
+	\label{C1_lem_caracterizacionIndependencia}
+	Un conjunto de puntos proyectivos es proyectivamente independiente si y solo si sus representantes son linealmente independientes, sin depender de la elección de los mismos. 
+\end{lem}
+\begin{proof}
+	Decir que los representantes son linealmente independientes es equivalente a decir que, dado un de ellos, no puede ser expresado como combinación lineal de los restantes y por ende no se encuentra en la variedad lineal engendrada por estos. Por la ecuación \ref{C1_eq_explicitaEngendrados} sabemos que:
+	\[u_i\not\in\lengen{u_0,\dots,u_{i-1},u_{u+1},\dots,u_{r}}\sii\class{p_i}\not\in\engen{p_0,\dots,p_{i-1},p_{i+1},\dots,p_r}\]
+\end{proof}
+\begin{obs}[Base Inducida]
+	\label{C1_obs_baseInducida}
+	En un espacio proyectivo de dimensión $n$, podemos escoger un conjunto de $n+1$ puntos proyectivamente independientes, ya que, para cualquier elección de representantes de estos puntos, se obtendrían $n+1$ vectores linealmente independientes del espacio vectorial asociado $E$, de dimensión $n+1$, en el cual estos vectores, por definición formarían una base a la que llamaremos \ti{base inducida}.
+\end{obs}
+Hay un gran problema con la definición \ref{C1_def_independenciaProyectiva}, y es que, dados $n+1$ puntos proyectivos, inducimos una familia de bases de $E$ demasiado ``grande''. Con grande nos referimos a que no solo inducimos una base junto con todas las proporcionales a ella (resultantes de aplicarle el mismo factor de escala a todos sus vectores), sino muchas más.
+\begin{obs}[No Unidad de la Base Inducida]
+	\label{C1_obs_noUnicidadBase}
+	Dada una elección de representantes $\{u_o,\dots,u_n\}$ que son una base de $E$, entonces, el conjunto de representantes $\{\lambda_0u_0,\dots,\lambda_nu_n\}$, con $\lambda_i\in\K^*$ también conforma una base de $E$.
+\end{obs}
+
+Para solucionar este problema deberemos añadir alguna restricción más a la definición de base inducida.
+\begin{defi}[Referencia Proyectiva]
+	\label{C1_def_refereciaProyectiva}
+	Dado un espacio proyectivo de dimensión $n$, una \ti{referencia proyectiva} es un conjunto \tb{ordenado} $\mf{R}$ de $n+2$ puntos de tal forma que cada $n+1$ de ellos son proyectivamente independientes. 
+\end{defi}
+
+A pesar de ser una referencia proyectiva un conjunto ordenado normalmente lo escribiremos con la notación usual para conjuntos.
+
+\begin{obs}[Reordenación]
+	\label{C1_obs_reordenacionReferencias}
+	Dada una referencia $\mf{R}$, cualquier reordenación de la misma sigue siendo referencia proyectiva.
+\end{obs} 
+
+\begin{exa}[Referencias Proyectivas en Dimensiones Bajas]
+	\label{C1_exa_dimensionesBajas}
+	\begin{enumerate}
+		\item En caso de querer dar una referencia de la recta proyectiva deberemos elegir tres puntos proyectivamente independientes dos a dos.
+		\item Si queremos referenciar el plano proyectivo deberemos dar lo que se llama \ti{triangulo de referencia}, es decir, una elección de cuatro puntos proyectivamente independientes tres a tres.
+		\item La misma idea se extrapola al espacio proyectivo, donde habría que escoger un \ti{tetraedro de referencia}
+	\end{enumerate}
+\end{exa}
+\subsection{Base Asociada a una Referencia Proyectiva}
+Siguiendo la idea de las observaciones \ref{C1_obs_baseInducida} y \ref{C1_obs_noUnicidadBase} vamos a estudiar las propiedades de las bases asociadas a referencias proyectivas.
+\begin{defi}[Base Asociada]
+	\label{C1_def_baseAsociada}
+	Una base $\mc{B}$ de $E$ se dice \ti{asociada} a la referencia proyectiva $\mf{R}$ si sus vectores son representantes de los $n+1$ primeros puntos proyectivos, y además, la suma de sus vectores es representante del último de los puntos.
+\end{defi}
+Nótese que una base asociada no es más que una base inducida con una pequeña restricción más, con la suerte de que esta es fundamental para solucionar el problema de la no unicidad salvo proporcionalidad, tal y como muestra el siguiente teorema, cuya demostración es constructiva.
+\begin{theo}[Unicidad de la Base Asociada]
+	\label{C1_teo_unicidadBase}
+	Para cada referencia proyectiva $\mf{R}$ de $\proy{E}$ hay una base asociada única salvo un factor no nulo común a todos los elementos de la base.
+\end{theo}
+\begin{proof}
+	\begin{enumerate}
+		\item Probemos la existencia de dicha base. Dada una referencia proyectiva $\mf{R}$, tomemos representantes de cada uno de los puntos. Por ser $\mf{R}$ referencia proyectiva y por el lema \ref{C1_lem_caracterizacionIndependencia} los representantes de los $n+1$ primeros puntos forman una base de $E$, y por ende el representante del último punto puede escribirse como combinación lineal de los anteriores. Denotando por $u_i$ al representante escogido para el $i$--ésimo punto se tiene que:
+		\[u_{n+1}=\sum_{i=0}^{n}a_iu_i\]
+		Veamos que $\mc{B}=\{a_iu_i\tq 0\leq i\leq n\}$ es una base de $E$ y además sus vectores son representantes de los $n+1$ primeros puntos de $\mf{R}$. Esto es debido a que ninguno de los coeficientes $a_i$ es nulo. Si alguno lo fuera, por ejemplo $a_0=0$, se tendríamos la relación:
+		\[
+		u_{n+1}=\sum_{i=1}^{n}a_iv_i\in\lengen{v_1,\dots,v_n}
+		\] Lo cual va contra la hipótesis de independencia proyectiva. Además, la suma de sus vectores es un representante del último punto de la referencia. Luego $\mc{B}$ es base asociada a $\mf{R}$.
+		\item Para demostrar la unicidad supongamos la existencia de dos bases asociadas:
+		\begin{gather*}
+			\mc{B}:=\{u_0,\dots,u_n\}\\
+			\mc{B}^*:=\{u_0',\dots,u_n'\}
+		\end{gather*}
+		Instantáneamente se ve que $u_i'=u_i\lambda_i$ para algún $\lambda\in\K^*$ para todos los $i\in\{0,\dots,n\}$, ya que si no no serían representantes de los primeros elementos de la referencia. Además, se debe dar la condición:
+		\[\class{\sum_{i=0}^{n}u_i}=\class{\sum_{i=0}^{n}u_i'}\] y por ende las sumas deben ser proporcionales, de lo que se desprende:
+		\[\sum_{i=0}^{n}u_i'=\sum_{i=0}^{n}u_i\lambda_i=\lambda\sum_{i=0}^{n}u_i\]
+		Es decir, las bases son proporcionales.
+	\end{enumerate}
+\end{proof}
+La comprobación de que un conjunto ordenado de $n+2$ puntos es referencia proyectiva puede ser muy tediosa ya que consiste en realizar $\binom{n+2}{n+1}=n+2$ determiantes de orden $n+1$. El lema \ref{C1_lem_comprobacionReferencias} es extramadamente útil pues reduce esta comprobación al cálculo de un determinante de orden $n+1$ y a la inversión de una matriz de orden $n+1$.
+\begin{lem}[Comprobación de Referencias Proyectivas]
+	\label{C1_lem_comprobacionReferencias}
+	Para comprobar que $n+2$ puntos proyectivos $x_i=\class{v_i}$ conforman una referencia proyectiva basta comprobar las siguientes condiciones:\begin{enumerate}
+		\item Los $n+1$ primeros puntos son proyectivamente independientes.
+		\item Al escribir $v_{n+1}=\sum_{i=0}^{n}\lambda_iv_i$ se tiene que $\lambda_i\not=0\ \forall 0\leq i\leq n$
+	\end{enumerate}
+\end{lem}
+\begin{proof}
+	Si se cumplen las condiciones del enunciado se tiene que $\{\lambda_0u_0,\dots,\lambda_nu_n\}$ es una base de $E$. Si a este conjunto le añadimos $v_{n+1}$, sabemos por álgebra lineal que es un conjunto linealmente dependiente y un sistema de generadores de $E$. Por ende, alguno de los vectores del conjunto puede ponerse como combinación lineal de los demás, y extrayendo este elemento del conjunto, este seguirá siendo sistema de generadores. Obviamente, $v_{n+1}$ puede ponerse como combinación lineal de los demás, pero esto no nos ayuda. Lo interesante es, que como todos los coeficientes $\lambda_i$ son no nulos, podemos despejar cualquier $v_i$ de la ecuación, de esta forma:
+	\[v_{n+1}=\sum_{i=0}^{n}\lambda_iv_i\sii v_i = \sum_{j\not=i,n+1}\frac{\lambda_j}{-\lambda_i}u_j+\frac{1}{\lambda_i}u_{n+1}\]
+	Entonces podemos formar $\binom{n+2}{n+1}=n+2$ conjuntos diferentes de $n+1$ vectores, si todos ellos formaran bases habríamos terminado, pero esto es evidente, ya que son sistemas de generadores de $n+1$ elementos, es decir, bases.
+\end{proof}
+Para clarificar un poco las cosas se presenta el siguiente ejemplo.
+\begin{exa}[Referencia de $\mb{P}^2$]
+	\label{C1_exa_basesAsociadas}
+	En $\mb{P}^2$ nos dan los puntos: \begin{gather*}a_0=(1:0:1),\ a_1=(0:2:1)\\a_2=(0:0:1),\ a_3=(1:-1:0)
+	\end{gather*}
+	
+	Donde las coordenadas homogéneas vienen dadas según la base estándar de $\R^3$.
+	
+	Se pide estudiar si dichos puntos conforman una referencia proyectiva.
+	
+	Siguiendo el lema \ref{C1_lem_comprobacionReferencias} para ahorrarnos cálculos, vemos que los representantes de $a_0$, $a_1$ y $a_2$ son una base de $\R^3$
+		\begin{equation*}
+		u_0=(1,0,1),\ u_1=(0,2,1),\ u_3=(0,0,1)
+		\end{equation*}
+	En efecto, al calcular el determinante:
+	\[\begin{vmatrix}
+	1 & 0 & 1\\
+	0 & 2 & 1\\
+	0 & 0 & 1
+	\end{vmatrix}\not= 0\]
+	Ahora, tomando $u_3=(1,-1,0)$ como representante de $a_3$, bastaría resolver el sistema de ecuaciones lineales (que sabemos compatible determinado) dado por:
+	\[\alpha u_0+\beta u_1 + \gamma u_2 = u_3\]
+	Si la matriz columna solución no tiene ningún coeficiente nulo la colección de puntos original conforma una referencia proyectiva de base asociada dada por el método de construcción de bases asociadas (teorema \ref{C1_teo_unicidadBase}), es decir, la base asociada sería:\[\mc{B}=\{\alpha u_0,\beta u_1, \gamma u_2\}\]
+	
+	Con un poquito de magia se obtiene que:\[\alpha = 1,\ \beta = -\frac{1}{2},\ \gamma = -\frac{1}{2}\]
+	Como no son todos nulos, los puntos originales conforman una referencia proyectiva.
+	
+	Una base asociada sería:
+	\[
+	\mc{B}=\left\{(1,0,1), \left(0,-1,-\frac{1}{2}\right),\left(0,0,-\frac{1}{2}\right)\right\}
+	\]
+	
+	Como esta base es única salvo proporcionalidad, podríamos multiplicar todo por $2$ para que nos queda algo más bonito.
+	\[
+	\mc{B}'=\left\{(2,0,2), \left(0,-2,-1\right),\left(0,0,-1\right)\right\}
+	\]
+\end{exa}
+Antes de continuar, fijemos una notación para referirinos a referencias proyectivas.
+
+Dada una referencia proyectiva $\mf{R}$, la denotaremos por los puntos que la conforman de la siguiente manera:
+\begin{equation}
+\label{C1_eq_notacionReferencias}
+\mf{R}=\{p_0,\dots,p_n;E\}
+\end{equation}
+Donde $E$ representa el último punto al que llamaremos \ti{punto unidad}.
+\begin{defi}[Coordenadas Homogéneas Respecto de una Referencia $\mf{R}$]
+	\label{C1_def_coordenadasReferencia}
+	Dado un punto proyectivo $p\in\proy{E}$ y una referencia proyectiva $\mf{R}$, se dice que $p=(x_0:\dots :x_n)_{\mf{R}}$ si, para cualquier elección de $u$ (representante del rayo $p$) y cualquier elección de base asociada $\mc{B}$ a $\mf{R}$, se tiene que:
+	\[u=\lambda(x_0,\dots,x_n)_{\mc{B}}\]
+\end{defi}
+Es evidente, por lo visto en la sección \ref{C1_coordenadasHomogeneas} y en el teorema \ref{C1_teo_unicidadBase}, que la definición \ref{C1_def_coordenadasReferencia} es sólida.
+\section{Cambios de Referencia Proyectiva}
+POSPUESTO HASTA QUE LO DEMOS EN CLASE!!!
+\section{Coordenadas de Subespacios Proyectivos}
+REPASAR ECUACIONES PARAMÉTRICAS Y CARTESIANAS DE UN SUBESPACIO Y ESPACIO DUAL!!! (HASTA RECTAS ES MÁS O MENOS LEGIBLE)
+
+Nuestra tarea aquí es tratar de, dado un subespacio proyectivo, por ejemplo una recta o un plano proyectivos, dar una referencia proyectiva de ese subespacio mediante la cual dar una descripción explícita de sus elementos. Comenzaremos estudiando el caso más sencillo, las rectas proyectivas, tras esto estudiaremos los hiperplanos proyectivos en general.
+\subsection{Rectas Proyectivas}
+\begin{defi}[Recta en $\proy{E}$]
+	\label{C1_def_rectaProyectiva}
+	Se define \ti{recta proyectiva} que pasa por los puntos proyetivos $P$ y $Q$ como la variedad engendrada por dichos puntos. A dicha recta se la denomina \ti{recta} $PQ$.
+\end{defi}
+\begin{exa}[Descripción de una Recta]
+	\label{C1_exa_descripcionRecta}
+	Sean $P=\class{u}$ y $Q=\class{v}$ dos puntos proyectivos, vamos a describir los elementos de la recta $PQ$, que no es otra cosa que $\engen{P,Q}$.
+	
+	Para describir los elementos de esta variedad (o de cualquiera) deberemos dar una referencia en función de la cual \ti{coordenar} todos los puntos de la misma.
+	
+	Como $P$ y $Q$ son dos puntos proyectivos distintos, los vectores $u,v$ son linealmente independientes, formando una base de la variedad lineal $\lengen{u,v}$.
+	
+	Para construir una referencia bastaría tomar los puntos $P,Q$ y añadirle como punto unidad un tercer punto cuyo representante pueda ser escrito como combinación lineal de $u$ y $v$ con todos los coeficientes no nulos, por ejemplo $\class{u+v}$.
+	
+	De esta forma tenemos la referencia:
+	\[\mf{R}=\{P,Q;\class{u+v}\}\]
+	Por el método de construcción de bases asociadas tenemos que la base asociada a esta referencia es $\mc{B}=\{u,v\}$. Como sabemos, todo punto $p\in\engen{P,Q}$ es un rayo representado por un vector de $\lengen{u,v}$. Es decir, un vector $w=\alpha u+\beta v$ con alguno de los coeficientes no nulo.
+	
+	Esto quiere decir que todo punto de la recta $PQ$ es un rayo de la forma: \[\class{\alpha u+\beta v}=(\alpha:\beta)\]
+	Sin embargo, podemos reducir esto aún un poco más, cambiemos el representante del rayo dividiendo todo por $\beta$.
+	\[\class{\frac{\alpha}{\beta}u+v}:\stackrel{\textrm{not.}}{=}\class{\theta u+v}\]
+	De esta forma la recta ya no queda descrita por dos coordenadas homogéneas $\alpha$ y $\beta$ como antes, sino por una única coordenada $\theta$ a la que llamaremos \ti{no homogénea}.
+	
+	Sin embargo, hemos de tener cuidado, pues, como más de uno ya se habrá dado cuenta, es posible que en algunos casos $\beta$ se anule, por ende, $\theta$ no estaría definida. Como este caso se corresponde con un único punto, y este es el punto $P$, diremos que una recta queda descrita por lo siguiente:
+	\begin{equation}
+	\label{C1_eq_descripcionRecta}
+		PQ:\{\class{\theta u+v}\tq \theta\in\K\}\cup\{P\}
+	\end{equation}
+\end{exa}
+\begin{exa}[Parametrización de una Recta Concreta]
+	\label{C1_exa_rectaConcreta}
+	Dados los puntos $P=(1:2:-1)$ y $Q=(0:1:3)$ se nos pide parametrizar la recta $PQ$, siguiendo los pasos del ejemplo \ref{C1_exa_descripcionRecta} nos queda:
+	\[
+	PQ:\{(\theta:2\theta+1:-\theta+3)\tq\theta\in\K\}\cup\{(1:2:-1)\}
+	\]
+\end{exa}
+\subsection{Hiperplanos Proyectivos}
+Comenzamos este apartado recordando brevemente que los hiperplanos vectoriales son subespacios lineales de codimensión $1$. Asimismo refrescamos al lector la noción de \ti{forma lineal}, que no es más que una aplicación lineal $h:E\to K$.
+
+Dicho esto, dada una forma lineal $h$, no idénticamente nula, por la fórmula de las dimensiones de las aplicaciones lineales, su \ti{núcleo}, es decir, el conjunto de los puntos de $E$ que son anulados por $h$, es un hiperplano vectorial.
+
+
+\subsection{El Teorema de Pappus}

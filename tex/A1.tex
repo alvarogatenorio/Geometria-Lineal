@@ -1,0 +1,134 @@
+\chapter{Espacios Vectoriales}
+Aquí se incluyen unas breves notas acerca de conceptos importantes sobre espacios vectoriales que consideramos indispensables para una total comprensión del texto.
+\section{Cambios de Base}
+POR HACER
+\section{Ecuaciones Cartesianas y Paramétricas}
+El objetivo de esta sección es caracterizar los subespacios vectoriales de varias formas. Una forma de caracterizarlos ya la conocemos, se trata simplemente de encontrar una base del mismo, quedando definido el subespacio como la envoltura lineal de la misma.
+
+Sin embargo, existen otras identificaciones que nos resultarán extremadamente útiles, por ejemplo, la identificación de un subespacio por sus llamadas \ti{coordenadas paramétricas}, y, sobre todo, la identificación por \ti{coordenadas cartesianas}.
+
+Esta última identificación es de extrema importancia en geometría proyectiva cuando el subespacio a identificar es un \ti{hiperplano}.
+\subsection{Introducción}
+Sea un sistema homogéneo de $m$ ecuaciones lineales con $n$ incógnitas. Como ya sabemos, esto puede ser visto como una ecuación matricial $AX=0$, cuyas soluciones (siempre hay al menos una) son matrices columna $X\in\mf{M}_{n\times1}(\K)$. Es claro que podemos identificar (de manera natural) estas matrices columna con elementos de $\K^n$.
+
+\begin{lem}
+	\label{A1_lem_sistemaSubespacio}
+	El conjunto $\mc{S}$ de vectores de $\K^n$ que conforman todas las soluciones del sistema homogéneo $AX=0$ es un subespacio vectorial de $\K^n$.
+\end{lem}
+\begin{proof}
+	Bastará ver que $\mc{S}$ es cerrado respecto de combinaciones lineales. En efecto. Sean $X,Y\in\mc{S}$ y sean $\alpha,\beta\in\K$, veamos que $\alpha X+\beta Y\in S$, es decir, $A(\alpha X+\beta Y)=0$. Esto es obvio ya que por la propiedad distributiva del producto de matrices se tiene que $\alpha AX+\beta AY$. Como $X,Y\in\mc{S}$, el resultado se sigue.
+\end{proof}
+El lema \ref{A1_lem_sistemaSubespacio} nos viene a decir que todo sistema de ecuaciones lineales homogéneo está asociado a un subespacio vectorial de $\K^n$. Sin embargo, lo realmente sorprendente, es que el recíproco también se cumple, es decir, todo subespacio vectorial de $\K^n$ tiene asociado un sistema de ecuaciones lineales homogéneo.
+\subsection{Ecuaciones Paramétricas}
+El objetivo de esta sección es, encontrar las coordenadas de un vector de un subespacio vectorial dada una base del mismo, siendo previamente conocidas las coordenadas de dicho vector respecto de una base del subespacio total. 
+
+Sean $V$ un $\K$--espacio vectorial de dimensión $n$ y $B:=\{e_1,\dots,e_n\}$ una base de $V$ respecto de la cual consideraremos a partir de ahora las coordenadas de cada vector $x\in V$.
+
+Consideremos ahora un subespacio vectorial $U$ de dimensión $r\leq n$. Asimismo tomemos una base de $U$ a la que denotaremos por $B_U:=\{u_1,\dots,u_r\}$.
+
+Es evidente que cada vector $u_i\in B_U$ tiene una escritura en coordenadas respecto de la base $B$.
+\begin{equation*}
+	u_i=(a_{1i},\dots,a_{ni})_B
+\end{equation*}
+
+Asimismo, cada vector $x\in U$ puede escribirse como combinación lineal de los vectores de la base $B_U$, pero también como combinación lineal de los vectores de $B$. Es decir:
+\begin{gather}
+	x=(\lambda_1,\dots,\lambda_r)_{B_{U}}=\lambda_1u_1+\dots+\lambda_ru_r=\nonumber\\
+	=\lambda_1(a_{11},\dots,a_{n1})_{B}+\dots+\lambda_r(a_{1r},\dots,a_{nr})_{B}=\nonumber\\
+	\label{A1_eq_parametricas}=(x_1,\dots,x_n)_{B}
+\end{gather}
+Transformando la ecuación \ref{A1_eq_parametricas} obtenemos un sistema de ecuaciones que transformamos a su forma matricial:
+\begin{gather}
+	\begin{cases}
+		x_1 = a_{11}\lambda_1+\dots+a_{1r}\lambda_r\\
+		x_n = a_{n1}\lambda_1+\dots+a_{nr}\lambda_r\\
+	\end{cases}\equiv\nonumber\\\equiv
+	\begin{pmatrix}
+	x_1\\
+	\vdots\\
+	x_n
+	\end{pmatrix}
+	=\begin{pmatrix}
+	a_{11} & \cdots & a_{1r}\\
+	\vdots & \ddots & \vdots\\
+	a_{n1} & \cdots & a_{nr} 
+	\end{pmatrix}\begin{pmatrix}
+	\lambda_1\\
+	\vdots\\
+	\lambda_r
+	\end{pmatrix}\equiv\nonumber\\
+	\label{A1_eq_formaPedante}
+	\equiv X=P\Lambda
+\end{gather}
+
+Nótese que la matriz $P$ de la ecuación \ref{A1_eq_formaPedante} no es más que la matriz que resulta de introducir por columnas las coordenadas respecto de la base $B$ de los vectores que conforman la base $B_U$.
+
+La ecuación \ref{A1_eq_formaPedante} no es más que un sistema de ecuaciones lineal con $n$ ecuaciones y $r$ incógnitas.
+
+A la ecuación \ref{A1_eq_formaPedante} le pondremos cariñosamente el nombre de \ti{ecuaciones paramétricas de $U$ en forma pedante}.
+
+Para clarificar todo este barullo de subíndices, vayamos con un ejemplo:
+\begin{exa}[Base $\to$ Paramétricas]
+	\label{A1_exa_parametricasR3}
+	Dado un subespacio $U\subset\R^3$ del que sabemos que el conjunto $B_{U}:=\{(1,0,1),(0,1,1)\}$ conforma una base. Dado un vector genérico $x\in U$, se nos pide escribirlo en coordenadas de $B_U$.
+	
+	La solución a este ejercicio se apoya en la ecuación \ref{A1_eq_formaPedante}, de hecho, basta aplicarla.
+	\[\begin{pmatrix}
+	x_1\\
+	x_2\\
+	x_3
+	\end{pmatrix}=\begin{pmatrix}
+	1 & 0\\
+	0 & 1\\
+	1 & 1
+	\end{pmatrix}\begin{pmatrix}
+	\lambda\\
+	\mu
+	\end{pmatrix}=\begin{pmatrix}
+	\lambda\\
+	\mu\\
+	\lambda+\mu
+	\end{pmatrix}\]
+	Basta por tanto, para cada punto concreto, resolver el sistema de ecuaciones lineales y hallar los valores de $\lambda$ y $\mu$, que serán las coordenadas de $x$ respecto de la base $B_U$. Este caso es tan sencillo que puede resolverse en general sin dificultad.
+	
+	Dado un punto concreto $x=(x_1,x_2,x_3)_B$ sabemos que su escritura en la base $B_U$ es: \[x=(\lambda,\mu)_{B_U}=(x_1,x_2)_{B_U}\]
+\end{exa}
+
+Notemos que el mismo proceso que hemos seguido hasta ahora puede reproducirse de fórma idéntca si en lugar de tomar una base $B_U$ del subespacio $U$, tomamos un sistema de generadores $S$, con la salvedad de que la matriz $P$ de la ecuación \ref{A1_eq_formaPedante} tendrá más columnas.
+
+De esta forma, dado un sistema de generadores de $U$ obtenemos unas ecuaciones paramétricas en forma pedante, a partir de las cuales podemos obtener una base de $U$, para ello, basta obtener la forma normal de Hermite por columnas de la matriz $P$. Es por esto que se dice que las ecuaciones paramétricas caracterizan al subespacio $U$ salvo cambio de base.
+\subsection{Ecuaciones Cartesianas}
+Nuestra tarea en este apartado es probar el recíproco del lema \ref{A1_lem_sistemaSubespacio}. Es decir, queremos ver que, dado un subespacio $U$, podemos interpretarlo como el conjunto de soluciones de un sistema de ecuaciones lineales homogéneo. 
+
+Nuestra prueba será constructiva, obteniendo, a patir de unas ecuaciones paramétricas, un sistema homogéneo.
+\subsubsection{Método de Eliminación de Parámetros}
+POR HACER
+\subsubsection{Método Ortopédico}
+POR HACER
+\subsubsection{Conclusiones}
+Es claro a estas alturas que las ecuaciones cartesianas caracerizan a un subespacio, pues a partir de, por ejemplo, una de sus bases, podemos obtener dichas ecuaciones mediante la obtención de las ecuaciones paramétricas y la aplicación de uno de los métodos vistos anteriormente. Recíprocamente a partir de unas ecuaciones cartesianas, mediante la mera resolución del sistema de ecuaciones homogéneo, obtenemos las ecuaciones paramétricas, tal y como muestra el siguiente ejemplo.
+\begin{exa}[Cartesianas $\to$ Paramétricas]
+	Dado el subespacio $U$ definido por la ecuación cartesiana: \[x_1+x_2+x_3=0\] se pide obtener las ecuaciones paramétricas de $U$.
+	
+	Recordando los métodos de resolución de sistemas de ecuaciones no es dificil llegar a las ecuaciones paramétricas:
+	\[\begin{pmatrix}
+		x_1\\
+		x_2\\
+		x_3
+	\end{pmatrix}=\begin{pmatrix}
+	-1 & -1\\
+	1 & 0\\
+	0 & 1\\
+	\end{pmatrix}\begin{pmatrix}
+	\lambda\\
+	\mu
+	\end{pmatrix}\]
+	A partir de este punto, obtener una base es algo chupado.
+\end{exa}
+Como consecuencia de toda esta sección tenemos el siguiente esquema:
+\begin{equation}
+	\doublebox{\textrm{BASE}}\bs{\rightleftarrows}\doublebox{\textrm{EC. PARAMÉTRICAS}}\bs{\rightleftarrows}\doublebox{\textrm{EC. CARTESIANAS}}
+\end{equation}
+Lo que queda de sección se dedicará a sacar algunas conclusiones muy elementales pero de gran importancia a la hora de entender conceptos de geometría proyectiva.
+\subsubsection{Dimensión de un Subespacio}
+\subsubsection{Hiperplanos}

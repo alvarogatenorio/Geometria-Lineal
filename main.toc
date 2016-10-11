@@ -14,19 +14,20 @@
 \contentsline {subsection}{\numberline {1.4.2}Referencias Proyectivas}{8}{subsection.1.4.2}
 \contentsline {subsection}{\numberline {1.4.3}Base Asociada a una Referencia Proyectiva}{9}{subsection.1.4.3}
 \contentsline {section}{\numberline {1.5}Cambios de Referencia Proyectiva}{11}{section.1.5}
-\contentsline {section}{\numberline {1.6}Coordenadas de Subespacios Proyectivos}{12}{section.1.6}
-\contentsline {subsection}{\numberline {1.6.1}Rectas Proyectivas}{12}{subsection.1.6.1}
-\contentsline {subsection}{\numberline {1.6.2}Hiperplanos Proyectivos}{12}{subsection.1.6.2}
-\contentsline {subsection}{\numberline {1.6.3}El Teorema de Pappus}{13}{subsection.1.6.3}
-\contentsline {chapter}{\numberline {A}Espacios Vectoriales}{14}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Cambios de Base}{14}{section.Alph1.1}
-\contentsline {section}{\numberline {A.2}Ecuaciones Cartesianas y Param\IeC {\'e}tricas}{14}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Introducci\IeC {\'o}n}{14}{subsection.Alph1.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Ecuaciones Param\IeC {\'e}tricas}{15}{subsection.Alph1.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Ecuaciones Cartesianas}{16}{subsection.Alph1.2.3}
-\contentsline {subsubsection}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{16}{section*.3}
-\contentsline {subsubsection}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{16}{section*.4}
-\contentsline {subsubsection}{Conclusiones}{16}{section*.5}
-\contentsline {subsubsection}{Dimensi\IeC {\'o}n de un Subespacio}{16}{section*.6}
-\contentsline {subsubsection}{Hiperplanos}{16}{section*.7}
-\contentsline {chapter}{\numberline {B}Aplicaciones Lineales}{17}{appendix.Alph2}
+\contentsline {section}{\numberline {1.6}El espacio proyectivo dual}{12}{section.1.6}
+\contentsline {section}{\numberline {1.7}Coordenadas de Subespacios Proyectivos}{14}{section.1.7}
+\contentsline {subsection}{\numberline {1.7.1}Rectas Proyectivas}{14}{subsection.1.7.1}
+\contentsline {subsection}{\numberline {1.7.2}Hiperplanos Proyectivos}{14}{subsection.1.7.2}
+\contentsline {subsection}{\numberline {1.7.3}El Teorema de Pappus}{15}{subsection.1.7.3}
+\contentsline {chapter}{\numberline {A}Espacios Vectoriales}{16}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Cambios de Base}{16}{section.Alph1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones Cartesianas y Param\IeC {\'e}tricas}{16}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Introducci\IeC {\'o}n}{16}{subsection.Alph1.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Ecuaciones Param\IeC {\'e}tricas}{17}{subsection.Alph1.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Ecuaciones Cartesianas}{18}{subsection.Alph1.2.3}
+\contentsline {subsubsection}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{18}{section*.3}
+\contentsline {subsubsection}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{18}{section*.4}
+\contentsline {subsubsection}{Conclusiones}{18}{section*.5}
+\contentsline {subsubsection}{Dimensi\IeC {\'o}n de un Subespacio}{18}{section*.6}
+\contentsline {subsubsection}{Hiperplanos}{18}{section*.7}
+\contentsline {chapter}{\numberline {B}Aplicaciones Lineales}{19}{appendix.Alph2}

@@ -377,6 +377,107 @@ Donde $E$ representa el último punto al que llamaremos \ti{punto unidad}.
 Es evidente, por lo visto en la sección \ref{C1_coordenadasHomogeneas} y en el teorema \ref{C1_teo_unicidadBase}, que la definición \ref{C1_def_coordenadasReferencia} es sólida.
 \section{Cambios de Referencia Proyectiva}
 POSPUESTO HASTA QUE LO DEMOS EN CLASE!!!
+\section{El espacio proyectivo dual}
+Hasta el momento hemos conseguido establecer relaciones sólidas entre espacios vectoriales y espacios proyectivos. Relaciones que engloban tanto bases como subespacios, coordenadas o dimensiones. Así, si se quiere tratar cierto problema referente a estos conceptos en el espacio proyectivo, siempre será posible trasladarnos al territorio conocido de espacios vectoriales, y resolverlo allí. Y, como no podía ser de otra manera, esto también ocurre con el espacio dual. 
+
+Es vital entender la relación que existe entre el espacio dual y el espacio proyectivo dual, pues el procedimiento para dar coordenadas de, y en ,espacios proyectivos se basa en esta relación.
+
+Si su conocimiento sobre espacio dual anda escaso, se recomienda al lector echar un vistazo al apéndice correspondiente.
+
+Definíamos el espacio vectorial dual $E^*$ como el conjunto de todas las formas lineales del espacio vectorial $E$
+\begin{equation}
+	E^*=\{\alpha:E\rightarrow \K\tq \alpha \text{ es lineal }\}=Hom_{\K}(E,\K).
+\end{equation}
+Teniendo esto claro, pasamos a hacer la definición proyectiva.
+\begin{defi}[Espacio proyectivo dual]
+	Dado un espacio vectorial $E$ y su correspondiente espacio proyectivo $\mb{P}=\mb{P}(E)$, se llama espacio proyectivo dual de $P$ al espacio proyectivo $\mb{P}(E^*)$ asociado al espacio vectorial dual $E^*$ de $E$. Se denota por $\mb{P}^*=\mb{P}(E^*)$.
+\end{defi}
+\begin{obs}
+	Dado que el espacio dual $E^*$ tiene la misma dimensión que $E$, si la dimensión es finita, esto implica que la dimensión del espacio proyectivo es la misma que la del espacio proyectivo dual
+	\begin{equation*}
+		dim \mb{P}=dim \mb{P}^*.
+	\end{equation*}
+\end{obs}
+Recordemos el concepto de anulador de un subespacio vectorial.
+\begin{defi}[Anulador]
+	Sea $W\subset E$ subespacio vectorial de $E$, se define el anulador de $W$ como el conjunto
+	\begin{equation}
+		an(W):=\{\alpha\in E^*\tq \alpha(u)=0 \ \forall u\in W\}=\{\alpha\in E^*\tq W\subset ker(\alpha)\},
+	\end{equation}
+	siendo este a su vez un subespacio vectorial de $E^*$.
+\end{defi}
+Esto nos proporciona un camino para conectar el espacio vectorial con el espacio dual. Camino que también puede ser recorrido a la inversa.
+\begin{defi}[Anulador dual]
+	Sea $W^*\subset E^*$ subespacio vectorial del dual $E^*$, se define el anulador de $W^*$ como el conjunto
+	\begin{equation}
+		an(W^*):=\{u\in E\tq \beta(u)=0 \ \forall \beta\in W^*\},
+	\end{equation}
+	siendo a su vez un subespacio vectorial de $E$.
+\end{defi}
+Por tanto, cuando nos encontramos en el espacio vectorial $E$, buscamos las formas lineales que se anulan en los vectores de nuestro subespacio. Sin embargo, cuando nos encontramos en el espacio dual $E^*$ hacemos justo lo contrario, buscamos los vectores que anulan las formas lineales de nuestro subespacio dual. 
+
+Hemos trazado así un camino de ida y vuelta entre un espacio vectorial y su espacio dual. Además, este camino es ``bueno'', pues permite preservar, en cierto modo, relaciones entre subespacio vectoriales. Veamos a continuación algunos casos para poder entender a que nos referimos exactamente.
+\begin{lem}[Propiedades del paso al dual]\label{lem:prop_paso_dual}
+	Sean $W,W_1,W_2\subset E$ subesapcio vectoriales de $E$. Supongamos que $dim \ E=n$. Entonces, se cumple
+	\begin{enumerate}
+		\item Si $W_1\subset W_2$, entonces $an(W_2)\subset an(W_1)$
+		
+		\item $dim \ W+dim \ an(W)=dim \ E=dim \ E^*$
+		
+		\item $an(an(W))=W$
+		
+		\item $an(W_1+W_2)=an(W_1)\cap an(W_2)$
+	\end{enumerate}
+\end{lem}
+\begin{proof}
+	Sean $W_1,W_2\subset E$ dos subesapcio vectoriales de $E$.
+	
+	LAS DEMOSTRACIONES ESTARAN TODAS MAL ASI QUE TE RUEGO QUE LAS REVISES Y CAMBIES.
+	\begin{enumerate}
+		\item Sea $\alpha\in an(W_2)$ cualquiera. Esto implica que $\alpha(u)=0$ para todo $u\in W_2$. Como $W_1\subset W_2$ en concreto para todos los vectores $v\in W_1$ se tiene que $\alpha(v)=0$. Por tanto $\alpha\in an(W_1)$.
+		
+		\item Basta ver que $dim \ an(W)= nº$ de ecuaciones cartesianas, pues en ese caso como 
+		\begin{equation*}
+		dim \ W+ nº\text{ de ecuaciones cartesianas }=dim \ E=dim \ E^*
+		\end{equation*}
+		queda demostrado.
+		
+		Sea el subespacio vectorial $W\subset E$. Supongamos que este viene definido por $r$ ecuaciones cartesianas de la forma
+		\begin{equation*}
+			a_0x_0+a_1x_1+\cdots +a_nx_n=0 \quad \text{ con } a_0,a_1,\cdots, a_n \text{ no todos nulos }.
+		\end{equation*}
+		Así  el vector $u\in E$ pertenece a $W$ si y solo si cumple dichas ecuaciones. Observemos que dichas ecuaciones definen $r$ formas lineales $\alpha_i(x_0,x_1,\cdots, x_n)=a_0x_0+a_1x_1+\cdots +a_nx_n$ y que todos los vectores de $u\in W$ cumplen $\alpha_i(u)=0$, para $i=1,\cdots, r$. Por tanto dichas formas lineales pertenecen al anulador de $W$. Tenemos así que $dim \ an(W)\ge r$.
+		
+		Supongamos que no se da la igualdad. Entonces existe $\beta\in an(W)$ linealmente independiente a $\alpha_i$ para todo $i=1,\cdots, r$. Podríamos definir dicha forma lineal como $\beta(x_0,x_1,\cdots, x_n)=b_0x_0+b_1x_1+\cdots +b_nx_n$, no todos nulos. Al ser linealmente independientes, la matriz formada por los $b_i$ y los coeficientes de las ecuaciones cartesianas tiene rango $r+1$. Además al pertenecer $\beta$ al $an(W)$ se cumple $\beta(u)=0$ para todo $u\in W$. Por tanto podemos definir una nueva ecuación cartesiana $b_0x_0+b_1x_1+\cdots +b_nx_n=0$, lo cual es absurdo.
+		
+		\item Definíamos 
+		\begin{equation*}
+			an(W):=\{\alpha\in E^*\tq \alpha(u)=0 \ \forall u\in W\}
+		\end{equation*}
+		que es un subespacio vectorial del espacio dual $E^*$. Por tanto su anulador viene dado por
+		\begin{equation*}
+		an(an(W)):=\{v\in E\tq \alpha(u)=0 \ \forall \alpha\in an(W)\},
+		\end{equation*}
+		Es claro que los vectores $u\in W$ cumplen $\alpha(u)=0 \ \forall \alpha\in an(W)$, por lo que $W\subseteq an(an(W))$. Supongamos que no se da la igualdad. Entonces existe $v\in E$ perteneciente al $an(an(W))$ tal que $v\not\in W$. Por tanto $\mc{L}(v)\cap W=\emptyset$. Por otro lado, como $v\in an(an(W))$ se cumple que $\alpha(v)=0 \ \forall \alpha\in an(W)$. Esto implica que $an(W)\subseteq an(v)$. Además es sabido que $an(v)=an(\mc{L}(v))$, por lo que $an(W)\subseteq an(\mc{L}(v))$. Utilizando la primera propiedad del lema que viene a continuación esto implica $\mc{L}(v)\subseteq W$, llegando así a un absurdo.
+		
+		\item YA LO HARE
+	\end{enumerate}
+\end{proof}
+Como dijimos, este camino es ``bueno'', y por tanto todas estas propiedades se tienen también en sentido inverso.
+\begin{lem}
+	Sean $W^*,W_1^*,W_2^*\subset E^*$ subesapcio vectoriales de $E^*$. Supongamos que $dim \ E^*=n$. Entonces, se cumple
+	\begin{enumerate}
+		\item Si $W_1^*\subset W_2^*$, entonces $an(W_2^*)\subset an(W_1^*)$
+		
+		\item $dim \ W^*+dim \ an(W^*)=dim \ E=dim \ E^*$
+		
+		\item $an(an(W^*))=W^*$
+	\end{enumerate}
+\end{lem}
+Las demostraciones de este lema se dejan al lector, a no ser que Álvaro me obligue a hacerlas o me apetezca hacerlas algún día.
+
+Nótese que a lo largo de la demostración del lema~\ref{lem:prop_paso_dual} se ha probado que toda ecuación cartesiana de un subespacio se puede asociar a una forma lineal, es decir, a un vector del espacio dual. Esto da pie a pensar en la relación entre el espacio dual y las coordenadas de subespacios proyectivos, ya que, al fin y al cabo, estos pueden trasladarse a espacios vectoriales, tema que abordaremos en la siguiente sección.
+
 \section{Coordenadas de Subespacios Proyectivos}
 REPASAR ECUACIONES PARAMÉTRICAS Y CARTESIANAS DE UN SUBESPACIO Y ESPACIO DUAL!!! (HASTA RECTAS ES MÁS O MENOS LEGIBLE)
 
@@ -419,9 +520,53 @@ Nuestra tarea aquí es tratar de, dado un subespacio proyectivo, por ejemplo una
 	\]
 \end{exa}
 \subsection{Hiperplanos Proyectivos}
-Comenzamos este apartado recordando brevemente que los hiperplanos vectoriales son subespacios lineales de codimensión $1$. Asimismo refrescamos al lector la noción de \ti{forma lineal}, que no es más que una aplicación lineal $h:E\to K$.
+Comenzamos este apartado recordando brevemente que los hiperplanos vectoriales son subespacios lineales de codimensión $1$. Asimismo todo hiperplano proyectivo $H=\mb{P}(\hat{H})$ es la proyección de un hiperplano vectorial $\hat{H}$
+\begin{equation}
+	dim E-2=dim \mb{P}-1=dim H=dim \hat{H}-1\ra dim \hat{H}=dim E-1.
+\end{equation}
+Recordemos también que un hiperplano vectorial $\hat{H}$ viene definido por una ecuación cartesiana de la forma
+\begin{equation*}
+	a_0x_0+a_1x_1+\cdots +a_nx_n=0 \quad \text{ con } a_0,a_1,\cdots, a_n \text{ no todos nulos }.
+\end{equation*}
+Por tanto, puede definirse como el núcleo de una forma lineal, la cual está a su vez definida por la ecuación cartesiana del hiperplano
+\begin{equation*}
+h(x_0,x_1,\cdots,x_n)=a_0x_0+a_1x_1+\cdots +a_nx_n.
+\end{equation*}
+De igual manera, dada una forma lineal $h$, no idénticamente nula, por la fórmula de las dimensiones de las aplicaciones lineales, su \ti{núcleo}, es decir, el conjunto de los puntos de $E$ que son anulados por $h$, es un hiperplano vectorial. 
 
-Dicho esto, dada una forma lineal $h$, no idénticamente nula, por la fórmula de las dimensiones de las aplicaciones lineales, su \ti{núcleo}, es decir, el conjunto de los puntos de $E$ que son anulados por $h$, es un hiperplano vectorial.
+Por tanto podemos intentar expresar un hiperplano proyectivo a partir de dicha $h$, ya que es la proyección de un hiperplano vectorial. Sin embargo, esta forma lineal no está bien definida en el espacio proyectivo $\mb{P}$. Ello se debe a que puedo escoger dos vectores  $u, \lambda u\in E$, que pertenecen al mismo punto en el espacio proyectivo, tales que sus imágenes no pertenecen al mismo rayo. Esto no puede ocurrir con aquellos que pertenezcan al núcleo de $h$. Por tanto los ceros de $h$ sí están bien definidos en $\mb{P}$. Así, dado un hiperplano vectorial $\hat{H}$ definido por los ceros de $h$, podemos asegurar que la siguiente definición es válida
+\begin{equation}
+	H=\mb{P}(\hat{H})=\{[u]\in\mb{P}\tq h(u)=0\}
+\end{equation}
+Uno podría hacerse la siguiente pregunta. ¿Solo habrá una forma lineal $h$ que se anule en el hiperplano $\hat{H}$? Y si no es así, entonces, ¿cómo definir su proyección $H$? Obsérvese que dichas formas lineales $h$ no son más que las pertenecientes al anulador de $\hat{H}$. Pero este subespacio pertenece al espacio dual. Cabría entonces preguntarse si existe alguna relación entre el $an(\hat{H})$ y el espacio dual proyectivo. Para ello se enuncia el siguiente lema, que nos llevará rápidamente a esta conexión.
+\begin{lem}
+	Todas las formas lineales que se anulan en un mismo hiperplano son las mismas, salvo un factor de proporcionalidad
+\end{lem}
+\begin{proof}
+	PENDIENTE
+\end{proof}
+Esto implica que un hiperplano proyectivo está asociado a un conjunto de formas lineales múltiplos, es decir, a un rayo de formas lineales, un punto del espacio proyectivo dual. Existe por tanto una biyección entre el conjunto de hiperplanos del espacio proyectivo $\mb{P}$ y el espacio proyectivo dual $\mb{P}^*$, que asocia a cada hiperplano proyectivo el rayo de formas lineales cuyos ceros forman el hiperplano
+\begin{equation}
+	\begin{split}
+		\varphi:\mc{H}& \rightarrow \mb{P}^*\\
+		H &\rightarrow [h]
+	\end{split}
+\end{equation}
+donde $\mc{H}=\{H\tq H \text{ es hiperplano de } \mb{P}\}$.
+
+Otra implicación inmediata de este lema, y que nos lleva de vuelta a las preguntas formuladas con anterioridad, es que, dado $\hat{H}$ hiperplano vectorial,
+\begin{equation}
+	\mb{P}(an(\hat{H}))=\mb{P}(\{h\in E^*\tq h(u)=0\ \forall u\in \hat{H}\})=[h]
+\end{equation}
+Aquí se encuentra el puente que conecta nuestro espacio proyectivo con el espacio proyectivo dual
+\begin{equation}
+	H=\mb{P}(\hat{H})\ra \hat{H}\ra an(\hat{H})\ra \mb{P}(an(\hat{H}))=H^*=[h]
+\end{equation}
+Como podría uno imaginarse, esto no solo se puede hacer con hiperplanos proyectivos, sino que se puede generalizar a cualquier variedad proyectiva.
+
+
 
 
 \subsection{El Teorema de Pappus}
+
+decir forma lineal define hiperplano e hiperplano definido por forma lienal. pero la forma lineal no esta bien definida en proyectivo, si sus ceros, dabuti pues son el hiperplano proyectivo.

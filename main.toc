@@ -18,16 +18,17 @@
 \contentsline {section}{\numberline {1.7}Coordenadas de Subespacios Proyectivos}{14}{section.1.7}
 \contentsline {subsection}{\numberline {1.7.1}Rectas Proyectivas}{14}{subsection.1.7.1}
 \contentsline {subsection}{\numberline {1.7.2}Hiperplanos Proyectivos}{14}{subsection.1.7.2}
-\contentsline {subsection}{\numberline {1.7.3}El Teorema de Pappus}{15}{subsection.1.7.3}
-\contentsline {chapter}{\numberline {A}Espacios Vectoriales}{16}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Cambios de Base}{16}{section.Alph1.1}
-\contentsline {section}{\numberline {A.2}Ecuaciones Cartesianas y Param\IeC {\'e}tricas}{16}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Introducci\IeC {\'o}n}{16}{subsection.Alph1.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Ecuaciones Param\IeC {\'e}tricas}{17}{subsection.Alph1.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Ecuaciones Cartesianas}{18}{subsection.Alph1.2.3}
-\contentsline {subsubsection}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{18}{section*.3}
-\contentsline {subsubsection}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{18}{section*.4}
-\contentsline {subsubsection}{Conclusiones}{18}{section*.5}
-\contentsline {subsubsection}{Dimensi\IeC {\'o}n de un Subespacio}{18}{section*.6}
-\contentsline {subsubsection}{Hiperplanos}{18}{section*.7}
-\contentsline {chapter}{\numberline {B}Aplicaciones Lineales}{19}{appendix.Alph2}
+\contentsline {subsection}{\numberline {1.7.3}Variedades proyectivas}{16}{subsection.1.7.3}
+\contentsline {subsection}{\numberline {1.7.4}El Teorema de Pappus}{18}{subsection.1.7.4}
+\contentsline {chapter}{\numberline {A}Espacios Vectoriales}{19}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Cambios de Base}{19}{section.Alph1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones Cartesianas y Param\IeC {\'e}tricas}{19}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Introducci\IeC {\'o}n}{19}{subsection.Alph1.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Ecuaciones Param\IeC {\'e}tricas}{20}{subsection.Alph1.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Ecuaciones Cartesianas}{21}{subsection.Alph1.2.3}
+\contentsline {subsubsection}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{21}{section*.3}
+\contentsline {subsubsection}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{21}{section*.4}
+\contentsline {subsubsection}{Conclusiones}{21}{section*.5}
+\contentsline {subsubsection}{Dimensi\IeC {\'o}n de un Subespacio}{21}{section*.6}
+\contentsline {subsubsection}{Hiperplanos}{21}{section*.7}
+\contentsline {chapter}{\numberline {B}Aplicaciones Lineales}{22}{appendix.Alph2}

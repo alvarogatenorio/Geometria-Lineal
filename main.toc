@@ -14,10 +14,11 @@
 \contentsline {subsection}{\numberline {1.4.2}Referencias Proyectivas}{8}{subsection.1.4.2}
 \contentsline {subsection}{\numberline {1.4.3}Base Asociada a una Referencia Proyectiva}{9}{subsection.1.4.3}
 \contentsline {section}{\numberline {1.5}Cambios de Referencia Proyectiva}{11}{section.1.5}
-\contentsline {section}{\numberline {1.6}El espacio proyectivo dual}{12}{section.1.6}
+\contentsline {section}{\numberline {1.6}El espacio dual}{12}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Espacio proyectivo dual}{14}{subsection.1.6.1}
 \contentsline {section}{\numberline {1.7}Coordenadas de Subespacios Proyectivos}{14}{section.1.7}
 \contentsline {subsection}{\numberline {1.7.1}Rectas Proyectivas}{14}{subsection.1.7.1}
-\contentsline {subsection}{\numberline {1.7.2}Hiperplanos Proyectivos}{14}{subsection.1.7.2}
+\contentsline {subsection}{\numberline {1.7.2}Hiperplanos Proyectivos}{15}{subsection.1.7.2}
 \contentsline {subsection}{\numberline {1.7.3}Variedades proyectivas}{16}{subsection.1.7.3}
 \contentsline {subsection}{\numberline {1.7.4}El Teorema de Pappus}{18}{subsection.1.7.4}
 \contentsline {chapter}{\numberline {A}Espacios Vectoriales}{19}{appendix.Alph1}

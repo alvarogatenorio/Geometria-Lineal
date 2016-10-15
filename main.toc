@@ -21,15 +21,21 @@
 \contentsline {subsection}{\numberline {1.7.2}Hiperplanos Proyectivos}{15}{subsection.1.7.2}
 \contentsline {subsection}{\numberline {1.7.3}Variedades proyectivas}{16}{subsection.1.7.3}
 \contentsline {subsection}{\numberline {1.7.4}El Teorema de Pappus}{18}{subsection.1.7.4}
-\contentsline {chapter}{\numberline {A}Espacios Vectoriales}{19}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Cambios de Base}{19}{section.Alph1.1}
-\contentsline {section}{\numberline {A.2}Ecuaciones Cartesianas y Param\IeC {\'e}tricas}{19}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Introducci\IeC {\'o}n}{19}{subsection.Alph1.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Ecuaciones Param\IeC {\'e}tricas}{20}{subsection.Alph1.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Ecuaciones Cartesianas}{21}{subsection.Alph1.2.3}
-\contentsline {subsubsection}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{21}{section*.3}
-\contentsline {subsubsection}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{21}{section*.4}
-\contentsline {subsubsection}{Conclusiones}{21}{section*.5}
-\contentsline {subsubsection}{Dimensi\IeC {\'o}n de un Subespacio}{21}{section*.6}
-\contentsline {subsubsection}{Hiperplanos}{21}{section*.7}
-\contentsline {chapter}{\numberline {B}Aplicaciones Lineales}{22}{appendix.Alph2}
+\contentsline {section}{\numberline {1.8}Problemas}{19}{section.1.8}
+\contentsline {chapter}{\numberline {A}Espacios Vectoriales}{20}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Cambios de Base}{20}{section.Alph1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones Cartesianas y Param\IeC {\'e}tricas}{20}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Introducci\IeC {\'o}n}{20}{subsection.Alph1.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Ecuaciones Param\IeC {\'e}tricas}{21}{subsection.Alph1.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Ecuaciones Cartesianas}{22}{subsection.Alph1.2.3}
+\contentsline {subsubsection}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{22}{section*.3}
+\contentsline {subsubsection}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{22}{section*.4}
+\contentsline {subsubsection}{Conclusiones}{22}{section*.5}
+\contentsline {subsubsection}{Dimensi\IeC {\'o}n de un Subespacio}{22}{section*.6}
+\contentsline {subsubsection}{Hiperplanos}{22}{section*.7}
+\contentsline {chapter}{\numberline {B}\IeC {\'A}lgebra Lineal}{23}{appendix.Alph2}
+\contentsline {section}{\numberline {B.1}Coordenadas en Espacios Vectoriales}{23}{section.Alph2.1}
+\contentsline {subsection}{\numberline {B.1.1}Matriz de Cambio de Base}{24}{subsection.Alph2.1.1}
+\contentsline {section}{\numberline {B.2}Ecuaciones de Subespacios}{25}{section.Alph2.2}
+\contentsline {section}{\numberline {B.3}Aplicaciones Lineales}{25}{section.Alph2.3}
+\contentsline {section}{\numberline {B.4}Dualidad}{25}{section.Alph2.4}

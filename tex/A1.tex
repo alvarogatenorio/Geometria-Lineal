@@ -1,134 +1,373 @@
-\chapter{Espacios Vectoriales}
-Aquí se incluyen unas breves notas acerca de conceptos importantes sobre espacios vectoriales que consideramos indispensables para una total comprensión del texto.
-\section{Cambios de Base}
-POR HACER
-\section{Ecuaciones Cartesianas y Paramétricas}
-El objetivo de esta sección es caracterizar los subespacios vectoriales de varias formas. Una forma de caracterizarlos ya la conocemos, se trata simplemente de encontrar una base del mismo, quedando definido el subespacio como la envoltura lineal de la misma.
+\chapter{Álgebra Lineal}
+Este apéndice está especialmente pensado para los alumnos de los dobles grados, que, a fecha de escribir este texto, cursan la asignatura de geometría lineal y la de álgebra lineal con un año de separación.
 
-Sin embargo, existen otras identificaciones que nos resultarán extremadamente útiles, por ejemplo, la identificación de un subespacio por sus llamadas \ti{coordenadas paramétricas}, y, sobre todo, la identificación por \ti{coordenadas cartesianas}.
+Este hecho añade a la presente materia un plus de dificultad, pues hace echar mano constantemente de la bibliografía de primer curso, que, en muchas ocasiones, no es sufiente, por ejemplo en el estudio de la \ti{dualidad}.
 
-Esta última identificación es de extrema importancia en geometría proyectiva cuando el subespacio a identificar es un \ti{hiperplano}.
-\subsection{Introducción}
-Sea un sistema homogéneo de $m$ ecuaciones lineales con $n$ incógnitas. Como ya sabemos, esto puede ser visto como una ecuación matricial $AX=0$, cuyas soluciones (siempre hay al menos una) son matrices columna $X\in\mf{M}_{n\times1}(\K)$. Es claro que podemos identificar (de manera natural) estas matrices columna con elementos de $\K^n$.
+Algo que merece la pena recalcar es que aquí únicamente se incluyen los resultados más elementales acerca de dualidad, ya que sabemos por experiencia que los resultados más profundos se omiten en un primer curso de álgebra lineal (a pesar de ser harto necesarios aquí). Es por esta razón, no hacer visitar un apéndice al lector sin necesidad, que estos conceptos gozan de sección propia en el texto ordinario.
 
-\begin{lem}
-	\label{A1_lem_sistemaSubespacio}
-	El conjunto $\mc{S}$ de vectores de $\K^n$ que conforman todas las soluciones del sistema homogéneo $AX=0$ es un subespacio vectorial de $\K^n$.
-\end{lem}
+El objetivo de este anexo no es otro que recopilar los conceptos y resultados que consideramos totalmente imprescindibles para seguir el texto, no obstante, no pretende ser, ni mucho menos, tan completo o rico en ejemplos como otros títulos específicos de álgebra lineal que se recomiendan en la bibliografía.
+\section{Coordenadas en Espacios Vectoriales}
+El objetivo de esta sección es servir como pequeño área de repaso a la hora de entrar en conceptos íntimamente ligados con los cambios de base en espacios vectoriales. Un ejemplo claro de esto son los cambios de referencia proyectiva.
+
+Sea $E$ un $\K$--espacio vectorial de dimensión finita $n$.
+
+Asimismo, consideraremos la base $\mc{B}:=\{b_1,\dots,b_n\}$ de $E$.
+
+\begin{prop}[Escritura Única de un Vector]
+	\label{A1_prop_escrituraUnicaVector}
+	Dado un vector $u\in E$, este tiene una escritura \tb{única} como combinación lineal de los vectores de la base $\mc{B}$.
+\end{prop}
 \begin{proof}
-	Bastará ver que $\mc{S}$ es cerrado respecto de combinaciones lineales. En efecto. Sean $X,Y\in\mc{S}$ y sean $\alpha,\beta\in\K$, veamos que $\alpha X+\beta Y\in S$, es decir, $A(\alpha X+\beta Y)=0$. Esto es obvio ya que por la propiedad distributiva del producto de matrices se tiene que $\alpha AX+\beta AY$. Como $X,Y\in\mc{S}$, el resultado se sigue.
+	La existencia de esta escritura es evidente, por ser $\mc{B}$ una base de $E$, y, por tanto, un sistema de generadores. En consecuencia, lo único que hay que probar es la unicidad de dicha combinación lineal. En efecto, supongamos que hubiera dos:
+	\[u=\alpha_1b_1+\dots+\alpha_nb_n=\beta_1b_1+\dots+\beta_nb_n
+	\]
+	Pasando todo al segundo miembro y sacando factor común obtenemos:
+	\[(\alpha_1-\beta_1)b_1+\dots+(\alpha_n-\beta_n)b_n=0\]
+	Como los vectores de la base son linealmente independientes, se tiene que todos los coeficientes deben ser nulos. Es decir:
+	\[\begin{array}{lr}
+	\alpha_i-\beta_i=0 & \forall i\in\{1,\dots,n\}
+	\end{array}\]
+	De donde se sigue la necesaria igualdad de ambas escrituras.
 \end{proof}
-El lema \ref{A1_lem_sistemaSubespacio} nos viene a decir que todo sistema de ecuaciones lineales homogéneo está asociado a un subespacio vectorial de $\K^n$. Sin embargo, lo realmente sorprendente, es que el recíproco también se cumple, es decir, todo subespacio vectorial de $\K^n$ tiene asociado un sistema de ecuaciones lineales homogéneo.
-\subsection{Ecuaciones Paramétricas}
-El objetivo de esta sección es, encontrar las coordenadas de un vector de un subespacio vectorial dada una base del mismo, siendo previamente conocidas las coordenadas de dicho vector respecto de una base del subespacio total. 
+\begin{obs}[Coordenadas de un Vector Respecto de una Base]
+	\label{A1_obs_coordenadasVector}
+	Es evidente que, \tb{fijada una base}, todo vector queda caracterizado por su escritura como combinación lineal de los vectores de dicha base. Es por este motivo que, dado un vector $u\in E$ cualquiera, emplearemos la siguiente notación:
+	\[
+		u = \alpha_1b_1+\dots+\alpha_nb_n\equals{not.}(\alpha_1,\dots,\alpha_n)_{\mc{B}}
+	\]
+	A la tupla de escalares $(\alpha_1,\dots,\alpha_n)$ la denominaremos \ti{coordenadas de $u$ respecto de la base $\mc{B}$}.
+\end{obs}
+Por supuesto, si decidimos tomar otra base $\mc{B}'$, las coordenadas de los vectores respecto de la base $\mc{B}'$ serán, en general, distintas a las coordenadas respecto de $\mc{B}$.
 
-Sean $V$ un $\K$--espacio vectorial de dimensión $n$ y $B:=\{e_1,\dots,e_n\}$ una base de $V$ respecto de la cual consideraremos a partir de ahora las coordenadas de cada vector $x\in V$.
+Un problema interesante, y que resolveremos en \ref{A1_cambioBase}, consiste en encontrar una relación o ligadura entre ambas coordenadas.
 
-Consideremos ahora un subespacio vectorial $U$ de dimensión $r\leq n$. Asimismo tomemos una base de $U$ a la que denotaremos por $B_U:=\{u_1,\dots,u_r\}$.
+\begin{obs}[Coordenadas del $i$--ésimo Vector de la Base]
+	\label{A1_obs_coordenadasVectorBase}
+	Dado el vector $b_i$, es interesante notar que sus coordenadas respecto de la base $\mc{B}$, de la que, recordemos, es el $i$--ésimo vector, son:
+	\[
+	b_i=(0,\dots,\overbrace{1}^{i},\dots,0)_{\mc{B}}
+	\]
+	La comprobación es inmediata y se deja al lector.
+\end{obs}
+\subsection{Matriz de Cambio de Base}
+\label{A1_cambioBase}
+Sean $\mc{B}:=\{e_1,\dots,e_n\}$ y $\mc{B}':=\{e_1',\dots,e_n'\}$ dos bases de un espacio vectorial $E$.
+En estas condiciones, dado un vector cualquiera $u\in E$, podemos escribirlo de dos maneras distintas:
+\begin{gather}
+	u=\alpha_1e_1+\dots+\alpha_ne_n\\
+	\label{A1_eq_escritura2}
+	u=\beta_1e_1'+\dots+\beta_ne_n'
+\end{gather}
+Escribiendo cada vector de $\mc{B}'$ como combinación lineal de los vectores de $\mc{B}$, es decir, en coordenadas de $\mc{B}$ obtenemos (los exponentes son símplemente superíndices):
+\begin{equation}
+	e_i'=\gamma_1^ie_1+\dots+\gamma_n^ie_n
+\end{equation}
+Uniendo las ecuaciones se tiene:
+\begin{multline}
+	u=\beta_1(\gamma_1^1e_1+\dots+\gamma_n^1e_n)+\dots+\beta_n(\gamma_1^ne_1+\dots+\gamma_n^ne_n)=\\
+	=(\beta_1\gamma_1^1e_1+\dots+\beta_1\gamma_n^1e_n)+\dots+(\beta_n\gamma_1^ne_1+\dots+\beta_n\gamma_n^ne_n)=\\
+	=(\beta_1\gamma_1^1+\dots+\beta_n\gamma_1^n)e_1+\dots+(\beta_1\gamma_n^1+\dots+\beta_n\gamma_n^n)e_n
+\end{multline}
+La traducción de esto a términos de coordenadas nos arroja (los corchetes son símplemente corchetes para una mejor visualización):
+\begin{equation}
+	u=(\alpha_1,\dots,\alpha_n)_{\mc{B}}=([\beta_1\gamma_1^1+\dots+\beta_n\gamma_1^n],\dots,[\beta_1\gamma_n^1+\dots+\beta_n\gamma_n^n])_{\mc{B}}
+\end{equation}
+Esto, por comodidad, lo interpretaremos como producto de matrices (compruébese):
+\begin{equation}
+	\begin{pmatrix}
+	\alpha_1\\
+	\vdots\\
+	\alpha_n
+	\end{pmatrix}=
+	\begin{pmatrix}
+	\gamma_1^1 & \cdots & \gamma_1^n\\
+	\vdots & \ddots & \vdots\\
+	\gamma_n^1 & \cdots & \gamma_n^n
+	\end{pmatrix}
+	\begin{pmatrix}
+	\beta_1\\
+	\vdots\\
+	\beta_n
+	\end{pmatrix}
+\end{equation}
+Usando una notación más compacta:
+\begin{equation}
+	X_{\mc{B}}=C_{\mc{B}\mc{B}'}X_{\mc{B}'}
+\end{equation}
+Obsérvese que la matriz $P$ es \tb{cuadrada} e \tb{invertible}, por ser la matriz formada al poner por columnas los vectores de la base $\mc{B}'$ respecto de la base $\mc{B}$.
 
-Es evidente que cada vector $u_i\in B_U$ tiene una escritura en coordenadas respecto de la base $B$.
+Por esta razón, podemos despejar $X_{\mc{B}'}$, obteniendo la relación inicialmente buscada:
+\begin{equation}
+	X_{\mc{B}'}=C_{\mc{B}\mc{B}'}^{-1}X_{\mc{B}}
+\end{equation}
+A la matriz $C_{\mc{B}\mc{B}'}$ se la denomina \ti{matriz de cambio de base de $\mc{B}$ a $\mc{B}'$}. Es intersante comprobar que su inversa es la matriz de cambio entre las mismas bases en sentido contrario.
+
+Para cerrar la sección diremos, como curiosidad, que toda matriz invertible constituye una matriz de cambio entre ciertas bases.
+
+\section{Ecuaciones de Subespacios}
+El objetivo de esta sección será caracterizar un subespacio vectorial por el conjunto de soluciones de una ecuación o conjunto de ecuaciones (siempre lineales y homogéneas). A estas ecuaciones las denominaremos \ti{ecuaciones cartesianas}. Son de importancia capital en el estudio de la dualidad.
+\subsection{Existencia de las Ecuaciones Cartesianas}
+Sea $E$ un espacio vectorial de dimensión $n$ y sea $U$ un subespacio vectorial cualquiera de $E$.
+
+Sea $\mc{B}_U:=\{u_1,\dots,u_r\}$ una base de $U$.
+\subsubsection{Ecuaciones Paramétricas}
+Sea $x\in U$, entonces podemos escribirlo tanto en coordenadas de $\mc{B}_U$ como en coordenadas de la base del espacio total $\mc{B}$. Es decir:
+\begin{gather}
+	x = \alpha_1e_1+\dots+\alpha_ne_n\\
+	x = \beta_1u_1+\dots+\beta_ru_r
+\end{gather}
+Usando los mismos trucos que utilizamos para cálculo de la matriz de cambio de base, podemos escribir los vectores de la base $\mc{B}_U$ como combinación lineal de los vectores del espacio total:
+\begin{equation}
+	u_i=\gamma_1^ie_1+\dots+\gamma_n^ie_n
+\end{equation}
+Sustituyendo y reagrupando:
+\begin{multline}
+	x=\beta_1(\gamma_1^1e_1+\dots+\gamma_n^1e_n)+\dots+\beta_r(\gamma_1^ne_1+\dots+\gamma_n^ne_n)=\\
+	= (\beta_1\gamma_1^1e_1+\dots+\beta_1\gamma_n^1e_n)+\dots+(\beta_r\gamma_1^ne_1+\dots+\beta_r\gamma_n^ne_n)=\\
+	= (\beta_1\gamma_1^1+\dots+\beta_r\gamma_1^n)e_1+\dots+(\beta_1\gamma_n^1+\dots+\beta_r\gamma_n^n)e_n
+\end{multline}
+Expresado de forma matricial:
+\begin{equation}
+	\begin{pmatrix}
+	\alpha_1\\
+	\vdots\\
+	\alpha_n
+	\end{pmatrix}=\begin{pmatrix}
+	\gamma_1^1 & \cdots & \gamma_1^n\\
+	\vdots & \ddots & \vdots\\
+	\gamma_n^1 & \cdots & \gamma_n^n 
+	\end{pmatrix}\begin{pmatrix}
+	\beta_1\\
+	\vdots\\
+	\beta_r
+	\end{pmatrix}
+\end{equation}
+Con una notación más compacta escribimos:
+\begin{equation}
+	X=P\Lambda
+\end{equation}
+Nótese que la matriz $P$ no es cuadrada por lo general, además, es la matriz resultante de poner por columnas las coordenadas de los vectores de $\mc{B}_U$ en la base $\mc{B}$.
+
+Reflexionemos un segundo acerca de lo que acabamos de hacer. Dado un subespacio $U$, queríamos caracterizarlo como el conjunto de vectores que verificaban un conjunto de ecuaciones.
+
+Pues bien, dada una base de $U$, hemos conseguido una serie de ecuaciones tales que, dado un vector $u=(u_1,\dots,u_n)_{\mc{B}}\in E$, nos escupen un sistema de $n$ ecuaciones lineales con $r$ incógnitas, que, en caso de resultar ser incompatible nos avisa de que $u\not\in U$, y en caso contrario, tras la resolución del sistema obtenemos las coordenadas de $u$ en la base $B_{U}$.
+
+Sin embargo, esto se puede afinar un poco más todavía. Es por eso que en el siguiente apartado se estudian las coordenadas cartesianas o implícitas.
+
+Nótese que el camino que hemos hecho también es de vuelta, ya que, dadas unas ecuaciones paramétricas de un subespacio, podemos hallar una base del mismo, basta tomar las columnas de la matriz de coeficientes.
+
+De momento tenemos:
 \begin{equation*}
-	u_i=(a_{1i},\dots,a_{ni})_B
+\doublebox{\textrm{BASE}}\rightleftarrows\doublebox{\textrm{EC. PARAMÉTRICAS}}
+\end{equation*}
+\subsubsection{Ecuaciones Cartesianas o Implícitas}
+Como dijimos en el apartado anterior, las ecuaciones paramétricas son un gran paso, pero deben afinarse un poco más, pues aún no son un conjunto de ecuaciones lineales homogéneas que caractericen por si solas al subespacio $U$.
+
+A continuación daremos dos métodos para hallar las ecuaciones cartesianas a partir de las ecuaciones paramétricas. A uno de ellos le bautizaremos cariñosamente como ``método ortopédico''.
+
+\paragraph{Método Ortopédico} Como ya aventuramos en el apartado anterior, si insertamos un vector $x\in U$ a las ecuaciones $X=P\Lambda$, se nos remitía a un sistema de ecuaciones lineales compatible determinado.
+
+Esto quiere decir, por el teorema de Rouché--Frobenius que: \[\mathrm{rg}(P\vert X)=\mathrm{rg}(P)\] Por ende ninguna submatriz cuadrada de la matriz ampliada $(P\vert X)$ es regular, es decir, todas tienen determinante nulo.
+
+Esto es maravilloso, puesto que proporciona un conjunto de ecuaciones lineales homogéneas (nunca podrán ser no lineales ya que las incógnitas se encuentran en la misma columna de la matriz ampliada).
+
+\paragraph{Observaciones}
+Dicho lo cual, si $x\in U$, insertando el vector en las ecuaciones obtenidas, las deberá verificar a la fuerza, con lo que lo hemos conseguido, hemos caracterizado a un subespacio mediante el conjunto de soluciones de un sistema homogéneo de ecuaciones lineales.
+
+Para realizar el camino de vuelta, es decir, deducir unas ecuaciones paramétricas a partir de unas implícitas, basta resolver el sistema de ecuaciones homogéneo (cosa siempre posible).
+
+Con lo que tenemos:
+\begin{equation*}
+	\doublebox{\textrm{BASE}}\rightleftarrows\doublebox{\textrm{EC. PARAMÉTRICAS}}\rightleftarrows\doublebox{\textrm{EC. CARTESIANAS}}
 \end{equation*}
 
-Asimismo, cada vector $x\in U$ puede escribirse como combinación lineal de los vectores de la base $B_U$, pero también como combinación lineal de los vectores de $B$. Es decir:
-\begin{gather}
-	x=(\lambda_1,\dots,\lambda_r)_{B_{U}}=\lambda_1u_1+\dots+\lambda_ru_r=\nonumber\\
-	=\lambda_1(a_{11},\dots,a_{n1})_{B}+\dots+\lambda_r(a_{1r},\dots,a_{nr})_{B}=\nonumber\\
-	\label{A1_eq_parametricas}=(x_1,\dots,x_n)_{B}
-\end{gather}
-Transformando la ecuación \ref{A1_eq_parametricas} obtenemos un sistema de ecuaciones que transformamos a su forma matricial:
-\begin{gather}
-	\begin{cases}
-		x_1 = a_{11}\lambda_1+\dots+a_{1r}\lambda_r\\
-		x_n = a_{n1}\lambda_1+\dots+a_{nr}\lambda_r\\
-	\end{cases}\equiv\nonumber\\\equiv
-	\begin{pmatrix}
-	x_1\\
-	\vdots\\
-	x_n
-	\end{pmatrix}
-	=\begin{pmatrix}
-	a_{11} & \cdots & a_{1r}\\
-	\vdots & \ddots & \vdots\\
-	a_{n1} & \cdots & a_{nr} 
-	\end{pmatrix}\begin{pmatrix}
-	\lambda_1\\
-	\vdots\\
-	\lambda_r
-	\end{pmatrix}\equiv\nonumber\\
-	\label{A1_eq_formaPedante}
-	\equiv X=P\Lambda
-\end{gather}
+Antes de meternos con el segundo método (que aligera los cálculos), necesitamos ver la relación que existe entre el número de ecuaciones cartesianas y la dimensión del subespacio al que caracterizan.
 
-Nótese que la matriz $P$ de la ecuación \ref{A1_eq_formaPedante} no es más que la matriz que resulta de introducir por columnas las coordenadas respecto de la base $B$ de los vectores que conforman la base $B_U$.
+\begin{prop}[Ecuaciones Cartesianas y Dimensión]
+	Sea $U$ un subespacio vectorial de dimensión $r$ de $E$, el número de ecuaciones cartesianas esenciales que le caracteriza es igual a su codimensión.
+\end{prop}
+\begin{proof}
+	Dado un sistema homogéneo de $n$ ecuaciones lineales, para que su conjunto de soluciones dependa de $r$ parámetros, es decir, para que obtenegamos unas ecuaciones paramétricas con $r$ incógnitas, debe haber exactamente $n-r$ ``ecuaciones esenciales''.
+\end{proof}
+\paragraph{Método de Eliminación de Parámetros} Para obtener unas ecuaciones cartesianas a partir de unas ecuaciones paramétricas, basta interpretar a las ecuaciones paramétricas como la solución al sistema homogéneo de ecuaciones lineales que queremos encontrar. Es decir, deberemos aplicar el algoritmo de Gauss--Jordan al revés.
+\newpage
+\section{Dualidad}
+Sea $E$ un $\K$--espacio vectorial de dimensión $n$.
+\begin{defi}[Espacio Dual]
+	Se llama \ti{espacio dual} de $E$ al conjunto todas de las aplicaciones lineales que nacen en $E$ y mueren en $\K$. Es decir:
+	\[E^*:=\{f\in\mathrm{Hom}(E,\K)\}\]
+	A las aplicaciones lineales que conforman el espacio dual se las denomina \ti{formas lineales}.
+\end{defi}
+Nótese que si $E^*$ recibe el nombre de ``espacio'', es porque se lo merece, es decir, $E^*$ tiene estructura de espacio vectorial (la comprobación es inmediata).
 
-La ecuación \ref{A1_eq_formaPedante} no es más que un sistema de ecuaciones lineal con $n$ ecuaciones y $r$ incógnitas.
+A continuación calculamos de manera inmediata la dimensión del espacio dual.
+\begin{lem}[Dimensión del Espacio Dual]
+	$\dim(E)=\dim(E^*)$
+\end{lem}
+\begin{proof}
+	contenidos...
+\end{proof}
+\subsection{Formas Lineales e Hiperplanos}
+Antes de comenzar, fijemos una base $\mc{B}$ de $E$. Asimismo fijamos la base $\{1\}$ de $\K$. Es claro que una forma lineal $h\in E^*$, tiene por matriz asociada cierta matriz $1\times n$, a la que denotaremos símplemente $M$.
 
-A la ecuación \ref{A1_eq_formaPedante} le pondremos cariñosamente el nombre de \ti{ecuaciones paramétricas de $U$ en forma pedante}.
+Como ya sabemos, para cada vector $u\in E$, el valor $h(u)$ viene dado por:
+\[h(u)=MX\]
+Siendo $X$ la matriz columna compuesta por las coordenadas de $u$ en la base $\mc{B}$. Es decir, la expresión anterior no es más que el producto de una matriz fila por una matriz columna, desarrollémoslo:
+\[h(u)=\begin{pmatrix}
+h(e_1) & \cdots & h(e_n)
+\end{pmatrix}\begin{pmatrix}
+u_1\\
+\vdots\\
+u_n
+\end{pmatrix}=h(e_1)u_1+\dots+h(e_n)u_n\]
+Como sabemos, el kernel, o núcleo, de una aplicación lineal cualquiera, es un subespacio vectorial del espacio de donde nace.
 
-Para clarificar todo este barullo de subíndices, vayamos con un ejemplo:
-\begin{exa}[Base $\to$ Paramétricas]
-	\label{A1_exa_parametricasR3}
-	Dado un subespacio $U\subset\R^3$ del que sabemos que el conjunto $B_{U}:=\{(1,0,1),(0,1,1)\}$ conforma una base. Dado un vector genérico $x\in U$, se nos pide escribirlo en coordenadas de $B_U$.
+Refrescando brevemente la fórmula de Grassmann para aplicaciones lineales:
+\[\dim(\ker(h))+\dim(\mathrm{im}(h))=\dim(E)\]
+
+A no ser que $h$ sea la aplicación idénticamente nula, se tiene que $\dim(\mathrm{im}(h))=1$, y, por ende, la dimensión del kernel es $n-1$. Equivalentemente, $\ker(h)$ es un hiperplano de $E$. Y, por ende, tendrá ciertas ecuaciones cartesianas, en concreto una ecuación cartesiana, por ser $1=\mathrm{codim}(\ker(h))$.
+
+Pero esta ecuación cartesiana salta a la vista. No es otra que:
+\[h(e_1)u_1+\dots+h(e_n)u_n=0\]
+
+Esto es evidente ya que esa es la definición del núcleo de $h$. El conjunto de aquellos vectores que, pasados por $h$, se anulan.
+
+Veamos ahora que, todo hiperplano $H$ de $E$, está asociado a alguna forma lineal $h$ de $E^*$. El recíproco ya lo hemos visto, ya que el núcleo de toda forma lineal no nula es un hiperplano. En términos de biyecciones:
+\begin{lem}[Pseudolema de la Correspondencia]
+	\label{A1_lem_correspondencia}
+	La aplicación:
+	\[\begin{array}{c}
+	E^*\to\mc{H}\\
+	h\mapsto \ker(h)
+	\end{array}\]
+	es sobreyectiva.
 	
-	La solución a este ejercicio se apoya en la ecuación \ref{A1_eq_formaPedante}, de hecho, basta aplicarla.
+	$\mc{H}$ denota el conjunto de los hiperplanos de $E$.
+\end{lem}
+\begin{proof}
+	Dado un hiperplano $H$, basta con deducir una ecuación cartesiana suya. Que será de la forma $\alpha_1x_1+\dots+\alpha_nx_n=0$. A partir de aquí, basta con construir la forma lineal cuya matriz asociada es:
 	\[\begin{pmatrix}
-	x_1\\
-	x_2\\
-	x_3
-	\end{pmatrix}=\begin{pmatrix}
-	1 & 0\\
-	0 & 1\\
-	1 & 1
-	\end{pmatrix}\begin{pmatrix}
-	\lambda\\
-	\mu
-	\end{pmatrix}=\begin{pmatrix}
-	\lambda\\
-	\mu\\
-	\lambda+\mu
+	\alpha_1 & \cdots & \alpha_n
 	\end{pmatrix}\]
-	Basta por tanto, para cada punto concreto, resolver el sistema de ecuaciones lineales y hallar los valores de $\lambda$ y $\mu$, que serán las coordenadas de $x$ respecto de la base $B_U$. Este caso es tan sencillo que puede resolverse en general sin dificultad.
+	En efecto, el kernel de dicha aplicación viene dado por una ecuación lineal homogénea que coincide con la ecuación cartesiana de $H$.
+\end{proof}
+
+Sin embargo, la aplicación del lema \ref{A1_lem_correspondencia} no es biyectiva. Dado un hiperplano $H$ existen infinitud de formas lineales cuyo núcleo es $H$. Por ende, ahora nos interesa encontrar relaciones entre las formas lineales con idéntico núcleo.
+
+\begin{lem}[Lema de la Correspondencia]
+	Todas las formas lineales asociadas a un mismo hiperplano $H$ son múltiplos entre si. En términos de aplicaciones:
+	\[\begin{array}{c}
+	\proy(E^*)\to\mc{H}\\
+	\class{h}\mapsto \ker(h)
+	\end{array}
+	\]
+	es biyectiva. Es decir, los hiperplanos de $E$ están en biyección con las rectas vectoriales de $E^*$.
+\end{lem}
+\begin{proof}
+	Sea un hiperplano $H$, podemos escoger una ecuación cartesiana suya y fabricar, como hicimos en el lema \ref{A1_lem_correspondencia} una forma lineal cuyo núcleo tenga la misma ecuación cartesia que $H$. Ahora, si cogemos una ecuación cartesiana de $H$ equivalente a la primera que escogimos, es decir, con el mismo conjunto de soluciones, o lo que es lo mismo, una ecuación que sea múltiplo de la primera, fabricaremos una forma lineal que será múltiplo de la primera.
+\end{proof}
+\subsection{Dualidad Canónica}
+En esta sección tratamos de generalizar lo dicho en el caso anterior. Es decir, trataremos de identifiar variedades lineales arcitrarias con variedades lineales del dual correspondiente.
+
+En el caso de los hiperplanos, los identificábamos con el conjunto de las formas lineales cuyo núcleo era dicho hiperplano. Dicho de otra forma, el conjunto de las aaplicaciones lineales que anulaban todos los vectores del hiperplano.
+
+Siguiendo esta idea, la definimos en un ámbito más general.
+\begin{defi}[Anulador de un Subconjunto]
+	Sea $S$ un subconjunto de $E$, denominamos \ti{anulador de $S$} al conjunto de las formas lineales tales que anulan todos los vectores de $S$. Es decir:
+	\[S^{\perp}=\{f\in E^*\tq f(u)=0\ \forall u\in S\}\]
+\end{defi}
+Es un ejercicio de cálculo rutinario la demostración de que el anulador de un subespacio de $E$ es un subespacio de $E^*$.
+
+Una propiedad interesante de los anuladores es que el anulador de un subconjunto $S$, coincide con el anulador de la variedad lineal engendrada por $S$. Veámoslo.
+
+\begin{lem}[Anuladores y Variedades Engendradas] Sea $S$ un subconjunto arbitrario no vacío de $E$, entonces:
+	\[S^{\perp}=\lengen{S}^{\perp}\]
+\end{lem}\begin{proof}
+\begin{itemize}
+	\item[\bsubset] Consideremos una forma lineal $f\in S^{\perp}$, como todo vector de $x\in\lengen{S}$ se escribe de la forma $x=\alpha_1s_1+\dots+\alpha_rs_r$, está claro que, usando la linealidad de $f$, $f(x)=0$.
+	\item[\bsetsub] Como $S\subset\lengen{S}$, toda forma lineal que anule los vectores de $\lengen{S}$ también anulará a los vectores de $S$.
+\end{itemize}
+\end{proof}
+
+Intentemos reeditar el lema de la correspondencia del apartado anterior, tratando de identificar a cada subespacio de $E$ con su anulador correspondiente.
+\begin{lem}[Lema de la Correspondencia]
+	Los subespacios de $E$ están en biyección con los subespacios de $E^*$ de la siguiente manera:
+	\[\begin{array}{c}
+	\mc{U}\to\mc{U}^*\\
+	U\mapsto U^{\perp}
+	\end{array}\]
+	Donde $\mc{U}$ y $\mc{U}^*$ denotan el conjunto de los subespacios de $E$ y $E^*$ respectivamente.
+\end{lem}
+\begin{proof}
+	Para la sobreyectividad basta ver que todo subespacio $W$ de dimensión $r$ de $E^*$ es el anulador de un cierto subespacio $U$.
 	
-	Dado un punto concreto $x=(x_1,x_2,x_3)_B$ sabemos que su escritura en la base $B_U$ es: \[x=(\lambda,\mu)_{B_U}=(x_1,x_2)_{B_U}\]
-\end{exa}
-
-Notemos que el mismo proceso que hemos seguido hasta ahora puede reproducirse de fórma idéntca si en lugar de tomar una base $B_U$ del subespacio $U$, tomamos un sistema de generadores $S$, con la salvedad de que la matriz $P$ de la ecuación \ref{A1_eq_formaPedante} tendrá más columnas.
-
-De esta forma, dado un sistema de generadores de $U$ obtenemos unas ecuaciones paramétricas en forma pedante, a partir de las cuales podemos obtener una base de $U$, para ello, basta obtener la forma normal de Hermite por columnas de la matriz $P$. Es por esto que se dice que las ecuaciones paramétricas caracterizan al subespacio $U$ salvo cambio de base.
-\subsection{Ecuaciones Cartesianas}
-Nuestra tarea en este apartado es probar el recíproco del lema \ref{A1_lem_sistemaSubespacio}. Es decir, queremos ver que, dado un subespacio $U$, podemos interpretarlo como el conjunto de soluciones de un sistema de ecuaciones lineales homogéneo. 
-
-Nuestra prueba será constructiva, obteniendo, a patir de unas ecuaciones paramétricas, un sistema homogéneo.
-\subsubsection{Método de Eliminación de Parámetros}
-POR HACER
-\subsubsection{Método Ortopédico}
-POR HACER
-\subsubsection{Conclusiones}
-Es claro a estas alturas que las ecuaciones cartesianas caracerizan a un subespacio, pues a partir de, por ejemplo, una de sus bases, podemos obtener dichas ecuaciones mediante la obtención de las ecuaciones paramétricas y la aplicación de uno de los métodos vistos anteriormente. Recíprocamente a partir de unas ecuaciones cartesianas, mediante la mera resolución del sistema de ecuaciones homogéneo, obtenemos las ecuaciones paramétricas, tal y como muestra el siguiente ejemplo.
-\begin{exa}[Cartesianas $\to$ Paramétricas]
-	Dado el subespacio $U$ definido por la ecuación cartesiana: \[x_1+x_2+x_3=0\] se pide obtener las ecuaciones paramétricas de $U$.
+	Buscamos el probar que el conjunto de vectores de $E$ que son anulados por todas las formas lineales de $W$ es un subespacio vectorial de $E$.
 	
-	Recordando los métodos de resolución de sistemas de ecuaciones no es dificil llegar a las ecuaciones paramétricas:
-	\[\begin{pmatrix}
-		x_1\\
-		x_2\\
-		x_3
-	\end{pmatrix}=\begin{pmatrix}
-	-1 & -1\\
-	1 & 0\\
-	0 & 1\\
-	\end{pmatrix}\begin{pmatrix}
-	\lambda\\
-	\mu
+	Para verlo, notamos que $W$ tendrá una cierta base compuesta de $r$ formas lineales. Esto tiene importancia, ya que cada vector que sea anulado por todas las formas lineales de la base, también lo será, por linealidad, por todas las aplicaciones de $W$.
+	
+	Dicho lo cual, tenemos que:
+	\[W=\lengen{f_1,\dots,f_r}\]
+	Dichas formas lineales tendrán ciertas matrices asociadas:
+	\[f_i\equiv\begin{pmatrix}
+	a_1^i & \dots & a_n^i
 	\end{pmatrix}\]
-	A partir de este punto, obtener una base es algo chupado.
-\end{exa}
-Como consecuencia de toda esta sección tenemos el siguiente esquema:
+	Sabemos que, dado un vector $x=(x_1,\dots,x_n)_{\mc{B}}$, su valor por $f_i$ viene dado por la ecuación:
+	\[f_i(x)=a_1^ix_1+\dots+a_n^ix_n\]
+	
+	Así, pues el conjunto de los vectores tales que son anulados por las formas lineales de $W$ es el conjunto de vectores que cumplen las ecuaciones:
+	\[\begin{cases}
+	a_1^1x_1+\dots+a_n^1x_n=0\\
+	\vdots\\
+	a_1^rx_1+\dots+a_n^rx_n=0
+	\end{cases}\]
+	Estas ecuaciones pueden interpretarse por las ecuaciones cartesianas de cierto subesacio $U$ de dimensión $n-r$ cuyo anulador es precisamente $W$.
+	
+	Lo anterior también prueba la inyectividad.
+\end{proof}
+Obsérvese que hemos probado algo bastante importante además de lo queríamos probar en un principio, y es que, las dimensiones de un subespacio y su anulador suman la dimensión del espacio total, es decir:
 \begin{equation}
-	\doublebox{\textrm{BASE}}\bs{\rightleftarrows}\doublebox{\textrm{EC. PARAMÉTRICAS}}\bs{\rightleftarrows}\doublebox{\textrm{EC. CARTESIANAS}}
+	\dim(U)+\dim(U^{\perp})=\dim(E)
 \end{equation}
-Lo que queda de sección se dedicará a sacar algunas conclusiones muy elementales pero de gran importancia a la hora de entender conceptos de geometría proyectiva.
-\subsubsection{Dimensión de un Subespacio}
-\subsubsection{Hiperplanos}
+
+De esto se desprenden muchas propiedades muy útiles, tal y como muestra la siguiente proposición.
+\begin{prop}[Propiedades de la Dualidad]
+	Se cumplen las siguientes propiedades:
+	\begin{enumerate}
+		\item Los contenidos se invierten al dualizar. Es decir: \[W\subset U\sii U^{\perp}\subset W^{\perp}\]
+		\item Las sumas se convierten en intersecciones al dualizar:
+		\[(U+W)^{\perp}=U^{\perp}\cap W^{\perp}\]
+		\item Las intersecciones se convierten en sumas:
+		\[(U\cap W)^{\perp}=U^{\perp}+ W^{\perp}\]
+	\end{enumerate}
+\end{prop}
+\begin{proof}
+	PENDIENTE
+\end{proof}
+\subsection{Principio de Dualidad}
+SON PÁRRAFOS INCONEXOS, REVISAR
+
+Todo enunciado tiene un enunciado dual, y si es cierto uno es cierto el otro.
+
+Como los espacios vectoriales $E$ y $E^*$ son isomorfos por tener la misma dimensión, todas las propiedades que sean ciertas en uno serán ciertas en el otro.
+
+Todas las propiedades válidas en $E^*$, lo son en $E$ aplicando la biyección de la dualidad canónica.ya que es un espacio vectorial.
+
+Las propiedades de la dualidad canónica actúan como un diccionario que traduce los enunciados del espacio vectorial usual al espacio vectorial dual.
+
+\begin{exa}[Principio de Dualidad]
+	Sea un $E$ un $\K$--espacio vectorial de dimensión $3$.
+	
+	Entonces, se tiene que dos rectas distintas generan un plano.
+	
+	En efecto, esto puede demostrarse fácilmente mediante la fórmula de Grassmann.
+	
+	Por el principio de dualidad, los respectivos anuladores de dichas dos rectas se intersecan en el anulador de un plano.
+	
+	Traduciendo por la propiedad de las dimensiones complementarias:
+	
+	Dos planos se intersecan en una recta.
+	
+	Este último enunciado no hay que probarlo ya que es lo que se llama enunciado dual del primero, y por las propiedades anteriormente demostradas es trivialmente cierto.
+\end{exa}
+
+La idea del principio de dualidad es que, demostrando un teorema, ya sea en el espacio habitual o en el espacio dual, obtenemos el teorema dual de forma automática y gratuita.

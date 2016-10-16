@@ -13,20 +13,20 @@
 \BOOKMARK [2][-]{subsection.1.4.2}{Referencias Proyectivas}{section.1.4}% 13
 \BOOKMARK [2][-]{subsection.1.4.3}{Base Asociada a una Referencia Proyectiva}{section.1.4}% 14
 \BOOKMARK [1][-]{section.1.5}{Cambios de Referencia Proyectiva}{chapter.1}% 15
-\BOOKMARK [1][-]{section.1.6}{El espacio dual}{chapter.1}% 16
-\BOOKMARK [2][-]{subsection.1.6.1}{Espacio proyectivo dual}{section.1.6}% 17
-\BOOKMARK [1][-]{section.1.7}{Coordenadas de Subespacios Proyectivos}{chapter.1}% 18
-\BOOKMARK [2][-]{subsection.1.7.1}{Rectas Proyectivas}{section.1.7}% 19
-\BOOKMARK [2][-]{subsection.1.7.2}{Hiperplanos Proyectivos}{section.1.7}% 20
-\BOOKMARK [2][-]{subsection.1.7.3}{Variedades proyectivas}{section.1.7}% 21
-\BOOKMARK [2][-]{subsection.1.7.4}{El Teorema de Pappus}{section.1.7}% 22
-\BOOKMARK [1][-]{section.1.8}{Problemas}{chapter.1}% 23
-\BOOKMARK [0][-]{appendix.Alph1}{\301lgebra Lineal}{}% 24
-\BOOKMARK [1][-]{section.Alph1.1}{Coordenadas en Espacios Vectoriales}{appendix.Alph1}% 25
-\BOOKMARK [2][-]{subsection.Alph1.1.1}{Matriz de Cambio de Base}{section.Alph1.1}% 26
-\BOOKMARK [1][-]{section.Alph1.2}{Ecuaciones de Subespacios}{appendix.Alph1}% 27
-\BOOKMARK [2][-]{subsection.Alph1.2.1}{Existencia de las Ecuaciones Cartesianas}{section.Alph1.2}% 28
-\BOOKMARK [1][-]{section.Alph1.3}{Dualidad}{appendix.Alph1}% 29
-\BOOKMARK [2][-]{subsection.Alph1.3.1}{Formas Lineales e Hiperplanos}{section.Alph1.3}% 30
-\BOOKMARK [2][-]{subsection.Alph1.3.2}{Dualidad Can\363nica}{section.Alph1.3}% 31
-\BOOKMARK [2][-]{subsection.Alph1.3.3}{Principio de Dualidad}{section.Alph1.3}% 32
+\BOOKMARK [1][-]{section.1.6}{Problemas}{chapter.1}% 16
+\BOOKMARK [0][-]{chapter.2}{Dualidad}{}% 17
+\BOOKMARK [1][-]{section.2.1}{Dualidad en espacios vectoriales}{chapter.2}% 18
+\BOOKMARK [2][-]{subsection.2.1.1}{Formas Lineales e Hiperplanos}{section.2.1}% 19
+\BOOKMARK [2][-]{subsection.2.1.2}{Dualidad Can\363nica}{section.2.1}% 20
+\BOOKMARK [2][-]{subsection.2.1.3}{Principio de Dualidad}{section.2.1}% 21
+\BOOKMARK [1][-]{section.2.2}{Dualidad en espacios proyectivos}{chapter.2}% 22
+\BOOKMARK [2][-]{subsection.2.2.1}{Hiperplanos Proyectivos}{section.2.2}% 23
+\BOOKMARK [2][-]{subsection.2.2.2}{Variedades proyectivas}{section.2.2}% 24
+\BOOKMARK [0][-]{chapter.3}{No s\351 que nombre tendr\341}{}% 25
+\BOOKMARK [1][-]{subsection.3.0.1}{Rectas Proyectivas}{chapter.3}% 26
+\BOOKMARK [0][-]{appendix.Alph1}{\301lgebra Lineal}{}% 27
+\BOOKMARK [1][-]{section.Alph1.1}{Coordenadas en Espacios Vectoriales}{appendix.Alph1}% 28
+\BOOKMARK [2][-]{subsection.Alph1.1.1}{Matriz de Cambio de Base}{section.Alph1.1}% 29
+\BOOKMARK [1][-]{section.Alph1.2}{Ecuaciones de Subespacios}{appendix.Alph1}% 30
+\BOOKMARK [2][-]{subsection.Alph1.2.1}{Existencia de las Ecuaciones Cartesianas}{section.Alph1.2}% 31
+\BOOKMARK [1][-]{section.Alph1.3}{Dualidad}{appendix.Alph1}% 32

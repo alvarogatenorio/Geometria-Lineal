@@ -1,4 +1,5 @@
 \chapter{Álgebra Lineal}
+\label{A}
 Este apéndice está especialmente pensado para los alumnos de los dobles grados, que, a fecha de escribir este texto, cursan la asignatura de geometría lineal y la de álgebra lineal con un año de separación.
 
 Este hecho añade a la presente materia un plus de dificultad, pues hace echar mano constantemente de la bibliografía de primer curso, que, en muchas ocasiones, no es sufiente, por ejemplo en el estudio de la \ti{dualidad}.
@@ -207,71 +208,8 @@ A continuación calculamos de manera inmediata la dimensión del espacio dual.
 \begin{proof}
 	contenidos...
 \end{proof}
-\subsection{Formas Lineales e Hiperplanos}
-Antes de comenzar, fijemos una base $\mc{B}$ de $E$. Asimismo fijamos la base $\{1\}$ de $\K$. Es claro que una forma lineal $h\in E^*$, tiene por matriz asociada cierta matriz $1\times n$, a la que denotaremos símplemente $M$.
 
-Como ya sabemos, para cada vector $u\in E$, el valor $h(u)$ viene dado por:
-\[h(u)=MX\]
-Siendo $X$ la matriz columna compuesta por las coordenadas de $u$ en la base $\mc{B}$. Es decir, la expresión anterior no es más que el producto de una matriz fila por una matriz columna, desarrollémoslo:
-\[h(u)=\begin{pmatrix}
-h(e_1) & \cdots & h(e_n)
-\end{pmatrix}\begin{pmatrix}
-u_1\\
-\vdots\\
-u_n
-\end{pmatrix}=h(e_1)u_1+\dots+h(e_n)u_n\]
-Como sabemos, el kernel, o núcleo, de una aplicación lineal cualquiera, es un subespacio vectorial del espacio de donde nace.
-
-Refrescando brevemente la fórmula de Grassmann para aplicaciones lineales:
-\[\dim(\ker(h))+\dim(\mathrm{im}(h))=\dim(E)\]
-
-A no ser que $h$ sea la aplicación idénticamente nula, se tiene que $\dim(\mathrm{im}(h))=1$, y, por ende, la dimensión del kernel es $n-1$. Equivalentemente, $\ker(h)$ es un hiperplano de $E$. Y, por ende, tendrá ciertas ecuaciones cartesianas, en concreto una ecuación cartesiana, por ser $1=\mathrm{codim}(\ker(h))$.
-
-Pero esta ecuación cartesiana salta a la vista. No es otra que:
-\[h(e_1)u_1+\dots+h(e_n)u_n=0\]
-
-Esto es evidente ya que esa es la definición del núcleo de $h$. El conjunto de aquellos vectores que, pasados por $h$, se anulan.
-
-Veamos ahora que, todo hiperplano $H$ de $E$, está asociado a alguna forma lineal $h$ de $E^*$. El recíproco ya lo hemos visto, ya que el núcleo de toda forma lineal no nula es un hiperplano. En términos de biyecciones:
-\begin{lem}[Pseudolema de la Correspondencia]
-	\label{A1_lem_correspondencia}
-	La aplicación:
-	\[\begin{array}{c}
-	E^*\to\mc{H}\\
-	h\mapsto \ker(h)
-	\end{array}\]
-	es sobreyectiva.
-	
-	$\mc{H}$ denota el conjunto de los hiperplanos de $E$.
-\end{lem}
-\begin{proof}
-	Dado un hiperplano $H$, basta con deducir una ecuación cartesiana suya. Que será de la forma $\alpha_1x_1+\dots+\alpha_nx_n=0$. A partir de aquí, basta con construir la forma lineal cuya matriz asociada es:
-	\[\begin{pmatrix}
-	\alpha_1 & \cdots & \alpha_n
-	\end{pmatrix}\]
-	En efecto, el kernel de dicha aplicación viene dado por una ecuación lineal homogénea que coincide con la ecuación cartesiana de $H$.
-\end{proof}
-
-Sin embargo, la aplicación del lema \ref{A1_lem_correspondencia} no es biyectiva. Dado un hiperplano $H$ existen infinitud de formas lineales cuyo núcleo es $H$. Por ende, ahora nos interesa encontrar relaciones entre las formas lineales con idéntico núcleo.
-
-\begin{lem}[Lema de la Correspondencia]
-	Todas las formas lineales asociadas a un mismo hiperplano $H$ son múltiplos entre si. En términos de aplicaciones:
-	\[\begin{array}{c}
-	\proy(E^*)\to\mc{H}\\
-	\class{h}\mapsto \ker(h)
-	\end{array}
-	\]
-	es biyectiva. Es decir, los hiperplanos de $E$ están en biyección con las rectas vectoriales de $E^*$.
-\end{lem}
-\begin{proof}
-	Sea un hiperplano $H$, podemos escoger una ecuación cartesiana suya y fabricar, como hicimos en el lema \ref{A1_lem_correspondencia} una forma lineal cuyo núcleo tenga la misma ecuación cartesia que $H$. Ahora, si cogemos una ecuación cartesiana de $H$ equivalente a la primera que escogimos, es decir, con el mismo conjunto de soluciones, o lo que es lo mismo, una ecuación que sea múltiplo de la primera, fabricaremos una forma lineal que será múltiplo de la primera.
-\end{proof}
-\subsection{Dualidad Canónica}
-En esta sección tratamos de generalizar lo dicho en el caso anterior. Es decir, trataremos de identifiar variedades lineales arcitrarias con variedades lineales del dual correspondiente.
-
-En el caso de los hiperplanos, los identificábamos con el conjunto de las formas lineales cuyo núcleo era dicho hiperplano. Dicho de otra forma, el conjunto de las aaplicaciones lineales que anulaban todos los vectores del hiperplano.
-
-Siguiendo esta idea, la definimos en un ámbito más general.
+Continuemos definiendo varios conceptos imprescindibles del espacio dual.
 \begin{defi}[Anulador de un Subconjunto]
 	Sea $S$ un subconjunto de $E$, denominamos \ti{anulador de $S$} al conjunto de las formas lineales tales que anulan todos los vectores de $S$. Es decir:
 	\[S^{\perp}=\{f\in E^*\tq f(u)=0\ \forall u\in S\}\]
@@ -288,86 +226,3 @@ Una propiedad interesante de los anuladores es que el anulador de un subconjunto
 	\item[\bsetsub] Como $S\subset\lengen{S}$, toda forma lineal que anule los vectores de $\lengen{S}$ también anulará a los vectores de $S$.
 \end{itemize}
 \end{proof}
-
-Intentemos reeditar el lema de la correspondencia del apartado anterior, tratando de identificar a cada subespacio de $E$ con su anulador correspondiente.
-\begin{lem}[Lema de la Correspondencia]
-	Los subespacios de $E$ están en biyección con los subespacios de $E^*$ de la siguiente manera:
-	\[\begin{array}{c}
-	\mc{U}\to\mc{U}^*\\
-	U\mapsto U^{\perp}
-	\end{array}\]
-	Donde $\mc{U}$ y $\mc{U}^*$ denotan el conjunto de los subespacios de $E$ y $E^*$ respectivamente.
-\end{lem}
-\begin{proof}
-	Para la sobreyectividad basta ver que todo subespacio $W$ de dimensión $r$ de $E^*$ es el anulador de un cierto subespacio $U$.
-	
-	Buscamos el probar que el conjunto de vectores de $E$ que son anulados por todas las formas lineales de $W$ es un subespacio vectorial de $E$.
-	
-	Para verlo, notamos que $W$ tendrá una cierta base compuesta de $r$ formas lineales. Esto tiene importancia, ya que cada vector que sea anulado por todas las formas lineales de la base, también lo será, por linealidad, por todas las aplicaciones de $W$.
-	
-	Dicho lo cual, tenemos que:
-	\[W=\lengen{f_1,\dots,f_r}\]
-	Dichas formas lineales tendrán ciertas matrices asociadas:
-	\[f_i\equiv\begin{pmatrix}
-	a_1^i & \dots & a_n^i
-	\end{pmatrix}\]
-	Sabemos que, dado un vector $x=(x_1,\dots,x_n)_{\mc{B}}$, su valor por $f_i$ viene dado por la ecuación:
-	\[f_i(x)=a_1^ix_1+\dots+a_n^ix_n\]
-	
-	Así, pues el conjunto de los vectores tales que son anulados por las formas lineales de $W$ es el conjunto de vectores que cumplen las ecuaciones:
-	\[\begin{cases}
-	a_1^1x_1+\dots+a_n^1x_n=0\\
-	\vdots\\
-	a_1^rx_1+\dots+a_n^rx_n=0
-	\end{cases}\]
-	Estas ecuaciones pueden interpretarse por las ecuaciones cartesianas de cierto subesacio $U$ de dimensión $n-r$ cuyo anulador es precisamente $W$.
-	
-	Lo anterior también prueba la inyectividad.
-\end{proof}
-Obsérvese que hemos probado algo bastante importante además de lo queríamos probar en un principio, y es que, las dimensiones de un subespacio y su anulador suman la dimensión del espacio total, es decir:
-\begin{equation}
-	\dim(U)+\dim(U^{\perp})=\dim(E)
-\end{equation}
-
-De esto se desprenden muchas propiedades muy útiles, tal y como muestra la siguiente proposición.
-\begin{prop}[Propiedades de la Dualidad]
-	Se cumplen las siguientes propiedades:
-	\begin{enumerate}
-		\item Los contenidos se invierten al dualizar. Es decir: \[W\subset U\sii U^{\perp}\subset W^{\perp}\]
-		\item Las sumas se convierten en intersecciones al dualizar:
-		\[(U+W)^{\perp}=U^{\perp}\cap W^{\perp}\]
-		\item Las intersecciones se convierten en sumas:
-		\[(U\cap W)^{\perp}=U^{\perp}+ W^{\perp}\]
-	\end{enumerate}
-\end{prop}
-\begin{proof}
-	PENDIENTE
-\end{proof}
-\subsection{Principio de Dualidad}
-SON PÁRRAFOS INCONEXOS, REVISAR
-
-Todo enunciado tiene un enunciado dual, y si es cierto uno es cierto el otro.
-
-Como los espacios vectoriales $E$ y $E^*$ son isomorfos por tener la misma dimensión, todas las propiedades que sean ciertas en uno serán ciertas en el otro.
-
-Todas las propiedades válidas en $E^*$, lo son en $E$ aplicando la biyección de la dualidad canónica.ya que es un espacio vectorial.
-
-Las propiedades de la dualidad canónica actúan como un diccionario que traduce los enunciados del espacio vectorial usual al espacio vectorial dual.
-
-\begin{exa}[Principio de Dualidad]
-	Sea un $E$ un $\K$--espacio vectorial de dimensión $3$.
-	
-	Entonces, se tiene que dos rectas distintas generan un plano.
-	
-	En efecto, esto puede demostrarse fácilmente mediante la fórmula de Grassmann.
-	
-	Por el principio de dualidad, los respectivos anuladores de dichas dos rectas se intersecan en el anulador de un plano.
-	
-	Traduciendo por la propiedad de las dimensiones complementarias:
-	
-	Dos planos se intersecan en una recta.
-	
-	Este último enunciado no hay que probarlo ya que es lo que se llama enunciado dual del primero, y por las propiedades anteriormente demostradas es trivialmente cierto.
-\end{exa}
-
-La idea del principio de dualidad es que, demostrando un teorema, ya sea en el espacio habitual o en el espacio dual, obtenemos el teorema dual de forma automática y gratuita.

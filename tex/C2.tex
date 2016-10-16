@@ -79,7 +79,7 @@ En el caso de los hiperplanos, los identificábamos con el conjunto de las forma
 
 Siguiendo esta idea, la definimos en un ámbito más general. Para ello echamos mano del anulador. Recordemos la siguiente definición
 \begin{defi}[Anulador de un subespacio vectorial]
-	Sea $W\subset E$ subespacio vectorial de $E$, se define el anulador de $W$ como el conjunto
+	Sea $W\subset E$ subespacio vectorial de $E$, se define el \ti{anulador} de $W$ como el conjunto
 	\begin{equation}
 	W^{\perp}:=\{\alpha\in E^*\tq \alpha(u)=0 \ \forall u\in W\}=\{\alpha\in E^*\tq W\subset ker(\alpha)\}
 	\end{equation}
@@ -126,7 +126,7 @@ Intentemos reeditar el lema de la correspondencia del apartado anterior, tratand
 Una vez probada la biyectividad, es posible definir el anulador de un subespacio vectorial del espacio dual.
 \begin{defi}[Anulador dual]
 	\label{C2_def_anuladorDual}
-	Sea $W^*\subset E^*$ subespacio vectorial del dual $E^*$, se define el anulador de $W^*$ como el conjunto
+	Sea $W^*\subset E^*$ subespacio vectorial del dual $E^*$, se define el \ti{anulador} de $W^*$ como el conjunto
 	\begin{equation}
 	W^{*\perp}:=\{u\in E\tq \beta(u)=0 \ \forall \beta\in W^*\}
 	\end{equation}
@@ -139,7 +139,7 @@ Por tanto, cuando nos encontramos en el espacio vectorial $E$, buscamos las form
 independientemente de si $W\subset E$ o $W\subset E^*$.
 
 Obsérvese que hemos probado algo bastante importante además de lo queríamos probar en un principio, y es que, las dimensiones de un subespacio y su anulador suman la dimensión del espacio total, es decir:
-\begin{equation}
+\begin{equation}\label{C2_eq_dim_anulador}
 \dim(U)+\dim(U^{\perp})=\dim(E)
 \end{equation}
 Evidentemente, debido a la biyectividad del lema~\ref{C2_lem_correspondenciaAnulador} se tiene que
@@ -148,7 +148,7 @@ Evidentemente, debido a la biyectividad del lema~\ref{C2_lem_correspondenciaAnul
 \end{equation*}
 De esto se desprenden muchas propiedades muy útiles, tal y como muestra la siguiente proposición.
 \begin{prop}[Propiedades de la Dualidad]
-	\label{C2_lem_propiedadespasodual}
+	\label{C2_pro_propiedades_dualidad}
 	Se cumplen las siguientes propiedades:
 	\begin{enumerate}
 		\item Los contenidos se invierten al dualizar. Es decir: \[W\subset U\sii U^{\perp}\subset W^{\perp}\]
@@ -201,9 +201,9 @@ Las propiedades de la dualidad canónica actúan como un diccionario que traduce
 La idea del principio de dualidad es que, demostrando un teorema, ya sea en el espacio habitual o en el espacio dual, obtenemos el teorema dual de forma automática y gratuita.
 
 \section{Dualidad en espacios proyectivos}
-Una vez repasados y ampliados los conceptos de espacio dual y anulador, pasemos a introducir el espacio proyectivo dual. Iremos adentrándonos en él poco a poco a lo largo de las siguientes secciones, hasta finalmente comprender su juego en la geometría proyectiva. Comencemos con una definición.
+Una vez repasados y ampliados los conceptos de espacio dual y anulador, pasemos a introducir el espacio proyectivo dual. Iremos adentrándonos en él poco a poco, hasta finalmente comprender su juego en la geometría proyectiva. Comencemos con una definición.
 \begin{defi}[Espacio proyectivo dual]
-	Dado un espacio vectorial $E$ y su correspondiente espacio proyectivo $\proy(E)$, se llama espacio proyectivo dual de $P$ al espacio proyectivo $\proy(E^*)$ asociado al espacio vectorial dual $E^*$ de $E$. Se denota por $\proy(E^*)$. En el caso de ser $E=\K^{n+1}$, su espacio proyectivo dual se denota por $\proy^*$.
+	Dado un espacio vectorial $E$ y su correspondiente espacio proyectivo $\proy(E)$, se llama \ti{espacio proyectivo dual} de $P$ al espacio proyectivo $\proy(E^*)$ asociado al espacio vectorial dual $E^*$ de $E$. Se denota por $\proy(E^*)$. En el caso de ser $E=\K^{n+1}$, su espacio proyectivo dual se denota por $\proy^*$.
 \end{defi}
 \begin{obs}
 	Dado que el espacio dual $E^*$ tiene la misma dimensión que $E$, si la dimensión es finita, esto implica que la dimensión del espacio proyectivo es la misma que la del espacio proyectivo dual
@@ -211,92 +211,91 @@ Una vez repasados y ampliados los conceptos de espacio dual y anulador, pasemos 
 	\dim(\proy(E))=\dim (\proy(E^*))
 	\end{equation*}
 \end{obs}
-Propiedades similares a las dadas para espacios vectoriales, se dan entre variedades proyectivas. Sin embargo, para poder entenderlas en su completitud es necesario hablar primero de coordenadas de variedades proyectivas. Por ello aguardaremos a la sección~\ref{C1_sec_coordenadasSubespacios} para abordar este tema.
 
-Nótese que a lo largo de la demostración del lema~\ref{C1_lem_propiedadespasodual} se ha probado que toda ecuación cartesiana de un subespacio se puede asociar a una forma lineal, es decir, a un vector del espacio dual. Esto da pie a pensar en la relación entre el espacio dual y las coordenadas de subespacios proyectivos, ya que, al fin y al cabo, estos pueden trasladarse a espacios vectoriales, tema que abordaremos en la siguiente sección.
-
-\subsection{Hiperplanos Proyectivos}
-CAMBIARLOOO
+\subsection{Formas Lineales e Hiperplanos Proyectivos}
 
 Comenzamos este apartado recordando brevemente que los hiperplanos vectoriales son subespacios lineales de codimensión $1$. Asimismo todo hiperplano proyectivo $H=\proy(\hat{H})$ es la proyección de un hiperplano vectorial $\hat{H}$
 \begin{equation}
 \dim(E)-2=\dim(\proy)-1=\dim(H)=\dim(\hat{H})-1\ra \dim(\hat{H})=\dim(E)-1.
 \end{equation}
-Recordemos también que un hiperplano vectorial $\hat{H}$ viene definido por una ecuación cartesiana de la forma
-\begin{equation*}
-a_0x_0+a_1x_1+\cdots +a_nx_n=0 \quad \text{ con } a_0,a_1,\cdots, a_n \text{ no todos nulos }.
-\end{equation*}
-Por tanto, puede definirse como el núcleo de una forma lineal, la cual está a su vez definida por la ecuación cartesiana del hiperplano
-\begin{equation*}
-h(x_0,x_1,\cdots,x_n)=a_0x_0+a_1x_1+\cdots +a_nx_n.
-\end{equation*}
-De igual manera, dada una forma lineal $h$, no idénticamente nula, por la fórmula de las dimensiones de las aplicaciones lineales, su \ti{núcleo}, es decir, el conjunto de los puntos de $E$ que son anulados por $h$, es un hiperplano vectorial. 
+Recordemos también que todo hiperplano vectorial $\hat{H}$ está en biyección con las formas lineales cuyo núcleo es el propio espacio vectorial $\hat{H}$, las cuales son múltiplos. Es decir, está en biyección con un punto del espacio proyectivo dual, un rayo de formas lineales.
 
-Por tanto podemos intentar expresar un hiperplano proyectivo a partir de dicha $h$, ya que es la proyección de un hiperplano vectorial. Sin embargo, esta forma lineal no está bien definida en el espacio proyectivo $\proy(E)$. Ello se debe a que puedo escoger dos vectores  $u, \lambda u\in E$, que pertenecen al mismo punto en el espacio proyectivo, tales que sus imágenes no pertenecen al mismo rayo. Esto no puede ocurrir con aquellos que pertenezcan al núcleo de $h$. Por tanto los ceros de $h$ sí están bien definidos en $\proy(E)$. Así, dado un hiperplano vectorial $\hat{H}$ definido por los ceros de $h$, podemos asegurar que la siguiente definición es válida
+Por tanto podemos intentar establecer también una biyección entre un hiperplano proyectivo $H$ y dicho punto proyectivo $[h]$, ya que $H$ es la proyección de un hiperplano vectorial. Pero la forma lineal $h$ no está bien definida en el espacio proyectivo $\proy(E)$. Ello se debe a que puedo escoger dos vectores  $u, \lambda u\in E$, que pertenecen al mismo punto en el espacio proyectivo, tales que sus imágenes no pertenecen al mismo rayo. Sin embargo, esto no puede ocurrir con aquellos que pertenezcan al núcleo de $h$. Por tanto los ceros de $h$ sí están bien definidos en $\proy(E)$. Dado que estos ceros son precisamente el espacio vectorial $\hat{H}$, no hay ningún problema en considerar el espacio proyectivo.
+
+Surge así el siguiente lema, idéntico al lema~\ref{C2_lem_correspondencia}.
+\begin{lem}[Lema de la Correspondencia proyectiva]
+	\label{C2_lem_correspondenciaProy}
+	La aplicación
+	\begin{equation*}
+		\begin{split}
+			\mc{H}& \rightarrow \proy(E^*)\\
+			H &\rightarrow [h]
+		\end{split}
+	\end{equation*}
+	es biyectiva. $\mc{H}$ denota el conjunto de los hiperplanos proyectivos de $\proy(E)$.
+\end{lem}
+\begin{proof}
+	El conjunto de los hiperplanos proyectivos de $\proy(E)$ está en biyección con el conjunto de los hiperplanos vectoriales de $E$. Estos, a su vez, por el Lema de la Correspondencia, están en biyección con el espacio proyectivo dual, asociando a cada hiperplano vectorial $\hat{H}$ el rayo de formas lineales que se anulan sobre él. Dado que la composición de biyecciones es biyección, queda demostrado que existe una aplicación biyectiva que asocia a cada hiperplano proyectivo $H=\proy(\hat{H})$ el rayo de formas lienales cuyos ceros forman el hiperplano  $\hat{H}$.
+\end{proof}
+Entonces, dado un hiperplano proyectivo $H$, podemos escribirlo como
 \begin{equation}
 H=\proy(\hat{H})=\{[u]\in\proy(E)\tq h(u)=0\}
 \end{equation}
-Uno podría hacerse la siguiente pregunta. ¿Solo habrá una forma lineal $h$ que se anule en el hiperplano $\hat{H}$? Y si no es así, entonces, ¿cómo definir su proyección $H$? Obsérvese que dichas formas lineales $h$ no son más que las pertenecientes al anulador de $\hat{H}$. Pero este subespacio pertenece al espacio dual. Cabría entonces preguntarse si existe alguna relación entre el $\an{\hat{H}}$ y el espacio dual proyectivo. Para ello se enuncia el siguiente lema, que nos llevará rápidamente a esta conexión.
-\begin{lem}
-	\label{C1_lem_multiplosformaslienales}
-	Todas las formas lineales que se anulan en un mismo hiperplano son las mismas, salvo un factor de proporcionalidad
+
+\subsection{Dualidad canónica}
+Se ha visto la importancia del espacio dual a la hora de caracterizar hiperplanos proyectivos. Al igual que se hizo en la sección anterior, buscamos ahora generalizar ese resultado, para poder identificar variedades proyectivas con variedades lineales del espacio dual proyectivo.
+
+Recordemos que, dada una variedad lineal, esta estaba en biyección con su anulador, el cual es un subespacio vectorial de $E^*$. Al igual que hicimos con hiperplanos trataremos de trasladar esta biyección entre variedades de un espacio vectorial y su dual, a una biyección entre variedades de un espacio proyectivo y su dual.
+\begin{lem}[Lema de la Correspondencia Proyectiva]
+	\label{C2_lem_correspondencia_proy_anulador}
+	La aplicación 
+	\begin{equation*}
+		\begin{split}
+			\mc{X}& \rightarrow \mc{X}^*\\
+			X& \rightarrow X^*=\proy(\hat{X}^{\perp})
+		\end{split}
+	\end{equation*}
+	donde $\mc{X}$ y $\mc{X}^*$ denotan el conjunto de las variedades de $\proy(E)$ y $\proy(E^*)$ respectivamente, es biyectiva.
 \end{lem}
 \begin{proof}
-	PENDIENTE
+	El conjunto de las variedades de $\proy(E)$ está en biyección con los subespacios vectoriales de $E$. Estos, a su vez, por el lema~\ref{C2_lem_correspondenciaAnulador} (Lema de la Correspondencia), están en biyección con su anulador $\hat{X}^\perp$. Al ser este un subespacio vectorial del espacio dual $E^*$, de nuevo podemos establecer una biyección entre $\hat{X}^{\perp}$ y las variedades de $\proy(E^*)$, que asocia a cada subespacio su correspondiente proyección $X^*=\proy (\hat{X}^{\perp})$. Dado que la composición de biyecciones es biyección, queda demostrado que existe una aplicación biyectiva que asocia a cada variedad proyectiva $X$ la proyección de su anulador $X^*$.
 \end{proof}
-Esto implica que un hiperplano proyectivo está asociado a un conjunto de formas lineales múltiplos, es decir, a un rayo de formas lineales, un punto del espacio proyectivo dual. Existe por tanto una biyección entre el conjunto de hiperplanos del espacio proyectivo $\proy(E)$ y el espacio proyectivo dual $\proy(E^*)$, que asocia a cada hiperplano proyectivo el rayo de formas lineales cuyos ceros forman el hiperplano
+
+Dada una variedad proyectiva $X$, llamaremos dual de la variedad a $X^*$.
+
+Obsérvese que, lo que estamos haciendo, es identificar cada variedad proyectiva $X=\proy(\hat{X})$ con los rayos de las formas lineales que pertenecen al anulador de $\hat{X}$. Dado que un subespacio vectorial tiene tantas ecuaciones cartesianas como formas lineales independientes hay en su anulador, es fácil hacer esta identificación. Un punto del espacio proyectivo, por ejemplo, se identifica con dos elementos del dual linealmente independientes, es decir, un plano, ya que el subespacio del que es proyección es una recta, la cual posee dos ecuaciones cartesianas.
+
+Por supuesto, el hiperplano es un caso particular de esta caracterización, en la que solo hay una ecuación cartesiana y por tanto la variedad proyectiva se identifica con un único punto en el espacio proyectivo dual. Así
 \begin{equation}
-\begin{split}
-\varphi:\mc{H}& \rightarrow \proy(E^*)\\
-H &\rightarrow [h]
-\end{split}
+H^*=\proy(\hat{H}^{\perp})=\proy(\{h\in E^*\tq h(u)=0\ \forall u\in \hat{H}\})=[h]
 \end{equation}
-donde $\mc{H}=\{H\tq H \text{ es hiperplano de } \proy(E)\}$.
 
-Otra implicación inmediata de este lema, y que nos lleva de vuelta a las preguntas formuladas con anterioridad, es que, dado $\hat{H}$ hiperplano vectorial, se tiene
-\begin{equation}
-\proy(\an{\hat{H}})=\proy(\{h\in E^*\tq h(u)=0\ \forall u\in \hat{H}\})=[h]
-\end{equation}
-denotándose la proyección del anulador como $H^*$ y lo llamaremos dual del hiperplano $H$
-
-Aquí se encuentra el puente que conecta nuestro espacio proyectivo con el espacio proyectivo dual
-\begin{equation}
-H=\proy(\hat{H})\sii \hat{H}\sii \an{\hat{H}}\sii \proy(\an{\hat{H}})=H^*=[h]
-\end{equation}
-Como podría uno imaginarse, esto no solo se puede hacer con hiperplanos proyectivos, sino que se puede generalizar a cualquier variedad proyectiva.
-\subsection{Variedades proyectivas}
-Se ha visto la importancia del espacio dual a la hora de caracterizar hiperplanos. De la misma forma, esta caracterización dual es realmente útil para variedades proyectivas en general. Se expondrá a continuación en que consiste dicha caracterización y algunas de sus propiedades, para poder así finalmente describir cualquier variedad en el espacio proyectivo.
-
-Empecemos caracterizando el paso del espacio proyectivo al espacio proyectivo dual. Sea $X$ una variedad del espacio proyectivo $\proy(E)$, por la definición~\ref{C1_def_variedadProyectiva} sabemos que existe un subespacio vectorial $\hat{X}\subset E$ tal que $\proy(\hat{X})=X$. Este subespacio vectorial se puede describir a través de sus ecuaciones cartesianas. Como vimos en secciones anteriores, a cada ecuación cartesiana se le puede asociar una forma lineal $\alpha_i$ que se anule sobre $\hat{X}$, siendo además todas ellas linealmente independientes. Por tanto, $\hat{X}$ tendrá asociadas tantas formas lineales $\alpha_i$ como ecuaciones cartesianas tenga. 
-
-Gracias al lema~\ref{C1_lem_multiplosformaslienales} sabemos que cualquier otra forma lineal que se anule sobre $\hat{X}$ debe ser múltiplo de algún $\alpha_i$. Por tanto podemos identificar $X$ con las ecuaciones cartesianas de $\hat{X}$, que a su vez podemos identificar con rayos de formas lineales, tantos como ecuaciones cartesianas tenga el subespacio vectorial. Estos rayos de formas lineales pertenecen al espacio proyectivo dual, quedando así trazado el camino desde el espacio proyectivo al espacio proyectivo dual. Un punto del espacio proyectivo, por ejemplo, se identifica con dos elementos del dual linealmente independientes, es decir, un plano, ya que el subespacio del que es proyección es una recta, la cual posee dos ecuaciones cartesianas.
-
-Obsérvese que, al igual que ocurría con hiperplanos, esas formas lineales $\alpha_i$ pertenecen al $\an{\hat{X}}$. De hecho, dado que la dimensión del anulador es el número de ecuaciones cartesianas, que a su vez es el número de formas lineales $\alpha_i$ linealmente independientes, se tiene que el $\an{\hat{X}}$ es el conjunto de las formas lineales $\alpha_i$. Por tanto los rayos de estas formas lineales, que identificábamos con $X$, no son más que la proyección del $\an{\hat{X}}$, la cual denotaremos por $X^*$ y denominaremos dual de la variedad proyectiva $X$.
-
-Por supuesto, el hiperplano es un caso particular de esta caracterización, en la que solo hay una ecuación cartesiana y por tanto la variedad se identifica con un único punto en el espacio proyectivo dual.
-
-Este camino puede resumirse con el siguiente esquema
-\begin{equation}
-\proy(\hat{X})=X\subset\proy(E)\sii \hat{X}\subset E\sii \an{\hat{X}}\subset E^*\sii \proy(\an{\hat{X}})=X^*\subset \proy(E^*)
-\end{equation}
-donde $\sii$ indica que puede recorrerse en ambos sentidos.
-Veamos a continuación algunas de las propiedades que presenta esta caracterización.
-\begin{lem}[Propiedades del paso proyectivo al dual]
-	\label{C1_lem_propiedadesPasoProyectivoDual}
+Las propiedades que se desprendían del Lema de la Correspondencia para espacios vectoriales, se dan también entre variedades proyectivas, como muestra la siguiente proposición.
+\begin{prop}[Propiedades de la Dualidad Proyectiva]
+	\label{C2_pro_propiedades_dualidad_proy}
 	Sea $E$ un espacio vectorial y su correspondiente espacio proyectivo $\proy(E)$. Sean $X,Y\subset\proy(E)$ variedades proyectivas. Se cumple
 	\begin{enumerate}
 		\item Si $X\subset Y$, entonces $Y^*\subset X^*$
+		
+		\item $(X\cap Y)^*=\engen{X^*,Y^*}$
+		
+		\item $\engen{X,Y}^*=X^*\cap Y^*$
+		
 		\item $\dim(X)+\dim(X^*)=\dim(\proy)-1$
 	\end{enumerate}
-\end{lem}
+\end{prop}
 \begin{proof}
 	Sean $X=\proy(\hat{X})$ e $Y=\proy(\hat{Y})$ variedades proyectivas.
 	\begin{enumerate}
-		\item Si $X\subset Y$, entonces $\hat{X}\subset\hat{Y}$. Por el lema~\ref{C1_lem_propiedadespasodual} esto implica que $\an{\hat{Y}}\subset \an{\hat{X}}$, y por tanto $Y^*\subset X^*$.
+		\item Si $X\subset Y$, entonces $\hat{X}\subset\hat{Y}$. Por la proposición~\ref{C2_pro_propiedades_dualidad} esto implica que $\hat{Y}^{\perp}\subset \hat{X}^{\perp}$, y por tanto $Y^*\subset X^*$.
 		
-		\item Por el lema~\ref{C1_lem_propiedadespasodual} se tiene que $\dim \ \hat{X}+\dim \ \an{\hat{X}}=\dim \ E=\dim \ \proy(E)+1$. Teniendo en cuenta la definición~\ref{C1_def_dimension} queda
+		\item Por el lema~\ref{C1_lem_interseccionVariedades} se tiene que $X\cap Y=\proy(\hat{X}\cap\hat{Y})$. Por tanto $(X\cap Y)^*=\proy((\hat{X}\cap\hat{Y})^{\perp})$. Aplicando la proposición~\ref{C2_pro_propiedades_dualidad} se tiene que $\proy((\hat{X}\cap\hat{Y})^{\perp})=\proy(\hat{X}^{\perp}+\hat{Y}^{\perp})=\engen{X^*,Y^*}$.
+		
+		\item Se tiene que $\engen{X,Y}=\hat{X}+\hat{Y}$. Por tanto $\engen{X,Y}^*=\proy((\hat{X}+\hat{Y})^{\perp})$. Por la proposición~\ref{C2_pro_propiedades_dualidad} sabemos que $\proy((\hat{X}+\hat{Y})^{\perp})=\proy(\hat{X}^{\perp}\cap\hat{Y}^{\perp})$. Atendiendo de nuevo al lema~\ref{C1_lem_interseccionVariedades} queda que $\proy(\hat{X}^{\perp}\cap\hat{Y}^{\perp})=\proy(\hat{X}^{\perp})\cap\proy(\hat{Y}^{\perp})=X^*\cap Y^*$
+		
+		\item Por la ecuación~\ref{C2_eq_dim_anulador} se tiene que $\dim(\hat{X})+\dim(\hat{X}^{\perp})=\dim(E)=\dim(\proy(E))+1$. Teniendo en cuenta la definición~\ref{C1_def_dimension} queda
 		\begin{equation*}
-		\dim(X)+\dim(X^*)=\dim(\hat{X})-1+\dim(\an{\hat{X}})-1=\dim(\proy(E))+1-2=\dim(\proy(E))-1
+		\dim(X)+\dim(X^*)=\dim(\hat{X})-1+\dim(\hat{X}^{\perp})-1=\dim(\proy(E))+1-2=\dim(\proy(E))-1
 		\end{equation*}
 	\end{enumerate}
 \end{proof}
@@ -306,7 +305,31 @@ Veamos a continuación algunas de las propiedades que presenta esta caracterizac
 	\dim(X)+\dim(X^*)=m-1+\dim(X^*)=\dim(\proy(E))-1=m-1\sii \dim(X^*)=0
 	\end{equation*}
 \end{obs}
-Todos estos cálculos y caracterizaciones no serían de ninguna utilidad si no nos permitiesen resolver problemas de espacio proyectivo con mayor facilidad. Hasta ahora no hemos visto ninguna aplicación, simplemente hemos ido explicando como se hace ese paso al espacio proyectivo dual, insistiendo una y otra vez en su importancia. Pero ¿realmente es tan importante? ¿No podemos simplemente resolver los problemas en el espacio proyectivo o echando mano del espacio vectorial? Es posible, sí, pero muchas veces hacer la asociación entre una variedad proyectiva y su dual, es decir la proyección del anulador, facilita enormemente la resolución. Veamos a continuación un ejemplo.
+
+\subsection{Principio de dualidad para espacios proyectivos}
+Comencemos con una definición.
+\begin{defi}
+	Sea $\mc{P}$ una proposición relativa a los subespacios de un espacio proyectivo y formulada en términos de intersecciones, variedades generadas por uniones, contenidos y dimensiones de estos subespacios. Se llama \ti{proposición dual} $\mc{P}'$ a la que se obtiene a partir de $\mc{P}$ sustituyendo los términos anteriores por sus duales.
+\end{defi}
+Observemos que sustituir un término por su dual no es más que aplicar la proposición~\ref{C2_pro_propiedades_dualidad_proy} en el sentido adecuado. Por ejemplo, hallemos la proposición dual de ``\ti{en un plano proyectivo real toda recta contiene al menos tres puntos diferentes}'' . Dado que un plano proyectivo real $\proy^2$ tiene dimensión $2$, el dual de una recta es un punto y el de un punto una recta
+\begin{equation*}
+\dim(X)+\dim(X^*)=1. 
+\end{equation*}
+Por tanto su proposición dual será ``\ti{en un plano proyectivo real por todo punto pasan al menos tres rectas diferentes}''.
+
+Una vez definido este concepto, podemos enunciar un teorema de gran importancia.
+\begin{theo}[Principio de Dualidad] Una proposición $\mc{P}$ relativa a variedades proyectivas de espacios de dimensión finita $n$ sobre un cuerpo $\K$ es cierta si y solo si lo es su proposición dual $\mc{P}'$
+\end{theo}
+\begin{proof}PENDIENTE
+	Sea $P$ un espacio proyectivo de dimensión $n$ sobre $\K$ y sea una proposición $\mc{P}$ cierta en $P^*$. Tenemos que demostrar que $\mc{P}'$ es cierta. Esta última se obtiene de sustituir las intersecciones, variedades generadas por uniones, contenidos y dimensiones de estos subespacios que haya en $\mc{P}$ por sus duales. Por lo que si estos eran ciertos en $P^*$, al pasar a su dual, seguirán siendo ciertos en su espacio dual, es decir en $P^{**}=P$, donde se enuncia $\mc{P}'$. Por lo que $\mc{P}'$ es cierta.
+	
+	El recíproco es análogo.
+\end{proof}
+La gran importancia de este teorema radica en que permite obtener, sin necesidad de demostración, un nuevo teorema a partir de cada teorema conocido. En efecto dado un teorema, este constituye una proposición $\mc{P}$, y por el principio de dualidad, automáticamente su proposición dual $\mc{P}'$ es cierta, es decir, el dual del teorema, es cierto.
+
+NO SABÍA MUY BIEN DONDE PONER EL PRINCIPIO ESTE, SI DELANTE O DETRÁS DEL EJEMPLO, LO HE PUESTO DELANTE PERO PUEDES CAMBIARLO DONDE TE PLAZCA
+
+Todas estas caracterizaciones no serían de ninguna utilidad si no nos permitiesen resolver problemas de espacio proyectivo con mayor facilidad. Hasta ahora no hemos visto ninguna aplicación. Simplemente hemos ido explicando como se hace ese paso al espacio proyectivo dual, insistiendo una y otra vez en su importancia. Pero ¿realmente es tan importante? ¿No podemos simplemente resolver los problemas en el espacio proyectivo o echando mano del espacio vectorial? Es posible, sí, pero muchas veces hacer la asociación entre una variedad proyectiva y su dual, es decir la proyección del anulador, facilita enormemente la resolución. Veamos a continuación un ejemplo.
 \begin{exa}
 	Sea $\proy^3=\proy(\R^4)$. Sean dos rectas del espacio proyectivo $r_1,r_2\in\proy^3$, las cuales no se cortan, y un punto $p\in\proy^3$ que no pertenece a ninguna de las rectas. Demuestre que existe una única recta $r\in\proy^3$ que pasa por p y corta a ambas rectas $r_1, r_2$.\\
 	
@@ -318,20 +341,20 @@ Todos estos cálculos y caracterizaciones no serían de ninguna utilidad si no n
 		\end{equation*}
 		Podemos aplicar el corolario~\ref{C1_cor_rectaHiperplano} al plano $\engen{p,r_1}$ y la recta $r_2$, según el cual una recta y un hiperplano siempre se cortan. Antes, y para obtener el resultado deseado, debemos asegurarnos de que $r_2\not\subset\engen{p,r_1}$, pues en caso contrario existirían más de un punto de corte entre la recta y el hiperplano y $r$ no sería única. Es fácil comprobar que esto no ocurre, ya que si $r_2\subset\engen{p,r_1}$, entonces $r_1\cap r_2\not=\emptyset$, llegando así a un absurdo. Existirá por tanto un único punto $q\in r_2\cap\engen{p,r_1}$. Definimos entonces la recta $r$ como la variedad engendrada por los puntos $p$ y $q$, pudiéndose comprobar con la fórmula de las dimensiones que efectivamente es una recta. Por un lado $r$ es única, ya que lo es el punto $q$. Además $r_1\cap r\not=\emptyset$ y $r_2\cap r\not=\emptyset$, ya que $q\in r_2\cap\engen{p,r_1}$. Queda así demostrado el ejercicio.
 		
-		\item Dado que es la primera vez que dualizamos un problema, hagámoslo paso a paso. Para empezar, y atendiendo al lema~\ref{C1_lem_propiedadesPasoProyectivoDual}, la ecuación de las dimensiones que caracteriza la dualización es, en nuestro caso,
+		\item Dado que es la primera vez que dualizamos un problema, hagámoslo paso a paso. Para empezar, y atendiendo a la proposición~\ref{C2_pro_propiedades_dualidad_proy}, la ecuación de las dimensiones que caracteriza la dualización es, en nuestro caso,
 		\begin{equation*}
 		\dim(X)+\dim(X^*)=2. 
 		\end{equation*}
-		Por tanto el dual de un punto es un plano del espacio proyectivo dual y el dual de una recta, una recta. Tenemos entonces que $p^*$ es un plano y $r_1^*,r_2^*$ son rectas. Por otro lado que $p\in r$ implica, por el lema~\ref{C1_lem_propiedadesPasoProyectivoDual}, que $r^*\subset p^*$. De igual forma que $p\not\in r_1\cup r_2$ implica que $r_1^*\not\subset p^*$ y $r_2^*\not\subset p^*$. Además si $r_1\cap r_2=\emptyset$, entonces $r_1^*\cap r_2^*=\emptyset$. En caso contrario existiría un plano dual $\pi^*$ tal que $r_1^*\subset\pi^*$ y $r_1^*\subset\pi^*$. Utilizando de nuevo la fórmula de las dimensiones y el lema~\ref{C1_lem_propiedadesPasoProyectivoDual} esto equivaldría a decir que existe un punto $q$ tal que $q\in r_1$ y $q\in r_2$, llegando así a un absurdo.
+		Por tanto el dual de un punto es un plano del espacio proyectivo dual y el dual de una recta, una recta. Tenemos entonces que $p^*$ es un plano y $r_1^*,r_2^*$ son rectas. Por otro lado que $p\in r$ implica, por la proposición~\ref{C2_pro_propiedades_dualidad_proy}, que $r^*\subset p^*$. De igual forma que $p\not\in r_1\cup r_2$ implica que $r_1^*\not\subset p^*$ y $r_2^*\not\subset p^*$. Además si $r_1\cap r_2=\emptyset$, entonces $r_1^*\cap r_2^*=\emptyset$. En caso contrario existiría un plano dual $\pi^*$ tal que $r_1^*\subset\pi^*$ y $r_2^*\subset\pi^*$. Utilizando de nuevo la fórmula de las dimensiones y la proposición~\ref{C2_pro_propiedades_dualidad_proy}, esto equivaldría a decir que existe un punto $q$ tal que $q\in r_1$ y $q\in r_2$, llegando así a un absurdo.
 		
-		Por tanto el enunciado del problema se traduce en, dadas dos rectas $r_1^*, r_2^*\in\proy^{3^*}$ y un punto $p\in\proy^{3^*}$ tales que $r_1^*\cap r_2^*=\emptyset$, $r_1^*\not\subset p^*$ y $r_2^*\not\subset p^*$; demostrar que existe una única recta $r^*$ tal que $r_1^*\cap r^*\not=\emptyset$, $r_2^*\cap r^*\not=\emptyset$ y $r^*\subset p^*$.
+		Por tanto el enunciado del problema se traduce en, dadas dos rectas $r_1^*, r_2^*\in\proy^{3^*}$ y un plano $p^*\in\proy^{3^*}$ tales que $r_1^*\cap r_2^*=\emptyset$, $r_1^*\not\subset p^*$ y $r_2^*\not\subset p^*$; demostrar que existe una única recta $r^*$ tal que $r_1^*\cap r^*\not=\emptyset$, $r_2^*\cap r^*\not=\emptyset$ y $r^*\subset p^*$.
 		
 		Dado que las rectas $r_1^*, r_2$ no están contenidas en el plano $p^*$, cortarán con él en dos puntos únicos. Es claro que la recta engendrada por esos dos puntos es única y cumple las condiciones requeridas.
 	\end{enumerate}
 \end{exa}
 \begin{obs}
-	Este enunciado es falso en espacio afín...
+	Este enunciado es falso en espacio afín. Podemos encontrar dos rectas paralelas, $r_1$ y $r_2$, y un punto $p$, que cumplan las hipótesis del enunciado, para los cuales no existe ninguna recta $r$; o bien para los cuales existan infinitas rectas $r$, tales que $p\in r$, $r_1\cap r\not=\emptyset$ y $r_2\cap r\not=\emptyset$. Ello se debe a que en el espacio afín dos rectas paralelas no se cortan, mientras que en el espacio proyectivo sí (en el infinito), y por lo tanto no cumplen las hipótesis del enunciado.
 \end{obs}
 \begin{obs}
-	Una vez resuelto este ejercicio podemos observar diferencias en los métodos de resolución. Mientras que en el primer caso hemos tenido que construir la recta con mucha idea de a donde nos llevaría e ir comprobando que cumple los requisitos, al traducir el problema al espacio dual, la recta ha surgido por sí sola, como consecuencia de las hipótesis del enunciado. Es cierto que, debido a la sencillez de este ejercicio, la diferencia en la dificultad de resolución no es tan clara. Sin embargo, es posible darse cuenta de que, en problemas más complicados, el espacio proyectivo dual nos da un camino más rápido. La única dificultad radica en traducir bien los enunciados.
+	Una vez resuelto este ejercicio podemos observar diferencias en los métodos de resolución. Mientras que en el primer caso hemos tenido que construir la recta sin mucha idea de a donde nos llevaría e ir comprobando que cumple los requisitos, al traducir el problema al espacio dual, la recta ha surgido por sí sola, como consecuencia de las hipótesis del enunciado. Es cierto que, debido a la sencillez de este ejercicio, la diferencia en la dificultad de resolución no es tan clara. Sin embargo, es posible darse cuenta de que, en problemas más complicados, el espacio proyectivo dual nos da un camino más rápido. La única dificultad radica en traducir bien los enunciados.
 \end{obs}

@@ -1,4 +1,4 @@
-\chapter{No sé que nombre tendrá}
+\chapter{Ecuaciones de rectas y planos proyectivos (por ejemplo)}
 \label{C3}
 
 Nuestra tarea aquí es tratar de, dado un subespacio proyectivo, por ejemplo una recta o un plano, dar una referencia proyectiva de ese subespacio mediante la cual hacer una descripción explícita de sus elementos. Comenzaremos estudiando el caso más sencillo, las rectas proyectivas.
@@ -8,7 +8,7 @@ Nuestra tarea aquí es tratar de, dado un subespacio proyectivo, por ejemplo una
 	\label{C1_def_rectaProyectiva}
 	Se define \ti{recta proyectiva} que pasa por los puntos proyetivos $P$ y $Q$ como la variedad engendrada por dichos puntos. A dicha recta se la denomina \ti{recta} $PQ$.
 \end{defi}
-\subsection{Ecuaciones paramétricas}
+\subsection{Ecuación paramétrica}
 
 Sean $P=\class{u}$ y $Q=\class{v}$ dos puntos proyectivos, vamos a describir los elementos de la recta $PQ$, que no es otra cosa que $\engen{P,Q}$.
 	
@@ -60,5 +60,55 @@ denominada \tb{ecuación paramétrica de la recta}. Así, la recta proyectiva es
 	\]
 	donde, cuando $\theta=\infty$, nos referimos al punto $P=(1:2:-1)$.
 	
-	Imaginemos que ahora queremos hacernos una idea de donde se encuentra esa recta en $\R^3$, donde están los rayos que pertenecen a ella. Para ello,
+	Imaginemos que ahora queremos hacernos una idea de donde se encuentra esa recta en $\R^3$, es decir, queremos ``pintar'' los rayos de esa variedad proyectiva de dimensión uno. Para ello, debemos fijar un plano y los rayos serán las rectas que vayan desde el $(0,0,0)$ hasta los vectores representantes de la recta proyectiva en ese plano. Así, además, determinamos donde se encuentran los puntos del infinito del espacio proyectivo. Si elegimos el plano $z=1$, entonces los puntos del infinito estarán en el plano $xy$. Para poder representar los rayos de nuestra recta proyectiva debemos determinar su punto de corte con el plano $z=1$. Por ello dividimos entre $z$. Obtenemos así las coordenadas
+	\begin{equation*}
+		x=\frac{\theta}{-\theta+3}, \quad y=\frac{2\theta+1}{-\theta+3}, \quad z=1
+	\end{equation*}
+	siendo los puntos de la recta proyectiva los rayos engendrados por los vectores con esas coordenadas. Nótese que hay dos indeterminaciones. Cuando $\theta=\infty$, como ya dijimos, nos referimos al punto $P$, que al dividir entre $z$ nos da el vector representante $(-1,-2,1)$. Cuando $\theta=3$, entonces $z=0$ y nos vamos al plano $xy$, al infinito.
 \end{exa}
+
+\subsection{Ecuación implícita}
+Durante este apartado nos situaremos en el plano proyectivo $\proy^2$, donde las rectas son hiperplanos. Recordemos que toda recta, variedad proyectiva de dimensión uno, es proyección de un subespacio vectorial de dimensión 2, un plano. Dado que en este caso ese plano pertenece a $\R^3$, será un hiperplano. En realidad esto ya era sabido, todo hiperplano proyectivo es proyección de un hiperplano vectorial. Pero, además, que sea un hiperplano vectorial implica que tiene una, y solo una, ecuación implícita. Y, para no complicarnos la vida, esta será la ecuación de mi hiperplano proyectivo, en este caso una recta. 
+Conclusión, al ecuación implícita de una recta en $\proy^2$ tiene la forma
+\begin{equation*}
+	ax+by+cz=0
+\end{equation*}
+con $a,b,c$ no todos nulos. 
+
+Veamos pues, varias formas de obtener la ecuación implícita de una recta proyectiva que pasa por dos puntos, es decir, de hallar esos coeficientes.
+
+Sean entonces $P=[u]=[(u_1,u_2,u_3)]$ y $Q=[v]=[(v_1,v_2,v_3)]$ dos puntos proyectivos, y sea la ecuación implícita de la recta $PQ$
+\begin{equation*}
+	ax+by+cz=0
+\end{equation*}
+donde $a,b,c$ son coeficientes a determinar. Ya vimos que el conjunto
+\[\mf{R}=\{P,Q;\class{u+v}\}\]
+es una referencia proyectiva de la recta $PQ$, cuya base asociada es $\mc{B}=\{u,v\}$.
+
+Dado que $P,Q\in PQ$, la primera forma de hallar esos coeficientes consiste simplemente en sustituir en $x,y,z$ de la ecuación implícita las coordenadas de un vector representante de $P$ y de uno de $Q$
+\begin{equation*}
+	\begin{split}
+		au_1+bu_2+cu_3=0\\
+		av_1+bv_2+cv_3=0
+	\end{split}
+\end{equation*}
+y resolver el sistema de ecuaciones resultante.
+
+Sin embargo, este método puede resultar un poco tedioso. Observemos que, aunque en el espacio proyectivo no está definido el producto escalar, la primera ecuación del sistema podría identificarse con el producto escalar entre el vector $(a,b,c)$ y $(u_1,u_2,u_3)$. Al ser cero, esto implicaría que son perpendiculares. A partir de la segunda ecuación podemos deducir algo similar, que $(a,b,c)$ es perpendicular al vector $(v_1,v_2,v_3)$.
+
+De esta forma, el vector que debemos hallar es perpendicular a $u$ y $v$. Por tanto nos basta con hallar un vector perpendicular a ambos para determinar los coeficientes de la ecuación implícita, pues es única salvo múltiplos?. Una forma rápida de hallar un vector $(a,b,c)$ que cumpla esto es hacer el producto vectorial de $u$ y $v$. Así los coeficientes serán el resultado de 
+\begin{equation*}
+	(a,b,c)=u\times v=\left| \begin{array}{ccc}
+		x & y & z\\
+		u_1 & u_2 & u_3\\
+		v_1 & v_2 & v_3
+	\end{array}\right| 
+\end{equation*}
+por lo que la ecuación implícita de la recta vendrá dada por 
+\begin{equation}
+	(u\times v)\left( \begin{array}{c}
+	x\\
+	y\\
+	z
+	\end{array}\right) =0
+\end{equation}

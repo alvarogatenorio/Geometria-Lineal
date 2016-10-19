@@ -1,44 +1,64 @@
 \chapter{No sé que nombre tendrá}
 \label{C3}
 
-Nuestra tarea aquí es tratar de, dado un subespacio proyectivo, por ejemplo una recta o un plano proyectivos, dar una referencia proyectiva de ese subespacio mediante la cual dar una descripción explícita de sus elementos. Comenzaremos estudiando el caso más sencillo, las rectas proyectivas, tras esto estudiaremos los hiperplanos proyectivos en general.
+Nuestra tarea aquí es tratar de, dado un subespacio proyectivo, por ejemplo una recta o un plano, dar una referencia proyectiva de ese subespacio mediante la cual hacer una descripción explícita de sus elementos. Comenzaremos estudiando el caso más sencillo, las rectas proyectivas.
 
-\subsection{Rectas Proyectivas}
+\section{Rectas Proyectivas}
 \begin{defi}[Recta en $\proy(E)$]
 	\label{C1_def_rectaProyectiva}
 	Se define \ti{recta proyectiva} que pasa por los puntos proyetivos $P$ y $Q$ como la variedad engendrada por dichos puntos. A dicha recta se la denomina \ti{recta} $PQ$.
 \end{defi}
-\begin{exa}[Descripción de una Recta]
-	\label{C1_exa_descripcionRecta}
-	Sean $P=\class{u}$ y $Q=\class{v}$ dos puntos proyectivos, vamos a describir los elementos de la recta $PQ$, que no es otra cosa que $\engen{P,Q}$.
-	
-	Para describir los elementos de esta variedad (o de cualquiera) deberemos dar una referencia en función de la cual \ti{coordenar} todos los puntos de la misma.
-	
-	Como $P$ y $Q$ son dos puntos proyectivos distintos, los vectores $u,v$ son linealmente independientes, formando una base de la variedad lineal $\lengen{u,v}$.
-	
-	Para construir una referencia bastaría tomar los puntos $P,Q$ y añadirle como punto unidad un tercer punto cuyo representante pueda ser escrito como combinación lineal de $u$ y $v$ con todos los coeficientes no nulos, por ejemplo $\class{u+v}$.
-	
-	De esta forma tenemos la referencia:
-	\[\mf{R}=\{P,Q;\class{u+v}\}\]
-	Por el método de construcción de bases asociadas tenemos que la base asociada a esta referencia es $\mc{B}=\{u,v\}$. Como sabemos, todo punto $p\in\engen{P,Q}$ es un rayo representado por un vector de $\lengen{u,v}$. Es decir, un vector $w=\alpha u+\beta v$ con alguno de los coeficientes no nulo.
-	
-	Esto quiere decir que todo punto de la recta $PQ$ es un rayo de la forma: \[\class{\alpha u+\beta v}=(\alpha:\beta)\]
-	Sin embargo, podemos reducir esto aún un poco más, cambiemos el representante del rayo dividiendo todo por $\beta$.
-	\[\class{\frac{\alpha}{\beta}u+v}:\stackrel{\textrm{not.}}{=}\class{\theta u+v}\]
-	De esta forma la recta ya no queda descrita por dos coordenadas homogéneas $\alpha$ y $\beta$ como antes, sino por una única coordenada $\theta$ a la que llamaremos \ti{no homogénea}.
-	
-	Sin embargo, hemos de tener cuidado, pues, como más de uno ya se habrá dado cuenta, es posible que en algunos casos $\beta$ se anule, por ende, $\theta$ no estaría definida. Como este caso se corresponde con un único punto, y este es el punto $P$, diremos que una recta queda descrita por lo siguiente:
-	\begin{equation}
-	\label{C1_eq_descripcionRecta}
-	PQ:\{\class{\theta u+v}\tq \theta\in\K\}\cup\{P\}
-	\end{equation}
-\end{exa}
-\begin{exa}[Parametrización de una Recta Concreta]
-	\label{C1_exa_rectaConcreta}
-	Dados los puntos $P=(1:2:-1)$ y $Q=(0:1:3)$ se nos pide parametrizar la recta $PQ$, siguiendo los pasos del ejemplo \ref{C1_exa_descripcionRecta} nos queda:
-	\[
-	PQ:\{(\theta:2\theta+1:-\theta+3)\tq\theta\in\K\}\cup\{(1:2:-1)\}
-	\]
-\end{exa}
+\subsection{Ecuaciones paramétricas}
 
-TEOREMA DE PAPUS
+Sean $P=\class{u}$ y $Q=\class{v}$ dos puntos proyectivos, vamos a describir los elementos de la recta $PQ$, que no es otra cosa que $\engen{P,Q}$.
+	
+Para describir los elementos de esta variedad (o de cualquiera) deberemos dar una referencia en función de la cual \ti{coordenar} todos los puntos de la misma.
+	
+Como $P$ y $Q$ son dos puntos proyectivos distintos, los vectores $u,v$ son linealmente independientes, formando una base de la variedad lineal $\lengen{u,v}$.
+	
+Para construir una referencia bastaría tomar los puntos $P,Q$ y añadirle como punto unidad un tercer punto cuyo representante pueda ser escrito como combinación lineal de $u$ y $v$ con todos los coeficientes no nulos, por ejemplo $\class{u+v}$.
+	
+De esta forma tenemos la referencia:
+\[\mf{R}=\{P,Q;\class{u+v}\}\]
+Por el método de construcción de bases asociadas tenemos que la base asociada a esta referencia es $\mc{B}=\{u,v\}$. Como sabemos, todo punto $p\in\engen{P,Q}$ es un rayo representado por un vector de $\lengen{u,v}$. Es decir, un vector $w=\alpha u+\beta v$ con alguno de los coeficientes no nulo.
+	
+Esto quiere decir que todo punto de la recta $PQ$ es un rayo de la forma: \[\class{\alpha u+\beta v}=(\alpha:\beta)\]
+Sin embargo, podemos reducir esto aún un poco más, cambiemos el representante del rayo dividiendo todo por $\beta$.
+\[\class{\frac{\alpha}{\beta}u+v}:\stackrel{\textrm{not.}}{=}\class{\theta u+v}\]
+De esta forma la recta ya no queda descrita por dos coordenadas homogéneas $\alpha$ y $\beta$ como antes, sino por una única coordenada $\theta$ a la que llamaremos \ti{no homogénea}.
+	
+Sin embargo, hemos de tener cuidado, pues, como más de uno ya se habrá dado cuenta, es posible que en algunos casos $\beta$ se anule, por ende, $\theta$ no estaría definida. Como este caso se corresponde con un único punto, y este es el punto $P$, diremos que una recta queda descrita por lo siguiente:
+\begin{equation}
+	\label{C3_eq_descripcionRecta}
+	PQ:\{\class{\theta u+v}\tq \theta\in\K\}\cup\{P\}
+\end{equation}
+De esta forma, cuando $\beta=0$ podemos decir que $\theta=\infty$, y así $\theta\in\K\cup \{\infty\}$, que podemos identificar con $\proy^1$. Describiremos pues la recta como
+\begin{equation}
+	\label{C3_eq_descripcionRectaP1}
+	PQ:\{\class{\theta u+v}\tq \theta\in\proy^1\}
+\end{equation}
+donde se entiende que si $\theta=\infty$ nos estamos refiriendo al punto $P$. 
+
+Dados los vectores $u=(u_0,u_1,\cdots,u_n)$ y $v=(v_0,v_1,\cdots,v_n)$ si los sustituimos en la ecuación~\eqref{C3_eq_descripcionRectaP1} obtenemos
+\begin{equation*}
+	\label{C_3_eq_parametrica_recta}
+	\begin{split}
+		PQ:&\{\class{\theta (u_0,u_1,\cdots,u_n)+(v_0,v_1,\cdots,v_n)}\tq \theta\in\proy^1\}=\\
+		&=\{\class{(\theta u_0+v_0,\theta u_1+v_1,\cdots,\theta u_n+v_n)}\tq \theta\in\proy^1\}
+	\end{split}
+\end{equation*}
+que se puede escribir a su vez como 
+\begin{equation}
+	PQ:\{(\theta u_0+v_0:\theta u_1+v_1:\cdots:\theta u_n+v_n)\tq \theta\in\proy^1\}
+\end{equation}
+denominada \tb{ecuación paramétrica de la recta}. Así, la recta proyectiva está formada por todos aquellos puntos proyectivos que cumplan dicha ecuación, es decir, los que se obtienen al ir variando el valor de $\theta$.
+\begin{exa}[Parametrización de una Recta Concreta]
+	\label{C3_exa_rectaConcreta}
+	Dados los puntos $P=(1:2:-1)$ y $Q=(0:1:3)$ se nos pide parametrizar la recta $PQ$. Siguiendo los pasos expuestos en este apartado, la ecuación paramétrica de la recta $PQ$ queda:
+	\[
+	PQ:\{(\theta:2\theta+1:-\theta+3)\tq\theta\in\proy^1\}
+	\]
+	donde, cuando $\theta=\infty$, nos referimos al punto $P=(1:2:-1)$.
+	
+	Imaginemos que ahora queremos hacernos una idea de donde se encuentra esa recta en $\R^3$, donde están los rayos que pertenecen a ella. Para ello,
+\end{exa}

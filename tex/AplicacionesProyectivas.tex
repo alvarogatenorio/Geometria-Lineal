@@ -1,0 +1,104 @@
+\chapter{Aplicaciones Proyectivas}
+\label{C4}
+En este capítulo vamos a tratar de extrapolar uno de los conceptos más centrales del álgebra lineal al contexto proyectivo. Tratamos de estudiar las aplicaciones entre espacios proyectivos cuyo comportamiento consideramos ``bueno''.
+
+En el mundo lineal, estas aplicaciones eran los llamados homomorfismos entre espacios vectoriales o símplemente aplicaciones lineales. Aquí, en el mundo de los rayos, las llamaremos \ti{aplicaciones proyectivas}.
+\section{Definición}
+\label{C4_definicion}
+Sean dos espacios proyectivos $X$ e $Y$ asociados a sendos espacios vectoriales, $\widehat{X}$ e $\widehat{Y}$ respectivamente.
+
+Nuestro objetivo es definir una aplicación proyectiva entre dos espacios proyectivos a partir de una aplicación lineal entre sus respectivos espacios lineales de forma natural. Intentémoslo y veamos qué dificultades se nos presentan.
+
+Sea $\widehat{h}:\widehat{X}\to\widehat{Y}$ una aplicación lineal arbitraria. Lo deseable sería definir la aplicación proyectiva asociada a $\widehat{h}$ como aquella que, a cadaa rayo le asigna el rayo engendrado por la imagen de uno de sus representantes. Visto formalmente, si $x=\class{u}$:
+\[\begin{array}{c}
+X\stackrel{h}{\to}Y\\
+x\mapsto\class{\widehat{h}(u)}
+\end{array}\]
+Este intento de definición tan intuitivo e inocente presenta dos problemas. El primero de ellos es que si $\widehat{h}(u)=0$ entonces el rayo $\class{\widehat{h}(u)}$ no está definido.
+
+Esto lo arreglamos de una forma natural, restringiendo el dominio de $\widehat{h}$ a los vectores de $\widehat{X}$ que no se anulan mediante $\widehat{h}$. Es decir, ahora $\widehat{h}$ queda definida en $\widehat{X}\setminus \ker\left(\widehat{h}\right)$.
+
+Trasladando esta restricción al contexto proyectivo obtenemos este segundo intento de definición de aplicación proyectiva asociada a cierta aplicación lineal:
+\[\begin{array}{c}
+X\setminus\proy\left(\ker\left(\widehat{h}\right)\right)\stackrel{h}{\to}Y\\
+x\mapsto\class{\widehat{h}(u)}
+\end{array}\]
+Antes de hacer algunas aclaraciones adicionales acerca de este primer problema que se nos ha presentado, demos una pequeña definición (por comodidad tipográfica).
+\begin{defi}[Centro]
+	\label{C4_def_centro}
+	Se denomina \ti{centro} de una aplicación $\widehat{h}$ entre dos espacios lineales $\widehat{X}$ e $\widehat{Y}$ a la variedad proyectiva:
+	\[\mc{Z}:\equals{not.}\proy\left(\ker\left(\widehat{h}\right)\right)\]
+\end{defi}
+Tras este breve inciso sobre la notación, veamos que, en efecto, hemos resuelto el problema que se nos planteaba, es decir, hemos eliminado del dominio todos los rayos que no tenían imagen definida. Si hubiera algún rayo con imagen no definida, alguno de sus representantes debería pertenecer al núcleo de $\widehat{h}$ (y por tanto todos). Pero esto no es posible ya que el rayo engendrado por este representante estaría en el centro de $h$.
+
+El segundo problema que planteaba nuestra definición era saber si está bien definida. En efecto, siempre que definamos una aplicación y los elementos de nuestro conjunto de salida no tengan una representación única, debemos comprobar que la imagen de la función es independiente del representante escogido. En este caso es un juego de niños:
+
+Sean $\class{u'}=x=\class{u}$. Es evidente que $u' = \lambda u$ para cierto $\lambda$ no nulo. Entonces:
+\[\class{\widehat{h}(u')}=\class{\widehat{h}(\lambda u)}=\class{\lambda\widehat{h}(u)}=\class{\widehat{h}(u)}\]
+
+Para terminar la sección advertimos de que en algunos textos, a la hora de representar una aplicación proyectiva omiten (abusando de notación) especificar que al espacio de partida se le extrae el centro $\mc{Z}$. 
+\section{Propiedades Elementales}
+\section{Homografías}
+\section{Proyecciones Cónicas}
+Dedicaremos esta sección al estudio de un tipo especialmente relevante de aplicaciones proyectivas no homográficas, las llamadas \ti{proyecciones cónicas}.
+
+Antes de lanzarnos al estudio general de estas aplicaciones presentemos un par de ejemplos que más adelante nos ayudarán a entender intuitivamente el por qué del apellido ``cónicas'' de estas aplicaciones.
+
+\begin{exa}[Punto sobre Recta]
+	\label{C4_exa_puntoRecta}
+	En el plano proyectivo $\proy^2$ consideramos un punto $z$ y una recta $Y$ (recordemos que es un subespacio proyectivo) tal que $z\not\in Y$. En estas condiciones definimos la aplicación:
+	\[\begin{array}{c}
+		\proy^2\setminus\{z\}\stackrel{h}{\to} Y\\
+		x\mapsto h(x)=\engen{x,z}\cap Y
+	\end{array}\]
+\end{exa}
+
+No demostraremos que la aplicación del ejemplo \ref{C4_exa_puntoRecta} es, en efecto, una aplicación proyectiva, ya que al final de la sección daremos una demostración general para todas las proyecciones cónicas, de las que esta aplicación en concreto es un caso particular.
+
+El ejemplo \ref{C4_exa_puntoRecta} se puede generalizar para dimensiones superiores, basta mantener que $z$ sea un punto de $\proy^n$ e $Y$ un hiperplano.
+\begin{exa}[Punto sobre Hiperplano]
+	\label{C4_exa_puntoHiperplano}
+	En el plano proyectivo $\proy^n$ consideramos el punto $z$ y el hiperplano $Y$ tal que $z\not\in Y$. Definimos la aplicación:
+	\[\begin{array}{c}
+	\proy^n\setminus\{z\}\stackrel{h}{\to} Y\\
+	x\mapsto h(x)=\engen{x,z}\cap Y
+	\end{array}\]
+\end{exa}
+Otra generalización de los ejemplos anteriores es la siguiente (menos intuitiva y más dificil de ver):
+\begin{exa}
+	En el espacio proyectivo $\proy^3$ se consideran las rectas $l$ y $l$ tales que $l\cap l'=\emptyset$. Definimos la aplicación:
+	\[\begin{array}{c}
+	\proy^3\setminus l\stackrel{h}{\to}l'\\
+	x\mapsto\engen{x,l}\cap l'
+	\end{array}\]
+\end{exa}
+Observamos simplemente que $\engen{x,l}\cap l'$ siempre se corta con $l$ en un punto (consecuencia inmediata de la fórmula de Grassmann).
+
+Llegados a este punto, ha llegado la hora de definir \ti{proyección cónica} en toda su generalidad.
+\begin{defi}[Proyección Cónica]
+	\label{C4_def_proyeccionConica}
+	Sean $X$ un espacio proyectivo y $Z$ e $Y$ dos variedades proyectivas de $X$ tales que:
+	\begin{enumerate}
+		\item $Z\cap Y=\emptyset$
+		\item $\dim(Z)+\dim(Y)=\dim(X)-1$
+	\end{enumerate}
+	Definimos la aplicación:
+	\[\begin{array}{c}
+	X\setminus Z\stackrel{h}{\to} Y\\
+	x\mapsto\engen{x,Z}\cap Y
+	\end{array}\]
+\end{defi}
+Automáticamente se nos presentan una serie de cuestiones que trataremos de responder a continuación:
+\begin{enumerate}
+	\item ¿La intersección $\engen{x,Z}\cap Y$ es siempre un único punto?
+	\item ¿$h$ es una aplicación proyectiva? ¿Cuál es su aplicación lineal asociada?
+\end{enumerate}
+Como diría Jack el Destripador, vayamos por partes:
+\begin{prop}[Intersección Unipuntual]
+	\label{C4_prop_interseccionUnipuntual}
+	En las condiciones de la definición \ref{C4_def_proyeccionConica} la intersección $\engen{x,Z}\cap Y$ tiene dimensión nula. Es decir, es un punto proyectivo.
+\end{prop}
+\begin{proof}
+	
+\end{proof}
+\section{Teorema de Desargues}

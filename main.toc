@@ -1,44 +1,50 @@
 \select@language {spanish}
-\contentsline {chapter}{\numberline {1}Espacio Proyectivo y Variedades Proyectivas}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}El Espacio Proyectivo}{3}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Primera Aproximaci\IeC {\'o}n}{3}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Segunda Aproximaci\IeC {\'o}n}{3}{subsection.1.1.2}
-\contentsline {subsection}{\numberline {1.1.3}Equivalencia de las Aproximaciones}{4}{subsection.1.1.3}
-\contentsline {subsection}{\numberline {1.1.4}Proyecci\IeC {\'o}n Can\IeC {\'o}nica}{4}{subsection.1.1.4}
-\contentsline {section}{\numberline {1.2}Variedades Proyectivas}{4}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Operaciones con Variedades Proyectivas}{5}{subsection.1.2.1}
-\contentsline {section}{\numberline {1.3}Dimensiones y F\IeC {\'o}rmula de Grassmann}{6}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Dimensiones y F\IeC {\'o}rmula de Grassmann}{7}{subsection.1.3.1}
-\contentsline {section}{\numberline {1.4}Referencias Proyectivas}{8}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Coordenadas Homog\IeC {\'e}neas}{8}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Referencias Proyectivas}{8}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Base Asociada a una Referencia Proyectiva}{9}{subsection.1.4.3}
-\contentsline {section}{\numberline {1.5}Cambios de Referencia Proyectiva}{11}{section.1.5}
-\contentsline {section}{\numberline {1.6}Problemas}{12}{section.1.6}
-\contentsline {chapter}{\numberline {2}Dualidad}{13}{chapter.2}
-\contentsline {section}{\numberline {2.1}Dualidad en espacios vectoriales}{13}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Formas Lineales e Hiperplanos}{13}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Dualidad Can\IeC {\'o}nica}{14}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Principio de Dualidad}{16}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Dualidad en espacios proyectivos}{17}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Formas Lineales e Hiperplanos Proyectivos}{17}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Dualidad Can\IeC {\'o}nica}{17}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Principio de Dualidad para espacios proyectivos}{19}{subsection.2.2.3}
-\contentsline {chapter}{\numberline {3}Ecuaciones de rectas y planos proyectivos (por ejemplo)}{21}{chapter.3}
-\contentsline {section}{\numberline {3.1}Rectas Proyectivas}{21}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Ecuaci\IeC {\'o}n param\IeC {\'e}trica}{21}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Ecuaci\IeC {\'o}n impl\IeC {\'\i }cita}{22}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Intersecci\IeC {\'o}n de dos rectas proyectivas}{23}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Planos Proyectivos}{24}{section.3.2}
-\contentsline {section}{\numberline {3.3}Haces...}{24}{section.3.3}
-\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{25}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{25}{section.Alph1.1}
-\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{26}{subsection.Alph1.1.1}
-\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{27}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{27}{subsection.Alph1.2.1}
-\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{27}{section*.4}
-\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{28}{section*.5}
-\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{28}{section*.6}
-\contentsline {paragraph}{Observaciones}{28}{section*.7}
-\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{28}{section*.8}
-\contentsline {section}{\numberline {A.3}Dualidad}{29}{section.Alph1.3}
+\contentsline {chapter}{\numberline {1}Espacio Proyectivo y Variedades Proyectivas}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}El Espacio Proyectivo}{4}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Primera Aproximaci\IeC {\'o}n}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Segunda Aproximaci\IeC {\'o}n}{4}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Equivalencia de las Aproximaciones}{5}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Proyecci\IeC {\'o}n Can\IeC {\'o}nica}{5}{subsection.1.1.4}
+\contentsline {section}{\numberline {1.2}Variedades Proyectivas}{5}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Operaciones con Variedades Proyectivas}{6}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.3}Dimensiones y F\IeC {\'o}rmula de Grassmann}{7}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Dimensiones y F\IeC {\'o}rmula de Grassmann}{8}{subsection.1.3.1}
+\contentsline {section}{\numberline {1.4}Referencias Proyectivas}{9}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Coordenadas Homog\IeC {\'e}neas}{9}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Referencias Proyectivas}{9}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Base Asociada a una Referencia Proyectiva}{10}{subsection.1.4.3}
+\contentsline {section}{\numberline {1.5}Cambios de Referencia Proyectiva}{12}{section.1.5}
+\contentsline {section}{\numberline {1.6}Problemas}{13}{section.1.6}
+\contentsline {chapter}{\numberline {2}Dualidad}{14}{chapter.2}
+\contentsline {section}{\numberline {2.1}Dualidad en espacios vectoriales}{14}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Formas Lineales e Hiperplanos}{14}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Dualidad Can\IeC {\'o}nica}{15}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Principio de Dualidad}{17}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Dualidad en espacios proyectivos}{18}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Formas Lineales e Hiperplanos Proyectivos}{18}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Dualidad Can\IeC {\'o}nica}{18}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Principio de Dualidad para espacios proyectivos}{20}{subsection.2.2.3}
+\contentsline {chapter}{\numberline {3}Ecuaciones de rectas y planos proyectivos (por ejemplo)}{22}{chapter.3}
+\contentsline {section}{\numberline {3.1}Rectas Proyectivas}{22}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Ecuaci\IeC {\'o}n param\IeC {\'e}trica}{22}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Ecuaci\IeC {\'o}n impl\IeC {\'\i }cita}{23}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Intersecci\IeC {\'o}n de dos rectas proyectivas}{24}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Planos Proyectivos}{25}{section.3.2}
+\contentsline {section}{\numberline {3.3}Haces...}{25}{section.3.3}
+\contentsline {chapter}{\numberline {4}Aplicaciones Proyectivas}{26}{chapter.4}
+\contentsline {section}{\numberline {4.1}Definici\IeC {\'o}n}{26}{section.4.1}
+\contentsline {section}{\numberline {4.2}Propiedades Elementales}{27}{section.4.2}
+\contentsline {section}{\numberline {4.3}Homograf\IeC {\'\i }as}{27}{section.4.3}
+\contentsline {section}{\numberline {4.4}Proyecciones C\IeC {\'o}nicas}{27}{section.4.4}
+\contentsline {section}{\numberline {4.5}Teorema de Desargues}{28}{section.4.5}
+\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{29}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{29}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{30}{subsection.Alph1.1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{31}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{31}{subsection.Alph1.2.1}
+\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{31}{section*.4}
+\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{32}{section*.5}
+\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{32}{section*.6}
+\contentsline {paragraph}{Observaciones}{32}{section*.7}
+\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{32}{section*.8}
+\contentsline {section}{\numberline {A.3}Dualidad}{33}{section.Alph1.3}

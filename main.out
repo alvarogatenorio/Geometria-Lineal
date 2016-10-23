@@ -23,7 +23,7 @@
 \BOOKMARK [2][-]{subsection.2.2.1}{Formas Lineales e Hiperplanos Proyectivos}{section.2.2}% 23
 \BOOKMARK [2][-]{subsection.2.2.2}{Dualidad Can\363nica}{section.2.2}% 24
 \BOOKMARK [2][-]{subsection.2.2.3}{Principio de Dualidad para espacios proyectivos}{section.2.2}% 25
-\BOOKMARK [0][-]{chapter.3}{Ecuaciones de rectas y planos proyectivos \(por ejemplo\)}{}% 26
+\BOOKMARK [0][-]{chapter.3}{Ecuaciones de variedades proyectivas}{}% 26
 \BOOKMARK [1][-]{section.3.1}{Rectas Proyectivas}{chapter.3}% 27
 \BOOKMARK [2][-]{subsection.3.1.1}{Ecuaciones param\351tricas}{section.3.1}% 28
 \BOOKMARK [2][-]{subsection.3.1.2}{Ecuaci\363n impl\355cita}{section.3.1}% 29
@@ -33,16 +33,17 @@
 \BOOKMARK [2][-]{subsection.3.2.2}{Ecuaci\363n impl\355cita}{section.3.2}% 33
 \BOOKMARK [1][-]{section.3.3}{Haz de hiperplanos}{chapter.3}% 34
 \BOOKMARK [2][-]{subsection.3.3.1}{Haz de rectas}{section.3.3}% 35
-\BOOKMARK [1][-]{section.3.4}{Teorema de Papus. Teorema de Papus dual}{chapter.3}% 36
-\BOOKMARK [0][-]{chapter.4}{Aplicaciones Proyectivas}{}% 37
-\BOOKMARK [1][-]{section.4.1}{Definici\363n}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.2}{Propiedades Elementales}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.3}{Homograf\355as}{chapter.4}% 40
-\BOOKMARK [1][-]{section.4.4}{Proyecciones C\363nicas}{chapter.4}% 41
-\BOOKMARK [1][-]{section.4.5}{Teorema de Desargues}{chapter.4}% 42
-\BOOKMARK [0][-]{appendix.Alph1}{\301lgebra Lineal}{}% 43
-\BOOKMARK [1][-]{section.Alph1.1}{Coordenadas en Espacios Vectoriales}{appendix.Alph1}% 44
-\BOOKMARK [2][-]{subsection.Alph1.1.1}{Matriz de Cambio de Base}{section.Alph1.1}% 45
-\BOOKMARK [1][-]{section.Alph1.2}{Ecuaciones de Subespacios}{appendix.Alph1}% 46
-\BOOKMARK [2][-]{subsection.Alph1.2.1}{Existencia de las Ecuaciones Cartesianas}{section.Alph1.2}% 47
-\BOOKMARK [1][-]{section.Alph1.3}{Dualidad}{appendix.Alph1}% 48
+\BOOKMARK [2][-]{subsection.3.3.2}{Haz de hiperplanos}{section.3.3}% 36
+\BOOKMARK [1][-]{section.3.4}{Teorema de Papus. Teorema de Papus dual}{chapter.3}% 37
+\BOOKMARK [0][-]{chapter.4}{Aplicaciones Proyectivas}{}% 38
+\BOOKMARK [1][-]{section.4.1}{Definici\363n}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.2}{Propiedades Elementales}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.3}{Homograf\355as}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.4}{Proyecciones C\363nicas}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.5}{Teorema de Desargues}{chapter.4}% 43
+\BOOKMARK [0][-]{appendix.Alph1}{\301lgebra Lineal}{}% 44
+\BOOKMARK [1][-]{section.Alph1.1}{Coordenadas en Espacios Vectoriales}{appendix.Alph1}% 45
+\BOOKMARK [2][-]{subsection.Alph1.1.1}{Matriz de Cambio de Base}{section.Alph1.1}% 46
+\BOOKMARK [1][-]{section.Alph1.2}{Ecuaciones de Subespacios}{appendix.Alph1}% 47
+\BOOKMARK [2][-]{subsection.Alph1.2.1}{Existencia de las Ecuaciones Cartesianas}{section.Alph1.2}% 48
+\BOOKMARK [1][-]{section.Alph1.3}{Dualidad}{appendix.Alph1}% 49

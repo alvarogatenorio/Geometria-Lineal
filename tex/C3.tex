@@ -1,9 +1,9 @@
-\chapter{Ecuaciones de rectas y planos proyectivos (por ejemplo)}
+\chapter{Ecuaciones de variedades proyectivas}
 \label{C3}
 
 Nuestra tarea aquí es tratar de, dado un una recta o un plano proyectivos, dar una referencia proyectiva de ese subespacio mediante la cual hacer una descripción explícita de sus elementos.
 
-\section{Rectas Proyectivas}
+\section{Rectas Proyectivas}\label{C3_sec_rectas}
 \begin{defi}[Recta en $\proy(E)$]
 	\label{C1_def_rectaProyectiva}
 	Se define \ti{recta proyectiva} que pasa por los puntos proyetivos $P$ y $Q$ como la variedad engendrada por dichos puntos. A dicha recta se la denomina \ti{recta} $PQ$.
@@ -141,7 +141,7 @@ por lo que la ecuación implícita de la recta vendrá dada por
 \subsection{Intersección de dos rectas proyectivas}
 Una vez que sabemos describir una recta proyectiva a través de sus ecuaciones, no está de menos calcular la intersección de dos rectas. Para ello, nos situamos de nuevo en el plano proyectivo $\proy^2$, debido a la facilidad con la que allí se opera, pero bien sería válido para cualquier espacio proyectivo.
 
-Sean pues dos rectas proyectivas $r,r'\in\proy^2$. Al igual que con la ecuación implícita de la recta, quizás la primera ocurrencia hallar la intersección de dos rectas sea combinar sus ecuaciones implícitas y resolver el sistema resultante
+Sean pues dos rectas proyectivas $r,r'\in\proy^2$. Al igual que con la ecuación implícita de la recta, quizás la primera ocurrencia para hallar la intersección de dos rectas sea combinar sus ecuaciones implícitas y resolver el sistema resultante
 \begin{equation*}
 	\begin{split}
 		ax&+by+cz=0\\
@@ -197,7 +197,7 @@ Es decir, la intersección de las rectas $r$ y $r'$ es el punto
 \end{equation}
 Es importante observar que para encontrar el punto de corte entre dos rectas de $\proy^2$ se realiza la misma operación que para hallar los coeficientes de la ecuación implícita de la recta engendrada por dos puntos, correspondiente a la ecuación~\eqref{C3_eq_implicita_cross_coef}. 
 
-\section{Planos Proyectivos}
+\section{Planos Proyectivos}\label{C3_sec_planos}
 
 Una vez completada la descripción de una recta, pasemos a realizar la de un plano de $\proy^3$. Este no es más que una variedad proyectiva de dimensión dos. Hallaremos sus ecuaciones paramétricas e implícitas generalizando los procedimientos del apartado anterior.
 
@@ -276,16 +276,109 @@ debe ser nulo. De esta forma, dado que las únicas incógnitas con $x,y,z$ y $t$
 
 \begin{obs}
 	Aunque el procedimiento utilizado para calcular la ecuación implícita de una recta de $\proy^2$ a través del producto vectorial no es generalizable a otros hiperplano, como acabamos de ver, el desarrollado en este apartado sí lo es. Por ello, no se explicará como hallar la ecuación implícita de un hiperplano proyectivo general, ya que bastará con seguir los pasos de esta sección, adaptándolos a las dimensiones pertinentes.
+	
+	Esto implica evidentemente, que la ecuación implícita de una recta de $\proy^2$ se puede hallar también a través de este procedimiento.
 \end{obs}
 
 \section{Haz de hiperplanos}
-
-En este apartado retomaremos el espacio proyectivo dual y le daremos otra utilidad, que nos será de gran ayuda a la hora de calcular intersecciones de hiperplanos. Comencemos con una definición.
-\begin{defi}
-	
-\end{defi}
-Por el momento, dado que es mucho más intuitivo explicarlo con hiperplanos concretos, empezaremos trabajando con rectas en $\proy^2$.
+En este apartado retomaremos el espacio proyectivo dual y le daremos otra utilidad, que nos será de gran ayuda a la hora de calcular intersecciones de hiperplanos.
 
 \subsection{Haz de rectas}
+Por el momento, dado que es mucho más intuitivo explicar el concepto  con hiperplanos concretos, empezaremos trabajando con rectas en $\proy^2$.
+\begin{defi}
+	Dado un punto $p\in\proy^2$, se define el \ti{haz de rectas} por el punto $p$, o con base $p$, al conjunto de todas las rectas de $\proy^2$ que pasan por $p$.
+\end{defi}
+Observemos que dos cualesquiera rectas de este haz generan el plano proyectivo. Por tanto dadas tres rectas del haz con ecuaciones implícitas
+\begin{equation}
+	\begin{split}
+		r:a_0x+a_1y+a_2z=0\\
+		r':b_0x+b_1y+b_2z=0\\
+		r'':c_0x+c_1y+c_2z=0
+	\end{split}
+\end{equation}
+los sistemas de ecuaciones 
+\begin{equation}
+	\begin{cases}
+	a_0x+a_1y+a_2z=0\\
+	b_0x+b_1y+b_2z=0
+	\end{cases} \qquad \text{y} \qquad \begin{cases}
+	a_0x+a_1y+a_2z=0\\
+	b_0x+b_1y+b_2z=0\\
+	c_0x+c_1y+c_2z=0
+	\end{cases}
+\end{equation}
+son equivalentes. Esto implica que una de las ecuaciones es combinación lineal de las otras dos. Así, conocidas dos rectas del haz $r$ y $r'$, la ecuación implícita en coordenadas homogéneas de cualquiera otra recta del haz vendrá dada por
+\begin{equation}
+	\label{C3_eq_recta_haz}
+	\alpha(a_0x+a_1y+a_2z)+\beta(b_0x+b_1y+b_2z)=0
+\end{equation}
+para determinados $\alpha$ y $\beta$. En el caso en el que $\alpha\not=0$ podemos dividir por él, y la ecuación quedaría
+\begin{equation}
+	\label{C3_eq_recta_haz_nohom}
+	(a_0x+a_1y+a_2z)+\theta(b_0x+b_1y+b_2z)=0\tq \theta=\frac{\beta}{\alpha}
+\end{equation}
+en coordenadas no homogéneas. Así, si dadas dos rectas del haz queremos determinar otra recta $s$ que pase por un punto $q$, distinto del punto $p$ del haz, basta sustituir las coordenadas de un vector representante de dicho punto que la ecuación~\eqref{C3_eq_recta_haz_nohom}, obteniendo así un valor de $\theta$. Sustituyendo $\theta$ de nuevo en la ecuación~\eqref{C3_eq_recta_haz_nohom} obtenemos la ecuación implícita de $s$.\\
+
+Sin embargo, un haz de rectas admite una interpretación dual, que da mucho más juego. Veremos que lo obtenido sin el espacio proyectivo dual es compatible con lo que obtendremos a partir de él.
+
+Recordando el principio de dualidad, \ti{traduzcamos} la definición de haz de rectas. De esta forma, los puntos pasan a ser rectas, y las rectas, puntos. Por tanto, todas las rectas que se cortan en el punto $p$ son todos los puntos que engendran la recta dual $p^*$. Con ello, todo haz de rectas de $\proy^2$ representa una recta $p^*$ en el dual. 
+
+Por tanto, un haz de rectas $p^*$ es una variedad proyectiva dual de dimensión 1, engendrada por dos puntos duales
+\begin{equation}
+	p^*:=\{\proy(\lengen{r,r'})\tq r,r'\text{ son puntos de }\proy^{2^*}\}
+\end{equation}
+Estos puntos son rectas en el espacio proyectivo $\proy^2$, por lo que tienen una ecuación implícita
+\begin{equation*}
+	a_0x+a_1y+a_2z=0
+\end{equation*}
+Así, las coordenadas de una recta en el espacio proyectivo dual serán $(a_0:a_1:a_2)$. Por tanto, si se conocen dos rectas del haz, se conocen dos puntos del haz $p^*$, y podemos describirlo a través de ecuaciones paramétricas e implícitas. 
+
+Esta descripción es la misma que la realizada en el apartado~\ref{C3_sec_rectas}, ya que al fin y al cabo se trata de describir una recta a partir de dos puntos, aunque todo ello se desarrolle en el espacio proyectivo dual. 
+
+Sean pues dos rectas $r$ y $r'$ del haz de rectas en $\proy^2$. Estas representan los puntos $(a_0:a_1:a_2)$ y $(b_0:b_1:b_2)$ en $\proy^{2^*}$. La ecuación paramétrica del haz de rectas, o recta dual $p^*$, es, en coordenadas homogéneas
+\begin{equation}
+	p^*:\{\class{\alpha (a_0,a_1,a_2)+\beta (b_0,b_1,b_2)\tq \alpha,\beta\in\R}\}
+\end{equation}
+En coordenadas no homogéneas adopta la forma
+\begin{equation}
+p^*:\{\class{(a_0,a_1,a_2)+\theta (b_0,b_1,b_2)}\tq \theta\in\proy^1\}=\{(a_0+\theta b_0:a_1+\theta b_1:a_2+\theta b_2)\tq \theta\in\proy^1\}
+\end{equation}
+Hagamos una rápida comprobación de que esto es coherente con lo explicado al principio de este apartado, sin tener en cuenta la dualidad. 
+
+Los punto que pertenecen al haz de rectas $p^*$ en el dual son aquellos de la forma\\
+$(a_0+\theta b_0:a_1+\theta b_1:a_2+\theta b_2)$. Es decir, traduciendo de nuevo, aquellas rectas de $\proy^2$ cuya ecuación implícita es
+\begin{equation*}
+	(a_0+\theta b_0)x+(a_1+\theta b_1)y+(a_2+\theta b_2)z=0
+\end{equation*}
+son las que pertenecen al haz de rectas de $\proy^2$. Observamos que esta ecuación coincide con la ecuación~\eqref{C3_eq_recta_haz_nohom}, con la cual también habíamos deducido que todas las rectas del haz debían tener por ecuación implícita la ecuación~\eqref{C3_eq_recta_haz_nohom}. Por tanto, ambas representaciones coinciden.
+
+Por último, hallemos la ecuación implícita de $p^*$. Guiándonos por el apartado~\ref{C3_sec_rectas} de nuevo tenemos que la ecuación implícita de una recta, conocidos dos de sus puntos, es 
+\begin{equation}
+((a_0,a_1,a_2)\times(b_0,b_1,b_2))\left( \begin{array}{c}
+u\\
+v\\
+w
+\end{array}\right) =0
+\end{equation}
+O bien, a partir del apartado~\ref{C3_sec_planos}
+\begin{equation}
+\left| \begin{array}{ccc}
+u & v & w \\
+a_0 & a_1 & a_2\\
+b_0 & b_1 & b_2
+\end{array}\right| =0
+\end{equation}
+Nótese que, en vez de llamar a las variables $x,y, z$, las hemos llamado $u,v,w$, para no confundir ecuaciones de rectas proyectivas con ecuaciones de rectas proyectivas duales.
+
+\begin{obs}
+	Es importante observar que, por el mismo procedimiento, se puede describir una recta de $\proy^2$ o una de $\proy^{2^*}$. La única diferencia es si consideramos los coeficientes de una ecuación como coordenadas de un punto o como coeficientes de una recta.
+\end{obs}
+
+\begin{exa}
+	
+\end{exa}
+\subsubsection{Intersección de dos rectas proyectivas}
+
+\subsection{Haz de hiperplanos}
 
 \section{Teorema de Papus. Teorema de Papus dual}

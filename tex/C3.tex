@@ -1,14 +1,14 @@
 \chapter{Ecuaciones de rectas y planos proyectivos (por ejemplo)}
 \label{C3}
 
-Nuestra tarea aquí es tratar de, dado un subespacio proyectivo, por ejemplo una recta o un plano, dar una referencia proyectiva de ese subespacio mediante la cual hacer una descripción explícita de sus elementos. Comenzaremos estudiando el caso más sencillo, las rectas proyectivas.
+Nuestra tarea aquí es tratar de, dado un una recta o un plano proyectivos, dar una referencia proyectiva de ese subespacio mediante la cual hacer una descripción explícita de sus elementos.
 
 \section{Rectas Proyectivas}
 \begin{defi}[Recta en $\proy(E)$]
 	\label{C1_def_rectaProyectiva}
 	Se define \ti{recta proyectiva} que pasa por los puntos proyetivos $P$ y $Q$ como la variedad engendrada por dichos puntos. A dicha recta se la denomina \ti{recta} $PQ$.
 \end{defi}
-\subsection{Ecuación paramétrica}
+\subsection{Ecuaciones paramétricas}\label{C3_subsec_ec_parametricas_recta}
 
 Sean $P=\class{u}$ y $Q=\class{v}$ dos puntos proyectivos, vamos a describir los elementos de la recta $PQ$, que no es otra cosa que $\engen{P,Q}$.
 	
@@ -23,6 +23,8 @@ De esta forma tenemos la referencia:
 Por el método de construcción de bases asociadas tenemos que la base asociada a esta referencia es $\mc{B}=\{u,v\}$. Como sabemos, todo punto $p\in\engen{P,Q}$ es un rayo representado por un vector de $\lengen{u,v}$. Es decir, un vector $w=\alpha u+\beta v$ con alguno de los coeficientes no nulo.
 	
 Esto quiere decir que todo punto de la recta $PQ$ es un rayo de la forma: \[\class{\alpha u+\beta v}=(\alpha:\beta)\]
+expresado en \ti{coordenadas homogéneas}.
+
 Sin embargo, podemos reducir esto aún un poco más, cambiemos el representante del rayo dividiendo todo por $\beta$.
 \[\class{\frac{\alpha}{\beta}u+v}:\stackrel{\textrm{not.}}{=}\class{\theta u+v}\]
 De esta forma la recta ya no queda descrita por dos coordenadas homogéneas $\alpha$ y $\beta$ como antes, sino por una única coordenada $\theta$ a la que llamaremos \ti{no homogénea}.
@@ -51,7 +53,7 @@ que se puede escribir a su vez como
 \begin{equation}
 	PQ:\{(\theta u_0+v_0:\theta u_1+v_1:\cdots:\theta u_n+v_n)\tq \theta\in\proy^1\}
 \end{equation}
-denominada \tb{ecuación paramétrica de la recta}. Así, la recta proyectiva está formada por todos aquellos puntos proyectivos que cumplan dicha ecuación, es decir, los que se obtienen al ir variando el valor de $\theta$.
+denominada \tb{ecuación paramétrica de la recta}, en coordenadas no homogéneas.
 \begin{exa}[Parametrización de una Recta Concreta]
 	\label{C3_exa_rectaConcreta}
 	Dados los puntos $P=(1:2:-1)$ y $Q=(0:1:3)$ se nos pide parametrizar la recta $PQ$. Siguiendo los pasos expuestos en este apartado, la ecuación paramétrica de la recta $PQ$ queda:
@@ -60,55 +62,76 @@ denominada \tb{ecuación paramétrica de la recta}. Así, la recta proyectiva es
 	\]
 	donde, cuando $\theta=\infty$, nos referimos al punto $P=(1:2:-1)$.
 	
-	Imaginemos que ahora queremos hacernos una idea de donde se encuentra esa recta en $\R^3$, es decir, queremos ``pintar'' los rayos de esa variedad proyectiva de dimensión uno. Para ello, debemos escoger un representante afín, y los rayos serán las rectas que vayan desde el $(0,0,0)$ hasta los vectores representantes de la recta proyectiva en ese plano. Así, además, determinamos donde se encuentran los puntos del infinito del espacio proyectivo. Si elegimos el plano $z=1$, entonces los puntos del infinito estarán en el plano $xy$. Para poder representar los rayos de nuestra recta proyectiva debemos determinar su punto de corte con el plano $z=1$. Por ello dividimos entre $z$. Obtenemos así las ecuaciones
+	Imaginemos que ahora queremos hacernos una idea de donde se encuentra esa recta en $\R^3$, es decir, queremos ``pintar'' los rayos de esa variedad proyectiva de dimensión uno. Para ello, debemos escoger un representante afín, y los rayos serán las rectas que vayan desde el $(0,0,0)$ hasta el punto de corte de los vectores representantes de la recta proyectiva con ese plano. Así, además, determinamos donde se encuentran los puntos del infinito del espacio proyectivo. Si elegimos el plano $z=1$, entonces los puntos del infinito estarán en el plano $xy$. 
+	
+	Elegimos pues el plano $z=1$ como representante afín. Para poder representar los rayos de nuestra recta proyectiva debemos determinar su punto de corte con el plano $z=1$. Por ello dividimos entre $z$. Obtenemos así las ecuaciones
 	\begin{equation*}
 		x=\frac{\theta}{-\theta+3}, \quad y=\frac{2\theta+1}{-\theta+3}, \quad z=1
 	\end{equation*}
-	siendo los puntos de la recta proyectiva los rayos engendrados por los vectores con esas coordenadas. Nótese que hay dos indeterminaciones. Cuando $\theta=\infty$, como ya dijimos, nos referimos al punto $P$, que al dividir entre $z$ nos da el vector representante $(-1,-2,1)$. Cuando $\theta=3$, entonces $z=0$ y nos vamos al plano $xy$, al infinito.
+	Nótese que hay dos indeterminaciones. Cuando $\theta=\infty$, como ya dijimos, nos referimos al punto $P$, que al dividir entre $z$ nos da el vector representante $(-1,-2,1)$. Cuando $\theta=3$, entonces $z=0$ y nos vamos al plano $xy$, al infinito.
 \end{exa}
 
-\subsection{Ecuación implícita}
-EXPLICAR MEJOR
+\subsection{Ecuación implícita}\label{C3_subsec_eq_param_recta}
 
-Durante este apartado nos situaremos en el plano proyectivo $\proy^2$, donde las rectas son hiperplanos. Recordemos que toda recta, variedad proyectiva de dimensión uno, es proyección de un subespacio vectorial de dimensión 2, un plano. Dado que en este caso ese plano pertenece a $\R^3$, será un hiperplano. En realidad esto ya era sabido, todo hiperplano proyectivo es proyección de un hiperplano vectorial. Pero, además, que el plano, cuya proyección es la recta proyectiva, sea un hiperplano vectorial implica que tiene una, y solo una, ecuación implícita, que cumplen todos los vectores pertenecientes al plano. Por tanto, todos los representantes de los puntos de la recta proyectiva, cumplen también dichas ecuaciones. De esta forma, asignamos a la recta de $\proy^2$ la ecuación implícita del plano vectorial del que es proyección
+Durante este apartado nos situaremos en el plano proyectivo $\proy^2$, donde las rectas son hiperplanos. Como ya sabemos, todo hiperplano proyectivo es proyección de un hiperplano vectorial. Además, que el plano, cuya proyección es la recta proyectiva, sea un hiperplano vectorial implica que tiene una, y solo una, ecuación implícita (o cartesiana) que cumplen todos los vectores pertenecientes al plano. Por tanto, todos los representantes de los puntos de la recta proyectiva cumplen dicha ecuación, ya que son los vectores del plano y sus múltiplos. 
+
+De esta forma, asignamos a la recta de $\proy^2$ la ecuación implícita del plano vectorial del que es proyección
+\begin{equation}
+	\label{C3_eq_implicita_recta}
+	ax+by+cz=0
+\end{equation}
+con $a,b,c$ no todos nulos. Esta será la \tb{ecuación implicita} de la recta, expresada en coordenadas homogéneas.
+
+\begin{obs}
+	\label{C3_obs_eq_implicita_nohom}
+	Recordemos que, al describir una recta por sus ecuaciones paramétricas, lo hicimos a través de coordenadas homogéneas y no homogéneas. Se puede hacer lo mismo con la ecuación implícita. Observemos que cualquier punto de coordenadas $(x,y)$ queda definido, salvo una constante de proporcionalidad, por la terna $(z_0x,z_0y,z_0)$, con $z_0\not=0$. Asimismo, cualquier terna $(z_0x,z_0y,z_0)$, con $z_0\not=0$, o sus proporcionales, determina un único punto de coordenadas $(x,y)=(\frac{z_0x}{z_0},\frac{z_0y}{z_0})$.
+	\begin{equation*}
+		\begin{array}{ccccc}
+			\R^2&\hookrightarrow&\R^3&\rightarrow &\proy(\R^3)=\proy^2\\
+			(x,y)&\rightarrow &(z_0x,z_0y,z_0)&\rightarrow &(z_0x:z_0y:z_0)\\
+			(\frac{x}{z},\frac{y}{z})&&\longleftarrow &&(x:y:z)
+		\end{array}
+	\end{equation*}
+	Por tanto, las coordenadas homogéneas $(x,y,z)$ de la ecuación implícita pasan a ser las coordenadas no homogéneas $(X,Y)=(\frac{x}{z},\frac{y}{z})$, quedando así la ecuación de la recta
+	\begin{equation}
+	\label{C3_eq_implicita_nohom}
+		aX+bY+c=0
+	\end{equation}
+	donde no están incluidos los puntos con $z=0$.\\
+\end{obs}
+
+Veamos a continuación varias formas de obtener la ecuación implícita, en coordenadas homogéneas, de una recta proyectiva que pasa por dos puntos.
+
+Sean $P=[u]=[(u_0,u_1,u_2)]$ y $Q=[v]=[(v_0,v_1,v_2)]$ dos puntos de $\proy^2$, y sea la ecuación implícita de la recta $PQ$
 \begin{equation*}
 	ax+by+cz=0
 \end{equation*}
-con $a,b,c$ no todos nulos. 
-
-Veamos pues, varias formas de obtener la ecuación implícita de una recta proyectiva que pasa por dos puntos, es decir, de hallar esos coeficientes.
-
-Sean entonces $P=[u]=[(u_1,u_2,u_3)]$ y $Q=[v]=[(v_1,v_2,v_3)]$ dos puntos proyectivos, y sea la ecuación implícita de la recta $PQ$
-\begin{equation*}
-	ax+by+cz=0
-\end{equation*}
-donde $a,b,c$ son coeficientes a determinar. Ya vimos que el conjunto
-\[\mf{R}=\{P,Q;\class{u+v}\}\]
-es una referencia proyectiva de la recta $PQ$, cuya base asociada es $\mc{B}=\{u,v\}$.
+donde $a,b,c$ son coeficientes a determinar.
 
 Dado que $P,Q\in PQ$, la primera forma de hallar esos coeficientes consiste simplemente en sustituir en $x,y,z$ de la ecuación implícita las coordenadas de un vector representante de $P$ y de uno de $Q$
 \begin{equation}
 \label{C3_eq_implicitas_evaluadas}
 	\begin{split}
-		au_1+bu_2+cu_3=0\\
-		av_1+bv_2+cv_3=0
+		au_0+bu_1+cu_2=0\\
+		av_0+bv_1+cv_2=0
 	\end{split}
 \end{equation}
 y resolver el sistema de ecuaciones resultante.
 
-Sin embargo, este método puede resultar un poco tedioso. Observemos que, aunque en el espacio proyectivo no está definido el producto escalar, la primera ecuación del sistema podría identificarse con el producto escalar entre el vector $(a,b,c)$ y $(u_1,u_2,u_3)$. Al ser cero, esto implicaría que son perpendiculares. A partir de la segunda ecuación podemos deducir algo similar, que $(a,b,c)$ es perpendicular al vector $(v_1,v_2,v_3)$.
+Sin embargo, este método puede resultar un poco tedioso. Observemos que, aunque en el espacio proyectivo no está definido el producto escalar, la primera ecuación del sistema podría identificarse con el producto escalar entre el vector $(a,b,c)$ y $(u_0,u_1,u_2)$. Al ser cero, esto implicaría que son perpendiculares. A partir de la segunda ecuación podemos deducir algo similar, que $(a,b,c)$ es perpendicular al vector $(v_0,v_1,v_2)$.
 
-De esta forma, el vector que debemos hallar es perpendicular a $u$ y $v$. Por tanto nos basta con hallar un vector perpendicular a ambos para determinar los coeficientes de la ecuación implícita, pues es única salvo múltiplos?. Una forma rápida de hallar un vector $(a,b,c)$ que cumpla esto es hacer el producto vectorial de $u$ y $v$. Así los coeficientes serán el resultado de 
+De esta forma, el vector que debemos hallar es perpendicular a $u$ y $v$. Por tanto, nos basta con hallar un vector perpendicular a ambos para determinar los coeficientes de la ecuación implícita, pues es única salvo múltiplos. Una forma rápida de hallar un vector $(a,b,c)$ que cumpla esto es hacer el producto vectorial de $u$ y $v$. Así los coeficientes serán el resultado de 
 \begin{equation}
 	\label{C3_eq_implicita_cross_coef}
 	(a,b,c)=u\times v=\left| \begin{array}{ccc}
 		x & y & z\\
-		u_1 & u_2 & u_3\\
-		v_1 & v_2 & v_3
+		u_0 & u_1 & u_2\\
+		v_0 & v_1 & v_2
 	\end{array}\right| 
 \end{equation}
 por lo que la ecuación implícita de la recta vendrá dada por 
 \begin{equation}
+\label{C3_eq_implicita_cross}
 	(u\times v)\left( \begin{array}{c}
 	x\\
 	y\\
@@ -118,14 +141,16 @@ por lo que la ecuación implícita de la recta vendrá dada por
 \subsection{Intersección de dos rectas proyectivas}
 Una vez que sabemos describir una recta proyectiva a través de sus ecuaciones, no está de menos calcular la intersección de dos rectas. Para ello, nos situamos de nuevo en el plano proyectivo $\proy^2$, debido a la facilidad con la que allí se opera, pero bien sería válido para cualquier espacio proyectivo.
 
-Sean pues dos rectas proyectivas $r,r'\in\proy^2$. Al igual que con la ecuación implícita de la recta, quizás la primera forma que a uno le viene a la mente para hallar la intersección de dos rectas es combinar sus ecuaciones implícitas y resolver el sistema resultante
+Sean pues dos rectas proyectivas $r,r'\in\proy^2$. Al igual que con la ecuación implícita de la recta, quizás la primera ocurrencia hallar la intersección de dos rectas sea combinar sus ecuaciones implícitas y resolver el sistema resultante
 \begin{equation*}
 	\begin{split}
 		ax&+by+cz=0\\
 		a'x&+b'y+c'z=0
 	\end{split}
 \end{equation*}
-Sin embargo, este método no es del todo práctico. Si nos paramos a reflexionar un momento sobre que debe cumplir la intersección, hallaremos formas mucho más fáciles de calcularla. Para empezar la intersección de $r$ y $r'$ es un punto $p$ del espacio proyectivo. Esto se debe a que en $\proy^2$ los hiperplanos son rectas, y por tanto por el Corolario~\ref{C1_cor_rectaHiperplano} la intersección de $r$ y $r'$ no puede ser vacía. Además, dicho punto pertenece tanto a $r$, como a $r'$. Por tanto, debe cumplir las ecuaciones de ambas rectas. Estas ecuaciones pueden ser tanto paramétricas como implícitas.
+donde $a,b,c,a',b',c'$ son conocidos.
+
+Sin embargo, este método no es del todo práctico. Si nos paramos a reflexionar un momento sobre que debe cumplir la intersección, hallaremos formas mucho más fáciles de calcularla. Para empezar la intersección de $r$ y $r'$ es un punto $p$ del espacio proyectivo. Esto se debe a que en $\proy^2$ los hiperplanos son rectas, y por tanto, por el Corolario~\ref{C1_cor_rectaHiperplano}, la intersección de $r$ y $r'$ no puede ser vacía. Además, dicho punto pertenece tanto a $r$, como a $r'$. Por tanto, debe cumplir las ecuaciones de ambas rectas. Estas ecuaciones pueden ser tanto paramétricas como implícitas.
 
 Si, por ejemplo, la recta $r$ está descrita a través de su ecuación paramétrica, donde $[(u_0,u_1,u_2)]$ y $[(v_0,v_1,v_2)]$ son dos puntos de la recta
 \begin{equation*}
@@ -149,14 +174,16 @@ $(\theta u_0+v_0,\theta u_1+v_1,\theta u_2+v_2)$. Así, resolviendo la ecuación
 \end{equation*}
 obtenemos el valor de $\theta$ que cumple la ecuación~\eqref{C3_eq_interseccion_rectas_imp_par}, y con ello el punto $p$, que es la intersección de las rectas $r$ y $r'$.
 
-Supongamos ahora que ambas rectas vienen descritas por su ecuación implícita, como teníamos al principio, y deduzcamos otro método para hallar la intersección de $r$ y $r'$. Al ser esta un punto $p=(p_0:p_1:p_2)$, podemos escoger un vector representante, por ejemplo $(p_0,p_1,p_2)$, y sustituirlo en ambas ecuaciones de tal forma que ambas deben cumplirse
+Supongamos ahora que ambas rectas vienen descritas por su ecuación implícita. Al ser la intersección un punto $p=(p_0:p_1:p_2)$, podemos escoger un vector representante, por ejemplo $(p_0,p_1,p_2)$, y sustituirlo en ambas ecuaciones de tal forma que ambas deben cumplirse
 \begin{equation*}
 	\begin{split}
 		ap_0&+bp_1+cp_2=0\\
 		a'p_0&+b'p_1+c'p_2=0
 	\end{split}
 \end{equation*}
-Detengámonos un segundo y observemos la ecuación~\eqref{C3_eq_implicitas_evaluadas}. Recordemos que en este caso las incógnitas son $p_0,p_1,p_2$ ¿No se aprecia cierta similitud?. En efecto, en este caso el vector $(p_0,p_1,p_2)$ hace el papel de $(a,b,c)$. Si hacemos la misma interpretación, aunque no del todo correcta, de perpendicularidad a través del producto escalar, podemos afirmar que el vector que buscamos es perpendicular a los vectores $\vec{a}=(a,b,c)$ y $\vec{a}'=(a',b',c')$. Al igual que hicimos anteriormente, una forma rápida de hallar un vector perpendicular a otros dos, es hacer su producto vectorial. Por tanto, un vector representante del punto $p$ viene dado por
+donde $p_0,p_1,p_2$ son desconocidos.
+
+Detengámonos un segundo y observemos la ecuación~\eqref{C3_eq_implicitas_evaluadas}. ¿No se aprecia cierta similitud?. En efecto, en este caso el vector $(p_0,p_1,p_2)$ hace el papel de $(a,b,c)$. Si hacemos la misma interpretación, aunque no del todo correcta, de perpendicularidad a través del producto escalar, podemos afirmar que el vector que buscamos es perpendicular a los vectores $\vec{a}=(a,b,c)$ y $\vec{a}'=(a',b',c')$. Al igual que hicimos anteriormente, una forma rápida de hallar un vector perpendicular a otros dos, es hacer su producto vectorial. Por tanto, un vector representante del punto $p$ viene dado por
 \begin{equation*}
 	(p_0,p_1,p_2)=\vec{a}\times \vec{a}'=\left| \begin{array}{ccc}
 		x & y & z\\
@@ -166,11 +193,99 @@ Detengámonos un segundo y observemos la ecuación~\eqref{C3_eq_implicitas_evalu
 \end{equation*}
 Es decir, la intersección de las rectas $r$ y $r'$ es el punto 
 \begin{equation}
-	p=[(p_0,p_1,p_2)]=\vec{a}\times \vec{a}'
+	p=[(p_0,p_1,p_2)]=[\vec{a}\times \vec{a}']
 \end{equation}
 Es importante observar que para encontrar el punto de corte entre dos rectas de $\proy^2$ se realiza la misma operación que para hallar los coeficientes de la ecuación implícita de la recta engendrada por dos puntos, correspondiente a la ecuación~\eqref{C3_eq_implicita_cross_coef}. 
 
-COMPLETAR
 \section{Planos Proyectivos}
 
-\section{Haces...}
+Una vez completada la descripción de una recta, pasemos a realizar la de un plano de $\proy^3$. Este no es más que una variedad proyectiva de dimensión dos. Hallaremos sus ecuaciones paramétricas e implícitas generalizando los procedimientos del apartado anterior.
+
+\subsection{Ecuaciones paramétricas}
+
+Dados tres puntos proyectivos $P=[u]$, $Q=[v]$ y $S=[s]$, vamos a describir lo elementos del plano engendrado por ellos, es decir, los elementos de $\engen{P,Q,S}$. 
+
+Para ello, y al igual que se hizo en el caso de la recta, debemos dar una referencia en función de la cual \ti{coordenar} los puntos de la variedad. Dado que los tres puntos $P,Q$ y $S$ son distintos, los vectores $u,v$ y $s$ son linealmente independientes, por lo que forman una base de $\lengen{u,v,s}$.
+
+Así, utilizando el mismo razonamiento que en el apartado~\ref{C3_subsec_ec_parametricas_recta}, tomamos la referencia proyectiva dada por
+\[\mf{R}=\{P,Q,S;\class{u+v+s}\}\]
+cuya base asociada es $\mc{B}=\{u,v,s\}$.
+
+Todo punto $p$ perteneciente al plano $\engen{P,Q,S}$ es un rayo representado por un vector $w$ de $\lengen{u,v,s}$. Por tanto, este vector puede ser escrito como $w=\alpha u +\beta v+\mu s$, con alguno de los coeficientes no nulo. Esto implica que los puntos del plano $\engen{P,Q,S}$, expresados en coordenadas homogéneas, tienen la forma
+\[\class{\alpha u+\beta v+\mu s}=(\alpha:\beta:\mu)\]
+Al igual que en el caso de la recta proyectiva, podemos reducir la expresión del plano y reescribirlo en función de dos coordenadas no homogéneas $\theta$ y $\gamma$:
+\[\class{u+\frac{\beta}{\alpha}v+\frac{\mu}{\alpha}s}:\stackrel{\textrm{not.}}{=}\class{u+\theta v+\gamma s}\]
+Sin embargo, en este caso, debemos tener más cuidado con las indeterminaciones que surgen. 
+
+Si $\alpha=0$ y $\beta\not=0\not=\mu$, entonces estaremos haciendo referencia al punto $[v+s]$. En este caso diremos que $\theta=\infty=\gamma$. Por otro lado, si $\alpha=0$ y $\beta=0$, entonces el punto resultante se corresponde con $S$, y diremos que esto se da cuando $\gamma=\infty$. Asimismo, cuando $\theta=\infty$, estamos haciendo referencia al punto $Q$.
+
+Teniendo en cuenta estas indeterminaciones, el plano $\engen{P,Q,S}$ puede describirse a través 
+\begin{equation}
+\label{C3_eq_descripcionPlanoP1}
+\engen{P,Q,S}:\{\class{u+\theta v+\gamma s}\tq \theta,\gamma\in\proy^1\}
+\end{equation}
+siendo esta la \tb{ecuación paramétrica del plano}, en coordenadas no homogéneas.
+
+\begin{obs}
+	Este procedimiento para hallar las ecuaciones paramétricas de un plano de $\proy^3$ no es más que una adaptación del procedimiento que se llevó a cabo en el apartado~\ref{C3_subsec_ec_parametricas_recta}. Observemos que es un procedimiento fácilmente generalizable a cualquier variedad proyectiva, sea cual sea su dimensión y la del espacio proyectivo. Por tanto, no se explicará como hallar las ecuaciones paramétricas de una variedad proyectiva general, pues basta seguir los pasos del apartado~\ref{C3_subsec_ec_parametricas_recta}, adaptándolo a las dimensiones de su caso.
+\end{obs}
+
+\subsection{Ecuación implícita}
+
+Dado que un plano en $\proy^3$ es un hiperplano, al igual que ocurría con la recta en $\proy^2$ y siguiendo el mismo razonamiento, le asignaremos la ecuación implícita del hiperplano de $\R^4$ del que es proyección
+\begin{equation}
+\label{C3_eq_implicita_plano}
+ax+by+cz+dt=0
+\end{equation}
+con los coeficientes no todos nulos. Esta será la \tb{ecuación implicita} del plano, expresada en coordenadas homogéneas. 
+
+\begin{obs}
+	Recordemos que podíamos describir la recta a través de la ecuación implícita en coordenadas no homogéneas. En este caso, esto también es posible. Generalizando la observación~\ref{C3_obs_eq_implicita_nohom} a nuestro caso, es decir a $\proy^3=\proy(\R^4)$, la ecuación implícita del plano en coordenadas no homogéneas quedaría
+	\begin{equation}
+		\label{C3_eq_implicita_plano_nohom}
+		aX+bY+cZ+d=0
+	\end{equation}
+	donde 
+	\begin{equation*}
+	X=\frac{x}{t};\qquad Y=\frac{y}{t};\qquad Z=\frac{z}{t}
+	\end{equation*}\\
+\end{obs}
+
+Dados tres puntos proyectivos $P=[(u_0,u_1,u_2,u_3)]$, $Q=[(v_0,v_1,v_2,v_3)]$ y $S=[(s_0,s_1,s_2,s_3)]$ de $\proy^3$, desarrollemos un procedimiento para hallar la ecuación implícita del plano que engendran $\engen{P,Q,S}$. Al igual que con la ecuación paramétrica, no haremos más que adaptar el apartado~\ref{C3_subsec_eq_param_recta} a nuestro caso.
+
+Recordemos que la primera forma de hacer esto que se comentó era, dado que $P,Q,S\in \engen{P,Q,S}$, sustituir en la ecuación~\eqref{C3_eq_implicita_plano} las coordenadas de vectores representantes de los tres puntos proyectivos y resolver el sistema. Sin embargo, no era la más eficaz
+\begin{equation}
+	\begin{split}
+		au_0+bu_1+cu_2+du_3=0\\
+		av_0+bv_1+cv_2+dv_3=0\\
+		as_0+bs_1+cs_2+ds_3=0
+	\end{split}
+\end{equation}
+Otra forma, bastante mejor que la anterior, era interpretar las ecuaciones anteriores como el producto escalar entre el vector $(a,b,c,d)$ y los vectores representantes de los puntos $P,Q$ y $S$. Esto en la recta nos llevaba a un producto vectorial. Sin embargo, en $\R^4$ no está definido. Por tanto, debemos darle a las ecuaciones otra interpretación, para así hallar una forma más fácil de calcular la ecuación implícita de un plano. 
+
+Por un momento, observemos la eucación~\eqref{C3_eq_implicita_plano} como la ecuación implícita del hiperplano $H$ cuya proyección es el plano proyectivo $\engen{P,Q,S}$. Si consideramos a $x,y,z$ y $t$ como coordenadas de un punto de $H$, dado que los vectores $u,v,t$ forman una base de dicho plano, como se explicó en el apartado anterior, el vector $(x,y,z,t)$ será combinación lineal de ellos, y por tanto el conjunto $\{(x,y,z,t),u,v,s\}$ será linealmente dependiente. Con ello el determinante
+\begin{equation}
+	\left| \begin{array}{cccc}
+	x & y & z& t\\
+	u_0 & u_1 & u_2 & u_3\\
+	v_0 & v_1 & v_2 & v_3\\
+	s_0 & s_1 & s_2 & s_3
+	\end{array}\right| =0
+\end{equation}
+debe ser nulo. De esta forma, dado que las únicas incógnitas con $x,y,z$ y $t$ y la ecuación implícita es única salvo múltiplos, el resultado de ese determinante será la ecuación implícita del hiperplano $H$, que por definición es la ecuación implícita del plano proyectivo $\engen{P,Q,S}$.
+
+\begin{obs}
+	Aunque el procedimiento utilizado para calcular la ecuación implícita de una recta de $\proy^2$ a través del producto vectorial no es generalizable a otros hiperplano, como acabamos de ver, el desarrollado en este apartado sí lo es. Por ello, no se explicará como hallar la ecuación implícita de un hiperplano proyectivo general, ya que bastará con seguir los pasos de esta sección, adaptándolos a las dimensiones pertinentes.
+\end{obs}
+
+\section{Haz de hiperplanos}
+
+En este apartado retomaremos el espacio proyectivo dual y le daremos otra utilidad, que nos será de gran ayuda a la hora de calcular intersecciones de hiperplanos. Comencemos con una definición.
+\begin{defi}
+	
+\end{defi}
+Por el momento, dado que es mucho más intuitivo explicarlo con hiperplanos concretos, empezaremos trabajando con rectas en $\proy^2$.
+
+\subsection{Haz de rectas}
+
+\section{Teorema de Papus. Teorema de Papus dual}

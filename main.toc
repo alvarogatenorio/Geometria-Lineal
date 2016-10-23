@@ -38,17 +38,17 @@
 \contentsline {chapter}{\numberline {4}Aplicaciones Proyectivas}{29}{chapter.4}
 \contentsline {section}{\numberline {4.1}Definici\IeC {\'o}n}{29}{section.4.1}
 \contentsline {section}{\numberline {4.2}Propiedades Elementales}{30}{section.4.2}
-\contentsline {section}{\numberline {4.3}Homograf\IeC {\'\i }as}{30}{section.4.3}
-\contentsline {section}{\numberline {4.4}Proyecciones C\IeC {\'o}nicas}{30}{section.4.4}
-\contentsline {section}{\numberline {4.5}Teorema de Desargues}{31}{section.4.5}
-\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{32}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{32}{section.Alph1.1}
-\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{33}{subsection.Alph1.1.1}
-\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{34}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{34}{subsection.Alph1.2.1}
-\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{34}{section*.4}
-\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{35}{section*.5}
-\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{35}{section*.6}
-\contentsline {paragraph}{Observaciones}{35}{section*.7}
-\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{35}{section*.8}
-\contentsline {section}{\numberline {A.3}Dualidad}{36}{section.Alph1.3}
+\contentsline {section}{\numberline {4.3}Homograf\IeC {\'\i }as}{31}{section.4.3}
+\contentsline {section}{\numberline {4.4}Proyecciones C\IeC {\'o}nicas}{31}{section.4.4}
+\contentsline {section}{\numberline {4.5}Teorema de Desargues}{34}{section.4.5}
+\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{35}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{35}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{36}{subsection.Alph1.1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{37}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{37}{subsection.Alph1.2.1}
+\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{37}{section*.4}
+\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{38}{section*.5}
+\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{38}{section*.6}
+\contentsline {paragraph}{Observaciones}{38}{section*.7}
+\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{38}{section*.8}
+\contentsline {section}{\numberline {A.3}Dualidad}{39}{section.Alph1.3}

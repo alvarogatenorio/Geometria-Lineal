@@ -38,6 +38,46 @@ Sean $\class{u'}=x=\class{u}$. Es evidente que $u' = \lambda u$ para cierto $\la
 
 Para terminar la sección advertimos de que en algunos textos, a la hora de representar una aplicación proyectiva omiten (abusando de notación) especificar que al espacio de partida se le extrae el centro $\mc{Z}$. 
 \section{Propiedades Elementales}
+En esta sección estudiaremos diversas propiedades básicas de las aplicaciones proyectivas. Propiedades tales como el comportamiento de las aplicaciones proyectivas inyectivas y sobreyectivas, la clausura de estas respecto de la composición, cómo estas aplicaciones parametrizan variedades proyectivas y un lema de la correspondencia bastante útil.
+
+POSPUESTO HASTA QUE LO VEAMOS EN CLASE
+
+Un resultado deseable, aunque para nada inmediato, es el de que podamos clasificar a las aplicaciones lineales que inducen cierta aplicación proyectiva por ser múltiplos entre si. Veamoslo:
+\begin{theo}[Lema de la Correspondencia]
+	\label{C4_teo_lemaCorrespondencia}
+	Dos aplicaciones lineales no nulas producen la misma aplicación proyectiva si y solo si son múltiplos la una de la otra.
+\end{theo}
+\begin{proof}
+	\begin{itemize}
+		\item[$\bra$] Sean dos aplicaciones lineales $\widehat{g},\widehat{h}:E\to E'$ tales que inducen la misma variedad proyectiva. Esto es:
+		\[\begin{array}{c}
+		\proy(E)\setminus\mc{Z}\stackrel{\varphi}{\to}\proy(E')\\
+		x=\class{u}\mapsto\varphi(x)=\class{\widehat{g}(u)}=\class{\widehat{h}(u)}
+		\end{array}\]
+		Para que esto pueda suceder es condición indispensable que ambas aplicaciones tengan el mismo kernel:
+		\[\mc{Z}=\proy(\ker(\widehat{h}))=\proy(\ker(\widehat{g}))\sii \ker(\widehat{h})=\ker(\widehat{g})\]
+		Por ende nuestro objetivo es demostrar que dicho $\lambda_u$ es el mismo para todos los vectores.
+		
+		Distingamos dos casos (para no talar árboles de más echaremos las cuentas rápido).
+		\begin{itemize}
+			\item Sean $u,v\in E\setminus\ker(\widehat{g})$ tales que $u=\mu v$. Tenemos que:
+			\[
+			\widehat{g}(u)=\lambda_u\widehat{h}(u)
+			\sii\mu\widehat{g}(v)=\lambda_u\mu\widehat{h}(v)\sii\lambda_v\widehat{h}(v)=\lambda_u\widehat{h}(v)\sii\lambda_u=\lambda_v
+			\]
+			\item Sea $u,v\in E\setminus\ker(\widehat{g})$ linealmente independientes y sea $w=u+v$. Echando las cuentas:
+			\begin{multline}\widehat{g}(w)=\lambda_w\widehat{h}(w)\sii\\\sii\widehat{g}(u)+\widehat{g}(v)=\lambda_w(\widehat{h}(u)+\widehat{h}(v))\sii\\
+			\sii \lambda_u\widehat{h}(u)+\lambda_v\widehat{h}(v)=\lambda_w(\widehat{h}(u)+\widehat{h}(v))\sii\\
+			(\lambda_u-\lambda_w)\widehat{h}(u)+(\lambda_v-\lambda_w)\widehat{h}(v)=0\end{multline}
+			Como $\widehat{h}(u)$ y $\widehat{h}(v)$ son linealmente independientes (compruébese), se tiene que: \[\lambda_u=\lambda_v=\lambda_w\].
+		\end{itemize}
+		\item[$\bla$] Inmediato, ya que si $\widehat{h}(u)=\lambda\widehat{g}(u)$ para todo $u$, tomando clases:
+		\[h(u)=\class{\widehat{h}(u)}=\class{\lambda\widehat{g}(u)}=\class{\widehat{g}(u)}=g(u)\]
+		Sabemos que las imágenes de $\widehat{g}$ y $\widehat{h}$ son iguales salvo múltiplos para todos los vectores que no pertenecen al núcleo, con lo que:
+		\[\class{\widehat{g}(u)}=\class{\widehat{h}(u)}\ \forall u\not\in\widehat{\mc{Z}}\ra\widehat{g}(u)=\lambda_u\widehat{h}(u)\]
+	\end{itemize}
+\end{proof}
+Al teorema \ref{C4_teo_lemaCorrespondencia} le bautizamos con el nombre de ``lema de la correspondencia'', porque lo que viene a decir (siendo muy retorcidos) es que las aplicaciones proyectivas entre dos espacios proyectivos están en biyección con los elementos del espacio proyectivo $\proy(\mathrm{Hom}(\widehat{X},\widehat{Y}))$.
 \section{Homografías}
 \section{Proyecciones Cónicas}
 Dedicaremos esta sección al estudio de un tipo especialmente relevante de aplicaciones proyectivas no homográficas, las llamadas \ti{proyecciones cónicas}.
@@ -99,6 +139,107 @@ Como diría Jack el Destripador, vayamos por partes:
 	En las condiciones de la definición \ref{C4_def_proyeccionConica} la intersección $\engen{x,Z}\cap Y$ tiene dimensión nula. Es decir, es un punto proyectivo.
 \end{prop}
 \begin{proof}
-	
+	Usando la fórmula de Grassmann:
+	\begin{equation}
+		\label{C4_eq_interseccionUnipuntual1}
+		\dim\engen{\engen{x,Z},Y}=\dim\engen{x,Z}+\dim\engen{Y}-\dim\engen{x,Z}\cap Y
+	\end{equation}
+	En primer lugar, veamos cuál es la dimensión de $\engen{x,Z}$, para lo cual usaremos, de nuevo, la fórmula de Grassmann.
+	\begin{equation}
+		\label{C4_eq_interseccionUnipuntual2}
+		\dim\engen{x,Z}=\dim(x)+\dim(Z)+\dim(x\cap Z)
+	\end{equation}
+	Como $\dim(x)=0$ (por ser un punto) y la dimensión de $\dim(x\cap Z)=-1$, ya que, por definición de proyección cónica $x\not\in Z$, y por tanto $x\cap Z=\emptyset$. Sustituyendo en \eqref{C4_eq_interseccionUnipuntual2} se obtiene:
+	\begin{equation}
+		\label{C4_eq_interseccionUnipuntual3}
+		\dim\engen{x,Z}=\dim(Z)+1
+	\end{equation}
+	Sustituyendo este resultado en \eqref{C4_eq_interseccionUnipuntual1} obtenemos:
+	\begin{equation}
+		\label{C4_eq_interseccionUnipuntual4}
+		\dim\engen{\engen{x,Z},Y}=\dim(Z)+1+\dim\engen{Y}-\dim\engen{x,Z}\cap Y
+	\end{equation}
+	Como, por hipótesis $\dim(Z)+\dim(Y)=\dim(X)-1$, sustituyendo en \eqref{C4_eq_interseccionUnipuntual4} queda:
+	\begin{equation}
+		\label{C4_eq_interseccionUnipuntual5}
+		\dim\engen{\engen{x,Z},Y}=\dim(X)-\dim\engen{x,Z}\cap Y
+	\end{equation}
+	Centrémonos ahora en el otro miembro de la igualdad. En primer lugar, es claro que:
+	\[\dim\engen{\engen{x,Z},Y}=\dim\engen{x,Z,Y}\]
+	Parece intuitivo pensar que $Z$ e $Y$ generan $X$. Veámoslo:
+	\begin{equation}
+		\label{C4_eq_interseccionUnipuntual6}
+		\dim\engen{Z,Y}=\dim(Z)+\dim(Y)-\dim(Z\cap Y)
+	\end{equation}
+	Como, por hipótesis, $Z\cap Y$ es el vacío, y, además, la suma de las dimensiones de $Z$ e $Y$ dan la dimensión de $X$ menos $1$, nos queda que, efectivamente:
+	\begin{equation}
+		\label{C4_eq_interseccionUnipuntual7}
+		\dim\engen{Z,Y}=\dim(X)
+	\end{equation}
+	Por ende, $\dim\engen{Z,Y,x}=\dim(X)$, y, podemos sustituir en \eqref{C4_eq_interseccionUnipuntual5}:
+	\begin{equation}
+		\label{C4_eq_interseccionUnipuntual8}
+		\dim(X)=\dim(X)-\dim\engen{x,Z}\cap Y
+	\end{equation}
+	Despejando, el resultado se sigue inmediatamente.
 \end{proof}
+La proposición \ref{C4_prop_interseccionUnipuntual} prueba que $h$ está bien definida como aplicación.
+
+Una pequeña observación antes de probar que las proyecciones cónicas son, efectivamente, aplicaciones proyectivas, es que los espacios lineales asociados a $Z$ y a $Y$ son complementarios.
+\begin{obs}[Espacios Lineales Complementarios]
+	\label{C4_obs_espaciosComplementarios}
+	Como la intersección de las variades proyectivas $Z$ e $Y$ es el vacío, esta intersección tiene dimensión $-1$. Por ende, el espacio lineal asociado a esta intersección es el nulo. Es decir:
+	\[Z\cap Y=\emptyset\sii\widehat{Z}\cap\widehat{Y}=\zset\]
+	Además, la suma de las dimensiones de $Z$ e $Y$ es la dimensión de $X$ menos $1$. Usando esto:
+	\begin{multline*}
+		\dim(Y)+\dim(Z)=\dim(X)-1\sii\\
+		\sii \dim(\widehat{Y})-1+\dim(\widehat{Z})-1=\dim(\widehat{X})-1-1\sii\\
+		\sii \dim(\widehat{Y})+\dim(\widehat{Z})-2=\dim(\widehat{X})-2\sii\\
+		\sii \dim(\widehat{Y})+\dim(\widehat{Z})=\dim(\widehat{X})
+	\end{multline*}
+	En su conjunto, esto quiere decir que se tiene la siguiente descomposición en suma directa del espacio lineal:
+	\[\widehat{X}=\widehat{Y}\oplus\widehat{Z}\]
+\end{obs}
+Probemos ahora que las proyecciones cónicas son aplicaciones proyectivas. Y que, de hecho, son las aplicaciones proyectivas asociadas a \ti{proyecciones vectoriales}. (De ahí surge el nombre de ``proyección'').
+\begin{prop}[Proyección Vectorial]
+	\label{C4_prop_proyeccionVectorial}
+	La aplicación $h$ tiene a la siguiente aplicación lineal (proyección vectorial de $\widehat{X}$ sobre $\widehat{Y}$) como asociada:
+	\[\begin{array}{c}
+	\widehat{X}=\widehat{Z}\oplus\widehat{Y}\stackrel{\widehat{h}}{\to}\widehat{Y}\\
+	u=v+w\mapsto w
+	\end{array}\]
+	Siendo $v\in \widehat{Z}$ y $w\in \widehat{Y}$, es decir, la descomposición de $x$ en suma de vectores de $\widehat{Z}$ y $\widehat{Y}$.
+\end{prop}
+\begin{proof}
+	Comprobar que $\widehat{h}$ es una aplicación lineal con núcleo $\widehat{Z}$ es inmediato y se deja al lector. Hecho esto, suponiendo que $x=\class{u}$, basta ver que $h(x)=\class{\widehat{h}(u)}$ para cualquier $x\in X$.
+	
+	\[\class{\widehat{h}(u)}=\class{\widehat{h}(v+w)}=\class{w}\]
+	
+	Veamos que $\class{w}\in \engen{x,Z}\cap Y$, demostrando así lo que queríamos.
+	
+	En primer lugar, sabemos que $w$ no es el vector nulo, ya que si lo fuera, el rayo $x$ estaría en el centro. Dicho esto, como $Y=\proy(\widehat{Y})$, y como $w\in\widehat{Y}$, entonces $\class{w}\in Y$.
+	
+	Para demostrar que $\class{w}\in\engen{x,Z}$ basta con darse cuenta de que $\engen{x,Z}=\proy({\lengen{u,\widehat{Z}}})$. Como $u = v+w$ se tiene que $w=u-v\in\lengen{u, \widehat{Z}}$, luego, tomando clases: \[\class{w}=\class{u-v}\in\proy(\lengen{u,\widehat{Z}})=\engen{x,Z}\]
+\end{proof}
+La proposición \ref*{C4_prop_proyeccionVectorial} demuestra que las proyecciones cónicas en general son aplicaciones proyectivas, dando la aplicación lineal asociada (una proyección vectorial).
+
+Antes de finalizar la sección daremos una explicación del por qué del apellido ``cónicas'' de estas aplicaciones. Además, daremos dos ejemplos detallados para que el lector se familiarice con el tratamiento de estas aplicaciones, y que, además, constituye un gran repaso de capítulos anteriores. Por último propondremos un ejercicio al lector.
+
+\begin{obs}[Cónicas]
+	\label{C4_obs_conicas}
+	Este apellido es debido a que, en el caso particular presentado en el ejemplo \ref{C4_exa_puntoHiperplano}, si tomamos la imagen de una circunferencia por la proyección cónica obtenemos una curva cónica. Esta curva es la formada por la intersección entre el hiperplano $Y$ la familia de rectas que pasan por $z$ y un punto de la circunferencia.
+\end{obs}
+\begin{exa}[Proyección Punto -- Plano Degenerada]
+	Dado el punto $z$ y el plano $\pi$, se pide hallar la imagen de un punto genérico $p$ por la proyección cónica con centro $z$ sobre $\pi$.
+	(POR HACER)
+\end{exa}
+
+\begin{exa}[Proyección Punto -- Plano]
+	Dado el punto $z$ y el plano $\pi$, se pide hallar la imagen de un punto genérico $p$ por la proyección cónica con centro $z$ sobre $\pi$.
+	(POR HACER)
+\end{exa}
+
+\begin{prob}
+	Enumere las proyecciones cónicas de $\proy^4$, clasificándolas en función de las subvariedades $Z$ e $Y$ que las caracterizan.
+\end{prob}
 \section{Teorema de Desargues}

@@ -1,0 +1,21 @@
+\chapter{Mierdas varias}
+
+En este apéndice irán, de momento, los conceptos sin fundamentar ( y mal explicados).
+
+Comencemos con un ejemplo de ecuaciones paramétricas, completado con cierta interpretación del espacio proyectivo no formalizada aún.
+
+\begin{exa}[Parametrización de una Recta Concreta]
+	Dados los puntos $P=(1:2:-1)$ y $Q=(0:1:3)$ se nos pide parametrizar la recta $PQ$. Siguiendo los pasos expuestos en este apartado, la ecuación paramétrica de la recta $PQ$ queda:
+	\[
+	PQ:\{(\theta:2\theta+1:-\theta+3)\tq\theta\in\proy^1\}
+	\]
+	donde, cuando $\theta=\infty$, nos referimos al punto $P=(1:2:-1)$.
+	
+	Imaginemos que ahora queremos hacernos una idea de donde se encuentra esa recta en $\R^3$, es decir, queremos ``pintar'' los rayos de esa variedad proyectiva de dimensión uno. Para ello, debemos escoger un representante afín, y los rayos serán las rectas que vayan desde el $(0,0,0)$ hasta el punto de corte de los vectores representantes de la recta proyectiva con ese plano. Así, además, determinamos donde se encuentran los puntos del infinito del espacio proyectivo. Si elegimos el plano $z=1$, entonces los puntos del infinito estarán en el plano $xy$. 
+	
+	Elegimos pues el plano $z=1$ como representante afín. Para poder representar los rayos de nuestra recta proyectiva debemos determinar su punto de corte con el plano $z=1$. Por ello dividimos entre $z$. Obtenemos así las ecuaciones
+	\begin{equation*}
+		x=\frac{\theta}{-\theta+3}, \quad y=\frac{2\theta+1}{-\theta+3}, \quad z=1
+	\end{equation*}
+	Nótese que hay dos indeterminaciones. Cuando $\theta=\infty$, como ya dijimos, nos referimos al punto $P$, que al dividir entre $z$ nos da el vector representante $(-1,-2,1)$. Cuando $\theta=3$, entonces $z=0$ y nos vamos al plano $xy$, al infinito.
+\end{exa}

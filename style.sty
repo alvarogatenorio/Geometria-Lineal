@@ -24,12 +24,22 @@
 
 %Paquetes para Entornos
 \usepackage{amsthm}
+\usepackage{thmtools}
+
+%Entornos especiales
+\declaretheoremstyle[
+  spaceabove=\topsep, spacebelow=\topsep,
+  notefont=\mdseries, notebraces={(}{)},
+  bodyfont=\normalfont,
+  postheadspace=1em,
+  qed={$\diamondsuit$}]{examplestyle}
+
+\declaretheorem[style=examplestyle,name=Ejemplo,numberwithin=section]{exa}
 
 %Entornos sin Cursiva
 \theoremstyle{definition}
 \newtheorem{defi}{Definición}[section]
 \newtheorem{obs}[defi]{Observación}
-\newtheorem{exa}{Ejemplo}[section]
 \newtheorem{prob}{Problema}[chapter]
 \newtheorem{impor}[defi]{Importante}
 
@@ -39,6 +49,7 @@
 \newtheorem{lem}[theo]{Lema}
 \newtheorem{prop}[theo]{Proposición}
 \newtheorem{cor}[theo]{Corolario}
+
 
 %Cuadrado Negro
 \renewcommand\qedsymbol{$\blacksquare$}

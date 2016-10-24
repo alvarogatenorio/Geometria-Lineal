@@ -61,14 +61,6 @@ denominada \tb{ecuación paramétrica de la recta}, en coordenadas no homogénea
 	PQ:\{(\theta:2\theta+1:-\theta+3)\tq\theta\in\proy^1\}
 	\]
 	donde, cuando $\theta=\infty$, nos referimos al punto $P=(1:2:-1)$.
-	
-	Imaginemos que ahora queremos hacernos una idea de donde se encuentra esa recta en $\R^3$, es decir, queremos ``pintar'' los rayos de esa variedad proyectiva de dimensión uno. Para ello, debemos escoger un representante afín, y los rayos serán las rectas que vayan desde el $(0,0,0)$ hasta el punto de corte de los vectores representantes de la recta proyectiva con ese plano. Así, además, determinamos donde se encuentran los puntos del infinito del espacio proyectivo. Si elegimos el plano $z=1$, entonces los puntos del infinito estarán en el plano $xy$. 
-	
-	Elegimos pues el plano $z=1$ como representante afín. Para poder representar los rayos de nuestra recta proyectiva debemos determinar su punto de corte con el plano $z=1$. Por ello dividimos entre $z$. Obtenemos así las ecuaciones
-	\begin{equation*}
-		x=\frac{\theta}{-\theta+3}, \quad y=\frac{2\theta+1}{-\theta+3}, \quad z=1
-	\end{equation*}
-	Nótese que hay dos indeterminaciones. Cuando $\theta=\infty$, como ya dijimos, nos referimos al punto $P$, que al dividir entre $z$ nos da el vector representante $(-1,-2,1)$. Cuando $\theta=3$, entonces $z=0$ y nos vamos al plano $xy$, al infinito.
 \end{exa}
 
 \subsection{Ecuación implícita}\label{C3_subsec_eq_param_recta}
@@ -290,6 +282,7 @@ Por el momento, dado que es mucho más intuitivo explicar el concepto  con hiper
 \end{defi}
 Observemos que dos cualesquiera rectas de este haz generan el plano proyectivo. Por tanto dadas tres rectas del haz con ecuaciones implícitas
 \begin{equation}
+	\label{C3_eq_implicitas_rectas_haz}
 	\begin{split}
 		r:a_0x+a_1y+a_2z=0\\
 		r':b_0x+b_1y+b_2z=0\\
@@ -335,7 +328,7 @@ Así, las coordenadas de una recta en el espacio proyectivo dual serán $(a_0:a_
 
 Esta descripción es la misma que la realizada en el apartado~\ref{C3_sec_rectas}, ya que al fin y al cabo se trata de describir una recta a partir de dos puntos, aunque todo ello se desarrolle en el espacio proyectivo dual. 
 
-Sean pues dos rectas $r$ y $r'$ del haz de rectas en $\proy^2$. Estas representan los puntos $(a_0:a_1:a_2)$ y $(b_0:b_1:b_2)$ en $\proy^{2^*}$. La ecuación paramétrica del haz de rectas, o recta dual $p^*$, es, en coordenadas homogéneas
+Sean pues dos rectas $r$ y $r'$ del haz de rectas en $\proy^2$. Estas, por la ecuación~\eqref{C3_eq_implicitas_rectas_haz}, representan los puntos $(a_0:a_1:a_2)$ y $(b_0:b_1:b_2)$ en $\proy^{2^*}$. La ecuación paramétrica del haz de rectas, o recta dual $p^*$, es, en coordenadas homogéneas
 \begin{equation}
 	p^*:\{\class{\alpha (a_0,a_1,a_2)+\beta (b_0,b_1,b_2)\tq \alpha,\beta\in\R}\}
 \end{equation}

@@ -373,16 +373,167 @@ que se corresponde a la ecuación implícita de la recta dual $p^*$. Comparando 
 	p=(a_1b_2-a_2b_1:a_2b_0-a_0b_2:a_0b_1-a_1b_0)
 \end{equation*}
 \subsection{Haz de hiperplanos}
-El concepto de haz de rectas puede generalizarse a un espacio proyectivo $\proy^n$, siempre que se considere un conjunto de hiperplanos. Hagamos una definición general.
+El concepto de haz de rectas puede generalizarse a un espacio proyectivo $\proy(E)$, siempre que se considere un conjunto de hiperplanos. Hagamos una definición general.
 \begin{defi}
-	Se llama haz de hiperplanos al conjunto de todos los hiperplanos de $\proy^n$ que contienen una variedad proyectiva dada $X\subset\proy^n$ de codimensión $2$. Esa variedad $X$ se llama base del haz.
+	Se llama haz de hiperplanos al conjunto de todos los hiperplanos de $\proy(E)$ que contienen una variedad proyectiva dada $X\subset\proy(E)$ de codimensión $2$. Esa variedad $X$ se llama base del haz.
 \end{defi}
 Por ejemplo, en $\proy^3$, estaríamos hablando de un haz de planos con base la recta $r$ por la cual pasan todos ellos.
 
 Dado que se habla de haz de hiperplanos, estos vendrán descritos por una ecuación implícita. Por tanto, todas las explicaciones realizadas en el apartado anterior basándonos en las ecuaciones implícitas, sin usar el dual, son válidas para el caso general.
 
-Además, la interpretación dual sigue correcta. Cada hiperplano de $\proy^n$ es un punto en el espacio proyectivo dual. La variedad $X$ contenida en todos ellos, dado que tiene codimensión $2$, es una recta en $\proy^{n^*}$. Por tanto, todo haz de hiperplanos con base $X$ de $\proy^n$ representa una recta $X^*$ en el dual. De forma general, un haz de hiperplanos es una variedad proyectiva dual de dimensión $1$. 
+Además, la interpretación dual sigue correcta. Cada hiperplano de $\proy(E)$ es un punto en el espacio proyectivo dual. La variedad $X$ contenida en todos ellos, dado que tiene codimensión $2$, es una recta en $\proy^*$. Por tanto, todo haz de hiperplanos con base $X$ de $\proy(E)$ representa una recta $X^*$ en el dual. De forma general, un haz de hiperplanos es una variedad proyectiva dual de dimensión $1$. 
 
 Al igual que hicimos en el apartado anterior, podemos describir el haz de hiperplanos $X^*$, dado que es una recta del dual, a través de sus ecuaciones paramétricas. Dados dos hiperplanos del haz, tenemos dos puntos de $X^*$ conocidos. Así, se reduce a hallar al ecuación implícita de una recta que pasa por dos puntos, problema descrito en la sección~\ref{C3_subsec_ec_parametricas_recta}.
 
-\section{Teorema de Papus}
+\section{Teorema de Pappus}
+En esta sección enunciaremos un teorema clásico de la geometría del plano proyectivo, en cuya demostración usaremos lo visto a lo largo de este capítulo.
+\begin{theo}[Teorema de Pappus]
+	Sea $\proy(E)$ un plano proyectivo y sean $r$ y $r'$ dos rectas diferentes de $\proy(E)$. Entonces, para cualesquiera seis puntos distintos $A,B,C\in r$ y $A',B',C'\in r'$, los puntos
+	\begin{equation*}
+		X=AB'\cap A'B \ ; \qquad Y=AC'\cap A'C \ ; \qquad Z=BC'\cap B'C
+	\end{equation*}
+	están alineados.
+\end{theo}
+\begin{proof}
+	Dado que en el plano proyectivo las rectas son hiperplanos, y haciendo uso del corolario~\ref{C1_cor_rectaHiperplano}, las rectas $r$ y $r'$ se cortan en un punto $O$. 
+	
+	Si alguno de los seis puntos es $O$, el teorema es trivial ya que dos de los puntos $X,Y$ y $Z$ coincidirían, con lo que tendríamos dos puntos trivialmente alineados. Trataremos pues el caso en que todos ellos son diferentes de $O$.
+	
+	La demostración consistirá en hallar las coordenadas de los puntos $X,Y,Z$ y comprobar que están alineados. Para ello es necesario establecer una referencia proyectiva. Por comodidad elegimos
+	\begin{equation*}
+		\mf{R}=\{A,B,C';B'\}
+	\end{equation*}
+	Comprobemos que es referencia. Por hipótesis, dado que son distintos, los puntos $A,B$ y $C'$ forman un triángulo no degenerado. Por tanto, para ver que cada $3$ de ellos son proyectivamente independientes, bastaría comprobar que el punto $B'$ no está en ninguno de los lados del triángulo $ABC'$.
+	
+	Dado que $B'\in r'\smz$ es claro que no pertenece a la recta $AB=r$. Tampoco está en $AC'$ ya que, en caso contrario, $B'\in r'\cap AC'=\{C'\}$, lo cual es absurdo pues los puntos $B'$ y $C'$ son distintos. Por último, no pertenece a $BC'$, pues en caso contrario de nuevo tendríamos que $B'\in r'\cap BC'=\{C'\}$. 
+	
+	Una vez demostrado que $\mf{R}$ es una referencia proyectiva, las coordenadas de los puntos $A,B,C'$ y $B'$ respecto a dicha referencia son
+	\begin{equation*}
+		A=(1:0:0) \ ; \qquad B=(0:1:0) \ ; \qquad C'=(0:0:1) \ ; \qquad B'=(1:1:1)
+	\end{equation*}
+	Estamos en situación de hallar las coordenadas de los puntos $X,Y$ y $Z$ respecto a la referencia $\mf{R}$. Realizaremos el mismo procedimiento para todos los puntos: hallaremos las ecuaciones, paramétricas o implícitas, de las rectas cuya intersección es el punto en cuestión, y a partir de ellas calcularemos posteriormente dicha intersección.
+	\begin{itemize}
+		\item Punto $X=AB'\cap A'B$.
+		
+		Dado que las coordenadas respecto a nuestra referencia de los puntos $A$ y $B'$ son conocidas, la ecuación implícita de la recta $AB'$ es
+		\begin{equation*}
+			\left| \begin{array}{ccc}
+				x & y & z\\
+				1 & 0 & 0\\
+				1 & 1 & 1
+			\end{array}\right| =0 \ \sii \ z-y=0
+		\end{equation*}
+		Para la recta $ A'B$ primero debemos hallar las coordenadas de $A'$ respecto de $\mf{R}$. Es un punto de $B'C'=r'$ distinto de $O,B',C'$. Las ecuaciones paramétricas de $B'C'$, tomando como representantes los vectores $(1,1,1)$ y $(0,0,1)$, son
+		\begin{equation}
+			\label{C3_papus_eqparam_r}
+			r'=B'C':=\{[\lambda(1,1,1)+\mu(0,0,1)]\tq \lambda,\mu\in E\}=\{(\lambda:\lambda:\mu+\lambda)\tq \lambda,\mu\in E\}
+		\end{equation}
+		Por lo que $A'$ es un punto de la forma $(\lambda:\lambda:\mu+\lambda)$. Dado que no es el punto $C'$, $\lambda\not=0$, pudiendo así dividir por $\lambda$. Queda
+		\begin{equation*}
+			A'=(1:1:1+\frac{\mu}{\lambda})=(1:1:\theta)\tq \theta=1+\frac{\mu}{\lambda}
+		\end{equation*}
+		Tengamos en cuenta que como $A'\not=B'$, $\theta\not=1$. Además, $A'\not=O$ por lo que nos falta una restricción para $\theta$. Calculamos el punto $O$ para hallarla. La ecuación implícita de $r=AB$ es 
+		\begin{equation*}
+			\left| \begin{array}{ccc}
+				x & y & z\\
+				1 & 0 & 0\\
+				0 & 1 & 0
+			\end{array}\right| =0 \ \sii \ z=0
+		\end{equation*}
+		Con ello se obtiene que el punto de corte cumple $\mu=-\lambda$. Por tanto, la intersección de ambas rectas es el punto $(\lambda:\lambda:0)=(1:1:0)$. La restricción que debemos imponer a $\theta$ para que $A'\not=O$ es que $\theta\not=0$. Así
+		\begin{equation*}
+			A'=(1:1:\theta)\tq \theta=1+\frac{\mu}{\lambda}, \theta\not=0, \theta\not=1
+		\end{equation*}
+		La ecuación implícita de la recta $A'B$ es
+		\begin{equation*}
+			\left| \begin{array}{ccc}
+				x & y & z\\
+				1 & 1 & \theta\\
+				0 & 1 & 0
+			\end{array}\right| =0 \ \sii \ \theta x+z=0
+		\end{equation*}
+		Finalmente resolviendo el sistema 
+		\begin{equation}
+			\begin{split}
+				AB':&z-y=0\\
+				A'B:&\theta x+z=0
+			\end{split}
+		\end{equation}
+		obtenemos el punto $X=AB'\cap A'B$
+		\begin{equation}
+			\label{C3_pappus_X}
+			X=(1:\theta:\theta)
+		\end{equation}
+		
+		\item Punto $Z=BC'\cap B'C$.
+		
+		La ecuación implícita de la recta $BC'$ es
+		\begin{equation*}
+			\left| \begin{array}{ccc}
+				x & y & z\\
+				0 & 1 & 0\\
+				0 & 0 & 1
+			\end{array}\right| =0 \ \sii \ x=0
+		\end{equation*}
+		Para describir la recta $B'C$ debemos hallar antes el punto $C$. Este se encuentra en la recta $AB$, que descrita a través de las ecuaciones paramétricas es
+		\begin{equation*}
+			AB:=\{[\alpha(1,0,0)+\beta(0,1,0)]\tq \alpha,\beta\in E\}=\{(\alpha:\beta:0)\tq \alpha,\beta\in E\}
+		\end{equation*}
+		Dado que $C\not=B$, se tiene que $\alpha\not=0$, por lo que podemos dividir por ella
+		\begin{equation*}
+			C=(1:\frac{\beta}{\alpha}:0)=(1:\mu:0)\tq \mu=\frac{\beta}{\alpha}
+		\end{equation*}
+		Por otro lado $C\not=O=(1:1:0)$, lo cual implica que $\mu\not=1$. Además $C\not=A$, por lo que $\mu\not=0$. Así, finalmente el punto $C$ es
+		\begin{equation*}
+			C=(1:\mu:0)\tq \mu=\frac{\beta}{\alpha},\mu\not=0,\mu\not=1
+		\end{equation*}
+		Ahora ya podemos calcular las ecuaciones paramétricas de la recta $B'C$, las cuales, en coordenadas no homogéneas, vienen dadas por
+		\begin{equation*}
+			B'C:=\{[(1,\mu,0)+\nu(1,1,1)]\tq \nu\in\proy^1\}=\{(1+\nu:\mu+\nu:\nu)\tq \nu\in\proy^1\}
+		\end{equation*}
+		El punto de intersección de las rectas $BC'$ y $B'C$ cumple $1+\nu=0$. Por tanto, $\nu=-1$ y la intersección de ambas es 
+		\begin{equation}
+			\label{C3_pappus_Z}
+			Z=(0:\mu-1:-1)
+		\end{equation}
+		
+		
+		\item Punto $Y=AC'\cap A'C$.
+		
+		La ecuación implícita de la recta $AC'$ es
+		\begin{equation*}
+			\left| \begin{array}{ccc}
+				x & y & z\\
+				1 & 0 & 0\\
+				0 & 0 & 1
+			\end{array}\right| =0 \ \sii \ y=0
+		\end{equation*}
+		Por otro lado, las ecuaciones paramétricas de $A'C$, teniendo en cuenta las restricciones antes impuestas a $\theta$ y $\mu$, son
+		\begin{equation*}
+			A'C:=\{[(1,1,\theta)+\xi(1,\mu,0)]\tq \xi\in\proy^1\}=\{(1+\xi:1+\mu\xi:\theta)\tq \xi\in\proy^1\}
+		\end{equation*}
+		El punto de intersección de ambas rectas cumple $1+\mu\xi=0$, con lo cual $\xi=\frac{-1}{\mu}$. Finalmente el punto $Y$ es
+		\begin{equation}
+			\label{C3_pappus_Y}
+			Y=(1-\frac{1}{\mu}:0:\theta)=(\mu-1:0:\mu\theta)
+		\end{equation}
+		
+	\end{itemize}
+	Una vez que tenemos las coordenadas de los tres puntos respecto a la referencia $\mf{R}$ falta comprobar que están alineados. Para ello, sus representantes deben ser coplanarios, es decir, su determinante debe ser nulo. Haciendo uso de las ecuaciones~\eqref{C3_pappus_X},~\eqref{C3_pappus_Y} y~\eqref{C3_pappus_Z} comprobamos que esto se cumple
+	\begin{equation*}
+		\left| \begin{array}{ccc}
+			1 & \mu-1 & 0\\
+			\theta & 0 & \mu-1\\
+			\theta & \mu\theta & -1
+		\end{array}\right| =(\mu-1)^2\theta-(\mu-1)\mu\theta+(\mu-1)\theta=\mu^2\theta+\theta-2\mu\theta-\mu^2\theta+2\mu\theta-\theta=0
+	\end{equation*}
+	Es importante observar que en general el determinante de los representantes de tres puntos proyectivos no está bien definido, debido a que podemos coger múltiplos. Sin embargo en este caso, al ser igual a cero, sí lo está. Por ello, el teorema queda demostrado.
+\end{proof}
+Recordemos que gracias al principio de dualidad, dado un teorema, automáticamente su dual es cierto. Así, podemos enunciar el Teorema de Pappus para el plano proyectivo dual y quedará demostrado, por el simple hecho de haber demostrado el teorema en el plano proyectivo.
+\begin{theo}[Teorema de Pappus Dual]
+	Sea $\proy(E^*)=\proy^*$ un plano proyectivo dual y sean $R$ y $R'$ dos puntos distintos de $\proy^*$. Entonces, para cualesquiera seis rectas distintas $a,b,c,a',b',c'$ tales que $R\in a,b,c$ y $R'\in a',b',c'$; las rectas
+	\begin{equation*}
+		\engen{a\cap b',a'\cap b} \ ; \qquad \engen{a\cap c',a'\cap c} \ ; \qquad \engen{b\cap c',b'\cap c}
+	\end{equation*}
+	son concurrentes.
+\end{theo}

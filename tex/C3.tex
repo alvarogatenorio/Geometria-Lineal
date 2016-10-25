@@ -65,7 +65,9 @@ denominada \tb{ecuación paramétrica de la recta}, en coordenadas no homogénea
 
 \subsection{Ecuación implícita}\label{C3_subsec_eq_param_recta}
 
-Durante este apartado nos situaremos en el plano proyectivo $\proy^2$, donde las rectas son hiperplanos. Como ya sabemos, todo hiperplano proyectivo es proyección de un hiperplano vectorial. Además, que el plano, cuya proyección es la recta proyectiva, sea un hiperplano vectorial implica que tiene una, y solo una, ecuación implícita (o cartesiana) que cumplen todos los vectores pertenecientes al plano. Por tanto, todos los representantes de los puntos de la recta proyectiva cumplen dicha ecuación, ya que son los vectores del plano y sus múltiplos. 
+Durante este apartado nos situaremos en el plano proyectivo $\proy^2$, donde las rectas son hiperplanos. Como ya sabemos, todo hiperplano proyectivo es proyección de un hiperplano vectorial. Por tanto, una recta de $\proy^2$ es proyección de un plano de $\R^3$.
+
+Además, por ser hiperplano, este plano tiene una, y solo una, ecuación implícita (o cartesiana) que cumplen todos sus vectores. Por tanto, todos los representantes de los puntos de la recta proyectiva cumplen dicha ecuación, ya que son los vectores del plano o sus múltiplos. 
 
 De esta forma, asignamos a la recta de $\proy^2$ la ecuación implícita del plano vectorial del que es proyección
 \begin{equation}
@@ -74,33 +76,15 @@ De esta forma, asignamos a la recta de $\proy^2$ la ecuación implícita del pla
 \end{equation}
 con $a,b,c$ no todos nulos. Esta será la \tb{ecuación implicita} de la recta, expresada en coordenadas homogéneas.
 
-\begin{obs}
-	\label{C3_obs_eq_implicita_nohom}
-	Recordemos que, al describir una recta por sus ecuaciones paramétricas, lo hicimos a través de coordenadas homogéneas y no homogéneas. Se puede hacer lo mismo con la ecuación implícita. Observemos que cualquier punto de coordenadas $(x,y)$ queda definido, salvo una constante de proporcionalidad, por la terna $(z_0x,z_0y,z_0)$, con $z_0\not=0$. Asimismo, cualquier terna $(z_0x,z_0y,z_0)$, con $z_0\not=0$, o sus proporcionales, determina un único punto de coordenadas $(x,y)=(\frac{z_0x}{z_0},\frac{z_0y}{z_0})$.
-	\begin{equation*}
-		\begin{array}{ccccc}
-			\R^2&\hookrightarrow&\R^3&\rightarrow &\proy(\R^3)=\proy^2\\
-			(x,y)&\rightarrow &(z_0x,z_0y,z_0)&\rightarrow &(z_0x:z_0y:z_0)\\
-			(\frac{x}{z},\frac{y}{z})&&\longleftarrow &&(x:y:z)
-		\end{array}
-	\end{equation*}
-	Por tanto, las coordenadas homogéneas $(x,y,z)$ de la ecuación implícita pasan a ser las coordenadas no homogéneas $(X,Y)=(\frac{x}{z},\frac{y}{z})$, quedando así la ecuación de la recta
-	\begin{equation}
-	\label{C3_eq_implicita_nohom}
-		aX+bY+c=0
-	\end{equation}
-	donde no están incluidos los puntos con $z=0$.\\
-\end{obs}
-
 Veamos a continuación varias formas de obtener la ecuación implícita, en coordenadas homogéneas, de una recta proyectiva que pasa por dos puntos.
 
-Sean $P=[u]=[(u_0,u_1,u_2)]$ y $Q=[v]=[(v_0,v_1,v_2)]$ dos puntos de $\proy^2$, y sea la ecuación implícita de la recta $PQ$
+Sean $P=[u]=[(u_0,u_1,u_2)]$ y $Q=[v]=[(v_0,v_1,v_2)]$ dos puntos de $\proy^2$. La ecuación implícita de la recta $PQ$ tendrá la forma
 \begin{equation*}
 	ax+by+cz=0
 \end{equation*}
 donde $a,b,c$ son coeficientes a determinar.
 
-Dado que $P,Q\in PQ$, la primera forma de hallar esos coeficientes consiste simplemente en sustituir en $x,y,z$ de la ecuación implícita las coordenadas de un vector representante de $P$ y de uno de $Q$
+Dado que $P,Q\in PQ$, la primera forma de hallar esos coeficientes consiste simplemente en sustituir en $x,y,z$ de la ecuación implícita las coordenadas de un vector representante de $P$ y de uno de $Q$ y resolver el sistema de ecuaciones resultante:
 \begin{equation}
 \label{C3_eq_implicitas_evaluadas}
 	\begin{split}
@@ -108,7 +92,6 @@ Dado que $P,Q\in PQ$, la primera forma de hallar esos coeficientes consiste simp
 		av_0+bv_1+cv_2=0
 	\end{split}
 \end{equation}
-y resolver el sistema de ecuaciones resultante.
 
 Sin embargo, este método puede resultar un poco tedioso. Observemos que, aunque en el espacio proyectivo no está definido el producto escalar, la primera ecuación del sistema podría identificarse con el producto escalar entre el vector $(a,b,c)$ y $(u_0,u_1,u_2)$. Al ser cero, esto implicaría que son perpendiculares. A partir de la segunda ecuación podemos deducir algo similar, que $(a,b,c)$ es perpendicular al vector $(v_0,v_1,v_2)$.
 
@@ -164,7 +147,7 @@ $(\theta u_0+v_0,\theta u_1+v_1,\theta u_2+v_2)$. Así, resolviendo la ecuación
 \begin{equation*}
  	a'(\theta u_0+v_0)+b'(\theta u_1+v_1)+c'(\theta u_2+v_2)=0
 \end{equation*}
-obtenemos el valor de $\theta$ que cumple la ecuación~\eqref{C3_eq_interseccion_rectas_imp_par}, y con ello el punto $p$, que es la intersección de las rectas $r$ y $r'$.
+obtenemos el valor de $\theta$ que asegura que el punto $p$, descrito por la ecuación~\eqref{C3_eq_interseccion_rectas_imp_par} pertenece a ambas rectas. Sustituyendo este valor en la ecuación~\eqref{C3_eq_interseccion_rectas_imp_par} queda hallada la intersección de las rectas $r$ y $r'$.
 
 Supongamos ahora que ambas rectas vienen descritas por su ecuación implícita. Al ser la intersección un punto $p=(p_0:p_1:p_2)$, podemos escoger un vector representante, por ejemplo $(p_0,p_1,p_2)$, y sustituirlo en ambas ecuaciones de tal forma que ambas deben cumplirse
 \begin{equation*}
@@ -195,7 +178,8 @@ Una vez completada la descripción de una recta, pasemos a realizar la de un pla
 
 \subsection{Ecuaciones paramétricas}
 
-Dados tres puntos proyectivos $P=[u]$, $Q=[v]$ y $S=[s]$, vamos a describir lo elementos del plano engendrado por ellos, es decir, los elementos de $\engen{P,Q,S}$. 
+Dados tres puntos proyectivos dis
+tintos $P=[u]$, $Q=[v]$ y $S=[s]$, vamos a describir lo elementos del plano engendrado por ellos, es decir, los elementos de $\engen{P,Q,S}$. 
 
 Para ello, y al igual que se hizo en el caso de la recta, debemos dar una referencia en función de la cual \ti{coordenar} los puntos de la variedad. Dado que los tres puntos $P,Q$ y $S$ son distintos, los vectores $u,v$ y $s$ son linealmente independientes, por lo que forman una base de $\lengen{u,v,s}$.
 
@@ -207,11 +191,11 @@ Todo punto $p$ perteneciente al plano $\engen{P,Q,S}$ es un rayo representado po
 \[\class{\alpha u+\beta v+\mu s}=(\alpha:\beta:\mu)\]
 Al igual que en el caso de la recta proyectiva, podemos reducir la expresión del plano y reescribirlo en función de dos coordenadas no homogéneas $\theta$ y $\gamma$:
 \[\class{u+\frac{\beta}{\alpha}v+\frac{\mu}{\alpha}s}:\stackrel{\textrm{not.}}{=}\class{u+\theta v+\gamma s}\]
-Sin embargo, en este caso, debemos tener más cuidado con las indeterminaciones que surgen. 
+Sin embargo, en este caso, debemos tener más cuidado con los problemas que surgen cuando $\alpha=0$.
 
 Si $\alpha=0$ y $\beta\not=0\not=\mu$, entonces estaremos haciendo referencia al punto $[v+s]$. En este caso diremos que $\theta=\infty=\gamma$. Por otro lado, si $\alpha=0$ y $\beta=0$, entonces el punto resultante se corresponde con $S$, y diremos que esto se da cuando $\gamma=\infty$. Asimismo, cuando $\theta=\infty$, estamos haciendo referencia al punto $Q$.
 
-Teniendo en cuenta estas indeterminaciones, el plano $\engen{P,Q,S}$ puede describirse a través 
+Teniendo en cuenta estas indeterminaciones, el plano $\engen{P,Q,S}$ puede describirse a través de
 \begin{equation}
 \label{C3_eq_descripcionPlanoP1}
 \engen{P,Q,S}:\{\class{u+\theta v+\gamma s}\tq \theta,\gamma\in\proy^1\}
@@ -231,21 +215,9 @@ ax+by+cz+dt=0
 \end{equation}
 con los coeficientes no todos nulos. Esta será la \tb{ecuación implicita} del plano, expresada en coordenadas homogéneas. 
 
-\begin{obs}
-	Recordemos que podíamos describir la recta a través de la ecuación implícita en coordenadas no homogéneas. En este caso, esto también es posible. Generalizando la observación~\ref{C3_obs_eq_implicita_nohom} a nuestro caso, es decir a $\proy^3=\proy(\R^4)$, la ecuación implícita del plano en coordenadas no homogéneas quedaría
-	\begin{equation}
-		\label{C3_eq_implicita_plano_nohom}
-		aX+bY+cZ+d=0
-	\end{equation}
-	donde 
-	\begin{equation*}
-	X=\frac{x}{t};\qquad Y=\frac{y}{t};\qquad Z=\frac{z}{t}
-	\end{equation*}\\
-\end{obs}
-
 Dados tres puntos proyectivos $P=[(u_0,u_1,u_2,u_3)]$, $Q=[(v_0,v_1,v_2,v_3)]$ y $S=[(s_0,s_1,s_2,s_3)]$ de $\proy^3$, desarrollemos un procedimiento para hallar la ecuación implícita del plano que engendran $\engen{P,Q,S}$. Al igual que con la ecuación paramétrica, no haremos más que adaptar el apartado~\ref{C3_subsec_eq_param_recta} a nuestro caso.
 
-Recordemos que la primera forma de hacer esto que se comentó era, dado que $P,Q,S\in \engen{P,Q,S}$, sustituir en la ecuación~\eqref{C3_eq_implicita_plano} las coordenadas de vectores representantes de los tres puntos proyectivos y resolver el sistema. Sin embargo, no era la más eficaz
+Recordemos que la primera forma de hacer esto que se comentó era, dado que $P,Q,S\in \engen{P,Q,S}$, sustituir en la ecuación~\eqref{C3_eq_implicita_plano} las coordenadas de vectores representantes de los tres puntos proyectivos y resolver el sistema. Sin embargo, no era la más eficaz.
 \begin{equation}
 	\begin{split}
 		au_0+bu_1+cu_2+du_3=0\\
@@ -255,7 +227,7 @@ Recordemos que la primera forma de hacer esto que se comentó era, dado que $P,Q
 \end{equation}
 Otra forma, bastante mejor que la anterior, era interpretar las ecuaciones anteriores como el producto escalar entre el vector $(a,b,c,d)$ y los vectores representantes de los puntos $P,Q$ y $S$. Esto en la recta nos llevaba a un producto vectorial. Sin embargo, en $\R^4$ no está definido. Por tanto, debemos darle a las ecuaciones otra interpretación, para así hallar una forma más fácil de calcular la ecuación implícita de un plano. 
 
-Por un momento, observemos la eucación~\eqref{C3_eq_implicita_plano} como la ecuación implícita del hiperplano $H$ cuya proyección es el plano proyectivo $\engen{P,Q,S}$. Si consideramos a $x,y,z$ y $t$ como coordenadas de un punto de $H$, dado que los vectores $u,v,t$ forman una base de dicho plano, como se explicó en el apartado anterior, el vector $(x,y,z,t)$ será combinación lineal de ellos, y por tanto el conjunto $\{(x,y,z,t),u,v,s\}$ será linealmente dependiente. Con ello el determinante
+Por un momento, observemos la eucación~\eqref{C3_eq_implicita_plano} como la ecuación implícita del hiperplano $H$ cuya proyección es el plano proyectivo $\engen{P,Q,S}$. Si consideramos $x,y,z$ y $t$ como coordenadas de un punto de $H$, dado que los vectores $u,v,t$ forman una base de dicho plano, como se explicó en el apartado anterior, el vector $(x,y,z,t)$ será combinación lineal de ellos, y por tanto el conjunto $\{(x,y,z,t),u,v,s\}$ será linealmente dependiente. Con ello el determinante
 \begin{equation}
 	\left| \begin{array}{cccc}
 	x & y & z& t\\
@@ -267,9 +239,7 @@ Por un momento, observemos la eucación~\eqref{C3_eq_implicita_plano} como la ec
 debe ser nulo. De esta forma, dado que las únicas incógnitas con $x,y,z$ y $t$ y la ecuación implícita es única salvo múltiplos, el resultado de ese determinante será la ecuación implícita del hiperplano $H$, que por definición es la ecuación implícita del plano proyectivo $\engen{P,Q,S}$.
 
 \begin{obs}
-	Aunque el procedimiento utilizado para calcular la ecuación implícita de una recta de $\proy^2$ a través del producto vectorial no es generalizable a otros hiperplano, como acabamos de ver, el desarrollado en este apartado sí lo es. Por ello, no se explicará como hallar la ecuación implícita de un hiperplano proyectivo general, ya que bastará con seguir los pasos de esta sección, adaptándolos a las dimensiones pertinentes.
-	
-	Esto implica evidentemente, que la ecuación implícita de una recta de $\proy^2$ se puede hallar también a través de este procedimiento.
+	Aunque el procedimiento utilizado para calcular la ecuación implícita de una recta de $\proy^2$ a través del producto vectorial no es generalizable a otros hiperplanos, como acabamos de ver, el desarrollado en este apartado sí lo es. Por ello, no se explicará como hallar la ecuación implícita de un hiperplano proyectivo general, ya que bastará con seguir los pasos de esta sección, adaptándolos a las dimensiones pertinentes. Esto implica evidentemente, que la ecuación implícita de una recta de $\proy^2$ se puede hallar también a través de este procedimiento.
 \end{obs}
 
 \section{Haz de hiperplanos}
@@ -300,21 +270,23 @@ los sistemas de ecuaciones
 	c_0x+c_1y+c_2z=0
 	\end{cases}
 \end{equation}
-son equivalentes. Esto implica que una de las ecuaciones es combinación lineal de las otras dos. Así, conocidas dos rectas del haz $r$ y $r'$, la ecuación implícita en coordenadas homogéneas de cualquiera otra recta del haz vendrá dada por
+son equivalentes. Esto implica que una de las ecuaciones es combinación lineal de las otras dos. Por tanto, conocidas dos rectas del haz $r$ y $r'$, la ecuación implícita en coordenadas homogéneas de cualquiera otra recta del haz vendrá dada por
 \begin{equation}
 	\label{C3_eq_recta_haz}
 	\alpha(a_0x+a_1y+a_2z)+\beta(b_0x+b_1y+b_2z)=0
 \end{equation}
-para determinados $\alpha$ y $\beta$. En el caso en el que $\alpha\not=0$ podemos dividir por él, y la ecuación quedaría
+para determinados $\alpha$ y $\beta$. Si $\alpha\not=0$ podemos dividir por él, y la ecuación quedaría
 \begin{equation}
 	\label{C3_eq_recta_haz_nohom}
 	(a_0x+a_1y+a_2z)+\theta(b_0x+b_1y+b_2z)=0\tq \theta=\frac{\beta}{\alpha}
 \end{equation}
-en coordenadas no homogéneas. Así, si dadas dos rectas del haz queremos determinar otra recta $s$ que pase por un punto $q$, distinto del punto $p$ del haz, basta sustituir las coordenadas de un vector representante de dicho punto que la ecuación~\eqref{C3_eq_recta_haz_nohom}, obteniendo así un valor de $\theta$. Sustituyendo $\theta$ de nuevo en la ecuación~\eqref{C3_eq_recta_haz_nohom} obtenemos la ecuación implícita de $s$.\\
+en coordenadas no homogéneas. 
+
+Así, si dadas dos rectas del haz queremos determinar otra recta $s$ que pase por un punto $q$, distinto del punto $p$ del haz, basta sustituir las coordenadas de un vector representante de dicho punto $q$ que la ecuación~\eqref{C3_eq_recta_haz_nohom}, obteniendo así un valor de $\theta$. Sustituyendo $\theta$ de nuevo en la ecuación~\eqref{C3_eq_recta_haz_nohom} obtenemos la ecuación implícita de $s$.\\
 
 Sin embargo, un haz de rectas admite una interpretación dual, que da mucho más juego. Veremos que lo obtenido sin el espacio proyectivo dual es compatible con lo que obtendremos a partir de él.
 
-Recordando el principio de dualidad, \ti{traduzcamos} la definición de haz de rectas. De esta forma, los puntos pasan a ser rectas, y las rectas, puntos. Por tanto, todas las rectas que se cortan en el punto $p$ son todos los puntos que engendran la recta dual $p^*$. Con ello, todo haz de rectas de $\proy^2$ representa una recta $p^*$ en el dual. 
+Recordando el principio de dualidad, \ti{traduzcamos} la definición de haz de rectas. De esta forma, y dado que estamos en $\proy^2$, los puntos pasan a ser rectas, y las rectas, puntos. Por tanto, todas las rectas que se cortan en el punto $p$ son todos los puntos que engendran la recta dual $p^*$. Con ello, todo haz de rectas con base $p$ de $\proy^2$ representa una recta $p^*$ en el dual. Asimismo, gracias a la dualidad, toda recta $p^*$ de $\proy^{2^*}$ representa un haz de rectas con base $p$ en $\proy^2$.
 
 Por tanto, un haz de rectas $p^*$ es una variedad proyectiva dual de dimensión 1, engendrada por dos puntos duales
 \begin{equation}
@@ -345,7 +317,7 @@ $(a_0+\theta b_0:a_1+\theta b_1:a_2+\theta b_2)$. Es decir, traduciendo de nuevo
 \end{equation*}
 son las que pertenecen al haz de rectas de $\proy^2$. Observamos que esta ecuación coincide con la ecuación~\eqref{C3_eq_recta_haz_nohom}, con la cual también habíamos deducido que todas las rectas del haz debían tener por ecuación implícita la ecuación~\eqref{C3_eq_recta_haz_nohom}. Por tanto, ambas representaciones coinciden.
 
-Por último, hallemos la ecuación implícita de $p^*$. Guiándonos por el apartado~\ref{C3_sec_rectas} de nuevo tenemos que la ecuación implícita de una recta, conocidos dos de sus puntos, es 
+Por último, hallemos la ecuación implícita de $p^*$. Guiándonos por el apartado~\ref{C3_sec_rectas} de nuevo, tenemos que la ecuación implícita de una recta, conocidos dos de sus puntos, es 
 \begin{equation}
 ((a_0,a_1,a_2)\times(b_0,b_1,b_2))\left( \begin{array}{c}
 u\\
@@ -355,11 +327,12 @@ w
 \end{equation}
 O bien, a partir del apartado~\ref{C3_sec_planos}
 \begin{equation}
-\left| \begin{array}{ccc}
-u & v & w \\
-a_0 & a_1 & a_2\\
-b_0 & b_1 & b_2
-\end{array}\right| =0
+	\label{C3_eq_implicita_rectadual_determinante}
+	\left| \begin{array}{ccc}
+	u & v & w \\
+	a_0 & a_1 & a_2\\
+	b_0 & b_1 & b_2
+	\end{array}\right| =0
 \end{equation}
 Nótese que, en vez de llamar a las variables $x,y, z$, las hemos llamado $u,v,w$, para no confundir ecuaciones de rectas proyectivas con ecuaciones de rectas proyectivas duales.
 
@@ -367,11 +340,49 @@ Nótese que, en vez de llamar a las variables $x,y, z$, las hemos llamado $u,v,w
 	Es importante observar que, por el mismo procedimiento, se puede describir una recta de $\proy^2$ o una de $\proy^{2^*}$. La única diferencia es si consideramos los coeficientes de una ecuación como coordenadas de un punto o como coeficientes de una recta.
 \end{obs}
 
-\begin{exa}
-	
-\end{exa}
 \subsubsection{Intersección de dos rectas proyectivas}
+Anteriormente hemos estudiado varias formas de calcular la intersección de dos rectas de $\proy^2$. Sin embargo, el concepto de haz de rectas aun no había sido introducido. Una vez conocida su existencia, utilicémoslo para hallar la intersección de dos rectas $r$ y $r'$ en $\proy^2$, descritas por las siguientes ecuaciones implícitas
+\begin{equation*}
+	\begin{split}
+		r:a_0x+a_1y+a_2z=0\\
+		r':b_0x+b_1y+b_2z=0
+	\end{split}
+\end{equation*}
+Como bien sabemos, dicha intersección es un punto $p=(p_0:p_1:p_2)$. Esto quiere decir que las dos rectas $r$ y $r'$ pertenecen al haz de rectas con base $p$. 
 
+Pasando al espacio dual estamos buscando una recta $p^*$ de $\proy^{2^*}$, con ecuación implícita
+\begin{equation}
+	\label{C3_eq_ejemplo_int_rectas_dual}
+	p_0u+p_1v+p_2w=0
+\end{equation}
+que contiene a los puntos $(a_0:a_1:a_2)$ y $(b_0:b_1:b_2)$. 
+
+La ecuación implícita de una recta que pasa por dos puntos viene dada por la ecuación~\eqref{C3_eq_implicita_rectadual_determinante}. Sustituyendo los valores de los puntos contenidos en $p^*$ obtenemos
+\begin{equation*}
+	\left| \begin{array}{ccc}
+	u & v & w \\
+	a_0 & a_1 & a_2\\
+	b_0 & b_1 & b_2
+	\end{array}\right| =0
+\end{equation*}
+\begin{equation*}
+	(a_1b_2-a_2b_1)u+(a_2b_0-a_0b_2)v+(a_0b_1-a_1b_0)w=0
+\end{equation*}
+que se corresponde a la ecuación implícita de la recta dual $p^*$. Comparando con la eucación~\eqref{C3_eq_ejemplo_int_rectas_dual} obtenemos que la intersección de las rectas $r$ y $r'$ de $\proy^2$ es el punto
+\begin{equation*}
+	p=(a_1b_2-a_2b_1:a_2b_0-a_0b_2:a_0b_1-a_1b_0)
+\end{equation*}
 \subsection{Haz de hiperplanos}
+El concepto de haz de rectas puede generalizarse a un espacio proyectivo $\proy^n$, siempre que se considere un conjunto de hiperplanos. Hagamos una definición general.
+\begin{defi}
+	Se llama haz de hiperplanos al conjunto de todos los hiperplanos de $\proy^n$ que contienen una variedad proyectiva dada $X\subset\proy^n$ de codimensión $2$. Esa variedad $X$ se llama base del haz.
+\end{defi}
+Por ejemplo, en $\proy^3$, estaríamos hablando de un haz de planos con base la recta $r$ por la cual pasan todos ellos.
 
-\section{Teorema de Papus. Teorema de Papus dual}
+Dado que se habla de haz de hiperplanos, estos vendrán descritos por una ecuación implícita. Por tanto, todas las explicaciones realizadas en el apartado anterior basándonos en las ecuaciones implícitas, sin usar el dual, son válidas para el caso general.
+
+Además, la interpretación dual sigue correcta. Cada hiperplano de $\proy^n$ es un punto en el espacio proyectivo dual. La variedad $X$ contenida en todos ellos, dado que tiene codimensión $2$, es una recta en $\proy^{n^*}$. Por tanto, todo haz de hiperplanos con base $X$ de $\proy^n$ representa una recta $X^*$ en el dual. De forma general, un haz de hiperplanos es una variedad proyectiva dual de dimensión $1$. 
+
+Al igual que hicimos en el apartado anterior, podemos describir el haz de hiperplanos $X^*$, dado que es una recta del dual, a través de sus ecuaciones paramétricas. Dados dos hiperplanos del haz, tenemos dos puntos de $X^*$ conocidos. Así, se reduce a hallar al ecuación implícita de una recta que pasa por dos puntos, problema descrito en la sección~\ref{C3_subsec_ec_parametricas_recta}.
+
+\section{Teorema de Papus}

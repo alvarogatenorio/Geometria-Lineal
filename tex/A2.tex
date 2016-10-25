@@ -19,3 +19,35 @@ Comencemos con un ejemplo de ecuaciones paramétricas, completado con cierta int
 	\end{equation*}
 	Nótese que hay dos indeterminaciones. Cuando $\theta=\infty$, como ya dijimos, nos referimos al punto $P$, que al dividir entre $z$ nos da el vector representante $(-1,-2,1)$. Cuando $\theta=3$, entonces $z=0$ y nos vamos al plano $xy$, al infinito.
 \end{exa}
+
+Pasamos al apartado de ecuaciones implícitas, donde esta misma idea se utiliza para expresar una recta, y en la siguiente observación un plano, a partir de su ecuación implícita en coordenadas no homogéneas.
+
+\begin{obs}
+	\label{A2_obs_eq_implicita_nohom}
+	Recordemos que, al describir una recta por sus ecuaciones paramétricas, lo hicimos a través de coordenadas homogéneas y no homogéneas. Se puede hacer lo mismo con la ecuación implícita. Observemos que cualquier punto de coordenadas $(x,y)$ queda definido, salvo una constante de proporcionalidad, por la terna $(z_0x,z_0y,z_0)$, con $z_0\not=0$. Asimismo, cualquier terna $(z_0x,z_0y,z_0)$, con $z_0\not=0$, o sus proporcionales, determina un único punto de coordenadas $(x,y)=(\frac{z_0x}{z_0},\frac{z_0y}{z_0})$.
+	\begin{equation*}
+		\begin{array}{ccccc}
+			\R^2&\hookrightarrow&\R^3&\rightarrow &\proy(\R^3)=\proy^2\\
+			(x,y)&\rightarrow &(z_0x,z_0y,z_0)&\rightarrow &(z_0x:z_0y:z_0)\\
+			(\frac{x}{z},\frac{y}{z})&&\longleftarrow &&(x:y:z)
+		\end{array}
+	\end{equation*}
+	Por tanto, las coordenadas homogéneas $(x,y,z)$ de la ecuación implícita pasan a ser las coordenadas no homogéneas $(X,Y)=(\frac{x}{z},\frac{y}{z})$, quedando así la ecuación de la recta
+	\begin{equation}
+		\label{A2_eq_implicita_nohom}
+		aX+bY+c=0
+	\end{equation}
+	donde no están incluidos los puntos con $z=0$.\\
+\end{obs}
+
+\begin{obs}
+	Recordemos que podíamos describir la recta a través de la ecuación implícita en coordenadas no homogéneas. En este caso, esto también es posible. Generalizando la observación~\ref{A2_obs_eq_implicita_nohom} a nuestro caso, es decir a $\proy^3=\proy(\R^4)$, la ecuación implícita del plano en coordenadas no homogéneas quedaría
+	\begin{equation}
+		\label{A2_eq_implicita_plano_nohom}
+		aX+bY+cZ+d=0
+	\end{equation}
+	donde 
+	\begin{equation*}
+		X=\frac{x}{t};\qquad Y=\frac{y}{t};\qquad Z=\frac{z}{t}
+	\end{equation*}\\
+\end{obs}

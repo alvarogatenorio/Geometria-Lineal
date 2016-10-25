@@ -34,9 +34,9 @@
 \contentsline {subsection}{\numberline {3.2.2}Ecuaci\IeC {\'o}n impl\IeC {\'\i }cita}{26}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Haz de hiperplanos}{27}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Haz de rectas}{27}{subsection.3.3.1}
-\contentsline {subsubsection}{Intersecci\IeC {\'o}n de dos rectas proyectivas}{29}{section*.4}
+\contentsline {subsubsection}{Intersecci\IeC {\'o}n de dos rectas proyectivas}{28}{section*.4}
 \contentsline {subsection}{\numberline {3.3.2}Haz de hiperplanos}{29}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Teorema de Papus. Teorema de Papus dual}{29}{section.3.4}
+\contentsline {section}{\numberline {3.4}Teorema de Papus}{29}{section.3.4}
 \contentsline {chapter}{\numberline {4}Aplicaciones Proyectivas}{30}{chapter.4}
 \contentsline {section}{\numberline {4.1}Definici\IeC {\'o}n}{30}{section.4.1}
 \contentsline {section}{\numberline {4.2}Propiedades Elementales}{31}{section.4.2}

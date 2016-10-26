@@ -9,7 +9,7 @@ Sean dos espacios proyectivos $X$ e $Y$ asociados a sendos espacios vectoriales,
 
 Nuestro objetivo es definir una aplicación proyectiva entre dos espacios proyectivos a partir de una aplicación lineal entre sus respectivos espacios lineales de forma natural. Intentémoslo y veamos qué dificultades se nos presentan.
 
-Sea $\widehat{h}:\widehat{X}\to\widehat{Y}$ una aplicación lineal arbitraria. Lo deseable sería definir la aplicación proyectiva asociada a $\widehat{h}$ como aquella que, a cadaa rayo le asigna el rayo engendrado por la imagen de uno de sus representantes. Visto formalmente, si $x=\class{u}$:
+Sea $\widehat{h}:\widehat{X}\to\widehat{Y}$ una aplicación lineal arbitraria. Lo deseable sería definir la aplicación proyectiva asociada a $\widehat{h}$ como aquella que, a cada rayo le asigna el rayo engendrado por la imagen de uno de sus representantes. Visto formalmente, si $x=\class{u}$:
 \[\begin{array}{c}
 X\stackrel{h}{\to}Y\\
 x\mapsto\class{\widehat{h}(u)}
@@ -26,7 +26,7 @@ x\mapsto\class{\widehat{h}(u)}
 Antes de hacer algunas aclaraciones adicionales acerca de este primer problema que se nos ha presentado, demos una pequeña definición (por comodidad tipográfica).
 \begin{defi}[Centro]
 	\label{C4_def_centro}
-	Se denomina \ti{centro} de una aplicación $\widehat{h}$ entre dos espacios lineales $\widehat{X}$ e $\widehat{Y}$ a la variedad proyectiva:
+	Se denomina \ti{centro} de una aplicación $h$, dada la aplicación lineal asociada $\widehat{h}$ entre dos espacios lineales $\widehat{X}$ e $\widehat{Y}$, a la variedad proyectiva:
 	\[\mc{Z}:\equals{not.}\proy\left(\ker\left(\widehat{h}\right)\right)\]
 \end{defi}
 Tras este breve inciso sobre la notación, veamos que, en efecto, hemos resuelto el problema que se nos planteaba, es decir, hemos eliminado del dominio todos los rayos que no tenían imagen definida. Si hubiera algún rayo con imagen no definida, alguno de sus representantes debería pertenecer al núcleo de $\widehat{h}$ (y por tanto todos). Pero esto no es posible ya que el rayo engendrado por este representante estaría en el centro de $h$.
@@ -56,7 +56,7 @@ Un resultado deseable, aunque para nada inmediato, es el de que podamos clasific
 		\end{array}\]
 		Para que esto pueda suceder es condición indispensable que ambas aplicaciones tengan el mismo kernel:
 		\[\mc{Z}=\proy(\ker(\widehat{h}))=\proy(\ker(\widehat{g}))\sii \ker(\widehat{h})=\ker(\widehat{g})\]
-		Por ende nuestro objetivo es demostrar que dicho $\lambda_u$ es el mismo para todos los vectores.
+		Por ende nuestro objetivo es demostrar que dicho $\lambda_u$ (\textcolor{red}{cual? si no ha sido nombrado hasta ahora}) es el mismo para todos los vectores.
 		
 		Distingamos dos casos (para no talar árboles de más echaremos las cuentas rápido).
 		\begin{itemize}
@@ -208,7 +208,7 @@ Probemos ahora que las proyecciones cónicas son aplicaciones proyectivas. Y que
 	\widehat{X}=\widehat{Z}\oplus\widehat{Y}\stackrel{\widehat{h}}{\to}\widehat{Y}\\
 	u=v+w\mapsto w
 	\end{array}\]
-	Siendo $v\in \widehat{Z}$ y $w\in \widehat{Y}$, es decir, la descomposición de $x$ en suma de vectores de $\widehat{Z}$ y $\widehat{Y}$.
+	Siendo $v\in \widehat{Z}$ y $w\in \widehat{Y}$, es decir, la descomposición de $x$ en suma de vectores de $\widehat{Z}$ e $\widehat{Y}$.
 \end{prop}
 \begin{proof}
 	Comprobar que $\widehat{h}$ es una aplicación lineal con núcleo $\widehat{Z}$ es inmediato y se deja al lector. Hecho esto, suponiendo que $x=\class{u}$, basta ver que $h(x)=\class{\widehat{h}(u)}$ para cualquier $x\in X$.

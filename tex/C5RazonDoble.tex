@@ -1,5 +1,5 @@
 \chapter{Razón Doble}
-El objetivo de este capítulo es ver que, dadas dos rectas proyectivas $\proy(E)$ y $\proy(E')$, con $\dim(E)=\dim(E')=2$,  existe una única homografía que transforma cuatro puntos distintos cualesquiera de $\proy(E)$ en otros cuatro puntos distintos de $\proy(E')$. Para ello iremos construyendo una serie de definiciones y proposiciones a partir de ejemplos y observaciones.
+El objetivo de este capítulo es ver que, dadas dos rectas proyectivas $\proy(E)$ y $\proy(E')$, es decir con $\dim(E)=\dim(E')=2$,  existe una homografía que transforma cuatro puntos distintos cualesquiera de $\proy(E)$ en otros cuatro puntos distintos de $\proy(E')$. Esto nos llevará a la definición de razón doble y a estudiar sus características y propiedades.
 
 \section{Definición}
 Empecemos tratando un caso más sencillo, tres puntos. Es fácil demostrar haciendo uso del álgebra lineal, como haremos a continuación, que, dadas dos rectas proyectivas, existe una única homografía que transforma tres puntos distintos cualesquiera en otros tres puntos distintos.
@@ -7,3 +7,150 @@ Empecemos tratando un caso más sencillo, tres puntos. Es fácil demostrar hacie
 \begin{prop}
 	Dadas dos rectas proyectivas, $\proy(E)$ y $\proy(E')$, y dadas dos ternas diferentes siempre existe una única homografía que transforma la una en la otra.
 \end{prop}
+\begin{proof}
+	Sean $\{p_0,p_1,p_2\}$ tres puntos distintos de $\proy(E)$. Al ser diferentes podemos tomar dicha terna como referencia proyectiva $\mf{R}$ de $\proy(E)$. Esto nos proporcionará una base de $E$, la correspondiente base asociada $\mc{B}$ a la referencia $\mf{R}$. Sea la terna de puntos distintos $\{p'_0,p'_1,p'_2\}$ de la recta proyectiva $\proy(E')$, podemos hacer lo mismo. Con ello obtenemos una base $\mc{B'}$ de $E'$. 
+	
+	Existe un único isomorfismo 
+	\[\widehat{h}:E\rightarrow E'\]
+	que trasforma $\mc{B}$ en $\mc{B'}$. La aplicación proyectiva asociada a esta aplicación lineal es una homografía que transforma $p_i$ en $p'_i$, para $i=0,1,2$. Además es única al serlo $\widehat{h}$.
+\end{proof}
+
+\begin{obs}
+	La demostración de la proposición anterior nos permite deducir que dadas dos referencias proyectivas $\mf{R}$ y $\mf{R'}$ de dos rectas proyectivas, existe una única homografía que transforma $\mf{R}$ en $\mf{R'}$.
+\end{obs}
+Veamos un ejemplo. Para ello recordemos primero que una homografía de la recta proyectiva en si misma, tomando la misma referencia,  puede definirse a través de coordenadas no homogéneas como
+\begin{equation}
+	\label{C5_eq_homografia_nohom}
+	\frac{x'}{y'}=\theta'=\frac{a\frac{x}{y}+b}{c\frac{x}{y}+d}=\frac{a\theta+b}{c\theta +d}\tq ad-bc\not=0
+\end{equation}
+\begin{exa}
+	Encontrar la homografía 
+	\[h:\proy^1\rightarrow \proy^1\] 
+	que trasforma los puntos $\{(0:1),(1:0),(2:1)\}$ en los puntos $\{(1:1),(-1:1),(0:1)\}$.\\
+	
+	Podemos resolver este ejercicio de varias formas. La primera consistiría en plantear las ecuaciones con la matriz asociada
+	\begin{equation*}
+		\left( \begin{array}{cc}
+			a&b\\ c&d
+		\end{array}\right) 
+		\left( \begin{array}{c}
+			x\\ y
+		\end{array}\right)=\rho
+		\left( \begin{array}{c}
+		x'\\ y'
+	\end{array}\right)
+	\end{equation*}
+	y, sustituyendo los valores de los puntos dados, resolver el sistema de ecuaciones, cuyas incógnitas son $a,b,c,d$ y $\rho$:
+	\begin{equation*}
+		\left( \begin{array}{cc}
+			a&b\\ c&d
+		\end{array}\right) 
+		\left( \begin{array}{c}
+			0\\ 1
+		\end{array}\right)=\rho
+		\left( \begin{array}{c}
+			1\\ 1
+		\end{array}\right)
+	\end{equation*}
+	\begin{equation*}
+		\left( \begin{array}{cc}
+			a&b\\ c&d
+		\end{array}\right) 
+		\left( \begin{array}{c}
+			1\\ 0
+		\end{array}\right)=\rho
+		\left( \begin{array}{c}
+			-1\\ 1
+		\end{array}\right)
+	\end{equation*}
+	\begin{equation*}
+		\left( \begin{array}{cc}
+			a&b\\ c&d
+		\end{array}\right) 
+		\left( \begin{array}{c}
+			2\\ 1
+		\end{array}\right)=\rho
+		\left( \begin{array}{c}
+			0\\ 1
+		\end{array}\right)
+	\end{equation*}
+	Sin embargo, esto puede resultar muy pesado. Si utilizamos la definición de homografía dada por la ecuación~\eqref{C5_eq_homografia_nohom}, el cáculo resulta mucho más llevadero. Así, para determinar la homografía basta hallar la expresión en coordenadas no homogéneas que la define, que se obtiene sustituyendo los valores proporcionados en la ecuación~\eqref{C5_eq_homografia_nohom} y resolviendo el sistema. Observamos que el punto $(1:0)$ se transforma en $\theta=\infty$. Para resolver esta indeterminación, se multiplica la fracción arriba y abajo por $y$
+	\begin{equation}
+		\theta'=\frac{a\frac{x}{y}+b}{c\frac{x}{y}+d}=\frac{ax+by}{cx +dy}\tq ad-bc\not=0
+	\end{equation}
+	Así, las ecuaciones resultantes son
+	\begin{equation*}
+		\begin{split}
+			1&=\frac{a0+b1}{c0 +d1}=\frac{b}{d}\ra b=d\\
+			-1&=\frac{a1+b0}{c1 +d0}=\frac{a}{c}\ra a=-c\\
+			0&=\frac{a2+b1}{c2 +d1}\ra 2a+b=0
+		\end{split}
+	\end{equation*}
+	Por lo que, tomando $a=1$, la homografía pedida viene dada por
+	\begin{equation*}
+		\theta'=\frac{2-\theta}{2+\theta}
+	\end{equation*}
+	Nótese que no es necesario tener tanto cuidado con $\theta=\infty$. Si tenemos en cuenta que $\infty+b=\infty$ y que $\frac{\infty}{\infty}=1$, el resultado es el mismo
+	\begin{equation*}
+		\theta'=-1=\frac{a\theta+b}{c\theta +d}=\frac{a\infty+b}{c\infty +d}=\frac{a\infty}{c\infty}=\frac{a}{c}\ra a=-c
+	\end{equation*}
+	Por tanto, a partir de ahora, daremos por buenos estos cálculos con $\infty$ en principio sin sentido.
+\end{exa}
+Encontrar una homografía de una recta proyectiva que lleve cuatro puntos distintos cualesquiera en otros cuatro no es tan sencillo. Para poder caracterizar esta propiedad empezaremos estudiando las características de una homografía que la cumpla. Por facilitar la notación, hagamos antes una definición.
+\begin{defi}[Razón doble]
+	Sean cuatro puntos diferentes de una recta proyectiva $\{p_1,p_2,p_3,p_4\}$, se define su \tb{razón doble} como el cociente
+	\begin{equation}
+		[p_1,p_2,p_3,p_4]=[\theta_1,\theta_2,\theta_3,\theta_4]=\frac{\theta_3-\theta_1}{\theta_3-\theta_2}:\frac{\theta_4-\theta_1}{\theta_4-\theta_2}
+	\end{equation}
+	donde $\theta_i$ es el parámetro no homogéneo de $p_i$ respecto a una referencia $\mf{R}$ de la recta proyectiva.
+\end{defi}
+
+Comencemos con una caso particular de una proposición que veremos más adelante.
+\begin{lem}
+	Sean $\{p_1,p_2,p_3,p_4\}$ y $\{p'_1,p'_2,p'_3,p'_4\}$ ocho puntos distintos de la recta proyectiva $\proy(E)$ respecto a la referencia $\mf{R}$. Sea una homografía
+	\[h:\proy(E)\rightarrow \proy(E)\]
+	que cumple $h(\theta_i)=\theta'_i$ para todo $i\in\{1,2,3,4\}$. Entonces
+	\begin{equation}
+		[\theta_1,\theta_2,\theta_3,\theta_4]=[\theta'_1,\theta'_2,\theta'_3,\theta'_4]
+	\end{equation}
+\end{lem}
+\begin{proof}
+	Dado que $h$ es una homografía de una recta proyectiva en sí misma, y hemos tomado la misma referencia, podemos escribir
+	\begin{equation*}
+		\theta'=\frac{a\theta+b}{c\theta +d}\tq ad-bc\not=0
+	\end{equation*}
+	para determinados $a,b,c$ y $d$. Así
+	\begin{equation*}
+		[\theta'_1,\theta'_2,\theta'_3,\theta'_4]=\frac{\theta'_3-\theta'_1}{\theta'_3-\theta'_2}:\frac{\theta'_4-\theta'_1}{\theta'_4-\theta'_2}=\frac{\frac{a\theta_3+b}{c\theta_3 +d}-\frac{a\theta_1+b}{c\theta_1 +d}}{\frac{a\theta_3+b}{c\theta_3 +d}-\frac{a\theta_2+b}{c\theta_2 +d}}:\frac{\frac{a\theta_4+b}{c\theta_4 +d}-\frac{a\theta_1+b}{c\theta_1 +d}}{\frac{a\theta_4+b}{c\theta_4 +d}-\frac{a\theta_2+b}{c\theta_2+d}}
+	\end{equation*}
+	Operando se obtiene
+	\begin{equation*}
+		[\theta'_1,\theta'_2,\theta'_3,\theta'_4]=\frac{\frac{(\theta_3-\theta_1)(ad-bc)}{(c\theta_3+d)(c\theta_1+d)}}{\frac{(\theta_3-\theta_2)(ad-bc)}{(c\theta_3+d)(c\theta_2+d)}}:\frac{\frac{(\theta_4-\theta_1)(ad-bc)}{(c\theta_4+d)(c\theta_1+d)}}{\frac{(\theta_4-\theta_2)(ad-bc)}{(c\theta_4+d)(c\theta_2+d)}}=\frac{\theta_3-\theta_1}{\theta_3-\theta_2}:\frac{\theta_4-\theta_1}{\theta_4-\theta_2}=[\theta_1,\theta_2,\theta_3,\theta_4]
+	\end{equation*}
+\end{proof}
+\begin{cor}
+	Dada una homografía de la recta en sí misma y dados cuatro puntos distintos cualesquiera $\{p_1,p_2,p_3,p_4\}$, se cumple
+	\begin{equation}
+	[p_1,p_2,p_3,p_4]=[h(p_1),h(p_2),h(p_3),h(p_4)]
+	\end{equation} 
+\end{cor}
+\begin{proof}
+	Dado que $\{p_1,p_2,p_3,p_4\}$ son distintos y una homografía es una aplicación proyectiva inyectiva, los puntos $\{h(p_1),h(p_2),h(p_3),h(p_4)\}$ son distintos.
+	
+	Por otro lado, denotando $p_i=(x_i:y_i)$ y $h(p_i)=(x'_i:y'_i)$ y teniendo en cuenta que toda homografía se puede describir como 
+	\begin{equation*}
+		\theta'=\frac{a\theta+b}{c\theta +d}\tq ad-bc\not=0
+	\end{equation*}
+	para determinados $a,b,c$ y $d$, donde $\theta=\frac{x_i}{y_i}$ y $\theta'=\frac{x'_i}{y'_i}$, es obvio que $h(\theta_i)=h(\frac{x_i}{y_i})=\frac{x'_i}{y'_i}=\theta'_i$. Del lema anterior se deduce que
+	\begin{equation*}
+		[p_1,p_2,p_3,p_4]=[h(p_1),h(p_2),h(p_3),h(p_4)]
+	\end{equation*}
+\end{proof}
+Hasta ahora hemos establecido varias relaciones entre las homografías y la razón doble. Aquella homografía de una recta proyectiva en sí misma que transforma cuatro puntos distintos cualesquiera en otros cuatro, conserva la razón doble. Además, hemos visto que todas las homografías de una recta proyectiva en sí misma preservan la razón doble. El recíproco de ambos también es cierto. Sin embargo, en vez de demostrarlo para este caso particular, generalicemos lo resultados a homografías de una recta proyectiva $\proy(E)$ a otra recta $\proy(E')$.
+
+\section{Propiedades}
+Empezar con lo de que la razon doble se puede escribir respecto a cualquier referencia y con ello $f(d)=[]$
+
+Generalizar lema y corolario de antes
+
+\section{Simetrías de la razón doble}

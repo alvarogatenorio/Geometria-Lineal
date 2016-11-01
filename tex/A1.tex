@@ -274,18 +274,18 @@ Se presenta a continuación un resultado importante en el estudio de la dualidad
 	Sumamos la primera ecuación a la segunda y reagrupamos términos:
 	\[2\alpha_1+2a_2'\alpha_2+\dots+2a_r'\alpha_r+\alpha_{r+1}(a_{r+1}'+b_{r+1}')+\dots+\alpha_n(a_n'+b_n')=\xi+0=\xi\]
 	Con una notación más compacta:
-	\[\alpha_1+2\sum_{i=2}^{r}a_i'\alpha_i+\sum_{j=r+1}^{n}(a_j'+b_j')\alpha_j=\xi\]
+	\[2\alpha_1+2\sum_{i=2}^{r}a_i'\alpha_i+\sum_{j=r+1}^{n}(a_j'+b_j')\alpha_j=\xi\]
 	Tratemos de encontrar una expresión para $\xi$, partiendo de que:
-	\[A\equiv \alpha_1+2\sum_{i=2}^{r}a_i'\alpha_i+2\sum_{j=r+1}^{n}a_j'\alpha_j=0\]
+	\[ A\equiv2\alpha_1+2\sum_{i=2}^{r}a_i'\alpha_i+2\sum_{j=r+1}^{n}a_j'\alpha_j=0\]
 	Pasando el segundo término al otro lado:
-	\[\alpha_1+2\sum_{i=2}^{r}a_i'\alpha_i=-2\sum_{j=r+1}^{n}a_j'\alpha_j\]
+	\[2\alpha_1+2\sum_{i=2}^{r}a_i'\alpha_i=-2\sum_{j=r+1}^{n}a_j'\alpha_j\]
 	Sumando $\sum_{j=r+1}^{n}(a_j'+b_j')\alpha_i$ a ambos lados:
-	\[\alpha_1+2\sum_{i=2}^{r}a_i'\alpha_i+\sum_{j=r+1}^{n}(a_j'+b_j')\alpha_j=-2\sum_{j=r+1}^{n}a_j'\alpha_j+\sum_{j=r+1}^{n}(a_j'+b_j')\alpha_j=\xi\]
+	\[2\alpha_1+2\sum_{i=2}^{r}a_i'\alpha_i+\sum_{j=r+1}^{n}(a_j'+b_j')\alpha_j=-2\sum_{j=r+1}^{n}a_j'\alpha_j+\sum_{j=r+1}^{n}(a_j'+b_j')\alpha_j=\xi\]
 	Luego por fin, reagrupando:
 	\[\xi=\sum_{j=r+1}^{n}\alpha_{j}(b_{j}'-a_{j}')\]
 	Recapitulemos. Teníamos que:
 	\[\alpha_1+b_2'\alpha_2+\dots+b_n'\alpha_n=\xi\]
 	Si $\xi=0$ tendríamos que:
 	\begin{multline*}B\equiv\alpha_1+b_2'\alpha_2+\dots+b_n'\alpha_n\stackrel{\xi=0}{=}\alpha_1+b_2'\alpha_2+\dots+b_n'\alpha_n-\xi=\\ =\alpha_1+\sum_{i=2}^{r}a_i'\alpha_i+\sum_{j=r+1}^{n}b_j'\alpha_j-\sum_{j=r+1}^{n}\alpha_{j}(b_{j}'-a_{j}')=\alpha_1+\sum_{k=1}^{n}a_k'\alpha_k=0\end{multline*}
-	Pasando a matrices asociadas obtenemos que ambas formas de Hermite son iguales, contradiciendo nuestra hipótesis inicial.
+	Pasando a matrices asociadas, obtenemos que ambas formas de Hermite son iguales, contradiciendo nuestra hipótesis inicial.
 \end{proof}

@@ -7,39 +7,68 @@ Es vital entender la relación que existe entre el espacio dual y el espacio pro
 Si su conocimiento sobre espacio dual anda escaso, y desconoce alguno de los resultados aquí mencionados, se recomienda al lector echar un vistazo al apéndice~\ref{A}.
 
 \section{Dualidad en espacios vectoriales}
-Definíamos el espacio vectorial dual $E^*$ como el conjunto de todas las formas lineales que nacen en $E$ y mueren en $\K$
-\begin{equation}
-E^*=\{\alpha:E\rightarrow \K\tq \alpha \text{ es lineal }\}=Hom_{\K}(E,\K)
-\end{equation}
+\label{C2_dualidadVectoriales}
+Sea $E$ un espacio vectorial de dimensión finita. Llamábamos \ti{espacio dual} asociado a $E$ al conjunto de todas las aplicaciones lineales (homomorfismos de espacios vectoriales) que nacen en $E$ y mueren en $\K$. A estas aplicaciones lineales las denominamos \ti{formas lineales} o $1$--\ti{formas}.
 
+Al espacio dual asociado a $E$ lo denotábamos por $E^*$. Expresado con una notación conjuntista:
+\begin{equation}
+	\label{C2_eq_defDual}
+	E^*:\equals{def.}\{\alpha:E\rightarrow \K\tq \alpha \text{ es lineal }\}=\mathrm{Hom}(E,\K)
+\end{equation}
+Recordamos sin detenernos que el la palabra \ti{espacio} no le queda grande al conjunto $E^*$ ya que es un espacio vectorial, siendo su dimensión la dimensión de $E$.
 \subsection{Formas Lineales e Hiperplanos}
-Antes de comenzar, fijemos una base $\mc{B}$ de $E$. Asimismo fijamos la base $\{1\}$ de $\K$. Es claro que una forma lineal $h\in E^*$, tiene por matriz asociada cierta matriz $1\times n$, a la que denotaremos símplemente $M$.
+En esta sección iniciaremos la construcción del puente entre un espacio vectorial y su dual, tratando de ``unir'' las variedades más notables de un espacio vectorial, los hiperplanos, con otras variedades de su dual.
+ 
+Antes de comenzar, fijemos una base $\mc{B}$ de $E$. Asimismo fijamos la base $\{1\}$ de $\K$.
+
+Es claro que una forma lineal $h\in E^*$, tiene por matriz asociada cierta matriz $1\times n$ (respecto de las base $\mc{B}$ y $\{1\}$), a esta matriz la  denotaremos símplemente $M$.
 
 Como ya sabemos, para cada vector $u\in E$, el valor $h(u)$ viene dado por:
-\[h(u)=MX\]
-Siendo $X$ la matriz columna compuesta por las coordenadas de $u$ en la base $\mc{B}$. Es decir, la expresión anterior no es más que el producto de una matriz fila por una matriz columna, desarrollémoslo:
-\[h(u)=\begin{pmatrix}
-h(e_1) & \cdots & h(e_n)
-\end{pmatrix}\begin{pmatrix}
-u_1\\
-\vdots\\
-u_n
-\end{pmatrix}=h(e_1)u_1+\dots+h(e_n)u_n\]
-Como sabemos, el kernel, o núcleo, de una aplicación lineal cualquiera, es un subespacio vectorial del espacio de donde nace.
+\begin{equation}
+	\label{C2_eq_expMatricialFormaLineal}
+	h(u)=MX	
+\end{equation}
+Siendo $X$ la matriz columna compuesta por las coordenadas de $u$ en la base $\mc{B}$. Es decir, la expresión anterior \eqref{C2_eq_expMatricialFormaLineal} no es más que el producto de una matriz fila por una matriz columna, desarrollémoslo:
+\begin{equation}
+	\label{C2_eq_expMatricialFormaLinealExpandida}
+	h(u)=\begin{pmatrix}
+	h(e_1) & \cdots & h(e_n)
+	\end{pmatrix}\begin{pmatrix}
+	u_1\\
+	\vdots\\
+	u_n
+	\end{pmatrix}=h(e_1)u_1+\dots+h(e_n)u_n
+\end{equation}
+Como sabemos (es una comprobación inmediata), el kernel, o núcleo, de una aplicación lineal cualquiera, es un subespacio vectorial del espacio de donde nace.
 
-Refrescando brevemente la fórmula de Grassmann para aplicaciones lineales:
-\[\dim(\ker(h))+\dim(\mathrm{im}(h))=\dim(E)\]
+Refrescamos asimismo la fórmula de las dimensiones para aplicaciones lineales, que nos será de utilidad en el futuro inmediato:
+\begin{equation}
+	\label{C2_eq_grassmannDimensiones}
+	\dim(\ker(h))+\dim(\mathrm{im}(h))=\dim(E)
+\end{equation}
+Nótese que en el contexto de las formas lineales, gracias a la fórmula de las dimensiones \eqref{C2_eq_grassmannDimensiones}, los posibles valores de $\dim(\mathrm{im}(h))$ (a veces denominado \ti{rango} de $h$) son $0$ y $1$. 
 
-A no ser que $h$ sea la aplicación idénticamente nula, se tiene que $\dim(\mathrm{im}(h))=1$, y, por ende, la dimensión del kernel es $n-1$. Equivalentemente, $\ker(h)$ es un hiperplano de $E$. Y, por ende, tendrá ciertas ecuaciones cartesianas, en concreto una ecuación cartesiana, por ser $1=\mathrm{codim}(\ker(h))$.
+En el primer caso, estaríamos ante la aplicación lineal idénticamente nula. En caso contrario, la dimensión del kernel de $h$ (a veces denominada \ti{nulidad} de $h$) sería $n-1$. Es decir, el núcleo de la forma lineal $h$ es un hiperplano de $E$.
 
-Pero esta ecuación cartesiana salta a la vista. No es otra que:
-\[h(e_1)u_1+\dots+h(e_n)u_n=0\]
+Esto significa que $\ker(h)$ podrá ser representado mediante una única \ti{ecuación cartesiana}, ya que $\mathrm{codim}(\ker(h))=1$.
+
+La ecuación cartesiana del núcleo de una forma lineal salta a la vista, ya que se extrae de su propia definición. No es otra que:
+\begin{equation}
+	\label{C2_eq_ecuacionCartesianaKer}
+	h(e_1)u_1+\dots+h(e_n)u_n=0
+\end{equation}
 
 Esto es evidente ya que esa es la definición del núcleo de $h$. El conjunto de aquellos vectores que, pasados por $h$, se anulan.
 
-Veamos ahora que, todo hiperplano $H$ de $E$, está asociado a alguna forma lineal $h$ de $E^*$. El recíproco ya lo hemos visto, ya que el núcleo de toda forma lineal no nula es un hiperplano. En términos de biyecciones:
+Acabamos de probar que el núcleo de toda forma lineal no nula es un hiperplano de $E$. Es decir, hemos construido un puente entre un espacio vectorial y su dual, identificando cada elemento del dual con un hiperplano de espacio original.
+
+Sin embargo es un puente un tanto quebradizo, ya que solo podemos cruzarlo en una dirección (del dual al original), y, además, es posible que varios elementos del dual queden asociados al mismo hiperplano.
+
+Para afianzar mejor este puente, veamos en primer lugar que podemos cruzarlo en el otro sentido, es decir, que todo hiperplano está asociado ``vía núcleos'' a un elemento del dual.
+
+En términos de aplicaciones:
 \begin{lem}[Pseudolema de la Correspondencia]
-	\label{C2_lem_correspondencia}
+	\label{C2_lem_pseudocorrespondencia}
 	La aplicación:
 	\[\begin{array}{c}
 	E^*\to\mc{H}\\
@@ -50,28 +79,57 @@ Veamos ahora que, todo hiperplano $H$ de $E$, está asociado a alguna forma line
 	$\mc{H}$ denota el conjunto de los hiperplanos de $E$.
 \end{lem}
 \begin{proof}
-	Dado un hiperplano $H$, basta con deducir una ecuación cartesiana suya. Que será de la forma $\alpha_1x_1+\dots+\alpha_nx_n=0$. A partir de aquí, basta con construir la forma lineal cuya matriz asociada es:
+	Dado un hiperplano $H$, obtenemos una ecuación cartesiana que lo describa:
+	\[\alpha_1x_1+\dots+\alpha_nx_n=0\]
+	Donde los $\alpha_i$ representan escalares y los $x_i$ componentes de un vector respecto de la base $\mc{B}$.
+		
+	Sabiendo por \eqref{C2_eq_ecuacionCartesianaKer} que la ecuación cartesiana del núcleo de una forma lineal es de la forma:
+	\[h(e_1)x_1+\dots+h(e_n)x_n=0\]
+	Podemos construir la forma lineal asociada al hiperplano $H$ de forma explícita. Basta definir $h$ como la forma lineal que manda el $i$--ésimo vector de la base $\mc{B}$ al escalar $\alpha_i$. Es decir, la forma lineal con matriz asociada:
 	\[\begin{pmatrix}
 	\alpha_1 & \cdots & \alpha_n
 	\end{pmatrix}\]
-	En efecto, el kernel de dicha aplicación viene dado por una ecuación lineal homogénea que coincide con la ecuación cartesiana de $H$.
 \end{proof}
 
-Sin embargo, la aplicación del lema \ref{C2_lem_correspondencia} no es biyectiva. Dado un hiperplano $H$ existen infinitud de formas lineales cuyo núcleo es $H$. Por ende, ahora nos interesa encontrar relaciones entre las formas lineales con idéntico núcleo.
+Con el lema \ref{C2_lem_pseudocorrespondencia} hemos avanzado un paso más en la construcción del puente entre un espacio y su dual, pudiendo ir del uno al otro y del otro al uno. Sin embargo, todavía queda un problema pendiente. El elemento del dual asociado a un hiperplano no es único (ni mucho menos).
+
+Dado un hiperplano $H$ existen infinitud de formas lineales cuyo núcleo es $H$. Esto es debido a que toda ecuación lineal equivalente a la ecuación cartesiana del hiperplano es también una ecuación cartesiana del hiperplano, a partir de la cual se construye (lema \ref{C2_lem_pseudocorrespondencia}) una forma lineal asociada a $H$ distinta de la primera.
+
+Por ende, ahora nos interesa encontrar relaciones entre las formas lineales con idéntico núcleo, para así agruparlas y conseguir una biyección.
 
 \begin{lem}[Lema de la Correspondencia]
+	\label{C2_lem_correspondencia}
 	Todas las formas lineales asociadas a un mismo hiperplano $H$ son múltiplos entre si. En términos de aplicaciones:
 	\[\begin{array}{c}
 	\proy(E^*)\to\mc{H}\\
 	\class{h}\mapsto \ker(h)
 	\end{array}
 	\]
-	es biyectiva. Es decir, los hiperplanos de $E$ están en biyección con las rectas vectoriales de $E^*$.
+	es biyectiva. Dicho de otra forma, los hiperplanos de un espacio vectorial se indentifican con las rectas de su dual.
 \end{lem}
 \begin{proof}
-	Sea un hiperplano $H$, podemos escoger una ecuación cartesiana suya y fabricar, como hicimos en el lema \ref{C2_lem_correspondencia} una forma lineal cuyo núcleo tenga la misma ecuación cartesiana que $H$. Ahora, si cogemos una ecuación cartesiana de $H$ equivalente a la primera que escogimos, es decir, con el mismo conjunto de soluciones, o lo que es lo mismo, una ecuación que sea múltiplo de la primera, fabricaremos una forma lineal que será múltiplo de la primera.
+	Sean dos ecuaciones cartesianas de $H$:
+	\begin{gather}
+		H\equiv \alpha_1x_1+\dots+\alpha_nx_n=0\\
+		H\equiv \beta_1x_1+\dots+\beta_nx_n=0
+	\end{gather}
+	Estas ecuaciones serán equivalentes, es decir, tendrán el mismo conjunto de soluciones (el hiperplano $H$). Por ende (referencia aquí) serán múltiplos entre sí, es decir:
+	\begin{equation}
+		\beta_i = \lambda\alpha_i\ \forall i\in\{1,\dots,n\}
+	\end{equation}
+	Aplicando el método de construcción (lema \ref{C2_lem_pseudocorrespondencia}) de formas lineales asociadas a $H$ respecto de ambas ecuaciones cartesianas se obtienen:
+	\begin{gather}
+		f\equiv\begin{pmatrix}
+			\alpha_1 & \cdots & \alpha_n
+		\end{pmatrix}\\
+		g\equiv\lambda\begin{pmatrix}
+			\alpha_1 & \cdots & \alpha_n
+		\end{pmatrix}
+	\end{gather}
+	Es decir $f=\lambda g$, o lo que es lo mismo $g\in\class{f}$. Esto prueba la inyectividad que queríamos, ya que la sobreyectividad se probó en el lema \ref{C2_lem_pseudocorrespondencia}.
 \end{proof}
 
+Este último resultado pone fin a la construcción del puente entre un espacio y su dual. Recapitulando, un hiperplano queda asociado, ``vía núcleos'' a una única recta su dual. Asimismo, cada recta del dual tiene asociada un hiperplano del espacio ``primal''.
 \subsection{Dualidad Canónica}
 En esta sección tratamos de generalizar lo dicho en el caso anterior. Es decir, trataremos de identifiar variedades lineales arbitrarias con variedades lineales del dual correspondiente.
 

@@ -259,14 +259,14 @@ Se presenta a continuación un resultado importante en el estudio de la dualidad
 		\end{pmatrix}
 	\end{gather*}
 	
-	Estas matrices inducen sendas ecuaciones lineales equivalentes a la primera y segunda ecuación respectivamente. Si conseguimos probar que estas no son equivalentes, habremos probado, por transitividad, que las otras tampoco.
+	Estas matrices inducen sendas ecuaciones lineales equivalentes a la primera y segunda ecuación respectivamente.
 	
 	Como $H_A^f\not=H_B^f$ existe al menos un $i\in\{2,\dots,n\}$ tal que $a_i'\not=b_i'$. Supongamos sin pérdida de generalidad (pues siempre podemos renombrar y recolocar incógnitas) que:
 	\begin{gather*}
 		a_i'=b_i'\ \forall i\in\{2,\dots,r\}\\
 		a_j'\not=b_j'\ \forall j\in\{r+1,\dots,n\}
 	\end{gather*}
-	Sea $(\alpha_1,\dots,\alpha_n)$ una solución no trivial la primera ecuación. Veámos que, en caso de ser solución de la segunda, ambas ecuaciones serían múltiplos la una de la otra (llegando así a un absurdo).
+	Sea $(\alpha_1,\dots,\alpha_n)$ una solución no trivial con las $n-r$ últimas componentes no nulas (esto siempre puede hacerse al depender la solución de la ecuación de $n-1$ parámetros) para la primera ecuación. Veámos que, en caso de ser solución de la segunda, ambas ecuaciones serían múltiplos la una de la otra (llegando así a un absurdo).
 	
 	Por el momento tenemos:
 	\[B\equiv\alpha_1+b_2'\alpha_2+\dots+b_n'\alpha_n=\xi\]
@@ -286,6 +286,6 @@ Se presenta a continuación un resultado importante en el estudio de la dualidad
 	Recapitulemos. Teníamos que:
 	\[\alpha_1+b_2'\alpha_2+\dots+b_n'\alpha_n=\xi\]
 	Si $\xi=0$ tendríamos que:
-	\begin{multline*}B\equiv\alpha_1+b_2'\alpha_2+\dots+b_n'\alpha_n\stackrel{\xi=0}{=}\alpha_1+b_2'\alpha_2+\dots+b_n'\alpha_n-\xi=\\ =\alpha_1+\sum_{i=2}^{r}a_i'\alpha_i+\sum_{j=r+1}^{n}b_j'\alpha_j-\sum_{j=r+1}^{n}\alpha_{j}(b_{j}'-a_{j}')=\alpha_1+\sum_{k=1}^{n}a_k'\alpha_k=0\end{multline*}
-	Pasando a matrices asociadas, obtenemos que ambas formas de Hermite son iguales, contradiciendo nuestra hipótesis inicial.
+	\begin{multline*}B\equiv\alpha_1+b_2'\alpha_2+\dots+b_n'\alpha_n\stackrel{\xi=0}{=}\alpha_1+b_2'\alpha_2+\dots+b_n'\alpha_n-\xi=\\ =\alpha_1+\sum_{i=2}^{r}a_i'\alpha_i+\sum_{j=r+1}^{n}b_j'\alpha_j-\sum_{j=r+1}^{n}\alpha_{j}(b_{j}'-a_{j}')=\alpha_1+\sum_{k=2}^{n}a_k'\alpha_k=0\end{multline*}
+	Luego $b_k'=a_k'\ \forall j\in\{r+1,\dots,n\}$, lo cual contradice que las formas normales de Hermite sean distintas.
 \end{proof}

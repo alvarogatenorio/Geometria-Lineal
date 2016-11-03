@@ -288,25 +288,76 @@ Dada la razón doble $\{\theta_1,\theta_2;\theta_3,\theta_4\}$, se tiene que:
 Esto nos da las 24 reordenaciones posibles. Resulta entonces que si $\{\theta_1,\theta_2;\theta_3,\theta_4\}=\lambda$, los valores que aparecen al efectuar todas las permutaciones son 
 \[\rho,1-\lambda,\frac{1}{\lambda},1-\frac{1}{\lambda},\frac{1}{1-\lambda},\frac{\lambda}{1-\lambda}\]
 \begin{defi}[Cuaterna armónica]
-	Diremos que $p_1,p_2,p_3,p_4$ es una \ti{cuaterna armónica} si su razón doble es $-1$.
+	Diremos que $p_1,p_2,p_3,p_4$ es una \ti{cuaterna armónica}, o que el par $p_1,p_2$ separa armónicamente al par $p_3,p_4$, si su razón doble es $-1$.
 	\begin{equation}
 		\{p_1,p_2;p_3,p_4\}=-1
 	\end{equation}
 \end{defi}
-Si cuatro puntos de una recta proyectiva son una cuaterna armónica, entonces es posible hacer la siguiente construcción geométrica, donde $r$, $s$ y $r'$ son rectas arbitrarias, por tanto también lo son los puntos $D$ y $F$.
+Si cuatro puntos de una recta proyectiva son una cuaterna armónica, entonces es posible hacer la siguiente construcción geométrica, donde $p_1p_{arbitrario}$, $p_2p_{arbitrario}$ y $p_1p_{arbitrario1}$ son rectas arbitrarias, por tanto también lo son los puntos $p_{arbitrario}$ y $p_{arbitrario1}$.
 
-IMAGEN
+\begin{figure}[]
+	\centering
+	\includegraphics[scale=.4]{Graficos/RazonDoble/razon_doble.eps}
+	\caption{Cuaterna armónica}
+	\label{C5_img_cuaterna_armonica}
+\end{figure}
 
 El recíproco también es cierto, como se muestra en la siguiente proposición.
 \begin{prop}
-	Dada la siguiente construcción geométrica, se tiene que $\{p_1,p_2;p_3,p_4\}=-1$.
+	Dada la construcción geométrica mostrada en la figura~\ref{C5_img_cuaterna_armonica}, se tiene que $\{p_1,p_2;p_3,p_4\}=-1$.
 	
-	IMAGEN
 \end{prop}
 \begin{proof}
-	PENDIENTE
+	Tomamos como referencia los puntos $p_1,p_2,p_{arbitario}$ y el punto de corte de las rectas $p_1p_{arbitrario1}$ y $p_3p_{arbitrario}$, que denotaremos $E$. Esto es posible ya que, como se observa en la figura, son proyectivamente independientes.
+	\[\mf{R}=\{p_1,p_2,p_{arbitrario};E\}\]
+	Debemos entonces expresar los puntos $p_1,p_2,p_3$ y $p_4$ respecto a esta referencia. Los primeros son sencillos, $p_1=(1:0:0)$ y $p_2=(0:1:0)$. 
+	
+	Por otro lado, $p_3$ es la intersección de las rectas $Ep_{arbitario}$ y $p_1p_2$. Estas pueden ser descritas por las ecuaciones
+	\begin{equation*}
+		Ep_{arbitrario}:=\class{\alpha(1,1,1)+\beta(0,0,1)\tq \alpha,\beta\in \R}=(1:1:1+\theta)\cup\{p_{arbitrario}\}\tq\theta\in\R
+	\end{equation*}
+	\begin{equation*}
+		p_1p_2:z=0
+	\end{equation*}
+	siendo por tanto el punto de corte 
+	\[p_3=(1:1:0)\]
+	De la misma forma podemos calcular $p_4$ como la intersección de las rectas $p_1p_2$ y $Dp_{arbitrario1}$, donde $D$ es el punto de corte de las rectas $p_1p_{arbitrario}$ y $p_2E$. Por tanto, para calcular las coordenadas de $p_4$ respecto a la referencia $\mf{R}$, primero debemos obtener las de $D$ y las de $p_{arbitrario1}$.
+	
+	Comencemos con $D$. Las rectas de las cuales es intersección pueden describirse a través de 
+	\begin{equation*}
+		p_2E:\class{\alpha(1,1,1)+\beta(0,1,0)\tq\alpha,\beta\in \R}=(1:1+\theta:1)\cup\{p_2\}\tq\theta\in\R
+	\end{equation*}
+	\begin{equation*}
+		p_1p_{arbitrario}:y=0
+	\end{equation*}
+	por lo que el punto buscado es
+	\[D=(1:0:1)\]
+	Para calcular $p_{arbitrario1}$ tenemos que las rectas correspondientes vienen dadas por
+	\begin{equation*}
+		p_1E:\class{\alpha(1,1,1)+\beta(1,0,0)\tq\alpha,\beta\in \R}=(1+\theta:1:1)\cup\{p_1\}\tq\theta\in\R
+	\end{equation*}
+	\begin{equation*}
+		p_2p_{arbitrario}:x=0
+	\end{equation*}
+	siendo el punto de corte
+	\[p_{arbitrario1}=(0:1:1)\]
+	Podemos ya calcular las coordenadas de $p_4$ como la intersección de 
+	\begin{equation*}
+		Dp_{arbitrario1}:\class{\alpha(1,0,1)+\beta(0,1,1)\tq\alpha,\beta\in \R}=(1:\theta:1+\theta)\cup\{p_{arbitrario1}\}\tq\theta\in\R
+	\end{equation*}
+	\begin{equation*}
+		p_1p_2:z=0
+	\end{equation*}
+	Con ello obtenemos que
+	\[p_4=(1:-1:0)\]
+	Una vez hecho esto basta comprobar que la razón doble de $p_1,p_2p_3$ y $p_4$ es $-1$. Para ello haremos uso de resultados del apartado de cálculo de razones dobles, ya que de momento no hemos visto como calcular la razón doble de puntos que no pertenecen a una recta proyectiva, como es el caso.
+	
+	Entonces, como veremos más adelante
+	\begin{equation}
+		\{p_1,p_2;p_3,p_4\}=\{(1:0:0),(0:1:0);(1:1:0),(1:-1:0)\}=\{\infty,0;1,-1\}=-1
+	\end{equation}
 \end{proof}
-Dado que en esta construcción las rectas $r$, $s$ y $r'$ y los puntos $D$ y $F$ son arbitrarios, elijamos los que elijamos vamos a obtener siempre el mismo punto $p_4$. 
+Dado que en esta construcción las rectas $p_1p_{arbitrario}$, $p_2p_{arbitrario}$ y $p_1p_{arbitrario1}$ y los puntos $p_{arbitrario}$ y $p_{arbitrario1}$ son arbitrarios, elijamos los que elijamos vamos a obtener siempre el mismo punto $p_4$. 
 
 El orden de la cuaterna armónica es relativamente importante ya que, aunque algunas permutaciones cambian su valor, las reordenaciones
 \begin{equation*}
@@ -314,9 +365,9 @@ El orden de la cuaterna armónica es relativamente importante ya que, aunque alg
 \end{equation*}
 siguen dando como resultado $-1$.
 
-Es importante mencionar varias cosas acerca de esta construcción. El punto $p_3$ está entre el punto $p_1$ y el punto medio entre $p_1$ y $p_2$ si y solo si el punto $p_4$ está a la izquierda de $p_1$. Por el contrario, $p_3$ está entre el punto medio y el punto $p_2$  si y solo si el punto $p_4$ está a la derecha de $p_2$. Si el punto $p_3$ no está entre $p_1$ y $p_2$, entonces lo estará $p_4$. Por último, $p_3$ está en el punto medio si y solo si $p_4$ está en el infinito. Esto significa que la recta $s'$ es paralela a la recta donde se encuentran los puntos.
+Es importante mencionar varias cosas acerca de esta construcción. El punto $p_3$ está entre el punto $p_1$ y el punto medio entre $p_1$ y $p_2$ si y solo si el punto $p_4$ está a la izquierda de $p_1$. Por el contrario, $p_3$ está entre el punto medio y el punto $p_2$  si y solo si el punto $p_4$ está a la derecha de $p_2$. Si el punto $p_3$ no está entre $p_1$ y $p_2$, entonces lo estará $p_4$. Por último, $p_3$ está en el punto medio si y solo si $p_4$ está en el infinito. Esto significa que la recta $p_4p_{arbitrario1}$ es paralela a la recta donde se encuentran los puntos.
 
-Observemos que si, al calcular la razón doble tomamos como referencia los puntos $p_1,p_2,p_3$, entonces necesariamente
+Observemos que si, al calcular la razón doble tomamos como referencia los puntos $p_1,p_2,p_3$, entonces, necesariamente, $\theta_4=-1$.
 \begin{equation*}
 	\{p_1,p_2;p_3,p_4\}=\{\infty,0,1,-1\}=-1
 \end{equation*}

@@ -37,25 +37,25 @@
 \contentsline {subsubsection}{Intersecci\IeC {\'o}n de dos rectas proyectivas}{30}{section*.4}
 \contentsline {subsection}{\numberline {3.3.2}Haz de hiperplanos}{31}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Teorema de Pappus}{31}{section.3.4}
-\contentsline {chapter}{\numberline {4}Aplicaciones Proyectivas}{35}{chapter.4}
-\contentsline {section}{\numberline {4.1}Definici\IeC {\'o}n}{35}{section.4.1}
-\contentsline {section}{\numberline {4.2}Propiedades Elementales}{36}{section.4.2}
-\contentsline {section}{\numberline {4.3}Homograf\IeC {\'\i }as}{37}{section.4.3}
-\contentsline {section}{\numberline {4.4}Proyecciones C\IeC {\'o}nicas}{37}{section.4.4}
-\contentsline {section}{\numberline {4.5}Teorema de Desargues}{40}{section.4.5}
-\contentsline {chapter}{\numberline {5}Raz\IeC {\'o}n Doble}{41}{chapter.5}
-\contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n}{41}{section.5.1}
-\contentsline {section}{\numberline {5.2}Propiedades}{44}{section.5.2}
-\contentsline {section}{\numberline {5.3}Simetr\IeC {\'\i }as de la raz\IeC {\'o}n doble}{46}{section.5.3}
-\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{48}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{48}{section.Alph1.1}
-\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{49}{subsection.Alph1.1.1}
-\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{50}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{50}{subsection.Alph1.2.1}
-\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{50}{section*.5}
-\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{51}{section*.6}
-\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{51}{section*.7}
-\contentsline {paragraph}{Observaciones}{51}{section*.8}
-\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{51}{section*.9}
-\contentsline {section}{\numberline {A.3}Dualidad}{52}{section.Alph1.3}
-\contentsline {chapter}{\numberline {B}Mierdas varias}{54}{appendix.Alph2}
+\contentsline {chapter}{\numberline {4}Aplicaciones Proyectivas}{36}{chapter.4}
+\contentsline {section}{\numberline {4.1}Definici\IeC {\'o}n}{36}{section.4.1}
+\contentsline {section}{\numberline {4.2}Propiedades Elementales}{37}{section.4.2}
+\contentsline {section}{\numberline {4.3}Homograf\IeC {\'\i }as}{38}{section.4.3}
+\contentsline {section}{\numberline {4.4}Proyecciones C\IeC {\'o}nicas}{38}{section.4.4}
+\contentsline {section}{\numberline {4.5}Teorema de Desargues}{41}{section.4.5}
+\contentsline {chapter}{\numberline {5}Raz\IeC {\'o}n Doble}{42}{chapter.5}
+\contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n}{42}{section.5.1}
+\contentsline {section}{\numberline {5.2}Propiedades}{45}{section.5.2}
+\contentsline {section}{\numberline {5.3}Simetr\IeC {\'\i }as de la raz\IeC {\'o}n doble}{47}{section.5.3}
+\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{50}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{50}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{51}{subsection.Alph1.1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{52}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{52}{subsection.Alph1.2.1}
+\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{52}{section*.6}
+\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{53}{section*.7}
+\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{53}{section*.8}
+\contentsline {paragraph}{Observaciones}{53}{section*.9}
+\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{53}{section*.10}
+\contentsline {section}{\numberline {A.3}Dualidad}{54}{section.Alph1.3}
+\contentsline {chapter}{\numberline {B}Mierdas varias}{56}{appendix.Alph2}

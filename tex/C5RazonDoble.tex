@@ -125,7 +125,7 @@ Por tanto, toda homografía de una recta proyectiva en sí misma que lleve cuatr
 \end{equation*}
 Conviene entonces dar un nombre a dicho cociente.
 \begin{defi}[Razón doble]
-	Sean cuatro puntos diferentes de una recta proyectiva $\{p_1,p_2,p_3,p_4\}$, se define su \tb{razón doble} como el cociente
+	Sean cuatro puntos diferentes de una recta proyectiva $\{p_1,p_2,p_3,p_4\}$, se define su \ti{razón doble} como el cociente
 	\begin{equation}
 	\{p_1,p_2;p_3,p_4\}=\{\theta_1,\theta_2;\theta_3,\theta_4\}=\frac{\theta_3-\theta_1}{\theta_3-\theta_2}:\frac{\theta_4-\theta_1}{\theta_4-\theta_2}
 	\end{equation}
@@ -156,7 +156,7 @@ Conviene entonces dar un nombre a dicho cociente.
 		y_4&y_2
 		\end{array}\right|}
 	\end{equation}
-	Observemos que, como los puntos son distintos las columnas de los determinantes no son proporcionales y, por tanto, ningún determinante en nulo.
+	Observemos que, como los puntos son distintos las columnas de los determinantes no son proporcionales y, por tanto, ningún determinante es nulo.
 \end{obs}
 Con esta definición el lema se traduce en que toda homografía de una recta proyectiva en sí misma, que lleve cuatro puntos diferentes cualesquiera en otros cuatro, mantiene invariante la razón doble. Consecuencia de este resultado es el corolario siguiente.
 \begin{cor}
@@ -195,23 +195,31 @@ Surge así una nueva definición de razón doble.
 \begin{defi}(Razón doble)
 	La razón doble de cuatro puntos distintos de una recta proyectiva es la coordenada no homogénea del cuarto punto respecto a la referencia formada por los tres primeros.
 \end{defi}
-Una vez dada esta definición podemos generalizar los resultados obtenidos en el apartado anterior.
+Una vez dada esta definición podemos generalizar los resultados obtenidos en el apartado anterior. Para ello hagamos antes una pequeña observación.
+\begin{obs}
+	\label{C5_obs_coordenadas_p_g(p)}
+	Sea $g:\proy(E)\rightarrow \proy(E')$ la única homografía que trasforma $\mf{R}=\{a,b,c\}$ en $\mf{R'}=\{a',b',c'\}$. Sea un punto $p\in \proy(E)$ cuyas coordenadas respecto a la referencia $\mf{R}$ son $p=(\alpha:\beta)_{\mf{R}}$. Indicaremos un vector representante de un punto $q$ por $\vec{q}$. Entonces, teniendo en cuenta que $\widehat{g}$ es lineal, se tiene que 
+	\begin{equation*}
+		g(p)=\class{\widehat{g}(\vec{p})}=\class{\widehat{g}(\alpha \vec{a}+\beta \vec{b})}=\class{\alpha \widehat{g}( \vec{a})+\beta \widehat{g}(\vec{b})}=\class{\alpha \vec{a}'+\beta \vec{b}'}=(\alpha:\beta)_{\mf{R}'}
+	\end{equation*}
+	Por tanto, las coordenadas de $p$ respecto a la referencia $\mf{R}$ son las mismas que las coordenadas de $g(p)$ respecto a $\mf{R'}$.
+\end{obs}
 \begin{theo}
 	Sean $\proy(E)$ y $\proy(E')$ dos rectas proyectivas, $a,b,c,d$ puntos distintos de $\proy(E)$ y $a',b',c',d'$ puntos distintos de $\proy(E')$. Entonces, existe una homografía $h:\proy(E)\rightarrow \proy(E')$ que transforma los puntos $a,b,c,d$ en los puntos $a',b',c',d'$ respectivamente si y solo si 
 	\begin{equation*}
 		\{a,b;c,d\}=\{a',b';c',d'\}
 	\end{equation*}
 \end{theo}
-\begin{proof} Tomamos como referencia de $\proy(E)$ los puntos $\mf{R}=\{a,b,c\}$ y como referencia de $\proy(E')$ los puntos $\mf{R}'=\{a',b',c'\}$. Sean $f(d)$ las coordenadas de $d$ respecto a $\mf{R}$ y $f'(d')$ las coordenadas de $d'$ respecto a $\mf{R}'$. Por la definición anterior de razón doble sabemos que 
+\begin{proof} Tomamos como referencia de $\proy(E)$ los puntos $\mf{R}=\{a,b,c\}$ y como referencia de $\proy(E')$ los puntos $\mf{R}'=\{a',b',c'\}$. Sean $\rho(d)$ las coordenadas de $d$ respecto a $\mf{R}$ y $\rho'(d')$ las coordenadas de $d'$ respecto a $\mf{R}'$. Por la definición anterior de razón doble sabemos que 
 \begin{equation*}
-	\{a,b;c,d\}=f(d) \qquad y \qquad \{a',b';c',d'\}=f'(d')
+	\{a,b;c,d\}=\rho(d) \qquad y \qquad \{a',b';c',d'\}=\rho'(d')
 \end{equation*}
-Sea $g:\proy(E)\rightarrow \proy(E')$ la única homografía que trasforma $\mf{R}$ en $\mf{R'}$. Entonces las coordenadas de $d$ respecto a $\mf{R}$ son las mismas que las coordenadas de $g(d)$ respecto a $\mf{R'}$. Siguiendo nuestra notación $f(d)=f'(g(d))$.\\
+Sea $g:\proy(E)\rightarrow \proy(E')$ la única homografía que trasforma $\mf{R}$ en $\mf{R'}$. Entonces, por la observación~\ref{C5_obs_coordenadas_p_g(p)}, las coordenadas de $d$ respecto a $\mf{R}$ son las mismas que las coordenadas de $g(d)$ respecto a $\mf{R'}$. Siguiendo nuestra notación $\rho(d)=\rho'(g(d))$.\\
 
-\bra \ Supongamos que existe una homografía $h:\proy(E)\rightarrow \proy(E')$ que transforma los puntos $a,b,c,d$ en los puntos $a',b',c',d'$ respectivamente. Entonces $f'(d')=f'(h(d))$. Dado que $g$ es única y $h$ transforma $a$ en $a'$, $b$ en $b'$ y $c$ en $c'$, es decir $\mf{R}$ en $\mf{R'}$, se tiene que $h=g$. Con ello \\
-$f'(d')=f'(h(d))=f'(g(d))=f(d)$, dándose así la igualdad de razones dobles.\\
+\bra \ Supongamos que existe una homografía $h:\proy(E)\rightarrow \proy(E')$ que transforma los puntos $a,b,c,d$ en los puntos $a',b',c',d'$ respectivamente. Entonces $\rho'(d')=\rho'(h(d))$. Dado que $g$ es única y $h$ transforma $a$ en $a'$, $b$ en $b'$ y $c$ en $c'$, es decir $\mf{R}$ en $\mf{R'}$, se tiene que $h=g$. Con ello \\
+$\rho'(d')=\rho'(h(d))=\rho'(g(d))=\rho(d)$, dándose así la igualdad de razones dobles.\\
 
-\bla \ Supongamos que se da la igualdad de razones dobles. Entonces $f'(d')=f(d)=f'(g(d))$. Por tanto, las coordenadas de $d'$ respecto a $\mf{R}'$ son las mismas que las coordenadas de $g(d)$ respecto a la misma referencia. Esto implica que $g(d)=d'$, con lo que $g$ es la homografía $h$ que buscábamos.
+\bla \ Supongamos que se da la igualdad de razones dobles. Entonces $\rho'(d')=\rho(d)=\rho'(g(d))$. Por tanto, las coordenadas de $d'$ respecto a $\mf{R}'$ son las mismas que las coordenadas de $g(d)$ respecto a la misma referencia. Esto implica que $g(d)=d'$, con lo que $g$ es la homografía $h$ que buscábamos.
 \end{proof}
 Observemos que en la demostración hemos concluido que $h=g$. Esto nos permite reenunciar el teorema de la siguiente forma.\\
 
@@ -229,7 +237,7 @@ Observemos que en la demostración hemos concluido que $h=g$. Esto nos permite r
 	
 	Demostremos el recíproco. Dada $g:\proy(E)\rightarrow \proy(E')$ biyección que conserva la razón doble, denotamos $g(a)=a'$, $g(b)=b'$, $g(c)=c'$. Sea por otro lado $h:\proy(E)\rightarrow \proy(E')$ la única homografía de rectas que transforma $a,b,c$ en $a',b',c'$. Como $g$ conserva la razón doble, si denotamos $g(d)=d'$ se tiene que $\{a,b;c,d\}= \{g(a),g(b),g(c),g(d)\}=\{a',b';c',d'\}$. Por tanto, aplicando el teorema anterior esto implica que $h(d)=d'=g(d)$. Como $d$ es arbitrario, se tiene que $h=g$, con lo cual $g$ es homografía de rectas.
 \end{proof}
-Como se puede observar en la demostración, la razón doble nos permite definir homografías. Veamos un ejemplo para que esto quede del todo claro.
+Como se puede observar en la demostración, la razón doble nos permite definir homografías. Veamos un ejemplo para que esto quede claro.
 \begin{exa}
 	Encontrar una homografía $h:\proy^1\rightarrow \proy^1$ tal que 
 	\begin{equation*}
@@ -251,7 +259,65 @@ Como se puede observar en la demostración, la razón doble nos permite definir 
 	\begin{equation*}
 		\theta'=\frac{-\theta-1}{2\theta}
 	\end{equation*}
-	Por tanto, la homografñia $h$ tal que $\theta'=\frac{-\theta-1}{2\theta}$ es la homografía pedida.
+	Por tanto, la homografía $h$ tal que $\theta'=\frac{-\theta-1}{2\theta}$ es la homografía pedida.
 \end{exa}
 
 \section{Simetrías de la razón doble}
+
+La razón doble ha sido descrita como un cociente de parámetros no homogéneos ordenados de la siguiente manera $\{\theta_1,\theta_2;\theta_3,\theta_4\}$. Cabe preguntarse si las 24 posibles permutaciones de las coordenadas $\theta_i$ darán la misma razón doble.
+
+A continuación se dará el valor de la razón doble resultante de permutar las coordenadas no homogéneas, respecto a $\{\theta_1,\theta_2;\theta_3,\theta_4\}$. Dado que para probar dichos resultados basta con aplicar la definición de razón doble, desarrollar el cociente y simplificar, no se harán las demostraciones. 
+
+Dada la razón doble $\{\theta_1,\theta_2;\theta_3,\theta_4\}$, se tiene que:
+\begin{itemize}
+	\item Permutar la primera y la segunda componente por un lado, y la tercera y la cuarta por otro, mantiene invariante la razón doble: \[\{\theta_1,\theta_2;\theta_3,\theta_4\}=\{\theta_2,\theta_1;\theta_4,\theta_3\}\]
+	
+	\item Permutar el par $\theta_1,\theta_2$ con el par $\theta_3,\theta_4$, mantiene invariante la razón doble: \[\{\theta_1,\theta_2;\theta_3,\theta_4\}=\{\theta_3,\theta_4;\theta_1,\theta_2\}\]
+	
+	\item Si $\{\theta_1,\theta_2;\theta_3,\theta_4\}=\lambda$, entonces:
+	\begin{equation*}
+		\begin{split}
+			\{\theta_1,\theta_3;\theta_2,\theta_4\}&=1-\lambda\\
+			\{\theta_2,\theta_1;\theta_3,\theta_4\}&=\frac{1}{\lambda}\\
+			\{\theta_2,\theta_3;\theta_1,\theta_4\}&=1-\frac{1}{\lambda}\\
+			\{\theta_3,\theta_1;\theta_2,\theta_4\}&=\frac{1}{1-\lambda}\\
+			\{\theta_3,\theta_2;\theta_1,\theta_4\}&=\frac{\lambda}{1-\lambda}
+		\end{split}
+	\end{equation*}
+\end{itemize}
+Esto nos da las 24 reordenaciones posibles. Resulta entonces que si $\{\theta_1,\theta_2;\theta_3,\theta_4\}=\lambda$, los valores que aparecen al efectuar todas las permutaciones son 
+\[\rho,1-\lambda,\frac{1}{\lambda},1-\frac{1}{\lambda},\frac{1}{1-\lambda},\frac{\lambda}{1-\lambda}\]
+\begin{defi}[Cuaterna armónica]
+	Diremos que $p_1,p_2,p_3,p_4$ es una \ti{cuaterna armónica} si su razón doble es $-1$.
+	\begin{equation}
+		\{p_1,p_2;p_3,p_4\}=-1
+	\end{equation}
+\end{defi}
+Si cuatro puntos de una recta proyectiva son una cuaterna armónica, entonces es posible hacer la siguiente construcción geométrica, donde $r$, $s$ y $r'$ son rectas arbitrarias, por tanto también lo son los puntos $D$ y $F$.
+
+IMAGEN
+
+El recíproco también es cierto, como se muestra en la siguiente proposición.
+\begin{prop}
+	Dada la siguiente construcción geométrica, se tiene que $\{p_1,p_2;p_3,p_4\}=-1$.
+	
+	IMAGEN
+\end{prop}
+\begin{proof}
+	PENDIENTE
+\end{proof}
+Dado que en esta construcción las rectas $r$, $s$ y $r'$ y los puntos $D$ y $F$ son arbitrarios, elijamos los que elijamos vamos a obtener siempre el mismo punto $p_4$. 
+
+El orden de la cuaterna armónica es relativamente importante ya que, aunque algunas permutaciones cambian su valor, las reordenaciones
+\begin{equation*}
+	\{p_2,p_1;p_4,p_3\} \quad , \quad \{p_3,p_4;p_1,p_2\}\quad , \quad \{p_2,p_1;p_3,p_4\}
+\end{equation*}
+siguen dando como resultado $-1$.
+
+Es importante mencionar varias cosas acerca de esta construcción. El punto $p_3$ está entre el punto $p_1$ y el punto medio entre $p_1$ y $p_2$ si y solo si el punto $p_4$ está a la izquierda de $p_1$. Por el contrario, $p_3$ está entre el punto medio y el punto $p_2$  si y solo si el punto $p_4$ está a la derecha de $p_2$. Si el punto $p_3$ no está entre $p_1$ y $p_2$, entonces lo estará $p_4$. Por último, $p_3$ está en el punto medio si y solo si $p_4$ está en el infinito. Esto significa que la recta $s'$ es paralela a la recta donde se encuentran los puntos.
+
+Observemos que si, al calcular la razón doble tomamos como referencia los puntos $p_1,p_2,p_3$, entonces necesariamente
+\begin{equation*}
+	\{p_1,p_2;p_3,p_4\}=\{\infty,0,1,-1\}=-1
+\end{equation*}
+

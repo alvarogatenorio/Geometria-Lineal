@@ -131,20 +131,29 @@ Por ende, ahora nos interesa encontrar relaciones entre las formas lineales con 
 
 Este último resultado pone fin a la construcción del puente entre un espacio y su dual. Recapitulando, un hiperplano queda asociado, ``vía núcleos'' a una única recta su dual. Asimismo, cada recta del dual tiene asociada un hiperplano del espacio ``primal''.
 \subsection{Dualidad Canónica}
-En esta sección tratamos de generalizar lo dicho en el caso anterior. Es decir, trataremos de identifiar variedades lineales arbitrarias con variedades lineales del dual correspondiente.
+
+En esta sección tratamos de generalizar lo dicho en el caso anterior. Es decir, trataremos de identificar variedades lineales arbitrarias con variedades lineales del dual correspondiente.
+
+Antes de comenzar consideramos fijadas las bases $\mc{B}$ de $E$ y $\{1\}$ de $\K$, como en la sección anterior. 
 
 En el caso de los hiperplanos, los identificábamos con el conjunto de las formas lineales cuyo núcleo era dicho hiperplano. Dicho de otra forma, el conjunto de las aplicaciones lineales que anulaban todos los vectores del hiperplano.
 
-Siguiendo esta idea, la definimos en un ámbito más general. Para ello echamos mano del anulador. Recordemos la siguiente definición
+Siguiendo esta idea, probaremos a identificar una variedad lineal arbitraria con con el conjunto de aplicaciones que anulan dicha variedad. Dicho conjunto es, si recordamos, nuestro viejo amigo el \ti{anulador} de dicha variedad.
+
 \begin{defi}[Anulador de un subespacio vectorial]
-	Sea $W\subset E$ subespacio vectorial de $E$, se define el \ti{anulador} de $W$ como el conjunto
+	\label{C2_def_anulador}
+	Sea $W\subset E$ subespacio vectorial de $E$. Se define el \ti{anulador} de $W$, al que denotaremos por $W^\perp$, como el conjunto formado por las $1$--formas que anulan todos los vectores de $W$. Es decir:
 	\begin{equation}
 	W^{\perp}:=\{\alpha\in E^*\tq \alpha(u)=0 \ \forall u\in W\}=\{\alpha\in E^*\tq W\subset ker(\alpha)\}
 	\end{equation}
-	siendo este a su vez un subespacio vectorial de $E^*$.
 \end{defi}
+Inmeditamente se comprueba que el anulador de un subespacio vectorial es un subespacio vectorial del dual asociado. 
 
-Intentemos reeditar el lema de la correspondencia del apartado anterior, tratando de identificar a cada subespacio de $E$ con su anulador correspondiente.
+\begin{obs}[Generalización de la Noción de Anulador]
+	Se puede, generalizar la definición de anulador, no solo para subespacios sino tambien para subconjuntos arbitrarios de un espacio vectorial. La conveniencia de esta generalización viene dada porque desbloquea algunos resultados técnicos de gran utilidad. Como la importancia de esto aquí es muy reducida, tanto la generalización de la definición \ref{C2_def_anulador} como los resultados más elementales se han trasladado al apéndice. En concreto a la definición \ref{A1_def_anulador} y al lema \ref{A1_lem_anuladorBase}.
+\end{obs}
+
+Intentemos reeditar el lema de la correspondencia \ref{C2_lem_correspondencia} del apartado anterior, tratando de identificar a cada subespacio de $E$ con su anulador correspondiente.
 \begin{lem}[Lema de la Correspondencia]
 	\label{C2_lem_correspondenciaAnulador}
 	Los subespacios de $E$ están en biyección con los subespacios de $E^*$ de la siguiente manera:
@@ -153,13 +162,14 @@ Intentemos reeditar el lema de la correspondencia del apartado anterior, tratand
 	U\mapsto U^{\perp}
 	\end{array}\]
 	Donde $\mc{U}$ y $\mc{U}^*$ denotan el conjunto de los subespacios de $E$ y $E^*$ respectivamente.
+	Dicho de otra forma, cada subespacio puede puede identificarse con su anulador.
 \end{lem}
 \begin{proof}
-	Para la sobreyectividad basta ver que todo subespacio $W$ de dimensión $r$ de $E^*$ es el anulador de un cierto subespacio $U$.
+	Para la sobreyectividad veamos que todo subespacio $W$ de dimensión $r$ de $E^*$ es el anulador de un cierto subespacio $U$.
 	
-	Buscamos el probar que el conjunto de vectores de $E$ que son anulados por todas las formas lineales de $W$ es un subespacio vectorial de $E$.
+	Buscamos probar que el conjunto de vectores de $E$ que son anulados por todas las formas lineales de $W$ es un subespacio vectorial de $E$. A este subespacio le denominaremos \ti{antianulador} o \ti{anulador dual}.
 	
-	Para verlo, notamos que $W$ tendrá una cierta base compuesta de $r$ formas lineales. Esto tiene importancia, ya que cada vector que sea anulado por todas las formas lineales de la base, también lo será, por linealidad, por todas las aplicaciones de $W$.
+	Notamos que $W$ tendrá una cierta base compuesta de $r$ formas lineales. Esto tiene importancia, ya que, cada vector que sea anulado por todas las formas lineales de la base, también lo será, por linealidad, por todas las aplicaciones de $W$.
 	
 	Dicho lo cual, tenemos que:
 	\[W=\lengen{f_1,\dots,f_r}\]
@@ -167,22 +177,42 @@ Intentemos reeditar el lema de la correspondencia del apartado anterior, tratand
 	\[f_i\equiv\begin{pmatrix}
 	a_1^i & \dots & a_n^i
 	\end{pmatrix}\]
-	Sabemos que, dado un vector $x=(x_1,\dots,x_n)_{\mc{B}}$, su valor por $f_i$ viene dado por la ecuación:
+	Dado un vector $x=(x_1,\dots,x_n)_{\mc{B}}$, su valor por $f_i$ viene dado por la ecuación  \eqref{C2_eq_expMatricialFormaLinealExpandida}:
 	\[f_i(x)=a_1^ix_1+\dots+a_n^ix_n\]
 	
-	Así, pues el conjunto de los vectores tales que son anulados por las formas lineales de $W$ es el conjunto de vectores que cumplen las ecuaciones:
-	\[\begin{cases}
-	a_1^1x_1+\dots+a_n^1x_n=0\\
-	\vdots\\
-	a_1^rx_1+\dots+a_n^rx_n=0
-	\end{cases}\]
-	Estas ecuaciones pueden interpretarse por las ecuaciones cartesianas de cierto subesacio $U$ de dimensión $n-r$ cuyo anulador es precisamente $W$.
+	Así, pues el conjunto de los vectores tales que son anulados por las formas lineales de $W$ (antianulador) es el conjunto de vectores que cumplen las ecuaciones:
+	\[\left\{\begin{array}{ccc}
+	a_1^1x_1+\dots+a_n^1x_n&=&0\\
+	\ddots& \vdots & \vdots\\
+	a_1^rx_1+\dots+a_n^rx_n&=&0
+	\end{array}\right.\]
+	Estas ecuaciones pueden interpretarse por las ecuaciones cartesianas de cierto subesacio $U$ (único) de dimensión $n-r$ cuyo anulador es precisamente $W$.
 	
 	Lo anterior también prueba la inyectividad.
 \end{proof}
 
-Una vez probada la biyectividad, es posible definir el anulador de un subespacio vectorial del espacio dual.
-\begin{defi}[Anulador dual]
+Obsérvese que hemos probado algo bastante importante (además de lo queríamos probar en un principio), y es que, las dimensiones de un subespacio y su anulador suman la dimensión del espacio total, es decir:
+\begin{equation}\label{C2_eq_dim_anulador}
+\dim(U)+\dim(U^{\perp})=\dim(E)
+\end{equation}
+
+
+Evidentemente, debido a la biyectividad del lema~\ref{C2_lem_correspondenciaAnulador} se tiene que
+\begin{equation}
+	\dim(U^*)+\dim(U^{*\perp})=\dim(E^*)
+\end{equation}
+Dicho de otra forma, un subespacio $U$ de dimensión $r$ ``dualiza'' en un subespacio $U^\perp$ de dimensión $n-r$. Esto nos recuerda, de alguna manera, a la idea de complemento ortogonal (a pesar de no tener ningún producto escalar que nos respalde). 
+
+Recapitulando, hemos conseguido construir un puente entre las variedades de un espacio vectorial y las de su dual ``vía anuladores''.
+
+Trataremos de justificar a continuación que la operación de ``paso al dual'' es una \ti{involución}, es decir, que si consideramos $E^*$ como espacio vectorial original, y tomamos una variedad suya $W^*$, su anulador $W^{*\perp}\subset E^{**}$ coincide con su antianulador $W\subset E$. Es decir:
+\begin{equation}
+	\{\alpha\in E^{**}\tq \alpha(u)=0\forall u\in E*\}\stackrel{\mathrm{?}}{=}\{\alpha\in E^*\tq \alpha(u)=0\forall u\in E\}
+\end{equation}
+
+Esto resulta confuso, ya que estamos tratando de identificar un subespacio del \ti{bidual} $E^{**}$ con otro subespacio de $E$. Sin embargo, al ser espacios de la misma dimensión, podemos identificarlos (son isomorfos).
+
+\begin{defi}[Antianulador]
 	\label{C2_def_anuladorDual}
 	Sea $W^*\subset E^*$ subespacio vectorial del dual $E^*$, se define el \ti{anulador} de $W^*$ como el conjunto
 	\begin{equation}
@@ -196,14 +226,6 @@ Por tanto, cuando nos encontramos en el espacio vectorial $E$, buscamos las form
 \end{equation}
 independientemente de si $W\subset E$ o $W\subset E^*$.
 
-Obsérvese que hemos probado algo bastante importante además de lo queríamos probar en un principio, y es que, las dimensiones de un subespacio y su anulador suman la dimensión del espacio total, es decir:
-\begin{equation}\label{C2_eq_dim_anulador}
-\dim(U)+\dim(U^{\perp})=\dim(E)
-\end{equation}
-Evidentemente, debido a la biyectividad del lema~\ref{C2_lem_correspondenciaAnulador} se tiene que
-\begin{equation*}
-\dim(U^*)+\dim(U^{*\perp})=\dim(E^*)
-\end{equation*}
 De esto se desprenden muchas propiedades muy útiles, tal y como muestra la siguiente proposición.
 \begin{prop}[Propiedades de la Dualidad]
 	\label{C2_pro_propiedades_dualidad}

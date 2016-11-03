@@ -211,6 +211,7 @@ A continuación calculamos de manera inmediata la dimensión del espacio dual.
 
 Continuemos definiendo varios conceptos imprescindibles del espacio dual.
 \begin{defi}[Anulador de un Subconjunto]
+	\label{A1_def_anulador}
 	Sea $S$ un subconjunto de $E$, denominamos \ti{anulador de $S$} al conjunto de las formas lineales tales que anulan todos los vectores de $S$. Es decir:
 	\[S^{\perp}=\{f\in E^*\tq f(u)=0\ \forall u\in S\}\]
 \end{defi}
@@ -218,7 +219,8 @@ Es un ejercicio de cálculo rutinario la demostración de que el anulador de un 
 
 Una propiedad interesante de los anuladores es que el anulador de un subconjunto $S$, coincide con el anulador de la variedad lineal engendrada por $S$. Veámoslo.
 
-\begin{lem}[Anuladores y Variedades Engendradas] Sea $S$ un subconjunto arbitrario no vacío de $E$, entonces:
+\begin{lem}[Anuladores y Variedades Engendradas]
+	\label{A1_lem_anuladorBase} Sea $S$ un subconjunto arbitrario no vacío de $E$, entonces:
 	\[S^{\perp}=\lengen{S}^{\perp}\]
 \end{lem}\begin{proof}
 \begin{itemize}

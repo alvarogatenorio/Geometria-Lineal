@@ -303,7 +303,7 @@ Bien, tratemos de demostrar el teorema \ref{C2_teo_principioDualidad1}. (Recomen
 	
 	Además, como $\dim(U\cap W)=0$, se tiene que $\dim(U^\perp+W^\perp)=3$.
 	
-	Así, a partir de nuestra primera pregunta, hemos obtenido una equivalente que dice reza:
+	Así, a partir de nuestra primera pregunta, hemos obtenido una equivalente que reza:
 	
 	\ti{¿En un espacio de dimensión $3$, dos planos distintos se cortan en una recta?}
 	
@@ -320,109 +320,116 @@ Así pues, dado cierto aserto sobre espacios vectoriales compuesto en términos 
 
 Esto es una auténtica fábrica de teoremas, ya que, si demostramos la veracidad de un enunciado, obtendremos automáticamente la veracidad de su aserto dual equivalente. 
 \section{Dualidad en espacios proyectivos}
-Una vez repasados y ampliados los conceptos de espacio dual y anulador, pasemos a introducir el espacio proyectivo dual. Como siempre, iremos trasladando al contexto proyectivo los resultados del mundo lineal.
-\begin{defi}[Espacio proyectivo dual]
-	Dado un espacio vectorial $E$ y su correspondiente espacio proyectivo $\proy(E)$, se llama \ti{espacio proyectivo dual} de $P$ al espacio proyectivo $\proy(E^*)$ asociado al espacio vectorial dual $E^*$ de $E$. Se denota por $\proy(E^*)$. En el caso de ser $E=\K^{n+1}$, su espacio proyectivo dual se denota por $\proy^*$.
+Una vez repasados y ampliados los conceptos de dualidad en espacios lineales, pasemos a introducir la dualidad en espacios proyectivos. Como siempre, iremos trasladando al contexto proyectivo los resultados del mundo lineal.
+\begin{defi}[Espacio Proyectivo Dual]
+	Dado un espacio vectorial $E$, se llama \ti{espacio proyectivo dual} de $E$ al espacio proyectivo asociado al espacio vectorial dual $E^*$.
+	
+	Lo denotaremos, de forma natural, por $\proy(E^*)$.
 \end{defi}
-\begin{obs}
-	Dado que el espacio dual $E^*$ tiene la misma dimensión que $E$, si la dimensión es finita, esto implica que la dimensión del espacio proyectivo es la misma que la del espacio proyectivo dual
-	\begin{equation*}
+\begin{obs}[Dimensión del Espacio Proyectivo Dual]
+	Dado que (si la dimensión es finita) el espacio dual $E^*$ tiene la misma dimensión que $E$, deducimos inmediatamente que la dimensión del espacio proyectivo es la misma que la del espacio proyectivo dual. Es decir:
+	\begin{equation}
 	\dim(\proy(E))=\dim (\proy(E^*))
-	\end{equation*}
+	\end{equation}
 \end{obs}
 
 \subsection{Formas Lineales e Hiperplanos Proyectivos}
 
-Comenzamos este apartado recordando brevemente que los hiperplanos vectoriales son subespacios lineales de codimensión $1$. Asimismo todo hiperplano proyectivo $H=\proy(\hat{H})$ es la proyección de un hiperplano vectorial $\hat{H}$
-\begin{equation}
-\dim(E)-2=\dim(\proy)-1=\dim(H)=\dim(\hat{H})-1\ra \dim(\hat{H})=\dim(E)-1.
-\end{equation}
-Recordemos también que todo hiperplano vectorial $\hat{H}$ está en biyección con las formas lineales cuyo núcleo es el propio espacio vectorial $\hat{H}$, las cuales son múltiplos. Es decir, está en biyección con un punto del espacio proyectivo dual, un rayo de formas lineales.
+Comenzamos este apartado recordando brevemente que un hiperplano vectorial no es otra cosa que un subespacio lineal de codimensión $1$. Asimismo, un hiperplano proyectivo $H$ no es más que el espacio proyectivo asociado a cierto hiperplano vectorial $\widehat{H}$. Es trivial observar que la dimensión de un hiperplano proyectivo es $\dim(\proy(E))-1$. Luego son variedades de codimensión $1$ respecto de la dimensión del espacion proyectivo total.
 
-Por tanto podemos intentar establecer también una biyección entre un hiperplano proyectivo $H$ y dicho punto proyectivo $[h]$, ya que $H$ es la proyección de un hiperplano vectorial. Pero la forma lineal $h$ no está bien definida en el espacio proyectivo $\proy(E)$. Ello se debe a que puedo escoger dos vectores  $u, \lambda u\in E$, que pertenecen al mismo punto en el espacio proyectivo, tales que sus imágenes no pertenecen al mismo rayo. Sin embargo, esto no puede ocurrir con aquellos que pertenezcan al núcleo de $h$. Por tanto los ceros de $h$ sí están bien definidos en $\proy(E)$. Dado que estos ceros son precisamente el espacio vectorial $\hat{H}$, no hay ningún problema en considerar el espacio proyectivo.
+Recordemos importante resultado obtenido en el lema \ref{C2_lem_correspondencia}, que afirma que todo hiperplano  vectorial $\widehat{H}$ está en biyección con las formas lineales cuyo núcleo es el propio $\widehat{H}$, las cuales conforman un rayo de $E^*$. Es decir, todo hiperplano está en biyección con un punto del espacio proyectivo dual.
 
-Surge así el siguiente lema, idéntico al lema~\ref{C2_lem_correspondencia}.
-\begin{lem}[Lema de la Correspondencia proyectiva]
+Tratamos ahora de fabricarnos un puente entre los hiperplanos proyectivos y alguna variedad del espacio proyectivo dual, a imagen y semejanza de lo hecho en secciones anteriores.
+
+Surge así el siguiente lema, casi idéntico al lema~\ref{C2_lem_correspondencia}.
+\begin{lem}[Lema de la Correspondencia Proyectiva]
 	\label{C2_lem_correspondenciaProy}
-	La aplicación
+	La aplicación $\psi=\pi\circ\varphi$ es biyectiva.
 	\begin{equation*}
-		\begin{split}
-			\mc{H}& \rightarrow \proy(E^*)\\
-			H &\rightarrow [h]
-		\end{split}
+		\xymatrix{
+			\mc{H} \ar[r]^{\pi^{-1}} \ar[rd]_{\varphi\equiv\Phi\circ\pi^{-1}} & \widehat{\mc{H}}\ar[d]^{\Phi\equiv\widehat{H}^{\perp}}\\
+			 & E^* \ar[r]_{\pi} & \proy(E^*)
+		}
 	\end{equation*}
-	es biyectiva. $\mc{H}$ denota el conjunto de los hiperplanos proyectivos de $\proy(E)$.
+	Aclarando la notación, $\mc{H}$ denota el conjunto de los hiperplanos proyectivos de $\proy(E)$, $\pi^{-1}$ representa la imagen inversa de la proyección canónica y $\Phi$ es la dualidad canónica.
 \end{lem}
 \begin{proof}
-	El conjunto de los hiperplanos proyectivos de $\proy(E)$ está en biyección con el conjunto de los hiperplanos vectoriales de $E$. Estos, a su vez, por el Lema de la Correspondencia, están en biyección con el espacio proyectivo dual, asociando a cada hiperplano vectorial $\hat{H}$ el rayo de formas lineales que se anulan sobre él. Dado que la composición de biyecciones es biyección, queda demostrado que existe una aplicación biyectiva que asocia a cada hiperplano proyectivo $H=\proy(\hat{H})$ el rayo de formas lienales cuyos ceros forman el hiperplano  $\hat{H}$.
+	El conjunto de los hiperplanos proyectivos de $\proy(E)$ está en biyección vía $\pi^{-1}$ con el conjunto de los hiperplanos vectoriales de $E$ (observación \ref{C1_obs_lemaCorrespondencia}).
+	
+	A su vez, por el lema \ref{C2_lem_correspondencia}, los hiperplanos vectoriales están en biyección con las rectas del espacio dual vía dualidad canónica.
+	
+	Asimismo, las rectas del dual están en biyección con los puntos del espacio proyectivo dual vía proyección canónica $\pi$.
+	
+	Dado que la composición de biyecciones es biyección, queda demostrado que los hiperplanos proyectivos están en biyección con los puntos del espacio proyectivo dual.
 \end{proof}
-Entonces, dado un hiperplano proyectivo $H$, podemos escribirlo como
+Entonces, dado un hiperplano proyectivo $H$, podemos escribirlo de la forma:
 \begin{equation}
 H=\proy(\hat{H})=\{[u]\in\proy(E)\tq h(u)=0\}
 \end{equation}
 
 \subsection{Dualidad Canónica}
-Se ha visto la importancia del espacio dual a la hora de caracterizar hiperplanos proyectivos. Al igual que se hizo en la sección anterior, buscamos ahora generalizar ese resultado, para poder identificar variedades proyectivas con variedades lineales del espacio dual proyectivo.
+Hemos conseguido identificar los hiperplanos proyectivos con puntos del espacio proyectivo dual. Al igual que hicimos en la sección anterior, tratemos ahora de generalizar ese resultado para variedades proyectivas arbitrarias.
 
-Recordemos que, dada una variedad lineal, esta estaba en biyección con su anulador, el cual es un subespacio vectorial de $E^*$. Al igual que hicimos con hiperplanos trataremos de trasladar esta biyección entre variedades de un espacio vectorial y su dual, a una biyección entre variedades de un espacio proyectivo y su dual.
+Recordemos que, dada una variedad lineal, esta estaba en biyección con su anulador, el cual es una variedad lineal de $E^*$. Trasladando de forma natural esta idea al contexto proyectivo obtenemos el siguiente resultado.
 \begin{lem}[Lema de la Correspondencia Proyectiva]
 	\label{C2_lem_correspondencia_proy_anulador}
-	La aplicación 
+	La aplicación $\psi=\pi\circ\varphi$ es biyectiva.
 	\begin{equation*}
-		\begin{split}
-			\mc{X}& \rightarrow \mc{X}^*\\
-			X& \rightarrow X^*=\proy(\hat{X}^{\perp})
-		\end{split}
+		\xymatrix{
+			\mc{V} \ar[r]^{\pi^{-1}} \ar[dr]_{\varphi\equiv\Phi\circ\pi^{-1}} & \widehat{\mc{V}} \ar[d]^{\widehat{V}^\perp\equiv\Phi} & \\
+			& \widehat{\mc{V}^*} \ar[r]_{\pi} & \mc{V}^* 
+		}
 	\end{equation*}
-	donde $\mc{X}$ y $\mc{X}^*$ denotan el conjunto de las variedades de $\proy(E)$ y $\proy(E^*)$ respectivamente, es biyectiva.
+	Aclarando la notación, los conjuntos $\mc{V}$, $\widehat{\mc{V}}$, $\widehat{\mc{V}^*}$ y $\mc{V}^*$ denotan el conjunto de las variedades de $\proy(E)$, $E$, $E^*$ y $\proy(E^*)$ respectivamente.
+	
+	Así, dada una variedad proyectiva $\mc{X}$, se corresponde su su \ti{dualizada} $X^*=\psi(X)=\proy(\widehat{X}^\perp)$
 \end{lem}
 \begin{proof}
-	El conjunto de las variedades de $\proy(E)$ está en biyección con los subespacios vectoriales de $E$. Estos, a su vez, por el lema~\ref{C2_lem_correspondenciaAnulador} (Lema de la Correspondencia), están en biyección con su anulador $\hat{X}^\perp$. Al ser este un subespacio vectorial del espacio dual $E^*$, de nuevo podemos establecer una biyección entre $\hat{X}^{\perp}$ y las variedades de $\proy(E^*)$, que asocia a cada subespacio su correspondiente proyección $X^*=\proy (\hat{X}^{\perp})$. Dado que la composición de biyecciones es biyección, queda demostrado que existe una aplicación biyectiva que asocia a cada variedad proyectiva $X$ la proyección de su anulador $X^*$.
+	Es idéntica a la del lema \ref{C2_lem_correspondenciaProy}.
 \end{proof}
 
-Dada una variedad proyectiva $X$, llamaremos dual de la variedad a $X^*$.
+Obsérvese que, lo que estamos haciendo, no es otra cosa que identificar cada variedad proyectiva $X=\proy(\hat{X})$ con el proyectivizado del anulador de $\widehat{X}$.
 
-Obsérvese que, lo que estamos haciendo, es identificar cada variedad proyectiva $X=\proy(\hat{X})$ con los rayos de las formas lineales que pertenecen al anulador de $\hat{X}$. Dado que un subespacio vectorial tiene tantas ecuaciones cartesianas como formas lineales independientes hay en su anulador, es fácil hacer esta identificación. Un punto del espacio proyectivo, por ejemplo, se identifica con dos elementos del dual linealmente independientes, es decir, un plano, ya que el subespacio del que es proyección es una recta, la cual posee dos ecuaciones cartesianas.
-
-Por supuesto, el hiperplano es un caso particular de esta caracterización, en la que solo hay una ecuación cartesiana y por tanto la variedad proyectiva se identifica con un único punto en el espacio proyectivo dual. Así
-\begin{equation}
-H^*=\proy(\hat{H}^{\perp})=\proy(\{h\in E^*\tq h(u)=0\ \forall u\in \hat{H}\})=[h]
-\end{equation}
-
-Las propiedades que se desprendían del Lema de la Correspondencia para espacios vectoriales, se dan también entre variedades proyectivas, como muestra la siguiente proposición.
+\begin{obs}[Caso Particular de los Hiperplanos]
+	Veamos, a modo de aclaración suplementaria, que el lema \ref{C2_lem_correspondencia_proy_anulador} funciona también (por supuesto), para hiperplanos.
+	\begin{equation*}
+	H^*=\proy(\hat{H}^{\perp})=\proy(\{h\in E^*\tq h(u)=0\ \forall u\in \hat{H}\})=[h]
+	\end{equation*}
+\end{obs}
+Las propiedades que se desprendían del lema \ref{C2_lem_correspondencia} pueden extenderse sin esfuerzo al contexto proyectivo, tal y como muestra la siguiente proposición.
 \begin{prop}[Propiedades de la Dualidad Proyectiva]
 	\label{C2_pro_propiedades_dualidad_proy}
-	Sea $E$ un espacio vectorial y su correspondiente espacio proyectivo $\proy(E)$. Sean $X,Y\subset\proy(E)$ variedades proyectivas. Se cumple
+	Sean $E$ un espacio vectorial y su correspondiente espacio proyectivo $\proy(E)$. Sean $X,Y\subset\proy(E)$ variedades proyectivas. Se cumple:
 	\begin{enumerate}
-		\item Si $X\subset Y$, entonces $Y^*\subset X^*$
+		\item $X\subset Y\sii Y^*\subset X^*$
 		
 		\item $(X\cap Y)^*=\engen{X^*,Y^*}$
 		
 		\item $\engen{X,Y}^*=X^*\cap Y^*$
 		
-		\item $\dim(X)+\dim(X^*)=\dim(\proy)-1$
+		\item $\dim(X)+\dim(X^*)=\dim(\proy(E))-1$
 	\end{enumerate}
 \end{prop}
 \begin{proof}
-	Sean $X=\proy(\hat{X})$ e $Y=\proy(\hat{Y})$ variedades proyectivas.
 	\begin{enumerate}
-		\item Si $X\subset Y$, entonces $\hat{X}\subset\hat{Y}$. Por la proposición~\ref{C2_pro_propiedades_dualidad} esto implica que $\hat{Y}^{\perp}\subset \hat{X}^{\perp}$, y por tanto $Y^*\subset X^*$.
+		\item Si $X\subset Y$, entonces $\hat{X}\subset\hat{Y}$. Por la proposición~\ref{C2_pro_propiedades_dualidad} tenemos que $\hat{Y}^{\perp}\subset \hat{X}^{\perp}$, y por tanto $Y^*\subset X^*$. Recíprocamente, basta leer la demostración al revés.
 		
 		\item Por el lema~\ref{C1_lem_interseccionVariedades} se tiene que $X\cap Y=\proy(\hat{X}\cap\hat{Y})$. Por tanto $(X\cap Y)^*=\proy((\hat{X}\cap\hat{Y})^{\perp})$. Aplicando la proposición~\ref{C2_pro_propiedades_dualidad} se tiene que $\proy((\hat{X}\cap\hat{Y})^{\perp})=\proy(\hat{X}^{\perp}+\hat{Y}^{\perp})=\engen{X^*,Y^*}$.
 		
 		\item Se tiene que $\engen{X,Y}=\hat{X}+\hat{Y}$. Por tanto $\engen{X,Y}^*=\proy((\hat{X}+\hat{Y})^{\perp})$. Por la proposición~\ref{C2_pro_propiedades_dualidad} sabemos que $\proy((\hat{X}+\hat{Y})^{\perp})=\proy(\hat{X}^{\perp}\cap\hat{Y}^{\perp})$. Atendiendo de nuevo al lema~\ref{C1_lem_interseccionVariedades} queda que $\proy(\hat{X}^{\perp}\cap\hat{Y}^{\perp})=\proy(\hat{X}^{\perp})\cap\proy(\hat{Y}^{\perp})=X^*\cap Y^*$
 		
-		\item Por la ecuación~\eqref{C2_eq_dim_anulador} se tiene que $\dim(\hat{X})+\dim(\hat{X}^{\perp})=\dim(E)=\dim(\proy(E))+1$. Teniendo en cuenta la definición~\ref{C1_def_dimension} queda
+		\item Se tiene inmediatamente:
 		\begin{equation*}
-		\dim(X)+\dim(X^*)=\dim(\hat{X})-1+\dim(\hat{X}^{\perp})-1=\dim(\proy(E))+1-2=\dim(\proy(E))-1
+		\dim(X)+\dim(X^*)=\dim(\hat{X})-1+\dim(E)-\dim(\widehat{X})-1=\dim(\proy(E))-1
 		\end{equation*}
 	\end{enumerate}
 \end{proof}
 \begin{obs}
-	El lema anterior confirma que el dual de un hiperplano proyectivo es un punto. En efecto supongamos que $\dim(E)=m+1$, entonces
+	El lema anterior reafirma, aún más si cabe, que el dualizado de un hiperplano proyectivo es un punto. En efecto supongamos que $\dim(E)=m+1$, entonces:
 	\begin{equation*}
-	\dim(X)+\dim(X^*)=m-1+\dim(X^*)=\dim(\proy(E))-1=m-1\sii \dim(X^*)=0
+	\dim(X)+\dim(X^*)=m-1
 	\end{equation*}
+	Como $\dim(X)=m-1$, se sigue que $\dim(X^*)=0$.
 \end{obs}
 
 \subsection{Principio de Dualidad para espacios proyectivos}

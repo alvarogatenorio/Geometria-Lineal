@@ -376,4 +376,90 @@ Donde $E$ representa el último punto al que llamaremos \ti{punto unidad}.
 \end{defi}
 Es evidente, por lo visto en la sección \ref{C1_coordenadasHomogeneas} y en el teorema \ref{C1_teo_unicidadBase}, que la definición \ref{C1_def_coordenadasReferencia} es sólida.
 \section{Cambios de Referencia Proyectiva}
-POSPUESTO HASTA QUE LO DEMOS EN CLASE!!!
+Cuando realizábamos cambios de base en álgebra lineal nos preguntábamos cuáles eran las relaciones entre las coordenadas de un vector respecto de una y otra base. Bajando al mundo proyectivo nos hacemos la misma pregunta. ¿Cómo cambian las coordenadas homogéneas de un punto al realizar cambios en la referencia proyectiva?
+
+Sean dos referencias proyectivas $\mf{R}$ y $\mf{R}'$, las cuales tendrán sendas bases asociadas $\mc{B}$ y $\mc{B}'$ (únicas salvo múltiplos) (teorema \ref{C1_teo_unicidadBase}).
+
+Sea un punto $x\in\proy(E)$. Es claro que podemos expresar este punto en coordenadas homogéneas respecto de la referencia $\mf{R}$ de la siguiente manera:
+\[x=\class{u}=\class{(\alpha_0,\dots,\alpha_n)_\mc{B}}\]
+Asimismo también es claro que $x$ admite una representación en términos de la referencia $\mf{R}'$:
+\[x=\class{u}=\class{(\beta_0,\dots,\beta_n)_{\mc{B}'}}\]
+Un problema que se presenta habitualmente es, conocida la representación de un vector respecto de cierta referencia $\mf{R}$, ¿cómo obtengo la representación respecto de otra referencia $\mf{R}'$ de mi elección?
+
+Solucionemos este problema aplicando lo que ya sabemos de álgebra lineal. Antes de comenzar, fijemos notaciones:
+\begin{gather*}
+	u=\mc{B}X\equiv(\alpha_0,\dots,\alpha_n)_\mc{B}\\
+	u=\mc{B}'X'\equiv(\beta_0,\dots,\beta_n)_{\mc{B}'}
+\end{gather*}
+Donde los símbolos $\mc{B}$ y $\mc{B}'$ representan las matrices fila que contienen los vectores de las bases $\mc{B}$ y $\mc{B}'$ respectivamente. Asimismo, los símbolos $X$ y $X'$ representan las matrices columna de los coeficientes $\alpha_i$ (conocidos) y $\beta_i$ (desconocidos) respectivamente. Nótese que es esto es un abuso de notación, ya que no hemos definido el producto de dos matrices de estos tipos.
+
+Como sabemos (\ref{A1_cambioBase}), se cumplen las llamadas ``ecuaciones del cambio de base'', que dicen:
+\begin{equation*}
+	X'=P^{-1}X
+\end{equation*}
+Donde $P$ es la matriz cuyas columnas son las coordenadas de los vectores de la base $\mc{B}'$ respecto de la base $\mc{B}$. Así pues, basta poner $X'$ en ``formato de coordenadas'' para poder decir que hemos encontrado una representación (única salvo múltiplos) del punto $x$ en base a la referencia $\mf{R}'$.
+
+Un ejemplo clarificará todos estos cambalaches.
+\begin{exa}[Cambio de Referencia Proyectiva]
+	Se considera el plano proyectivo $\proy^2$ y las referencias proyectivas:
+	\begin{gather*}
+		\mf{R}:=\{(2:0:-1),(1:-1:0),(1:-1:1);(1:0:-1)\}\\
+		\mf{R}':=\{(1:1:1),(0:1:1),(1:0:1);(2:2:3)\}
+	\end{gather*}
+	Si queremos calcular las coordenadas homogéneas del punto $(2:2:2)$ respecto de $\mf{R}$ y $\mf{R'}$ deberemos tener en cuenta un par de cosas. La primera, es que las coordenadas homogéneas de todos los puntos escritos hasta ahora hace referencia a la base canónica de $\R^3$.
+	
+	Por ende, basta con calcular la matriz de cambio de base de la base canónica a las bases asociadas por $\mf{R}$ y $\mf{R}'$, lo cual es algo facilísimo (una vez obtenidas sendas bases).
+	
+	Como la obtención de las mismas no es el objetivo de esta sección, las presentamos directamente:
+	\begin{gather*}
+		\mc{B}_{\mf{R}}=\{(2,0,-1),(1,-1,0),(-1,1,-1)\}\\
+		\mc{B}_{\mf{R}'}=\{(1,1,1),(0,1,1),(1,0,1)\}
+	\end{gather*}
+	Por ende las matrices de cambio de base serán:
+	\begin{gather*}
+			P_{\mf{R}}=\begin{pmatrix}
+				2 & 1 & -1\\
+				0 & -1 & 1\\
+				-1 & 0 & -1
+			\end{pmatrix}\leadsto P_{\mf{R}}^{-1}=\begin{pmatrix}
+			\frac{1}{2} & \frac{1}{2} & 0 \\
+			-\frac{1}{2} & -\frac{3}{2} & -1 \\
+			-\frac{1}{2} & -\frac{1}{2} & -1
+		\end{pmatrix}\\
+			P_{\mf{R}'}=\begin{pmatrix}
+				1 & 0 & 1\\
+				1 & 1 & 0\\
+				1 & 1 & 1
+			\end{pmatrix}\leadsto P_{\mf{R}'}^{-1}=\begin{pmatrix}
+			1 & 1 & -1 \\
+			-1 & 0 & 1 \\
+			0 & -1 & 1
+		\end{pmatrix}
+	\end{gather*}
+	Aplicando las ecuaciones del cambio de base:
+	\begin{gather*}
+		(\alpha,\beta,\gamma)_{\mc{B}_{\mf{R}}}\equiv P_{\mf{R}}^{-1}\begin{pmatrix}
+			2 & 2 & 2
+		\end{pmatrix}^t\equiv(2,-6,-4)_{\mc{B}_{\mf{R}}}\\
+		(\alpha',\beta',\gamma')_{\mc{B}_{\mf{R}'}}\equiv P_{\mf{R}'}^{-1}\begin{pmatrix}
+			2 & 2 & 2
+		\end{pmatrix}^t\equiv (2,0,0)_{\mc{B}_{\mf{R}'}}
+	\end{gather*}
+	Así pues el punto $(2:2:2)$ escrito en la referencia cuya base asociada es la canónica (o un múltiplo suyo) se escribe, salvo múltiplos, como $(2:-6:-4)$ en base a la referencia $\mf{R}$ y como $(2:0:0)$ en base a la referencia $\mf{R}'$.
+	
+	Esto suele escribirse de la siguiente manera:
+	\begin{gather*}
+		x=(2:2:2)=\rho(2:-6:-4)_{\mf{R}}\ \forall \rho\in\R\smz\\
+		x=(2:2:2)=\rho(2:0:0)_{\mf{R}'}\ \forall \rho\in\R\smz
+	\end{gather*}
+	Por ende podemos escoger representaciones más o menos bonitas para nuestro punto dividiendo nuestras coordenadas homogéneas por el escalar no nulo que nos convenga. En ese caso:
+	\begin{gather*}
+		x=(1:-3:-2)_{\mf{R}}\\
+		x=(1:0:0)_{\mf{R}'}
+	\end{gather*}
+	Esta última representación de $x$ en la referencia $\mf{R}'$ da que pensar, pues tiene aspecto de vector de la base canónica.
+	
+	 En efecto, cuanto trabajábamos con espacios vectoriales sabíamos que las coordenadas en cierta base $\mc{B}$ del $i$--ésimo vector de $\mc{B}$ eran las correspodientes al $i$--esimo vector de la base canónica.
+	 
+	 En el contexto proyectivo esto sigue siendo cierto, basta darse cuenta de que $x$ es en realidad el primer punto de la referencia $\mf{R}$, por lo que admite una representación tan agradable. Este hecho, cuya comprobación se deja al lector es de gran utilidad, por lo que será empleado sin previo aviso a lo largo del texto. 
+\end{exa}

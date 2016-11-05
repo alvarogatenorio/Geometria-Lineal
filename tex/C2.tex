@@ -1,11 +1,10 @@
 \chapter{Dualidad}
 \label{C2}
-Hasta el momento hemos conseguido establecer relaciones sólidas entre espacios vectoriales y espacios proyectivos. Relaciones que engloban tanto bases como subespacios, coordenadas o dimensiones. Así, si se quiere tratar cierto problema referente a estos conceptos en el espacio proyectivo, siempre será posible trasladarnos al territorio conocido de espacios vectoriales, y resolverlo allí. Y, como no podía ser de otra manera, esto también ocurre con el espacio dual. 
+El objetivo de capítulo es enunciar y justificar el llamado \ti{principio de dualidad}, tanto para espacios vectoriales como para espacios proyectivos.
 
-Es vital entender la relación que existe entre el espacio dual y el espacio proyectivo dual, pues el procedimiento para dar coordenadas de subespacios proyectivos se basa en esta relación. Pero antes de nada, hagamos un pequeño repaso del espacio dual y sus propiedades.
+No debe alarmarse el lector al que no le quedaron claros los conceptos referentes al espacio dual en un primer curso de álgebra lineal, ya que la mayoría se vulve a explicar aquí con todo detalle.
 
-Si su conocimiento sobre espacio dual anda escaso, y desconoce alguno de los resultados aquí mencionados, se recomienda al lector echar un vistazo al apéndice~\ref{A}.
-
+Además, hemos evitado de uno de los conceptos que suele quedar menos claro, las ``bases duales''. No obstante, este es necesario para la demostración de algunos resultados complementarios incluídos en el apéndice \ref{A}, donde se revisitan las bases duales.
 \section{Dualidad en espacios vectoriales}
 \label{C2_dualidadVectoriales}
 Sea $E$ un espacio vectorial de dimensión finita. Llamábamos \ti{espacio dual} asociado a $E$ al conjunto de todas las aplicaciones lineales (homomorfismos de espacios vectoriales) que nacen en $E$ y mueren en $\K$. A estas aplicaciones lineales las denominamos \ti{formas lineales} o $1$--\ti{formas}.
@@ -158,7 +157,7 @@ Intentemos reeditar el lema de la correspondencia \ref{C2_lem_correspondencia} d
 	\label{C2_lem_correspondenciaAnulador}
 	Los subespacios de $E$ están en biyección con los subespacios de $E^*$ de la siguiente manera:
 	\[\begin{array}{c}
-	\mc{U}\to\mc{U}^*\\
+	\mc{U}\stackrel{\Phi}{\to}\mc{U}^*\\
 	U\mapsto U^{\perp}
 	\end{array}\]
 	Donde $\mc{U}$ y $\mc{U}^*$ denotan el conjunto de los subespacios de $E$ y $E^*$ respectivamente.
@@ -167,9 +166,9 @@ Intentemos reeditar el lema de la correspondencia \ref{C2_lem_correspondencia} d
 \begin{proof}
 	Para la sobreyectividad veamos que todo subespacio $W$ de dimensión $r$ de $E^*$ es el anulador de un cierto subespacio $U$.
 	
-	Buscamos probar que el conjunto de vectores de $E$ que son anulados por todas las formas lineales de $W$ es un subespacio vectorial de $E$. A este subespacio le denominaremos \ti{antianulador} o \ti{anulador dual}.
+	Para esto, trataremos de probar que el conjunto de vectores de $E$ que son anulados por todas las formas lineales de $W$ (imagen inversa de $\Phi$) es un subespacio vectorial de $E$. A este conjunto le denominaremos \ti{antianulador} o \ti{anulador dual}. Este nombre se debe a que el anulador de dicho conjunto (por definición) es $W$.
 	
-	Notamos que $W$ tendrá una cierta base compuesta de $r$ formas lineales. Esto tiene importancia, ya que, cada vector que sea anulado por todas las formas lineales de la base, también lo será, por linealidad, por todas las aplicaciones de $W$.
+	Notamos que $W$ admitirá una cierta base compuesta de $r$ formas lineales. Esto tiene importancia, ya que, cada vector que sea anulado por todas las formas lineales de la base, también lo será, por linealidad, por todas las aplicaciones de $W$.
 	
 	Dicho lo cual, tenemos que:
 	\[W=\lengen{f_1,\dots,f_r}\]
@@ -180,54 +179,57 @@ Intentemos reeditar el lema de la correspondencia \ref{C2_lem_correspondencia} d
 	Dado un vector $x=(x_1,\dots,x_n)_{\mc{B}}$, su valor por $f_i$ viene dado por la ecuación  \eqref{C2_eq_expMatricialFormaLinealExpandida}:
 	\[f_i(x)=a_1^ix_1+\dots+a_n^ix_n\]
 	
-	Así, pues el conjunto de los vectores tales que son anulados por las formas lineales de $W$ (antianulador) es el conjunto de vectores que cumplen las ecuaciones:
-	\[\left\{\begin{array}{ccc}
+	Así, pues el conjunto de los vectores tales que son anulados por las formas lineales de $W$ (antianulador) \tb{es} el conjunto de vectores que cumplen las ecuaciones:
+	\begin{equation}
+	\label{C2_eq_ecuacionesAtianulador}
+	\left\{\begin{array}{ccc}
 	a_1^1x_1+\dots+a_n^1x_n&=&0\\
 	\ddots& \vdots & \vdots\\
 	a_1^rx_1+\dots+a_n^rx_n&=&0
-	\end{array}\right.\]
-	Estas ecuaciones pueden interpretarse por las ecuaciones cartesianas de cierto subesacio $U$ (único) de dimensión $n-r$ cuyo anulador es precisamente $W$.
+	\end{array}\right.\end{equation}
+	Estas ecuaciones pueden interpretarse por las ecuaciones cartesianas de cierto subesacio $U$ de dimensión $n-r$ cuyo anulador es precisamente $W$.
 	
-	Lo anterior también prueba la inyectividad.
+	Esto también prueba la inyectividad, ya que hemos visto que la imagen inversa de $\Phi$ es un único subespacio.
 \end{proof}
-
-Obsérvese que hemos probado algo bastante importante (además de lo queríamos probar en un principio), y es que, las dimensiones de un subespacio y su anulador suman la dimensión del espacio total, es decir:
-\begin{equation}\label{C2_eq_dim_anulador}
-\dim(U)+\dim(U^{\perp})=\dim(E)
-\end{equation}
-
-
-Evidentemente, debido a la biyectividad del lema~\ref{C2_lem_correspondenciaAnulador} se tiene que
-\begin{equation}
-	\dim(U^*)+\dim(U^{*\perp})=\dim(E^*)
-\end{equation}
-Dicho de otra forma, un subespacio $U$ de dimensión $r$ ``dualiza'' en un subespacio $U^\perp$ de dimensión $n-r$. Esto nos recuerda, de alguna manera, a la idea de complemento ortogonal (a pesar de no tener ningún producto escalar que nos respalde). 
-
-Recapitulando, hemos conseguido construir un puente entre las variedades de un espacio vectorial y las de su dual ``vía anuladores''.
-
-Trataremos de justificar a continuación que la operación de ``paso al dual'' es una \ti{involución}, es decir, que si consideramos $E^*$ como espacio vectorial original, y tomamos una variedad suya $W^*$, su anulador $W^{*\perp}\subset E^{**}$ coincide con su antianulador $W\subset E$. Es decir:
-\begin{equation}
-	\{\alpha\in E^{**}\tq \alpha(u)=0\forall u\in E*\}\stackrel{\mathrm{?}}{=}\{\alpha\in E^*\tq \alpha(u)=0\forall u\in E\}
-\end{equation}
-
-Esto resulta confuso, ya que estamos tratando de identificar un subespacio del \ti{bidual} $E^{**}$ con otro subespacio de $E$. Sin embargo, al ser espacios de la misma dimensión, podemos identificarlos (son isomorfos).
-
-\begin{defi}[Antianulador]
-	\label{C2_def_anuladorDual}
-	Sea $W^*\subset E^*$ subespacio vectorial del dual $E^*$, se define el \ti{anulador} de $W^*$ como el conjunto
-	\begin{equation}
-	W^{*\perp}:=\{u\in E\tq \beta(u)=0 \ \forall \beta\in W^*\}
+\begin{obs}[Dimensiones de los Dualizados]
+	\label{C2_obs_dim_anulador}
+	Obsérvese que hemos probado algo bastante importante (además de lo queríamos probar en un principio), y es que, las dimensiones de un subespacio y su anulador suman la dimensión del espacio total, es decir:
+	\begin{equation}\label{C2_eq_dim_anulador}
+	\dim(U)+\dim(U^{\perp})=\dim(E)
 	\end{equation}
-	siendo a su vez un subespacio vectorial de $E$.
-\end{defi}
-Por tanto, cuando nos encontramos en el espacio vectorial $E$, buscamos las formas lineales que se anulan en los vectores de nuestro subespacio. Sin embargo, cuando nos encontramos en el espacio dual $E^*$ hacemos justo lo contrario, buscamos los vectores que anulan las formas lineales de nuestro subespacio dual. Es claro que esta definición no es más que la imagen de la aplicación inversa de la biyección del lema~\ref{C2_lem_correspondenciaAnulador}. Por tanto, se deduce inmediatamente que 
-\begin{equation}
-	(W^{\perp})^{\perp}=W
-\end{equation}
-independientemente de si $W\subset E$ o $W\subset E^*$.
+	
+	Dicho de otra forma, un subespacio $U$ de dimensión $r$ ``dualiza'' en un subespacio $U^\perp$ de dimensión $n-r$ (su codimensión).
+\end{obs}
 
-De esto se desprenden muchas propiedades muy útiles, tal y como muestra la siguiente proposición.
-\begin{prop}[Propiedades de la Dualidad]
+Recapitulando, hemos conseguido construir un puente ``sólido'' y ``de ida y vuelta''entre las variedades de un espacio vectorial y las de su dual ``vía anuladores'' y ``vía antianuladores'' respectivamente.
+
+Para el lector que haya optado por omitir la demostración del lema \ref{C2_lem_correspondenciaAnulador} el término ``antianulador'' resultará extraño. Definámoslo aparte:
+\begin{defi}[Antianulador]
+	Sea un subespacio $W$ del dual $E^*$, se define su \ti{antianulador} como el conjunto de los vectores que son anulados por todos los elementos de $W$. Expresado de forma conjuntista:
+	\[W^\top:=\{u\in E\tq \alpha(u)=0\ \forall\alpha\in W\}\]
+\end{defi}
+
+Es claro que esto no es más que la imagen inversa de la aplicación del lema \ref{C2_lem_correspondenciaAnulador}, que asigna a cada subespacio de $E$ su anulador correspondiente. Como ese mismo lema demuestra que tal aplicación es biyectiva es trivial deducir que:
+\begin{equation}
+	\label{C2_eq_involutividad}
+	(W^{\perp})^{\top}=W
+\end{equation}
+
+\begin{obs}[Abusos de Notación Habituales]
+	Algunos textos (y docentes) denotan al antianulador de la misma forma que lo hacen con el anulador. Además, para dar verosimilitud a este abuso de notación, definen el anulador de un subespacio de $E^*$ como lo que nosotros conocemos como antianulador. Dicho abuso de notación les permite hacer afirmaciones como:
+	\[(W^\perp)^\perp=W\]
+	Lo cual, a priori, con nuestra notación, es una trola bastante grande.
+	
+	Sin embargo, trabajando con cuidado, podemos demostrar que, efectivamente, con nuestras notaciones se cumple que el operador anulador es ``esencialmente involutivo''. Es decir:
+	\begin{equation}
+		(W^\perp)^\perp\cong W
+	\end{equation}
+	Esto significa que existe un isomorfismo entre el anulador del anulador un subespacio (un subespacio del dual del dual) y el subespacio en sí. No solo eso, se puede demostrar que dicho isomorfismo es especialmente agradable, por lo que se le da el nombre de \ti{canónico}.
+	
+	Como la prueba de este hecho no pinta mucho aquí, se ha trasladado al apéndice \ref{A}.
+\end{obs}
+Veamos a continuación una serie de propiedades que nos serán de gran ayuda cuando conozcamos el llamado ``principio de dualidad'', en la sección \ref{C2_principioDualidadLineal}. Estas propiedades pueden resumirse en dos; la inversión de las contenciones y las leyes de DeMorgan.
+\begin{prop}[Propiedades del Anulador]
 	\label{C2_pro_propiedades_dualidad}
 	Se cumplen las siguientes propiedades:
 	\begin{enumerate}
@@ -238,50 +240,87 @@ De esto se desprenden muchas propiedades muy útiles, tal y como muestra la sigu
 		\[(U\cap W)^{\perp}=U^{\perp}+ W^{\perp}\]
 	\end{enumerate}
 \end{prop}
-\begin{proof} PENDIENTE
+\begin{proof}
 	\begin{enumerate}
-		\item $\bra$ Sea $\alpha\in U^{\perp}$ cualquiera. Esto implica que $\alpha(u)=0$ para todo $u\in U$. Como $W\subset U$ en concreto para todos los vectores $w\in W$ se tiene que $\alpha(w)=0$. Por tanto $\alpha\in W^{\perp}$.
+		\item \begin{itemize}
+			\item[$\bra$] Dado un $\alpha\in U^\perp$, veamos que $\alpha\in W^\perp$. En efecto, $\alpha(u)=0$ para todo $u\in U$, pero como $W\subset U$ se tiene que $\alpha(w)=0$ para todo $w\in W$, luego $\alpha\in W^\perp$.
+			
+			\item[$\bla$] Sea $w\in W$, veamos que $w\in U$. Es claro que $\alpha(w)=0$ para toda $\alpha \in W^{\perp}$. Como $U^{\perp}\subset W^{\perp}$ se tiene que $\beta (w)=0$ para toda $\beta\in U^{\perp}$. Luego $w$ pertenece al antianulador del anulador de $U$. Por la ecuación \eqref{C2_eq_involutividad} se tiene que $w\in (U^\perp)^\top=U$.
+		\end{itemize}
 		
-		$\bla$ Sea $w\in W=(W^{\perp})^{\perp}$. Esto implica que $\alpha(w)=0 \ \forall \alpha \in W^{\perp}$. Como $U^{\perp}\subset W^{\perp}$ se tiene que $\beta (w)=0$ para todo $\beta\in U^{\perp}$. Esto implica, por la definición~\ref{C2_def_anuladorDual} que $w\in (U^{\perp})^{\perp}=U$.
 		
-		
-		\item 
-		\item
+		\item Sea $\alpha\in(U+W)^\perp$, inmediatamente se desprende que $\alpha(u+w)=\alpha(u)+\alpha(w)=0$ para todo $u\in U$ y todo $w\in W$. Como $u\in U+W$ y $w\in U+W$ tenemos que $\alpha(u)=0$ para todo $u\in U$ y $\alpha(w)=0$ para todo $w\in W$. Luego $\alpha$ pertenece a los anuladores de $U$ y $W$ simultáneamente. Es decir, $\alpha\in U^\perp\cap W^\perp$. Como todos los pasos que hemos hecho son equivalencias, el resultado se sigue.
+		\item Dado $\alpha\in U^\perp + W^\perp$, veamos que $\alpha\in (U\cap W)^\perp$. Usando que $\alpha\in U^\perp + W^\perp$ tenemos que $\alpha=\beta+\gamma$ donde $\beta\in U^\perp$ y $\gamma\in W^\perp$. Para probar que pertenece al anulador de la intersección, tomemos un $\xi\in U\cap W$ arbitrario y veamos que $\alpha$ lo anula. En efecto:
+		\[\alpha(\xi)=(\beta+\gamma)(\xi)=\beta(\xi)+\gamma(\xi)=0\]
+		Acabamos de ver que $U^\perp+W^\perp\subset(U\cap W)^\perp$. Para ver la igualdad, veamos que ambos tienen la misma dimensión. Para ello usaremos la fórmula de Grassmann, el apartado anterior de esta demostración y la observación \ref{C2_obs_dim_anulador}:
+		\begin{multline}
+			\dim(U^\perp+W^\perp)=\dim(U^\perp)+\dim(W^\perp)-\dim(U^\perp\cap W^\perp)=\\
+			=\dim(U^\perp)+\dim(W^\perp)-\dim((U+ W)^\perp)=\\
+			=n-(\dim(U)+\dim(W)-\dim(U+W))=\\
+			=n-(\dim(U\cap W))=\\
+			=\dim((U\cap W)^\perp)
+		\end{multline}
 	\end{enumerate}
+	Con lo que concluye la demostración.
 \end{proof}
-Todas estas propiedades, y otras derivadas de ellas, nos permiten ``traducir'' enunciados de problemas en espacio vectorial a espacio dual. Para ello es imprescindible saber si, que algo sea verdad en espacio vectorial implica que su ``traducción'' será verdad en el espacio dual y viceversa.
 
+A la identificación de un subespacio con su anulador se la denomina \ti{dualidad canónica}.
 \subsection{Principio de Dualidad}
-SON PÁRRAFOS INCONEXOS, REVISAR
+\label{C2_principioDualidadLineal}
 
-Todo enunciado tiene un enunciado dual, y si es cierto uno es cierto el otro.
-
-Como los espacios vectoriales $E$ y $E^*$ son isomorfos por tener la misma dimensión, todas las propiedades que sean ciertas en uno serán ciertas en el otro.
-
-Todas las propiedades válidas en $E^*$, lo son en $E$ aplicando la biyección de la dualidad canónica.ya que es un espacio vectorial.
-
-Las propiedades de la dualidad canónica actúan como un diccionario que traduce los enunciados del espacio vectorial usual al espacio vectorial dual.
-
-\begin{exa}[Principio de Dualidad]
-	Sea un $E$ un $\K$--espacio vectorial de dimensión $3$.
+Estamos en disposición de enunciar el llamado \ti{principio de dualidad}, un resultado de extrema importancia, ya que, por cada teorema que demostremos obtendremos otro sin necesidad de demostrarlo. A continuación trataremos de enunciar y justificar este principio de forma natural, con un ejemplo. Presentamos los siguientes enunciados:
+\begin{theo}
+	\label{C2_teo_principioDualidad1}
+	Sea un espacio vectorial de dimensión $3$ entonces:
 	
-	Entonces, se tiene que dos rectas distintas generan un plano.
+	Dos rectas distintas generan un plano.
+\end{theo}
+\begin{theo}
+	\label{C2_teo_principioDualidad2}
+	Sea un espacio vectorial de dimensión $3$ entonces:
 	
-	En efecto, esto puede demostrarse fácilmente mediante la fórmula de Grassmann.
-	
-	Por el principio de dualidad, los respectivos anuladores de dichas dos rectas se intersecan en el anulador de un plano.
-	
-	Traduciendo por la propiedad de las dimensiones complementarias:
-	
-	Dos planos se intersecan en una recta.
-	
-	Este último enunciado no hay que probarlo ya que es lo que se llama enunciado dual del primero, y por las propiedades anteriormente demostradas es trivialmente cierto.
-\end{exa}
+	Dos planos distintos se cortan en una recta.
+\end{theo}
+A simple vista los teoremas \ref{C2_teo_principioDualidad1} y \ref{C2_teo_principioDualidad2} parecen dos teoremas totalmente independientes de tal forma que cada cual requerirá una prueba.
 
-La idea del principio de dualidad es que, demostrando un teorema, ya sea en el espacio habitual o en el espacio dual, obtenemos el teorema dual de forma automática y gratuita.
+Bien, tratemos de demostrar el teorema \ref{C2_teo_principioDualidad1}. (Recomendamos encarecidamente al lector no omitir la siguiente demostración).
+\begin{proof}[Demostración del Teorema \ref{C2_teo_principioDualidad1}]
+	Nos preguntamos si la suma de dos subespacios de dimensión uno cuya intersección es un espacio de dimensión nula tendrá dimensión $2$. Es decir:
+	\begin{equation*}
+		\dim(U+W)\stackrel{\mathrm{?}}{=}2
+	\end{equation*}
+	
+	Como por la observación \ref{C2_obs_dim_anulador} preguntarse por la dimensión de un subespacio es preguntarse por la dimensión de su anulador obtenemos que nuestra pregunta inicial es equivalente a:
+	\begin{equation*}
+		\dim((U+W)^\perp)\stackrel{\mathrm{?}}{=}3-2=1
+	\end{equation*}
+	
+	Asimismo, por la proposicion \ref{C2_pro_propiedades_dualidad} sabemos que el anulador de una suma es la intersección de anuladores, luego esta segunda pregunta es equivalente a:
+	\begin{equation*}
+		\dim((U^\perp\cap W^\perp))\stackrel{\mathrm{?}}{=}1
+	\end{equation*}
+	Donde, por la observación \ref{C2_obs_dim_anulador} tenemos que $\dim(U^\perp)=\dim(W^\perp)=2$.
+	
+	Además, como $\dim(U\cap W)=0$, se tiene que $\dim(U^\perp+W^\perp)=3$.
+	
+	Así, a partir de nuestra primera pregunta, hemos obtenido una equivalente que dice reza:
+	
+	\ti{¿En un espacio de dimensión $3$, dos planos distintos se cortan en una recta?}
+	
+	Y esta es, precisamente la pregunta que deberíamos hacernos si estuviéramos tratando de demostrar el teorema \ref{C2_teo_principioDualidad2}.
+	
+	Con esto hemos demostrado que los teoremas \ref{C2_teo_principioDualidad1} y \ref{C2_teo_principioDualidad2} son equivalentes. Es decir, si uno es cierto, es cierto el otro (y viceversa). Asimismo, si uno es falso, el otro también lo será (y al revés). Por ende, con probar uno de los dos nos valdrá.
+	
+	En lo que respecta a la prueba del teorema, es un cálculo inmediato con la fórmula de Grassmann y se deja como ejercicio de cálculo mental al lector.
+\end{proof}
 
+Quizá este no sea el mejor ejemplo para apreciar la gran utilidad de este principio, ya que, las demostraciones de ambos teoremas son extraordinariamente sencillas. Sin embargo, pueden darse casos (y se derán a lo largo del texto) en los que la demostración de un teorema sea extraordinariamente sencilla en el caso dual y algo más engorrosa en el caso ``normal''.
+
+Así pues, dado cierto aserto sobre espacios vectoriales compuesto en términos de sumas, intersecciones y contenidos puede traducirse a un \ti{aserto dual} equivalente gracias a las propiedades demostradas en la sección anterior.
+
+Esto es una auténtica fábrica de teoremas, ya que, si demostramos la veracidad de un enunciado, obtendremos automáticamente la veracidad de su aserto dual equivalente. 
 \section{Dualidad en espacios proyectivos}
-Una vez repasados y ampliados los conceptos de espacio dual y anulador, pasemos a introducir el espacio proyectivo dual. Iremos adentrándonos en él poco a poco, hasta finalmente comprender su juego en la geometría proyectiva. Comencemos con una definición.
+Una vez repasados y ampliados los conceptos de espacio dual y anulador, pasemos a introducir el espacio proyectivo dual. Como siempre, iremos trasladando al contexto proyectivo los resultados del mundo lineal.
 \begin{defi}[Espacio proyectivo dual]
 	Dado un espacio vectorial $E$ y su correspondiente espacio proyectivo $\proy(E)$, se llama \ti{espacio proyectivo dual} de $P$ al espacio proyectivo $\proy(E^*)$ asociado al espacio vectorial dual $E^*$ de $E$. Se denota por $\proy(E^*)$. En el caso de ser $E=\K^{n+1}$, su espacio proyectivo dual se denota por $\proy^*$.
 \end{defi}

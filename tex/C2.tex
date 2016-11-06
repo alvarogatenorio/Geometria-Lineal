@@ -433,54 +433,55 @@ Las propiedades que se desprendían del lema \ref{C2_lem_correspondencia} pueden
 \end{obs}
 
 \subsection{Principio de Dualidad para espacios proyectivos}
-Comencemos con una definición.
-\begin{defi}
-	Sea $\mc{P}$ una proposición relativa a los subespacios de un espacio proyectivo y formulada en términos de intersecciones, variedades generadas por uniones, contenidos y dimensiones de estos subespacios. Se llama \ti{proposición dual} $\mc{P}'$ a la que se obtiene a partir de $\mc{P}$ sustituyendo los términos anteriores por sus duales.
-\end{defi}
-Observemos que sustituir un término por su dual no es más que aplicar la proposición~\ref{C2_pro_propiedades_dualidad_proy} en el sentido adecuado. Por ejemplo, hallemos la proposición dual de ``\ti{en un plano proyectivo real toda recta contiene al menos tres puntos diferentes}'' . Dado que un plano proyectivo real $\proy^2$ tiene dimensión $2$, el dual de una recta es un punto y el de un punto una recta
-\begin{equation*}
-\dim(X)+\dim(X^*)=1. 
-\end{equation*}
-Por tanto su proposición dual será ``\ti{en un plano proyectivo real por todo punto pasan al menos tres rectas diferentes}''.
+Llegados a este punto parece natural tratar de extrapolar el principio de dualidad presentado en la sección \ref{C2_principioDualidadLineal} al mundo proyectivo, ya que contamos con todos los indredientes necesarios.
 
-Una vez definido este concepto, podemos enunciar un teorema de gran importancia.
-\begin{theo}[Principio de Dualidad] Una proposición $\mc{P}$ relativa a variedades proyectivas de espacios de dimensión finita $n$ sobre un cuerpo $\K$ es cierta si y solo si lo es su proposición dual $\mc{P}'$
-\end{theo}
-\begin{proof}PENDIENTE
-	Sea $P$ un espacio proyectivo de dimensión $n$ sobre $\K$ y sea una proposición $\mc{P}$ cierta en $P^*$. Tenemos que demostrar que $\mc{P}'$ es cierta. Esta última se obtiene de sustituir las intersecciones, variedades generadas por uniones, contenidos y dimensiones de estos subespacios que haya en $\mc{P}$ por sus duales. Por lo que si estos eran ciertos en $P^*$, al pasar a su dual, seguirán siendo ciertos en su espacio dual, es decir en $P^{**}=P$, donde se enuncia $\mc{P}'$. Por lo que $\mc{P}'$ es cierta.
+La proposición \ref{C2_pro_propiedades_dualidad_proy} es de vital importancia ya que, literamente, es una ``fábrica de enunciados equivalentes''. Expliquemos esto.
+
+Supongamos que nos preguntamos por la dimensión de cierta variedad proyectiva de un espacio proyectivo de dimensión $n$. La proposición \ref{C2_pro_propiedades_dualidad_proy} (en su cuarto apartado) afirma que decir que cierta variedad $X$ tiene cierta dimesnión $r$ es equivalente a decir que su variedad dualizada $X^*$ tendrá dimensión $n-1-r$.
+
+Esto quiere decir que si una afirmación es cierta, la otra también lo será (y viceversa), cumpliendose algo similar si alguna de las dos afirmaciones es falsa. Por ende, con demostrar o refutar una de las dos afirmaciones (la que nos resulta más sencilla), habremos refutado o demostrado la otra. Esta es la esencia del principio de dualidad, tener dos teoremas al precio de uno (el más barato).
+
+El otro ámbito de aplicación del principio de dualidad es cuando nos preguntamos si cierta variedad $X$ está contenida dentro de cierta otra variedad $Y$. En este caso, la proposición \ref{C2_pro_propiedades_dualidad_proy} (en su primer apartado) nos dice que afirmar que $X\subset Y$ es equivalente a afirmar que $Y^*\subset X^*$.
+
+La combinación de estos dos ámbitos de aplicación, unidos a las prodiedades auxiliares que nos ofrece la proposición \ref{C2_pro_propiedades_dualidad_proy} (en su segundo y tercer apartados) es lo que hace  realmente útil y potente al principio de dualidad. Veamos algunos ejemplos.
+
+\begin{exa}[Obtención del Enunciado Dual]
+	Hallemos la proposición dual de ``\ti{en un plano proyectivo real toda recta contiene al menos tres puntos diferentes}''.
 	
-	El recíproco es análogo.
-\end{proof}
-La gran importancia de este teorema radica en que permite obtener, sin necesidad de demostración, un nuevo teorema a partir de cada teorema conocido. En efecto dado un teorema, este constituye una proposición $\mc{P}$, y por el principio de dualidad, automáticamente su proposición dual $\mc{P}'$ es cierta, es decir, el dual del teorema, es cierto.
-
-NO SABÍA MUY BIEN DONDE PONER EL PRINCIPIO ESTE, SI DELANTE O DETRÁS DEL EJEMPLO, LO HE PUESTO DELANTE PERO PUEDES CAMBIARLO DONDE TE PLAZCA
-
-Todas estas caracterizaciones no serían de ninguna utilidad si no nos permitiesen resolver problemas de espacio proyectivo con mayor facilidad. Hasta ahora no hemos visto ninguna aplicación. Simplemente hemos ido explicando como se hace ese paso al espacio proyectivo dual, insistiendo una y otra vez en su importancia. Pero ¿realmente es tan importante? ¿No podemos simplemente resolver los problemas en el espacio proyectivo o echando mano del espacio vectorial? Es posible, sí, pero muchas veces hacer la asociación entre una variedad proyectiva y su dual, es decir la proyección del anulador, facilita enormemente la resolución. Veamos a continuación un ejemplo.
-\begin{exa}
-	Sea $\proy^3=\proy(\R^4)$. Sean dos rectas del espacio proyectivo $r_1,r_2\in\proy^3$, las cuales no se cortan, y un punto $p\in\proy^3$ que no pertenece a ninguna de las rectas. Demuestre que existe una única recta $r\in\proy^3$ que pasa por p y corta a ambas rectas $r_1, r_2$.\\
+	Como vemos, nos preguntamos si cierta variedad $r$ (recta) contiene a cierta variedad $p_i$ (punto). Es decir:
+	\[p_i\subset r\]
+	Esto es equivalente a preguntarse si el dualizado de $r$, al que llamaremos $r^*$ está contenido en el dualizado de $p_i^*$.
+	\[r^*\subset p_i^*\]
+	Como $r$ es una variedad de dimensión $1$ en un espacio de dimensión $2$, $r^*$ será una variedad de dimensión $0$ (un punto). Análogamente, al ser $p_i$ un punto, $p_i^*$ será una recta.
 	
-	Según el enunciado del problema tenemos dos rectas $r_1,r_2\in\proy^3$ y un punto $p\in\proy^3$ tales que $r_1\cap r_2=\emptyset$ y $p\not\in r_1\cup r_2$. Debemos probar que existe una única recta $r\in\proy^3$ tal que $p\in r$, $r_1\cap r\not=\emptyset$ y $r_2\cap r\not=\emptyset$. Resolvamos el problema primero sin dualizar, y luego pasando al dual.
+	Así pues el enunciado dual (equivalente al primero) será ``\ti{Por todo punto pasan al menos $3$ rectas diferentes}''.
+	
+	Nótese que no hemos demostrado la veracidad ni la falsedad de ninguno de los enunciados, sin embargo, con demostrar algo sobre uno de ellos, este algo será automáticamente válido para el otro.
+\end{exa}
+Todos estos puentes, identificaciones, y demás no serían de ninguna utilidad si no nos permitiesen resolver problemas mayor facilidad. Hasta ahora no hemos visto ningún ejemplo que realmente haga valer todo nuestro trabajo. Pues, al fin y al cabo, ¿no podemos simplemente resolver los problemas ``a pelo''? Es posible, sí, pero muchas veces hacer la asociación entre una variedad proyectiva y su dual, es decir la proyección del anulador, facilita enormemente la resolución. Veamos a continuación el ejemplo prometido.
+\begin{exa}[Resolución del Problema Dual]
+	Sean dos rectas (variedades de dimensión $1$) $r_1,r_2$ en el espacio proyectivo $\proy^3=\proy(\R^4)$, las cuales no se cortan. Asimismo sea un punto $p\in\proy^3$ no perteneciente a ninguna de las rectas. Demuestre que existe una única recta $r$ que pasa por $p$ y corta a ambas rectas $r_1, r_2$.
+	
+	Desbrozando la literatura del enunciado tenemos dos rectas $r_1,r_2$ y un punto $p\in\proy^3$ tales que $r_1\cap r_2=\emptyset$ y $p\not\in r_1\cup r_2$. Debemos probar que existe una única recta $r$ tal que $p\in r$, $r_1\cap r\not=\emptyset$ y $r_2\cap r\not=\emptyset$. Resolvamos el problema primero sin dualizar, y luego pasando al dual.
 	\begin{enumerate}
 		\item Tomemos la variedad proyectiva engendrada por $r_1$ y $p$, la cual es un plano ya que
 		\begin{equation*}
 		\dim(\engen{p,r_1})=\dim(p)+\dim(r_1)-\dim(r_1\cap p)=0+1-(-1)=2
 		\end{equation*}
-		Podemos aplicar el corolario~\ref{C1_cor_rectaHiperplano} al plano $\engen{p,r_1}$ y la recta $r_2$, según el cual una recta y un hiperplano siempre se cortan. Antes, y para obtener el resultado deseado, debemos asegurarnos de que $r_2\not\subset\engen{p,r_1}$, pues en caso contrario existirían más de un punto de corte entre la recta y el hiperplano y $r$ no sería única. Es fácil comprobar que esto no ocurre, ya que si $r_2\subset\engen{p,r_1}$, entonces $r_1\cap r_2\not=\emptyset$, llegando así a un absurdo. Existirá por tanto un único punto $q\in r_2\cap\engen{p,r_1}$. Definimos entonces la recta $r$ como la variedad engendrada por los puntos $p$ y $q$, pudiéndose comprobar con la fórmula de las dimensiones que efectivamente es una recta. Por un lado $r$ es única, ya que lo es el punto $q$. Además $r_1\cap r\not=\emptyset$ y $r_2\cap r\not=\emptyset$, ya que $q\in r_2\cap\engen{p,r_1}$. Queda así demostrado el ejercicio.
+		Podemos aplicar el corolario~\ref{C1_cor_rectaHiperplano} al plano $\engen{p,r_1}$ y la recta $r_2$, según el cual una recta y un hiperplano siempre se cortan. Antes, y para obtener el resultado deseado, debemos asegurarnos de que $r_2\not\subset\engen{p,r_1}$, pues en caso contrario existirían más de un punto de corte entre la recta y el hiperplano y $r$ no sería única. Es fácil comprobar que esto no ocurre, ya que si $r_2\subset\engen{p,r_1}$, entonces $r_1\cap r_2\not=\emptyset$, llegando así a un absurdo. Existirá por tanto un único punto $q\in r_2\cap\engen{p,r_1}$. Definimos entonces la recta $r$ como la variedad engendrada por los puntos $p$ y $q$, pudiéndose comprobar con la fórmula de las dimensiones que efectivamente es una recta. Nótese que $r$ es única, ya que lo es el punto $q$. Además $r_1\cap r\not=\emptyset$ y $r_2\cap r\not=\emptyset$, ya que $q\in r_2\cap\engen{p,r_1}$. Queda así demostrado el ejercicio.
 		
-		\item Dado que es la primera vez que dualizamos un problema, hagámoslo paso a paso. Para empezar, y atendiendo a la proposición~\ref{C2_pro_propiedades_dualidad_proy}, la ecuación de las dimensiones que caracteriza la dualización es, en nuestro caso,
+		\item Para empezar, y atendiendo a la proposición~\ref{C2_pro_propiedades_dualidad_proy}, la ecuación de las dimensiones que caracteriza la dualización es, en nuestro caso:
 		\begin{equation*}
 		\dim(X)+\dim(X^*)=2. 
 		\end{equation*}
-		Por tanto el dual de un punto es un plano del espacio proyectivo dual y el dual de una recta, una recta. Tenemos entonces que $p^*$ es un plano y $r_1^*,r_2^*$ son rectas. Por otro lado que $p\in r$ implica, por la proposición~\ref{C2_pro_propiedades_dualidad_proy}, que $r^*\subset p^*$. De igual forma que $p\not\in r_1\cup r_2$ implica que $r_1^*\not\subset p^*$ y $r_2^*\not\subset p^*$. Además si $r_1\cap r_2=\emptyset$, entonces $r_1^*\cap r_2^*=\emptyset$. En caso contrario existiría un plano dual $\pi^*$ tal que $r_1^*\subset\pi^*$ y $r_2^*\subset\pi^*$. Utilizando de nuevo la fórmula de las dimensiones y la proposición~\ref{C2_pro_propiedades_dualidad_proy}, esto equivaldría a decir que existe un punto $q$ tal que $q\in r_1$ y $q\in r_2$, llegando así a un absurdo.
+		Por tanto, el dual de un punto es un plano y el dual de una recta, otra recta. Tenemos entonces que $p^*$ es un plano y $r_1^*,r_2^*$ son rectas. Por otro lado que $p\in r$ implica, por la proposición~\ref{C2_pro_propiedades_dualidad_proy}, que $r^*\subset p^*$. De igual forma que $p\not\in r_1\cup r_2$ implica que $r_1^*\not\subset p^*$ y $r_2^*\not\subset p^*$. Además, se comprueba inmediatamente (dualizando y aplicando la fórmula de Grassmann) que como $r_1\cap r_2=\emptyset$, entonces $r_1^*\cap r_2^*=\emptyset$.
 		
 		Por tanto el enunciado del problema se traduce en, dadas dos rectas $r_1^*, r_2^*\in\proy^{3^*}$ y un plano $p^*\in\proy^{3^*}$ tales que $r_1^*\cap r_2^*=\emptyset$, $r_1^*\not\subset p^*$ y $r_2^*\not\subset p^*$; demostrar que existe una única recta $r^*$ tal que $r_1^*\cap r^*\not=\emptyset$, $r_2^*\cap r^*\not=\emptyset$ y $r^*\subset p^*$.
 		
 		Dado que las rectas $r_1^*, r_2$ no están contenidas en el plano $p^*$, cortarán con él en dos puntos únicos. Es claro que la recta engendrada por esos dos puntos es única y cumple las condiciones requeridas.
 	\end{enumerate}
+	En este caso, la dualización del problema lo convierte en algo trivial de resolver.
 \end{exa}
 \begin{obs}
-	Este enunciado es falso en espacio afín. Podemos encontrar dos rectas paralelas, $r_1$ y $r_2$, y un punto $p$, que cumplan las hipótesis del enunciado, para los cuales no existe ninguna recta $r$; o bien para los cuales existan infinitas rectas $r$, tales que $p\in r$, $r_1\cap r\not=\emptyset$ y $r_2\cap r\not=\emptyset$. Ello se debe a que en el espacio afín dos rectas paralelas no se cortan, mientras que en el espacio proyectivo sí (en el infinito), y por lo tanto no cumplen las hipótesis del enunciado.
-\end{obs}
-\begin{obs}
-	Una vez resuelto este ejercicio podemos observar diferencias en los métodos de resolución. Mientras que en el primer caso hemos tenido que construir la recta sin mucha idea de a donde nos llevaría e ir comprobando que cumple los requisitos, al traducir el problema al espacio dual, la recta ha surgido por sí sola, como consecuencia de las hipótesis del enunciado. Es cierto que, debido a la sencillez de este ejercicio, la diferencia en la dificultad de resolución no es tan clara. Sin embargo, es posible darse cuenta de que, en problemas más complicados, el espacio proyectivo dual nos da un camino más rápido. La única dificultad radica en traducir bien los enunciados.
+	Este enunciado es falso en el contexto de la geometría afín. Podemos encontrar dos rectas paralelas, $r_1$ y $r_2$, y un punto $p$, que cumplan las hipótesis del enunciado, para los cuales no existe ninguna recta $r$; o bien para los cuales existan infinitas rectas $r$, tales que $p\in r$, $r_1\cap r\not=\emptyset$ y $r_2\cap r\not=\emptyset$. Ello se debe a que en el espacio afín dos rectas paralelas no se cortan, mientras que en el espacio proyectivo sí.
 \end{obs}

@@ -47,15 +47,19 @@
 \contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n}{44}{section.5.1}
 \contentsline {section}{\numberline {5.2}Propiedades}{47}{section.5.2}
 \contentsline {section}{\numberline {5.3}Simetr\IeC {\'\i }as de la raz\IeC {\'o}n doble}{49}{section.5.3}
-\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{52}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{52}{section.Alph1.1}
-\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{53}{subsection.Alph1.1.1}
-\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{54}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{54}{subsection.Alph1.2.1}
-\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{54}{section*.6}
-\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{55}{section*.7}
-\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{55}{section*.8}
-\contentsline {paragraph}{Observaciones}{55}{section*.9}
-\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{55}{section*.10}
-\contentsline {section}{\numberline {A.3}Dualidad}{56}{section.Alph1.3}
-\contentsline {chapter}{\numberline {B}Mierdas varias}{58}{appendix.Alph2}
+\contentsline {chapter}{\numberline {6}Clasificaci\IeC {\'o}n de homograf\IeC {\'\i }as}{52}{chapter.6}
+\contentsline {section}{\numberline {6.1}Clasificaci\IeC {\'o}n de homograf\IeC {\'\i }as de $\mathbb {P}^1$. Puntos fijos}{52}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Dos puntos fijos distintos}{52}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Un punto fijo doble}{54}{subsection.6.1.2}
+\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{56}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{56}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{57}{subsection.Alph1.1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{58}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{58}{subsection.Alph1.2.1}
+\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{58}{section*.6}
+\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{59}{section*.7}
+\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{59}{section*.8}
+\contentsline {paragraph}{Observaciones}{59}{section*.9}
+\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{59}{section*.10}
+\contentsline {section}{\numberline {A.3}Dualidad}{60}{section.Alph1.3}
+\contentsline {chapter}{\numberline {B}Mierdas varias}{62}{appendix.Alph2}

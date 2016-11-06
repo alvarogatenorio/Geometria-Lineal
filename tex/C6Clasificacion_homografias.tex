@@ -1,0 +1,166 @@
+\chapter{Clasificación de homografías}
+Realizaremos la clasificación de las homografías a partir de sus variedades invariantes. Comenzaremos con las homografías de $\proy^1$, clasificándolas según sus puntos fijos. Relacionaremos esto con las formas canónicas de Jordan y haremos hincapié en algunas homografías importantes, como son las involuciones.
+
+\section{Clasificación de homografías de $\proy^1$. Puntos fijos}
+En esta sección haremos una primera aproximación intuitiva a los puntos fijos de una homografía de $\proy^1$, para después enlazarlo con las formas canónicas de Jordan.
+
+Recordemos que podíamos expresar una homografía de $\proy^1$ como
+\begin{equation}
+	\label{C6_transformada_moebius}
+	\theta'=\frac{a\theta+b}{c\theta +d}
+\end{equation}
+donde $ad-bc\not=0$. Podemos remover un poco las cosas en la ecuación anterior
+\begin{equation}
+	\theta'(c\theta+d)=a\theta+b\sii c\theta\theta'-a\theta+d\theta'-b=0
+\end{equation}
+y obtenemos que es equivalente a 
+\begin{equation}
+	\label{C6_eq_homografia_segundo_orden}
+	\alpha\theta\theta'+\beta\theta+\gamma\theta'+\delta=0
+\end{equation}
+donde $\alpha=c, \ \beta=-a, \ \gamma=d, \ \delta=-b$. 
+
+Que una homografía, distinta de la identidad, mantenga invariante un punto $(x,y)$ implica que $(x',y')=(x,y)$, y con ello $\theta'=\theta$. Sustituyendo en la ecuación anterior obtenemos una ecuación de segundo grado, y, por tanto, tendrá dos soluciones distintas o una solución doble. Esto quiere decir que, suponiendo que $\K=\C$, las homografías, exceptuando la identidad, tienen dos puntos fijos distintos o un punto fijo doble, dependiendo de la ecuación resultante.
+\begin{equation}
+	\label{C6_eq_homografia_segundo_orden_punto_fijo}
+	\alpha\theta^2+(\beta+\gamma)\theta+\delta=0
+\end{equation}
+Veamos en cada uno de los casos cual es la expresión de la homografía que tiene esos puntos fijos, basándonos en la ecuación anterior.
+
+\subsection{Dos puntos fijos distintos}
+Sea $h$ una homografía de $\proy^1$ con dos puntos fijos $M$ y $N$ distintos. Tratamos de encontrar el valor de los parámetros $\alpha, \beta,\gamma,\delta$ para poder describir las homografías de este tipo. Como sabemos que $M$ y $N$ son puntos fijos, sus coordenadas no homogéneas deben cumplir la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo}. Por tanto una forma de hallar estos parámetro sería sustituir las coordenadas no homogéneas de los puntos fijos en dicha ecuación y ver para que valores de $\alpha, \beta,\gamma,\delta$ se cumple. 
+
+Para facilitar este cálculo tomamos la referencia $\mf{R}=\{M,N;E\}$, donde $E$ es un punto cualquiera distinto de $M$ y $N$. En esta referencia las coordenadas no homogénea de $M$ y $N$ son $\infty$ y $0$, respectivamente. Por tanto la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo} admite como soluciones $0$ y $\infty$. Sustituyendo estos valores en la ecuación obtenemos que 
+\begin{equation*}
+	\alpha 0+(\beta+\gamma)0+\delta=0\sii\delta=0
+\end{equation*}
+Hagamos el cálculo para $\infty$ con más cuidado. Sustituyendo las coordenadas no homogéneas por las coordenadas homogéneas en la ecuación~\eqref{C6_eq_homografia_segundo_orden}, esta queda
+\begin{equation}
+	\alpha xx'+\beta xy'+\gamma x'y+\delta yy'=0
+\end{equation}
+Dado que estamos con puntos fijos imponemos que $(x',y')=(x,y)$ y que $\delta=0$, pues lo hemos hallado antes
+\begin{equation*}
+	\alpha x^2+\beta xy+\gamma xy=0
+\end{equation*}
+Las coordenadas homogéneas de $M$ respecto a la referencia $\mf{R}$ son $(1:0)$. Sustituyéndolas en la ecuación anterior obtenemos que
+\begin{equation*}
+\alpha 1+\beta 0+\gamma 0=0\sii \alpha=0
+\end{equation*}
+Por tanto, en una homografía de $\proy^1$ con dos puntos fijos se tiene que $\alpha=c=0$ y $\delta=-b=0$. Entonces, la \ti{ecuación canónica} de la homografía respecto a la referencia $\mf{R}$ tomada es
+\begin{equation}
+	\theta'=\frac{a\theta+b}{c\theta +d}=\frac{a}{d}\theta=k\theta
+\end{equation}
+donde la constante $k$ se llama \ti{módulo} de la homografía. Notemos que dada cualquier homografía que tenga dos puntos fijos distintos, tomando la referencia adecuada, podemos decir que dichos puntos fijos son el cero y el infinito.
+
+\begin{obs}
+	El cálculo para el punto $M$, cuya coordenada no homogénea era $\infty$, puede hacerse sin tener tanto cuidado, gracias a que hemos comprobado rigurosamente que funciona.
+	\begin{equation*}
+		\alpha\theta^2+(\beta+\gamma)\theta+\delta=0\ra\alpha+(\beta+\gamma)\frac{1}{\theta}+\delta\frac{1}{\theta^2}=0
+	\end{equation*}
+	\begin{equation*}
+		\alpha+(\beta+\gamma)\frac{1}{\infty}+\delta\frac{1}{\infty^2}=0\sii \alpha=0
+	\end{equation*}
+\end{obs}
+Es importante observar que, aunque la ecuación $\theta'=k\theta$ se denomina canónica, en realidad no lo es mucho, ya que esta expresión se ha obtenido tomando la referencia $\mf{R}=\{M,N;E\}$. Notemos que si, en vez de tomar como referencia $\mf{R}$, tomamos $\overline{\mf{R}}=\{N,M;E\}$ la ecuación cambia.
+
+En efecto, el cambio de $\mf{R}$ a $\overline{\mf{R}}$ viene dado por la homografía que trasforma $(1:0)$ en $(0:1)$ y $(0:1)$ en $(1:0)$. Sustituyendo estas trasformaciones, en coordenadas no homogéneas, en la ecuación~\eqref{C6_transformada_moebius}, obtenemos que la ecuación de la homografía que transforma $\mf{R}$ en $\overline{\mf{R}}$ es
+\begin{equation*}
+	\overline{\theta}=\frac{b}{c\theta}=\frac{\lambda}{\theta}
+\end{equation*}
+Por tanto, la ecuación $\theta'=k\theta$ respecto a la referencia $\overline{\mf{R}}$, que se obtiene despejando en la ecuación anterior $\theta$ en función de $\overline{\theta}$ y sustituyendo, es
+\begin{equation*}
+	\frac{\lambda}{\overline{\theta}'}=k\frac{\lambda}{\overline{\theta}}\sii \overline{\theta}'=\frac{1}{k}\overline{\theta}
+\end{equation*}
+por lo que en este caso el módulo de la homografía con puntos fijos $M$ y $N$ sería $1/k$. 
+
+Podríamos preguntarnos entonces porque darle el apellido canónico. Aunque una permutación de los puntos $M$ y $N$ en la referencia nos da un valor del módulo de la homografía distinto, el parámetro $k$ está geométricamente asociado a la homografía, cosa que veremos no ocurrirá con parámetros posteriores. Es decir, solo depende de la homografía y del orden de los puntos $M$ y $N$ en la referencia, que según sea obtendremos $k$ o $1/k$. Observemos que no depende del punto unidad $E$ que hayamos tomado. Por tanto la ecuación
+\begin{equation}
+	\label{C6_theta_ktheta}
+	\theta'=k\theta
+\end{equation}
+puede considerarse canónica.
+
+El parámetro $k$ puede ser hallado a través de la razón doble, ya que estamos tratando homografías. En efecto, dada una homografía $h$ que deja fijos los puntos $M$ y $N$, y por tanto en la referencia $\mf{R}=\{M,N;E\}$ viene descrita por la ecuación~\eqref{C6_theta_ktheta} para cierto $k$, se tiene que
+\begin{equation}
+	\{M,N,P,h(P)\}=\{\infty,0,\theta,\theta'=k\theta\}=k
+\end{equation}
+para un punto $P$ cualquiera independientemente de $E$. Si permutamos los puntos $M$ y $N$, por la simetría de la razón doble se tiene que
+\begin{equation}
+	\{N,M,P,h(P)\}=\frac{1}{k}
+\end{equation}
+independientemente de $E$. Esto nos demuestra de nuevo que el módulo depende solo de la homografía y del orden de los puntos fijos.
+
+Hagamos un pequeño inciso que retomaremos más adelante. Si escribimos, en la referencia $\mf{R}=\{M,N,E\}$, la matriz asociada a una homografía $h$ que tiene dos puntos fijos $M$ y $N$ obtenemos
+\begin{equation*}
+	\left( \begin{array}{cc}
+	a&0\\
+	0&d
+	\end{array}\right) 
+	\sim \left( \begin{array}{cc}
+	\frac{a}{d}&0\\
+	0&1
+	\end{array}\right) 
+	\sim \left( \begin{array}{cc}
+	k&0\\
+	0&1
+	\end{array}\right)
+\end{equation*}
+Por tanto, hemos encontrado una referencia en la cual la homografía $h$ es diagonal.
+
+\subsection{Un punto fijo doble}
+Veamos ahora que ecuación describe a una homografía $h$ de $\proy^1$ que deja fijo un solo punto. Si $M$ es el punto fijo de $h$, entonces la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo} debe admitir como solución la coordenada no homogénea de $M$. Por tanto, procederemos como en el caso anterior. Tomaremos una referencia adecuada y sustituiremos la coordenada no homogénea de $M$, respecto a dicha referencia, en la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo} para hallar los parámetros $\alpha, \beta,\gamma,\delta$.
+
+Dado que solo hay un punto fijo, tomamos como referencia $\mf{R}=\{M,X;E\}$, donde $X$ y $E$ son puntos diferentes y distintos de $M$. En esta referencia la coordenada no homogénea de $M$ es $\infty$. Por tanto, para cualquier homografía con un punto fijo doble, tomando la referencia adecuada, se puede decir que dicha homografía deja fijo el infinito. Dado que ya justificamos anteriormente los cálculo con $\infty$ esta vez lo haremos sin tener cuidado. Recordemos que podíamos escribir
+\begin{equation*}
+	\alpha\theta^2+(\beta+\gamma)\theta+\delta=0\ra\alpha+(\beta+\gamma)\frac{1}{\theta}+\delta\frac{1}{\theta^2}=0
+\end{equation*}
+\begin{equation*}
+	\alpha+(\beta+\gamma)\frac{1}{\infty}+\delta\frac{1}{\infty^2}=0\sii \alpha=0
+\end{equation*}
+Por tanto la ecuación que describe los puntos fijos de la homografía pasa a ser
+\begin{equation*}
+	(\beta+\gamma)\theta+\delta=0
+\end{equation*}
+Dado que el punto $M$ es solución doble de la ecuación de segundo grado~\eqref{C6_eq_homografia_segundo_orden_punto_fijo}, si volvemos a sustituir su coordenada no homogénea en la ecuación anterior, esta debe cumplirse. Por tanto
+\begin{equation*}
+	(\beta+\gamma)\theta+\delta=0\ra(\beta+\gamma)+\delta\frac{1}{\theta}=0
+\end{equation*}
+\begin{equation*}
+	(\beta+\gamma)+\delta\frac{1}{\infty}=0\sii \beta=-\gamma
+\end{equation*}
+Por tanto, en una homografía de $\proy^1$ con un punto fijo doble se tiene que $\alpha=c=0$ y $-a=\beta=-\gamma=-d$. Entonces, la ecuación ``canónica" de la homografía, respecto a la referencia $\mf{R}$ tomada, es
+\begin{equation}
+\theta'=\frac{a\theta+b}{c\theta +d}=\frac{a\theta+b}{a}=\theta+\mu
+\end{equation}
+A este tipo de homografías de las denomina \ti{elaciones} y se dice que dejan fijo el infinito, pues, como hemos visto antes, tomando la referencia adecuada el punto fijo $M$ pasa a ser $\infty$.
+
+Notemos que esta vez el apellido canónico no es merecido, al contrario que en el caso anterior, pues el parámetro $\mu$ no está geométricamente asociado a la homografía. 
+
+Veámoslo. Partiendo de la referencia $\mf{R}=\{M,X;E\}$, realizamos un cambio de coordenadas que lleve el infinito al infinito, por ejemplo aplicando una homografía con ecuación
+\begin{equation*}
+	\overline{\theta}=\frac{1}{k}\theta
+\end{equation*}
+es decir, una homografía $h$ que en esa referencia deje fijos el cero y el infinito. Por tanto, estamos pasando de la referencia $\mf{R}$ a la refenrecia $\overline{\mf{R}}=\{M,X;h(E)\}$. 
+
+La ecuación $\theta'=\theta+\mu$ respecto a la referencia $\overline{\mf{R}}$, que se obtiene despejando en la ecuación anterior $\theta$ en función de $\overline{\theta}$ y sustituyendo, es
+\begin{equation*}
+	k\overline{\theta}'=k\overline{\theta}+\mu\sii \overline{\theta}'=\overline{\theta}+\frac{\mu}{k}
+\end{equation*}
+Si $k=\mu$ entonces la ecuación de una homografía cuyo punto fijo es $M$ respecto a la referencia $\overline{\mf{R}}$ es
+\begin{equation*}
+	\overline{\theta}'=\overline{\theta}+1
+\end{equation*}
+Como se puede observar, el parámetro $\mu$ no está asociado a la homografía, pues lo hemos eliminado de la ecuación que la define. Por tanto, la ecuación $\theta'=\theta+\mu$ no se puede considerar canónica. Lo máximo a lo que podemos aspirar es a expresar la ecuación de una elación como $\theta'=\theta+1$, tomando la referencia adecuada.
+
+De nuevo, hagamos un inciso que retomaremos más adelante. Dada una homografía $h$ que tiene un punto fijo doble $M$, si escribimos, en la referencia $\mf{R}$ en la cual la ecuación que la define es $\theta'=\theta+1$ (y por tanto $b=a$), su matriz asociada obtenemos
+\begin{equation*}
+\left( \begin{array}{cc}
+a&a\\
+0&a
+\end{array}\right) 
+\sim \left( \begin{array}{cc}
+1&1\\
+0&1
+\end{array}\right) 
+\end{equation*}
+Por tanto, hemos encontrado una referencia en la cual la matriz de la homografía $h$ se encuentra en su forma canónica de Jordan, salvo múltiplo.

@@ -140,7 +140,7 @@ Veámoslo. Partiendo de la referencia $\mf{R}=\{M,X;E\}$, realizamos un cambio d
 \begin{equation*}
 	\overline{\theta}=\frac{1}{k}\theta
 \end{equation*}
-es decir, una homografía $h$ que en esa referencia deje fijos el cero y el infinito. Por tanto, estamos pasando de la referencia $\mf{R}$ a la refenrecia $\overline{\mf{R}}=\{M,X;h(E)\}$. 
+es decir, una homografía $h$ que en esa referencia deje fijos el cero y el infinito. Por tanto, estamos pasando de la referencia $\mf{R}$ a la referencia $\overline{\mf{R}}=\{M,X;h(E)\}$. 
 
 La ecuación $\theta'=\theta+\mu$ respecto a la referencia $\overline{\mf{R}}$, que se obtiene despejando en la ecuación anterior $\theta$ en función de $\overline{\theta}$ y sustituyendo, es
 \begin{equation*}
@@ -164,3 +164,351 @@ a&a\\
 \end{array}\right) 
 \end{equation*}
 Por tanto, hemos encontrado una referencia en la cual la matriz de la homografía $h$ se encuentra en su forma canónica de Jordan, salvo múltiplo.
+
+\section{Formas canónicas de Jordan y puntos fijos}
+Hemos anticipado que existe cierta relación entre los puntos fijos de una homografía y la forma canónica de Jordan de su matriz asociada. En este apartado explicaremos cual es esa relación.\\
+
+Sea $h$ una homografía distinta de la identidad. Si un punto $[v]$ es punto fijo de la homografía, entonces 
+\begin{equation}
+	\label{C6_eq_puntofijo_autovector}
+	[\widehat{h}(v)]=h([v])=[v]\sii \widehat{h}(v)=\rho v
+\end{equation}
+para cierto $\rho$, de lo cual se deduce que $v$ es autovector de la aplicación lineal $\widehat{h}$ con autovalor asociado $\rho$. Por tanto un punto $x$ es punto fijo de la homografía si y solo si es un autovector de la aplicación lineal $\widehat{h}$, asociado a un autovalor no nulo.
+
+Antes de continuar hagamos un pequeño recordatorio.
+
+\begin{obs}
+	Dada un endomorfismo $\widehat{h}$ de $E$ ($\dim(E)=n$) y sean $\lambda_i$, con $i=1,\cdots,r$, sus distintos autovalores, se llama subespacio propio asociado a $\lambda_i$ al subesapcio vectorial $V_{\lambda_i}$ formado por todos los autovectores asociados a dicho autovalor:
+	\begin{equation}
+		V_{\lambda_i}:=\{u\in E\tq \widehat{h}(u)=\lambda_i u\}
+	\end{equation}
+	Se verifica que 
+	\begin{equation}
+		V_{\lambda_i}= Ker(\widehat{h}-\lambda_i I) \ ; \quad \dim(V_{\lambda_i})=n-rg(A-\lambda_i I)
+	\end{equation}
+	donde $A$ es la matriz asociada a $\widehat{h}$. 
+	
+	La dimensión de $V_{\lambda_i}$, denotada por $d_i$ se denomina multiplicidad geométrica. Por otro lado, la multiplicidad de $\lambda_i$ como raíz del polinomio característico se denomina multiplicidad algebraica, y se denota por $\alpha_i$. Si $\alpha_i+\cdots+\alpha_r=n$ y $d_i=\alpha_i$ para cada $i=1,\cdots,r$, entonces $\widehat{h}$ es diagonalizable. En el caso en el que solo se cumpla que $\alpha_i+\cdots+\alpha_r=n$ el endomorfismo será ``Jordanizable".
+\end{obs}
+
+Sabemos pues que $u$ es autovector de $\widehat{h}$ asociado a un autovalor $\lambda$ no nulo si y solo si $[u]$ es punto fijo. Por tanto, como $V_{\lambda}$ está formado por todos los autovectores asociados a $\lambda$, se tiene que $\proy(V_\lambda)$ es una variedad proyectiva formada por punto fijos de $h$. Además, el conjunto de las proyecciones de los subespacios propios asociados a los distintos autovalores de $\widehat{h}$ nos proporcionan todos los puntos fijos de $h$.
+
+Notemos que hasta ahora no hemos utilizado en absoluto que $h$ sea una homografía de $\proy^1$. Con esto queremos resaltar que todo lo dicho es válido para homografías de $\proy^n$. Es decir, los puntos fijos de una homografía de $\proy^n$ vienen dados por $\proy(V_{\lambda_i})$ para los distintos autovalores $\lambda_i$ de la aplicación lineal asociada.
+
+\begin{obs}
+	Cualquier homografía de un espacio proyectivo complejo tiene puntos fijos. Sin embargo, hay homografías del espacio proyectivo real que no los tienen. Podemos precisar un poco más, ya que sabemos que todo polinomio con coeficientes en $\R$ de grado impar tiene raíces. Por tanto para que haya homografías sin puntos fijos, el grado del polinomio debe ser par, con lo cual la dimensión del espacio vectorial es par y, por tanto, la dimensión del espacio proyectivo debe ser impar.
+\end{obs}
+
+Indaguemos un poco más para obtener las conclusiones del apartado anterior, es decir, que una homografía $h$ de $\proy^1$ distinta de la identidad tiene o dos puntos fijos distintos o uno doble. Para ello trabajemos con matrices.
+
+Sea $A$ la matriz asociada a la homografía $h$, que no es más que la matriz asociada a la aplicación lineal $\widehat{h}$, y $x$ un punto fijo de $h$. Entonces $\rho x=Ax$, con lo cual se obtiene el sistema $(A-\rho I)x=0$, que tiene solución no idénticamente nula si y solo si $\det(A-\rho I)=0$. Este determinante no es otro que el polinomio característico, cuyas raíces, $\rho$, son los autovalores de la aplicación lineal $\widehat{h}$. Dado que nos encontramos en $\proy^1$, la matriz $A$ será una matriz $2\times 2$, y por tanto el polinomio característico será un polinomio de segundo grado. Esto implica que tendrá dos soluciones distintas o una solución doble, siempre que el cuerpo sobre el que estemos trabajando se $\C$. Por tanto la aplicación lineal $\widehat{h}$ tendrá un autovalor o dos distintos. Evaluemos cada caso.
+
+Si $\widehat{h}$ tiene dos autovalores distintos, entonces $\dim(V_{\rho_i})=1$. Por tanto las variedades proyectivas $\proy(V_{\rho_1})$ y $\proy(V_{\rho_2})$ tienen dimensión cero, por lo que son puntos. Esto da lugar a dos puntos fijos distintos en la homografía. Además si escribimos la matriz $A$ en la base formada por estos dos autovectores obtendremos una matriz diagonal, como habíamos visto antes.
+
+Si $\widehat{h}$ tiene un solo autovalor $\rho$, en cuyo caso $\alpha_1=2$, en principio pueden darse dos casos.
+
+El caso en el que $\dim(V_{\rho})=2=d_1$ no es admisible, ya que hemos supuesto que $h$ es distinta de la identidad. Sin embargo, la aplicación $\widehat{h}$ con $\dim(V_{\rho})=2$ tiene como autovectores asociados a $\rho$ todo el espacio vectorial, por lo que todos los puntos de $\proy^1$ serían puntos fijos de $h$.
+
+Si $\dim(V_{\rho})=1=d_1$ entonces $\proy(V_{\rho})$ es un punto. En tal caso, la homografía $h$ tendrá un único punto fijo doble. Además, dado que $\alpha_1=2\not=d_1=1$, la matriz $A$ no es diagonalizable. Sin embargo, si admite forma canónica de Jordan. Por tanto, en cierta base, a la cual pertenece dicho autovector, la matriz $A$ se encuentra en su forma canónica de Jordan, como vimos anteriormente.\\
+
+Con todo ello podemos concluir que una homografía de $\proy^1$, distinta de la identidad, tiene dos puntos fijos distintos o un punto fijo doble. Si escribimos la matriz asociada a la homografía en la base dada por dichos puntos fijos obtendremos, en el primer caso, una matriz diagonal y, en el segundo, su forma canónica de Jordan. 
+
+Notemos a esta misma conclusión habíamos llegado en el apartado anterior.
+\begin{obs}
+	Sea una homografía $h$ de $\proy^1$ y su aplicación lineal asociada $\widehat{h}$. Un punto $[v]$ de $\proy^1$ pertenece al centro de $h$ si y solo si es un autovector de $\widehat{h}$ con autovalor $0$.
+	
+	En efecto, que $[v]$ esté en el centro de $h$ equivale a que $v\in ker\widehat{h}$, es decir, que $\widehat{h}(v)=0=0\cdot v$.
+\end{obs}
+
+\section{Aplicaciones afines}
+En esta sección y en la que sigue trataremos algunos casos particulares, de gran importancia, de homografías de $\proy^1$.
+
+Estudiemos las homografía de $\proy^1$ tales que su matriz asociada es
+\begin{equation*}
+	A=\left( \begin{array}{cc}
+		a&b\\
+		0&d
+	\end{array}\right)
+\end{equation*}
+es decir, $c=0$, y con ello , como $d$ no puede ser cero, 
+\begin{equation}
+	\theta'=\frac{a\theta+b}{d}=\alpha\theta+\beta
+\end{equation}
+donde $\alpha=a/d$ y $\beta=b/d$. Veamos cuales son sus puntos fijos.
+
+Siguiendo lo visto en el apartado anterior, debemos encontrar los autovalores de $A$ y sus autovectores asociados. Realizando unas sencillas cuentas se llega a que los autovalores son $a$ y $d$. Dado que hay dos autovalores distintos, la homografía $h$ tendrá dos puntos fijos. 
+
+Calculemos dos autovectores, $u_a$ y $u_d$ asociados a estos autovalores. Recordemos que, como $V_{\lambda}= Ker(\widehat{h}-\lambda I)$, si $u$ es un autovector con autovalor $\lambda$, entonces $u\in V_{\lambda}= Ker(\widehat{h}-\lambda I)$, y por tanto $(A-\lambda I)u=0$. Esto nos proporciona una forma de hallar los autovectores. En nuestro caso
+\begin{equation*}
+	(A-a I)\left( \begin{array}{c}
+	x\\
+	y
+	\end{array}\right)=\left( \begin{array}{cc}
+	0&b\\
+	0&d-a
+	\end{array}\right)
+	\left( \begin{array}{c}
+	x\\
+	y
+	\end{array}\right)=\left( \begin{array}{c}
+	0\\
+	0
+	\end{array}\right)\sii y=0\ra u_{a}=(1,0)
+\end{equation*}
+\begin{equation*}
+	(A-d I)\left( \begin{array}{c}
+	x\\
+	y
+	\end{array}\right)=\left( \begin{array}{cc}
+	a-d&b\\
+	0&0
+	\end{array}\right)
+	\left( \begin{array}{c}
+	x\\
+	y
+	\end{array}\right)=\left( \begin{array}{c}
+	0\\
+	0
+\end{array}\right)\sii y=\frac{a-d}{b}x\ra u_b=(b,d-a)
+\end{equation*}
+Por tanto los dos puntos fijos de la homografía $h$ son $(1:0)$ y $(b/d:1-a/d)=(\beta:1-\alpha)$, cuyas coordenadas no homogéneas son $\infty$ y $\frac{\beta}{1-\alpha}$. 
+
+Dado que la ecuación $\theta'=\alpha\theta+\beta$ define una aplicación afín de la recta podemos concluir que las afinidades, homografía con $c=0$, dejan fijo el infinito. 
+\begin{obs}
+	No se debe confundir esto con las elaciones. Mientras estás últimas tienen un punto fijo doble, que se puede identificar con el infinito en cierta referencia, las homografías con $c=0$ dejan fijo el infinito sea cual sea la referencia en la que nos encontramos. Es decir, si cambiamos de referencia seguirán teniendo como punto fijo el punto $(1:0)$ de dicha referencia.
+\end{obs}
+Veamos el recíproco, si una homografía de $\proy^1$ deja fijo el infinito, entonces es una aplicación afín. 
+
+Sea una homografía de $\proy^1$ con matriz asociada
+\begin{equation*}
+	A=\left( \begin{array}{cc}
+		a&b\\
+		c&d
+	\end{array}\right)
+\end{equation*}
+Si deja fijo el infinito, entonces
+\begin{equation*}
+	\left( \begin{array}{cc}
+	a&b\\
+	c&d
+	\end{array}\right)
+	\left( \begin{array}{c}
+	1\\
+	0
+	\end{array}\right)=\rho\left( \begin{array}{c}
+	1\\
+	0
+	\end{array}\right)\sii a=\rho \ , \ c=0
+\end{equation*}
+Por tanto, la matriz de la homografía, dado que $d\not=0$, es
+\begin{equation*}
+	A=\left( \begin{array}{cc}
+		a&b\\
+		0&d
+	\end{array}\right)\sim 
+	\left( \begin{array}{cc}
+		\alpha&\beta\\
+		0&1
+	\end{array}\right)
+\end{equation*}
+Si describimos la homografía que deja fijo el infinito a través de la transformación de moebius obtenemos que 
+\begin{equation*}
+	\theta'=\alpha\theta+\beta
+\end{equation*}
+es decir, es una transformación afín de la recta.
+
+Estos dos resultados dan lugar al siguiente lema.
+\begin{lem}\label{C6_lem_infinito_p1_sii_afinidad}
+	Dada una homografía de $\proy^1$ y $\mf{R}=\{x_0,x_1;E\}$ una referencia arbitraria, entonces $h$ deja fijo el infinito, es decir deja fijo el punto $x_0$, si y solo si $c=0$, o equivalentemente, si y solo si es una afinidad.
+\end{lem}
+
+El calculo de los puntos fijos de la homografía de $\proy^1$ dada al principio de esta sección, aquella cuya matriz asociada es
+\begin{equation*}
+	A=\left( \begin{array}{cc}
+		a&b\\
+		0&d
+	\end{array}\right)
+\end{equation*}
+y que viene descrita a través de la ecuación
+\begin{equation*}
+	\theta'=\alpha\theta+\beta
+\end{equation*}
+podría haberse hecho como se hizo en el primer apartado de este capítulo, cuando aún no conocíamos la relación entre los puntos fijos y los autovectores.
+
+En tal caso, tendríamos que buscar las coordenadas no homogéneas $\theta$ que cumplen la ecuación
+\begin{equation*}
+	\theta=\alpha\theta-\beta
+\end{equation*}
+Sin embargo, esta ecuación, dado que es de primer orden, solo tiene una solución, pero sabemos que el $\infty$, es decir el $(1:0)$, es también punto fijo de $h$. Por tanto, debe cumplir también la ecuación. Si hacemos la comprobación con las coordenadas no homogéneas obtenemos que 
+\begin{equation*}
+	\infty=\alpha\infty-\beta=\infty
+\end{equation*}
+Sin embargo, personalmente, esta comprobación no me deja nada tranquila. Por tanto, vamos a comprobarlo de nuevo con las coordenadas homogéneas. En tal caso tenemos la ecuación
+\begin{equation}
+	\label{C6_puntofijo_malcalculo}
+	\frac{x'}{y'}=\alpha\frac{x}{y}-\beta
+\end{equation}
+\begin{equation}
+	\label{C6_puntofijo_buencalculo}
+	x'y=\alpha xy'+\beta yy'
+\end{equation}
+Imponiendo que $(x,y)$ es punto fijo obtenemos 
+\begin{equation*}
+	 xy=\alpha xy+\beta y^2\sii xy-\alpha xy-\beta y^2=0
+\end{equation*}
+Una simple comprobación nos permite asegurar que el punto $(1:0)$ es punto fijo de $h$
+\begin{equation*}
+	1\cdot 0-\alpha 1\cdot 0+\beta0=0
+\end{equation*}
+\begin{obs}
+	Si en vez imponer la condición de punto fijo, $(x,y)=(x',y')$, en la ecuación~\eqref{C6_puntofijo_buencalculo} lo hacemos en la ecuación~\eqref{C6_puntofijo_malcalculo} y luego multiplicamos por $y$, el punto $(1:0)$ solo es solución de la ecuación resultante si $\alpha=1$, cuando debería serlo para todo $\alpha$.
+	\begin{equation*}
+		\frac{x}{y}=\alpha\frac{x}{y}-\beta\sii x=\alpha x+\beta y
+	\end{equation*}
+	\begin{equation*}
+		 1=\alpha 1+\beta 0=\alpha
+	\end{equation*}
+	Esto nos muestra que trabajar con las coordenadas no homogéneas y pasar después a homogéneas tiene sus limitaciones, y siempre que hagamos cálculos de este estilo debemos tener bien claro qué estamos haciendo.
+\end{obs}
+
+\subsection{Aplicaciones afines y homografías de $\proy^n$}
+El lema~\ref{C6_lem_infinito_p1_sii_afinidad} se puede generalizar a una homografía de $\proy^n$. A continuación expondremos y demostraremos dicho resultado.
+
+\begin{prop}
+	Sea $h$ una homografía de $\proy^n$ y $\mf{R}=\{x_0,\cdots,x_n;E\}$ una referencia arbitraria. El hiperplano $H$ dado por la ecuación implícita $x_n=0$ se denomina plano del infinito. Si $h$ deja invariante el plano del infinito entonces es una aplicación afín.
+\end{prop}
+\begin{obs}
+	Que una homografía deje invariante un hiperplano $H$ no significa que deje invariante cada punto del hiperplano, es decir que los puntos de $H$ sean puntos fijos, sino que la imagen de un punto de $H$ pertenece al hiperplano, pero no tiene porque ser el mismo punto.
+\end{obs}
+\begin{proof}
+	Sea $h:\proy^n\rightarrow \proy^n$ una homografía que deja invariante el plano $H$ dado por la ecuación $x_n=0$. La matriz asociada a dicha aplicación vendrá dada por
+	\begin{equation*}
+		\left( \begin{array}{ccc}
+			a_{00}&\cdots&a_{0n}\\
+			a_{10}&\cdots&a_{1n}\\
+			\vdots&\ddots&\vdots\\
+			a_{n0}&\cdots&a_{nn}
+		\end{array}\right) 
+	\end{equation*}
+	para ciertos $a_{ij}$, con $i,j=0,\cdots,n$. Dado un punto $(x_0:\cdots:x_n)$ su imagen vendrá dada por la clase del vector $(x_0',\cdots,x_n')$ tal que
+	\begin{equation*}
+		\left( \begin{array}{ccc}
+			a_{00}&\cdots&a_{0n}\\
+			a_{10}&\cdots&a_{1n}\\
+			\vdots&\ddots&\vdots\\
+			a_{n0}&\cdots&a_{nn}
+		\end{array}\right) 
+		\left( \begin{array}{c}
+			x_0\\
+			x_1\\
+			\vdots\\
+			x_n
+		\end{array}\right) =\rho
+		\left( \begin{array}{c}
+			x_0'\\
+			x_1'\\
+			\vdots\\
+			x_n'
+		\end{array}\right)
+	\end{equation*}
+	Los vectores pertenecientes a $\widehat{H}$ tienen la forma $(x_0,\cdots,x_{n-1},0)$. Dado que $h$ deja invariante el hiperplano $H$ debe cumplirse que
+	\begin{equation*}
+		\left( \begin{array}{ccc}
+			a_{00}&\cdots&a_{0n}\\
+			a_{10}&\cdots&a_{1n}\\
+			\vdots&\ddots&\vdots\\
+			a_{n0}&\cdots&a_{nn}
+		\end{array}\right) 
+		\left( \begin{array}{c}
+			x_0\\
+			\vdots\\
+			x_{n-1}\\
+			0
+		\end{array}\right) =\rho
+		\left( \begin{array}{c}
+			x_0'\\
+			\vdots\\
+			x_{n-1}'\\
+			0
+		\end{array}\right)
+	\end{equation*}
+	Por tanto, debe cumplirse la ecuación
+	\begin{equation*}
+		a_{n0}x_0+\cdots+a_{nn-1}x_{n-1}+a_{nn}\cdot0=\rho\cdot0=0
+	\end{equation*}
+	para todo $(x_0,\cdots,x_{n-1})\not=(0,\cdots,0)$. Esto implica que, necesariamente
+	\begin{equation*}
+		a_{n0}=0=a_{n1}=\cdots=a_{nn-1}
+	\end{equation*}
+	con lo que la matriz asociada a $h$ adopta la forma
+	\begin{equation*}
+		\left( \begin{array}{cccc}
+			a_{00}&\cdots&a_{0n-1}&a_{0n}\\
+			a_{10}&\cdots&a_{1n-1}&a_{1n}\\
+			\vdots&\ddots&\vdots&\vdots\\
+			0&\cdots&0&a_{nn}
+		\end{array}\right) 
+	\end{equation*}
+	Dado que $a_{nn}\not=0$, pues debe ser invertible, la matriz se puede expresar, usando bloques, como
+	\begin{equation*}
+		\left( \begin{array}{ccc|c}
+			&&&\\
+			&A&&b\\
+			&&&\\ \hline
+			0&\cdots&0&1
+		\end{array}\right) =
+		\left( \begin{array}{ccc|c}
+			&&&\\
+			&A&&b\\
+			&&&\\ \hline
+			&0^t&&1
+		\end{array}\right)
+	\end{equation*}
+	Veamos cual es la expresión de una homografía de $\proy^n$ con esta matriz asociada. Dado un punto $p=(x_0:\cdots:x_{n-1}:x_n)\not\in H$, es decir, tal que $x_n\not=0$, podemos escribirlo como
+	\begin{equation*}
+		p=(x_0:\cdots:x_{n-1}:x_n)=\left( \frac{x_0}{x_n}:\cdots:\frac{x_{n-1}}{x_n}:1\right) =(X_0:\cdots:X_{n-1}:1)=
+		\left( \begin{array}{c}
+			\\
+			X\\
+			\\
+			1
+		\end{array}\right)^t
+	\end{equation*}
+	donde $X_i=\frac{x_i}{x_n}$ para $i=0,\cdots,n-1$. Entonces
+	\begin{equation*}
+		\left( \begin{array}{ccc|c}
+			&&&\\
+			&A&&b\\
+			&&&\\ \hline
+			&0^t&&1
+		\end{array}\right)
+		\left( \begin{array}{c}
+			\\
+			X\\
+			\\
+			1
+		\end{array}\right)=
+		\left( \begin{array}{c}
+			\\
+			AX+b\\
+			\\
+			1
+		\end{array}\right)=
+		\left( \begin{array}{c}
+			\\
+			X'\\
+			\\
+			1
+		\end{array}\right)
+	\end{equation*}
+	Con ello, la homografía $h$ que deja fijo el plano del infinito $H$ viene descrita por
+	\begin{equation}
+		h:X'=AX+b
+	\end{equation}
+	siendo por tanto $h$ una aplicación afín.
+\end{proof}
+
+
+
+
+\section{Involuciones}

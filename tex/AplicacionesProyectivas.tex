@@ -38,9 +38,79 @@ Sean $\class{u'}=x=\class{u}$. Es evidente que $u' = \lambda u$ para cierto $\la
 
 Para terminar la sección advertimos de que en algunos textos, a la hora de representar una aplicación proyectiva omiten (abusando de notación) especificar que al espacio de partida se le extrae el centro $\mc{Z}$. 
 \section{Propiedades Elementales}
-En esta sección estudiaremos diversas propiedades básicas de las aplicaciones proyectivas. Propiedades tales como el comportamiento de las aplicaciones proyectivas inyectivas y sobreyectivas, la clausura de estas respecto de la composición, cómo estas aplicaciones parametrizan variedades proyectivas y un lema de la correspondencia bastante útil.
+En esta sección estudiaremos diversas propiedades básicas de las aplicaciones proyectivas.
 
-POSPUESTO HASTA QUE LO VEAMOS EN CLASE
+Comencemos viendo cuál es la relación entre las aplicaciones proyectivas inyectivas (y respectivamente sobreyectvas) y sus aplicaciones lineales asociadas.
+\begin{lem}[Inyectividad y Sobreyectividad]
+	\label{C4_lem_inyectividadSobreyectividad}
+	Sea $h$ una aplicación proyectiva. Se cumple:
+	\begin{enumerate}
+		\item $h$ es inyectiva si y solo si lo es $\widehat{h}$.
+		\item $h$ es sobreyectiva si y solo si lo es $\widehat{h}$.
+	\end{enumerate}
+\end{lem}
+\begin{proof}
+	\begin{enumerate}
+		\item Suponiendo que $h$ es inyectiva, si $\widehat{h}$ no lo fuera, entonces tendría un núcleo no trivial, es decir, existiría cierto $u\not=0$ tal que $\widehat{h}(u)=0$. A su vez, como $\widehat{h}$ no puede ser la aplicación idénticamente nula, existirá un $v\not=0$ de manera que $\widehat{h}(v)\not=0$. Es un ejercicio trivial (que se deja al lector) la comprobación de que los vectores $v$ y $w=u+v$ son linealmente independientes. Esto quiere decir que los puntos proyectivos $x=\class{v}$ e $y=\class{w}$ son distintos. Sin embargo, al tomar sus imágenes por $h$ obtenemos:
+		\[h(y)=\class{\widehat{h}(w)}=\class{\widehat{h}(u+v)}=\class{\widehat{h}(u)+\widehat{h}(v)}=\class{\widehat{h}(v)}=h(x)\]
+		Lo cual contradice nuestra hipótesis. Recíprocamente, si $\widehat{h}$ es inyectiva, usando la definción de aplicación proyectiva y la linealidad e inyectividad de $\widehat{h}$ tenemos que:
+		\begin{multline}
+			h(x)=h(y)\sii h(\class{u})=h(\class{v})\sii\class{\widehat{h}(u)}=\class{\widehat{h}(v)}\sii\\\sii\widehat{h}(u)=\lambda \widehat{h}(v)\sii\widehat{h}(u)=\widehat{h}(\lambda v)\sii u = \lambda v\sii\class{u}=\class{v}\sii x=y
+		\end{multline}
+		\item Suponiendo que $\widehat{h}$ es sobreyectiva, dado un $y\in Y$, veamos que existe un $x\in X\setminus\mc{Z}$ tal que $h(x)=y$. En efecto, $y=\class{v}$, como $\widehat{h}$ es sobreyectiva, existe un $u\in \widehat{X}$ tal que $\widehat{h}(u)=v$, luego, tomando clases:
+		\[h(x)=\class{\widehat{h}(u)}=\class{v}=y\]
+		Recíprocamente, si $h$ es sobreyectiva, dado $v\in\widehat{Y}$ es claro que existe un $x\in X\setminus\mc{Z}$ tal que: 
+		\[h(x)=\class{\widehat{h}(u)}=\class{v}\]
+		Luego $v=\widehat{h}(\lambda u)$, lo que prueba la sobreyectividad de $\widehat{h}$.
+	\end{enumerate}
+\end{proof}
+\begin{cor}[Biyectividad]
+	Una aplicación proyectiva es biyectiva si y solo si su aplicación lineal asociada es un isomorfismo.
+\end{cor}
+
+Veamos con un ejemplo que ya, con lo poco que sabemos podemos demostrar cosillas bastante interesantes:
+\begin{exa}[Aplicaciones No Inyectivas Constantes]
+	Veamos que las aplicaciones proyectivas no inyectivas que parten de un subespacio proyectivo de dimensión $1$ son constantes.
+	
+	Para ello usamos el lema \ref{C4_lem_inyectividadSobreyectividad}. Si una aplicación cumpliera las características de nuestra hipótesis, su aplicación lineal correspondiente partiría de un espacio vectorial de dimensión $2$ y tampoco sería inyectiva, siendo su núcleo un subespacio de dimensión $1$ y su imagen otro subespacio de miensión $1$. Al proyectivizar nos que nuestra aplicación parte de un espacio proyectivo de dimensión $1$ (extrayendo el punto asociado al núcleo) y llega a un espacio proyectivo conformado por un único punto (el proyectivizado de la imagen de su aplicación lineal).
+\end{exa}
+Veamos ahora que, tanto la imagen como la imagen inversa de una variedad por una aplicación proyectiva es otra variedad.
+\begin{lem}[Preservación de Variedades]
+	\label{C4_lem_preservaVariedades}
+	Sea $h:X\setminus\mc{Z}$ una aplicación proyectiva se cumple que:
+	\begin{enumerate}
+		\item Dada una variedad $W\subset X$, entonces $h(W\setminus\mc{Z})$ es una variedad de $Y$. Además: \[\pi^{-1}\left(h(W\setminus \mc{Z})\right)=\widehat{h}(\widehat{W})\]
+		\item Dada una variedad $W'\subset Y$, entonces $h^{-1}(W')\cup\mc{Z}$ es una variedad de $X$. Además: \[\pi^{-1}\left(h^{-1}(W')\cup\mc{Z}\right)=\widehat{h^{-1}}(\widehat{W'})\]
+	\end{enumerate}
+\end{lem}
+\begin{proof}
+	Probaremos únicamente el segundo apartado (el otro se demuestra de forma análoga). Probemos en primer lugar el ``además'', de donde deduciremos automáticamente el resultado.
+	
+	Sea $w\in \widehat{h^{-1}}(\widehat{W'})$. Esto es equivalente a decir que $\widehat{h}(w)\in\widehat{W'}$. En caso de que $\widehat{h}(w)=0$ tendríamos que $\class{w}\in\mc{Z}$. En caso contrario tenemos:
+	\[\class{\widehat{h}(w)}=h(\class{w})\in W'\sii\class{w}\in h^{-1}(W')\]
+	Saltando al espacio lineal, combinando ambos casos, tenemos que:
+	\[w\in\pi^{-1}\left(h^{-1}(W')\cup\mc{Z}\right)\]
+	Como todos los pasos que hemos hecho son equivalencias, también tenemos el otro contenido.
+	
+	Como $\widehat{h^{-1}}(\widehat{W'})$ es un subespacio vectorial, $\pi^{-1}\left(h^{-1}(W')\cup\mc{Z}\right)$ también lo es, y por ende, al proyectivizar obtendremos una variedad proyectiva, que es precisamente $h^{-1}(W')\cup\mc{Z}$.
+\end{proof}
+
+Pasemos a comprobar cómo se comportan las aplicaciones proyectivas respecto de la composición.
+\begin{lem}[Composición de Aplicaciones Proyectivas]
+	\label{C4_lem_composicionProyectivas}
+	La composición de dos aplicaciones proyectivas ($f$ y $g$) es una aplicación proyectiva, siempre y cuando la composición de sus respectivas aplicaciones lineales asociadas no sea idénticamente nula ($\widehat{f}\circ \widehat{g}\not=0$).
+	
+	Además, $\widehat{f\circ g}=\widehat{f}\circ\widehat{g}$.
+\end{lem}
+\begin{proof}
+	Demostrando el ``además'' el resultado se sigue:
+	\[\begin{array}{c}X_1\setminus\mc{Z}_1 \stackrel{g}{\to} X_2\setminus\mc{Z}_2 \stackrel{f}{\to} X_3\\
+	\class{u} \mapsto g(\class{u})=\class{\widehat{g}(u)} \mapsto (f\circ g)(\class{u})=f(\class{\widehat{g}(u)})=\class{\widehat{f}(\widehat{g}(u))}=\class{(\widehat{f}\circ\widehat{g})(u)}
+	\end{array}\]
+	Además, nótese que $\widehat{\mc{Z}_1}\subset\ker(\widehat{f}\circ\widehat{g})$ y por ende $\widehat{g^{-1}}(\widehat{\mc{Z}_2})=\ker(\widehat{f}\circ\widehat{g})$. Esto quiere decir:
+	\[\mc{Z}=\proy(\widehat{g^{-1}}(\widehat{\mc{Z}_2}))\]
+	Por ende $\widehat{f}\circ \widehat{g}=0\sii \widehat{g}(\widehat{X_1})\subset\widehat{\mc{Z}_2}$.
+\end{proof}
 
 Un resultado deseable, aunque para nada inmediato, es el de que podamos clasificar a las aplicaciones lineales que inducen cierta aplicación proyectiva por ser múltiplos entre si. Veamoslo:
 \begin{theo}[Lema de la Correspondencia]
@@ -49,14 +119,16 @@ Un resultado deseable, aunque para nada inmediato, es el de que podamos clasific
 \end{theo}
 \begin{proof}
 	\begin{itemize}
-		\item[$\bra$] Sean dos aplicaciones lineales $\widehat{g},\widehat{h}:E\to E'$ tales que inducen la misma variedad proyectiva. Esto es:
+		\item[$\bra$] Sean dos aplicaciones lineales $\widehat{g},\widehat{h}:E\to E'$ tales que inducen la misma aplicación proyectiva. Esto es:
 		\[\begin{array}{c}
 		\proy(E)\setminus\mc{Z}\stackrel{\varphi}{\to}\proy(E')\\
 		x=\class{u}\mapsto\varphi(x)=\class{\widehat{g}(u)}=\class{\widehat{h}(u)}
 		\end{array}\]
 		Para que esto pueda suceder es condición indispensable que ambas aplicaciones tengan el mismo kernel:
 		\[\mc{Z}=\proy(\ker(\widehat{h}))=\proy(\ker(\widehat{g}))\sii \ker(\widehat{h})=\ker(\widehat{g})\]
-		Por ende nuestro objetivo es demostrar que dicho $\lambda_u$ (\textcolor{red}{cual? si no ha sido nombrado hasta ahora}) es el mismo para todos los vectores.
+		Sabemos además que las imágenes de $\widehat{g}$ y $\widehat{h}$ son iguales salvo múltiplos para todos los vectores que no pertenecen al núcleo, con lo que:
+		\[\class{\widehat{g}(u)}=\class{\widehat{h}(u)}\ \forall u\not\in\widehat{\mc{Z}}\ra\widehat{g}(u)=\lambda_u\widehat{h}(u)\]
+		Por ende, nuestro objetivo es demostrar que dicho $\lambda_u$ es el mismo para todos los vectores.
 		
 		Distingamos dos casos (para no talar árboles de más echaremos las cuentas rápido).
 		\begin{itemize}
@@ -68,17 +140,15 @@ Un resultado deseable, aunque para nada inmediato, es el de que podamos clasific
 			\item Sea $u,v\in E\setminus\ker(\widehat{g})$ linealmente independientes y sea $w=u+v$. Echando las cuentas:
 			\begin{multline}\widehat{g}(w)=\lambda_w\widehat{h}(w)\sii\\\sii\widehat{g}(u)+\widehat{g}(v)=\lambda_w(\widehat{h}(u)+\widehat{h}(v))\sii\\
 			\sii \lambda_u\widehat{h}(u)+\lambda_v\widehat{h}(v)=\lambda_w(\widehat{h}(u)+\widehat{h}(v))\sii\\
-			(\lambda_u-\lambda_w)\widehat{h}(u)+(\lambda_v-\lambda_w)\widehat{h}(v)=0\end{multline}
+			\sii(\lambda_u-\lambda_w)\widehat{h}(u)+(\lambda_v-\lambda_w)\widehat{h}(v)=0\end{multline}
 			Como $\widehat{h}(u)$ y $\widehat{h}(v)$ son linealmente independientes (compruébese), se tiene que: \[\lambda_u=\lambda_v=\lambda_w\].
 		\end{itemize}
 		\item[$\bla$] Inmediato, ya que si $\widehat{h}(u)=\lambda\widehat{g}(u)$ para todo $u$, tomando clases:
 		\[h(u)=\class{\widehat{h}(u)}=\class{\lambda\widehat{g}(u)}=\class{\widehat{g}(u)}=g(u)\]
-		Sabemos que las imágenes de $\widehat{g}$ y $\widehat{h}$ son iguales salvo múltiplos para todos los vectores que no pertenecen al núcleo, con lo que:
-		\[\class{\widehat{g}(u)}=\class{\widehat{h}(u)}\ \forall u\not\in\widehat{\mc{Z}}\ra\widehat{g}(u)=\lambda_u\widehat{h}(u)\]
 	\end{itemize}
 \end{proof}
 Al teorema \ref{C4_teo_lemaCorrespondencia} le bautizamos con el nombre de ``lema de la correspondencia'', porque lo que viene a decir (siendo muy retorcidos) es que las aplicaciones proyectivas entre dos espacios proyectivos están en biyección con los elementos del espacio proyectivo $\proy(\mathrm{Hom}(\widehat{X},\widehat{Y}))$.
-\section{Homografías}
+
 \section{Proyecciones Cónicas}
 Dedicaremos esta sección al estudio de un tipo especialmente relevante de aplicaciones proyectivas no homográficas, las llamadas \ti{proyecciones cónicas}.
 
@@ -242,4 +312,65 @@ Antes de finalizar la sección daremos una explicación del por qué del apellid
 \begin{prob}
 	Enumere las proyecciones cónicas de $\proy^4$, clasificándolas en función de las subvariedades $Z$ e $Y$ que las caracterizan.
 \end{prob}
-\section{Teorema de Desargues}
+\section{Homografías}
+En esta sección introduciremos unas aplicaciones proyectivas bastante notables, las llamadas ``homografías'', que se estudiaran con enorme profundidad en capítulos posteriores.
+\begin{defi}[Homografía]
+	\label{C4_def_homografia}
+	Una aplicación proyectiva $h$ se dice \ti{homografía} si es inyectiva, es decir, si su centro es el vacío.
+\end{defi}
+Antes de empezar a desgranar las propiedades de estas aplicaciones, pongamos un ejemplo notable que nos permitirá construir homografías en el plano proyectivo.
+\begin{exa}[Fábrica de Homografías]
+	Sean $r$ y $r'$ dos rectas distintas de $\proy^2$. Asimismo un punto proyectivo $c\in\proy^2\setminus\{r\cup r'\}$.
+	
+	Definimos la aplicación: \[\begin{array}{c}
+	\pi_c:r\to r'\\
+	p\mapsto \engen{c,p}\cap r
+	\end{array}\]
+	
+	Esta aplicación es una homografía, de hecho, es una restricción de la aplicación definida en el ejemplo \ref{C4_exa_puntoRecta}. En definitiva, dado un punto y dos rectas, tenemos una homografía.
+\end{exa}
+
+Una propiedad importante de las homografías es que pueden transformarse de forma natural a en aplicaciones biyectivas.
+\begin{obs}[Biyectividad de las Homografías]
+	Al ser las homografías aplicaciones inyectivas, si la dimensión del espacio de partida y de llegada coinciden, la aplicación en cuestión es biyectiva. Este hecho se debe a la fórmula de las dimensiones para aplicaciones lineales.
+	
+	En caso de que esto no ocurra, siempre podemos tomar como espacio de llegada la imagen de la aplicación en sí, que será un espacio proyectivo de la misma dimensión que el de partida.
+\end{obs}
+
+\subsection{Homografías y Teoría de Grupos}
+Algo objetivamente bonito de las homografías es que se relacionan muy fácilmente con la teoría de grupos. Así es como surge el concepto de ``grupo proyectivo''.
+\begin{defi}[Grupo Proyectivo]
+	Sea $X$ un espacio proyectivo. Se llama \ti{grupo proyectivo} de $X$ al conjunto formado por todas las homografías de $X$ en sí mismo con la operación de composición usual. A este grupo se le suele denotar $\mathbf{GP}(X)$.
+\end{defi}
+La comprobación de que, efectivamente, el conjunto de las homografías de un subespacio en sí mismo tiene estructura de grupo es un sencillo ejercicio que se deja al lector.
+
+Recordamos brevemente que denominábamos \ti{grupo lineal} de un espacio vectorial $\widehat{X}$ al conjunto de sus automorfismos (isomorfismos de él en sí mismo) con la composición usual. A este grupo lo denotábamos $\mathbf{GL}(\widehat{X})$.
+
+Parece natural pensar que existe cierta relación entre los grupos lineal y proyectivo. Así es, gracias a todas las propiedades demostradas a lo largo del capítulo, podemos definir el siguiente homomorfismo sobreyectivo de grupos (compruébese).
+\[\begin{array}{c}
+	\mathbf{GL}(\widehat{X})\to\mathbf{GP}(X)\\
+	\widehat{h}\mapsto h
+\end{array}\]
+A cualquiera que haya estudiado teoría de grupos esto le pide a gritos que calculemos el kernel del homomorfismo y apliquemos el llamado \ti{Primer Teorema de Isomorfía}. Hagámoslo.
+
+El elemento unidad del grupo proyectivo es la aplicación identidad, que lleva cada punto a sí mismo, como es claro que la aplicación lineal identidad es la asociada a esta aplicación proyectiva, también lo serán todos sus múltiplos (y solo esos) (teorema \ref{C4_teo_lemaCorrespondencia}), con lo que queda calculado el kernel del homomorfismo, que es, por supuesto, un subgrupo normal de $\mathbf{GL}(\widehat{X})$.
+
+A los múltiplos de la aplicación lineal identidad usualmente se les denomina \ti{homotecias lineales}. Denominaremos $H$ al conjunto de las homotecias lineales.
+
+Aplicando el primer teorema de isomorfía tenemos que:
+\[\mathbf{GP}(X)\cong\frac{\mathbf{GL}(\widehat{X})}{H}\]
+
+Sin embargo, podemos ir aún más allá. Consideremos el siguiente homomorfismo inyectivo:
+\[\begin{array}{c}
+\K^*\to\mathbf{GL}(\widehat{X})\\
+\lambda\mapsto\lambda\mathrm{id}
+\end{array}\]
+
+Luego por el primer teorema de isomorfía se tiene que $\K^*$ es isomorfo a $H$ con lo que concluimos:
+\begin{equation}\mathbf{GP}(X)\cong\frac{\mathbf{GL}(\widehat{X})}{\K^*}\end{equation}
+\subsection{Homografías, Matrices y Referencias}
+Sabemos por álgebra lineal que una aplicación lineal queda totalmente determinada por la imagen de los vectores la base del espacio de partida. Siendo esta propiedad fundamental para el desarrollo del concepto de ``matriz asociada'' a una aplicación lineal respecto de ciertas bases. Como llevamos haciendo a lo largo de todo el texto, vamos a tratar de traducir esto al contexto de las aplicaciones proyectivas en general y de las homografías en particular.
+
+Sea $\proy(E)$ un espacio proyectivo y $\mf{R}:=\{\class{u_0},\dots,\class{u_n};\class{e}\}$ una referencia del mismo. Sabemos que dicha referencia tendrá una base asociada $\mc{B}$ única salvo múltiplos.
+
+Definamos una aplicación proyectiva arbitraria. Fijémonos en a dónde traslada los $n+1$ primeros puntos  proyectivos de la referencia.

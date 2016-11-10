@@ -40,31 +40,32 @@
 \contentsline {chapter}{\numberline {4}Aplicaciones Proyectivas}{38}{chapter.4}
 \contentsline {section}{\numberline {4.1}Definici\IeC {\'o}n}{38}{section.4.1}
 \contentsline {section}{\numberline {4.2}Propiedades Elementales}{39}{section.4.2}
-\contentsline {section}{\numberline {4.3}Homograf\IeC {\'\i }as}{40}{section.4.3}
-\contentsline {section}{\numberline {4.4}Proyecciones C\IeC {\'o}nicas}{40}{section.4.4}
-\contentsline {section}{\numberline {4.5}Teorema de Desargues}{43}{section.4.5}
-\contentsline {chapter}{\numberline {5}Raz\IeC {\'o}n Doble}{44}{chapter.5}
-\contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n}{44}{section.5.1}
-\contentsline {section}{\numberline {5.2}Propiedades}{47}{section.5.2}
-\contentsline {section}{\numberline {5.3}Simetr\IeC {\'\i }as de la raz\IeC {\'o}n doble}{49}{section.5.3}
-\contentsline {chapter}{\numberline {6}Clasificaci\IeC {\'o}n de homograf\IeC {\'\i }as}{52}{chapter.6}
-\contentsline {section}{\numberline {6.1}Clasificaci\IeC {\'o}n de homograf\IeC {\'\i }as de $\mathbb {P}^1$. Puntos fijos}{52}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Dos puntos fijos distintos}{52}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Un punto fijo doble}{54}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Formas can\IeC {\'o}nicas de Jordan y puntos fijos}{55}{section.6.2}
-\contentsline {section}{\numberline {6.3}Aplicaciones afines}{57}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Aplicaciones afines y homograf\IeC {\'\i }as de $\mathbb {P}^n$}{58}{subsection.6.3.1}
-\contentsline {section}{\numberline {6.4}Involuciones}{60}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Haz de ecuaciones de segundo grado}{62}{subsection.6.4.1}
-\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{63}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{63}{section.Alph1.1}
-\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{64}{subsection.Alph1.1.1}
-\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{65}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{65}{subsection.Alph1.2.1}
-\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{65}{section*.5}
-\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{66}{section*.6}
-\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{66}{section*.7}
-\contentsline {paragraph}{Observaciones}{66}{section*.8}
-\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{66}{section*.9}
-\contentsline {section}{\numberline {A.3}Dualidad}{67}{section.Alph1.3}
-\contentsline {chapter}{\numberline {B}Mierdas varias}{69}{appendix.Alph2}
+\contentsline {section}{\numberline {4.3}Proyecciones C\IeC {\'o}nicas}{42}{section.4.3}
+\contentsline {section}{\numberline {4.4}Homograf\IeC {\'\i }as}{44}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Homograf\IeC {\'\i }as y Teor\IeC {\'\i }a de Grupos}{45}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Homograf\IeC {\'\i }as, Matrices y Referencias}{46}{subsection.4.4.2}
+\contentsline {chapter}{\numberline {5}Raz\IeC {\'o}n Doble}{47}{chapter.5}
+\contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n}{47}{section.5.1}
+\contentsline {section}{\numberline {5.2}Propiedades}{50}{section.5.2}
+\contentsline {section}{\numberline {5.3}Simetr\IeC {\'\i }as de la raz\IeC {\'o}n doble}{52}{section.5.3}
+\contentsline {chapter}{\numberline {6}Clasificaci\IeC {\'o}n de homograf\IeC {\'\i }as}{55}{chapter.6}
+\contentsline {section}{\numberline {6.1}Clasificaci\IeC {\'o}n de homograf\IeC {\'\i }as de $\mathbb {P}^1$. Puntos fijos}{55}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Dos puntos fijos distintos}{55}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Un punto fijo doble}{57}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Formas can\IeC {\'o}nicas de Jordan y puntos fijos}{58}{section.6.2}
+\contentsline {section}{\numberline {6.3}Aplicaciones afines}{60}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Aplicaciones afines y homograf\IeC {\'\i }as de $\mathbb {P}^n$}{61}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.4}Involuciones}{63}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Haz de ecuaciones de segundo grado}{65}{subsection.6.4.1}
+\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{66}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{66}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{67}{subsection.Alph1.1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{68}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{68}{subsection.Alph1.2.1}
+\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{68}{section*.5}
+\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{69}{section*.6}
+\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{69}{section*.7}
+\contentsline {paragraph}{Observaciones}{69}{section*.8}
+\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{69}{section*.9}
+\contentsline {section}{\numberline {A.3}Dualidad}{70}{section.Alph1.3}
+\contentsline {chapter}{\numberline {B}Mierdas varias}{72}{appendix.Alph2}

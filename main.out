@@ -41,24 +41,26 @@
 \BOOKMARK [1][-]{section.4.3}{Proyecciones C\363nicas}{chapter.4}% 41
 \BOOKMARK [1][-]{section.4.4}{Homograf\355as}{chapter.4}% 42
 \BOOKMARK [2][-]{subsection.4.4.1}{Homograf\355as y Teor\355a de Grupos}{section.4.4}% 43
-\BOOKMARK [2][-]{subsection.4.4.2}{Homograf\355as, Matrices y Referencias}{section.4.4}% 44
-\BOOKMARK [0][-]{chapter.5}{Raz\363n Doble}{}% 45
-\BOOKMARK [1][-]{section.5.1}{Definici\363n}{chapter.5}% 46
-\BOOKMARK [1][-]{section.5.2}{Propiedades}{chapter.5}% 47
-\BOOKMARK [1][-]{section.5.3}{Simetr\355as de la raz\363n doble}{chapter.5}% 48
-\BOOKMARK [0][-]{chapter.6}{Clasificaci\363n de homograf\355as}{}% 49
-\BOOKMARK [1][-]{section.6.1}{Clasificaci\363n de homograf\355as de P1. Puntos fijos}{chapter.6}% 50
-\BOOKMARK [2][-]{subsection.6.1.1}{Dos puntos fijos distintos}{section.6.1}% 51
-\BOOKMARK [2][-]{subsection.6.1.2}{Un punto fijo doble}{section.6.1}% 52
-\BOOKMARK [1][-]{section.6.2}{Formas can\363nicas de Jordan y puntos fijos}{chapter.6}% 53
-\BOOKMARK [1][-]{section.6.3}{Aplicaciones afines}{chapter.6}% 54
-\BOOKMARK [2][-]{subsection.6.3.1}{Aplicaciones afines y homograf\355as de Pn}{section.6.3}% 55
-\BOOKMARK [1][-]{section.6.4}{Involuciones}{chapter.6}% 56
-\BOOKMARK [2][-]{subsection.6.4.1}{Haz de ecuaciones de segundo grado}{section.6.4}% 57
-\BOOKMARK [0][-]{appendix.Alph1}{\301lgebra Lineal}{}% 58
-\BOOKMARK [1][-]{section.Alph1.1}{Coordenadas en Espacios Vectoriales}{appendix.Alph1}% 59
-\BOOKMARK [2][-]{subsection.Alph1.1.1}{Matriz de Cambio de Base}{section.Alph1.1}% 60
-\BOOKMARK [1][-]{section.Alph1.2}{Ecuaciones de Subespacios}{appendix.Alph1}% 61
-\BOOKMARK [2][-]{subsection.Alph1.2.1}{Existencia de las Ecuaciones Cartesianas}{section.Alph1.2}% 62
-\BOOKMARK [1][-]{section.Alph1.3}{Dualidad}{appendix.Alph1}% 63
-\BOOKMARK [0][-]{appendix.Alph2}{Mierdas varias}{}% 64
+\BOOKMARK [1][-]{section.4.5}{Aplicaciones Proyectivas y Matrices}{chapter.4}% 44
+\BOOKMARK [2][-]{subsection.4.5.1}{Recordatorio de \301lgebra Lineal}{section.4.5}% 45
+\BOOKMARK [2][-]{subsection.4.5.2}{Matriz Asociada a una Aplicaci\363n Proyectiva}{section.4.5}% 46
+\BOOKMARK [0][-]{chapter.5}{Raz\363n Doble}{}% 47
+\BOOKMARK [1][-]{section.5.1}{Definici\363n}{chapter.5}% 48
+\BOOKMARK [1][-]{section.5.2}{Propiedades}{chapter.5}% 49
+\BOOKMARK [1][-]{section.5.3}{Simetr\355as de la raz\363n doble}{chapter.5}% 50
+\BOOKMARK [0][-]{chapter.6}{Clasificaci\363n de homograf\355as}{}% 51
+\BOOKMARK [1][-]{section.6.1}{Clasificaci\363n de homograf\355as de P1. Puntos fijos}{chapter.6}% 52
+\BOOKMARK [2][-]{subsection.6.1.1}{Dos puntos fijos distintos}{section.6.1}% 53
+\BOOKMARK [2][-]{subsection.6.1.2}{Un punto fijo doble}{section.6.1}% 54
+\BOOKMARK [1][-]{section.6.2}{Formas can\363nicas de Jordan y puntos fijos}{chapter.6}% 55
+\BOOKMARK [1][-]{section.6.3}{Aplicaciones afines}{chapter.6}% 56
+\BOOKMARK [2][-]{subsection.6.3.1}{Aplicaciones afines y homograf\355as de Pn}{section.6.3}% 57
+\BOOKMARK [1][-]{section.6.4}{Involuciones}{chapter.6}% 58
+\BOOKMARK [2][-]{subsection.6.4.1}{Haz de ecuaciones de segundo grado}{section.6.4}% 59
+\BOOKMARK [0][-]{appendix.Alph1}{\301lgebra Lineal}{}% 60
+\BOOKMARK [1][-]{section.Alph1.1}{Coordenadas en Espacios Vectoriales}{appendix.Alph1}% 61
+\BOOKMARK [2][-]{subsection.Alph1.1.1}{Matriz de Cambio de Base}{section.Alph1.1}% 62
+\BOOKMARK [1][-]{section.Alph1.2}{Ecuaciones de Subespacios}{appendix.Alph1}% 63
+\BOOKMARK [2][-]{subsection.Alph1.2.1}{Existencia de las Ecuaciones Cartesianas}{section.Alph1.2}% 64
+\BOOKMARK [1][-]{section.Alph1.3}{Dualidad}{appendix.Alph1}% 65
+\BOOKMARK [0][-]{appendix.Alph2}{Mierdas varias}{}% 66

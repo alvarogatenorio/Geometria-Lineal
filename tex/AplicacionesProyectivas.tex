@@ -299,19 +299,24 @@ Antes de finalizar la sección daremos una explicación del por qué del apellid
 	\label{C4_obs_conicas}
 	Este apellido es debido a que, en el caso particular presentado en el ejemplo \ref{C4_exa_puntoHiperplano}, si tomamos la imagen de una circunferencia por la proyección cónica obtenemos una curva cónica. Esta curva es la formada por la intersección entre el hiperplano $Y$ la familia de rectas que pasan por $z$ y un punto de la circunferencia.
 \end{obs}
+
+El siguiente ejemplo ilustra la importancia de asegurarse de que cumplimos con todos los requisitos a la hora de difinir una proyección cónica.
 \begin{exa}[Proyección Punto -- Plano Degenerada]
-	Dado el punto $z$ y el plano $\pi$, se pide hallar la imagen de un punto genérico $p$ por la proyección cónica con centro $z$ sobre $\pi$.
-	(POR HACER)
+	Dado el punto $z=(1:0:-1:1)$ y el plano $\pi:2x-y+z-t=0$, se pide hallar la imagen de un punto genérico $p=(x:y:z:t)$ por la proyección cónica con centro $z$ sobre $\pi$.
+	
+	Por definición tenemos que $h(p)=zp\cap\pi$. Dicho de otra forma, nuestro trabajo se reduce a calcular la intersección de una recta y un plano. Como tenemos el plano $\pi$ expresado en forma de su ecuación implícita, tratemos de hallar las ecuaciones paramétricas de $zp$. Estas son, en su versión no homogénea:
+	\[zp:\class{(x+\theta:y:z-\theta:t+\theta)}\]
+	Así pues ahora solo basta con sustituir en la ecuación implítita de $\pi$ y despejar $\theta$. Sin embargo:
+	\[2(x+\theta)-y+(z-\theta)-(t+\theta)=0\sii2x-y+z-t=0\]
+	Como vemos, $\theta$ se ha esfumado en el proceso. ¿Como debemos interpretar este resultado? Bueno, quizá ayude imaginarse que $p$ es un punto concreto, es decir, que las variables $x,y,z,t$ de la anterior ecuación son ``numeracos''.
+	
+	Hecho esto, nos quedará un número igualado a $0$. Si esta igualdad es falsa uno podría pensar que la recta no corta al plano nunca (ya que no lo hace para ningún valor de $\theta$), pero esto sabemos que no es así, ya que una recta y un hiperplano siempre se cortan. Es en este momento cuando hay que recordar que hay ocasiones en las que $\theta$ no está definido, en concreto, ningún valor de $\theta$ nos define el punto $z$. Por ende, este es el punto de corte.
+	
+	En otro caso, nos puede quedar la igualdad trivial, que no quiere decir otra cosa que que la recta $zp$ está contenida en el plano $\pi$. Por ende, en este caso, la imagen de $p\in\pi$ no está bien definida, ya que es toda una recta.
 \end{exa}
-
-\begin{exa}[Proyección Punto -- Plano]
-	Dado el punto $z$ y el plano $\pi$, se pide hallar la imagen de un punto genérico $p$ por la proyección cónica con centro $z$ sobre $\pi$.
-	(POR HACER)
-\end{exa}
-
-\begin{prob}
+\begin{exerc}[Clasificación de Proyecciones Cónicas]
 	Enumere las proyecciones cónicas de $\proy^4$, clasificándolas en función de las subvariedades $Z$ e $Y$ que las caracterizan.
-\end{prob}
+\end{exerc}
 \section{Homografías}
 En esta sección introduciremos unas aplicaciones proyectivas bastante notables, las llamadas ``homografías'', que se estudiaran con enorme profundidad en capítulos posteriores.
 \begin{defi}[Homografía]
@@ -368,9 +373,131 @@ Sin embargo, podemos ir aún más allá. Consideremos el siguiente homomorfismo 
 
 Luego por el primer teorema de isomorfía se tiene que $\K^*$ es isomorfo a $H$ con lo que concluimos:
 \begin{equation}\mathbf{GP}(X)\cong\frac{\mathbf{GL}(\widehat{X})}{\K^*}\end{equation}
-\subsection{Homografías, Matrices y Referencias}
-Sabemos por álgebra lineal que una aplicación lineal queda totalmente determinada por la imagen de los vectores la base del espacio de partida. Siendo esta propiedad fundamental para el desarrollo del concepto de ``matriz asociada'' a una aplicación lineal respecto de ciertas bases. Como llevamos haciendo a lo largo de todo el texto, vamos a tratar de traducir esto al contexto de las aplicaciones proyectivas en general y de las homografías en particular.
+\section{Aplicaciones Proyectivas y Matrices}
+Uno de los resultados más notables y relevantes del álgebra lineal es que una aplicación lineal queda totalmente determinada por la imagen de los vectores la base del espacio de partida. Tratemos de traducir esto al contexto de las aplicaciones proyectivas.
 
-Sea $\proy(E)$ un espacio proyectivo y $\mf{R}:=\{\class{u_0},\dots,\class{u_n};\class{e}\}$ una referencia del mismo. Sabemos que dicha referencia tendrá una base asociada $\mc{B}$ única salvo múltiplos.
 
-Definamos una aplicación proyectiva arbitraria. Fijémonos en a dónde traslada los $n+1$ primeros puntos  proyectivos de la referencia.
+\subsection{Recordatorio de Álgebra Lineal} 
+
+Recordamos que, dado un vector $u\in E$ y un homomorfismo $h:E\to E'$, fijadas sendas bases $\mc{B}$ y $\mc{B}'$ de $E$ y $E'$ se tiene:
+\begin{equation}
+	\label{C4_eq_formulaLineales}
+	h(u)\equiv Y=M_{\mc{B}\mc{B}'}(h)X
+\end{equation}
+En este contexto, $X$ representa una matriz columna cuyos coeficientes se corresponden con las coordenadas del vector $u$ respecto de $\mc{B}$. Análogamente, $Y$ es una matriz columna cuyos coeficientes son las coordenadas de $h(u)$ respecto de $\mc{B}'$. Por su parte, $M_{\mc{B}\mc{B}'}(h)$ es la llamada \ti{matriz asociada a $h$} respecto de $\mc{B}$ y $\mc{B}'$. Las columnas de la matriz $M_{\mc{B}\mc{B}'}(h)$ se corresponden con las coordenadas en la base $\mc{B}'$ de la imagen de los vectores de la base $\mc{B}$. 
+
+Asimismo conviene recordar qué relación había entre $M_{\mc{B}\mc{B}'}(h)$ y $M_{\overline{\mc{B}}\overline{\mc{B}'}}(h)$. Esta relación era:
+\begin{equation}
+	M_{\overline{\mc{B}}\overline{\mc{B}'}}(h)=Q^{-1}M_{\mc{B}\mc{B}'}(h)P
+\end{equation}
+Donde $P^{-1}$ y $Q^{-1}$ son, respectivamente, las matrices de cambio de base de $\mc{B}$ a $\overline{\mc{B}}$ y de $\mc{B}'$ a $\overline{\mc{B}'}$. (Ver apéndice \ref{A1_cambioBase}).
+\subsection{Matriz Asociada a una Aplicación Proyectiva}
+Sean dos espacios proyectivos $X$ e $Y$. Consideremos las referencias proyectivas $\mf{R}$ y $\mf{R}'$ asociadas a $X$ e $Y$ respectivamente. Definamos una aplicación proyectiva $h:X\setminus \mc{Z}\to Y$ arbitraria.
+
+Nuestro objetivo es, dadas las coordenadas homogéneas de cierto rayo $\class{w}\in X$ respecto de $\mf{R}$, obtener las coordenadas homogéneas $h(\class{w})\in Y$ respecto de $\mf{R}'$.
+
+Denotando por $W$ a la matriz columna cuyos coeficientes son las coordenadas homogéneas de $w$ respecto de $\mf{R}$ (únicas salvo múltiplos). Se cumple que:
+\begin{equation}
+	h(\class{w})=\class{\widehat{h}(w)}\equiv\class{M_{\mc{B}\mc{B}'}(\widehat{h})W}
+\end{equation}
+Nótese que hemos cometido un abuso de notación ya que $M_{\mc{B}\mc{B}'}(\widehat{h})W$ es una matriz columna, sin embargo la consideramos como un vector para poder tomar el rayo engendrado por él.
+
+Sin embargo, que no cunda la euforia, todavía tenemos un problema por subsanar, ya que al ser las bases asociadas a $\mf{R}$ y $\mf{R}'$ únicas salvo múltiplos nadie me impide coger la base $\lambda\mc{B}$ (para cierto escalar $\lambda$ no nulo) en lugar de la base $\mc{B}$.
+
+Sin embargo, las matrices de cambio entre bases asociadas (y sus inversas) son múltiplos de la identidad (por ser las unas múltiplos de las otras). Esta propiedad trae a colación un viejo resultado acerca de matrices que reza que la multiplicar una matriz (ya sea por la izquierda o por la derecha) por $\lambda I_n$ es equivalente a multiplicar la matriz por $\lambda$. Así pues tenemos que:
+\begin{equation}
+	h(\class{w}):=\class{M_{\mc{B}\mc{B}'}(\widehat{h})W}=\class{M_{\lambda \mc{B}\mu\mc{B}'}(\widehat{h})W}=\class{M_{\mc{B}\mc{B}'}(\widehat{h})\lambda\mu W}=\class{M_{\mc{B}\mc{B}'}(\widehat{h})W}=:h(\class{w})
+\end{equation}
+Pongamos algunos ejemplos para asentar todo esto.
+\begin{exa}[Transformaciones de Möbius]
+	\label{C4_exa_mobius}
+	Sea $h:\proy^1\to\proy^1$ una aplicación proyectiva. Consideramos la referencia $\mf{R}:=\{\class{u},\class{v};e\}$ cuya base asociada es $\mc{B}=\{u,v\}$. Sabemos además que $\widehat{h}(u)=au+bv$ y que $\widehat{h}(v)=cu+dv$.
+	
+	Sea un punto $x=(x_0:x_1)_{\mf{R}}$, por lo que acabamos de ver, su imagen por $h$ es:
+	\[h(x)=\rho(y_0:y_1)=\begin{pmatrix}
+	a & c\\
+	b & d
+	\end{pmatrix}\begin{pmatrix}
+	x_0\\
+	x_1
+	\end{pmatrix}\]
+	Usualmente lo escribiremos de forma ecuacional:
+	\[\begin{array}{l}
+	\rho y_0 = ax_0+cx_1\\
+	\rho y_1 = bx_0+dx_1
+	\end{array}\]
+	Podríamos quedarnos ahí, sin embargo seguiremos el proceso de ``deshomogeneización'' habitual, que nos será de gran utilidad en el futuro.
+	
+	Dividiendo sendas ecuaciones queda:
+	\[\frac{y_0}{y_1}=\frac{ax_0+cx_1}{bx_0+dx_1}\]
+	Si además dividimos el término de la derecha por $x_1$ tenemos:
+	\[\frac{y_0}{y_1}=\frac{a\frac{x_0}{x_1}+c}{b\frac{x_0}{x_1}+d}\]
+	Denotando $\theta':=\frac{y_0}{y_1}$ y $\theta:=\frac{x_0}{x_1}$ nos queda:
+	\[\theta'=\frac{a\theta+c}{b\theta+d}\]
+	
+	Antes de que se nos lapide por blasfemos, nótese que, como es evidente, hay ideterminaciones. En efecto cuando la segunda componente homogénea de nuestro punto inicial es nula el valor $\theta$ no está definido. Cuando esto pasa, el valor $\theta'$ es:
+	\[\theta'=\frac{ax_0}{bx_0}=\frac{a}{b}\]
+	Lo cual siempre está definido (salvo que $b$ sea nulo). Es por esto que a veces se toma el siguiente convenio notacional, que hace realidad el sueño de todo chaval. Asignamos a $\theta$ el símbolo $\infty$ y operamos de la siguiente manera tan intuitiva (y peligrosa):
+	
+	\[\theta'=\frac{a\infty+c}{b\infty+d}=\frac{a\cancel{\infty}}{b\cancel{\infty}}=\frac{a}{b}\]
+	Aunque puede seguirse este convenio (y en ocasiones lo haremos), ante la duda, se recomienda pasar todo al terreno estable de las coordenadas homogéneas.
+	
+	Para no perder el contexto, nótese que ahora nuestro punto inicial $x$ queda totalmente determinado por $\theta$ (admitiendo que pueda tomar el como valor el símbolo $\infty$ cuando la segunda coordenada homogénea sea $0$, ya que al fin y al cabo esto sólo pasa para un único rayo).
+	
+	Asimismo, $h(x)$ queda totalmente determinado por el valor $\theta'$, asumiendo a su vez que puede tomar como valor $\infty$ cuando su segunda coordenada homogénea se anule.
+	
+	Estas transformaciones nos de enorme utilidad en el análisis complejo, es por ello que tienen nombre propio, \ti{transformaciones de Möbius}.
+\end{exa}
+En este ejemplo se generalizamos la idea del anterior para una proyección cónica.
+\begin{exa}[Proyección Punto -- Plano]
+	Dado el punto $z=(1:0:-1:2)$ y el plano $\pi:2x-y+z-t=0$, se pide hallar la imagen de un punto genérico $p=(x:y:z:t)$ por la proyección cónica con centro $z$ sobre $\pi$.
+	
+	Por definición, $h(p)=zp\cap\pi$. Hallemos las ecuaciones paramétricas de la recta $zp$ para sustituir en la ecuación paramétrica de $\pi$ y así hallar la intersección.
+	\[zp:(x+\theta:y:z+\theta:t+\theta)\]
+	Sustituyendo en la ecuación implícita de $\pi$ y despejando $\theta$ obtenemos:
+	\[\theta=-\frac{1}{2}(2x-y+z-t)\]
+	De este modo, la imagen por $h$ de un punto $p$ arbitrario es:
+	\[h(p)=(y-z+t:2y:-2x+y+z+t:-2x+y-z+3t)\]
+	Algunos consejos para comprobar si, en efecto, hemos echado bien las cuentas son:
+	\begin{itemize}
+		\item Comprobar que el punto $z$ no debe tener imagen definida, es decir, nos debe dar el punto $(0:0:0:0)$.
+		\item Comprobar que los puntos del plano $\pi$ quedan invariantes por $h$.
+	\end{itemize}
+	Una vez hecho esto podemos hallar la matriz asociada a la aplicación lineal subyacente. Para ello basta hallar las imaǵenenes de los rayos asociados a la base canónica de $\R^4$. Nos queda:
+	\[\begin{pmatrix}
+	0 & 1 & -1 & 1\\
+	0 & 0 & 2 & 0\\
+	-2 & 1 & 1 & 1\\
+	-2 & 1 & -1 & 3
+	\end{pmatrix}\]
+	Esta matriz tiene rango $3$ ya que la aplicación proyectiva tiene un punto por centro.
+	
+	Expresemos esto de forma ecuacional, simplemente porque podemos:
+	\[
+	\begin{array}{l}
+		\rho x'= y-z+t\\
+		\rho y'= 2y\\
+		\rho z'= -2x+y+z+t\\
+		\rho t'= -2x+y-z+3t
+	\end{array}
+	\]
+	Tal y como hicimos en el ejemplo anterior (aquí lo hacemos con mucho menos detalle), podemos realizar el proceso de deshomogeneización habitual dividiendo todo por la última ecuación y, tras esto, dividiendo los miembros de la derecha por $t$. Si lo hacemos nos queda:
+	\[
+	\begin{array}{ccc}
+	X'=\frac{Y-Z+1}{-2X+Y-Z+3} &
+	Y'=\frac{2Y}{-2X+Y+Z+3} &
+	Z'=\frac{-2X+Y+Z+1}{-2X+Y-Z+3}
+	\end{array}
+	\]
+	Observemos que hemos introducido las notaciones:
+	\[\begin{array}{ccc}
+	X'=\frac{x}{t} & Y'=\frac{y}{t} & Z'=\frac{z}{t}
+	\end{array}\]
+	Es claro que en todo este proceso quedan por definir un montón de singularidades, en concreto, queda indefinido todo el plano $\pi':-2x+y-z+3t=0$, que puede interpretarse como el plano paralelo a $\pi$ que pasa por $z$.
+\end{exa}
+Antes de finalizar el capítulo, hagamos un pequeño inciso. Cuando trabajemos con aplicaciones de un espacio en sí mismo conviene fijar la misma referencia $\mf{R}$ para ambos espacios. Veamos un ejemplo de por qué esto es conveniente.
+\begin{exa}[Identidad]
+	Sea $h:\proy^1\to\proy^1$ una aplicación proyectiva. Fijada la referencia proyectiva $\mf{R}:=\{\class{u},\class{v};e\}$ del espacio de partida, supongamos que $h$ es tal que podemos fijar la referencia protectiva $\mf{R}':=\{h(\class{u}),h(\class{v});h(e)\}$ del espacio de llegada.
+	
+	Se tiene entonces que la matriz asociada a la aplicación lineal asociada es la identidad. Este hecho perturba bastante a la hora de trabajar, por lo que debemos evitarlo.
+\end{exa}

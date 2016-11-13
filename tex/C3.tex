@@ -1,14 +1,21 @@
-\chapter{Ecuaciones de variedades proyectivas}
+\chapter{Ecuaciones de Variedades Proyectivas}
 \label{C3}
 
 Nuestra tarea aquí es tratar de, dado un una recta o un plano proyectivos, dar una referencia proyectiva de ese subespacio mediante la cual hacer una descripción explícita de sus elementos.
 
 \section{Rectas Proyectivas}\label{C3_sec_rectas}
+Anteriormente advertimos que llamaríamos ``rectas'' a los subespacios proyectivos de dimensión unitaria. Sin embargo, esta definición no nos es demasiado útil cuando lo que queremos es describir los elementos de dicho subespacio.
+
+Es sencillos ver, usando la fórmula de Grassmann, que la variedad proyectiva engendrada por dos puntos distintos es una recta. En efecto:
+\[\dim(\engen{p_1,p_2})=\dim(p_1)+\dim(p_2)-\dim(p_1\cap p_2)=0+0-(-1)=1\]
+Además, también se da el recíproco, ya que toda recta $r$ se identifica canónicamente con un plano vectorial del espacio lineal subyacente, el cual estará generado por dos vectores $u$ y $v$. Es claro por la ecuación \eqref{C1_eq_explicitaEngendrados} que los rayos $\class{u}$ y $\class{v}$ generan la recta $r$.
+
+A partir de esta pequeña refexión inicial surge esta nueva definición equivalente de recta.
 \begin{defi}[Recta en $\proy(E)$]
 	\label{C1_def_rectaProyectiva}
 	Se define \ti{recta proyectiva} que pasa por los puntos proyetivos $P$ y $Q$ como la variedad engendrada por dichos puntos. A dicha recta se la denomina \ti{recta} $PQ$.
 \end{defi}
-\subsection{Ecuaciones paramétricas}\label{C3_subsec_ec_parametricas_recta}
+\subsection{Ecuaciones Paramétricas}\label{C3_subsec_ec_parametricas_recta}
 
 Sean $P=\class{u}$ y $Q=\class{v}$ dos puntos proyectivos, vamos a describir los elementos de la recta $PQ$, que no es otra cosa que $\engen{P,Q}$.
 	
@@ -16,67 +23,90 @@ Para describir los elementos de esta variedad (o de cualquiera) deberemos dar un
 	
 Como $P$ y $Q$ son dos puntos proyectivos distintos, los vectores $u,v$ son linealmente independientes, formando una base de la variedad lineal $\lengen{u,v}$.
 	
-Para construir una referencia bastaría tomar los puntos $P,Q$ y añadirle como punto unidad un tercer punto cuyo representante pueda ser escrito como combinación lineal de $u$ y $v$ con todos los coeficientes no nulos, por ejemplo $\class{u+v}$.
+Para construir una referencia bastaría tomar los puntos $P,Q$ y añadirle como punto unidad un tercer punto de la recta cuyo representante pueda ser escrito como combinación lineal de $u$ y $v$ con todos los coeficientes no nulos, por ejemplo $\class{u+v}$ (compruébese).
 	
 De esta forma tenemos la referencia:
 \[\mf{R}=\{P,Q;\class{u+v}\}\]
 Por el método de construcción de bases asociadas tenemos que la base asociada a esta referencia es $\mc{B}=\{u,v\}$. Como sabemos, todo punto $p\in\engen{P,Q}$ es un rayo representado por un vector de $\lengen{u,v}$. Es decir, un vector $w=\alpha u+\beta v$ con alguno de los coeficientes no nulo.
 	
-Esto quiere decir que todo punto de la recta $PQ$ es un rayo de la forma: \[\class{\alpha u+\beta v}=(\alpha:\beta)\]
-expresado en \ti{coordenadas homogéneas}.
-
-Sin embargo, podemos reducir esto aún un poco más, cambiemos el representante del rayo dividiendo todo por $\beta$.
-\[\class{\frac{\alpha}{\beta}u+v}:\stackrel{\textrm{not.}}{=}\class{\theta u+v}\]
-De esta forma la recta ya no queda descrita por dos coordenadas homogéneas $\alpha$ y $\beta$ como antes, sino por una única coordenada $\theta$ a la que llamaremos \ti{no homogénea}.
+Esto quiere decir que todo punto de la recta $PQ$ es un rayo de la forma: \[\class{\alpha u+\beta v}=(\alpha:\beta)_{\mf{R}}\]
+expresado en \ti{coordenadas homogéneas} respecto de la referencia $\mf{R}$. A esto se le llaman \ti{ecuaciones paramétricas homogéneas} de la recta $PQ$. Veámoslo en un caso concreto.
+\begin{exa}[Ecuaciones Paramétricas Homogéneas]
+	Dados los puntos $P=(1:2:-1)$ y $Q=(0:1:3)$ se nos pide dar unas ecuaciones paramétricas de la recta $PQ$.
 	
-Sin embargo, hemos de tener cuidado, pues, como más de uno ya se habrá dado cuenta, es posible que en algunos casos $\beta$ se anule, por ende, $\theta$ no estaría definida. Como este caso se corresponde con un único punto, y este es el punto $P$, diremos que una recta queda descrita por lo siguiente:
+	Siguiendo los pasos expuestos, los rayos que conforman la recta $PQ$ son de la forma:
+	\[\class{\alpha(1,2,-1)+\beta(0,1,3)}\tq \alpha,\beta\in\K\tq(\alpha,\beta)\not=(0,0)\]
+	Si expandimos un poco la expresión queda:
+	\[\class{(\alpha,2\alpha+\beta,-\alpha+3\beta)}\]
+	En otras palabras, la recta $PQ$ son los rayos enegendrados por los vectores $w=(x_0,x_1,x_2)$ de manera que se cumple (matricialmente):
+	\[w\equiv\begin{pmatrix}
+	x_0\\
+	x_1\\
+	x_2
+	\end{pmatrix}=\begin{pmatrix}
+	1 & 0\\
+	2 & 1\\
+	-1 & 3
+	\end{pmatrix}\begin{pmatrix}
+	\alpha\\
+	\beta
+	\end{pmatrix}\]
+	Recordamos brevemente que el conjunto de los vectores que cumplen la expresión matricial anterior forman un espacio subespacio vectorial.
+\end{exa}
+Normalmente no se trabaja con estas ecuaciones paramétricas, en su lugar, se opta por ``deshomogeneizarlas'', ya que por lo general es incómodo y antiintuitivo que los puntos de una recta queden descritos por dos parámetros. Es más, puede ocurrir que al dar valores a los parámetros obtengamos siempre el mismo punto.
+
+Para solucionar este problema, escogemos un representante ``estandar'' de cada rayo dividiendo todo por $\alpha$.
+\[\class{u+\frac{\beta}{\alpha}v}:\stackrel{\textrm{not.}}{=}\class{u+\theta v}\]
+De esta forma, la recta ya no queda descrita por dos parámetros homogéneos $\alpha$ y $\beta$ como antes, sino por un único parámetro $\theta$ a la que llamaremos \ti{no homogéneo}.
+	
+Sin embargo, hemos de tener cuidado, pues, como más de uno ya se habrá dado cuenta, es posible que en algunos casos $\alpha$ se anule, por ende, $\theta$ quedaría indefinido. Como este caso se corresponde con un único punto (ya que los vectores de la forma $\beta v$ representan el mismo rayo), y este es precisamente $Q$, diremos que una recta queda descrita por la siguiente \ti{ecuación paramétrica no homogénea}:
 \begin{equation}
 	\label{C3_eq_descripcionRecta}
-	PQ:\{\class{\theta u+v}\tq \theta\in\K\}\cup\{P\}
+	PQ:\{\class{u+\theta v}\tq \theta\in\K\}\cup\{Q\}
 \end{equation}
-De esta forma, cuando $\beta=0$ podemos decir que $\theta=\infty$, y así $\theta\in\K\cup \{\infty\}$, que podemos identificar con $\proy^1$. Describiremos pues la recta como
+Como es una pena (y un estorbo) tener que indicar que añadimos el punto $Q$ cada vez que queremos escribir la ecuación paramétrica de una recta, lo que hacemos es ampliar el rango de valores que puede tomar $\theta$.
+
+De esta forma, cuando $\alpha=0$, definimos que $\theta$ toma como valor el símbolo $\infty$. Por ende, el conjunto de valores que puede tomar $\theta$ queda amplicado, de forma que $\theta\in\K\cup\{\infty\}:=\overline{\K}$, significando esto que, por definición, $\class{u+\infty v}=\class{v}=Q$. Describiremos pues la recta como:
 \begin{equation}
 	\label{C3_eq_descripcionRectaP1}
-	PQ:\{\class{\theta u+v}\tq \theta\in\proy^1\}
+	PQ:\{\class{u+\theta v}\tq \theta\in\overline{\K}\}
 \end{equation}
-donde se entiende que si $\theta=\infty$ nos estamos refiriendo al punto $P$. 
-
-Dados los vectores $u=(u_0,u_1,\cdots,u_n)$ y $v=(v_0,v_1,\cdots,v_n)$ si los sustituimos en la ecuación~\eqref{C3_eq_descripcionRectaP1} obtenemos
+Dados los vectores $u=(u_0,u_1,\cdots,u_n)$ y $v=(v_0,v_1,\cdots,v_n)$ si los sustituimos en la ecuación~\eqref{C3_eq_descripcionRectaP1} obtenemos:
 \begin{equation*}
 	\label{C_3_eq_parametrica_recta}
 	\begin{split}
-		PQ:&\{\class{\theta (u_0,u_1,\cdots,u_n)+(v_0,v_1,\cdots,v_n)}\tq \theta\in\proy^1\}=\\
-		&=\{\class{(\theta u_0+v_0,\theta u_1+v_1,\cdots,\theta u_n+v_n)}\tq \theta\in\proy^1\}
+		PQ:&\{\class{(u_0,u_1,\cdots,u_n)+\theta(v_0,v_1,\cdots,v_n)}\tq \theta\in\overline{\K}\}=\\
+		&=\{\class{(u_0+\theta v_0,u_1+\theta v_1,\cdots,u_n+\theta v_n)}\tq \theta\in\overline{\K}\}
 	\end{split}
 \end{equation*}
-que se puede escribir a su vez como 
+que se puede escribir a su vez como: 
 \begin{equation}
-	PQ:\{(\theta u_0+v_0:\theta u_1+v_1:\cdots:\theta u_n+v_n)\tq \theta\in\proy^1\}
+	PQ:\{(u_0+\theta v_0:u_1+\theta v_1:\cdots:u_n+\theta v_n)\tq \theta\in\overline{\K}\}
 \end{equation}
 denominada \tb{ecuación paramétrica de la recta}, en coordenadas no homogéneas.
 \begin{exa}[Parametrización de una Recta Concreta]
 	\label{C3_exa_rectaConcreta}
 	Dados los puntos $P=(1:2:-1)$ y $Q=(0:1:3)$ se nos pide parametrizar la recta $PQ$. Siguiendo los pasos expuestos en este apartado, la ecuación paramétrica de la recta $PQ$ queda:
 	\[
-	PQ:\{(\theta:2\theta+1:-\theta+3)\tq\theta\in\proy^1\}
+	PQ:\{(1:2+\theta:-1+3\theta)\tq\theta\in\overline{\K}\}
 	\]
-	donde, cuando $\theta=\infty$, nos referimos al punto $P=(1:2:-1)$.
+	donde, cuando $\theta=\infty$, nos referimos al punto $Q=(0:1:3)$.
 \end{exa}
 
-\subsection{Ecuación implícita}\label{C3_subsec_eq_param_recta}
+\subsection{Ecuación Implícita}\label{C3_subsec_eq_param_recta}
 
 Durante este apartado nos situaremos en el plano proyectivo $\proy^2$, donde las rectas son hiperplanos. Como ya sabemos, todo hiperplano proyectivo es proyección de un hiperplano vectorial. Por tanto, una recta de $\proy^2$ es proyección de un plano de $\R^3$.
 
 Además, por ser hiperplano, este plano tiene una, y solo una, ecuación implícita (o cartesiana) que cumplen todos sus vectores. Por tanto, todos los representantes de los puntos de la recta proyectiva cumplen dicha ecuación, ya que son los vectores del plano o sus múltiplos. 
 
-De esta forma, asignamos a la recta de $\proy^2$ la ecuación implícita del plano vectorial del que es proyección
+De esta forma, asignamos a la recta de $\proy^2$ la ecuación implícita del plano vectorial del que es proyección:
 \begin{equation}
 	\label{C3_eq_implicita_recta}
 	ax+by+cz=0
 \end{equation}
 con $a,b,c$ no todos nulos. Esta será la \tb{ecuación implicita} de la recta, expresada en coordenadas homogéneas.
 
-Veamos a continuación varias formas de obtener la ecuación implícita, en coordenadas homogéneas, de una recta proyectiva que pasa por dos puntos.
+Veamos a continuación varias formas de obtener la ecuación implícita, en coordenadas homogéneas, de una recta proyectiva dados dos de sus puntos.
 
 Sean $P=[u]=[(u_0,u_1,u_2)]$ y $Q=[v]=[(v_0,v_1,v_2)]$ dos puntos de $\proy^2$. La ecuación implícita de la recta $PQ$ tendrá la forma
 \begin{equation*}
@@ -93,7 +123,7 @@ Dado que $P,Q\in PQ$, la primera forma de hallar esos coeficientes consiste simp
 	\end{split}
 \end{equation}
 
-Sin embargo, este método puede resultar un poco tedioso. Observemos que, aunque en el espacio proyectivo no está definido el producto escalar, la primera ecuación del sistema podría identificarse con el producto escalar entre el vector $(a,b,c)$ y $(u_0,u_1,u_2)$. Al ser cero, esto implicaría que son perpendiculares. A partir de la segunda ecuación podemos deducir algo similar, que $(a,b,c)$ es perpendicular al vector $(v_0,v_1,v_2)$.
+Sin embargo, este método puede resultar un poco tedioso. Observemos que, aunque en el espacio proyectivo no está definido el producto escalar, la primera ecuación del sistema podría identificarse con el producto escalar usual entre el vector $(a,b,c)$ y $(u_0,u_1,u_2)$. Al ser cero, esto implicaría que son perpendiculares. A partir de la segunda ecuación podemos deducir algo similar, que $(a,b,c)$ es perpendicular al vector $(v_0,v_1,v_2)$.
 
 De esta forma, el vector que debemos hallar es perpendicular a $u$ y $v$. Por tanto, nos basta con hallar un vector perpendicular a ambos para determinar los coeficientes de la ecuación implícita, pues es única salvo múltiplos. Una forma rápida de hallar un vector $(a,b,c)$ que cumpla esto es hacer el producto vectorial de $u$ y $v$. Así los coeficientes serán el resultado de 
 \begin{equation}
@@ -113,10 +143,10 @@ por lo que la ecuación implícita de la recta vendrá dada por
 	z
 	\end{array}\right) =0
 \end{equation}
-\subsection{Intersección de dos rectas proyectivas}
-Una vez que sabemos describir una recta proyectiva a través de sus ecuaciones, no está de menos calcular la intersección de dos rectas. Para ello, nos situamos de nuevo en el plano proyectivo $\proy^2$, debido a la facilidad con la que allí se opera, pero bien sería válido para cualquier espacio proyectivo.
+\subsection{Intersección de dos Rectas Proyectivas}
+Una vez que sabemos describir una recta proyectiva a través de sus ecuaciones, no está de más calcular la intersección de dos rectas. Para ello, nos situamos de nuevo en el plano proyectivo $\proy^2$, debido a la facilidad con la que allí se opera, pero bien sería válido para cualquier espacio proyectivo.
 
-Sean pues dos rectas proyectivas $r,r'\in\proy^2$. Al igual que con la ecuación implícita de la recta, quizás la primera ocurrencia para hallar la intersección de dos rectas sea combinar sus ecuaciones implícitas y resolver el sistema resultante
+Sean pues dos rectas proyectivas $r,r'\subset\proy^2$. Al igual que con la ecuación implícita de la recta, quizás la primera ocurrencia para hallar la intersección de dos rectas sea combinar sus ecuaciones implícitas y resolver el sistema resultante
 \begin{equation*}
 	\begin{split}
 		ax&+by+cz=0\\
@@ -125,29 +155,34 @@ Sean pues dos rectas proyectivas $r,r'\in\proy^2$. Al igual que con la ecuación
 \end{equation*}
 donde $a,b,c,a',b',c'$ son conocidos.
 
-Sin embargo, este método no es del todo práctico. Si nos paramos a reflexionar un momento sobre que debe cumplir la intersección, hallaremos formas mucho más fáciles de calcularla. Para empezar la intersección de $r$ y $r'$ es un punto $p$ del espacio proyectivo. Esto se debe a que en $\proy^2$ los hiperplanos son rectas, y por tanto, por el Corolario~\ref{C1_cor_rectaHiperplano}, la intersección de $r$ y $r'$ no puede ser vacía. Además, dicho punto pertenece tanto a $r$, como a $r'$. Por tanto, debe cumplir las ecuaciones de ambas rectas. Estas ecuaciones pueden ser tanto paramétricas como implícitas.
+Sin embargo, este método no es del todo práctico. Si nos paramos a reflexionar un momento sobre qué debe cumplir la intersección, hallaremos formas mucho más fáciles de calcularla. Para empezar, la intersección de $r$ y $r'$ es un punto $p$ del espacio proyectivo. Esto se debe a que en $\proy^2$ los hiperplanos son rectas, y por tanto, por el Corolario~\ref{C1_cor_rectaHiperplano}, la intersección de $r$ y $r'$ no puede ser vacía. Además, dicho punto pertenece tanto a $r$, como a $r'$. Por tanto, debe cumplir las ecuaciones de ambas rectas. Estas ecuaciones pueden ser tanto paramétricas como implícitas.
 
-Si, por ejemplo, la recta $r$ está descrita a través de su ecuación paramétrica, donde $[(u_0,u_1,u_2)]$ y $[(v_0,v_1,v_2)]$ son dos puntos de la recta
+Si, por ejemplo, la recta $r$ está descrita a través de su ecuación paramétrica, donde $[(u_0,u_1,u_2)]$ y $[(v_0,v_1,v_2)]$ son dos puntos de la recta:
 \begin{equation*}
-	r:\{(\theta u_0+v_0:\theta u_1+v_1:\theta u_2+v_2)\tq \theta\in\proy^1\}
+	r:\{(\theta u_0+v_0:\theta u_1+v_1:\theta u_2+v_2)\tq \theta\in\overline{\K}\}
 \end{equation*}
 existirá un valor de $\theta$ tal que 
 \begin{equation}
 \label{C3_eq_interseccion_rectas_imp_par}
 	(\theta u_0+v_0:\theta u_1+v_1:\theta u_2+v_2)=p
 \end{equation}
-Una vez hallado ese valor, queda hallado el punto $p$ y con ello la intersección de ambas rectas.
+Una vez hallado ese valor (ahora veremos cómo), quedaría hallado el punto $p$, y con ello, la intersección de ambas rectas.
 
 Si, por otro lado, la recta $r'$ se describe a través de su ecuación implícita
 \begin{equation*}
 	a'x+b'y+c'z=0
 \end{equation*}
 el punto $p$ debe satisfacer dicha ecuación. Por tanto, podemos sustituir en la ecuación implícita de $r'$, en vez de las coordenadas de un representante arbitrario del punto $p$, las del vector\\
-$(\theta u_0+v_0,\theta u_1+v_1,\theta u_2+v_2)$. Así, resolviendo la ecuación 
+$(\theta u_0+v_0,\theta u_1+v_1,\theta u_2+v_2)$. Así, resolviendo la ecuación
 \begin{equation*}
  	a'(\theta u_0+v_0)+b'(\theta u_1+v_1)+c'(\theta u_2+v_2)=0
 \end{equation*}
 obtenemos el valor de $\theta$ que asegura que el punto $p$, descrito por la ecuación~\eqref{C3_eq_interseccion_rectas_imp_par} pertenece a ambas rectas. Sustituyendo este valor en la ecuación~\eqref{C3_eq_interseccion_rectas_imp_par} queda hallada la intersección de las rectas $r$ y $r'$.
+
+Veamos un ejempplo para asentar estos conceptos.
+\begin{exa}
+	
+\end{exa}
 
 Supongamos ahora que ambas rectas vienen descritas por su ecuación implícita. Al ser la intersección un punto $p=(p_0:p_1:p_2)$, podemos escoger un vector representante, por ejemplo $(p_0,p_1,p_2)$, y sustituirlo en ambas ecuaciones de tal forma que ambas deben cumplirse
 \begin{equation*}
@@ -393,10 +428,13 @@ En esta sección enunciaremos un teorema clásico de la geometría del plano pro
 		X=AB'\cap A'B \ ; \qquad Y=AC'\cap A'C \ ; \qquad Z=BC'\cap B'C
 	\end{equation*}
 	están alineados.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=.5]{Graficos/Pappus.eps}
+		\caption{Ilustración del Teorema de Pappus.}
+		\label{C3_pappus}
+	\end{figure}
 \end{theo}
-\begin{center}
-	\includegraphics[scale=.5]{Graficos/TeoremaDePapus/Teorema_Papus.eps}
-\end{center}
 \begin{proof}
 	Dado que en el plano proyectivo las rectas son hiperplanos, y haciendo uso del corolario~\ref{C1_cor_rectaHiperplano}, las rectas $r$ y $r'$ se cortan en un punto $O$. 
 	
@@ -540,6 +578,12 @@ Recordemos que gracias al principio de dualidad, dado un teorema, automáticamen
 	\end{equation*}
 	son concurrentes.
 \end{theo}
-\begin{center}
-	\includegraphics[scale=.25]{Graficos/DualTeoremaDePapus/Dual_Teorema_de_Papus.eps}
-\end{center}
+\begin{proof}
+	Trivial por dualidad.
+\end{proof}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.2]{Graficos/Dual_Teorema_de_Papus.eps}
+	\caption{Ilustración del Teorema de Pappus Dual.}
+	\label{C3_pappusDual}
+\end{figure}

@@ -24,12 +24,14 @@ En la ecuación~\eqref{C1_eq_espacioProyectivoConjuntista} hay una notación imp
 \end{defi}
 Consideraremos, a partir de ahora, a los rayos como los \ti{puntos} del espacio proyectivo.
 
+Es importante tener siempre presente que $u$ \tb{no} pertenece al espacio proyectivo, ya que los elementos del espacio proyectivo no son vectores sino rayos engendrados por vectores.
+
 Antes de continuar, notemos algunos casos curiosos.
 \begin{obs}[Casos Extremos]
 	\label{C1_obs_casosExtremos}
 	\begin{enumerate}
 		\item Si $E=\zset$ entonces, por definición $\proy(E)=\emptyset$, ya que no hay ningún subespacio de dimensión 1.
-		\item Si $\dim(E)=1$ entonces $\proy(E)$ consta de ún único elemento, el rayo generado por el vector de la base de $E$ (o cualquier otro no nulo).
+		\item Si $\dim(E)=1$ entonces $\proy(E)$ consta de un único elemento, el rayo generado por el vector de la base de $E$ (o cualquier otro no nulo).
 	\end{enumerate}
 \end{obs}
 \subsection{Segunda Aproximación}
@@ -39,7 +41,7 @@ La definición \ref{C1_def_espacioProyectivo1} tiene una traducción natural en 
 	\label{C1_def_proporcionalidad}
 	Se comprueba inmediatamente que la relación $\mc{R}$ definida en $E\smz$ como:
 	\[u\mc{R}v\siidef \exists \lambda\in\K^*\tq u = \lambda v\]
-	es de equivalencia, siendo la clase de equivalencia de un vector $v$ el conjunto de todos los proporcionales a él, es decir el \ti{cuasirayo} generado por $v$ (rayo al que se le ha sustraído el $0$).
+	es de equivalencia, siendo la clase de equivalencia de un vector $v$ el conjunto de todos los proporcionales a él, es decir, el \ti{cuasirayo} generado por $v$ (rayo al que se le ha sustraído el $0$).
 \end{defi}
 La clase del vector $u$ según la relación de equivalencia definida en \ref{C1_def_proporcionalidad} será denotada por $u\mc{R}$. Es trivial ver que se cumple:
 \[u\mc{R}=\class{u}\smz\]
@@ -80,15 +82,13 @@ Como es típico en álgebra, trataremos de estudiar los subconjuntos de una estr
 \end{defi}
 
 El siguiente lema demuestra que hay dos enfoques equivalentes a la idea de variedad proyectiva.
-
-Es muy probable que la demostración pueda reducirse mucho.
 \begin{lem}[Caracterización de las Variedades]
 	\label{C1_lem_caracterizacionVariedades}
 	$X$ es variedad proyectiva si y solo si $\pi^{-1}(X)\cup\zset$ es un subespacio vectorial de $E$.
 \end{lem}
 \begin{proof}
 \begin{itemize}
-	\item[$\bra$] Para esta implicación basta ver que $\pi^{-1}(X)\cup\zset$ es un subespacio vectorial. Como $X$ es variedad proyectiva existe cierta variedad lineal $\hat{X}$ de forma que $\pi(\hat{X}\smz)=X$. Si Dios existe y está de nuestra parte se tendrá  $\hat{X}=\pi^{-1}(X)\cup\zset$, con lo que habríamos terminado. En efecto, la igualdad que queremos obtener es equivalente (quitando el cero y aplicando la proyección canónica) a la igualdad $\pi(\hat{X})=\pi(\pi^{-1}(X))=X$, lo cual tenemos por hipótesis.
+	\item[$\bra$] Para esta implicación basta ver que $\pi^{-1}(X)\cup\zset$ es un subespacio vectorial. En efecto, como $X$ es variedad proyectiva existe cierta variedad lineal $\widehat{X}$ de forma que \\$\pi(\widehat{X}\smz)=X$. Si Dios existe y está de nuestra parte se tendrá  $\widehat{X}=\pi^{-1}(X)\cup\zset$, con lo que habríamos terminado. En efecto, la igualdad que queremos obtener es equivalente (quitando el cero a ambos lados y aplicando la proyección canónica) a la igualdad: \[\pi(\widehat{X}\smz)=\pi(\pi^{-1}(X))=X\]Lo cual tenemos por hipótesis.
 	\item[$\bla$] Si $\pi^{-1}(X)\cup\zset$ es un espacio vectorial, su proyectivo asociado será $\pi(\pi^{-1}(X))=X$, con lo que hemos encontrado una variedad lineal de $E$ de forma que $X$ es su espacio proyectivo asociado. Por la definición \ref{C1_def_variedadProyectiva} hemos terminado.
 \end{itemize}
 \end{proof}
@@ -114,12 +114,13 @@ Tras estas observaciones estamos en condiciones de abordar dos problemas element
 \end{enumerate}
 \begin{lem}[Intersección de Variedades Proyectivas]
 	\label{C1_lem_interseccionVariedades}
-	Sea la familia de variedades proyectivas $\{X_i\tq i\in I\}$, se tiene que la intersección $\bigcap_{i\in I}X_i$ es una variedad proyectiva.
+	Sea la familia de variedades proyectivas $\{X_i\tq i\in I\}$, se tiene que la intersección $X=\bigcap_{i\in I}X_i$ es una variedad proyectiva.
 	
-	Además, se verifica $\hat{X}=\bigcap_{i\in I}\hat{X_i}$
+	Además, se verifica $\hat{X}=\bigcap_{i\in I}\hat{X_i}$, es decir, el espacio vectorial subyacente a la intersección de variedades, es la intersección de los espacios vectoriales asociados a las variedades que interseco.
+	
 \end{lem}
 \begin{proof}
-	Debemos demostrar que $\bigcap_{i\in I}X_i$ es variedad proyectiva. Esto pasa, por el lema \ref{C1_lem_caracterizacionVariedades} si y solo si $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\cup\zset$ es un espacio vectorial. Si tenemos suerte, se cumplirá que $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)=\bigcap_{i\in I}\pi^{-1}(X_i)$. Supongamos que tenemos suerte, en tal caso, por ser cada $X_i$ una variedad proyectiva y por tanto $\pi^{-1}(X_i)\cup\zset$ un subespacio vectorial, y por ser la intersección arbitraria de espacios vectoriales un espacio vectorial, se tiene que $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\cup\zset$ es un subespacio vectorial, como queríamos demostrar.
+	Debemos demostrar que $\bigcap_{i\in I}X_i$ es variedad proyectiva. Esto pasa, por el lema \ref{C1_lem_caracterizacionVariedades}, si y solo si $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\cup\zset$ es un espacio vectorial. Si tenemos suerte, se cumplirá que $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)=\bigcap_{i\in I}\pi^{-1}(X_i)$. Supongamos que tenemos suerte (luego lo demostraremos), en tal caso, por ser cada $X_i$ una variedad proyectiva y, por tanto, $\pi^{-1}(X_i)\cup\zset$ un subespacio vectorial, unido a que la intersección arbitraria de espacios vectoriales un espacio vectorial, se tiene que $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\cup\zset$ es un subespacio vectorial, como queríamos demostrar.
 	
 	Finalmente, comprobemos que, efectivamente, hemos tenido suerte.
 	\begin{multline*}
@@ -223,7 +224,7 @@ Nótese que la tercera equivalencia de la ecuación~\eqref{C1_eq_combinacionLine
 Volviendo al mundo proyectivo, queremos encontrar cierta colección de puntos proyectivos en función de los cuales poder escribir todos los demás. 
 \subsection{Coordenadas Homogéneas}
 \label{C1_coordenadasHomogeneas}
-Si tomamos un punto proyectivo $x:=\class{u}$, por la ecuación~\eqref{C1_eq_combinacionLineal} podremos escribir:
+Si tomamos un punto proyectivo $x:=\class{u}\in\proy(E)$, por la ecuación~\eqref{C1_eq_combinacionLineal} podremos escribir:
 \begin{equation}
 	\label{C1_eq_coordenadasHomogeneas}
 	x:\class{u}=\class{(\lambda_0,\dots,\lambda_n)_{\mc{B}}}:\stackrel{\textrm{not.}}{\equiv}(\lambda_0:\dots:\lambda_n)
@@ -255,7 +256,7 @@ Con un poco de trabajo adicional extraemos la siguiente caracterización de la i
 	En un espacio proyectivo de dimensión $n$, podemos escoger (como mucho) un conjunto de $n+1$ puntos proyectivamente independientes, ya que, para cualquier elección de representantes de estos puntos, se obtendrían $n+1$ vectores linealmente independientes del espacio vectorial asociado $E$, de dimensión $n+1$, en el cual estos vectores, por definición formarían una base a la que llamaremos \ti{base inducida}.
 \end{obs}
 Hay un gran problema con la definición \ref{C1_def_independenciaProyectiva}, y es que, dados $n+1$ puntos proyectivos, inducimos una familia de bases de $E$ demasiado ``grande''. Con grande nos referimos a que no solo inducimos una base junto con todas las proporcionales a ella (resultantes de aplicarle el mismo factor de escala a todos sus vectores), sino muchas más.
-\begin{obs}[No Unidad de la Base Inducida]
+\begin{obs}[No Unicidad de la Base Inducida]
 	\label{C1_obs_noUnicidadBase}
 	Dada una elección de representantes $\{u_o,\dots,u_n\}$ que son una base de $E$, entonces, el conjunto de representantes $\{\lambda_0u_0,\dots,\lambda_nu_n\}$, con $\lambda_i\in\K^*$ también conforma una base de $E$.
 \end{obs}
@@ -362,7 +363,7 @@ Para clarificar un poco las cosas se presenta el siguiente ejemplo.
 	\mc{B}'=\left\{(2,0,2), \left(0,-2,-1\right),\left(0,0,-1\right)\right\}
 	\]
 \end{exa}
-Antes de continuar, fijemos una notación para referirinos a referencias proyectivas.
+Antes de continuar, fijemos una notación para referirnos a referencias proyectivas.
 
 Dada una referencia proyectiva $\mf{R}$, la denotaremos por los puntos que la conforman de la siguiente manera:
 \begin{equation}
@@ -370,7 +371,7 @@ Dada una referencia proyectiva $\mf{R}$, la denotaremos por los puntos que la co
 \mf{R}=\{p_0,\dots,p_n;e\}
 \end{equation}
 Donde $e$ representa el último punto al que llamaremos \ti{punto unidad}.
-\begin{defi}[Coordenadas Homogéneas Respecto de una Referencia $\mf{R}$]
+\begin{defi}[Coordenadas Homogéneas respecto de una Referencia $\mf{R}$]
 	\label{C1_def_coordenadasReferencia}
 	Dado un punto proyectivo $p\in\proy(E)$ y una referencia proyectiva $\mf{R}$, se dice que $p=(x_0:\dots :x_n)_{\mf{R}}$ si, para cualquier elección de $u$ (representante del rayo $p$) y cualquier elección de base asociada $\mc{B}$ a $\mf{R}$, se tiene que:
 	\[u=\lambda(x_0,\dots,x_n)_{\mc{B}}\]
@@ -411,7 +412,7 @@ Un ejemplo clarificará todos estos cambalaches.
 	
 	Por ende, basta con calcular la matriz de cambio de base de la base canónica a las bases asociadas por $\mf{R}$ y $\mf{R}'$, lo cual es algo facilísimo (una vez obtenidas sendas bases).
 	
-	Como la obtención de las mismas no es el objetivo de esta sección, las presentamos directamente:
+	Como la obtención de las mismas no es el objetivo de esta sección, las presentaremos directamente, sin embargo, si uno no se fía, siempre puede acudir al ejemplo \ref{C1_exa_basesAsociadas} y al teorema \ref{C1_teo_unicidadBase}, donde se expone un método para calcular la base asociada a una referencia.
 	\begin{gather*}
 		\mc{B}_{\mf{R}}=\{(2,0,-1),(1,-1,0),(-1,1,-1)\}\\
 		\mc{B}_{\mf{R}'}=\{(1,1,1),(0,1,1),(1,0,1)\}

@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {1.1.4}Proyecci\IeC {\'o}n Can\IeC {\'o}nica}{5}{subsection.1.1.4}
 \contentsline {section}{\numberline {1.2}Variedades Proyectivas}{5}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Operaciones con Variedades Proyectivas}{6}{subsection.1.2.1}
-\contentsline {section}{\numberline {1.3}Dimensiones y F\IeC {\'o}rmula de Grassmann}{7}{section.1.3}
+\contentsline {section}{\numberline {1.3}Dimensiones y F\IeC {\'o}rmula de Grassmann}{8}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Dimensiones y F\IeC {\'o}rmula de Grassmann}{8}{subsection.1.3.1}
 \contentsline {section}{\numberline {1.4}Referencias Proyectivas}{9}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}Coordenadas Homog\IeC {\'e}neas}{9}{subsection.1.4.1}
@@ -59,15 +59,16 @@
 \contentsline {subsection}{\numberline {6.3.1}Aplicaciones afines y homograf\IeC {\'\i }as de $\mathbb {P}^n$}{64}{subsection.6.3.1}
 \contentsline {section}{\numberline {6.4}Involuciones}{66}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Haz de ecuaciones de segundo grado}{68}{subsection.6.4.1}
-\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{69}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{69}{section.Alph1.1}
-\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{70}{subsection.Alph1.1.1}
-\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{71}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{71}{subsection.Alph1.2.1}
-\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{71}{section*.5}
-\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{72}{section*.6}
-\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{72}{section*.7}
-\contentsline {paragraph}{Observaciones}{72}{section*.8}
-\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{72}{section*.9}
-\contentsline {section}{\numberline {A.3}Dualidad}{73}{section.Alph1.3}
-\contentsline {chapter}{\numberline {B}Mierdas varias}{75}{appendix.Alph2}
+\contentsline {chapter}{\numberline {7}C\IeC {\'o}nicas y Cu\IeC {\'a}dricas}{69}{chapter.7}
+\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{70}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{70}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{71}{subsection.Alph1.1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{72}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{72}{subsection.Alph1.2.1}
+\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{72}{section*.5}
+\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{73}{section*.6}
+\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{73}{section*.7}
+\contentsline {paragraph}{Observaciones}{73}{section*.8}
+\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{73}{section*.9}
+\contentsline {section}{\numberline {A.3}Dualidad}{74}{section.Alph1.3}
+\contentsline {chapter}{\numberline {B}Mierdas varias}{76}{appendix.Alph2}

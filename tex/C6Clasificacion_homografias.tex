@@ -196,7 +196,7 @@ Sabemos pues que $u$ es autovector de $\widehat{h}$ asociado a un autovalor $\la
 Notemos que hasta ahora no hemos utilizado en absoluto que $h$ sea una homografía de $\proy^1$. Con esto queremos resaltar que todo lo dicho es válido para homografías de $\proy^n$. Es decir, los puntos fijos de una homografía de $\proy^n$ vienen dados por $\proy(V_{\lambda_i})$ para los distintos autovalores $\lambda_i$ de la aplicación lineal asociada.
 
 \begin{obs}
-	Cualquier homografía de un espacio proyectivo complejo tiene puntos fijos. Sin embargo, hay homografías del espacio proyectivo real que no los tienen. Podemos precisar un poco más, ya que sabemos que todo polinomio con coeficientes en $\R$ de grado impar tiene raíces. Por tanto para que haya homografías sin puntos fijos, el grado del polinomio debe ser par, con lo cual la dimensión del espacio vectorial es par y, por tanto, la dimensión del espacio proyectivo debe ser impar.
+	Cualquier homografía de un espacio proyectivo complejo tiene puntos fijos. Sin embargo, hay homografías del espacio proyectivo real que no los tienen. Podemos precisar un poco más, ya que sabemos que todo polinomio con coeficientes en $\R$ de grado impar tiene raíces. Por tanto para que haya homografías sin puntos fijos, el grado del polinomio debe ser par, con lo cual la dimensión del espacio vectorial es par y, por tanto, la dimensión del espacio proyectivo debe ser impar. A no ser que se diga lo contrario, de aquí en adelante trabajaremos en $\C$.
 \end{obs}
 
 Indaguemos un poco más para obtener las conclusiones del apartado anterior, es decir, que una homografía $h$ de $\proy^1$ distinta de la identidad tiene o dos puntos fijos distintos o uno doble. Para ello trabajemos con matrices.
@@ -271,11 +271,11 @@ Calculemos dos autovectores, $u_a$ y $u_d$ asociados a estos autovalores. Record
 \end{equation*}
 Por tanto los dos puntos fijos de la homografía $h$ son $(1:0)$ y $(b/d:1-a/d)=(\beta:1-\alpha)$, cuyas coordenadas no homogéneas son $\infty$ y $\frac{\beta}{1-\alpha}$. 
 
-Dado que la ecuación $\theta'=\alpha\theta+\beta$ define una aplicación afín de la recta podemos concluir que las afinidades, homografía con $c=0$, dejan fijo el infinito. 
+Dado que la ecuación $\theta'=\alpha\theta+\beta$ define una aplicación afín de la recta podemos concluir que \tb{las afinidades}, homografía con $c=0$, \tb{dejan fijo el infinito}. 
 \begin{obs}
 	No se debe confundir esto con las elaciones. Mientras estás últimas tienen un punto fijo doble, que se puede identificar con el infinito en cierta referencia, las homografías con $c=0$ dejan fijo el infinito sea cual sea la referencia en la que nos encontramos. Es decir, si cambiamos de referencia seguirán teniendo como punto fijo el punto $(1:0)$ de dicha referencia.
 \end{obs}
-Veamos el recíproco, si una homografía de $\proy^1$ deja fijo el infinito, entonces es una aplicación afín. 
+Veamos el \tb{recíproco}, si una homografía de $\proy^1$ deja fijo el infinito, entonces es una aplicación afín. 
 
 Sea una homografía de $\proy^1$ con matriz asociada
 \begin{equation*}
@@ -611,7 +611,7 @@ A lo largo de estas dos demostraciones hemos estado excluyendo los puntos fijos 
 	También se puede llegar a la misma conclusión, que la matriz $A$ es necesariamente diagonal y con ello $h$ tiene dos puntos fijos, teniendo en cuenta que como $h^2=id$ entonces $A^2=\rho I$, con $\rho=\lambda^2$
 \end{proof}
 Por tanto las involuciones pertenecen al primer grupo de homografías tratadas en este capítulo. Trabajemos en $\C$. Recordemos que para las homografías con dos puntos fijos habíamos definido el módulo de la homografía. Hallemos el valor de $k$ para una involución $h$ a través de la razón doble en el siguiente lema.
-\begin{lem}
+\begin{lem}\label{C6:lem_modulo1_sii_involucion}
 	Dada una homografía $h$ de $\proy^1$, esta tiene dos puntos fijos con módulo $k=-1$ si y solo si $h$ es una involución.
 \end{lem}
 \begin{proof}
@@ -650,6 +650,210 @@ Recordando lo estudiado al principio de este capítulo, y dado que una involuci�
 \begin{equation}
 	\theta'=-\theta
 \end{equation}
-Se deduce inmediatamente del lema anterior que si una homografía con dos puntos fijos tiene como ecuación canónica $\theta'=-\theta$, entonces es una involución.
+Se deduce inmediatamente del lema anterior que si una homografía con dos puntos fijos tiene como ecuación canónica $\theta'=-\theta$, entonces es una involución.\\
+
+(Homografías como composición de involuciones)\\
+
+Por último, veremos como caracterizar las involuciones a partir de dos puntos.\\
+
+Dada una homografía de $\proy^1$ sabemos que esta queda determinada por tres puntos y sus respectivas imágenes, pues con ellos es posible determinar la transformación de Möbius que la caracteriza (o equivalentemente la matriz asociada). Sin embargo, para que una involución quede determinada basta con dos puntos, y sus imágenes, dado que la traza de su matriz es nula y, por tanto, hay un parámetro menos ($d=-a$).
+
+Esto puede comprobarse, dados dos puntos, con coordenadas no homogéneas $\theta_1$ y $\theta_2$, y sus imágenes ($\theta'_1$ y $\theta'_2$), resolviendo las ecuaciones resultantes de sustituir dichos puntos en 
+\begin{equation}
+	\label{C6:eq_moebius_haces_ec2}
+	\theta'=\frac{a\theta+b}{c\theta -a}
+\end{equation}
+para determinar $a,b$ y $c$, y con ello la involución. Sin embargo, este procedimiento es muy tosco. Recordamos que la ecuación general de una involución viene dada por 
+\begin{equation*}
+	\alpha\theta\theta'+\beta(\theta+\theta')+\delta=0
+\end{equation*}
+Podríamos sustituir en esta ecuación los puntos y sus imágenes y resolver el sistema lineal resultante, determinando así $\alpha,\beta$ y $\delta$ y con ello la involución:
+\begin{equation*}
+	\begin{split}
+		\alpha\theta_1\theta_1'+\beta(\theta_1+\theta_1')+\delta&=0\\
+		\alpha\theta_2\theta_2'+\beta(\theta_2+\theta_2')+\delta&=0
+	\end{split}
+\end{equation*}
+Esto se puede escribir a través de un determinante
+\begin{equation}
+	\left| \begin{array}{ccc}
+		\theta\theta'&\theta+\theta'&1\\
+		\theta_1\theta_1'&\theta_1+\theta_1'&1\\
+		\theta_2\theta_2'&\theta_2+\theta_2'&1
+	\end{array}\right| =0
+\end{equation}
+El resultado de este determinante no es otro que la ecuación general de una involución que transforma $\theta_1$ en $\theta'_1$ y $\theta_2$ en $\theta'_2$. En efecto, es claro que el resultado es la ecuación general de una involución. Para que esta transforme $\theta_1$ en $\theta'_1$ y $\theta_2$ en $\theta'_2$ basta con que la ecuación general particularizada a esos puntos de cero. Al particularizar lo que estamos haciendo es sustituir la primera fila del determinante por la segunda o la tercera, luego es cero.
+
+Así, para determinar una involución a partir de dos puntos basta con realizar este determinante, en vez de resolver el sistema resultante de la ecuación~\eqref{C6:eq_moebius_haces_ec2}.
+\begin{exa}
+	Determinar la involución de $\proy^1$ que transforma $\theta_1=1$ en $\theta'_1=-1$ y $\theta_2=0$ en $\theta'_2=2$.\\
+	
+	Calculamos la ecuación general de dicha involución a través del determinante
+	\begin{equation*}
+		\left| \begin{array}{ccc}
+			\theta\theta'&\theta+\theta'&1\\
+			-1&0&1\\
+			0&2&1
+		\end{array}\right| =0
+	\end{equation*}
+	Resolviéndolo obtenemos
+	\begin{equation*}
+		-2\theta\theta'+(\theta+\theta')-2=0
+	\end{equation*}
+	Esta ecuación general nos permite hallar la transformación de möbius que caracteriza a la involución, dado que $\alpha=c, \ \beta=-a, \ \delta=-b$ y $d=-a$. Por tanto, la involución buscada queda determinada por
+	\begin{equation*}
+		\theta'=\frac{-\theta+2}{-2\theta+1}
+	\end{equation*}
+\end{exa}
 
 \subsection{Haz de ecuaciones de segundo grado}
+Debido a que, dado un punto $P\in\proy^1$, si $h$ es una involución de $\proy^1$ se tiene que $h^2(P)=P$, diremos que las involuciones están formadas por pares no ordenados de puntos $(P,h(P)=P')$. Notemos que equivalentemente se tiene $(P',h(P')=P)$.
+
+Una forma de proporcionar pares no ordenados de puntos es mediante una ecuación de segundo grado, ya que nos hallamos en $\C$. Surge entonces la siguiente pregunta: ¿Se podría describir una involución mediante ecuaciones de segundo grado? En esta sección nos dedicaremos al desarrollo de la respuesta.\\
+
+Un par no ordenado de puntos $(P,P')$ viene dado por una ecuación de segundo grado, que podemos escribir como
+\begin{equation*}
+	a\theta^2+2h\theta+b=0,
+\end{equation*}
+de tal forma que $\theta$ y $\theta'$, coordenadas no homogéneas de $P$ y $P'$, son las soluciones de la ecuación.
+
+Observemos que si $\theta$ y $\theta'$ son las soluciones de la ecuación anterior, también lo son del doble de ella, o de, en general, $\lambda$ veces ella. Por tanto, un par de puntos no ordenados es equivalente a un rayo de ecuaciones de segundo grado. De esta forma, las ecuaciones de segundo grado pasan a ser puntos y podemos definir un haz.
+\begin{defi}[Haz de ecuaciones de segundo grado] Dados dos rayos de ecuaciones de segundo grado
+\begin{equation}
+	\begin{split}
+		S_1&:a_1\theta^2+2h_1\theta+b_1=0\\
+		S_2&:a_2\theta^2+2h_2\theta+b_2=0
+	\end{split}
+\end{equation}
+se define el \ti{haz de ecuaciones de segundo grado} asociado a $S_1$ y $S_2$ como el subespacio de dimensión 1 (?) generado por estos rayos
+\begin{equation}
+	S=S_1+\lambda S_2 \tq \lambda\in\proy^1
+\end{equation}
+\end{defi}
+Diremos que un par $(P,P')$ es solución de $S$ si, para cierto $\lambda$, sus coordenadas no homogéneas $\theta$ y $\theta'$ son las soluciones de la ecuación de segundo grado dada por $S_1+\lambda S_2$.
+
+Recordemos que estamos buscando como describir las involuciones a partir de ecuaciones de segundo grado. Para ello debemos encontrar una, o unas, ecuaciones de segundo grado cuyas soluciones coincidan con los pares de puntos de la involución.
+
+Dado que las involuciones quedan caracterizadas por dos pares de puntos, lo suyo sería partir de dos pares de puntos, o equivalentemente de dos rayos de ecuaciones de segundo grado. De la misma forma, dado que no son necesarios más de dos pares de puntos para describir una involución, cabe pensar que con dos rayos de ecuaciones de segundo grado podemos conseguir todos los pares de la involución, quedando así descrita. Y estamos en lo cierto.
+\begin{prop}
+	Sea una involución $h$ de $\proy^1$ y dos de sus pares de puntos no ordenados $(P_1,h(P_1)=P_1')$ y $(P_2,h(P_2)=P_2')$ que se describen a partir de las ecuaciones
+	\begin{equation*}
+	\begin{split}
+		S_1&:a_1\theta^2+2h_1\theta+b_1=0,\\
+		S_2&:a_2\theta^2+2h_2\theta+b_2=0.
+	\end{split}
+	\end{equation*}
+	Entonces, la involución queda descrita por el haz de ecuaciones de segundo grado asociado a $S_1$ y $S_2$ 
+	\begin{equation*}
+		S=S_1+\lambda S_2
+	\end{equation*}
+\end{prop}
+\begin{proof}
+	Debemos demostrar que  los pares de la involución $h$ coinciden con las soluciones de $S$. Para ello veamos primero que todos los pares de soluciones de $S$ son pares de $h$, es decir, son de la forma $(P,h(P))$. 
+	
+	Recordemos que las involuciones tienen dos puntos fijos $M,N$ y que el par $(P,h(P))$ está armonicamente separado del par $(M,N)$ (lema~\ref{C6:lem_modulo1_sii_involucion}). Por tanto, para ver que todas los pares soluciones de $S$ son pares de $h$ basta ver que todos ellos están armónicamente separados del par $(M,N)$, donde $M$ y $N$ son los puntos fijos de $h$.
+	
+	Sea pues $(\theta,\theta')$ un par solución de $S$ arbitrario, debemos probar que 
+	\begin{equation*}
+		\{\theta_M,\theta_N,\theta,\theta'\}=-1
+	\end{equation*}
+	donde $\theta_M,\theta_N$ son las coordenadas no homogéneas de los puntos fijos de $h$. 
+	
+	Es claro que podemos encontrar un rayo de ecuaciones de segundo grado
+	\begin{equation*}
+		\overline{S}:\overline{a}\theta^2+2\overline{h}\theta+\overline{b}=0
+	\end{equation*}
+	cuyas soluciones sean $\theta_M$ y $\theta_N$. Por otro lado, el haz de ecuaciones de segundo grado $S$ viene dado por
+	\begin{equation*}
+		S:(a_1+\lambda a_2)\theta^2+2(h_1+\lambda h_2)\theta+(b_1+\lambda b_2)=0
+	\end{equation*}
+	cualquiera que sea $\lambda$.
+	
+	Por el ejercicio 38 hecho en clase (Ejercicio~\ref{C6:exerc_38}) sabemos que los pares $(\theta,\theta')$ y $(\theta_M,\theta_N)$ están armónicamente separados, que es lo que queremos probar, si y solo si
+	\begin{equation*}
+		2(h_1+\lambda h_2)\overline{h}-(a_1+\lambda a_2)\overline{b}-(b_1+\lambda b_2)\overline{a}=0
+	\end{equation*}
+	Dado que esto debe ocurrir para cualquier $\lambda$, pues $(\theta,\theta')$ es arbitrario, están armónicamente separados si y solo si
+	\begin{equation*}
+		\begin{split}
+			2h_1\overline{h}-a_1\overline{b}-b_1\overline{a}=0\\
+			2h_2\overline{h}-a_2\overline{b}-b_2\overline{a}=0
+		\end{split}
+	\end{equation*}
+	Por hipótesis, los pares $(\theta_1,\theta'_1)$ y $(\theta_2,\theta'_2)$, coordenadas no homogéneas de los puntos $P_1,P'_1,P_2$ y $P'_2$, son las soluciones de $S_1$ y $S_2$, respectivamente. Por tanto, por el mismo ejercicio, las ecuaciones anteriores se cumplen si y solo si el par $(\theta_M,\theta_N)$ está armónicamente separado de los pares $(\theta_1,\theta'_1)$ y $(\theta_2,\theta'_2)$. Esto último ocurre pues, al ser $(\theta_1,\theta'_1)$, $(\theta_2,\theta'_2)$ las coordenadas no homogéneas de los pares $(P_1,h(P_1)=P_1')$ y $(P_2,h(P_2)=P_2')$ y $h$ involución con puntos fijos $M$ y $N$, se tiene que, como dijimos antes (lema~\ref{C6:lem_modulo1_sii_involucion}),
+	\begin{equation*}
+		\{\theta_M,\theta_N,\theta_1,\theta_1'\}=-1
+	\end{equation*}
+	\begin{equation*}
+		\{\theta_M,\theta_N,\theta_2,\theta_2'\}=-1
+	\end{equation*}
+	Por tanto, volviendo hacia atrás se concluye que los pares $(\theta,\theta')$ y $(\theta_M,\theta_N)$ están armónicamente separados, y con ello que los pares soluciones de $S$ son pares de $h$.\\
+	
+	Falta ver que todos los pares de $h$ son soluciones de $S$. En realidad, esto ya lo hemos demostrado.
+	
+	En efecto, dado un punto arbitrario $P\in\proy^1$, cuya coordenada no homogénea es $\theta$ y cuya imagen por $h$ tiene coordenada no homogénea $\theta'$, podemos elegir $\lambda$ de tal forma que $\theta$ sea una de las soluciones de $S$. La otra solución de $S$ asociada a dicho $\lambda$ formará con $\theta$ un par $(\theta,\overline{\theta})$ solución de $S$. Por lo que acabamos de demostrar los pares soluciones de $S$ son pares de $h$, y por tanto $\overline{\theta}=\theta'$ y con ello el par $(\theta,\theta')$ de $h$ es solución de $S$.
+\end{proof}
+Por último, veamos el recíproco.
+\begin{prop}
+	Todo haz de ecuaciones de segundo grado
+	\begin{equation*}
+		S=S_1+\lambda S_2
+	\end{equation*}
+	tiene asociada una única involución.
+\end{prop}
+\begin{proof}
+	Sea el haz de ecuaciones de segundo grado $S=S_1+\lambda S_2$ donde
+	\begin{equation*}
+	\begin{split}
+		S_1&:a_1\theta^2+2h_1\theta+b_1=0,\\
+		S_2&:a_2\theta^2+2h_2\theta+b_2=0.
+	\end{split}
+	\end{equation*}
+	Sean los pares $(\theta_1,\theta'_1)$ y $(\theta_2,\theta'_2)$ solución de $S_1$ y $S_2$ respectivamente, estos determinan una involución $h$, la cual transforma $\theta_1$ en $\theta'_1$ y $\theta_2$ en $\theta'_2$, quedando así demostrada su existencia.
+	
+	Además, por la proposición anterior, $h$ queda descrita por el haz $S_1+\lambda S_2$, que es el haz $S$, por lo que todos los pares solución de $S$ son pares de $h$. Por tanto, no existen dos pares que sean solución de $S$ y que estén asociados a otra involución distinta de $h$, quedando demostrada su unicidad.
+\end{proof}
+Finalmente, y para cerrar este capítulo, veamos un ejemplo para afianzar este nuevo concepto.
+\begin{exa}[Haz de ecuaciones de segundo grado] Sean las ecuaciones de segundo grado
+	\begin{equation*}
+		\begin{split}
+			S_1&:(\theta-1)(\theta+1)=0,\\
+			S_2&:\theta(\theta-2)=0.
+		\end{split}
+	\end{equation*}
+	¿Cuál es la imagen del punto con coordenada no homogénea $\theta=3$?\\
+	
+	Sabemos que dadas $S_1$ y $S_2$ hay un única involución $h$ asociada al haz $S_1+\lambda S_2$. Nos piden la imagen de la coordenada no homogénea 3 por $h$, es decir $\theta'=h(3)$. 
+	
+	La involución $h$ queda determinada por el haz de ecuaciones de segundo grado
+	\begin{equation}\label{C6:eq_ejercicio_haz}
+		S:(\theta-1)(\theta+1)+\lambda\theta(\theta-2)=0
+	\end{equation}
+	Todos los pares $(\theta,h(\theta)=\theta')$ son pares de soluciones de $S$. Por tanto, para $\theta=3$ existirá un cierto $\lambda_0$ de tal forma que $(3,h(3))$ sean las soluciones de la ecuación de segundo grado $S_0$ del haz resultante de sustituir $\lambda_0$ en la ecuación~\eqref{C6:eq_ejercicio_haz}. Nuestro objetivo es, por tanto, hallar dicho $\lambda_0$ y después encontrar las soluciones de $S_0$, que serán $3$ y $h(3)$.
+	
+	Buscamos la ecuación del haz $S$ que tenga como solución $3$. Por tanto se cumple
+	\begin{equation*}
+		(3-1)(3+1)+\lambda 3(3-2)=0\sii \lambda=-\frac{8}{3}
+	\end{equation*}
+	que es el $\lambda_0$ que buscábamos. La ecuación $S_0$ del haz es
+	\begin{equation*}
+		S_0:(\theta-1)(\theta+1)-\frac{8}{3}\theta(\theta-2)=0
+	\end{equation*}
+	\begin{equation*}
+		S_0:3(\theta-1)(\theta+1)-8\theta(\theta-2)=0
+	\end{equation*}
+	cuyas soluciones son $3$ y $1/5$. Por tanto, $h(3)=\theta'=1/5$.
+\end{exa}
+\begin{exerc}[Ejercicio 38]\label{C6:exerc_38}
+	Demuéstrese que si las coordenadas no homogéneas de los pares $(P_1,P_2)$ y $(P_3,P_4)$ están dadas, respectivamente, por las ecuaciones 
+	\begin{equation*}
+		\begin{split}
+			a\theta^2+2h\theta+b=0\\
+			a'\theta^2+2h'\theta+b'=0
+		\end{split}
+	\end{equation*}
+	entonces los pares son armónicos si y solo si
+	\begin{equation*}
+		2hh'-ab'-a'b=0.
+	\end{equation*}
+\end{exerc}

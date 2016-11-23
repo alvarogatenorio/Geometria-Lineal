@@ -72,7 +72,7 @@ Veamos con un ejemplo que ya, con lo poco que sabemos podemos demostrar cosillas
 \begin{exa}[Aplicaciones No Inyectivas Constantes]
 	Veamos que las aplicaciones proyectivas no inyectivas que parten de un subespacio proyectivo de dimensión $1$ son constantes.
 	
-	Para ello usamos el lema \ref{C4_lem_inyectividadSobreyectividad}. Si una aplicación cumpliera las características de nuestra hipótesis, su aplicación lineal correspondiente partiría de un espacio vectorial de dimensión $2$ y tampoco sería inyectiva, siendo su núcleo un subespacio de dimensión $1$ y su imagen otro subespacio de miensión $1$. Al proyectivizar nos que nuestra aplicación parte de un espacio proyectivo de dimensión $1$ (extrayendo el punto asociado al núcleo) y llega a un espacio proyectivo conformado por un único punto (el proyectivizado de la imagen de su aplicación lineal).
+	Para ello usamos el lema \ref{C4_lem_inyectividadSobreyectividad}. Si una aplicación cumpliera las características de nuestra hipótesis, su aplicación lineal correspondiente partiría de un espacio vectorial de dimensión $2$ y tampoco sería inyectiva, siendo su núcleo un subespacio de dimensión $1$ y su imagen otro subespacio de dimensión $1$. Al proyectivizar nos que nuestra aplicación parte de un espacio proyectivo de dimensión $1$ (extrayendo el punto asociado al núcleo) y llega a un espacio proyectivo conformado por un único punto (el proyectivizado de la imagen de su aplicación lineal).
 \end{exa}
 Veamos ahora que, tanto la imagen como la imagen inversa de una variedad por una aplicación proyectiva es otra variedad.
 \begin{lem}[Preservación de Variedades]
@@ -157,10 +157,17 @@ Antes de lanzarnos al estudio general de estas aplicaciones presentemos un par d
 \begin{exa}[Punto sobre Recta]
 	\label{C4_exa_puntoRecta}
 	En el plano proyectivo $\proy^2$ consideramos un punto $z$ y una recta $Y$ (recordemos que es un subespacio proyectivo) tal que $z\not\in Y$. En estas condiciones definimos la aplicación:
-	\[\begin{array}{c}
-		\proy^2\setminus\{z\}\stackrel{h}{\to} Y\\
-		x\mapsto h(x)=\engen{x,z}\cap Y
+	\[\begin{array}{ccc}
+		\proy^2\setminus\{z\}&\stackrel{h}{\to}& Y\\
+		x&\mapsto& h(x)=\engen{x,z}\cap Y
 	\end{array}\]
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=.15]{Graficos/rectaPunto.eps}
+		\caption{Ilustración de una Proyección Punto--Recta.}
+		\label{C4_puntoRecta}
+	\end{figure}
+	
 \end{exa}
 
 No demostraremos que la aplicación del ejemplo \ref{C4_exa_puntoRecta} es, en efecto, una aplicación proyectiva, ya que al final de la sección daremos una demostración general para todas las proyecciones cónicas, de las que esta aplicación en concreto es un caso particular.
@@ -175,14 +182,14 @@ El ejemplo \ref{C4_exa_puntoRecta} se puede generalizar para dimensiones superio
 	\end{array}\]
 \end{exa}
 Otra generalización de los ejemplos anteriores es la siguiente (menos intuitiva y más dificil de ver):
-\begin{exa}
-	En el espacio proyectivo $\proy^3$ se consideran las rectas $l$ y $l$ tales que $l\cap l'=\emptyset$. Definimos la aplicación:
+\begin{exa}[Recta sobre Recta]
+	En el espacio proyectivo $\proy^3$ se consideran las rectas $l$ y $l'$ tales que $l\cap l'=\emptyset$. Definimos la aplicación:
 	\[\begin{array}{c}
 	\proy^3\setminus l\stackrel{h}{\to}l'\\
 	x\mapsto\engen{x,l}\cap l'
 	\end{array}\]
+	Observamos simplemente que $\engen{x,l}\cap l'$ siempre se corta con $l$ en un punto (consecuencia inmediata de la fórmula de Grassmann).
 \end{exa}
-Observamos simplemente que $\engen{x,l}\cap l'$ siempre se corta con $l$ en un punto (consecuencia inmediata de la fórmula de Grassmann).
 
 Llegados a este punto, ha llegado la hora de definir \ti{proyección cónica} en toda su generalidad.
 \begin{defi}[Proyección Cónica]
@@ -325,6 +332,7 @@ En esta sección introduciremos unas aplicaciones proyectivas bastante notables,
 \end{defi}
 Antes de empezar a desgranar las propiedades de estas aplicaciones, pongamos un ejemplo notable que nos permitirá construir homografías en el plano proyectivo.
 \begin{exa}[Fábrica de Homografías]
+	\label{C4_exa_fabricaHomografias}
 	Sean $r$ y $r'$ dos rectas distintas de $\proy^2$. Asimismo un punto proyectivo $c\in\proy^2\setminus\{r\cup r'\}$.
 	
 	Definimos la aplicación: \[\begin{array}{c}
@@ -402,11 +410,11 @@ Denotando por $W$ a la matriz columna cuyos coeficientes son las coordenadas hom
 \end{equation}
 Nótese que hemos cometido un abuso de notación ya que $M_{\mc{B}\mc{B}'}(\widehat{h})W$ es una matriz columna, sin embargo la consideramos como un vector para poder tomar el rayo engendrado por él.
 
-Sin embargo, que no cunda la euforia, todavía tenemos un problema por subsanar, ya que al ser las bases asociadas a $\mf{R}$ y $\mf{R}'$ únicas salvo múltiplos nadie me impide coger la base $\lambda\mc{B}$ (para cierto escalar $\lambda$ no nulo) en lugar de la base $\mc{B}$.
+Que no cunda la euforia, todavía tenemos un problema por subsanar, ya que al ser las bases asociadas a $\mf{R}$ y $\mf{R}'$ únicas salvo múltiplos nadie me impide coger la base $\lambda\mc{B}$ (para cierto escalar $\lambda$ no nulo) en lugar de la base $\mc{B}$.
 
-Sin embargo, las matrices de cambio entre bases asociadas (y sus inversas) son múltiplos de la identidad (por ser las unas múltiplos de las otras). Esta propiedad trae a colación un viejo resultado acerca de matrices que reza que la multiplicar una matriz (ya sea por la izquierda o por la derecha) por $\lambda I_n$ es equivalente a multiplicar la matriz por $\lambda$. Así pues tenemos que:
+Sin embargo, las matrices de cambio entre bases asociadas (y sus inversas) son múltiplos de la identidad (por ser las unas múltiplos de las otras). Esta propiedad trae a colación un viejo resultado acerca de matrices que reza que al multiplicar una matriz (ya sea por la izquierda o por la derecha) por $\lambda I_n$ es equivalente a multiplicar la matriz por $\lambda$. Así pues tenemos que:
 \begin{equation}
-	h(\class{w}):=\class{M_{\mc{B}\mc{B}'}(\widehat{h})W}=\class{M_{\lambda \mc{B}\mu\mc{B}'}(\widehat{h})W}=\class{M_{\mc{B}\mc{B}'}(\widehat{h})\lambda\mu W}=\class{M_{\mc{B}\mc{B}'}(\widehat{h})W}=:h(\class{w})
+	\class{M_{\lambda \mc{B}\mu\mc{B}'}(\widehat{h})W}=\class{M_{\mc{B}\mc{B}'}(\widehat{h})\lambda\mu W}=\class{M_{\mc{B}\mc{B}'}(\widehat{h})W}=:h(\class{w})
 \end{equation}
 Pongamos algunos ejemplos para asentar todo esto.
 \begin{exa}[Transformaciones de Möbius]
@@ -414,13 +422,13 @@ Pongamos algunos ejemplos para asentar todo esto.
 	Sea $h:\proy^1\to\proy^1$ una aplicación proyectiva. Consideramos la referencia $\mf{R}:=\{\class{u},\class{v};e\}$ cuya base asociada es $\mc{B}=\{u,v\}$. Sabemos además que $\widehat{h}(u)=au+bv$ y que $\widehat{h}(v)=cu+dv$.
 	
 	Sea un punto $x=(x_0:x_1)_{\mf{R}}$, por lo que acabamos de ver, su imagen por $h$ es:
-	\[h(x)=\rho(y_0:y_1)=\begin{pmatrix}
+	\[h(x)=\class{\rho(y_0,y_1)^t}=\class{\begin{pmatrix}
 	a & c\\
 	b & d
 	\end{pmatrix}\begin{pmatrix}
 	x_0\\
 	x_1
-	\end{pmatrix}\]
+	\end{pmatrix}}\]
 	Usualmente lo escribiremos de forma ecuacional:
 	\[\begin{array}{l}
 	\rho y_0 = ax_0+cx_1\\
@@ -442,11 +450,11 @@ Pongamos algunos ejemplos para asentar todo esto.
 	\[\theta'=\frac{a\infty+c}{b\infty+d}=\frac{a\cancel{\infty}}{b\cancel{\infty}}=\frac{a}{b}\]
 	Aunque puede seguirse este convenio (y en ocasiones lo haremos), ante la duda, se recomienda pasar todo al terreno estable de las coordenadas homogéneas.
 	
-	Para no perder el contexto, nótese que ahora nuestro punto inicial $x$ queda totalmente determinado por $\theta$ (admitiendo que pueda tomar el como valor el símbolo $\infty$ cuando la segunda coordenada homogénea sea $0$, ya que al fin y al cabo esto sólo pasa para un único rayo).
+	Para no perder el contexto, nótese que ahora nuestro punto inicial $x$ queda totalmente determinado por $\theta$ (admitiendo que pueda tomar como valor el símbolo $\infty$ cuando la segunda coordenada homogénea sea $0$, ya que al fin y al cabo esto sólo pasa para un único rayo).
 	
 	Asimismo, $h(x)$ queda totalmente determinado por el valor $\theta'$, asumiendo a su vez que puede tomar como valor $\infty$ cuando su segunda coordenada homogénea se anule.
 	
-	Estas transformaciones nos de enorme utilidad en el análisis complejo, es por ello que tienen nombre propio, \ti{transformaciones de Möbius}.
+	Estas transformaciones son de enorme utilidad en el análisis complejo, es por ello que tienen nombre propio, \ti{transformaciones de Möbius}.
 \end{exa}
 En este ejemplo se generalizamos la idea del anterior para una proyección cónica.
 \begin{exa}[Proyección Punto -- Plano]

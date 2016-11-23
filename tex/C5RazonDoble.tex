@@ -5,6 +5,7 @@ El objetivo de este capítulo es ver que, dadas dos rectas proyectivas $\proy(E)
 Empecemos tratando un caso más sencillo, tres puntos. Es fácil demostrar haciendo uso del álgebra lineal, como haremos a continuación, que, dadas dos rectas proyectivas, existe una única homografía que transforma tres puntos distintos cualesquiera en otros tres puntos distintos.
 
 \begin{prop}
+	\label{C5_prop_homografia3puntos}
 	Dadas dos rectas proyectivas, $\proy(E)$ y $\proy(E')$, y dadas dos ternas diferentes siempre existe una única homografía que transforma la una en la otra.
 \end{prop}
 \begin{proof}
@@ -287,6 +288,7 @@ Dada la razón doble $\{\theta_1,\theta_2;\theta_3,\theta_4\}$, se tiene que:
 \end{itemize}
 Esto nos da las 24 reordenaciones posibles. Resulta entonces que si $\{\theta_1,\theta_2;\theta_3,\theta_4\}=\lambda$, los valores que aparecen al efectuar todas las permutaciones son 
 \[\rho,1-\lambda,\frac{1}{\lambda},1-\frac{1}{\lambda},\frac{1}{1-\lambda},\frac{\lambda}{1-\lambda}\]
+\section{Cuaternas Armónicas}
 \begin{defi}[Cuaterna armónica]
 	Diremos que $p_1,p_2,p_3,p_4$ es una \ti{cuaterna armónica}, o que el par $p_1,p_2$ separa armónicamente al par $p_3,p_4$, si su razón doble es $-1$.
 	\begin{equation}
@@ -372,3 +374,91 @@ Observemos que si, al calcular la razón doble tomamos como referencia los punto
 	\{p_1,p_2;p_3,p_4\}=\{\infty,0,1,-1\}=-1
 \end{equation*}
 
+\section{Cálculo de la Razón Doble en $\proy^n$}
+\label{C5_generalizacionesRazonDoble}
+Hasta ahora, sólo hemos calculado la razón doble de cuatro puntos de $\proy^1$. Sin embargo, será útil con frecuencia calcular la razón doble de cuatro puntos alineados en un espacio proyectivo de dimensión finita arbitraria.
+ 
+En esta sección, trataremos de ofrecer procedimientos para realizar estos cálculos de forma eficiente.
+
+Además, para rizar el rizo, y sin salir demasiado de nuestro propósito original, estudiaremos algunas de las relaciones de la razón doble con la dualidad.
+\subsection{Razón Doble en $\proy^n$}
+En este apartado trataremos de generalizar la noción de razón doble para cuatro puntos alineados de $\proy^n$. Para ello, daremos dos procedimientos distintos que es útil saber dominar. Ambos serán ilustrados con ejemplos (que se recomienda no omitir) para que calen mejor en el lector.
+\subsubsection{Procedimiento Referencial}
+Sean una recta $r$ de $\proy^n$ y cuatro puntos proyectivos $A,B,C,D\in r$. Para calcular la razón doble de dichos cuatro puntos, tomemos una referencia ``cómoda'' de la recta $r$. De esta forma, los puntos quedan expresados con dos coordenadas homogéneas, de forma que ya podemos aplicar los procedimientos de cálculo habituales. Veámoslo con un ejemplo.
+\begin{exa}[Cuatro Puntos Alineados]
+	\label{C5_exa_puntosAlineados}
+	Sean los puntos alineados (compruébese):
+	\[\begin{array}{c}
+	A=(1:0:-1)=\class{\vec{a}}\\
+	B=(2:1:0)=\class{\vec{b}}\\
+	C=(4:1:-2)=\class{2\vec{a}+\vec{b}}\\
+	D=(-1:-1:-1)=(1:1:1)=\class{\vec{a}-\vec{b}}\\
+	\end{array}\]
+	Calculemos la razón doble de los mismos. Para ello, tomemos una referencia de la recta $AB$ en la que se encuetran los puntos, por ejemplo: \[\mf{R}=\left\{A,B;\class{\vec{a}+\vec{b}}\right\}\]
+	Se comprueba inmediatamente que la base asociada a esta referencia es $\mc{B}=\{\vec{a},\vec{b}\}$.
+	
+	Obsérvese que, en aras de reducir los cálculos, es recomendable que en la referencia $\mf{R}$ se encuentren el máximo número posible de puntos iniciales. Siempre podemos poner dos de ellos (por ser distintos), pero siempre que se pueda se recomienda poder un tercer punto de los originales como punto unidad (en este caso no era posible). 
+	
+	A partir de aquí, el cálculo de la razón doble es trivial, ya que, si coordenamos los puntos respecto de la referencia $\mf{R}$ obtenemos:
+	\[\{A,B;C,D\}=\{(1:0),(0:1);(2:1),(1:-1)\}\]
+	Ahora basta calcular la razón doble por el procedimiento que más nos guste o convenga. En cualquier caso obtenemos el resultado:
+	\[\{A,B;C,D\}=\{\infty,0;2,-1\}=\frac{\infty-2}{0-2}:\frac{\infty+1}{0+1}=-\frac{\frac{\infty}{2}}{\frac{\infty}{1}}=-\frac{\cancel{\infty}}{2\cancel{\infty}}=-\frac{1}{2}\]
+	Este procedimiento es extremadamente útil cuando la dimensión del espacio ambiente es muy grande, ya que, de un solo golpe reducirmos el número de componentes de $n$ a $2$.
+\end{exa}
+\subsubsection{Procedimiento de Proyecciones}
+Consideremos ahora una aplicación $h$ entre dos rectas $r$ y $r'$ de $\proy^2$ como la del ejemplo \ref{C4_exa_fabricaHomografias}, es claro que esta proyección es una homografía.
+
+Así pues, como las homografías conservan la razón doble, calcular la razón doble de los puntos alineados $A,B,C,D$ será equivalente a calcular la razón doble de sus imágenes por $h$. Es decir:
+\[\{A,B;C,D\}=\{h(A),h(B);h(C),h(D)\}\]
+La utilidad de esto se ve muy claramente cuando se proyecta sobre los ejes coordenados, tal y como muestra el siguiente ejemplo.
+\begin{exa}[Proyección sobre los Ejes]
+	Sean los puntos $A,B,C,D$ del ejemplo \ref{C5_exa_puntosAlineados}. Tomemos el punto $O=(1:0:0)\not\in AB$ y la recta $AB$. Tomamos asimismo la recta $r'$ definida por la ecuación implícita $x=0$ (eje de coordenadas de $\proy^2$).
+	
+	Consideramos la proyección $\pi$ del ejemplo \ref{C4_exa_fabricaHomografias}, que a cada punto $x$ de la recta $r$ le asocia el punto intersección de la recta $Ox$ con la recta $r'$. Hallando esta intersección de forma genérica (como aprendimos en \ref{C3_interseccionRectas}) obtenemos la siguiente fórmula explícita para $\pi$:
+	\[\begin{array}{c}
+	r\setminus\{O\}\stackrel{\pi}{\to} r'\\
+	P=(a:b:c)\mapsto\class{(a,b,c)-a(1,0,0)}=(0:b:c)
+	\end{array}\]
+	De esta forma, como las homografías preservan la razón doble, tenemos que:
+	\[\{A,B;C,D\}=\{\pi(A),\pi(B);\pi(C),\pi(D)\}=\{(0:0:-1),(0:1:0);(0:1:-2),(0:1:1)\}\]
+	Si ahora consideramos la homografía $\pi'$ que identifica canónicamente a la recta $r'$ con $\proy^1$, dada por la proyección:
+	\[\begin{array}{c}
+	r'\stackrel{\pi'}{\to}\proy^1\\
+	x=(0:b:c)\mapsto(b:c)
+	\end{array}\]
+	De nuevo, como las homografías preservan la razón doble obtenemos:
+	\[\{A,B;C,D\}=\{(0:-1),(1:0);(1:-2),(1:1)\}\]
+	Y esto ya lo sabemos calcular. Nótese que nos debería dar el mismo resultado que el ejemplo \ref{C5_exa_puntosAlineados}. En efecto:
+	\[\{A,B;C,D\}=\left\{0,\infty;-\frac{1}{2},1\right\}=\frac{\frac{1}{2}}{\infty+\frac{1}{2}}:\frac{-1}{\infty-1}=-\frac{1}{2}\]
+	Nótese que para que la proyección a aplicar sea una homografía es fundamental que el centro de proyección $O$ no pertenezca a la recta en la que los cuatro puntos están alineados.
+\end{exa}
+
+La aplicación de uno u otro método (o una combinación de ambos) hace que los cálculos sean mucho más rápidos y sencillos.
+\subsection{Razón Doble y Dualidad}
+Un paso más en lo que concierne a estas generalizaciones es trasladar todos estos conceptos al espacio dual. Si lo hacemos (estando en $\proy^2$) obtendremos el concepto de razón doble de cuatro rectas concurrentes.
+
+Sabemos por cierto capítulo que una recta proyectiva de $\proy^2$ se corresponde con un haz de rectas del dual $\proy^{2*}$.
+
+Así pues, definimos la razón doble de cuatro rectas concurrentes como laa razón doble de los puntos que se corresponden los las $4$ rectas en el dual.
+
+Dadas $4$ rectas proyectivas $r_1,r_2,r_3,r_4$ estando cada una de ellas definida por cierta ecuación implícita, se tiene que:
+\[r_i:a_ix+b_iy+c_iz=0\]
+Sabemos que el punto proyectivo del pual asociado a esa recta es el punto $(a_i:b_i:c_i)$.
+
+De esta forma se tiene que:
+\[\{r_1,r_2;r_3,r_4\}=\{(a_1:b_1:c_1),(a_2:b_2:c_2);(a_3:b_3:c_3),(a_4:b_4:c_4)\}\]
+Pongamos un ejemplo con rectas concretas para verlo más claro.
+\begin{exa}[Razón Doble de Cuatro Rectas Concurrentes]
+	Dadas las rectas:
+	\[\begin{array}{c}
+	r_1:x-y=0\\
+	r_2:x+z=0\\
+	r_3:2x-y+z=0\\
+	r_4:y+z=0
+	\end{array}\]
+	La razón doble de las mismas será, dualizando y proyectando:
+	\[\{(1:-1:0),(1:0:1);(2:-1:1),(0:1:1)\}=\{\infty, 0; -1,1\}=-1\]
+	Hecho esto, podemos extender el concepto de cuaterna armónica a cuaterca armónica formada por cuatro rectas concurrentes.
+\end{exa}
+\subsubsection{Método de los Haces de Rectas}
+Otra forma de calcular la razón doble de cuatro rectas concurrentes es recurrir a los haces de rectas. Expliquemos esto. Dadas cuatro rectas $r_1,r_2,r_3,r_4$ que se cortan en un mismo punto $O$, consideremos el haz de rectas de base $O$, al que denotaremos por $\text{Haz}(O)$.

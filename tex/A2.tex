@@ -51,3 +51,303 @@ Pasamos al apartado de ecuaciones implícitas, donde esta misma idea se utiliza 
 		X=\frac{x}{t};\qquad Y=\frac{y}{t};\qquad Z=\frac{z}{t}
 	\end{equation*}\\
 \end{obs}
+
+\section{Cónicas y cambio de referencia}
+Sean dos referencias proyectivas $\mathfrak{R}$ y $\overline{\mathfrak{R}}$ del espacio proyectivo $\mathbb{P}^n$. El cambio de la referencia $\mathfrak{R}$ a $\overline{\mathfrak{R}}$ viene descrito por las siguientes ecuaciones
+\begin{equation}
+\rho X=M\overline{X}
+\end{equation}
+donde $M$ es la matriz de paso. 
+
+Partimos de una cónica que en la referencia $\mathfrak{R}$ tiene ecuaciones
+\begin{equation}
+X^tAX=0
+\end{equation}
+donde $A$ es la matriz de la cónica en esta referencia. Nuestro objetivo es escribir la cónica en la referencia $\overline{\mathfrak{R}}$., es decir, buscamos la matriz $\overline{A}$ tal que
+\begin{equation}
+\overline{X}^t\overline{A}\overline{X}=0
+\end{equation}
+Para ello utilizamos las ecuaciones de cambio de referencia. Dado que la ecuación de la cónica es única salvo múltiplo, omitiremos el parámetro $\rho$ en los siguientes cálculos.
+\begin{equation}
+X^tAX=0\Leftrightarrow (M\overline{X})^tA(M\overline{X})=0\Leftrightarrow \overline{X}^t M^tAM\overline{X}=0
+\end{equation}
+Se concluye pues que la matriz de la cónica en la referencia $\overline{\mathfrak{R}}$ es $M^tAM$. Por tanto, las ecuaciones que relacionan la matriz de la cónica en la referencia ${\mathfrak{R}}$ con la matriz de la cónica en la referencia $\overline{\mathfrak{R}}$ son
+\begin{equation}
+\rho\overline{A}=M^tAM
+\end{equation}
+donde $M$ recordemos que es la matriz de cambio de referencia. Se observa que, si $A$ es simétrica, entonces $\overline{A}$ seguirá siendo simétrica. En efecto
+\begin{equation}
+(\rho\overline{A})^t=(M^tAM)^t=M^tA^tM=M^tAM=\rho\overline{A}
+\end{equation}
+Gracias a esto hallar los coeficientes de la matriz $\overline{A}$ pasa a ser una tarea sencilla. Particularicemos por un momento al caso en el que nos encontramos en $\mathbb{P}^2$ para ver el gran cambio que esto supone. Supongamos que $A$ es una matriz simétrica. Si $\overline{A}$ no lo fuese, al ser una matriz $3\times 3$, tendríamos $9$ parámetro a determinar, que se transformarían en $8$ parámetros al eliminar la homogeneidad, es decir, si nos da igual considerar $\overline{A}$ o $\lambda\overline{A}$. En cambio, al ser simétrica estos se reducen en $6$ parámetros, que se convierten en $5$ al eliminar la homogeneidad. Esto supone una gran diferencia con los $9$ parámetros iniciales. Dado que para determinar una cónica basta con determinar su matriz, es por ello que las cónicas están en biyección con $\mathbb{P}^5$, pues para determinar esta matriz bastan $5$ parámetros.
+
+Este tipo de trasformaciones preservan el rango de la matriz. Esto se debe a que $A$ y $\overline{A}$ son congruentes y por tanto, en particular, son equivalentes (pag 42 MS).
+
+Esto implica que, si partimos de una cónica no degenerada con matriz $A$ es imposible que al hacer un cambio en el sistema de referencia proyectivo obtengamos una matriz degenerada, pues $rg(A)=rg(\overline{A})$. Sin embargo, cabe esperar que mediante un cambio de referencia se pueda trasformar una cónica en cualquier otra (preservando la degeneración).
+
+\section{Cónicas degeneradas}
+\begin{defi}
+	Diremos que una cónica
+	\begin{equation}
+	C:X^tAX=0
+	\end{equation}
+	es degenerada si contiene una recta.
+\end{defi}
+
+Esta definición de cónica degenerada no es muy manejable. Por ello, veamos la siguiente proposición
+\begin{prop}
+	 Sea $C$ una cónica cuya matriz en cierta referencia es $A$. Si $rg(A)<3$ entonces $C$ es una cónica degenerada.
+\end{prop}
+
+\begin{proof}
+	 Para demostrar que la cónica $C$ es degenerada veamos que contiene una recta. Si el rango de la matriz $A$ es menor que $3$, entonces el núcleo de $A$ no es vacío. Por tanto, existe un vector $y_0$ tal que $AY_0=0$, donde $Y_0$ representa el vector columna de $y_0$. Esto implica que $Y_0^tAY_0=0$, por lo que, al menos, el punto $[y_0]$ pertenece a la cónica.
+	 
+	 Sea $[z_0]$ otro punto de la cónica, distinto de $[y_0]$. Veamos que la recta $YZ$ generada por $[z_0]$ e $[y_0]$ está contenida en la cónica. Con esto quedaría demostrado que la cónica es degenerada.
+	 
+	 Sea un punto $[y_0+\theta z_0]$ de la recta $YZ$. Si este punto perteneciese a $C$ para todo $\theta$, la recta $YZ$ estaría contenida en la cónica. Veamos que cumple la ecuación de la cónica, sea cual sea el valor de $\theta$.
+	 \begin{equation}\label{C8:eq_joanch_conicas_deg}
+	 (Y_0+\theta Z_0)^tA(Y_0+\theta Z_0)=Y_0^tAY_0+\theta Y_0^tAZ_0+\theta Z_0^tAY_0+\theta^2Z_0^tAZ_0=Y_0^tAY_0+2\theta Z_0^tAY_0+\theta^2Z_0^tAZ_0
+	 \end{equation}
+	 El primer y segundo sumando se anulan debido a que $y_0$ pertenece al núcleo de $A$. El tercero por su parte se anula porque $z_0$ pertenece a la cónica. De esto se concluye que
+	 \begin{equation}
+	 (Y_0+\theta Z_0)^tA(Y_0+\theta Z_0)=0 \quad \forall\theta
+	 \end{equation}
+	 finalizando así la demostración.
+\end{proof}
+
+A continuación veamos un teorema que nos da la expresión de una cónica degenerada.
+
+\begin{theo}
+	Una cónica $C$ es degenerada si y solo si es producto de dos rectas. Es decir, es de la forma
+	\begin{equation}
+	C:l\cdot m=0 \quad o \quad C:l^2=0
+	\end{equation}
+	donde $l$ y $m$ son rectas distintas.
+\end{theo}
+
+\begin{proof}
+	$\bla$ Esta demostrado en mi página GL24, en una cosa llamada cónicas producto de dos rectas donde se ve que si una cónica es producto de dos rectas entonces su rango es 1 o 2, es decir, es degenerada. Así que ya hare referencia a ello cuando lo pase Álvaro
+	
+	$\bra$ Sea la cónica $C$ descrita por la ecuación
+	\begin{equation}\label{eq_conica_teo_degenerada}
+	C: ax^2+by^2+cz^2+2fyz+2gxz+2hxy=0
+	\end{equation}
+	Si es degenerada entonces, por definición, contiene una recta $l$. Cambiando de referencia, si es preciso, podemos suponer que la recta es $l:x=0$. Dado que la recta está contenida en la cónica, la ecuación~\eqref{eq_conica_teo_degenerada} debe anularse en todos los puntos de la recta, es decir, en todos los puntos de la forma $(0,y,z)$ cualesquiera que sean $z$ e $y$. Con ello
+	\begin{equation}
+	by^2+cz^2+2fyz=0 \quad \forall y,z \Leftrightarrow b=c=f=0
+	\end{equation}
+	La cónica pasa a ser
+	\begin{equation}
+	C: ax^2+2gxz+2hxy=x(ax+2gz+2hy)=0
+	\end{equation}
+	donde $ax+2gz+2hy=0$ es la ecuación implícita de una recta. Se obtiene así que $C:l\cdot m=0$ donde $m$ puede ser igual o distinta a $l$.
+\end{proof}
+
+Una vez demostrado este teorema podemos hacer una clasificación de las cónicas degeneradas atendiendo al rango de $A$. Para ello demostremos primero el siguiente lema.
+
+\begin{lem}
+	Se $C:l\cdot m=0$ una cónica degenerada con matriz $A$ simétrica. Entonces, el núcleo de $A$ es la intersección de las rectas $l$ y $m$.
+\end{lem}
+
+\begin{proof}
+	Veamos primero que $l\cap m\subset ker(A)$. 
+	
+	Sean las rectas $l$ y $m$ con ecuaciones implícitas
+	\begin{equation}
+	l:u^tX=0\ , \quad m:v^tX=0
+	\end{equation}
+	Como ya vimos podemos escribir 
+	\begin{equation}
+	l\cdot m=X^t(uv^t+vu^t)X=0
+	\end{equation}
+	donde la matriz de la cónica $A=uv^t+vu^t$ es simétrica. Sea un punto $[y_0]$ perteneciente a la intersección de ambas rectas. Entonces cumple sus ecuaciones, es decir,
+	\begin{equation}
+	l:u^tY_0=0\ , \quad m:v^tY_0=0
+	\end{equation}
+	Por tanto,
+	\begin{equation}
+	AY_0=(uv^t+vu^t)Y_0=uv^tY_0+vu^tY_0=0
+	\end{equation}
+	con lo que $y_0\in ker(A)$.
+	
+	Veamos que $ker(A)\subset l\cap m$. Sea un punto del núcleo $[y_0]\in ker(A)$. Por lo visto en la demostración de la proposición PROP se tiene que, dado un punto cualquiera $[z_0]$ de la cónica distinto de $[y_0]$, la recta generada por ambos puntos está contenida en la cónica. Si la cónica es producto de dos rectas iguales ya hemos terminado, pues esa recta es precisamente la engendrada por $[z_0]$ e $[y_0]$. Sino, puedo coger otro punto $[w_0]$ de la cónica, que no pertenezca a la recta generada por $[z_0]$ e $[y_0]$. De nuevo, la recta generada por $[w_0]$ e $[y_0]$ está contenida en la cónica. Por tanto, $[y_0]$ pertenece a las dos rectas de la cónica, es decir, está en la intersección.
+\end{proof}
+Este lema, junto con el teorema anterior, nos permiten clasificar las cónicas degeneradas. 
+
+Sabemos que una cónica degenerada es producto de dos rectas distintas o de dos iguales. En el primer caso la intersección se ambas rectas será un punto, con lo que el $ker(A)$ será un único punto. Esto implica que $rg(A)=2$. Por otro lado, si son dos rectas iguales, la intersección de ambas es la propia recta, luego el $ker(A)$ será una recta, y con ello $rg(A)=1$. Todas estas deducciones pueden hacerse en sentido inverso gracias al lema LEM.
+
+Resumiendo, sea una cónica degenerada $C:l\cdot m=0$, entonces
+\begin{equation}
+\begin{split}
+l\not=m &\Leftrightarrow rg(A)=2,\\
+l=m&\Leftrightarrow rg(A)=1.
+\end{split}
+\end{equation}
+
+Veamos un ejemplo de como hallar la expresión de una cónica degenerada.
+
+\begin{exa}
+	Sea la cónica degenerada
+	\begin{equation}
+	C: x^2-y^2-xz+yz=0
+	\end{equation}
+	Expresar la cónica como producto de dos rectas.
+	
+	La matriz de la cónica es
+	\begin{equation}
+	A=\left( \begin{array}{rrr}
+	1&0&-\frac{1}{2}\\
+	0&-1&\frac{1}{2}\\
+	-\frac{1}{2}&\frac{1}{2}& 0
+	\end{array}\right) \sim
+	\left( \begin{array}{rrr}
+	2&0&-1\\
+	0&-2&1\\
+	-1&1&0
+	\end{array}\right)
+	\end{equation}
+	Se trata de hacer con una cónica concreta lo explicado en la demostración del lema LEM. Si el núcleo de la matriz $A$ de la cónica es una recta, entonces la cónica es de la forma $l^2=0$ y la recta del núcleo es precisamente la recta $l$. Sino, como ocurre en este caso, dado un punto del núcleo de $A$, la recta generada por él y por otro punto distinto de la cónica está contenida en ella. Por tanto, si hallamos dos puntos pertenecientes a la cónica, distintos entre ellos y al núcleo de la matriz, podremos generar dos rectas distintas, que serán las rectas de $C$.
+	
+	Buscamos pues el núcleo de la matriz $A$.
+	\begin{equation}
+	A\left( \begin{array}{c}
+	x\\y\\z
+	\end{array}\right) =\left( \begin{array}{c}
+	0\\0\\0
+	\end{array}\right)\Leftrightarrow
+	\begin{cases}
+	2x-z=0\\
+	-2y+z=0\\
+	-x+y=0
+	\end{cases}
+	\end{equation}
+	Por tanto, el núcleo de $A$ es el punto $y_0=(x:y:2x)=(1:1:2)$. Lo más fácil para conseguir dos puntos de la cónica $C$ distintos entre ellos y a $y_0$ es intersecar la cónica con una recta, que no contenga a $y_0$. En este caso, por ejemplo, elegimos la recta $z=0$. La intersección viene dada por:
+	\begin{equation}
+	\begin{cases}
+	x^2-y^2-xz+yz=0\\
+	z=0
+	\end{cases}\Leftrightarrow x^2+y^2=0\Leftrightarrow (x-y)(x+y)=0\Leftrightarrow x=y, \ x=-y
+	\end{equation}
+	Por tanto, los puntos de la intersección son $z_0=(x:x:0)=(1:1:0)$ y $w_0=(x:-x:0)=(1:-1:0)$. Finalmente, las rectas de la cónica son las generadas por $y_0$ y $z_0$ y por $y_0$ y $w_0$. Sus ecuaciones implícitas son:
+	\begin{equation}
+	\begin{split}
+	y_0z_0&:x-y=0\\
+	y_0w_0&:x+y-z=0
+	\end{split}
+	\end{equation}
+	Por tanto, la cónica $C$ es
+	\begin{equation}
+	C: (x-y)(x+y-z)=0
+	\end{equation}
+\end{exa}
+\begin{obs}
+	 La intersección entre una cónica y una recta viene dada por una ecuación de segundo grado, que tendrá dos soluciones (bien sean distintas o dobles). Por tanto, siempre nos es posible encontrar una recta que corte en dos puntos con la cónica.
+	 
+	 En efecto, una recta viene parametrizada por dos puntos $y_0$ y $z_0$ de la forma $[y_0+\theta z_0]$. La intersección de esta recta con la cónica serán aquellos puntos, es decir aquellos valores de $\theta$, para los que el vector columna $Y_0+\theta Z_0$ cumple la ecuación de la cónica. La ecuación resultante de sustituir dicho vector en la ecuación de la cónica es la mostrada en la ecuación~\eqref{C8:eq_joanch_conicas_deg}, que es de segundo grado en la variable $\theta$. Más adelante daremos nombre a esta ecuación.
+\end{obs}
+
+\section{Recta polar de un punto respecto de una cónica}
+EN QUE MOMENTO SOLO SE HABLA DE CÓNICAS NO DEGENERADAS?????
+
+Comenzaremos definiendo recta polar. Sin embargo, esta definición no nos permite hacernos una idea de cuál es exactamente esta recta. Pr ello presentamos antes la siguiente construcción geométrica que, sin ser la definición de recta polar, nos permite ver cuál es esa recta. Además, veremos que, si construimos la recta polar a partir de la definición, obtenemos la recta indicada en la figura.
+\begin{defi}
+	Sea una cónica, un punto $P$ y $r$ una recta perteneciente al haz de base $P$. Se define recta polar del punto $P$ al conjunto de puntos $P'$ que son el cuarto armónico de $P$ respecto al par $(M,N)$, donde $M$ y $N$ son lo puntos de corte de la recta $r$ con la cónica, y que se obtienen al variar $r$.
+\end{defi}
+
+La recta polar del punto $P$ respecto a una cónica se denota Polar($P$). Equivalentemente se podría decir que la recta Polar(P) está formada por los puntos $P'$ tales que el par $(P,P')$ separa armónicamente al par $(M,N)$, donde $M$ y $N$ varían con $r$.
+
+A partir de la definición determinemos la ecuación implícita de la recta polar de un punto $P$. Aunque la definición es válida para cualquier punto $P$, ya esté en la cónica, fuera o dentro de ella, comenzaremos tomando un punto $P$ que se encuentre fuera de la cónica. 
+
+Así pues sea $C$ una cónica, cuya ecuación viene dada por
+\begin{equation}
+X^tAX=0,
+\end{equation}
+y un punto $P$ que se encuentra fuera de $C$. Sea una recta arbitraria $r$ del haz de base $P$ tal que $r\cap C=\{M,N\}$, con $M$ y $N$ distintos. Buscamos los puntos $P'$ tales que $\{M,N;P,P'\}=-1$. Por tanto, $P'$ debe estar en la recta $r$. Parametrizamos la recta $r$, tomando representantes de los puntos $P=[\vec{p}]$ y $P'=[\vec{p}']$:
+\begin{equation*}
+r:[\vec{p}+\theta \vec{p}']
+\end{equation*}
+De esta forma podemos escribir
+\begin{equation*}
+M=[\vec{p}+\theta_M \vec{p}'] \ , \quad N=[\vec{p}+\theta_N \vec{p}'] \ , \quad P=0 \ , \quad P'=\infty \ ,
+\end{equation*}
+donde $\theta_M$ y $\theta_N$ son las coordenadas no homogéneas de los puntos de corte $M$ y $N$, y $P$ y $P'$ se expresan en coordenadas no homogéneas.
+
+Por tanto, 
+\begin{equation}
+-1=\{M,N;P,P'\}=\{\theta_M,\theta_N;0,\infty\}\Leftrightarrow \theta_M=-\theta_N
+\end{equation}
+Tenemos así una restricción para los puntos $M$ y $N$. Recordemos que además son la intersección de la recta $r$ con la cónica $C$. Los puntos de corte viene dados por la ecuación
+\begin{equation}
+(\vec{P}^t+\theta \vec{P}')^tA(\vec{P}^t+\theta \vec{P}')=\vec{P}^tA\vec{P}+2\theta \vec{P}^tA\vec{P}'+\theta^2\vec{P}'^tA\vec{P}'=0
+\end{equation}
+que se obtiene simplemente de sustituir la ecuación paramétrica de $r$, donde $\vec{P}$ son vectores columna, en la ecuación de la cónica (cosa que ya hemos hecho antes varias veces). Recibe el nombre de \textbf{ecuación de Joachimstal} y nos permite calcular la intersección de una cónica y una recta.
+
+Dado que en este caso la intersección son los puntos $M$ y $N$, las soluciones a esta ecuación deben ser $\theta_N$ y $\theta_M=-\theta_N$. Una ecuación de segundo grado tiene soluciones iguales y de signo opuesto si y solo si el término de grado uno es nulo. Por tanto, necesariamente
+\begin{equation}\label{C8:eq_puntos_recta_polar}
+\vec{P}^tA\vec{P}'=0
+\end{equation}
+Por tanto, los puntos $P'$ buscados deben cumplir esta ecuación.
+
+El punto $P$ y la matriz $A$ son conocidos, por tanto el producto $\vec{P}^tA$ dará como resultado el vector $u=(u_1, u_2,u_3)$ conocido. El punto $P'$ es desconocido, pudiéndolo escribir como $(x, y,z)$. De esta forma, los puntos $P'$ de la recta Polar(P) deben cumplir
+\begin{equation}
+(u_1 \ u_2 \ u_3)
+\left( \begin{array}{c}
+x\\ y\\ z
+\end{array}\right) =0
+\end{equation}
+Notemos que esto es la ecuación de una recta con coeficientes $u_1,u_2$ y $u_3$. Dado que los puntos que cumplen la ecuación son los $P'$, esta no es otra que la ecuación implícita de la recta polar del punto $P$ respecto a la cónica $C$.
+
+Es decir, los coeficientes de la recta Polar(P) vienen dados por
+\begin{equation}
+u=\vec{P}^tA=A\vec{P}
+\end{equation}
+Si el punto $P$ fuese interior a la cónica, los puntos de corte de las rectas del haz con base $P$ y la cónica $C$ serían puntos imaginarios conjugados.
+
+\begin{obs}
+	 El punto $P'$ pertenece a la recta polar de $P\Leftrightarrow  \vec{P}^tA\vec{P}'=0\Leftrightarrow \vec{P}'^tA\vec{P}=0\Leftrightarrow $ el punto $P$ pertenece a la recta polar de $P'$.
+\end{obs}
+
+Por tanto, dada una cónica, un punto $P$ exterior a la cónica y un punto $P'$ perteneciente a Polar(P), si trazamos una recta que pasa por $P'$ y que corta a la cónica en dos puntos $M$ y $N$ y encontramos en cuarto armónicoc $Q$ de $P'$ respecto a $(M,N)$, la recta polar de $P'$ será aquella que pase por $Q$ y $P$. Observamos que se encuentra fuera de la cónica. Esto es coherente con que los puntos de corte de Polar(P') con la cónica sean imaginarios, ya que $P'$ es un punto interior a la cónica.
+
+Hagamos ahora una construcción geométrica de la recta Polar(P) (mostrada en la figura ?). Para poder trazar esta recta debemos encontrar dos puntos que pertenezcan a ella, es decir, dos cuartos armónicos.
+
+Tomamos dos rectas $r_0$ y $r_1$ del Haz(P) que cortan con la cónica en los puntos $M_0$, $N_0$ y $M_1$, $N_1$, respectivamente. El cuarto armónico $P_0'$ de $P$ respecto del par $(M_0,N_0)$ pertenece a la recta Polar(P), al igual que el cuarto armónico $P_1'$ de $P$ respecto del par $(M_1,N_1)$. Tenemos así dos puntos que pertenecen a la recta polar del punto $P$.
+
+Para encontrar los puntos $P_0'$ y $P_1'$ procedemos de la siguiente manera. Se recomienda ir dibujándolo mientras se explica para entender el proceso. Si se siguen los pasos indicados, la figura resultante debe ser equivalente a la figura ?.
+
+Trazamos la recta que pasa por $N_0$ y $M_1$ y la que pasa por $N_1$ y $M_0$, las cuales se cortan en un punto $E$. De la misma forma, la recta que pasa por $N_0$ y $N_1$ y la que pasa por $M_0$ y $M_1$ se cortan en un punto $Q$. Finalmente, la recta que pasa por $Q$ y por $E$ es la recta Polar(P), que corta con $r_0$ y $r_1$ en los puntos $P_0'$ y $P_1'$.
+
+Podríamos preguntarnos por qué la recta $QE$ es la recta polar, ya que lo hemos asegurado sin explicar nada. Obsérvese que lo único que hemos hecho ha sido la construcción geométrica de un cuadrilátero completo para los puntos $P,P_0',M_0,N_0$ y otro para los puntos $P,P_0',M_1,N_1$. Esto asegura que los puntos están separados armónicamente. Por tanto, necesariamente, la recta $QE$ es la recta polar, pues los puntos que pertenecen a ella son los $P'$ tales que $(P,P')$ están separados armónicamente de $(M_i,N_i)$.
+
+Al principio de esta sección se mostró una construcción geométrica y en ella se indicó la recta polar de un punto $P$. Para ver que, efectivamente, esa es la recta polar es necesario avanzar un poco más. Con ese fin, damos la siguiente definición.
+
+\begin{defi}
+	Una recta es tangente a una cónica si la corta en un punto con multiplicidad mayor que uno.
+\end{defi}
+\begin{lem}
+	Sea $r$ la recta polar de un punto $P$ respecto a una cónica $C$, con matriz $A$. Entonces, las rectas $PP_i'$ con $i=0,1$, donde $P_i'$ son los puntos de corte de la recta polar con la cónica, son tangentes a $C$.
+\end{lem}
+\begin{proof}
+	La recta $PP_0'$ tiene como ecuación paramétrica
+	\begin{equation*}
+	[\vec{p}+\theta\vec{p_0}']
+	\end{equation*}
+	Para ver que es tangente a la cónica debemos comprobar que $P_0'$es un punto de corte de multiplicidad mayor que uno. Para ello, escribimos la ecuación de Joachimstal correspondiente a la intersección de $PP_0$ con la cónica, tomando vectores columna:
+	\begin{equation}
+	(\vec{P}^t+\theta \vec{P}')^tA(\vec{P}^t+\theta \vec{P}')=\vec{P}^tA\vec{P}+2\theta \vec{P}^tA\vec{P}'+\theta^2\vec{P}'^tA\vec{P}'=0
+	\end{equation}
+	El segundo sumando se anula por pertenecer $P_0'$ a la recta polar de $P$ (ecuación~\eqref{C8:eq_puntos_recta_polar}). El tercero también es nulo, ya que $P_0'$ pertenece a la cónica. La ecuación se reduce a 
+	\begin{equation}
+	\vec{P}^tA\vec{P}=0
+	\end{equation}
+	Recordemos que esta era una ecuación de segundo grado con solución doble $\theta=\infty$. Por tanto, el punto de corte de la recta $PP_0'$ con la cónica, que es $[\vec{p}+\infty\vec{p_0}']=P_0'$, es doble, por lo que su multiplicidad es mayor que uno. Se conlcuye así que la recta $PP_0'$ es tangente a la cónica. De forma análoga $PP_1'$ es tangente a $C$.
+\end{proof}
+
+\begin{obs}
+	 Gracias a esta demostración podemos definir una recta tangente a una cónica como aquella cuya ecuación de Joachimstal, de la intersección de la recta con la cónica, tiene solución doble.
+\end{obs}
+
+Si demostrásemos que, desde un punto $P$ exterior a la cónica, se pueden trazar siempre dos únicas rectas tangentes, entonces quedaría demostrado que la recta generada por los puntos de corte de esas tangentes con la cónica es la recta polar del punto $P$. Con ello, la construcción inicial quedaría justificada.
+\begin{obs}
+	Esta última construcción puede verse como un caso límite de la anterior cuando acercamos los puntos $N_0$ y $N_1$ entre sí y los puntos $M_0$ y $M_1$ entre sí (o bien los puntos $N_0$ y $M_0$ por un lado, y los puntos $M_1$ y $N_1$ por otro).
+\end{obs}

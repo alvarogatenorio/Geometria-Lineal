@@ -92,3 +92,6 @@
 \contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{91}{section*.12}
 \contentsline {section}{\numberline {A.3}Dualidad}{92}{section.Alph1.3}
 \contentsline {chapter}{\numberline {B}Mierdas varias}{94}{appendix.Alph2}
+\contentsline {section}{\numberline {B.1}C\IeC {\'o}nicas y cambio de referencia}{95}{section.Alph2.1}
+\contentsline {section}{\numberline {B.2}C\IeC {\'o}nicas degeneradas}{96}{section.Alph2.2}
+\contentsline {section}{\numberline {B.3}Recta polar de un punto respecto de una c\IeC {\'o}nica}{98}{section.Alph2.3}

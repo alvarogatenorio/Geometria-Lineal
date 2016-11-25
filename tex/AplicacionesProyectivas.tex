@@ -64,7 +64,7 @@ Comencemos viendo cuál es la relación entre las aplicaciones proyectivas inyec
 		Luego $v=\widehat{h}(\lambda u)$, lo que prueba la sobreyectividad de $\widehat{h}$.
 	\end{enumerate}
 \end{proof}
-\begin{cor}[Biyectividad]
+\begin{cor}[Biyectividad]\label{C4:cor_biyectividad}
 	Una aplicación proyectiva es biyectiva si y solo si su aplicación lineal asociada es un isomorfismo.
 \end{cor}
 
@@ -188,7 +188,9 @@ Otra generalización de los ejemplos anteriores es la siguiente (menos intuitiva
 	\proy^3\setminus l\stackrel{h}{\to}l'\\
 	x\mapsto\engen{x,l}\cap l'
 	\end{array}\]
-	Observamos simplemente que $\engen{x,l}\cap l'$ siempre se corta con $l$ en un punto (consecuencia inmediata de la fórmula de Grassmann).
+	Observamos simplemente que $\engen{x,l}$ siempre se corta con $l'$ en un punto (consecuencia inmediata de la fórmula de Grassmann).
+	
+	IMAGEN
 \end{exa}
 
 Llegados a este punto, ha llegado la hora de definir \ti{proyección cónica} en toda su generalidad.
@@ -341,6 +343,8 @@ Antes de empezar a desgranar las propiedades de estas aplicaciones, pongamos un 
 	\end{array}\]
 	
 	Esta aplicación es una homografía, de hecho, es una restricción de la aplicación definida en el ejemplo \ref{C4_exa_puntoRecta}. En definitiva, dado un punto y dos rectas, tenemos una homografía.
+	
+	IMAGEN
 \end{exa}
 
 Una propiedad importante de las homografías es que pueden transformarse de forma natural a en aplicaciones biyectivas.
@@ -419,7 +423,7 @@ Sin embargo, las matrices de cambio entre bases asociadas (y sus inversas) son m
 Pongamos algunos ejemplos para asentar todo esto.
 \begin{exa}[Transformaciones de Möbius]
 	\label{C4_exa_mobius}
-	Sea $h:\proy^1\to\proy^1$ una aplicación proyectiva. Consideramos la referencia $\mf{R}:=\{\class{u},\class{v};e\}$ cuya base asociada es $\mc{B}=\{u,v\}$. Sabemos además que $\widehat{h}(u)=au+bv$ y que $\widehat{h}(v)=cu+dv$.
+	Sea $h:\proy^1\to\proy^1$ una aplicación proyectiva. Consideramos la referencia $\mf{R}:=\{\class{u},\class{v};e\}$ cuya base asociada es $\mc{B}=\{u,v\}$, tanto en el espacio de llegada como en el de salida. Sabemos además que $\widehat{h}(u)=au+bv$ y que $\widehat{h}(v)=cu+dv$.
 	
 	Sea un punto $x=(x_0:x_1)_{\mf{R}}$, por lo que acabamos de ver, su imagen por $h$ es:
 	\[h(x)=\class{\rho(y_0,y_1)^t}=\class{\begin{pmatrix}
@@ -452,7 +456,7 @@ Pongamos algunos ejemplos para asentar todo esto.
 	
 	Para no perder el contexto, nótese que ahora nuestro punto inicial $x$ queda totalmente determinado por $\theta$ (admitiendo que pueda tomar como valor el símbolo $\infty$ cuando la segunda coordenada homogénea sea $0$, ya que al fin y al cabo esto sólo pasa para un único rayo).
 	
-	Asimismo, $h(x)$ queda totalmente determinado por el valor $\theta'$, asumiendo a su vez que puede tomar como valor $\infty$ cuando su segunda coordenada homogénea se anule.
+	Asimismo, $h(x)$ queda totalmente determinado por el valor $\theta'$, asumiendo a su vez que puede tomar como valor $\infty$ cuando su segunda coordenada homogénea se anule. Usualmente cometeremos un abuso de notación escribiendo $h(\theta)=\theta'$.
 	
 	Estas transformaciones son de enorme utilidad en el análisis complejo, es por ello que tienen nombre propio, \ti{transformaciones de Möbius}.
 \end{exa}
@@ -497,15 +501,15 @@ En este ejemplo se generalizamos la idea del anterior para una proyección cóni
 	Z'=\frac{-2X+Y+Z+1}{-2X+Y-Z+3}
 	\end{array}
 	\]
-	Observemos que hemos introducido las notaciones:
+	que se pueden considerar las ecuaciones de la proyección en coordenadas no homogéneas. Observemos que hemos introducido las notaciones:
 	\[\begin{array}{ccc}
 	X'=\frac{x}{t} & Y'=\frac{y}{t} & Z'=\frac{z}{t}
 	\end{array}\]
-	Es claro que en todo este proceso quedan por definir un montón de singularidades, en concreto, queda indefinido todo el plano $\pi':-2x+y-z+3t=0$, que puede interpretarse como el plano paralelo a $\pi$ que pasa por $z$.
+	Es claro que en todo este proceso quedan por definir un montón de singularidades, en concreto, queda indefinido todo el plano $\pi':-2x+y-z+3t=0$, que puede interpretarse como el plano paralelo a $\pi$ que pasa por $z$. En efecto, este plano lo conforman puntos cuya imagen a través de la proyección, como siempre, viene definida por $h(p)=zp\cap \pi$. Dado que $h(p)=\infty$ para todo punto $p\in\pi'$, la intersección es el infinito, por lo que $\pi'$ debe ser paralelo a $\pi$, y no puede ser otro que el plano paralelo a $\pi$ que pasa por $z$.
 \end{exa}
 Antes de finalizar el capítulo, hagamos un pequeño inciso. Cuando trabajemos con aplicaciones de un espacio en sí mismo conviene fijar la misma referencia $\mf{R}$ para ambos espacios. Veamos un ejemplo de por qué esto es conveniente.
 \begin{exa}[Identidad]
 	Sea $h:\proy^1\to\proy^1$ una aplicación proyectiva. Fijada la referencia proyectiva $\mf{R}:=\{\class{u},\class{v};e\}$ del espacio de partida, supongamos que $h$ es tal que podemos fijar la referencia protectiva $\mf{R}':=\{h(\class{u}),h(\class{v});h(e)\}$ del espacio de llegada.
 	
-	Se tiene entonces que la matriz asociada a la aplicación lineal asociada es la identidad. Este hecho perturba bastante a la hora de trabajar, por lo que debemos evitarlo.
+	Se tiene entonces que la matriz asociada a la aplicación lineal asociada es la identidad. Este hecho perturba bastante a la hora de trabajar, por lo que debemos evitarlo, tomando la misma referencia.
 \end{exa}

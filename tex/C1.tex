@@ -399,7 +399,23 @@ Como sabemos (\ref{A1_cambioBase}), se cumplen las llamadas ``ecuaciones del cam
 \begin{equation*}
 	X'=P^{-1}X
 \end{equation*}
-Donde $P$ es la matriz cuyas columnas son las coordenadas de los vectores de la base $\mc{B}'$ respecto de la base $\mc{B}$. Así pues, basta poner $X'$ en ``formato de coordenadas'' para poder decir que hemos encontrado una representación (única salvo múltiplos) del punto $x$ en base a la referencia $\mf{R}'$.
+Donde $P$ es la matriz cuyas columnas son las coordenadas de los vectores de la base $\mc{B}'$ respecto de la base $\mc{B}$. Así pues, basta poner $X'$ en ``formato de coordenadas'' para poder decir que hemos encontrado una representación (única salvo múltiplos) del punto $x$ en base a la referencia $\mf{R}'$. Es decir
+\begin{equation}
+	 X'\sim P^{-1}X
+\end{equation}
+donde el símbolo $\sim$ indica que son proporcionales salvo múltiplo. Dado que podemos tomar múltiplos sin problema alguno y como
+\begin{equation*}
+	P^{-1}=\frac{1}{\det{P}}P^*
+\end{equation*}
+donde $P^*$ es la adjunta traspuesta definida en álgebra lineal, podemos escribir
+\begin{equation*}
+	X'\sim P^*X
+\end{equation*}
+De esta forma, la ecuación de cambio de coordenadas entre referencias proyectivas es
+\begin{equation}
+	\rho X'=P^*X
+\end{equation}
+donde $\rho$ es simplemente la constante de proporcionalidad. Usualmente denotaremos $M=P^*$ a la matriz de cambio de coordenadas entre referencias.
 
 Un ejemplo clarificará todos estos cambalaches.
 \begin{exa}[Cambio de Referencia Proyectiva]

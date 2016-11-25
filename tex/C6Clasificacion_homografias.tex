@@ -199,18 +199,19 @@ Notemos que hasta ahora no hemos utilizado en absoluto que $h$ sea una homograf�
 	Cualquier homografía de un espacio proyectivo complejo tiene puntos fijos. Sin embargo, hay homografías del espacio proyectivo real que no los tienen. Podemos precisar un poco más, ya que sabemos que todo polinomio con coeficientes en $\R$ de grado impar tiene raíces. Por tanto para que haya homografías sin puntos fijos, el grado del polinomio debe ser par, con lo cual la dimensión del espacio vectorial es par y, por tanto, la dimensión del espacio proyectivo debe ser impar. A no ser que se diga lo contrario, de aquí en adelante trabajaremos en $\C$.
 \end{obs}
 
-Indaguemos un poco más para obtener las conclusiones del apartado anterior, es decir, que una homografía $h$ de $\proy^1$ distinta de la identidad tiene o dos puntos fijos distintos o uno doble. Para ello trabajemos con matrices.
+Indaguemos un poco más para obtener las conclusiones del apartado anterior, es decir, que una homografía $h$ de $\proy^1$ distinta de la identidad tiene o dos puntos fijos distintos o uno doble. Para ello trabajemos con matrices.\\
 
-Sea $A$ la matriz asociada a la homografía $h$, que no es más que la matriz asociada a la aplicación lineal $\widehat{h}$, y $x$ un punto fijo de $h$. Entonces $\rho x=Ax$, con lo cual se obtiene el sistema $(A-\rho I)x=0$, que tiene solución no idénticamente nula si y solo si $\det(A-\rho I)=0$. Este determinante no es otro que el polinomio característico, cuyas raíces, $\rho$, son los autovalores de la aplicación lineal $\widehat{h}$. Dado que nos encontramos en $\proy^1$, la matriz $A$ será una matriz $2\times 2$, y por tanto el polinomio característico será un polinomio de segundo grado. Esto implica que tendrá dos soluciones distintas o una solución doble, siempre que el cuerpo sobre el que estemos trabajando se $\C$. Por tanto la aplicación lineal $\widehat{h}$ tendrá un autovalor o dos distintos. Evaluemos cada caso.
-
-Si $\widehat{h}$ tiene dos autovalores distintos, entonces $\dim(V_{\rho_i})=1$. Por tanto las variedades proyectivas $\proy(V_{\rho_1})$ y $\proy(V_{\rho_2})$ tienen dimensión cero, por lo que son puntos. Esto da lugar a dos puntos fijos distintos en la homografía. Además si escribimos la matriz $A$ en la base formada por estos dos autovectores obtendremos una matriz diagonal, como habíamos visto antes.
-
-Si $\widehat{h}$ tiene un solo autovalor $\rho$, en cuyo caso $\alpha_1=2$, en principio pueden darse dos casos.
-
-El caso en el que $\dim(V_{\rho})=2=d_1$ no es admisible, ya que hemos supuesto que $h$ es distinta de la identidad. Sin embargo, la aplicación $\widehat{h}$ con $\dim(V_{\rho})=2$ tiene como autovectores asociados a $\rho$ todo el espacio vectorial, por lo que todos los puntos de $\proy^1$ serían puntos fijos de $h$.
-
-Si $\dim(V_{\rho})=1=d_1$ entonces $\proy(V_{\rho})$ es un punto. En tal caso, la homografía $h$ tendrá un único punto fijo doble. Además, dado que $\alpha_1=2\not=d_1=1$, la matriz $A$ no es diagonalizable. Sin embargo, si admite forma canónica de Jordan. Por tanto, en cierta base, a la cual pertenece dicho autovector, la matriz $A$ se encuentra en su forma canónica de Jordan, como vimos anteriormente.\\
-
+Sea $A$ la matriz asociada a la homografía $h$, que no es más que la matriz asociada a la aplicación lineal $\widehat{h}$, y $x$ un punto fijo de $h$. Entonces $\rho x=Ax$, con lo cual se obtiene el sistema $(A-\rho I)x=0$, que tiene solución no idénticamente nula si y solo si $\det(A-\rho I)=0$. Este determinante no es otro que el polinomio característico, cuyas raíces, $\rho$, son los autovalores de la aplicación lineal $\widehat{h}$. Dado que nos encontramos en $\proy^1$, la matriz $A$ será una matriz $2\times 2$, y por tanto el polinomio característico será un polinomio de segundo grado. Esto implica que tendrá dos soluciones distintas o una solución doble, siempre que el cuerpo sobre el que estemos trabajando se $\C$. Por tanto la aplicación lineal $\widehat{h}$ tendrá un autovalor o dos distintos. Evaluemos cada caso:
+\begin{enumerate}
+	\item Si $\widehat{h}$ tiene dos autovalores distintos, entonces $\dim(V_{\rho_i})=1$. Por tanto las variedades proyectivas $\proy(V_{\rho_1})$ y $\proy(V_{\rho_2})$ tienen dimensión cero, por lo que son puntos. Esto da lugar a dos puntos fijos distintos en la homografía. Además si escribimos la matriz $A$ en la base formada por estos dos autovectores obtendremos una matriz diagonal, como habíamos visto antes.
+	
+	\item Si $\widehat{h}$ tiene un solo autovalor $\rho$, en cuyo caso $\alpha_1=2$, en principio pueden darse dos casos.
+	\begin{itemize}
+		\item El caso en el que $\dim(V_{\rho})=2=d_1$ no es admisible, ya que hemos supuesto que $h$ es distinta de la identidad. Sin embargo, la aplicación $\widehat{h}$ con $\dim(V_{\rho})=2$ tiene como autovectores asociados a $\rho$ todo el espacio vectorial, por lo que todos los puntos de $\proy^1$ serían puntos fijos de $h$.
+		
+		\item Si $\dim(V_{\rho})=1=d_1$ entonces $\proy(V_{\rho})$ es un punto. En tal caso, la homografía $h$ tendrá un único punto fijo doble. Además, dado que $\alpha_1=2\not=d_1=1$, la matriz $A$ no es diagonalizable. Sin embargo, si admite forma canónica de Jordan. Por tanto, en cierta base, a la cual pertenece dicho autovector, la matriz $A$ se encuentra en su forma canónica de Jordan, como vimos anteriormente.
+	\end{itemize}
+\end{enumerate}
 Con todo ello podemos concluir que una homografía de $\proy^1$, distinta de la identidad, tiene dos puntos fijos distintos o un punto fijo doble. Si escribimos la matriz asociada a la homografía en la base dada por dichos puntos fijos obtendremos, en el primer caso, una matriz diagonal y, en el segundo, su forma canónica de Jordan. 
 \begin{obs}
 	Sea una homografía $h$ de $\proy^1$ y su aplicación lineal asociada $\widehat{h}$. Un punto $[v]$ de $\proy^1$ pertenece al centro de $h$ si y solo si es un autovector de $\widehat{h}$ con autovalor $0$.
@@ -232,7 +233,7 @@ es decir, $c=0$, y con ello , como $d$ no puede ser cero,
 \begin{equation}
 	\theta'=\frac{a\theta+b}{d}=\alpha\theta+\beta
 \end{equation}
-donde $\alpha=a/d$ y $\beta=b/d$. Veamos cuales son sus puntos fijos.
+donde $\alpha=a/d$ y $\beta=b/d$. Veamos cuales son sus puntos fijos.\\
 
 Siguiendo lo visto en el apartado anterior, debemos encontrar los autovalores de $A$ y sus autovectores asociados. Realizando unas sencillas cuentas se llega a que los autovalores son $a$ y $d$. Dado que hay dos autovalores distintos, la homografía $h$ tendrá dos puntos fijos. 
 
@@ -313,7 +314,7 @@ Si describimos la homografía que deja fijo el infinito a través de la transfor
 \begin{equation*}
 	\theta'=\alpha\theta+\beta
 \end{equation*}
-es decir, es una transformación afín de la recta.
+es decir, es una transformación afín de la recta.\\
 
 Estos dos resultados dan lugar al siguiente lema.
 \begin{lem}\label{C6_lem_infinito_p1_sii_afinidad}

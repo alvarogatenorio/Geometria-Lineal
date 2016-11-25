@@ -208,6 +208,82 @@ Es decir, la intersección de las rectas $r$ y $r'$ es el punto
 \end{equation}
 Es importante observar que para encontrar el punto de corte entre dos rectas de $\proy^2$ se realiza la misma operación que para hallar los coeficientes de la ecuación implícita de la recta engendrada por dos puntos, correspondiente a la ecuación~\eqref{C3_eq_implicita_cross_coef}. 
 
+\subsection{Cambio de referencia de rectas proyectivas}
+Dada una recta $r$ de $\proy^2$ cuyas ecuaciones, implícita y paramétricas, vienen dadas en cierta referencia $\mf{R}$. Sea otra referencia $\mf{R}'$ de $\proy^2$ y sea $M$ la matriz de paso de una referencia a otra
+\begin{equation*}
+	\rho X'=MX
+\end{equation*}
+Es posible preguntarse cuales serán las ecuaciones de $r$ respecto a esta nueva referencia. Una forma de hacerlo sería, dados dos puntos $A$ y $B$ de la recta $r$, mediante la ecuación anterior hallar las coordenadas, $A'$ y $B'$, de esos puntos en la referencia $\mf{R}'$ y obtener a partir de ellos, de nuevo, la ecuación de la recta, por uno cualquiera de los métodos que hemos visto.\\
+
+Sin embargo, existe otro procedimiento mucho más rápido. Este consisten en aplicar directamente la matriz de paso $M$ a los coeficientes de la recta y hallar así los coeficientes de la recta respecto a la referencia $\mf{R}'$. Veámoslo detenidamente.
+
+Sea la recta $r\subset\proy^2$ con ecuación implícita
+\begin{equation*}
+	ax+by+cz=0
+\end{equation*}
+que podemos escribir como
+\begin{equation*}
+(a \ b \ c)\left( \begin{array}{c}
+x\\
+y\\
+z
+\end{array}\right) =0
+\end{equation*}
+Queremos hallar la ecuación de dicha recta en la referencia $\mf{R}'$, es decir, los coeficientes $a',b',c'$ que cumplen
+\begin{equation*}
+	a'x'+b'y'+c'z'=0
+\end{equation*}
+o, equivalentemente,
+\begin{equation*}
+	(a' \ b' \ c')\left( \begin{array}{c}
+		x'\\
+		y'\\
+		z'
+	\end{array}\right) =0
+\end{equation*}
+Por un lado, tenemos que $x,y,z$ y $x',y',z'$ están relacionados a través de la matriz de cambio de referencia
+\begin{equation*}
+	\left( \begin{array}{c}
+	x'\\
+	y'\\
+	z'
+	\end{array}\right)\sim M 
+	\left( \begin{array}{c}
+		x\\
+		y\\
+		z
+	\end{array}\right)
+\end{equation*}
+Por tanto, 
+\begin{equation*}
+	(a \ b \ c)\left( \begin{array}{c}
+		x\\
+		y\\
+		z
+	\end{array}\right) =0=(a' \ b' \ c')\left( \begin{array}{c}
+		x'\\
+		y'\\
+		z'
+	\end{array}\right)\sim(a' \ b' \ c')M 
+	\left( \begin{array}{c}
+		x\\
+		y\\
+		z
+	\end{array}\right)
+\end{equation*}
+de lo cual se deduce que
+\begin{equation}
+	(a \ b \ c)\sim (a' \ b' \ c') M
+\end{equation}
+Así, finalmente podemos decir que los coeficientes de la recta $r$ en la referencia $\mf{R}'$ vienen dados por:
+\begin{equation}
+	\rho (a' \ b' \ c')=(a \ b \ c)M^*
+\end{equation}
+donde $\rho$ es un factor de proporcionalidad. Recordemos que podíamos usar el adjunto en vez de el inverso de una matriz. Con esto ya quedaría determinada la recta en la referencia $\mf{R}'$. Si revisamos el apartado de cambios de referencia veremos que $M=P^*$, donde $P$ es la matriz de cambio de base (asociadas). Por tanto, la ecuación anterior se puede escribir como
+\begin{equation}
+\rho (a' \ b' \ c')=(a \ b \ c)P
+\end{equation}
+
 \section{Planos Proyectivos}\label{C3_sec_planos}
 
 Una vez completada la descripción de una recta, pasemos a realizar la de un plano de $\proy^3$. Este no es más que una variedad proyectiva de dimensión dos. Hallaremos sus ecuaciones paramétricas e implícitas generalizando los procedimientos del apartado anterior.
@@ -403,7 +479,7 @@ La ecuación implícita de una recta que pasa por dos puntos viene dada por la e
 \begin{equation*}
 	(a_1b_2-a_2b_1)u+(a_2b_0-a_0b_2)v+(a_0b_1-a_1b_0)w=0
 \end{equation*}
-que se corresponde a la ecuación implícita de la recta dual $p^*$. Comparando con la eucación~\eqref{C3_eq_ejemplo_int_rectas_dual} obtenemos que la intersección de las rectas $r$ y $r'$ de $\proy^2$ es el punto
+que se corresponde a la ecuación implícita de la recta dual $p^*$. Comparando con la ecuación~\eqref{C3_eq_ejemplo_int_rectas_dual} obtenemos que la intersección de las rectas $r$ y $r'$ de $\proy^2$ es el punto
 \begin{equation*}
 	p=(a_1b_2-a_2b_1:a_2b_0-a_0b_2:a_0b_1-a_1b_0)
 \end{equation*}
@@ -416,7 +492,7 @@ Por ejemplo, en $\proy^3$, estaríamos hablando de un haz de planos con base la 
 
 Dado que se habla de haz de hiperplanos, estos vendrán descritos por una ecuación implícita. Por tanto, todas las explicaciones realizadas en el apartado anterior basándonos en las ecuaciones implícitas, sin usar el dual, son válidas para el caso general.
 
-Además, la interpretación dual sigue correcta. Cada hiperplano de $\proy(E)$ es un punto en el espacio proyectivo dual. La variedad $X$ contenida en todos ellos, dado que tiene codimensión $2$, es una recta en $\proy^*$. Por tanto, todo haz de hiperplanos con base $X$ de $\proy(E)$ representa una recta $X^*$ en el dual. De forma general, un haz de hiperplanos es una variedad proyectiva dual de dimensión $1$. 
+Además, la interpretación dual sigue siendo correcta. Cada hiperplano de $\proy(E)$ es un punto en el espacio proyectivo dual. La variedad $X$ contenida en todos ellos, dado que tiene codimensión $2$, es una recta en $\proy^*$. Por tanto, todo haz de hiperplanos con base $X$ de $\proy(E)$ representa una recta $X^*$ en el dual. De forma general, un haz de hiperplanos es una variedad proyectiva dual de dimensión $1$. 
 
 Al igual que hicimos en el apartado anterior, podemos describir el haz de hiperplanos $X^*$, dado que es una recta del dual, a través de sus ecuaciones paramétricas. Dados dos hiperplanos del haz, tenemos dos puntos de $X^*$ conocidos. Así, se reduce a hallar al ecuación implícita de una recta que pasa por dos puntos, problema descrito en la sección~\ref{C3_subsec_ec_parametricas_recta}.
 

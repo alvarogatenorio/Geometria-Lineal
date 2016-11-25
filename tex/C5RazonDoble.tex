@@ -13,7 +13,7 @@ Empecemos tratando un caso más sencillo, tres puntos. Es fácil demostrar hacie
 	
 	Existe un único isomorfismo 
 	\[\widehat{h}:E\rightarrow E'\]
-	que trasforma $\mc{B}$ en $\mc{B'}$. La aplicación proyectiva asociada a esta aplicación lineal es una homografía que transforma $p_i$ en $p'_i$, para $i=0,1,2$. Además es única al serlo $\widehat{h}$.
+	que trasforma $\mc{B}$ en $\mc{B'}$. La aplicación proyectiva asociada a esta aplicación lineal es una homografía, de hecho es biyectiva (Corolario~\ref{C4:cor_biyectividad}) que transforma $p_i$ en $p'_i$, para $i=0,1,2$. Además es única al serlo $\widehat{h}$.
 \end{proof}
 
 \begin{obs}
@@ -24,14 +24,18 @@ Veamos un ejemplo. Para ello recordemos primero que una homografía de la recta 
 	\label{C5_eq_homografia_nohom}
 	\frac{x'}{y'}=\theta'=\frac{a\frac{x}{y}+b}{c\frac{x}{y}+d}=\frac{a\theta+b}{c\theta +d}\tq ad-bc\not=0
 \end{equation}
+lo que denominábamos \ti{transformación de Möbius}.
 \begin{exa}
 	Encontrar la homografía 
 	\[h:\proy^1\rightarrow \proy^1\] 
 	que trasforma los puntos $\{(0:1),(1:0),(2:1)\}$ en los puntos $\{(1:1),(-1:1),(0:1)\}$.\\
 	
-	Podemos resolver este ejercicio de varias formas. La primera consistiría en plantear las ecuaciones con la matriz asociada
+	Podemos resolver este ejercicio de varias formas. La primera consistiría en plantear las ecuaciones con la matriz A asociada
 	\begin{equation*}
-		\left( \begin{array}{cc}
+		A\left( \begin{array}{c}
+			x\\ y
+		\end{array}\right)
+		=\left( \begin{array}{cc}
 			a&b\\ c&d
 		\end{array}\right) 
 		\left( \begin{array}{c}
@@ -87,16 +91,29 @@ Veamos un ejemplo. Para ello recordemos primero que una homografía de la recta 
 			0&=\frac{a2+b1}{c2 +d1}\ra 2a+b=0
 		\end{split}
 	\end{equation*}
-	Por lo que, tomando $a=1$, la homografía pedida viene dada por
+	Observamos que este sistema homogéneo es compatible indeterminado, no nos proporciona valores exactos de los coeficientes de la matriz sino que dependen de un parámetro. En geometría proyectiva, esto es suficiente para resolver el sistema debido a que, en este caso, nos vale tanto la matriz de la aplicación lineal como un múltiplo suyo. ES decir, en general, nos valen tanto las soluciones del sistema como un múltiplo suyo. Por tanto, en geometría proyectiva no necesitamos soluciones exactas, sino \tb{rayos de soluciones}. Es importante tener en cuenta que esto solo es posible cuando deshomogeneizamos el sistema, es decir, cuando trabajamos con $\theta$.
+	
+	Así, si no tenemos un sistema determinado, $a=\lambda$ y con ello $c=-\lambda, \ b=-2\lambda$ y $d=-2\lambda$, siendo así la matriz
+	\begin{equation*}
+	 \lambda \left( \begin{array}{cc}
+	 1&-2\\ -1&-2
+	 \end{array}\right) 
+	\end{equation*}
+	y podemos tomar sin ningún problema $\lambda=-1$.
+	
+	Por lo que, tomando $a=-1$, la homografía pedida viene dada por
 	\begin{equation*}
 		\theta'=\frac{2-\theta}{2+\theta}
 	\end{equation*}
-	Nótese que no es necesario tener tanto cuidado con $\theta=\infty$. Si tenemos en cuenta que $\infty+b=\infty$ y que $\frac{\infty}{\infty}=1$, el resultado es el mismo
+	Nótese que no es necesario tener tanto cuidado con $\theta=\infty$, como ya se explicó en el capítulo anterior. Si tenemos en cuenta que $\infty+b=\infty$ y que $\frac{\infty}{\infty}=1$, el resultado es el mismo
 	\begin{equation*}
 		\theta'=-1=\frac{a\theta+b}{c\theta +d}=\frac{a\infty+b}{c\infty +d}=\frac{a\infty}{c\infty}=\frac{a}{c}\ra a=-c
 	\end{equation*}
 	Por tanto, a partir de ahora, daremos por buenos estos cálculos con $\infty$ en principio sin sentido.
 \end{exa}
+\begin{obs}
+	De lo explicado en el ejemplo anterior acerca de los sistemas que se obtienen al trabajar con coordenadas no homogéneas se deduce que, para determinar una homografía de $\proy^1$, son suficientes $3$ puntos y sus imágenes, pues nos vale con obtener un rayo de soluciones.
+\end{obs}
 Encontrar una homografía de una recta proyectiva que lleve cuatro puntos distintos cualesquiera en otros cuatro no es tan sencillo. Para poder caracterizar esta propiedad empezaremos estudiando las características de una homografía que la cumpla.
 \begin{lem}
 	Sean $\{p_1,p_2,p_3,p_4\}$ y $\{p'_1,p'_2,p'_3,p'_4\}$ ocho puntos distintos de la recta proyectiva $\proy(E)$ respecto a la referencia $\mf{R}$. Sea una homografía
@@ -161,7 +178,7 @@ Conviene entonces dar un nombre a dicho cociente.
 \end{obs}
 Con esta definición el lema se traduce en que toda homografía de una recta proyectiva en sí misma, que lleve cuatro puntos diferentes cualesquiera en otros cuatro, mantiene invariante la razón doble. Consecuencia de este resultado es el corolario siguiente.
 \begin{cor}
-	Dada una homografía de la recta en sí misma y dados cuatro puntos distintos cualesquiera $\{p_1,p_2,p_3,p_4\}$, se cumple
+	Dada una homografía $h$ de la recta en sí misma y dados cuatro puntos distintos cualesquiera $\{p_1,p_2,p_3,p_4\}$, se cumple que $h$ preserva la razón doble:
 	\begin{equation}
 	\{p_1,p_2;p_3,p_4\}=\{h(p_1),h(p_2);h(p_3),h(p_4)\}
 	\end{equation} 
@@ -267,7 +284,7 @@ Como se puede observar en la demostración, la razón doble nos permite definir 
 
 La razón doble ha sido descrita como un cociente de parámetros no homogéneos ordenados de la siguiente manera $\{\theta_1,\theta_2;\theta_3,\theta_4\}$. Cabe preguntarse si las 24 posibles permutaciones de las coordenadas $\theta_i$ darán la misma razón doble.
 
-A continuación se dará el valor de la razón doble resultante de permutar las coordenadas no homogéneas, respecto a $\{\theta_1,\theta_2;\theta_3,\theta_4\}$. Dado que para probar dichos resultados basta con aplicar la definición de razón doble, desarrollar el cociente y simplificar, no se harán las demostraciones. 
+A continuación se dará el valor de la razón doble resultante de permutar las coordenadas no homogéneas, respecto a $\{\theta_1,\theta_2;\theta_3,\theta_4\}$. Dado que para probar dichos resultados basta con aplicar la definición de razón doble, desarrollar el cociente y simplificar, las comprobaciones se dejan al lector. 
 
 Dada la razón doble $\{\theta_1,\theta_2;\theta_3,\theta_4\}$, se tiene que:
 \begin{itemize}
@@ -297,9 +314,9 @@ Esto nos da las 24 reordenaciones posibles. Resulta entonces que si $\{\theta_1,
 \end{defi}
 Si cuatro puntos de una recta proyectiva son una cuaterna armónica, entonces es posible hacer la siguiente construcción geométrica, donde $p_1p_{arbitrario}$, $p_2p_{arbitrario}$ y $p_1p_{arbitrario1}$ son rectas arbitrarias, por tanto también lo son los puntos $p_{arbitrario}$ y $p_{arbitrario1}$.
 
-\begin{figure}[]
+\begin{figure}[h]
 	\centering
-	\includegraphics[scale=.4]{Graficos/RazonDoble/razon_doble.eps}
+	\includegraphics[scale=.4]{Graficos/RazonDoble/razon_doble-eps-converted-to}
 	\caption{Cuaterna armónica}
 	\label{C5_img_cuaterna_armonica}
 \end{figure}
@@ -384,7 +401,7 @@ Además, para rizar el rizo, y sin salir demasiado de nuestro propósito origina
 \subsection{Razón Doble en $\proy^n$}
 En este apartado trataremos de generalizar la noción de razón doble para cuatro puntos alineados de $\proy^n$. Para ello, daremos dos procedimientos distintos que es útil saber dominar. Ambos serán ilustrados con ejemplos (que se recomienda no omitir) para que calen mejor en el lector.
 \subsubsection{Procedimiento Referencial}
-Sean una recta $r$ de $\proy^n$ y cuatro puntos proyectivos $A,B,C,D\in r$. Para calcular la razón doble de dichos cuatro puntos, tomemos una referencia ``cómoda'' de la recta $r$. De esta forma, los puntos quedan expresados con dos coordenadas homogéneas, de forma que ya podemos aplicar los procedimientos de cálculo habituales. Veámoslo con un ejemplo.
+Sean una recta $r$ de $\proy^n$ y cuatro puntos proyectivos $A,B,C,D\in r$. Para calcular la razón doble de dichos cuatro puntos, tomemos una referencia ``cómoda'' de la recta $r$. De esta forma, los puntos quedan expresados con dos coordenadas homogéneas, pudiendo aplicar los procedimientos de cálculo habituales. Veámoslo con un ejemplo.
 \begin{exa}[Cuatro Puntos Alineados]
 	\label{C5_exa_puntosAlineados}
 	Sean los puntos alineados (compruébese):
@@ -408,11 +425,13 @@ Sean una recta $r$ de $\proy^n$ y cuatro puntos proyectivos $A,B,C,D\in r$. Para
 \subsubsection{Procedimiento de Proyecciones}
 Consideremos ahora una aplicación $h$ entre dos rectas $r$ y $r'$ de $\proy^2$ como la del ejemplo \ref{C4_exa_fabricaHomografias}, es claro que esta proyección es una homografía.
 
+IMAGEN
+
 Así pues, como las homografías conservan la razón doble, calcular la razón doble de los puntos alineados $A,B,C,D$ será equivalente a calcular la razón doble de sus imágenes por $h$. Es decir:
 \[\{A,B;C,D\}=\{h(A),h(B);h(C),h(D)\}\]
 La utilidad de esto se ve muy claramente cuando se proyecta sobre los ejes coordenados, tal y como muestra el siguiente ejemplo.
-\begin{exa}[Proyección sobre los Ejes]
-	Sean los puntos $A,B,C,D$ del ejemplo \ref{C5_exa_puntosAlineados}. Tomemos el punto $O=(1:0:0)\not\in AB$ y la recta $AB$. Tomamos asimismo la recta $r'$ definida por la ecuación implícita $x=0$ (eje de coordenadas de $\proy^2$).
+\begin{exa}[Proyección sobre los Ejes]\label{C5:ej_proy_sobre_ejes}
+	Sean los puntos $A,B,C,D$ del ejemplo \ref{C5_exa_puntosAlineados}. Tomemos el punto $O=(1:0:0)\not\in AB$ y la recta $r:=AB$. Tomamos asimismo la recta $r'$ definida por la ecuación implícita $x=0$ (eje de coordenadas de $\proy^2$).
 	
 	Consideramos la proyección $\pi$ del ejemplo \ref{C4_exa_fabricaHomografias}, que a cada punto $x$ de la recta $r$ le asocia el punto intersección de la recta $Ox$ con la recta $r'$. Hallando esta intersección de forma genérica (como aprendimos en \ref{C3_interseccionRectas}) obtenemos la siguiente fórmula explícita para $\pi$:
 	\[\begin{array}{c}
@@ -430,16 +449,16 @@ La utilidad de esto se ve muy claramente cuando se proyecta sobre los ejes coord
 	\[\{A,B;C,D\}=\{(0:-1),(1:0);(1:-2),(1:1)\}\]
 	Y esto ya lo sabemos calcular. Nótese que nos debería dar el mismo resultado que el ejemplo \ref{C5_exa_puntosAlineados}. En efecto:
 	\[\{A,B;C,D\}=\left\{0,\infty;-\frac{1}{2},1\right\}=\frac{\frac{1}{2}}{\infty+\frac{1}{2}}:\frac{-1}{\infty-1}=-\frac{1}{2}\]
-	Nótese que para que la proyección a aplicar sea una homografía es fundamental que el centro de proyección $O$ no pertenezca a la recta en la que los cuatro puntos están alineados.
+	Para que la proyección a aplicar sea una homografía es fundamental que el centro de proyección $O$ no pertenezca a la recta en la que los cuatro puntos están alineados.
 \end{exa}
 
 La aplicación de uno u otro método (o una combinación de ambos) hace que los cálculos sean mucho más rápidos y sencillos.
 \subsection{Razón Doble y Dualidad}
 Un paso más en lo que concierne a estas generalizaciones es trasladar todos estos conceptos al espacio dual. Si lo hacemos (estando en $\proy^2$) obtendremos el concepto de razón doble de cuatro rectas concurrentes.
 
-Sabemos por cierto capítulo que una recta proyectiva de $\proy^2$ se corresponde con un haz de rectas del dual $\proy^{2*}$.
+Recordemos que cuatro rectas concurrentes son cuatro rectas que se cortan en un mismo punto. Por tanto, forman un haz de rectas en $\proy^2$ con base el punto de corte. Dado que, como se vio en capítulos anteriores, un haz de rectas en un $\proy^1$ en el espacio proyectivo dual y sabemos calcular la razón doble para puntos de $\proy^1$, si tomamos las rectas como puntos del dual, podremos calcular su razón doble.
 
-Así pues, definimos la razón doble de cuatro rectas concurrentes como laa razón doble de los puntos que se corresponden los las $4$ rectas en el dual.
+Así pues, definimos la razón doble de cuatro rectas concurrentes como la razón doble de los puntos que se corresponden las $4$ rectas en el dual.
 
 Dadas $4$ rectas proyectivas $r_1,r_2,r_3,r_4$ estando cada una de ellas definida por cierta ecuación implícita, se tiene que:
 \[r_i:a_ix+b_iy+c_iz=0\]
@@ -456,7 +475,7 @@ Pongamos un ejemplo con rectas concretas para verlo más claro.
 	r_3:2x-y+z=0\\
 	r_4:y+z=0
 	\end{array}\]
-	La razón doble de las mismas será, dualizando y proyectando:
+	La razón doble de las mismas, dualizando y proyectando, como vimos en el ejemplo~\ref{C5:ej_proy_sobre_ejes}, queda
 	\[\{(1:-1:0),(1:0:1);(2:-1:1),(0:1:1)\}=\{\infty, 0; -1,1\}=-1\]
 	Hecho esto, podemos extender el concepto de cuaterna armónica a cuaterca armónica formada por cuatro rectas concurrentes.
 \end{exa}

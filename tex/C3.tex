@@ -55,11 +55,11 @@ expresado en \ti{coordenadas homogéneas} respecto de la referencia $\mf{R}$. A 
 \end{exa}
 Normalmente no se trabaja con estas ecuaciones paramétricas, en su lugar, se opta por ``deshomogeneizarlas'', ya que por lo general es incómodo y antiintuitivo que los puntos de una recta queden descritos por dos parámetros. Es más, puede ocurrir que al dar valores a los parámetros obtengamos siempre el mismo punto.
 
-Para solucionar este problema, escogemos un representante ``estandar'' de cada rayo dividiendo todo por $\alpha$.
+Para solucionar este problema, escogemos un representante ``estándar'' de cada rayo dividiendo todo por $\alpha$.
 \[\class{u+\frac{\beta}{\alpha}v}:\stackrel{\textrm{not.}}{=}\class{u+\theta v}\]
 De esta forma, la recta ya no queda descrita por dos parámetros homogéneos $\alpha$ y $\beta$ como antes, sino por un único parámetro $\theta$ a la que llamaremos \ti{no homogéneo}.
 	
-Sin embargo, hemos de tener cuidado, pues, como más de uno ya se habrá dado cuenta, es posible que en algunos casos $\alpha$ se anule, por ende, $\theta$ quedaría indefinido. Como este caso se corresponde con un único punto (ya que los vectores de la forma $\beta v$ representan el mismo rayo), y este es precisamente $Q$, diremos que una recta queda descrita por la siguiente \ti{ecuación paramétrica no homogénea}:
+Sin embargo, hemos de tener cuidado pues, como más de uno ya se habrá dado cuenta, es posible que en algunos casos $\alpha$ se anule, por ende, $\theta$ quedaría indefinido. Como este caso se corresponde con un único punto (ya que los vectores de la forma $\beta v$ representan el mismo rayo), y este es precisamente $Q$, diremos que una recta queda descrita por la siguiente \ti{ecuación paramétrica no homogénea}:
 \begin{equation}
 	\label{C3_eq_descripcionRecta}
 	PQ:\{\class{u+\theta v}\tq \theta\in\K\}\cup\{Q\}
@@ -194,9 +194,9 @@ Supongamos ahora que ambas rectas vienen descritas por su ecuación implícita. 
 \end{equation*}
 donde $p_0,p_1,p_2$ son desconocidos.
 
-Detengámonos un segundo y observemos la ecuación~\eqref{C3_eq_implicitas_evaluadas}. ¿No se aprecia cierta similitud?. En efecto, en este caso el vector $(p_0,p_1,p_2)$ hace el papel de $(a,b,c)$. Si hacemos la misma interpretación, aunque no del todo correcta, de perpendicularidad a través del producto escalar, podemos afirmar que el vector que buscamos es perpendicular a los vectores $\vec{a}=(a,b,c)$ y $\vec{a}'=(a',b',c')$. Al igual que hicimos anteriormente, una forma rápida de hallar un vector perpendicular a otros dos, es hacer su producto vectorial. Por tanto, un vector representante del punto $p$ viene dado por
+Detengámonos un segundo y observemos la ecuación~\eqref{C3_eq_implicitas_evaluadas}. ¿No se aprecia cierta similitud?. En efecto, en este caso el vector $(p_0,p_1,p_2)$ hace el papel de $(a,b,c)$. Si hacemos la misma interpretación, aunque no del todo correcta, de perpendicularidad a través del producto escalar, podemos afirmar que el vector que buscamos es perpendicular a los vectores $\vec{u}=(a,b,c)$ y $\vec{u}'=(a',b',c')$. Al igual que hicimos anteriormente, una forma rápida de hallar un vector perpendicular a otros dos, es hacer su producto vectorial. Por tanto, un vector representante del punto $p$ viene dado por
 \begin{equation*}
-	(p_0,p_1,p_2)=\vec{a}\times \vec{a}'=\left| \begin{array}{ccc}
+	(p_0,p_1,p_2)=\vec{u}\times \vec{u}'=\left| \begin{array}{ccc}
 		x & y & z\\
 		a & b & c\\
 		a' & b' & c'
@@ -204,7 +204,7 @@ Detengámonos un segundo y observemos la ecuación~\eqref{C3_eq_implicitas_evalu
 \end{equation*}
 Es decir, la intersección de las rectas $r$ y $r'$ es el punto 
 \begin{equation}
-	p=[(p_0,p_1,p_2)]=[\vec{a}\times \vec{a}']
+	p=[(p_0,p_1,p_2)]=[\vec{u}\times \vec{u}']
 \end{equation}
 Es importante observar que para encontrar el punto de corte entre dos rectas de $\proy^2$ se realiza la misma operación que para hallar los coeficientes de la ecuación implícita de la recta engendrada por dos puntos, correspondiente a la ecuación~\eqref{C3_eq_implicita_cross_coef}. 
 
@@ -213,7 +213,7 @@ Dada una recta $r$ de $\proy^2$ cuyas ecuaciones, implícita y paramétricas, vi
 \begin{equation*}
 	\rho X'=MX
 \end{equation*}
-Es posible preguntarse cuales serán las ecuaciones de $r$ respecto a esta nueva referencia. Una forma de hacerlo sería, dados dos puntos $A$ y $B$ de la recta $r$, mediante la ecuación anterior hallar las coordenadas, $A'$ y $B'$, de esos puntos en la referencia $\mf{R}'$ y obtener a partir de ellos, de nuevo, la ecuación de la recta, por uno cualquiera de los métodos que hemos visto.\\
+Es posible preguntarse cuáles serán las ecuaciones de $r$ respecto a esta nueva referencia. Una forma de hacerlo sería, dados dos puntos $A$ y $B$ de la recta $r$, mediante la ecuación anterior hallar las coordenadas, $A'$ y $B'$, de esos puntos en la referencia $\mf{R}'$ y obtener a partir de ellos, de nuevo, la ecuación de la recta, por uno cualquiera de los métodos que hemos visto.\\
 
 Sin embargo, existe otro procedimiento mucho más rápido. Este consisten en aplicar directamente la matriz de paso $M$ a los coeficientes de la recta y hallar así los coeficientes de la recta respecto a la referencia $\mf{R}'$. Veámoslo detenidamente.
 
@@ -314,7 +314,7 @@ Teniendo en cuenta estas indeterminaciones, el plano $\engen{P,Q,S}$ puede descr
 siendo esta la \tb{ecuación paramétrica del plano}, en coordenadas no homogéneas.
 
 \begin{obs}
-	Este procedimiento para hallar las ecuaciones paramétricas de un plano de $\proy^3$ no es más que una adaptación del procedimiento que se llevó a cabo en el apartado~\ref{C3_subsec_ec_parametricas_recta}. Observemos que es un procedimiento fácilmente generalizable a cualquier variedad proyectiva, sea cual sea su dimensión y la del espacio proyectivo. Por tanto, no se explicará como hallar las ecuaciones paramétricas de una variedad proyectiva general, pues basta seguir los pasos del apartado~\ref{C3_subsec_ec_parametricas_recta}, adaptándolo a las dimensiones de su caso.
+	Este procedimiento para hallar las ecuaciones paramétricas de un plano de $\proy^3$ no es más que una adaptación del procedimiento que se llevó a cabo en el apartado~\ref{C3_subsec_ec_parametricas_recta}. Observemos que es un procedimiento fácilmente generalizable a cualquier variedad proyectiva, sea cual sea su dimensión y la del espacio proyectivo. Por tanto, no se explicará cómo hallar las ecuaciones paramétricas de una variedad proyectiva general, pues basta seguir los pasos del apartado~\ref{C3_subsec_ec_parametricas_recta}, adaptándolo a las dimensiones de su caso.
 \end{obs}
 
 \subsection{Ecuación implícita}
@@ -338,7 +338,7 @@ Recordemos que la primera forma de hacer esto que se comentó era, dado que $P,Q
 \end{equation}
 Otra forma, bastante mejor que la anterior, era interpretar las ecuaciones anteriores como el producto escalar entre el vector $(a,b,c,d)$ y los vectores representantes de los puntos $P,Q$ y $S$. Esto en la recta nos llevaba a un producto vectorial. Sin embargo, en $\R^4$ no está definido. Por tanto, debemos darle a las ecuaciones otra interpretación, para así hallar una forma más fácil de calcular la ecuación implícita de un plano. 
 
-Por un momento, observemos la eucación~\eqref{C3_eq_implicita_plano} como la ecuación implícita del hiperplano $H$ cuya proyección es el plano proyectivo $\engen{P,Q,S}$. Si consideramos $x,y,z$ y $t$ como coordenadas de un punto de $H$, dado que los vectores $u,v,t$ forman una base de dicho plano, como se explicó en el apartado anterior, el vector $(x,y,z,t)$ será combinación lineal de ellos, y por tanto el conjunto $\{(x,y,z,t),u,v,s\}$ será linealmente dependiente. Con ello el determinante
+Por un momento, observemos la ecuación~\eqref{C3_eq_implicita_plano} como la ecuación implícita del hiperplano $H$ cuya proyección es el plano proyectivo $\engen{P,Q,S}$. Si consideramos $x,y,z$ y $t$ como coordenadas de un punto de $H$, dado que los vectores $u,v,s$ forman una base de dicho plano (como se explicó en el apartado anterior), el vector $(x,y,z,t)$ será combinación lineal de ellos. Por tanto, el conjunto $\{(x,y,z,t),u,v,s\}$ será linealmente dependiente. Con ello el determinante
 \begin{equation}
 	\left| \begin{array}{cccc}
 	x & y & z& t\\
@@ -350,7 +350,7 @@ Por un momento, observemos la eucación~\eqref{C3_eq_implicita_plano} como la ec
 debe ser nulo. De esta forma, dado que las únicas incógnitas con $x,y,z$ y $t$ y la ecuación implícita es única salvo múltiplos, el resultado de ese determinante será la ecuación implícita del hiperplano $H$, que por definición es la ecuación implícita del plano proyectivo $\engen{P,Q,S}$.
 
 \begin{obs}
-	Aunque el procedimiento utilizado para calcular la ecuación implícita de una recta de $\proy^2$ a través del producto vectorial no es generalizable a otros hiperplanos, como acabamos de ver, el desarrollado en este apartado sí lo es. Por ello, no se explicará como hallar la ecuación implícita de un hiperplano proyectivo general, ya que bastará con seguir los pasos de esta sección, adaptándolos a las dimensiones pertinentes. Esto implica evidentemente, que la ecuación implícita de una recta de $\proy^2$ se puede hallar también a través de este procedimiento.
+	Aunque el procedimiento utilizado para calcular la ecuación implícita de una recta de $\proy^2$ a través del producto vectorial no es generalizable a otros hiperplanos, como acabamos de ver, el desarrollado en este apartado sí lo es. Por ello, no se explicará cómo hallar la ecuación implícita de un hiperplano proyectivo general, ya que bastará con seguir los pasos de esta sección, adaptándolos a las dimensiones pertinentes. Esto implica evidentemente que la ecuación implícita de una recta de $\proy^2$ se puede hallar también a través de este procedimiento.
 \end{obs}
 
 \section{Haz de hiperplanos}

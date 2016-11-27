@@ -20,19 +20,19 @@ y obtenemos que es equivalente a
 \end{equation}
 donde $\alpha=c, \ \beta=-a, \ \gamma=d, \ \delta=-b$, denominada \ti{ecuación general} o \ti{implícita} de la homografía.
 
-Que una homografía, distinta de la identidad, mantenga invariante un punto $(x,y)$ implica que $(x',y')=(x,y)$, y con ello $\theta'=\theta$. Sustituyendo en la ecuación anterior obtenemos una ecuación de segundo grado, y, por tanto, tendrá dos soluciones distintas o una solución doble. Esto quiere decir que, suponiendo que $\K=\C$, las homografías, exceptuando la identidad, tienen dos puntos fijos distintos o un punto fijo doble, dependiendo de la ecuación resultante.
+Que una homografía, distinta de la identidad, mantenga invariante un punto $(x,y)$ implica que $(x',y')=(x,y)$ y con ello $\theta'=\theta$. Sustituyendo en la ecuación anterior obtenemos una ecuación de segundo grado, y, por tanto, tendrá dos soluciones distintas o una solución doble. Esto quiere decir que, suponiendo que $\K=\C$, las homografías, exceptuando la identidad, tienen dos puntos fijos distintos o un punto fijo doble, dependiendo de la ecuación resultante.
 \begin{equation}
 	\label{C6_eq_homografia_segundo_orden_punto_fijo}
 	\alpha\theta^2+(\beta+\gamma)\theta+\delta=0
 \end{equation}
-Veamos en cada uno de los casos cual es la expresión de la homografía que tiene esos puntos fijos, basándonos en la ecuación anterior.
+Veamos en cada uno de los casos cuál es la expresión de la homografía que tiene esos puntos fijos, basándonos en la ecuación anterior.
 
 \subsection{Dos puntos fijos distintos}
-Sea $h$ una homografía de $\proy^1$ con dos puntos fijos $M$ y $N$ distintos. Tratamos de encontrar el valor de los parámetros $\alpha, \beta,\gamma,\delta$ para poder describir las homografías de este tipo. Como sabemos que $M$ y $N$ son puntos fijos, sus coordenadas no homogéneas deben cumplir la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo}. Por tanto una forma de hallar estos parámetro sería sustituir las coordenadas no homogéneas de los puntos fijos en dicha ecuación y ver para que valores de $\alpha, \beta,\gamma,\delta$ se cumple. 
+Sea $h$ una homografía de $\proy^1$ con dos puntos fijos $M$ y $N$ distintos. Tratamos de encontrar el valor de los parámetros $\alpha, \beta,\gamma,\delta$ para poder describir las homografías de este tipo. Como sabemos que $M$ y $N$ son puntos fijos, sus coordenadas no homogéneas deben cumplir la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo}. Por tanto, una forma de hallar estos parámetros sería sustituir las coordenadas no homogéneas de los puntos fijos en dicha ecuación y ver para que valores de $\alpha, \beta,\gamma,\delta$ se cumple. 
 
-Para facilitar este cálculo tomamos la referencia $\mf{R}=\{M,N;E\}$, donde $E$ es un punto cualquiera distinto de $M$ y $N$. En esta referencia las coordenadas no homogénea de $M$ y $N$ son $\infty$ y $0$, respectivamente. Por tanto la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo} admite como soluciones $0$ y $\infty$. Sustituyendo estos valores en la ecuación obtenemos que 
+Para facilitar este cálculo tomamos la referencia $\mf{R}=\{M,N;E\}$, donde $E$ es un punto cualquiera distinto de $M$ y $N$. En esta referencia las coordenadas no homogénea de $M$ y $N$ son $\infty$ y $0$, respectivamente. Por tanto, la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo} admite como soluciones $0$ y $\infty$. Sustituyendo estos valores en la ecuación obtenemos que 
 \begin{equation*}
-	\alpha 0+(\beta+\gamma)0+\delta=0\sii\delta=0
+	\alpha\cdot 0+(\beta+\gamma)0+\delta=0\sii\delta=0
 \end{equation*}
 Hagamos el cálculo para $\infty$ con más cuidado. Sustituyendo las coordenadas no homogéneas por las coordenadas homogéneas en la ecuación~\eqref{C6_eq_homografia_segundo_orden}, esta queda
 \begin{equation}
@@ -61,7 +61,7 @@ donde la constante $k$ se llama \ti{módulo} de la homografía. Notemos que dada
 		\alpha+(\beta+\gamma)\frac{1}{\infty}+\delta\frac{1}{\infty^2}=0\sii \alpha=0
 	\end{equation*}
 \end{obs}
-Es importante observar que, aunque la ecuación $\theta'=k\theta$ se denomina canónica, en realidad no lo es mucho, ya que esta expresión se ha obtenido tomando la referencia $\mf{R}=\{M,N;E\}$. Notemos que si, en vez de tomar como referencia $\mf{R}$, tomamos $\overline{\mf{R}}=\{N,M;E\}$ la ecuación cambia.
+Es importante observar que, aunque la ecuación $\theta'=k\theta$ se denomina canónica, en realidad no lo es mucho, ya que esta expresión se ha obtenido tomando la referencia $\mf{R}=\{M,N;E\}$. Notemos que si en vez de tomar como referencia $\mf{R}$ tomamos $\overline{\mf{R}}=\{N,M;E\}$, la ecuación cambia.
 
 En efecto, el cambio de $\mf{R}$ a $\overline{\mf{R}}$ viene dado por la homografía que trasforma $(1:0)$ en $(0:1)$ y $(0:1)$ en $(1:0)$. Sustituyendo estas trasformaciones, en coordenadas no homogéneas, en la ecuación~\eqref{C6_transformada_moebius}, obtenemos que la ecuación de la homografía que transforma $\mf{R}$ en $\overline{\mf{R}}$ es
 \begin{equation*}
@@ -73,14 +73,14 @@ Por tanto, la ecuación $\theta'=k\theta$ respecto a la referencia $\overline{\m
 \end{equation*}
 por lo que en este caso el módulo de la homografía con puntos fijos $M$ y $N$ sería $1/k$. 
 
-Podríamos preguntarnos entonces porque darle el apellido canónico. Aunque una permutación de los puntos $M$ y $N$ en la referencia nos da un valor del módulo de la homografía distinto, el parámetro $k$ está geométricamente asociado a la homografía, cosa que veremos no ocurrirá con parámetros posteriores. Es decir, solo depende de la homografía y del orden de los puntos $M$ y $N$ en la referencia, que según sea obtendremos $k$ o $1/k$. Observemos que no depende del punto unidad $E$ que hayamos tomado. Por tanto la ecuación
+Podríamos preguntarnos entonces porque darle el apellido canónico. Aunque una permutación de los puntos $M$ y $N$ en la referencia nos da un valor del módulo de la homografía distinto, el parámetro $k$ está geométricamente asociado a la homografía, cosa que veremos no ocurrirá con parámetros posteriores. Es decir, solo está ligado a la homografía y al orden de los puntos $M$ y $N$ en la referencia, y dependiendo de este obtendremos $k$ o $1/k$. Observemos que no depende del punto unidad $E$ que hayamos tomado. Por tanto, la ecuación
 \begin{equation}
 	\label{C6_theta_ktheta}
 	\theta'=k\theta
 \end{equation}
 puede considerarse canónica.
 
-El parámetro $k$ puede ser hallado a través de la razón doble, ya que estamos tratando homografías. En efecto, dada una homografía $h$ que deja fijos los puntos $M$ y $N$, y por tanto en la referencia $\mf{R}=\{M,N;E\}$ viene descrita por la ecuación~\eqref{C6_theta_ktheta} para cierto $k$, se tiene que
+El parámetro $k$ puede ser hallado a través de la razón doble, ya que estamos tratando homografías. En efecto, dada una homografía $h$ que deja fijos los puntos $M$ y $N$ y, por tanto, en la referencia $\mf{R}=\{M,N;E\}$ viene descrita por la ecuación~\eqref{C6_theta_ktheta} para cierto $k$, se tiene que
 \begin{equation}
 	\{M,N,P,h(P)\}=\{\infty,0,\theta,\theta'=k\theta\}=k
 \end{equation}
@@ -108,7 +108,7 @@ Hagamos un pequeño inciso que retomaremos más adelante. Si escribimos, en la r
 Por tanto, hemos encontrado una referencia en la cual la homografía $h$ es diagonal.
 
 \subsection{Un punto fijo doble}
-Veamos ahora que ecuación describe a una homografía $h$ de $\proy^1$ que deja fijo un solo punto. Si $M$ es el punto fijo de $h$, entonces la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo} debe admitir como solución la coordenada no homogénea de $M$. Por tanto, procederemos como en el caso anterior. Tomaremos una referencia adecuada y sustituiremos la coordenada no homogénea de $M$, respecto a dicha referencia, en la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo} para hallar los parámetros $\alpha, \beta,\gamma,\delta$.
+Veamos ahora qué ecuación describe a una homografía $h$ de $\proy^1$ que deja fijo un solo punto. Si $M$ es el punto fijo de $h$, entonces la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo} debe admitir como solución la coordenada no homogénea de $M$. Por tanto, procederemos como en el caso anterior. Tomaremos una referencia adecuada y sustituiremos la coordenada no homogénea de $M$, respecto a dicha referencia, en la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo} para hallar los parámetros $\alpha, \beta,\gamma,\delta$.
 
 Dado que solo hay un punto fijo, tomamos como referencia $\mf{R}=\{M,X;E\}$, donde $X$ y $E$ son puntos diferentes y distintos de $M$. En esta referencia la coordenada no homogénea de $M$ es $\infty$. Por tanto, para cualquier homografía con un punto fijo doble, tomando la referencia adecuada, se puede decir que dicha homografía deja fijo el infinito. Dado que ya justificamos anteriormente los cálculo con $\infty$ esta vez lo haremos sin tener cuidado. Recordemos que podíamos escribir
 \begin{equation*}
@@ -132,11 +132,11 @@ Por tanto, en una homografía de $\proy^1$ con un punto fijo doble se tiene que 
 \begin{equation}
 \theta'=\frac{a\theta+b}{c\theta +d}=\frac{a\theta+b}{a}=\theta+\mu
 \end{equation}
-A este tipo de homografías de las denomina \ti{elaciones} y se dice que dejan fijo el infinito, pues, como hemos visto antes, tomando la referencia adecuada el punto fijo $M$ pasa a ser $\infty$.
+A este tipo de homografías de las denomina \ti{elaciones} y se dice que dejan fijo el infinito pues, como hemos visto antes, tomando la referencia adecuada el punto fijo $M$ pasa a ser $\infty$.
 
 Notemos que esta vez el apellido canónico no es merecido, al contrario que en el caso anterior, pues el parámetro $\mu$ no está geométricamente asociado a la homografía. 
 
-Veámoslo. Partiendo de la referencia $\mf{R}=\{M,X;E\}$, realizamos un cambio de coordenadas que lleve el infinito al infinito, por ejemplo aplicando una homografía con ecuación
+Veámoslo. Partiendo de la referencia $\mf{R}=\{M,X;E\}$, realizamos un cambio de coordenadas que lleve el infinito al infinito. Por ejemplo, aplicamos una homografía con ecuación
 \begin{equation*}
 	\overline{\theta}=\frac{1}{k}\theta
 \end{equation*}
@@ -144,7 +144,7 @@ es decir, una homografía $h$ que en esa referencia deje fijos el cero y el infi
 
 La ecuación $\theta'=\theta+\mu$ respecto a la referencia $\overline{\mf{R}}$, que se obtiene despejando en la ecuación anterior $\theta$ en función de $\overline{\theta}$ y sustituyendo, es
 \begin{equation*}
-	k\overline{\theta}'=k\overline{\theta}+\mu\sii \overline{\theta}'=\overline{\theta}+\frac{\mu}{k}
+	k\overline{\theta'}=k\overline{\theta}+\mu\sii \overline{\theta'}=\overline{\theta}+\frac{\mu}{k}
 \end{equation*}
 Si $k=\mu$ entonces la ecuación de una homografía cuyo punto fijo es $M$ respecto a la referencia $\overline{\mf{R}}$ es
 \begin{equation*}
@@ -166,25 +166,25 @@ a&a\\
 Por tanto, hemos encontrado una referencia en la cual la matriz de la homografía $h$ se encuentra en su forma canónica de Jordan, salvo múltiplo.
 
 \section{Formas canónicas de Jordan y puntos fijos}
-Hemos anticipado que existe cierta relación entre los puntos fijos de una homografía y la forma canónica de Jordan de su matriz asociada. En este apartado explicaremos cual es esa relación.\\
+Hemos anticipado que existe cierta relación entre los puntos fijos de una homografía y la forma canónica de Jordan de su matriz asociada. En este apartado explicaremos cuál es esa relación.\\
 
 Sea $h$ una homografía distinta de la identidad. Si un punto $[v]$ es punto fijo de la homografía, entonces 
 \begin{equation}
 	\label{C6_eq_puntofijo_autovector}
 	[\widehat{h}(v)]=h([v])=[v]\sii \widehat{h}(v)=\rho v
 \end{equation}
-para cierto $\rho$, de lo cual se deduce que $v$ es autovector de la aplicación lineal $\widehat{h}$ con autovalor asociado $\rho$. Por tanto un punto $x$ es punto fijo de la homografía si y solo si es un autovector de la aplicación lineal $\widehat{h}$, asociado a un autovalor no nulo.
+para cierto $\rho$, de lo cual se deduce que $v$ es autovector de la aplicación lineal $\widehat{h}$ con autovalor asociado $\rho$. Por tanto, un punto $x$ es punto fijo de la homografía si y solo si es un autovector de la aplicación lineal $\widehat{h}$, asociado a un autovalor no nulo.
 
 Antes de continuar hagamos un pequeño recordatorio.
 
 \begin{obs}
-	Dada un endomorfismo $\widehat{h}$ de $E$ ($\dim(E)=n$) y sean $\lambda_i$, con $i=1,\cdots,r$, sus distintos autovalores, se llama subespacio propio asociado a $\lambda_i$ al subesapcio vectorial $V_{\lambda_i}$ formado por todos los autovectores asociados a dicho autovalor:
+	Dada un endomorfismo $\widehat{h}$ de $E$ ($\dim(E)=n$) y sean $\lambda_i$, con $i=1,\cdots,r$ sus distintos autovalores, se llama subespacio propio asociado a $\lambda_i$ al subesapcio vectorial $V_{\lambda_i}$ formado por todos los autovectores asociados a dicho autovalor:
 	\begin{equation}
 		V_{\lambda_i}:=\{u\in E\tq \widehat{h}(u)=\lambda_i u\}
 	\end{equation}
 	Se verifica que 
 	\begin{equation}
-		V_{\lambda_i}= Ker(\widehat{h}-\lambda_i I) \ ; \quad \dim(V_{\lambda_i})=n-rg(A-\lambda_i I)
+		V_{\lambda_i}= \ker(\widehat{h}-\lambda_i I) \ ; \quad \dim(V_{\lambda_i})=n-rg(A-\lambda_i I)
 	\end{equation}
 	donde $A$ es la matriz asociada a $\widehat{h}$. 
 	
@@ -201,22 +201,22 @@ Notemos que hasta ahora no hemos utilizado en absoluto que $h$ sea una homograf�
 
 Indaguemos un poco más para obtener las conclusiones del apartado anterior, es decir, que una homografía $h$ de $\proy^1$ distinta de la identidad tiene o dos puntos fijos distintos o uno doble. Para ello trabajemos con matrices.\\
 
-Sea $A$ la matriz asociada a la homografía $h$, que no es más que la matriz asociada a la aplicación lineal $\widehat{h}$, y $x$ un punto fijo de $h$. Entonces $\rho x=Ax$, con lo cual se obtiene el sistema $(A-\rho I)x=0$, que tiene solución no idénticamente nula si y solo si $\det(A-\rho I)=0$. Este determinante no es otro que el polinomio característico, cuyas raíces, $\rho$, son los autovalores de la aplicación lineal $\widehat{h}$. Dado que nos encontramos en $\proy^1$, la matriz $A$ será una matriz $2\times 2$, y por tanto el polinomio característico será un polinomio de segundo grado. Esto implica que tendrá dos soluciones distintas o una solución doble, siempre que el cuerpo sobre el que estemos trabajando se $\C$. Por tanto la aplicación lineal $\widehat{h}$ tendrá un autovalor o dos distintos. Evaluemos cada caso:
+Sea $A$ la matriz asociada a la homografía $h$, que no es más que la matriz asociada a la aplicación lineal $\widehat{h}$, y $x$ un punto fijo de $h$. Entonces $\rho x=Ax$, con lo cual se obtiene el sistema $(A-\rho I)x=0$, que tiene solución no idénticamente nula si y solo si $\det(A-\rho I)=0$. Este determinante no es otro que el polinomio característico, cuyas raíces, $\rho$, son los autovalores de la aplicación lineal $\widehat{h}$. Dado que nos encontramos en $\proy^1$, la matriz $A$ será una matriz $2\times 2$, y, por tanto, el polinomio característico será un polinomio de segundo grado. Esto implica que tendrá dos soluciones distintas o una solución doble, siempre que el cuerpo sobre el que estemos trabajando se $\C$. Consecuentemente, la aplicación lineal $\widehat{h}$ tendrá un autovalor o dos distintos. Evaluemos cada caso:
 \begin{enumerate}
-	\item Si $\widehat{h}$ tiene dos autovalores distintos, entonces $\dim(V_{\rho_i})=1$. Por tanto las variedades proyectivas $\proy(V_{\rho_1})$ y $\proy(V_{\rho_2})$ tienen dimensión cero, por lo que son puntos. Esto da lugar a dos puntos fijos distintos en la homografía. Además si escribimos la matriz $A$ en la base formada por estos dos autovectores obtendremos una matriz diagonal, como habíamos visto antes.
+	\item Si $\widehat{h}$ tiene dos autovalores distintos, entonces $\dim(V_{\rho_i})=1$. Por tanto, las variedades proyectivas $\proy(V_{\rho_1})$ y $\proy(V_{\rho_2})$ tienen dimensión cero, por lo que son puntos. Esto da lugar a dos puntos fijos distintos en la homografía. Además si escribimos la matriz $A$ en la base formada por estos dos autovectores obtendremos una matriz diagonal, como habíamos visto antes.
 	
 	\item Si $\widehat{h}$ tiene un solo autovalor $\rho$, en cuyo caso $\alpha_1=2$, en principio pueden darse dos casos.
 	\begin{itemize}
 		\item El caso en el que $\dim(V_{\rho})=2=d_1$ no es admisible, ya que hemos supuesto que $h$ es distinta de la identidad. Sin embargo, la aplicación $\widehat{h}$ con $\dim(V_{\rho})=2$ tiene como autovectores asociados a $\rho$ todo el espacio vectorial, por lo que todos los puntos de $\proy^1$ serían puntos fijos de $h$.
 		
-		\item Si $\dim(V_{\rho})=1=d_1$ entonces $\proy(V_{\rho})$ es un punto. En tal caso, la homografía $h$ tendrá un único punto fijo doble. Además, dado que $\alpha_1=2\not=d_1=1$, la matriz $A$ no es diagonalizable. Sin embargo, si admite forma canónica de Jordan. Por tanto, en cierta base, a la cual pertenece dicho autovector, la matriz $A$ se encuentra en su forma canónica de Jordan, como vimos anteriormente.
+		\item Si $\dim(V_{\rho})=1=d_1$ entonces $\proy(V_{\rho})$ es un punto. En tal caso, la homografía $h$ tendrá un único punto fijo doble. Además, dado que $\alpha_1=2\not=d_1=1$, la matriz $A$ no es diagonalizable. Sin embargo, sí admite forma canónica de Jordan. Por tanto, en cierta base, a la cual pertenece dicho autovector, la matriz $A$ se encuentra en su forma canónica de Jordan, como vimos anteriormente.
 	\end{itemize}
 \end{enumerate}
 Con todo ello podemos concluir que una homografía de $\proy^1$, distinta de la identidad, tiene dos puntos fijos distintos o un punto fijo doble. Si escribimos la matriz asociada a la homografía en la base dada por dichos puntos fijos obtendremos, en el primer caso, una matriz diagonal y, en el segundo, su forma canónica de Jordan. 
 \begin{obs}
 	Sea una homografía $h$ de $\proy^1$ y su aplicación lineal asociada $\widehat{h}$. Un punto $[v]$ de $\proy^1$ pertenece al centro de $h$ si y solo si es un autovector de $\widehat{h}$ con autovalor $0$.
 	
-	En efecto, que $[v]$ esté en el centro de $h$ equivale a que $v\in ker\widehat{h}$, es decir, que $\widehat{h}(v)=0=0\cdot v$.
+	En efecto, que $[v]$ esté en el centro de $h$ equivale a que $v\in \ker\widehat{h}$, es decir, que $\widehat{h}(v)=0=0\cdot v$.
 \end{obs}
 
 \section{Aplicaciones afines}
@@ -233,11 +233,11 @@ es decir, $c=0$, y con ello , como $d$ no puede ser cero,
 \begin{equation}
 	\theta'=\frac{a\theta+b}{d}=\alpha\theta+\beta
 \end{equation}
-donde $\alpha=a/d$ y $\beta=b/d$. Veamos cuales son sus puntos fijos.\\
+donde $\alpha=a/d$ y $\beta=b/d$. Veamos cuáles son sus puntos fijos.\\
 
 Siguiendo lo visto en el apartado anterior, debemos encontrar los autovalores de $A$ y sus autovectores asociados. Realizando unas sencillas cuentas se llega a que los autovalores son $a$ y $d$. Dado que hay dos autovalores distintos, la homografía $h$ tendrá dos puntos fijos. 
 
-Calculemos dos autovectores, $u_a$ y $u_d$ asociados a estos autovalores. Recordemos que, como $V_{\lambda}= Ker(\widehat{h}-\lambda I)$, si $u$ es un autovector con autovalor $\lambda$, entonces $u\in V_{\lambda}= Ker(\widehat{h}-\lambda I)$, y por tanto $(A-\lambda I)u=0$. Esto nos proporciona una forma de hallar los autovectores. En nuestro caso
+Calculemos dos autovectores, $u_a$ y $u_d$ asociados a estos autovalores. Recordemos que, como $V_{\lambda}= \ker(\widehat{h}-\lambda I)$, si $u$ es un autovector con autovalor $\lambda$, entonces $u\in V_{\lambda}= \ker(\widehat{h}-\lambda I)$, y, por tanto, $(A-\lambda I)u=0$. Esto nos proporciona una forma de hallar los autovectores. En nuestro caso
 \begin{equation*}
 	(A-a I)\left( \begin{array}{c}
 	x\\
@@ -270,11 +270,11 @@ Calculemos dos autovectores, $u_a$ y $u_d$ asociados a estos autovalores. Record
 	0
 \end{array}\right)\sii y=\frac{a-d}{b}x\ra u_b=(b,d-a)
 \end{equation*}
-Por tanto los dos puntos fijos de la homografía $h$ son $(1:0)$ y $(b/d:1-a/d)=(\beta:1-\alpha)$, cuyas coordenadas no homogéneas son $\infty$ y $\frac{\beta}{1-\alpha}$. 
+Por tanto, los dos puntos fijos de la homografía $h$ son $(1:0)$ y $(b/d:1-a/d)=(\beta:1-\alpha)$, cuyas coordenadas no homogéneas son $\infty$ y $\frac{\beta}{1-\alpha}$. 
 
-Dado que la ecuación $\theta'=\alpha\theta+\beta$ define una aplicación afín de la recta podemos concluir que \tb{las afinidades}, homografía con $c=0$, \tb{dejan fijo el infinito}. 
+Dado que la ecuación $\theta'=\alpha\theta+\beta$ define una aplicación afín de la recta podemos concluir que \tb{las afinidades}, homografías con $c=0$, \tb{dejan fijo el infinito}. 
 \begin{obs}
-	No se debe confundir esto con las elaciones. Mientras estás últimas tienen un punto fijo doble, que se puede identificar con el infinito en cierta referencia, las homografías con $c=0$ dejan fijo el infinito sea cual sea la referencia en la que nos encontramos. Es decir, si cambiamos de referencia seguirán teniendo como punto fijo el punto $(1:0)$ de dicha referencia.
+	No se deben confundir estas con las elaciones. Mientras las elaciones tienen un punto fijo doble, que se puede identificar con el infinito en cierta referencia, las homografías con $c=0$ dejan fijo el infinito sea cual sea la referencia en la que nos encontramos. Es decir, si cambiamos de referencia seguirán teniendo como punto fijo el punto $(1:0)$ de dicha referencia.
 \end{obs}
 Veamos el \tb{recíproco}, si una homografía de $\proy^1$ deja fijo el infinito, entonces es una aplicación afín. 
 
@@ -310,7 +310,7 @@ Por tanto, la matriz de la homografía, dado que $d\not=0$, es
 		0&1
 	\end{array}\right)
 \end{equation*}
-Si describimos la homografía que deja fijo el infinito a través de la transformación de moebius obtenemos que 
+Si describimos la homografía que deja fijo el infinito a través de la transformación de Möbius obtenemos que 
 \begin{equation*}
 	\theta'=\alpha\theta+\beta
 \end{equation*}
@@ -318,10 +318,10 @@ es decir, es una transformación afín de la recta.\\
 
 Estos dos resultados dan lugar al siguiente lema.
 \begin{lem}\label{C6_lem_infinito_p1_sii_afinidad}
-	Dada una homografía de $\proy^1$ y $\mf{R}=\{x_0,x_1;E\}$ una referencia arbitraria, entonces $h$ deja fijo el infinito, es decir deja fijo el punto $x_0$, si y solo si $c=0$, o equivalentemente, si y solo si es una afinidad.
+	Dada una homografía de $\proy^1$ y $\mf{R}=\{x_0,x_1;E\}$ una referencia arbitraria. Entonces $h$ deja fijo el infinito, es decir, deja fijo el punto $x_0$, si y solo si $c=0$, o equivalentemente, si y solo si es una afinidad.
 \end{lem}
 
-El calculo de los puntos fijos de la homografía de $\proy^1$ dada al principio de esta sección, aquella cuya matriz asociada es
+El cálculo de los puntos fijos de la homografía de $\proy^1$ dada al principio de esta sección, aquella cuya matriz asociada es
 \begin{equation*}
 	A=\left( \begin{array}{cc}
 		a&b\\
@@ -336,16 +336,16 @@ podría haberse hecho como se hizo en el primer apartado de este capítulo, cuan
 
 En tal caso, tendríamos que buscar las coordenadas no homogéneas $\theta$ que cumplen la ecuación
 \begin{equation*}
-	\theta=\alpha\theta-\beta
+	\theta=\alpha\theta+\beta
 \end{equation*}
 Sin embargo, esta ecuación, dado que es de primer orden, solo tiene una solución, pero sabemos que el $\infty$, es decir el $(1:0)$, es también punto fijo de $h$. Por tanto, debe cumplir también la ecuación. Si hacemos la comprobación con las coordenadas no homogéneas obtenemos que 
 \begin{equation*}
-	\infty=\alpha\infty-\beta=\infty
+	\infty=\alpha\infty+\beta=\infty
 \end{equation*}
-Sin embargo, personalmente, esta comprobación no me deja nada tranquila, dado que es un procedimiento falto de rigor. Por tanto, vamos a comprobarlo de nuevo con las coordenadas homogéneas. En tal caso tenemos la ecuación
+Sin embargo, personalmente, esta comprobación no me tranquiliza, dado que es un procedimiento falto de rigor. Por tanto, vamos a comprobarlo de nuevo con las coordenadas homogéneas. En tal caso tenemos la ecuación
 \begin{equation}
 	\label{C6_puntofijo_malcalculo}
-	\frac{x'}{y'}=\alpha\frac{x}{y}-\beta
+	\frac{x'}{y'}=\alpha\frac{x}{y}+\beta
 \end{equation}
 \begin{equation}
 	\label{C6_puntofijo_buencalculo}
@@ -357,7 +357,7 @@ Imponiendo que $(x,y)$ es punto fijo obtenemos
 \end{equation*}
 Una simple comprobación nos permite asegurar que el punto $(1:0)$ es punto fijo de $h$
 \begin{equation*}
-	1\cdot 0-\alpha 1\cdot 0+\beta0=0
+	1\cdot 0-\alpha\cdot 1\cdot 0+\beta\cdot 0=0
 \end{equation*}
 \begin{obs}
 	Si en vez imponer la condición de punto fijo, $(x,y)=(x',y')$, en la ecuación~\eqref{C6_puntofijo_buencalculo} lo hacemos en la ecuación~\eqref{C6_puntofijo_malcalculo} y luego multiplicamos por $y$, el punto $(1:0)$ solo es solución de la ecuación resultante si $\alpha=1$, cuando debería serlo para todo $\alpha$.
@@ -377,7 +377,7 @@ El lema~\ref{C6_lem_infinito_p1_sii_afinidad} se puede generalizar a una homogra
 	Sea $h$ una homografía de $\proy^n$ y $\mf{R}=\{x_0,\cdots,x_n;E\}$ una referencia arbitraria. El hiperplano $H$ dado por la ecuación implícita $x_n=0$ se denomina plano del infinito. Si $h$ deja invariante el plano del infinito entonces es una aplicación afín.
 \end{prop}
 \begin{obs}
-	Que una homografía deje invariante un hiperplano $H$ no significa que deje invariante cada punto del hiperplano, es decir que los puntos de $H$ sean puntos fijos, sino que la imagen de un punto de $H$ pertenece al hiperplano, pero no tiene porque ser el mismo punto.
+	Que una homografía deje invariante un hiperplano $H$ no significa que deje invariante cada punto del hiperplano, es decir, que los puntos de $H$ sean puntos fijos, sino que la imagen de un punto de $H$ pertenece al hiperplano, pero no tiene por qué ser el mismo punto.
 \end{obs}
 \begin{proof}
 	Sea $h:\proy^n\rightarrow \proy^n$ una homografía que deja invariante el plano $H$ dado por la ecuación $x_n=0$. La matriz asociada a dicha aplicación vendrá dada por
@@ -463,7 +463,7 @@ El lema~\ref{C6_lem_infinito_p1_sii_afinidad} se puede generalizar a una homogra
 			&0^t&&1
 		\end{array}\right)
 	\end{equation*}
-	Veamos cual es la expresión de una homografía de $\proy^n$ con esta matriz asociada. Dado un punto $p=(x_0:\cdots:x_{n-1}:x_n)\not\in H$, es decir, tal que $x_n\not=0$, podemos escribirlo como
+	Veamos cuál es la expresión de una homografía de $\proy^n$ con esta matriz asociada. Dado un punto $p=(x_0:\cdots:x_{n-1}:x_n)\not\in H$, es decir, tal que $x_n\not=0$, podemos escribirlo como
 	\begin{equation*}
 		p=(x_0:\cdots:x_{n-1}:x_n)=\left( \frac{x_0}{x_n}:\cdots:\frac{x_{n-1}}{x_n}:1\right) =(X_0:\cdots:X_{n-1}:1)=
 		\left( \begin{array}{c}
@@ -512,12 +512,12 @@ En esta sección introduciremos un tipo de homografías, llamadas involuciones, 
 \begin{defi}
 	Dada una homografía $h$ de $\proy^1$ se dice que es una \ti{involución} si $h^2=id$.
 \end{defi}
-Estudiemos como se caracterizan las involuciones y como describirlas.
+Estudiemos cómo se caracterizan las involuciones y cómo describirlas.
 \begin{lem}
 	Dada una homografía $h$ de $\proy^1$ distinta de la identidad. Existe un punto $P\in\proy^1$ tal que $h(P)\not=P$ y $h^2(P)=P$, si y solo si $h$ es una involución.
 \end{lem}
 \begin{proof}
-	Sea $h:\proy^1\rightarrow\proy^1$ una homografía, distinta de la identidad. Trivialmente, si $h$ es una involución entonces $h^2=id$, y por tanto para cualquier punto $P\in\proy^1$ tal que $h(P)\not=P$ se tiene que $h^2(P)=P$.\\
+	Sea $h:\proy^1\rightarrow\proy^1$ una homografía, distinta de la identidad. Trivialmente, si $h$ es una involución entonces $h^2=id$, y, por tanto, para cualquier punto $P\in\proy^1$ tal que $h(P)\not=P$ se tiene que $h^2(P)=P$.\\
 	
 	Hagamos pues la otra implicación.
 	
@@ -600,7 +600,7 @@ A lo largo de estas dos demostraciones hemos estado excluyendo los puntos fijos 
 	Si una involución tiene puntos fijos, entonces han de ser dos puntos distintos.
 \end{lem}
 \begin{proof}
-	Recordemos que si estamos en $\R$ una homografía puede no tener puntos fijos. Supongamos que la involución $h:\proy^1\rightarrow\proy^1$ sí tiene puntos fijo, cosa que siempre ocurre si $\K=\C$. Recordemos que si tomamos como referencia la formada por los puntos fijos, la matriz $A$ asociada a la involución es diagonal, en el caso de tener dos puntos fijos, o de la forma
+	Recordemos que si estamos en $\R$ una homografía puede no tener puntos fijos. Supongamos que la involución $h:\proy^1\rightarrow\proy^1$ sí tiene puntos fijos, cosa que siempre ocurre si $\K=\C$. Recordemos que si tomamos como referencia la formada por los puntos fijos, la matriz $A$ asociada a la involución es diagonal, en el caso de tener dos puntos fijos, o de la forma
 	\begin{equation*}
 		\left( \begin{array}{cc}
 			a&a\\
@@ -611,7 +611,7 @@ A lo largo de estas dos demostraciones hemos estado excluyendo los puntos fijos 
 	
 	También se puede llegar a la misma conclusión, que la matriz $A$ es necesariamente diagonal y con ello $h$ tiene dos puntos fijos, teniendo en cuenta que como $h^2=id$ entonces $A^2=\rho I$, con $\rho=\lambda^2$
 \end{proof}
-Por tanto las involuciones pertenecen al primer grupo de homografías tratadas en este capítulo. Trabajemos en $\C$. Recordemos que para las homografías con dos puntos fijos habíamos definido el módulo de la homografía. Hallemos el valor de $k$ para una involución $h$ a través de la razón doble en el siguiente lema.
+Por tanto, las involuciones pertenecen al primer grupo de homografías tratadas en este capítulo. Trabajemos en $\C$. Recordemos que para las homografías con dos puntos fijos habíamos definido el módulo de la homografía. Hallemos el valor de $k$ para una involución $h$ a través de la razón doble en el siguiente lema.
 \begin{lem}\label{C6:lem_modulo1_sii_involucion}
 	Dada una homografía $h$ de $\proy^1$, esta tiene dos puntos fijos con módulo $k=-1$ si y solo si $h$ es una involución.
 \end{lem}
@@ -655,7 +655,7 @@ Se deduce inmediatamente del lema anterior que si una homografía con dos puntos
 
 (Homografías como composición de involuciones)\\
 
-Por último, veremos como caracterizar las involuciones a partir de dos puntos.\\
+Por último, veremos cómo caracterizar las involuciones a partir de dos puntos.\\
 
 Dada una homografía de $\proy^1$ sabemos que esta queda determinada por tres puntos y sus respectivas imágenes, pues con ellos es posible determinar la transformación de Möbius que la caracteriza (o equivalentemente la matriz asociada). Sin embargo, para que una involución quede determinada basta con dos puntos, y sus imágenes, dado que la traza de su matriz es nula y, por tanto, hay un parámetro menos ($d=-a$).
 
@@ -664,7 +664,7 @@ Esto puede comprobarse, dados dos puntos, con coordenadas no homogéneas $\theta
 	\label{C6:eq_moebius_haces_ec2}
 	\theta'=\frac{a\theta+b}{c\theta -a}
 \end{equation}
-para determinar $a,b$ y $c$, y con ello la involución. Sin embargo, este procedimiento es muy tosco. Recordamos que la ecuación general de una involución viene dada por 
+para determinar $a,b$ y $c$, y, con ello, la involución. Sin embargo, este procedimiento es muy tosco. Recordamos que la ecuación general de una involución viene dada por 
 \begin{equation*}
 	\alpha\theta\theta'+\beta(\theta+\theta')+\delta=0
 \end{equation*}
@@ -701,7 +701,7 @@ Así, para determinar una involución a partir de dos puntos basta con realizar 
 	\begin{equation*}
 		-2\theta\theta'+(\theta+\theta')-2=0
 	\end{equation*}
-	Esta ecuación general nos permite hallar la transformación de möbius que caracteriza a la involución, dado que $\alpha=c, \ \beta=-a, \ \delta=-b$ y $d=-a$. Por tanto, la involución buscada queda determinada por
+	Esta ecuación general nos permite hallar la transformación de Möbius que caracteriza a la involución, dado que $\alpha=c, \ \beta=-a, \ \delta=-b$ y $d=-a$. Por tanto, la involución buscada queda determinada por
 	\begin{equation*}
 		\theta'=\frac{-\theta+2}{-2\theta+1}
 	\end{equation*}
@@ -726,14 +726,14 @@ Observemos que si $\theta$ y $\theta'$ son las soluciones de la ecuación anteri
 		S_2&:a_2\theta^2+2h_2\theta+b_2=0
 	\end{split}
 \end{equation}
-se define el \ti{haz de ecuaciones de segundo grado} asociado a $S_1$ y $S_2$ como el subespacio de dimensión 1 (?) generado por estos rayos
+se define el \ti{haz de ecuaciones de segundo grado} asociado a $S_1$ y $S_2$ como el subespacio de dimensión 1 generado por estos rayos
 \begin{equation}
 	S=S_1+\lambda S_2 \tq \lambda\in\proy^1
 \end{equation}
 \end{defi}
 Diremos que un par $(P,P')$ es solución de $S$ si, para cierto $\lambda$, sus coordenadas no homogéneas $\theta$ y $\theta'$ son las soluciones de la ecuación de segundo grado dada por $S_1+\lambda S_2$.
 
-Recordemos que estamos buscando como describir las involuciones a partir de ecuaciones de segundo grado. Para ello debemos encontrar una, o unas, ecuaciones de segundo grado cuyas soluciones coincidan con los pares de puntos de la involución.
+Recordemos que estamos buscando cómo describir las involuciones a partir de ecuaciones de segundo grado. Para ello debemos encontrar una, o unas, ecuaciones de segundo grado cuyas soluciones coincidan con los pares de puntos de la involución.
 
 Dado que las involuciones quedan caracterizadas por dos pares de puntos, lo suyo sería partir de dos pares de puntos, o equivalentemente de dos rayos de ecuaciones de segundo grado. De la misma forma, dado que no son necesarios más de dos pares de puntos para describir una involución, cabe pensar que con dos rayos de ecuaciones de segundo grado podemos conseguir todos los pares de la involución, quedando así descrita. Y estamos en lo cierto.
 \begin{prop}
@@ -752,7 +752,7 @@ Dado que las involuciones quedan caracterizadas por dos pares de puntos, lo suyo
 \begin{proof}
 	Debemos demostrar que  los pares de la involución $h$ coinciden con las soluciones de $S$. Para ello veamos primero que todos los pares de soluciones de $S$ son pares de $h$, es decir, son de la forma $(P,h(P))$. 
 	
-	Recordemos que las involuciones tienen dos puntos fijos $M,N$ y que el par $(P,h(P))$ está armonicamente separado del par $(M,N)$ (lema~\ref{C6:lem_modulo1_sii_involucion}). Por tanto, para ver que todas los pares soluciones de $S$ son pares de $h$ basta ver que todos ellos están armónicamente separados del par $(M,N)$, donde $M$ y $N$ son los puntos fijos de $h$.
+	Recordemos que las involuciones tienen dos puntos fijos $M,N$ y que el par $(P,h(P))$ está armónicamente separado del par $(M,N)$ (lema~\ref{C6:lem_modulo1_sii_involucion}). Por tanto, para ver que todas los pares soluciones de $S$ son pares de $h$ basta ver que todos ellos están armónicamente separados del par $(M,N)$, donde $M$ y $N$ son los puntos fijos de $h$.
 	
 	Sea pues $(\theta,\theta')$ un par solución de $S$ arbitrario, debemos probar que 
 	\begin{equation*}
@@ -792,7 +792,7 @@ Dado que las involuciones quedan caracterizadas por dos pares de puntos, lo suyo
 	
 	Falta ver que todos los pares de $h$ son soluciones de $S$. En realidad, esto ya lo hemos demostrado.
 	
-	En efecto, dado un punto arbitrario $P\in\proy^1$, cuya coordenada no homogénea es $\theta$ y cuya imagen por $h$ tiene coordenada no homogénea $\theta'$, podemos elegir $\lambda$ de tal forma que $\theta$ sea una de las soluciones de $S$. La otra solución de $S$ asociada a dicho $\lambda$ formará con $\theta$ un par $(\theta,\overline{\theta})$ solución de $S$. Por lo que acabamos de demostrar los pares soluciones de $S$ son pares de $h$, y por tanto $\overline{\theta}=\theta'$ y con ello el par $(\theta,\theta')$ de $h$ es solución de $S$.
+	En efecto, dado un punto arbitrario $P\in\proy^1$, cuya coordenada no homogénea es $\theta$ y cuya imagen por $h$ tiene coordenada no homogénea $\theta'$, podemos elegir $\lambda$ de tal forma que $\theta$ sea una de las soluciones de $S$. La otra solución de $S$ asociada a dicho $\lambda$ formará con $\theta$ un par $(\theta,\overline{\theta})$ solución de $S$. Por lo que acabamos de demostrar los pares soluciones de $S$ son pares de $h$, y, por tanto, $\overline{\theta}=\theta'$ y con ello el par $(\theta,\theta')$ de $h$ es solución de $S$.
 \end{proof}
 Por último, veamos el recíproco.
 \begin{prop}
@@ -834,7 +834,7 @@ Finalmente, y para cerrar este capítulo, veamos un ejemplo para afianzar este n
 	
 	Buscamos la ecuación del haz $S$ que tenga como solución $3$. Por tanto se cumple
 	\begin{equation*}
-		(3-1)(3+1)+\lambda 3(3-2)=0\sii \lambda=-\frac{8}{3}
+		(3-1)(3+1)+3(3-2)\lambda =0\sii \lambda=-\frac{8}{3}
 	\end{equation*}
 	que es el $\lambda_0$ que buscábamos. La ecuación $S_0$ del haz es
 	\begin{equation*}

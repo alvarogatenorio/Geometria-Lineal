@@ -1,5 +1,5 @@
 \chapter{Razón Doble}
-El objetivo de este capítulo es ver que, dadas dos rectas proyectivas $\proy(E)$ y $\proy(E')$, es decir con $\dim(E)=\dim(E')=2$,  existe una homografía que transforma cuatro puntos distintos cualesquiera de $\proy(E)$ en otros cuatro puntos distintos de $\proy(E')$. Esto nos llevará a la definición de razón doble y a estudiar sus características y propiedades.
+El objetivo de este capítulo es ver que, dadas dos rectas proyectivas $\proy(E)$ y $\proy(E')$, con $\dim(E)=\dim(E')=2$,  existe una homografía que transforma cuatro puntos distintos cualesquiera de $\proy(E)$ en otros cuatro puntos distintos de $\proy(E')$. Esto nos llevará a la definición de razón doble y a estudiar sus características y propiedades.
 
 \section{Definición}
 Empecemos tratando un caso más sencillo, tres puntos. Es fácil demostrar haciendo uso del álgebra lineal, como haremos a continuación, que, dadas dos rectas proyectivas, existe una única homografía que transforma tres puntos distintos cualesquiera en otros tres puntos distintos.
@@ -91,7 +91,7 @@ lo que denominábamos \ti{transformación de Möbius}.
 			0&=\frac{a2+b1}{c2 +d1}\ra 2a+b=0
 		\end{split}
 	\end{equation*}
-	Observamos que este sistema homogéneo es compatible indeterminado, no nos proporciona valores exactos de los coeficientes de la matriz sino que dependen de un parámetro. En geometría proyectiva, esto es suficiente para resolver el sistema debido a que, en este caso, nos vale tanto la matriz de la aplicación lineal como un múltiplo suyo. ES decir, en general, nos valen tanto las soluciones del sistema como un múltiplo suyo. Por tanto, en geometría proyectiva no necesitamos soluciones exactas, sino \tb{rayos de soluciones}. Es importante tener en cuenta que esto solo es posible cuando deshomogeneizamos el sistema, es decir, cuando trabajamos con $\theta$.
+	Observamos que este sistema homogéneo es compatible indeterminado, no nos proporciona valores exactos de los coeficientes de la matriz sino que dependen de un parámetro. En geometría proyectiva, esto es suficiente para resolver el sistema debido a que, en este caso, nos vale tanto la matriz de la aplicación lineal como un múltiplo suyo. Es decir, en general, nos valen tanto las soluciones del sistema como un múltiplo suyo. Por tanto, en geometría proyectiva no necesitamos soluciones exactas, sino \tb{rayos de soluciones}. Es importante tener en cuenta que esto solo es posible cuando deshomogeneizamos el sistema, es decir, cuando trabajamos con $\theta$.
 	
 	Así, si no tenemos un sistema determinado, $a=\lambda$ y con ello $c=-\lambda, \ b=-2\lambda$ y $d=-2\lambda$, siendo así la matriz
 	\begin{equation*}
@@ -152,7 +152,7 @@ Conviene entonces dar un nombre a dicho cociente.
 \begin{obs}
 	Dado que $\theta_i$ es el parámetro no homogéneo de $p_i$, el cálculo de la razón doble se puede hacer también usando coordenadas homogéneas. Si $p_i=(x_i,y_i)$, entonces, sustituyendo en la definición y operando
 	\begin{equation*}
-		\{p_1,p_2;p_3,p_4\}=\frac{\frac{x_3}{y_3}-\frac{x_1}{y_1}}{\frac{x_3}{y_3}-\frac{x_2}{y_2}}:\frac{\frac{x_4}{y_4}-\frac{x_1}{y_1}}{\frac{x_4}{y_4}-\frac{x_2}{y_2}}=\frac{(x_3y_1-x_1y_3)/y_1y_3}{x_3y_2-x_2y_3)/y_3y_2}:\frac{(x_4y_1-x_1y_4)/y_4y_1}{(x_4y_2-x_2y_4)/y_4y_2}
+		\{p_1,p_2;p_3,p_4\}=\frac{\frac{x_3}{y_3}-\frac{x_1}{y_1}}{\frac{x_3}{y_3}-\frac{x_2}{y_2}}:\frac{\frac{x_4}{y_4}-\frac{x_1}{y_1}}{\frac{x_4}{y_4}-\frac{x_2}{y_2}}=\frac{(x_3y_1-x_1y_3)/y_1y_3}{(x_3y_2-x_2y_3)/y_3y_2}:\frac{(x_4y_1-x_1y_4)/y_4y_1}{(x_4y_2-x_2y_4)/y_4y_2}
 	\end{equation*}
 	la razón doble se puede escribir como
 	\begin{equation}
@@ -196,9 +196,9 @@ Con esta definición el lema se traduce en que toda homografía de una recta pro
 	\end{equation*}
 \end{proof}
 \begin{obs}
-	Observamos que la razón doble está bien definida, es decir, que no depende de la referencia elegida. En efecto, dada otra referencia $\mf{R}'$ de la recta sabemos que existe una única homografía que trasforma la referencia inicial en $\mf{R}'$, y, por tanto, relaciona la coordenada $\theta$ respecto a la referencia inicial y la coordenada $\theta'$ respecto a $\mf{R}'$. Al ser una homografía de la recta en sí misma la razón doble de sus imágenes, razón doble respecto a $\mf{R}'$, es igual a la razón doble respecto a la referencia inicial.
+	Observamos que la razón doble está bien definida, es decir, que no depende de la referencia elegida. En efecto, dada otra referencia $\mf{R}'$ de la recta sabemos que existe una única homografía que trasforma la referencia inicial en $\mf{R}'$ y, por tanto, relaciona la coordenada $\theta$ respecto a la referencia inicial y la coordenada $\theta'$ respecto a $\mf{R}'$. Al ser una homografía de la recta en sí misma la razón doble de sus imágenes, razón doble respecto a $\mf{R}'$, es igual a la razón doble respecto a la referencia inicial.
 \end{obs}
-Hasta ahora hemos establecido varias relaciones entre las homografías y la razón doble. Hemos visto que, no solo las homografías de una recta proyectiva en sí misma que transforma cuatro puntos distintos cualesquiera en otros cuatro conserva la razón doble, sino todas las homografías de una recta proyectiva en sí misma. El recíproco de ambos también es cierto. Sin embargo, en vez de demostrarlo para este caso particular, generalicemos lo resultados a homografías de una recta proyectiva $\proy(E)$ a otra recta $\proy(E')$.
+Hasta ahora hemos establecido varias relaciones entre las homografías y la razón doble. Hemos visto que no solo las homografías de una recta proyectiva en sí misma que transforma cuatro puntos distintos cualesquiera en otros cuatro conserva la razón doble, sino todas las homografías de una recta proyectiva en sí misma. El recíproco de ambos también es cierto. Sin embargo, en vez de demostrarlo para este caso particular, generalicemos lo resultados a homografías de una recta proyectiva $\proy(E)$ a otra recta $\proy(E')$.
 
 \section{Propiedades}
 La razón doble ha sido descrita respecto a una referencia $\mf{R}$ arbitraria de la recta proyectiva, por lo que esta puede ser calculada respecto a cualquier referencia. Si dados cuatro puntos distintos $\{p_1,p_2,p_3,p_4\}$ de $\proy(E)$ tomamos como referencia de la recta $\mf{R}=\{p_1,p_2,p_3\}$, lo cual es posible al ser diferentes, entonces las coordenadas homogéneas de los cuatro puntos pasan a ser
@@ -253,7 +253,7 @@ Observemos que en la demostración hemos concluido que $h=g$. Esto nos permite r
 	
 	Sea $h:\proy(E)\rightarrow \proy(E')$ una homografía de rectas proyectivas y denotemos $h(a)=a'$, $h(b)=b'$, $h(c)=c'$. Es obvio que acabamos de construir la única homografía que transforma $a,b,c$ en $a',b',c'$. Tomando $d'=h(d)$, por el teorema anterior, se tiene que $\{a,b;c,d\}=\{a',b';c',d'\}$.\\
 	
-	Demostremos el recíproco. Dada $g:\proy(E)\rightarrow \proy(E')$ biyección que conserva la razón doble, denotamos $g(a)=a'$, $g(b)=b'$, $g(c)=c'$. Sea por otro lado $h:\proy(E)\rightarrow \proy(E')$ la única homografía de rectas que transforma $a,b,c$ en $a',b',c'$. Como $g$ conserva la razón doble, si denotamos $g(d)=d'$ se tiene que $\{a,b;c,d\}= \{g(a),g(b),g(c),g(d)\}=\{a',b';c',d'\}$. Por tanto, aplicando el teorema anterior esto implica que $h(d)=d'=g(d)$. Como $d$ es arbitrario, se tiene que $h=g$, con lo cual $g$ es homografía de rectas.
+	Demostremos el recíproco. Dada $g:\proy(E)\rightarrow \proy(E')$ biyección que conserva la razón doble, denotamos $g(a)=a'$, $g(b)=b'$, $g(c)=c'$. Sea, por otro lado, $h:\proy(E)\rightarrow \proy(E')$ la única homografía de rectas que transforma $a,b,c$ en $a',b',c'$. Como $g$ conserva la razón doble, si denotamos $g(d)=d'$ se tiene que $\{a,b;c,d\}= \{g(a),g(b),g(c),g(d)\}=\{a',b';c',d'\}$. Por tanto, aplicando el teorema anterior esto implica que $h(d)=d'=g(d)$. Como $d$ es arbitrario, se tiene que $h=g$, con lo cual $g$ es homografía de rectas.
 \end{proof}
 Como se puede observar en la demostración, la razón doble nos permite definir homografías. Veamos un ejemplo para que esto quede claro.
 \begin{exa}
@@ -265,7 +265,7 @@ Como se puede observar en la demostración, la razón doble nos permite definir 
 		&-1&\rightarrow &0
 		\end{array}
 	\end{equation*}
-	Se tiene que $h$ es la única homografía que lleva el $0$ al $\infty$, el $1$ al $-1$ y el $-1$ al $0$. Nótese que se puede enunciar el teorema anterior con las coordenadas no homogéneas de los puntos sin problema alguno. Por tanto podemos aplicar el corolario, según el cual $h$, al ser una homografía de rectas proyectivas, conserva la razón doble, es decir
+	Se tiene que $h$ es la única homografía que lleva el $0$ al $\infty$, el $1$ al $-1$ y el $-1$ al $0$. Nótese que se puede enunciar el teorema anterior con las coordenadas no homogéneas de los puntos sin problema alguno. Por tanto, podemos aplicar el corolario, según el cual $h$, al ser una homografía de rectas proyectivas, conserva la razón doble, es decir
 	\begin{equation*}
 		\{0,1;-1,\theta\}=\{h(0),h(1);h(-1),h(\theta)=\theta'\}=\{\infty,-1;0;\theta'\}
 	\end{equation*}
@@ -273,7 +273,7 @@ Como se puede observar en la demostración, la razón doble nos permite definir 
 	\begin{equation*}
 		\frac{0+1}{0-\theta}:\frac{0-\theta}{1-\theta}=\frac{\infty-0}{-1-0}:\frac{\infty-\theta'}{-1-\theta'}
 	\end{equation*}
-	Dado que $h$ es una homografía de $\proy^1$ en $\proy^1$, basta encontrar la transformación de möebius para describirla por completo, es decir la relación entre $\theta$ y $\theta'$. Para ello operamos y despejamos, obteniendo
+	Dado que $h$ es una homografía de $\proy^1$ en $\proy^1$, basta encontrar la transformación de möbius para describirla por completo, es decir, la relación entre $\theta$ y $\theta'$. Para ello operamos y despejamos, obteniendo
 	\begin{equation*}
 		\theta'=\frac{-\theta-1}{2\theta}
 	\end{equation*}
@@ -304,7 +304,7 @@ Dada la razón doble $\{\theta_1,\theta_2;\theta_3,\theta_4\}$, se tiene que:
 	\end{equation*}
 \end{itemize}
 Esto nos da las 24 reordenaciones posibles. Resulta entonces que si $\{\theta_1,\theta_2;\theta_3,\theta_4\}=\lambda$, los valores que aparecen al efectuar todas las permutaciones son 
-\[\rho,1-\lambda,\frac{1}{\lambda},1-\frac{1}{\lambda},\frac{1}{1-\lambda},\frac{\lambda}{1-\lambda}\]
+\[\lambda,1-\lambda,\frac{1}{\lambda},1-\frac{1}{\lambda},\frac{1}{1-\lambda},\frac{\lambda}{1-\lambda}\]
 \section{Cuaternas Armónicas}
 \begin{defi}[Cuaterna armónica]
 	Diremos que $p_1,p_2,p_3,p_4$ es una \ti{cuaterna armónica}, o que el par $p_1,p_2$ separa armónicamente al par $p_3,p_4$, si su razón doble es $-1$.
@@ -369,18 +369,18 @@ El recíproco también es cierto, como se muestra en la siguiente proposición.
 	\end{equation*}
 	Con ello obtenemos que
 	\[p_4=(1:-1:0)\]
-	Una vez hecho esto basta comprobar que la razón doble de $p_1,p_2p_3$ y $p_4$ es $-1$. Para ello haremos uso de resultados del apartado de cálculo de razones dobles, ya que de momento no hemos visto como calcular la razón doble de puntos que no pertenecen a una recta proyectiva, como es el caso.
+	Una vez hecho esto basta comprobar que la razón doble de $p_1,p_2p_3$ y $p_4$ es $-1$. Para ello haremos uso de resultados del apartado de cálculo de razones dobles, ya que de momento no hemos visto cómo calcular la razón doble de puntos que no pertenecen a una recta proyectiva, como es el caso.
 	
 	Entonces, como veremos más adelante
 	\begin{equation}
 		\{p_1,p_2;p_3,p_4\}=\{(1:0:0),(0:1:0);(1:1:0),(1:-1:0)\}=\{\infty,0;1,-1\}=-1
 	\end{equation}
 \end{proof}
-Dado que en esta construcción las rectas $p_1p_{arbitrario}$, $p_2p_{arbitrario}$ y $p_1p_{arbitrario1}$ y los puntos $p_{arbitrario}$ y $p_{arbitrario1}$ son arbitrarios, elijamos los que elijamos vamos a obtener siempre el mismo punto $p_4$. 
+dado que en esta construcción las rectas $p_1p_{arbitrario}$, $p_2p_{arbitrario}$ y $p_1p_{arbitrario1}$ y los puntos $p_{arbitrario}$ y $p_{arbitrario1}$ son arbitrarios, elijamos los que elijamos vamos a obtener siempre el mismo punto $p_4$. 
 
 El orden de la cuaterna armónica es relativamente importante ya que, aunque algunas permutaciones cambian su valor, las reordenaciones
 \begin{equation*}
-	\{p_2,p_1;p_4,p_3\} \quad , \quad \{p_3,p_4;p_1,p_2\}\quad , \quad \{p_2,p_1;p_3,p_4\}
+	\{p_2,p_1;p_4,p_3\}, \quad \{p_3,p_4;p_1,p_2\}, \quad \{p_2,p_1;p_3,p_4\}
 \end{equation*}
 siguen dando como resultado $-1$.
 
@@ -420,7 +420,7 @@ Sean una recta $r$ de $\proy^n$ y cuatro puntos proyectivos $A,B,C,D\in r$. Para
 	\[\{A,B;C,D\}=\{(1:0),(0:1);(2:1),(1:-1)\}\]
 	Ahora basta calcular la razón doble por el procedimiento que más nos guste o convenga. En cualquier caso obtenemos el resultado:
 	\[\{A,B;C,D\}=\{\infty,0;2,-1\}=\frac{\infty-2}{0-2}:\frac{\infty+1}{0+1}=-\frac{\frac{\infty}{2}}{\frac{\infty}{1}}=-\frac{\cancel{\infty}}{2\cancel{\infty}}=-\frac{1}{2}\]
-	Este procedimiento es extremadamente útil cuando la dimensión del espacio ambiente es muy grande, ya que, de un solo golpe reducirmos el número de componentes de $n$ a $2$.
+	Este procedimiento es extremadamente útil cuando la dimensión del espacio ambiente es muy grande ya que de un solo golpe reducirmos el número de componentes de $n$ a $2$.
 \end{exa}
 \subsubsection{Procedimiento de Proyecciones}
 Consideremos ahora una aplicación $h$ entre dos rectas $r$ y $r'$ de $\proy^2$ como la del ejemplo \ref{C4_exa_fabricaHomografias}, es claro que esta proyección es una homografía.
@@ -462,7 +462,7 @@ Así pues, definimos la razón doble de cuatro rectas concurrentes como la razó
 
 Dadas $4$ rectas proyectivas $r_1,r_2,r_3,r_4$ estando cada una de ellas definida por cierta ecuación implícita, se tiene que:
 \[r_i:a_ix+b_iy+c_iz=0\]
-Sabemos que el punto proyectivo del pual asociado a esa recta es el punto $(a_i:b_i:c_i)$.
+Sabemos que el punto proyectivo del dual asociado a esa recta es el punto $(a_i:b_i:c_i)$.
 
 De esta forma se tiene que:
 \[\{r_1,r_2;r_3,r_4\}=\{(a_1:b_1:c_1),(a_2:b_2:c_2);(a_3:b_3:c_3),(a_4:b_4:c_4)\}\]

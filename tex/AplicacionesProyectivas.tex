@@ -29,7 +29,7 @@ Antes de hacer algunas aclaraciones adicionales acerca de este primer problema q
 	Se denomina \ti{centro} de una aplicación $h$, dada la aplicación lineal asociada $\widehat{h}$ entre dos espacios lineales $\widehat{X}$ e $\widehat{Y}$, a la variedad proyectiva:
 	\[\mc{Z}:\equals{not.}\proy\left(\ker\left(\widehat{h}\right)\right)\]
 \end{defi}
-Tras este breve inciso sobre la notación, veamos que, en efecto, hemos resuelto el problema que se nos planteaba, es decir, hemos eliminado del dominio todos los rayos que no tenían imagen definida. Si hubiera algún rayo con imagen no definida, alguno de sus representantes debería pertenecer al núcleo de $\widehat{h}$ (y por tanto todos). Pero esto no es posible ya que el rayo engendrado por este representante estaría en el centro de $h$.
+Tras este breve inciso sobre la notación, veamos que, en efecto, hemos resuelto el problema que se nos planteaba, es decir, hemos eliminado del dominio todos los rayos que no tenían imagen definida. Si hubiera algún rayo con imagen no definida, alguno de sus representantes debería pertenecer al núcleo de $\widehat{h}$ (y, por tanto, todos). Pero esto no es posible ya que el rayo engendrado por este representante estaría en el centro de $h$.
 
 El segundo problema que planteaba nuestra definición era saber si está bien definida. En efecto, siempre que definamos una aplicación y los elementos de nuestro conjunto de salida no tengan una representación única, debemos comprobar que la imagen de la función es independiente del representante escogido. En este caso es un juego de niños:
 
@@ -74,12 +74,12 @@ Veamos con un ejemplo que ya, con lo poco que sabemos podemos demostrar cosillas
 	
 	Para ello usamos el lema \ref{C4_lem_inyectividadSobreyectividad}. Si una aplicación cumpliera las características de nuestra hipótesis, su aplicación lineal correspondiente partiría de un espacio vectorial de dimensión $2$ y tampoco sería inyectiva, siendo su núcleo un subespacio de dimensión $1$ y su imagen otro subespacio de dimensión $1$. Al proyectivizar nos que nuestra aplicación parte de un espacio proyectivo de dimensión $1$ (extrayendo el punto asociado al núcleo) y llega a un espacio proyectivo conformado por un único punto (el proyectivizado de la imagen de su aplicación lineal).
 \end{exa}
-Veamos ahora que, tanto la imagen como la imagen inversa de una variedad por una aplicación proyectiva es otra variedad.
+Veamos ahora que tanto la imagen como la imagen inversa de una variedad por una aplicación proyectiva es otra variedad.
 \begin{lem}[Preservación de Variedades]
 	\label{C4_lem_preservaVariedades}
-	Sea $h:X\setminus\mc{Z}$ una aplicación proyectiva se cumple que:
+	Sea $h:X\setminus\mc{Z}\rightarrow Y$ una aplicación proyectiva se cumple que:
 	\begin{enumerate}
-		\item Dada una variedad $W\subset X$, entonces $h(W\setminus\mc{Z})$ es una variedad de $Y$. Además: \[\pi^{-1}\left(h(W\setminus \mc{Z})\right)=\widehat{h}(\widehat{W})\]
+		\item Dada una variedad $W\subset X$, entonces $h(W\setminus\mc{Z})$ es una variedad de $Y$. Además, \[\pi^{-1}\left(h(W\setminus \mc{Z})\right)=\widehat{h}(\widehat{W})\]
 		\item Dada una variedad $W'\subset Y$, entonces $h^{-1}(W')\cup\mc{Z}$ es una variedad de $X$. Además: \[\pi^{-1}\left(h^{-1}(W')\cup\mc{Z}\right)=\widehat{h^{-1}}(\widehat{W'})\]
 	\end{enumerate}
 \end{lem}
@@ -107,12 +107,12 @@ Pasemos a comprobar cómo se comportan las aplicaciones proyectivas respecto de 
 	\[\begin{array}{c}X_1\setminus\mc{Z}_1 \stackrel{g}{\to} X_2\setminus\mc{Z}_2 \stackrel{f}{\to} X_3\\
 	\class{u} \mapsto g(\class{u})=\class{\widehat{g}(u)} \mapsto (f\circ g)(\class{u})=f(\class{\widehat{g}(u)})=\class{\widehat{f}(\widehat{g}(u))}=\class{(\widehat{f}\circ\widehat{g})(u)}
 	\end{array}\]
-	Además, nótese que $\widehat{\mc{Z}_1}\subset\ker(\widehat{f}\circ\widehat{g})$ y por ende $\widehat{g^{-1}}(\widehat{\mc{Z}_2})=\ker(\widehat{f}\circ\widehat{g})$. Esto quiere decir:
+	Además, nótese que $\widehat{\mc{Z}_1}\subset\ker(\widehat{f}\circ\widehat{g})$ y, por ende, $\widehat{g^{-1}}(\widehat{\mc{Z}_2})=\ker(\widehat{f}\circ\widehat{g})$. Esto quiere decir:
 	\[\mc{Z}=\proy(\widehat{g^{-1}}(\widehat{\mc{Z}_2}))\]
-	Por ende $\widehat{f}\circ \widehat{g}=0\sii \widehat{g}(\widehat{X_1})\subset\widehat{\mc{Z}_2}$.
+	Por tanto, $\widehat{f}\circ \widehat{g}=0\sii \widehat{g}(\widehat{X_1})\subset\widehat{\mc{Z}_2}$.
 \end{proof}
 
-Un resultado deseable, aunque para nada inmediato, es el de que podamos clasificar a las aplicaciones lineales que inducen cierta aplicación proyectiva por ser múltiplos entre si. Veamoslo:
+Un resultado deseable, aunque para nada inmediato, es el de que podamos clasificar a las aplicaciones lineales que inducen cierta aplicación proyectiva por ser múltiplos entre sí. Veámoslo:
 \begin{theo}[Lema de la Correspondencia]
 	\label{C4_teo_lemaCorrespondencia}
 	Dos aplicaciones lineales no nulas producen la misma aplicación proyectiva si y solo si son múltiplos la una de la otra.
@@ -228,7 +228,7 @@ Como diría Jack el Destripador, vayamos por partes:
 		\label{C4_eq_interseccionUnipuntual2}
 		\dim\engen{x,Z}=\dim(x)+\dim(Z)+\dim(x\cap Z)
 	\end{equation}
-	Como $\dim(x)=0$ (por ser un punto) y la dimensión de $\dim(x\cap Z)=-1$, ya que, por definición de proyección cónica $x\not\in Z$, y por tanto $x\cap Z=\emptyset$. Sustituyendo en \eqref{C4_eq_interseccionUnipuntual2} se obtiene:
+	Como $\dim(x)=0$ (por ser un punto) y la dimensión de $\dim(x\cap Z)=-1$, ya que, por definición de proyección cónica $x\not\in Z$, y, por tanto, $x\cap Z=\emptyset$. Sustituyendo en \eqref{C4_eq_interseccionUnipuntual2} se obtiene:
 	\begin{equation}
 		\label{C4_eq_interseccionUnipuntual3}
 		\dim\engen{x,Z}=\dim(Z)+1
@@ -267,7 +267,7 @@ La proposición \ref{C4_prop_interseccionUnipuntual} prueba que $h$ está bien d
 Una pequeña observación antes de probar que las proyecciones cónicas son, efectivamente, aplicaciones proyectivas, es que los espacios lineales asociados a $Z$ y a $Y$ son complementarios.
 \begin{obs}[Espacios Lineales Complementarios]
 	\label{C4_obs_espaciosComplementarios}
-	Como la intersección de las variades proyectivas $Z$ e $Y$ es el vacío, esta intersección tiene dimensión $-1$. Por ende, el espacio lineal asociado a esta intersección es el nulo. Es decir:
+	Como la intersección de las variedades proyectivas $Z$ e $Y$ es el vacío, esta intersección tiene dimensión $-1$. Por ende, el espacio lineal asociado a esta intersección es el nulo. Es decir:
 	\[Z\cap Y=\emptyset\sii\widehat{Z}\cap\widehat{Y}=\zset\]
 	Además, la suma de las dimensiones de $Z$ e $Y$ es la dimensión de $X$ menos $1$. Usando esto:
 	\begin{multline*}
@@ -302,7 +302,7 @@ Probemos ahora que las proyecciones cónicas son aplicaciones proyectivas. Y que
 \end{proof}
 La proposición \ref*{C4_prop_proyeccionVectorial} demuestra que las proyecciones cónicas en general son aplicaciones proyectivas, dando la aplicación lineal asociada (una proyección vectorial).
 
-Antes de finalizar la sección daremos una explicación del por qué del apellido ``cónicas'' de estas aplicaciones. Además, daremos dos ejemplos detallados para que el lector se familiarice con el tratamiento de estas aplicaciones, y que, además, constituye un gran repaso de capítulos anteriores. Por último propondremos un ejercicio al lector.
+Antes de finalizar la sección daremos una explicación del por qué del apellido ``cónicas'' de estas aplicaciones. Además, daremos dos ejemplos detallados para que el lector se familiarice con el tratamiento de estas aplicaciones, y que, además, constituye un gran repaso de capítulos anteriores. Por último, propondremos un ejercicio al lector.
 
 \begin{obs}[Cónicas]
 	\label{C4_obs_conicas}
@@ -370,7 +370,7 @@ Parece natural pensar que existe cierta relación entre los grupos lineal y proy
 \end{array}\]
 A cualquiera que haya estudiado teoría de grupos esto le pide a gritos que calculemos el kernel del homomorfismo y apliquemos el llamado \ti{Primer Teorema de Isomorfía}. Hagámoslo.
 
-El elemento unidad del grupo proyectivo es la aplicación identidad, que lleva cada punto a sí mismo, como es claro que la aplicación lineal identidad es la asociada a esta aplicación proyectiva, también lo serán todos sus múltiplos (y solo esos) (teorema \ref{C4_teo_lemaCorrespondencia}), con lo que queda calculado el kernel del homomorfismo, que es, por supuesto, un subgrupo normal de $\mathbf{GL}(\widehat{X})$.
+El elemento unidad del grupo proyectivo es la aplicación identidad, que lleva cada punto a sí mismo, como es claro que la aplicación lineal identidad es la asociada a esta aplicación proyectiva, también lo serán todos sus múltiplos (y solo esos, teorema \ref{C4_teo_lemaCorrespondencia} ), con lo que queda calculado el kernel del homomorfismo, que es, por supuesto, un subgrupo normal de $\mathbf{GL}(\widehat{X})$.
 
 A los múltiplos de la aplicación lineal identidad usualmente se les denomina \ti{homotecias lineales}. Denominaremos $H$ al conjunto de las homotecias lineales.
 
@@ -383,7 +383,7 @@ Sin embargo, podemos ir aún más allá. Consideremos el siguiente homomorfismo 
 \lambda\mapsto\lambda\mathrm{id}
 \end{array}\]
 
-Luego por el primer teorema de isomorfía se tiene que $\K^*$ es isomorfo a $H$ con lo que concluimos:
+Luego, por el primer teorema de isomorfía, se tiene que $\K^*$ es isomorfo a $H$ con lo que concluimos:
 \begin{equation}\mathbf{GP}(X)\cong\frac{\mathbf{GL}(\widehat{X})}{\K^*}\end{equation}
 \section{Aplicaciones Proyectivas y Matrices}
 Uno de los resultados más notables y relevantes del álgebra lineal es que una aplicación lineal queda totalmente determinada por la imagen de los vectores la base del espacio de partida. Tratemos de traducir esto al contexto de las aplicaciones proyectivas.
@@ -402,17 +402,17 @@ Asimismo conviene recordar qué relación había entre $M_{\mc{B}\mc{B}'}(h)$ y 
 \begin{equation}
 	M_{\overline{\mc{B}}\overline{\mc{B}'}}(h)=Q^{-1}M_{\mc{B}\mc{B}'}(h)P
 \end{equation}
-Donde $P^{-1}$ y $Q^{-1}$ son, respectivamente, las matrices de cambio de base de $\mc{B}$ a $\overline{\mc{B}}$ y de $\mc{B}'$ a $\overline{\mc{B}'}$. (Ver apéndice \ref{A1_cambioBase}).
+donde $P^{-1}$ y $Q^{-1}$ son, respectivamente, las matrices de cambio de base de $\mc{B}$ a $\overline{\mc{B}}$ y de $\mc{B}'$ a $\overline{\mc{B}'}$. (Ver apéndice \ref{A1_cambioBase}).
 \subsection{Matriz Asociada a una Aplicación Proyectiva}
 Sean dos espacios proyectivos $X$ e $Y$. Consideremos las referencias proyectivas $\mf{R}$ y $\mf{R}'$ asociadas a $X$ e $Y$ respectivamente. Definamos una aplicación proyectiva $h:X\setminus \mc{Z}\to Y$ arbitraria.
 
 Nuestro objetivo es, dadas las coordenadas homogéneas de cierto rayo $\class{w}\in X$ respecto de $\mf{R}$, obtener las coordenadas homogéneas $h(\class{w})\in Y$ respecto de $\mf{R}'$.
 
-Denotando por $W$ a la matriz columna cuyos coeficientes son las coordenadas homogéneas de $w$ respecto de $\mf{R}$ (únicas salvo múltiplos). Se cumple que:
+Denotando por $W$ a la matriz columna cuyos coeficientes son las coordenadas homogéneas de $w$ respecto de $\mf{R}$ (únicas salvo múltiplos) se cumple que
 \begin{equation}
 	h(\class{w})=\class{\widehat{h}(w)}\equiv\class{M_{\mc{B}\mc{B}'}(\widehat{h})W}
 \end{equation}
-Nótese que hemos cometido un abuso de notación ya que $M_{\mc{B}\mc{B}'}(\widehat{h})W$ es una matriz columna, sin embargo la consideramos como un vector para poder tomar el rayo engendrado por él.
+Nótese que hemos cometido un abuso de notación ya que $M_{\mc{B}\mc{B}'}(\widehat{h})W$ es una matriz columna. Sin embargo, la consideramos como un vector para poder tomar el rayo engendrado por él.
 
 Que no cunda la euforia, todavía tenemos un problema por subsanar, ya que al ser las bases asociadas a $\mf{R}$ y $\mf{R}'$ únicas salvo múltiplos nadie me impide coger la base $\lambda\mc{B}$ (para cierto escalar $\lambda$ no nulo) en lugar de la base $\mc{B}$.
 
@@ -447,14 +447,14 @@ Pongamos algunos ejemplos para asentar todo esto.
 	Denotando $\theta':=\frac{y_0}{y_1}$ y $\theta:=\frac{x_0}{x_1}$ nos queda:
 	\[\theta'=\frac{a\theta+c}{b\theta+d}\]
 	
-	Antes de que se nos lapide por blasfemos, nótese que, como es evidente, hay ideterminaciones. En efecto cuando la segunda componente homogénea de nuestro punto inicial es nula el valor $\theta$ no está definido. Cuando esto pasa, el valor $\theta'$ es:
+	Antes de que se nos lapide por blasfemos, nótese que, como es evidente, hay indeterminaciones. En efecto, cuando la segunda componente homogénea de nuestro punto inicial es nula el valor $\theta$ no está definido. Cuando esto pasa, el valor $\theta'$ es:
 	\[\theta'=\frac{ax_0}{bx_0}=\frac{a}{b}\]
-	Lo cual siempre está definido (salvo que $b$ sea nulo). Es por esto que a veces se toma el siguiente convenio notacional, que hace realidad el sueño de todo chaval. Asignamos a $\theta$ el símbolo $\infty$ y operamos de la siguiente manera tan intuitiva (y peligrosa):
+	lo cual siempre está definido (salvo que $b$ sea nulo). Es por esto que a veces se toma el siguiente convenio notacional, que hace realidad el sueño de todo chaval. Asignamos a $\theta$ el símbolo $\infty$ y operamos de la siguiente manera tan intuitiva (y peligrosa):
 	
 	\[\theta'=\frac{a\infty+c}{b\infty+d}=\frac{a\cancel{\infty}}{b\cancel{\infty}}=\frac{a}{b}\]
 	Aunque puede seguirse este convenio (y en ocasiones lo haremos), ante la duda, se recomienda pasar todo al terreno estable de las coordenadas homogéneas.
 	
-	Para no perder el contexto, nótese que ahora nuestro punto inicial $x$ queda totalmente determinado por $\theta$ (admitiendo que pueda tomar como valor el símbolo $\infty$ cuando la segunda coordenada homogénea sea $0$, ya que al fin y al cabo esto sólo pasa para un único rayo).
+	Para no perder el contexto, nótese que ahora nuestro punto inicial $x$ queda totalmente determinado por $\theta$ (admitiendo que pueda tomar como valor el símbolo $\infty$ cuando la segunda coordenada homogénea sea $0$, ya que, al fin y al cabo, esto sólo pasa para un único rayo).
 	
 	Asimismo, $h(x)$ queda totalmente determinado por el valor $\theta'$, asumiendo a su vez que puede tomar como valor $\infty$ cuando su segunda coordenada homogénea se anule. Usualmente cometeremos un abuso de notación escribiendo $h(\theta)=\theta'$.
 	

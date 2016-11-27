@@ -95,7 +95,7 @@ Esto implica que, si partimos de una cónica no degenerada con matriz $A$ es imp
 \end{defi}
 
 Esta definición de cónica degenerada no es muy manejable. Por ello, veamos la siguiente proposición
-\begin{prop}
+\begin{prop}\label{C8:prop_rango_menor_3_degenerada}
 	 Sea $C$ una cónica cuya matriz en cierta referencia es $A$. Si $rg(A)<3$ entonces $C$ es una cónica degenerada.
 \end{prop}
 
@@ -117,7 +117,7 @@ Esta definición de cónica degenerada no es muy manejable. Por ello, veamos la 
 
 A continuación veamos un teorema que nos da la expresión de una cónica degenerada.
 
-\begin{theo}
+\begin{theo}\label{C8:theo_conica_degenerada_es_producto_rectas}
 	Una cónica $C$ es degenerada si y solo si es producto de dos rectas. Es decir, es de la forma
 	\begin{equation}
 	C:l\cdot m=0 \quad o \quad C:l^2=0
@@ -145,12 +145,12 @@ A continuación veamos un teorema que nos da la expresión de una cónica degene
 
 Una vez demostrado este teorema podemos hacer una clasificación de las cónicas degeneradas atendiendo al rango de $A$. Para ello demostremos primero el siguiente lema.
 
-\begin{lem}
-	Se $C:l\cdot m=0$ una cónica degenerada con matriz $A$ simétrica. Entonces, el núcleo de $A$ es la intersección de las rectas $l$ y $m$.
+\begin{lem}\label{C8:lem_nucleo_interseccion_rectas}
+	Sea $C:l\cdot m=0$ una cónica degenerada con matriz $A$ simétrica. Entonces, el núcleo de $A$ es la intersección de las rectas $l$ y $m$.
 \end{lem}
 
 \begin{proof}
-	Veamos primero que $l\cap m\subset ker(A)$. 
+	Veamos primero que $l\cap m\subset \ker(A)$. 
 	
 	Sean las rectas $l$ y $m$ con ecuaciones implícitas
 	\begin{equation}
@@ -168,13 +168,13 @@ Una vez demostrado este teorema podemos hacer una clasificación de las cónicas
 	\begin{equation}
 	AY_0=(uv^t+vu^t)Y_0=uv^tY_0+vu^tY_0=0
 	\end{equation}
-	con lo que $y_0\in ker(A)$.
+	con lo que $y_0\in \ker(A)$.
 	
-	Veamos que $ker(A)\subset l\cap m$. Sea un punto del núcleo $[y_0]\in ker(A)$. Por lo visto en la demostración de la proposición PROP se tiene que, dado un punto cualquiera $[z_0]$ de la cónica distinto de $[y_0]$, la recta generada por ambos puntos está contenida en la cónica. Si la cónica es producto de dos rectas iguales ya hemos terminado, pues esa recta es precisamente la engendrada por $[z_0]$ e $[y_0]$. Sino, puedo coger otro punto $[w_0]$ de la cónica, que no pertenezca a la recta generada por $[z_0]$ e $[y_0]$. De nuevo, la recta generada por $[w_0]$ e $[y_0]$ está contenida en la cónica. Por tanto, $[y_0]$ pertenece a las dos rectas de la cónica, es decir, está en la intersección.
+	Veamos que $\ker(A)\subset l\cap m$. Sea un punto del núcleo $[y_0]\in \ker(A)$. Por lo visto en la demostración de la proposición~\ref{C8:prop_rango_menor_3_degenerada} se tiene que, dado un punto cualquiera $[z_0]$ de la cónica distinto de $[y_0]$, la recta generada por ambos puntos está contenida en la cónica. Si la cónica es producto de dos rectas iguales ya hemos terminado, pues esa recta es precisamente la engendrada por $[z_0]$ e $[y_0]$. Sino, puedo coger otro punto $[w_0]$ de la cónica, que no pertenezca a la recta generada por $[z_0]$ e $[y_0]$. De nuevo, la recta generada por $[w_0]$ e $[y_0]$ está contenida en la cónica. Por tanto, $[y_0]$ pertenece a las dos rectas de la cónica, es decir, está en la intersección.
 \end{proof}
 Este lema, junto con el teorema anterior, nos permiten clasificar las cónicas degeneradas. 
 
-Sabemos que una cónica degenerada es producto de dos rectas distintas o de dos iguales. En el primer caso la intersección se ambas rectas será un punto, con lo que el $ker(A)$ será un único punto. Esto implica que $rg(A)=2$. Por otro lado, si son dos rectas iguales, la intersección de ambas es la propia recta, luego el $ker(A)$ será una recta, y con ello $rg(A)=1$. Todas estas deducciones pueden hacerse en sentido inverso gracias al lema LEM.
+Sabemos que una cónica degenerada es producto de dos rectas distintas o de dos iguales. En el primer caso la intersección se ambas rectas será un punto, con lo que el $\ker(A)$ será un único punto. Esto implica que $rg(A)=2$. Por otro lado, si son dos rectas iguales, la intersección de ambas es la propia recta, luego el $\ker(A)$ será una recta, y con ello $rg(A)=1$. Todas estas deducciones pueden hacerse en sentido inverso gracias al lema~\ref{C8:lem_nucleo_interseccion_rectas}.
 
 Resumiendo, sea una cónica degenerada $C:l\cdot m=0$, entonces
 \begin{equation}
@@ -206,7 +206,7 @@ Veamos un ejemplo de como hallar la expresión de una cónica degenerada.
 	-1&1&0
 	\end{array}\right)
 	\end{equation}
-	Se trata de hacer con una cónica concreta lo explicado en la demostración del lema LEM. Si el núcleo de la matriz $A$ de la cónica es una recta, entonces la cónica es de la forma $l^2=0$ y la recta del núcleo es precisamente la recta $l$. Sino, como ocurre en este caso, dado un punto del núcleo de $A$, la recta generada por él y por otro punto distinto de la cónica está contenida en ella. Por tanto, si hallamos dos puntos pertenecientes a la cónica, distintos entre ellos y al núcleo de la matriz, podremos generar dos rectas distintas, que serán las rectas de $C$.
+	Se trata de hacer con una cónica concreta lo explicado en la demostración del lema~\ref{C8:lem_nucleo_interseccion_rectas}. Si el núcleo de la matriz $A$ de la cónica es una recta, entonces la cónica es de la forma $l^2=0$ y la recta del núcleo es precisamente la recta $l$. Sino, como ocurre en este caso, dado un punto del núcleo de $A$, la recta generada por él y por otro punto distinto de la cónica está contenida en ella. Por tanto, si hallamos dos puntos pertenecientes a la cónica, distintos entre ellos y al núcleo de la matriz, podremos generar dos rectas distintas, que serán las rectas de $C$.
 	
 	Buscamos pues el núcleo de la matriz $A$.
 	\begin{equation}

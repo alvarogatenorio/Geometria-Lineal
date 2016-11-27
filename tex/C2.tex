@@ -2,9 +2,9 @@
 \label{C2}
 El objetivo de capítulo es enunciar y justificar el llamado \ti{principio de dualidad}, tanto para espacios vectoriales como para espacios proyectivos.
 
-No debe alarmarse el lector al que no le quedaron claros los conceptos referentes al espacio dual en un primer curso de álgebra lineal, ya que la mayoría se vulve a explicar aquí con todo detalle.
+No debe alarmarse el lector al que no le quedaron claros los conceptos referentes al espacio dual en un primer curso de álgebra lineal, ya que la mayoría se vuelve a explicar aquí con todo detalle.
 
-Además, hemos evitado de uno de los conceptos que suele quedar menos claro, las ``bases duales''. No obstante, este es necesario para la demostración de algunos resultados complementarios incluídos en el apéndice \ref{A}, donde se revisitan las bases duales.
+Además, hemos evitado de uno de los conceptos que suele quedar menos claro, las ``bases duales''. No obstante, este es necesario para la demostración de algunos resultados complementarios incluidos en el apéndice \ref{A}, donde se revisitan las bases duales.
 \section{Dualidad en espacios vectoriales}
 \label{C2_dualidadVectoriales}
 Sea $E$ un espacio vectorial de dimensión finita. Llamábamos \ti{espacio dual} asociado a $E$ al conjunto de todas las aplicaciones lineales (homomorfismos de espacios vectoriales) que nacen en $E$ y mueren en $\K$. A estas aplicaciones lineales las denominamos \ti{formas lineales} o $1$--\ti{formas}.
@@ -14,20 +14,20 @@ Al espacio dual asociado a $E$ lo denotábamos por $E^*$. Expresado con una nota
 	\label{C2_eq_defDual}
 	E^*:\equals{def.}\{\alpha:E\rightarrow \K\tq \alpha \text{ es lineal }\}=\mathrm{Hom}(E,\K)
 \end{equation}
-Recordamos sin detenernos que el la palabra \ti{espacio} no le queda grande al conjunto $E^*$ ya que es un espacio vectorial, siendo su dimensión la dimensión de $E$.
+Recordamos sin detenernos que la palabra \ti{espacio} no le queda grande al conjunto $E^*$ ya que es un espacio vectorial, siendo su dimensión la dimensión de $E$.
 \subsection{Formas Lineales e Hiperplanos}
 En esta sección iniciaremos la construcción del puente entre un espacio vectorial y su dual, tratando de ``unir'' las variedades más notables de un espacio vectorial, los hiperplanos, con otras variedades de su dual.
  
 Antes de comenzar, fijemos una base $\mc{B}$ de $E$. Asimismo fijamos la base $\{1\}$ de $\K$.
 
-Es claro que una forma lineal $h\in E^*$, tiene por matriz asociada cierta matriz $1\times n$ (respecto de las base $\mc{B}$ y $\{1\}$), a esta matriz la  denotaremos símplemente $M$.
+Es claro que una forma lineal $h\in E^*$, tiene por matriz asociada cierta matriz $1\times n$ (respecto de las base $\mc{B}$ y $\{1\}$), a esta matriz la  denotaremos simplemente $M$.
 
 Como ya sabemos, para cada vector $u\in E$, el valor $h(u)$ viene dado por:
 \begin{equation}
 	\label{C2_eq_expMatricialFormaLineal}
 	h(u)=MX	
 \end{equation}
-Siendo $X$ la matriz columna compuesta por las coordenadas de $u$ en la base $\mc{B}$. Es decir, la expresión anterior \eqref{C2_eq_expMatricialFormaLineal} no es más que el producto de una matriz fila por una matriz columna, desarrollémoslo:
+siendo $X$ la matriz columna compuesta por las coordenadas de $u$ en la base $\mc{B}$. Es decir, la expresión anterior \eqref{C2_eq_expMatricialFormaLineal} no es más que el producto de una matriz fila por una matriz columna, desarrollémoslo:
 \begin{equation}
 	\label{C2_eq_expMatricialFormaLinealExpandida}
 	h(u)=\begin{pmatrix}
@@ -51,7 +51,7 @@ En el primer caso, estaríamos ante la aplicación lineal idénticamente nula. E
 
 Esto significa que $\ker(h)$ podrá ser representado mediante una única \ti{ecuación cartesiana}, ya que $\mathrm{codim}(\ker(h))=1$.
 
-La ecuación cartesiana del núcleo de una forma lineal salta a la vista, ya que se extrae de su propia definición. No es otra que:
+La ecuación cartesiana del núcleo de una forma lineal salta a la vista, ya que se extrae de su propia definición. No es otra que
 \begin{equation}
 	\label{C2_eq_ecuacionCartesianaKer}
 	h(e_1)u_1+\dots+h(e_n)u_n=0
@@ -61,7 +61,7 @@ Esto es evidente ya que esa es la definición del núcleo de $h$. El conjunto de
 
 Acabamos de probar que el núcleo de toda forma lineal no nula es un hiperplano de $E$. Es decir, hemos construido un puente entre un espacio vectorial y su dual, identificando cada elemento del dual con un hiperplano de espacio original.
 
-Sin embargo es un puente un tanto quebradizo, ya que solo podemos cruzarlo en una dirección (del dual al original), y, además, es posible que varios elementos del dual queden asociados al mismo hiperplano.
+Sin embargo es un puente un tanto quebradizo, ya que solo podemos cruzarlo en una dirección (del dual al original) y, además, es posible que varios elementos del dual queden asociados al mismo hiperplano.
 
 Para afianzar mejor este puente, veamos en primer lugar que podemos cruzarlo en el otro sentido, es decir, que todo hiperplano está asociado ``vía núcleos'' a un elemento del dual.
 
@@ -98,7 +98,7 @@ Por ende, ahora nos interesa encontrar relaciones entre las formas lineales con 
 
 \begin{lem}[Lema de la Correspondencia]
 	\label{C2_lem_correspondencia}
-	Todas las formas lineales asociadas a un mismo hiperplano $H$ son múltiplos entre si. En términos de aplicaciones:
+	Todas las formas lineales asociadas a un mismo hiperplano $H$ son múltiplos entre sí. En términos de aplicaciones:
 	\[\begin{array}{c}
 	\proy(E^*)\to\mc{H}\\
 	\class{h}\mapsto \ker(h)
@@ -156,19 +156,19 @@ Intentemos reeditar el lema de la correspondencia \ref{C2_lem_correspondencia} d
 \begin{lem}[Lema de la Correspondencia]
 	\label{C2_lem_correspondenciaAnulador}
 	Los subespacios de $E$ están en biyección con los subespacios de $E^*$ de la siguiente manera:
-	\[\begin{array}{c}
-	\mc{U}\stackrel{\Phi}{\to}\mc{U}^*\\
-	U\mapsto U^{\perp}
+	\[\begin{array}{cc}
+	\phi:& \mc{U}\rightarrow\mc{U}^*\\
+	&U\mapsto U^{\perp}
 	\end{array}\]
-	Donde $\mc{U}$ y $\mc{U}^*$ denotan el conjunto de los subespacios de $E$ y $E^*$ respectivamente.
-	Dicho de otra forma, cada subespacio puede puede identificarse con su anulador.
+	donde $\mc{U}$ y $\mc{U}^*$ denotan el conjunto de los subespacios de $E$ y $E^*$ respectivamente.
+	Dicho de otra forma, cada subespacio puede identificarse con su anulador.
 \end{lem}
 \begin{proof}
 	Para la sobreyectividad veamos que todo subespacio $W$ de dimensión $r$ de $E^*$ es el anulador de un cierto subespacio $U$.
 	
 	Para esto, trataremos de probar que el conjunto de vectores de $E$ que son anulados por todas las formas lineales de $W$ (imagen inversa de $\Phi$) es un subespacio vectorial de $E$. A este conjunto le denominaremos \ti{antianulador} o \ti{anulador dual}. Este nombre se debe a que el anulador de dicho conjunto (por definición) es $W$.
 	
-	Notamos que $W$ admitirá una cierta base compuesta de $r$ formas lineales. Esto tiene importancia, ya que, cada vector que sea anulado por todas las formas lineales de la base, también lo será, por linealidad, por todas las aplicaciones de $W$.
+	Notamos que $W$ admitirá una cierta base compuesta de $r$ formas lineales. Esto tiene importancia ya que cada vector que sea anulado por todas las formas lineales de la base, también lo será, por linealidad, por todas las aplicaciones de $W$.
 	
 	Dicho lo cual, tenemos que:
 	\[W=\lengen{f_1,\dots,f_r}\]
@@ -193,7 +193,7 @@ Intentemos reeditar el lema de la correspondencia \ref{C2_lem_correspondencia} d
 \end{proof}
 \begin{obs}[Dimensiones de los Dualizados]
 	\label{C2_obs_dim_anulador}
-	Obsérvese que hemos probado algo bastante importante (además de lo queríamos probar en un principio), y es que, las dimensiones de un subespacio y su anulador suman la dimensión del espacio total, es decir:
+	Obsérvese que hemos probado algo bastante importante (además de lo queríamos probar en un principio) y es que las dimensiones de un subespacio y su anulador suman la dimensión del espacio total, es decir:
 	\begin{equation}\label{C2_eq_dim_anulador}
 	\dim(U)+\dim(U^{\perp})=\dim(E)
 	\end{equation}
@@ -268,7 +268,7 @@ A la identificación de un subespacio con su anulador se la denomina \ti{dualida
 \subsection{Principio de Dualidad}
 \label{C2_principioDualidadLineal}
 
-Estamos en disposición de enunciar el llamado \ti{principio de dualidad}, un resultado de extrema importancia, ya que, por cada teorema que demostremos obtendremos otro sin necesidad de demostrarlo. A continuación trataremos de enunciar y justificar este principio de forma natural, con un ejemplo. Presentamos los siguientes enunciados:
+Estamos en disposición de enunciar el llamado \ti{principio de dualidad}, un resultado de extrema importancia ya que, por cada teorema que demostremos obtendremos otro sin necesidad de demostrarlo. A continuación trataremos de enunciar y justificar este principio de forma natural, con un ejemplo. Presentamos los siguientes enunciados:
 \begin{theo}
 	\label{C2_teo_principioDualidad1}
 	Sea un espacio vectorial de dimensión $3$ entonces:
@@ -299,7 +299,7 @@ Bien, tratemos de demostrar el teorema \ref{C2_teo_principioDualidad1}. (Recomen
 	\begin{equation*}
 		\dim((U^\perp\cap W^\perp))\stackrel{\mathrm{?}}{=}1
 	\end{equation*}
-	Donde, por la observación \ref{C2_obs_dim_anulador} tenemos que $\dim(U^\perp)=\dim(W^\perp)=2$.
+	donde, por la observación \ref{C2_obs_dim_anulador} tenemos que $\dim(U^\perp)=\dim(W^\perp)=2$.
 	
 	Además, como $\dim(U\cap W)=0$, se tiene que $\dim(U^\perp+W^\perp)=3$.
 	
@@ -314,7 +314,7 @@ Bien, tratemos de demostrar el teorema \ref{C2_teo_principioDualidad1}. (Recomen
 	En lo que respecta a la prueba del teorema, es un cálculo inmediato con la fórmula de Grassmann y se deja como ejercicio de cálculo mental al lector.
 \end{proof}
 
-Quizá este no sea el mejor ejemplo para apreciar la gran utilidad de este principio, ya que, las demostraciones de ambos teoremas son extraordinariamente sencillas. Sin embargo, pueden darse casos (y se derán a lo largo del texto) en los que la demostración de un teorema sea extraordinariamente sencilla en el caso dual y algo más engorrosa en el caso ``normal''.
+Quizá este no sea el mejor ejemplo para apreciar la gran utilidad de este principio, ya que, las demostraciones de ambos teoremas son extraordinariamente sencillas. Sin embargo, pueden darse casos (y se darán a lo largo del texto) en los que la demostración de un teorema sea extraordinariamente sencilla en el caso dual y algo más engorrosa en el caso ``normal''.
 
 Así pues, dado cierto aserto sobre espacios vectoriales compuesto en términos de sumas, intersecciones y contenidos puede traducirse a un \ti{aserto dual} equivalente gracias a las propiedades demostradas en la sección anterior.
 
@@ -337,14 +337,14 @@ Una vez repasados y ampliados los conceptos de dualidad en espacios lineales, pa
 
 Comenzamos este apartado recordando brevemente que un hiperplano vectorial no es otra cosa que un subespacio lineal de codimensión $1$. Asimismo, un hiperplano proyectivo $H$ no es más que el espacio proyectivo asociado a cierto hiperplano vectorial $\widehat{H}$. Es trivial observar que la dimensión de un hiperplano proyectivo es $\dim(\proy(E))-1$. Luego son variedades de codimensión $1$ respecto de la dimensión del espacion proyectivo total.\\
 
-Recordemos importante resultado obtenido en el lema \ref{C2_lem_correspondencia}, que afirma que todo hiperplano  vectorial $\widehat{H}$ está en biyección con las formas lineales cuyo núcleo es el propio $\widehat{H}$, las cuales conforman un rayo de $E^*$. Es decir, todo hiperplano está en biyección con un punto del espacio proyectivo dual.
+Recordemos un importante resultado obtenido en el lema \ref{C2_lem_correspondencia}, que afirma que todo hiperplano  vectorial $\widehat{H}$ está en biyección con las formas lineales cuyo núcleo es el propio $\widehat{H}$, las cuales conforman un rayo de $E^*$. Es decir, todo hiperplano está en biyección con un punto del espacio proyectivo dual.
 
 Tratamos ahora de fabricarnos un puente entre los hiperplanos proyectivos y alguna variedad del espacio proyectivo dual, a imagen y semejanza de lo hecho en secciones anteriores.
 
 Surge así el siguiente lema, casi idéntico al lema~\ref{C2_lem_correspondencia}.
 \begin{lem}[Lema de la Correspondencia Proyectiva]
 	\label{C2_lem_correspondenciaProy}
-	La aplicación $\psi=\pi\circ\varphi$ es biyectiva.
+	La aplicación $\psi=\pi\circ\varphi$, donde $\varphi=\Phi\circ \pi^{-1}$, es biyectiva.
 	\begin{equation*}
 		\xymatrix{
 			\mc{H} \ar[r]^{\pi^{-1}} \ar[rd]_{\varphi\equiv\Phi\circ\pi^{-1}} & \widehat{\mc{H}}\ar[d]^{\Phi\equiv\widehat{H}^{\perp}}\\
@@ -382,7 +382,7 @@ Recordemos que, dada una variedad lineal, esta estaba en biyección con su anula
 	\end{equation*}
 	Aclarando la notación, los conjuntos $\mc{V}$, $\widehat{\mc{V}}$, $\widehat{\mc{V}^*}$ y $\mc{V}^*$ denotan el conjunto de las variedades de $\proy(E)$, $E$, $E^*$ y $\proy(E^*)$ respectivamente.
 	
-	Así, dada una variedad proyectiva $\mc{X}$, se corresponde su su \ti{dualizada} $X^*=\psi(X)=\proy(\widehat{X}^\perp)$
+	Así, dada una variedad proyectiva $\mc{X}$, se corresponde con su \ti{dualizada} $X^*=\psi(X)=\proy(\widehat{X}^\perp)$
 \end{lem}
 \begin{proof}
 	Es idéntica a la del lema \ref{C2_lem_correspondenciaProy}.
@@ -412,11 +412,11 @@ Las propiedades que se desprendían del lema \ref{C2_lem_correspondencia} pueden
 \end{prop}
 \begin{proof}
 	\begin{enumerate}
-		\item Si $X\subset Y$, entonces $\hat{X}\subset\hat{Y}$. Por la proposición~\ref{C2_pro_propiedades_dualidad} tenemos que $\hat{Y}^{\perp}\subset \hat{X}^{\perp}$, y por tanto $Y^*\subset X^*$. Recíprocamente, basta leer la demostración al revés.
+		\item Si $X\subset Y$, entonces $\hat{X}\subset\hat{Y}$. Por la proposición~\ref{C2_pro_propiedades_dualidad} tenemos que $\hat{Y}^{\perp}\subset \hat{X}^{\perp}$, y, por tanto, $Y^*\subset X^*$. Recíprocamente, basta leer la demostración al revés.
 		
-		\item Por el lema~\ref{C1_lem_interseccionVariedades} se tiene que $X\cap Y=\proy(\hat{X}\cap\hat{Y})$. Por tanto $(X\cap Y)^*=\proy((\hat{X}\cap\hat{Y})^{\perp})$. Aplicando la proposición~\ref{C2_pro_propiedades_dualidad} se tiene que $\proy((\hat{X}\cap\hat{Y})^{\perp})=\proy(\hat{X}^{\perp}+\hat{Y}^{\perp})=\engen{X^*,Y^*}$.
+		\item Por el lema~\ref{C1_lem_interseccionVariedades} se tiene que $X\cap Y=\proy(\hat{X}\cap\hat{Y})$. Por tanto, $(X\cap Y)^*=\proy((\hat{X}\cap\hat{Y})^{\perp})$. Aplicando la proposición~\ref{C2_pro_propiedades_dualidad} se tiene que $\proy((\hat{X}\cap\hat{Y})^{\perp})=\proy(\hat{X}^{\perp}+\hat{Y}^{\perp})=\engen{X^*,Y^*}$.
 		
-		\item Se tiene que $\engen{X,Y}=\hat{X}+\hat{Y}$. Por tanto $\engen{X,Y}^*=\proy((\hat{X}+\hat{Y})^{\perp})$. Por la proposición~\ref{C2_pro_propiedades_dualidad} sabemos que $\proy((\hat{X}+\hat{Y})^{\perp})=\proy(\hat{X}^{\perp}\cap\hat{Y}^{\perp})$. Atendiendo de nuevo al lema~\ref{C1_lem_interseccionVariedades} queda que $\proy(\hat{X}^{\perp}\cap\hat{Y}^{\perp})=\proy(\hat{X}^{\perp})\cap\proy(\hat{Y}^{\perp})=X^*\cap Y^*$
+		\item Se tiene que $\engen{X,Y}=\hat{X}+\hat{Y}$. Por tanto, $\engen{X,Y}^*=\proy((\hat{X}+\hat{Y})^{\perp})$. Por la proposición~\ref{C2_pro_propiedades_dualidad} sabemos que $\proy((\hat{X}+\hat{Y})^{\perp})=\proy(\hat{X}^{\perp}\cap\hat{Y}^{\perp})$. Atendiendo de nuevo al lema~\ref{C1_lem_interseccionVariedades} queda que $\proy(\hat{X}^{\perp}\cap\hat{Y}^{\perp})=\proy(\hat{X}^{\perp})\cap\proy(\hat{Y}^{\perp})=X^*\cap Y^*$
 		
 		\item Se tiene inmediatamente:
 		\begin{equation*}
@@ -434,13 +434,13 @@ Las propiedades que se desprendían del lema \ref{C2_lem_correspondencia} pueden
 
 \subsection{Principio de Dualidad para espacios proyectivos}
 \label{C2_principioDualidadProyectiva}
-Llegados a este punto parece natural tratar de extrapolar el principio de dualidad presentado en la sección \ref{C2_principioDualidadLineal} al mundo proyectivo, ya que contamos con todos los indredientes necesarios.
+Llegados a este punto parece natural tratar de extrapolar el principio de dualidad presentado en la sección \ref{C2_principioDualidadLineal} al mundo proyectivo, ya que contamos con todos los ingredientes necesarios.
 
 La proposición \ref{C2_pro_propiedades_dualidad_proy} es de vital importancia ya que, literamente, es una ``fábrica de enunciados equivalentes''. Expliquemos esto.\\
 
 Supongamos que nos preguntamos por la dimensión de cierta variedad proyectiva de un espacio proyectivo de dimensión $n$. La proposición \ref{C2_pro_propiedades_dualidad_proy} (en su cuarto apartado) afirma que decir que cierta variedad $X$ tiene cierta dimesnión $r$ es equivalente a decir que su variedad dualizada $X^*$ tendrá dimensión $n-1-r$.
 
-Esto quiere decir que si una afirmación es cierta, la otra también lo será (y viceversa), cumpliendose algo similar si alguna de las dos afirmaciones es falsa. Por ende, con demostrar o refutar una de las dos afirmaciones (la que nos resulta más sencilla), habremos refutado o demostrado la otra. Esta es la esencia del principio de dualidad, tener dos teoremas al precio de uno (el más barato).\\
+Esto quiere decir que si una afirmación es cierta, la otra también lo será (y viceversa), cumpliéndose algo similar si alguna de las dos afirmaciones es falsa. Por ende, con demostrar o refutar una de las dos afirmaciones (la que nos resulta más sencilla), habremos refutado o demostrado la otra. Esta es la esencia del principio de dualidad, tener dos teoremas al precio de uno (el más barato).\\
 
 El otro ámbito de aplicación del principio de dualidad es cuando nos preguntamos si cierta variedad $X$ está contenida dentro de cierta otra variedad $Y$. En este caso, la proposición \ref{C2_pro_propiedades_dualidad_proy} (en su primer apartado) nos dice que afirmar que $X\subset Y$ es equivalente a afirmar que $Y^*\subset X^*$.
 
@@ -469,17 +469,17 @@ Todos estos puentes, identificaciones, y demás no serían de ninguna utilidad s
 		\begin{equation*}
 		\dim(\engen{p,r_1})=\dim(p)+\dim(r_1)-\dim(r_1\cap p)=0+1-(-1)=2
 		\end{equation*}
-		Podemos aplicar el corolario~\ref{C1_cor_rectaHiperplano} al plano $\engen{p,r_1}$ y la recta $r_2$, según el cual una recta y un hiperplano siempre se cortan. Antes, y para obtener el resultado deseado, debemos asegurarnos de que $r_2\not\subset\engen{p,r_1}$, pues en caso contrario existirían más de un punto de corte entre la recta y el hiperplano y $r$ no sería única. Es fácil comprobar que esto no ocurre, ya que si $r_2\subset\engen{p,r_1}$, entonces $r_1\cap r_2\not=\emptyset$, llegando así a un absurdo. Existirá por tanto un único punto $q\in r_2\cap\engen{p,r_1}$. Definimos entonces la recta $r$ como la variedad engendrada por los puntos $p$ y $q$, pudiéndose comprobar con la fórmula de las dimensiones que efectivamente es una recta. Nótese que $r$ es única, ya que lo es el punto $q$. Además $r_1\cap r\not=\emptyset$ y $r_2\cap r\not=\emptyset$, ya que $q\in r_2\cap\engen{p,r_1}$. Queda así demostrado el ejercicio.
+		Podemos aplicar el corolario~\ref{C1_cor_rectaHiperplano} al plano $\engen{p,r_1}$ y la recta $r_2$, según el cual una recta y un hiperplano siempre se cortan. Antes, y para obtener el resultado deseado, debemos asegurarnos de que $r_2\not\subset\engen{p,r_1}$, pues en caso contrario existirían más de un punto de corte entre la recta y el hiperplano y $r$ no sería única. Es fácil comprobar que esto no ocurre, ya que si $r_2\subset\engen{p,r_1}$, entonces $r_1\cap r_2\not=\emptyset$, llegando así a un absurdo. Existirá, por tanto, un único punto $q\in r_2\cap\engen{p,r_1}$. Definimos entonces la recta $r$ como la variedad engendrada por los puntos $p$ y $q$, pudiéndose comprobar con la fórmula de las dimensiones que efectivamente es una recta. Nótese que $r$ es única, ya que lo es el punto $q$. Además $r_1\cap r\not=\emptyset$ y $r_2\cap r\not=\emptyset$, ya que $q\in r_2\cap\engen{p,r_1}$. Queda así demostrado el ejercicio.
 		
 		\item Para empezar, y atendiendo a la proposición~\ref{C2_pro_propiedades_dualidad_proy}, la ecuación de las dimensiones que caracteriza la dualización es, en nuestro caso:
 		\begin{equation*}
 		\dim(X)+\dim(X^*)=2. 
 		\end{equation*}
-		Por tanto, el dual de un punto es un plano y el dual de una recta, otra recta. Tenemos entonces que $p^*$ es un plano y $r_1^*,r_2^*$ son rectas. Por otro lado que $p\in r$ implica, por la proposición~\ref{C2_pro_propiedades_dualidad_proy}, que $r^*\subset p^*$. De igual forma que $p\not\in r_1\cup r_2$ implica que $r_1^*\not\subset p^*$ y $r_2^*\not\subset p^*$. Además, se comprueba inmediatamente (dualizando y aplicando la fórmula de Grassmann) que como $r_1\cap r_2=\emptyset$, entonces $r_1^*\cap r_2^*=\emptyset$.
+		Por tanto, el dual de un punto es un plano y el dual de una recta, otra recta. Tenemos entonces que $p^*$ es un plano y $r_1^*,r_2^*$ son rectas. Por otro lado, que $p\in r$ implica, por la proposición~\ref{C2_pro_propiedades_dualidad_proy}, que $r^*\subset p^*$. De igual forma que $p\not\in r_1\cup r_2$ implica que $r_1^*\not\subset p^*$ y $r_2^*\not\subset p^*$. Además, se comprueba inmediatamente (dualizando y aplicando la fórmula de Grassmann) que como $r_1\cap r_2=\emptyset$, entonces $r_1^*\cap r_2^*=\emptyset$.
 		
-		Por tanto el enunciado del problema se traduce en, dadas dos rectas $r_1^*, r_2^*\in\proy^{3^*}$ y un plano $p^*\in\proy^{3^*}$ tales que $r_1^*\cap r_2^*=\emptyset$, $r_1^*\not\subset p^*$ y $r_2^*\not\subset p^*$; demostrar que existe una única recta $r^*$ tal que $r_1^*\cap r^*\not=\emptyset$, $r_2^*\cap r^*\not=\emptyset$ y $r^*\subset p^*$.
+		Por tanto, el enunciado del problema se traduce en, dadas dos rectas $r_1^*, r_2^*\in\proy^{3^*}$ y un plano $p^*\in\proy^{3^*}$ tales que $r_1^*\cap r_2^*=\emptyset$, $r_1^*\not\subset p^*$ y $r_2^*\not\subset p^*$; demostrar que existe una única recta $r^*$ tal que $r_1^*\cap r^*\not=\emptyset$, $r_2^*\cap r^*\not=\emptyset$ y $r^*\subset p^*$.
 		
-		Dado que las rectas $r_1^*, r_2$ no están contenidas en el plano $p^*$, cortarán con él en dos puntos únicos. Es claro que la recta engendrada por esos dos puntos es única y cumple las condiciones requeridas.
+		Dado que las rectas $r_1^*, r_2^*$ no están contenidas en el plano $p^*$, cortarán con él en dos puntos únicos. Es claro que la recta engendrada por esos dos puntos es única y cumple las condiciones requeridas.
 	\end{enumerate}
 	En este caso, la dualización del problema lo convierte en algo trivial de resolver.
 \end{exa}

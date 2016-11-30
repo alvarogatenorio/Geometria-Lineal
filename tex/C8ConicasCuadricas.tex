@@ -1,60 +1,292 @@
 \chapter{Cónicas y Cuádricas}
 \label{C8}
+A lo largo del capítulo $\ref{C2}$ estudiamos con detalle el conjunto de puntos que eran anulados por unas aplicaciones muy concretas, a las que llamamos \ti{formas lineales}.
+
+En este capítulo haremos algo parecido, dando un pequeño paso adelante, pues estudiaremos las interesantes propiedades del conjunto de ceros de las llamadas \ti{formas cuadráticas}.
+
 A no ser que establezcamos explícitamente lo contrario, a lo largo de este capítulo trabajaremos con el cuerpo de los números complejos y el plano proyectivo complejo $\proy(\C^3)=\proy^2$. 
 
 Esto es debido a que, como se verá inmediatamente, trabajaremos con polinomios, siendonos muy útil la posibilidad de aplicar el Teorema Fundamental del Álgebra.
 
-\section{Conceptos Previos. Definiciones}
-Definiremos el concepto de \ti{cuádrica} a partir del concepto de \ti{polinomio} en varias variables. Para lo cual necesitamos refrescar (o introducir, según el caso) algunos conceptos básicos a este respecto.
+\section{Conceptos Previos. Formas Bilineales y Cuadráticas}
+A lo largo de este capítulo estudiaremos las llamadas \ti{cuádricas}. Para poder definir de forma rigurosa este concepto, necesitamos recordar (o introducir) algunas nociones importantes más propias del álgebra lineal.
+\subsection{Formas Bilineales}
+Sea $E$ un espacio vectorial arbitrario de dimensión $n$. (Normalmente trabajaremos con $\C^n$).
+\begin{defi}[Forma Bilineal]
+	\label{C8_def_formaBilineal}
+	Llamamos \ti{formas bilineales} a las aplicaciones de la forma \[\begin{array}{cc}f:&E\times E\to\K\\
+	& (u,v)\mapsto f(u,v)\end{array}\]
+	Donde $f$ es ``lineal respecto de ambas componentes''. Es decir, dado un par $(u,v)\in E\times E$, se verifica:
+	\begin{enumerate}
+		\item Linealidad respecto de la primera componente: \[f(\alpha u_1,\beta u_2, v)=\alpha f(u_1,v)+\beta f(u_2,v)\]
+		\item Linealidad respecto de la segunda componente:
+		\[f(u,\alpha v_1 +\beta v_2)=\alpha f(u,v_1)+\beta f(u,v_2)\]
+	\end{enumerate}
+\end{defi}
+En este punto es fructífero recordar que una aplicación lineal queda totalmente determinada por las imágenes de los vectores de una base de su espacio vectorial de partida.
+
+Este resultado daba lugar a la idea caracterizar cada aplicación lineal $f$ por una matriz, a la que llamábamos \ti{matriz asociada a $f$}.
+
+Tratemos de trasladar esta idea al ámbito de las formas bilineales.
+\subsubsection{Matriz Asociada a una Forma Bilineal}
+Fijemos una base $\mc{B}:=\{e_1,\dots,e_n\}$ del espacio vectorial $E$.
+
+Veamos cuál es la imagen del par $(u,v)$ por una forma bilineal arbitraria $f$. Para ello, escribiremos los vectores $u$ y $v$ como combinación lineal de la base $\mc{B}$ y aplicaremos las propiedades de bilinealidad (definición \ref{C8_def_formaBilineal})
+\[f(u,v)=f\left(\sum_{i=1}^{n}a_ie_i,\sum_{j=1}^{n}b_je_j\right)=\sum_{i=1}^{n}a_i\left(\sum_{j=1}^{n}f(e_i,e_j)b_j\right)\]
+Podemos interpretar el interior del paréntesis como un producto de matrices (matriz fila por matriz columna). Haciendo esto obtenemos la siguiente expresión, más compacta (los corchetes son sólo notacionales).
+\[f(u,v)=\sum_{i=1}^{n}a_i\left[\begin{pmatrix}
+f(e_i, e_1) & 
+\cdots &
+f(e_i, e_n)
+\end{pmatrix}\begin{pmatrix}
+b_1 & \cdots & b_n
+\end{pmatrix}^t\right]\]
+Por comodidad notacional, a la matriz columna que representa las coordenadas de $v$ respecto de $\mc{B}$ será denotado por $Y$. Análogamente, llamaremos $X$ a la matriz columna que representará las coordenadas de $u$ respecto de $\mc{B}$.
+
+Con esta notación (y reordenando por conveniencia los corchetes) nos queda:
+\[f(u,v)=\left[\sum_{i=1}^{n}a_i\begin{pmatrix}
+f(e_i, e_1) & 
+\cdots &
+f(e_i, e_n)
+\end{pmatrix}\right]Y\]
+Como hicimos antes, podemos interpretar la suma anterior de manera matricial (las comprobaciones de dejan al lector)
+\[f(u,v)=\begin{pmatrix}
+a_1 & \cdots a_n
+\end{pmatrix}\begin{pmatrix}
+f(e_1, e_1) & \cdots & f(e_1,e_n)\\
+\vdots & \ddots & \vdots\\
+f(e_n,e_1) & \cdots & f(e_n,e_n)
+\end{pmatrix}Y\]
+Usando nuestras notaciones habituales y denotando por $M$ a la matriz cuadrada obtenemos:
+\begin{equation}
+\label{C8_eq_ecuacionMatricialBilineal}
+f(u,v)=X^tMY
+\end{equation}
+A la matriz $M$ de la ecuación \eqref{C8_eq_ecuacionMatricialBilineal} se la llama \ti{matriz asociada a la forma bilineal $f$}.
+
+Se ve inmediatamente por la ecuación \eqref{C8_eq_ecuacionMatricialBilineal} que si dos formas bilineales $f$ y $g$ tienen a $M$ por matriz asociada, estas son necesariamente la misma aplicación.
+
+Esto quiere decir que una forma bilineal $f$ queda totalmente determinada por su matriz asociada, es decir, por las imágenes de los pares de vectores $(e_i,e_j)$ donde $i,j\in\{1,\dots,n\}$.
+
+\begin{obs}[Lema de la Correspondencia]
+	Es claro que a lo largo de este proceso hemos probado que, \tb{fijada una base} $\mc{B}$ de $E$, toda forma bilineal $f$ está asociada a una única matriz $M$.
+	
+	Además, el recíproco también es cierto, fijada una base, toda matriz cuadrada es la asociada de una única forma bilineal.
+	
+	La prueba de este hecho consiste símplemente en definir una forma bilineal $f$ de manera que la imagen de un par de la forma $(e_i,e_j)$ se corresponda con el coeficiente $a_{ij}$ de la matriz dada. 
+\end{obs}
+\subsection{Formas Cuadráticas}
+Introducidos ya los aspectos generales de las formas bilineales, pasemos a definir la noción de \ti{forma cuadrática}.
+\begin{defi}[Forma Cuadrática]
+	Una aplicación $\Phi$ se dice \ti{forma cuadrática} si es de la forma:
+	\[\begin{array}{cc}
+	\Phi: & E\to \K\\
+	& x\mapsto f(x,x)
+	\end{array}\]
+	Donde $f$ es una forma bilineal.
+\end{defi}
+Es claro que las formas cuadráticas cumplen la siguiente ecuación matricial:
+\begin{equation}
+\label{C8_eq_ecuacionCuadraticas}
+	\Phi(x)=X^tMX
+\end{equation}
+Una propiedad agridulce de las formas cuadráticas es que pueden estar asociadas a varias formas bilineales, tal y como muestra el siguiente ejemplo.
+\begin{exa}[Varias Formas Bilineales Asociadas]
+	Sean las formas bilineales de matrices asociadas:
+	\[f\equiv\begin{pmatrix}
+	1 & 4\\
+	2 & 2
+	\end{pmatrix}\qquad g\equiv\begin{pmatrix}
+	1 & 3\\
+	3 & 2
+	\end{pmatrix}\]
+	Comprobemos que ambas formas bilineales tienen la misma forma cuadrática asociada.
+	\[\Phi_f(x)=\begin{pmatrix}
+	x_1 & x_2
+	\end{pmatrix}\begin{pmatrix}
+	1 & 4\\
+	2 & 2
+	\end{pmatrix}\begin{pmatrix}
+	x_1\\
+	x_2
+	\end{pmatrix}=x_1^2+6x_1x_2+2x_2^2\]
+	\[\Phi_g(x)=\begin{pmatrix}
+	x_1 & x_2
+	\end{pmatrix}\begin{pmatrix}
+	1 & 3\\
+	3 & 2
+	\end{pmatrix}\begin{pmatrix}
+	x_1\\
+	x_2
+	\end{pmatrix}=x_1^2+6x_1x_2+2x_2^2\]
+\end{exa}
+Decimos que esta propiedad es ``agridulce'', porque por una parte es más bonito que haya una correspondencia ``limpia'' entre formas bilineales y formas cuadrátricas. Sin embargo, las propiedades que vienen a continuación compensan con creces esto último. Antes de poder presentarlas, necesitamos una pequeña definición.
+\begin{defi}[Formas Bilineales Simétricas y Antisimétricas]
+	Decimos que una forma bilineal $f$ es \ti{simétrica} si su matriz asociada es simétrica. Análogamente, $f$ será \ti{antisimétrica} (o \ti{alternada}) si su matriz asociada es antisimétrica.
+\end{defi}
+\begin{lem}[Caracterización de las Formas Bilineales Simétricas]
+	$f$ es una forma bilineal simétrica si y solo si se verifica que \[f(x,y)=f(y,x)\]
+\end{lem}
+\begin{proof}
+	Si $f$ es una forma bilineal simétrica entonces \[f(x,y)=X^tMY=(X^tMY)^t=Y^tM^tX=Y^tMX=f(y,x)\]
+	Recíprocamente, si $f(x,y)=f(y,x)$ es claro que \[a_{ij}:=f(e_i,e_j)=f(e_j,e_i)=:a_{ji}\]
+	Que es la definición de ser una matriz simétrica.
+\end{proof}
+\begin{lem}[Formas Cuadráticas Idénticamente Nulas]
+	\label{C8_lem_antisimetricaNula}
+	Si $\Phi$ es una forma cuadrática asociada a una forma bilineal antisimétrica, entonces $\Phi$ es idénticamente nula.
+\end{lem}
+\begin{proof}
+	Por la ecuación \eqref{C8_eq_ecuacionCuadraticas} sabemos que:
+	\[\Phi(x)=X^tMX\in\K\]
+	Tenemos que tratar de aplicar en algún sitio que la matriz $M$ es antisimétrica, para lo cual, lo ideal es trasponer en angún lugar.
+	
+	Como $X^tMX$ es un simple número, coincide con su traspuesto, lo cual nos arroja:
+	\[\Phi(x)=X^tMX=(X^tMX)^t=X^tM^tX=-X^tMX=-\Phi(x)\]
+	Por ende, $2\Phi(x)=0$, de lo que se desprende que $\Phi(x)=0$ para cualquier $x\in E$.
+\end{proof}
+\begin{lem}
+	\label{C8_lem_descomposicion}
+	Sea $M$ una matriz cuadrada, admite una descomposición como suma de una matriz simétrica y otra antisimétrica.
+	\[M= M_s+M_a\]
+	Además
+	\[\begin{array}{cc}
+	M_s=\frac{1}{2}(M+M^t)\qquad &\qquad M_a=\frac{1}{2}(M-M^t)
+	\end{array}\]
+	En términos de formas bilineales; toda forma bilineal puede descomponerse como suma de una forma bilineal simétrica y una forma bilineal antisimétrica.
+\end{lem}
+\begin{proof}
+	Se deja como ejercicio al lector (es una comprobación trivial).
+\end{proof}
+\begin{obs}[Redundancia de la Parte Antisimétrica]
+	De los lemas \ref{C8_lem_antisimetricaNula} y \ref{C8_lem_descomposicion} se deduce que la parte antisimétrica de una forma bilineal asociada a una forma cuadrática sólo nos aporta ruido y confusión.
+	
+	En efecto, dada una forma cuadrática $\Phi$ tenemos que
+	\begin{multline}\Phi(x)=X^tMX=X^t(M_s+M_a)X=\\=(X^tM_s+X^tM_a)X=X^tM_sX+X^tM_aX=X^tM_sX\end{multline}
+	Esto constituye una fábrica de formas bilineales asociadas a una misma forma cuadrática.
+	
+	El hecho de que esto sea siquiera posible nos lleva a la idea de que sería recomendable deshacernos de esa dichosa parte antisimétrica (ya que es más inútil que un cubo de trapo).
+\end{obs}
+Si combinamos los lemas \ref{C8_lem_antisimetricaNula} y \ref{C8_lem_descomposicion} obtenemos que, tal y como nos asegura el siguiente resultado, una forma cuadrática está asociada a una única forma bilineal simétrica.
+\begin{prop}[Lema de la Correspondencia]
+	Dada una forma cuadrática $\Phi$, esta está asociada a una única forma bilineal simétrica $f_p$.
+	
+	A dicha forma bilineal se le llama ``\ti{forma polar}'' de $\Phi$.
+\end{prop}
+\begin{proof}
+	Es una comprobación inmediata ver que se cumple
+	\[\Phi(x+y)=f(x,y)+f(y,x)+\Phi(x)+\Phi(y)\]
+	Si $f$ es simétrica se cumple que
+	\[f(x,y)=\frac{1}{2}\left(\Phi(x+y)-\Phi(x)-\Phi(y)\right)\]
+	Por lo que no solo hemos demostrado la unicidad, sino que también hemos obtenido una expresión explícita de la misma.
+\end{proof}
+Si esta demostración le ha dejado frío al lector (porque ser un poco chapucera y poco intuitiva), que no se alarme, veremos una múcho más útil y elegante en secciones posteriores. (Ver lema \ref{C8_lem_Hessiana}).
+\subsubsection{Matriz Asociada a una Forma Cuadrática}
+Podemos definir (por decreto) el concepto de \ti{matriz asociada a una forma cuadrática} $\Phi$ como la matriz asociada a su forma polar.
+
+Pongamos un ejemplo (muy importante en nuestro contexto) para que estos conceptos se arraiguen más.
+\begin{exa}[Forma Cuadrática de Dimensión $3$]
+	\label{C8_exa_3forma}
+	Como sabemos, fijada una base, las formas cuadráticas verifican la ecuación matricial
+	\[\Phi(x,y,z)=X^tMX\]
+	donde consideramos que $M$ es la matriz (simétrica) asociada a la forma cuadrática. En el caso de estar en un espacio vectorial de tres dimensiones tendremos algo del estilo
+	\[\Phi(x)=\begin{pmatrix}
+	x & y & z
+	\end{pmatrix}\begin{pmatrix}
+	a & h & g\\
+	h & b & f\\
+	g & f & c
+	\end{pmatrix}\begin{pmatrix}
+	x\\
+	y\\
+	z
+	\end{pmatrix}\]
+	Si desarrollamos esto obtenemos la siguiente expresión (que nos será muy familiar de ahora en adelante)
+	\begin{equation}
+	\label{C8_eq_polinomio}
+	\Phi(x,y,z)=ax^2+by^2+cz^2+2fyz+2gzx+2hxy\end{equation}
+\end{exa}
+Veamos a continuación un sencillo truco memorístico que nos ayudará a obtener sin pensar la matriz asociada a una forma cuadrática sobre un espacio vectorial de dimensión $3$. 
+\begin{obs}[Regla Mnemotécnica]
+	Tengamos siempre en mente que una forma cuadrática de dimensión $3$ tendrá una expresión analítica como la de la ecuación \eqref{C8_eq_polinomio}.
+	
+	Lo primero que tenemos que tener en cuenta es que la matriz asociada es una matriz simétrica, por lo que únicamente tenemos que calcular el triángulo superior y la diagonal.
+	
+	En la diagonal de la matriz irán los coeficientes asociados a monomios con variables al cuadrado (por orden, $x^2$, $y^2$ y $z^2$ respectivamente).
+	
+	Para rellenar el triángulo superior (y por tanto el inferior, por simetría) basta con recorrer dicho triángulo desde su vértice inferior en sentido antihorario y colocar allí los coeficientes asociados a los monomios de variables $yz$, $xz$ y $xy$ respectivamente. (Ver ejemplo \ref{C8_exa_3forma}).
+	
+	Este truco tiene realmente poca importancia, ya que aprenderemos a calcular esta matriz una forma bastante mecánica. (Ver lema \ref{C8_lem_Hessiana}).
+\end{obs}
+\subsubsection{Formas Cuadráticas y Polinomios}
+Para finalizar, hagamos notar que la expresión analítica de una forma cuadrática sobre un espacio $n$--dimensional siempre será un polinomio en $n$ variables compuesto únicamente por monomios de grado $2$. Comencemos con algunas definiciones elementales.
 \begin{defi}[Monomio]
-	Una función $F:\C^n\to\C$ se denomina \ti{monomio} en $n$ variables si es de la forma:
-	\[F(x_1,\dots,x_n)=\alpha x_1^{\gamma_1}\dots x_n^{\gamma_n}\]
+	Se donomina \ti{monomio} a una función $f:E\to\K$ tal que, fijada una base $\mc{B}$ es de la forma
+	\begin{equation*}f(x)=f((x_1,\dots,x_n)_{\mc{B}})=ax_1^{\gamma_1}\dots x_n^{\gamma_n}\end{equation*}
+	donde $a\in\K$.
 \end{defi}
 \begin{defi}[Grado de un Monomio]
-	Se define el \ti{grado} de un monomio como la suma de los exponentes de cada una de las variables. Es decir:
+	Se define el grado de un monomio como la suma de los exponentes a los que el monomio eleva cada una de las variables. Con un lenguaje más formal, si tenemos el monomio dado por \[f(x_1,\dots,x_n)=ax_1^{\gamma_1}\dots x_n^{\gamma_n}\] entonces el grado de $f$ es
 	\[\sum_{i=1}^{n}\gamma_i\]
 \end{defi}
-Dadas estas dos definiciones estamos en disposición de definir lo que es un ``polinomio'' en varias variables.
 \begin{defi}[Polinomio]
-Una función $F:\C^n\to \C$ se dice \ti{polinomio} si, como su propio nombre (más o menos) indica, es una suma de monomios.
+	Como su propio nombre indica, un polinomio será algo que contenga muchos monomios, en concreto, un polinomio es una función $f:E\to\K$ de manera que, fijada una base, su expresión analítica es una suma de monomios.
 \end{defi}
-En el contexto de este capítulo nos interesarán los polinomios que son \tb{suma de monomios de grado dos}.
-
-A estos polinomios ``interesantes'' los llamaremos simplemente ``polinomios'' (cometiendo un gran abuso del lenguaje). Sin embargo de vez en cuando llamaremos la atención diciendo que los los polinomios a los que imponemos las ``restricciones habituales''.
-
+Es claro que toda forma cuadrática $\Phi:E\to\K$ cumple la ecuación matricial
+\[\Phi(x)=\begin{pmatrix}
+x_1 & \cdots & x_n
+\end{pmatrix}\begin{pmatrix}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{n1} & \cdots & a_{nn}
+\end{pmatrix}\begin{pmatrix}
+x_1\\
+\vdots\\
+x_n
+\end{pmatrix}\]
+Si desarrollamos los productos matriciales nos queda
+\begin{multline}\Phi(x)=\begin{pmatrix}
+a_{11}x_1 + \cdots + a_{n1}x_n\\
+\cdots\\
+a_{1n}x_1 + \cdots + a_{nn}x_n
+\end{pmatrix}^t\begin{pmatrix}
+x_1\\
+\vdots\\
+x_n
+\end{pmatrix}=\\=(a_{11}x_1 + \cdots + a_{n1}x_n)x_1+\dots+(a_{1n}x_1 + \cdots + a_{nn}x_n)x_n=\\=(a_{11}x_1^2 + \cdots + a_{n1}x_nx_1)+\dots +(a_{1n}x_1x_n + \cdots + a_{nn}x_n^2)\end{multline}
+Lo que es claramente una suma de monomios de grado dos. 
+\section{Definición y Propiedades Elementales}
 Ahora ya estamos en disposición de definir con todo rigor el concepto de ``cuádrica''.
 \begin{defi}[Cuádrica]
 	\label{C8_def_cuadrica}
-	Se llama \ti{cuádrica proyectiva} de $\proy(\C^n)$ (para $n\geq 3$) al cojunto de rayos de $\proy(\C^n)$ que anulan un polinomio en $n$ variables. Es decir, dado un polinomio $F$, la cuádrica $C$ asociada a $F$ es el conjunto de rayos que verifican:
-	\[F(x_1,\dots,x_n)=0\]
-	Para cualquier representante $(x_1,\dots,x_n)$ del rayo $\class{(x_1,\dots,x_n)}$.
+	Se llama \ti{cuádrica proyectiva} de $\proy(\K^n)$ (para $n\geq 3$) al cojunto de rayos de $\proy(\K^n)$ que se anulan al pasar forma cuadrática de $\K^n$.
+	
+	Es decir, dado una forma cuadrática $\Phi$, definimos la cuádrica $C$ asociada a $\Phi$ como el conjunto de rayos que verifican:
+	\[\Phi(x)=0\]
+	Para cualquier representante $x$ del rayo $\class{x}$.
 \end{defi}
-El lector atento estará pensando que nos estamos precipitando, ya que es posible que la definición \ref{C8_def_cuadrica} no sea ``buena''. Es decir, alguno podría concebir que un vector $(x_1,\dots,x_n)$ anulara al polinomio $F$, y sin embargo, alguno de sus múltiplos no lo hiciera. Sin embargo, esto no es posible. Veámoslo con detalle.
+El lector atento estará pensando que nos estamos precipitando, ya que es posible que la definición \ref{C8_def_cuadrica} no sea ``buena''. Es decir, alguno podría concebir que un vector $(x_1,\dots,x_n)$ anulara al polinomio $\Phi$, y sin embargo, alguno de sus múltiplos no lo hiciera. El siguiente resultado muestra que esto no es posible.
 \begin{lem}[Buena Definición]
-	Si el vector $(u_1,\dots,u_n)$ anula a un polinomio $F$, entonces cualquier múltiplo suyo (no nulo) también lo anula.
+	Si el vector $x$ es anulado por una forma cuadrática $\Phi$, entonces cualquier múltiplo suyo (no nulo) también se anulará.
 \end{lem}
 \begin{proof}
-	Tenemos que $F(u_1,\dots,u_n)=0$. Sea el vector $(\lambda u_1,\dots, \lambda u_n)$ para cierto $\lambda$ no nulo. Como el polinomio $F$ es una suma de monomios de la forma:
-	\[x_i^{\gamma_i}x_j^{\gamma_j}\tq\ \gamma_i+\gamma_j=2\]
-	Es claro que al evaluar el polinomio en el vector $(\lambda u_1,\dots, \lambda u_n)$ cada monomio quedará con la pinta:
-	\[\lambda^2u_i^{\gamma_i}u_j^{\gamma_j}\]
-	Por ende, sacando factor común a $\lambda^2$ el polinomio queda:
-	\[F(\lambda u_1,\dots, \lambda u_n)=\lambda^2F(u_1,\dots,u_n)=0\]
-	Como queríamos demostrar.
+	En efecto, si $\Phi(x)=0$, veamos que $\Phi(\lambda x)=0$. Usemos símplemente la definición de forma cuadrática y las propiedades de la bilinealidad.
+	\[\Phi(\lambda x)=f(\lambda x,\lambda x)=\lambda^2f(x,x)=\lambda^2\Phi(x)=0\]
+	Con lo que ya podemos dormir tranquilos, nuestra definición era buena.
 \end{proof}
-
-Definido ya el concepto de cuádrica, pasemos a ver con detalle un caso particular sobre que el que trabajaremos casi todo el tiempo, las llamadas ``cónicas''.
+\begin{obs}[Ecuación Matricial]
+	Normalmente diremos que, fijada una base $\mc{B}$ de $\K^n$, una cuádrica no es más que el conjunto de soluciones de la ecuación
+	\begin{equation}
+		\Phi(x)=X^tMX=0
+	\end{equation}
+	Donde $M$ representa la matriz de forma bilineal simétrica asociada a $\Phi$ respecto de la base $\mc{B}$.
+	
+	Si expandimos la expresión matricial nos queda la ecuación \eqref{C8_eq_polinomio}.
+\end{obs}
+Definido ya el concepto de cuádrica, vale la pena definir a parte un caso particular sobre que el que trabajaremos casi todo el tiempo, las llamadas ``cónicas''.
 \begin{defi}[Cónica]
-	Se llama \ti{cónica proyectiva} a una cuádrica proyectiva de $\proy(\C^3)$.
+	Se llama \ti{cónica proyectiva} a una cuádrica proyectiva de $\proy(\K^3)$.
 \end{defi}
-Conviene observar ahora qué pinta tienen los polinomios asociados a cónicas. Así, de paso fijamos notaciones.
-
-Un polinomio asociado a una cónica siempre puede escribirse de la forma:
-\begin{equation}
-	\label{C8_eq_polinomios1}
-	F(x,y,z)=ax^2+by^2+cz^2+2fyz+2gzx+2hxy=0
-\end{equation}
-La aparición de doses en los coeficientes del polinomio es una artimaña que siempre se puede hacer (por ser $\C$ un cuerpo) y que resultará útil en el futuro (para quitarnos fracciones de en medio). 
 \section{Clasificación de las Cónicas No Degeneradas}
 En esta sección se realizará una clasificación de las cónicas proyectivas en función de su número de puntos de corte con la recta del infinito, a la que denotaremos $l_\infty$.
 
@@ -112,7 +344,7 @@ Para que esta clasificación no resulte demasiado abstracta al lector, pongamos 
 	\end{array}\right\}\leadsto x^2=0\]
 	Teniendo en cuenta esto, los puntos que cumplen las restricciones impuestas por ambas ecuaciones son los de la forma $(0,\lambda,0)$ (los cuales, además, son solución doble). Estos generan un único rayo. Por ende, la cónica y la recta del infinito únicamente se cortan en un punto. Esto es lo mismo que decir que $C$ es una parábola.
 \end{exa}
-\section{Matriz de una Cónica}
+\section{Matriz de una Cuádrica}
 Vamos a reescribir de una forma especialmente cómoda el polinomio asociado a una cónica. No es necesario memorizar como un loro el proceso de transformación que realizaremos a continuación, ya que, en breve, encontraremos una forma más rápida y simple de hacerlo.
 \begin{multline}
 	F(x,y,z)=ax^2+by^2+cz^2+2fyz+2gxz+2hxy=\\
@@ -139,10 +371,6 @@ z
 De forma abreviada (abusando de notación) usualmente escribiremos:
 \[F(X)=X^tAX\]
 A la matriz $A$ se la denomina \ti{matriz de la cónica} asociada al polinomio $F$. No mucho más adelante (simplemente por comodidad) desarrollaremos el concepto de \ti{matriz de una cuádrica} en general.
-
-\begin{obs}[Regla Mnemotécnica]
-	Una regla mnemotécnica para acordarse de los coeficientes de esta matriz es símplemente notar que es una matriz simétrica en cuya diagonal están los coeficientes asociados a monomios con variables al cuadrado. Para rellenar el ``triángulo'' superior (y por tanto el inferior) basta con recorrer dicho triángulo desde su vétice inferior en sentido antihorario y colocar allí los coeficientes asociados a los monomios de variables $yz$, $xz$ y $xy$ respectivamente. Este truco tiene realmente poca importancia, ya que aprenderemos a calcular esta matriz una forma bastante mecánica.
-\end{obs}
 
 \begin{obs}[Matriz de una Cónica y Formas Bilineales]
 	\label{C8_obs_bilineal}
@@ -249,9 +477,13 @@ Otro de los motivos por los que la observación \ref{C8_obs_proporcionales} es d
 		
 		Por ende, $\mc{P}$ es isomorfo a $\C^\xi$. Como las cuádricas de $\C^n$ se confunden con $\proy(\mc{P})\cong\proy(\C^\xi)$, habitualmente se dirá que las cuádricas de $\C^n$ \ti{son} un $\proy(\C^\xi)$.
 	\end{obs}
-	Un resultado cuanto menos sorprendente, y bonito, que se desprende de forma inmediata de la observación \ref{C8_obs_dimension}, es que las cónicas del plano proyectivo complejo son un espacio proyectivo de dimensión $5$. En efecto:
-	\[\xi=\frac{3^2+3}{2}-1=5\]
-	No debemos olvidarnos de que queda pendiente la demostración de que cada cuádrica está asociada a un único rayo de polinomios.
+	\begin{obs}[Las cónicas \ti{son} un $\proy^5$]
+		Un resultado cuanto menos sorprendente, y bonito, que se desprende de forma inmediata de la observación \ref{C8_obs_dimension}, es que las cónicas del plano proyectivo complejo son un espacio proyectivo de dimensión $5$. En efecto:
+		\[\xi=\frac{3^2+3}{2}-1=5\]
+		No debemos olvidarnos de que queda pendiente la demostración de que cada cuádrica está asociada a un único rayo de polinomios.
+	\end{obs}
+Recapitulemos. A lo largo de esta sección hemos aprendido que todo rayo de polinomios está asociado a una cuádrica. Además, sabemos que ser un punto de una cúadrica $C$ significa verificar la ecuación matricial de dicha cuádrica. Es decir:
+\[x\in C\sii X^t\mathrm{Hess}(F)X=0\] 
 \section{Determinaciones de una Cónica}
 El objetivo de esta sección será demostrar que, bajo ciertas condiciones, cinco puntos del espacio proyectivo $\proy^2$ determinan unívocamente una cónica.
 \subsection{Cónicas como Producto de dos Rectas}

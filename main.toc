@@ -64,7 +64,7 @@
 \contentsline {subsection}{\numberline {6.1.2}Un punto fijo doble}{66}{subsection.6.1.2}
 \contentsline {section}{\numberline {6.2}Formas can\IeC {\'o}nicas de Jordan y puntos fijos}{67}{section.6.2}
 \contentsline {section}{\numberline {6.3}Aplicaciones afines}{69}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Aplicaciones afines y homograf\IeC {\'\i }as de $\mathbb {P}^n$}{70}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.1}Aplicaciones afines y homograf\IeC {\'\i }as de $\mathbb {P}^n$}{71}{subsection.6.3.1}
 \contentsline {section}{\numberline {6.4}Involuciones}{72}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Haz de ecuaciones de segundo grado}{76}{subsection.6.4.1}
 \contentsline {chapter}{\numberline {7}Perspectividades}{79}{chapter.7}
@@ -100,6 +100,6 @@
 \contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{99}{section*.16}
 \contentsline {section}{\numberline {A.3}Dualidad}{100}{section.Alph1.3}
 \contentsline {chapter}{\numberline {B}Mierdas varias}{102}{appendix.Alph2}
-\contentsline {section}{\numberline {B.1}C\IeC {\'o}nicas y cambio de referencia}{103}{section.Alph2.1}
+\contentsline {section}{\numberline {B.1}Cu\IeC {\'a}dricas, c\IeC {\'o}nicas y cambio de referencia}{103}{section.Alph2.1}
 \contentsline {section}{\numberline {B.2}C\IeC {\'o}nicas degeneradas}{104}{section.Alph2.2}
-\contentsline {section}{\numberline {B.3}Recta polar de un punto respecto de una c\IeC {\'o}nica}{106}{section.Alph2.3}
+\contentsline {section}{\numberline {B.3}Recta polar de un punto respecto de una c\IeC {\'o}nica}{107}{section.Alph2.3}

@@ -38,7 +38,7 @@ El teorema de Desargues nos da una condición necesaria y suficiente para que do
 	A'=\class{\vec{a'}} & B'=\class{\vec{b'}} & C'=\class{\vec{c'}} 
 	\end{array}\]
 	
-	Como los triángulos están en perspectiva, se tiene que los puntos $O,A,A'$ (distintos) están alineados, es decir, tienen representantes coplanarios, por ende, podremos escribir uno de estos representantes como combinación lineal de los otros. En este caso escribiremos:
+	Como los triángulos están en perspectiva, se tiene que los puntos $O,A,A'$ (distintos) están alineados, es decir, tienen representantes coplanarios. Por ende, podremos escribir uno de estos representantes como combinación lineal de los otros. En este caso escribiremos:
 	\[\vec{a'}=\lambda \vec{o}+\alpha\vec{a}\]
 	Como los puntos son distintos, es claro que $\vec{a'}$ no se podrá escribir como múltiplo de un solo representante, esto significa que ambos coeficientes de la combinación lineal son no nulos, luego, dividiendo por $\lambda$ y renombrando (cometiendo cierto abuso de notación) al representante y a las variables obtenemos que:
 	\[\vec{a'}=\vec{o}+\alpha\vec{a}\]
@@ -60,17 +60,19 @@ El teorema de Desargues nos da una condición necesaria y suficiente para que do
 	
 	Recíprocamente, los dioses nos reservan un pequeño presente, que hará valer, aún más si cabe, nuestros conocimientos acerca de dualidad. Resulta que, como ya adelantamos, el teorema de Desargues es un teorema \ti{autodual}. Esto quiere decir que, como ya sabemos, podemos optar por, en lugar de demostrar la otra implicación ``a pelo'', demostrar su dual. Sin embargo, resulta que al dualizar el enunciado de esta segunda implicación, obtenemos el enunciado de la primera (ya demostrada), por lo cual, acabamos de reducir un problema de complejidad desconocida, a una simple trivialidad. Es por esto que se suele decir que el recíproco del teorema de desargues es obvio por dualidad.
 	
+	(yo quizá escribiría el enunciado dual)
+	
 	La comprobación de que esto es así es un sencillo ejercicio para el cual se recomienda refrescar la sección \ref{C2_principioDualidadProyectiva}.
 \end{proof}
 Nótese que en la demostración de la primera implicación del teorema no se ha usado para nada la hipótesis de que los puntos se encuentren en el plano proyectivo, esto nos hace ver que dicho fragmento del teorema es válido para dimensión arbitraria (finita). Sin embargo, recordemos que a la hora de comprobar que, efectivamente, el dual del enunciado de la segunda implicación era el enunciado de la primera, esta hipótesis nos fue crucial.
 
-Aunque la demostración que hemos visto del teorema de Desargues no es especialmente enrevesada ni difícil, quizá si peque de no ser muy intuitiva y de tener cierta componente de idea feliz, es por esto que veremos otras dos demostraciones del mismo teorema al final del capítulo.
+Aunque la demostración que hemos visto del teorema de Desargues no es especialmente enrevesada ni difícil, quizá si puede no ser muy intuitiva y de tener cierta componente de idea feliz, es por esto que veremos otras dos demostraciones del mismo teorema al final del capítulo.
 \section{Perspectividades}
 \label{C7_Perspectividades}
 Comencemos ya con la parte central del capítulo, el estudio de las \ti{perspectividades}. Comencemos por la definición.
 \begin{defi}[Perspectividad]
 	\label{C7_defi_perspectividad}
-	Una homografía $h:l\to l'$, donde $l$ y $l'$ son rectas distintas de $\proy^2$ se dice \ti{perspectividad} si es la restricción a $l$ de la proyección cónica de centro $O(\not\in l\cup l')$ en $l'$. es decir:
+	Una homografía $h:l\to l'$, donde $l$ y $l'$ son rectas distintas de $\proy^2$ se dice \ti{perspectividad} si es la restricción a $l$ es la proyección cónica de centro $O(\not\in l\cup l')$ en $l'$. Es decir:
 	\[\left.\begin{array}{ccc}\proy^2\setminus{O}&\stackrel{\pi_O}{\to}&l'\\p& \mapsto & Op\cap l'\end{array}\right\}\leadsto h\equiv \pi_O|l\]
 \end{defi}
 Obsérvese que con la definición \ref{C7_defi_perspectividad} no hemos hecho más que revisitar el viejo ejemplo \ref{C4_exa_fabricaHomografias}.

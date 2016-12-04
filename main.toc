@@ -93,18 +93,23 @@
 \contentsline {subsection}{\numberline {8.3.3}Teorema de Determinaci\IeC {\'o}n}{97}{subsection.8.3.3}
 \contentsline {section}{\numberline {8.4}Clasificaci\IeC {\'o}n de las C\IeC {\'o}nicas No Degeneradas}{97}{section.8.4}
 \contentsline {section}{\numberline {8.5}Deshomogeneizaciones de una C\IeC {\'o}nica}{98}{section.8.5}
-\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{99}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{99}{section.Alph1.1}
-\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{100}{subsection.Alph1.1.1}
-\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{101}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{101}{subsection.Alph1.2.1}
-\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{101}{section*.15}
-\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{102}{section*.16}
-\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{102}{section*.17}
-\contentsline {paragraph}{Observaciones}{102}{section*.18}
-\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{102}{section*.19}
-\contentsline {section}{\numberline {A.3}Dualidad}{103}{section.Alph1.3}
-\contentsline {chapter}{\numberline {B}Mierdas varias}{105}{appendix.Alph2}
-\contentsline {section}{\numberline {B.1}Cu\IeC {\'a}dricas, c\IeC {\'o}nicas y cambio de referencia}{106}{section.Alph2.1}
-\contentsline {section}{\numberline {B.2}C\IeC {\'o}nicas degeneradas}{107}{section.Alph2.2}
-\contentsline {section}{\numberline {B.3}Recta polar de un punto respecto de una c\IeC {\'o}nica}{110}{section.Alph2.3}
+\contentsline {section}{\numberline {8.6}Cu\IeC {\'a}dricas, c\IeC {\'o}nicas y cambio de referencia}{98}{section.8.6}
+\contentsline {section}{\numberline {8.7}C\IeC {\'o}nicas degeneradas}{99}{section.8.7}
+\contentsline {section}{\numberline {8.8}Recta polar de un punto respecto de una c\IeC {\'o}nica}{102}{section.8.8}
+\contentsline {section}{\numberline {8.9}Parametrizaci\IeC {\'o}n de c\IeC {\'o}nicas}{105}{section.8.9}
+\contentsline {subsection}{\numberline {8.9.1}Parametrizaci\IeC {\'o}n de c\IeC {\'o}nicas como par\IeC {\'a}bolas}{105}{subsection.8.9.1}
+\contentsline {subsection}{\numberline {8.9.2}Parametrizaci\IeC {\'o}n de c\IeC {\'o}nicas y polinomios}{108}{subsection.8.9.2}
+\contentsline {subsection}{\numberline {8.9.3}Otras parametrizaciones}{109}{subsection.8.9.3}
+\contentsline {subsection}{\numberline {8.9.4}Teorema de Steiner}{109}{subsection.8.9.4}
+\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{111}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{111}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{112}{subsection.Alph1.1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{113}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{113}{subsection.Alph1.2.1}
+\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{113}{section*.15}
+\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{114}{section*.16}
+\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{114}{section*.17}
+\contentsline {paragraph}{Observaciones}{114}{section*.18}
+\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{114}{section*.19}
+\contentsline {section}{\numberline {A.3}Dualidad}{115}{section.Alph1.3}
+\contentsline {chapter}{\numberline {B}Mierdas varias}{117}{appendix.Alph2}

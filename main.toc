@@ -84,6 +84,7 @@
 \contentsline {subsubsection}{Estructura Vectorial de las Formas Cuadr\IeC {\'a}ticas}{90}{section*.11}
 \contentsline {section}{\numberline {8.2}Cu\IeC {\'a}dricas y Matrices}{91}{section.8.2}
 \contentsline {subsection}{\numberline {8.2.1}Cu\IeC {\'a}dricas y $\mathbb {P}^\xi $}{93}{subsection.8.2.1}
+<<<<<<< Updated upstream
 \contentsline {section}{\numberline {8.3}Clasificaci\IeC {\'o}n de las C\IeC {\'o}nicas No Degeneradas}{94}{section.8.3}
 \contentsline {section}{\numberline {8.4}Determinaciones de una C\IeC {\'o}nica}{95}{section.8.4}
 \contentsline {subsection}{\numberline {8.4.1}C\IeC {\'o}nicas como Producto de dos Rectas}{95}{subsection.8.4.1}
@@ -103,3 +104,29 @@
 \contentsline {section}{\numberline {B.1}Cu\IeC {\'a}dricas, c\IeC {\'o}nicas y cambio de referencia}{103}{section.Alph2.1}
 \contentsline {section}{\numberline {B.2}C\IeC {\'o}nicas degeneradas}{104}{section.Alph2.2}
 \contentsline {section}{\numberline {B.3}Recta polar de un punto respecto de una c\IeC {\'o}nica}{107}{section.Alph2.3}
+=======
+\contentsline {section}{\numberline {8.3}Determinaci\IeC {\'o}n de una C\IeC {\'o}nica}{94}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}C\IeC {\'o}nicas Degeneradas. Producto de Rectas}{94}{subsection.8.3.1}
+\contentsline {subsubsection}{Matriz de una C\IeC {\'o}nica Producto de Rectas}{94}{section*.12}
+\contentsline {subsubsection}{Rango de la Matriz de una C\IeC {\'o}nica Producto de Rectas}{95}{section*.13}
+\contentsline {subsection}{\numberline {8.3.2}Haces de C\IeC {\'o}nicas}{96}{subsection.8.3.2}
+\contentsline {subsubsection}{Haz de C\IeC {\'o}nicas que pasan por Cuatro Puntos}{96}{section*.14}
+\contentsline {subsection}{\numberline {8.3.3}Teorema de Determinaci\IeC {\'o}n}{97}{subsection.8.3.3}
+\contentsline {section}{\numberline {8.4}Clasificaci\IeC {\'o}n de las C\IeC {\'o}nicas No Degeneradas}{97}{section.8.4}
+\contentsline {section}{\numberline {8.5}Deshomogeneizaciones de una C\IeC {\'o}nica}{98}{section.8.5}
+\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{99}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{99}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{100}{subsection.Alph1.1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{101}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{101}{subsection.Alph1.2.1}
+\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{101}{section*.15}
+\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{102}{section*.16}
+\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{102}{section*.17}
+\contentsline {paragraph}{Observaciones}{102}{section*.18}
+\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{102}{section*.19}
+\contentsline {section}{\numberline {A.3}Dualidad}{103}{section.Alph1.3}
+\contentsline {chapter}{\numberline {B}Mierdas varias}{105}{appendix.Alph2}
+\contentsline {section}{\numberline {B.1}C\IeC {\'o}nicas y cambio de referencia}{106}{section.Alph2.1}
+\contentsline {section}{\numberline {B.2}C\IeC {\'o}nicas degeneradas}{107}{section.Alph2.2}
+\contentsline {section}{\numberline {B.3}Recta polar de un punto respecto de una c\IeC {\'o}nica}{109}{section.Alph2.3}
+>>>>>>> Stashed changes

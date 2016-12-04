@@ -446,6 +446,186 @@ Hagamos notar que, de hecho, fijada una base, podemos calcular explícitamente l
 	\[\mc{C}:(1:4:6:2:5:3)\in\proy(\mathrm{Sim}(3))\cong\proy^5\]
 	Este es un proceso habitual y muy útil. Nótese que al cambiar de base, todo puede cambiar muchísimo.
 \end{exa}
+\section{Determinación de una Cónica}
+El objetivo de esta sección es demostrar que, bajo ciertas condiciones, una cónica queda totalmente determinada por $5$ puntos.
+\subsection{Cónicas Degeneradas. Producto de Rectas}
+METER AQUÍ DEFINICIÓN DE CÓNICA DEGENERADA
+
+Sean $l,m$ dos rectas de $\proy^2=\proy(E)$. Como buenas rectas, fijada una base $\mc{B}$ de $E$, estas vendrán dadas por sendas ecuaciones cartesianas (únicas salvo múltiplos)
+\[\begin{array}{cc}
+l: & ax+by+cz=0\\
+m: & a'x+b'y+c'z=0
+\end{array}\]
+Donde los coeficientes $a,b,c,a',b',c'\in\K$.
+\begin{defi}[Producto de Rectas]
+	Definimos el producto de dos rectas $l$ y $m$ del plano proyectivo como el conjunto de puntos proyectivos que verifican la ecuación resultante de hacer el producto de sus ecuaciones cartesianas.
+	
+	A este conjunto lo denotaremos por $lm$
+	\[lm:(ax+by+cz)(a'x+b'y+c'z)=0\]
+\end{defi}
+
+\begin{obs}[Cónicas y Producto de Rectas]
+	\label{C8_obs_conicaProducto}
+	Es claro que el producto de dos rectas $lm$ es una cónica. Basta ver que al desarrollar ese producto nos queda una ecuación idéntica a la ecuación \eqref{C8_eq_polinomio}.
+\end{obs}
+\begin{obs}[Producto de Rectas y Unión de Rectas]
+	Es claro que todos los puntos de la recta $l$ cumplen la ecuación de $lm$ (ya que anulan el primer término del producto). Algo similar ocurre con los puntos de $m$. Por ende, podemos decir que $l\cup m\subset lm$.
+	
+	Sin embargo, la cosa no acaba aquí, ya que, de hecho, todo punto del producto $lm$ es un elemento de $l\cup m$. Esto es debido a que, en caso de existir un elemento ajeno a ambas rectas, tanto el primero como el segundo de los términos del producto serían no nulos. Como el resultado de este producto debe ser, por hipótesis, nulo, tendríamos que el cuerpo $\K$ tiene divisores de cero, lo cual es absurdo.
+	
+	Así pues, se tiene
+	\[lm = l\cup m\]
+	Esto nos indica que un producto de rectas es una cónica degenerada (ya que contiene a una recta). Esto nos proporciona una auténtica fábrica de cónicas degeneradas. De hecho, como veremos más adelante, todas las cónicas degeneradas son un producto de rectas.
+\end{obs}
+\subsubsection{Matriz de una Cónica Producto de Rectas}
+Estudiemos ahora el rango de la matriz asociada a una cónica degenerada que es producto de dos rectas.
+
+Para ello, en primer lugar descompongamos el producto de dos rectas de forma matricial (para obtener así la matriz de la cónica). Esto servirá para que el que no haya quedado convencido del resultado de la observación \ref{C8_obs_conicaProducto} se termine de convencer. Podríamos también haber hecho uso de la proposición \ref{C8_prop_Hessiana}, pero no merece mucho la pena en este caso concreto.
+
+Dada la ecuación de un producto de rectas
+\[lm:(ax+by+cz)(a'x+b'y+c'z)=0\]
+podemos entender cada término del producto como la matriz $1\times 1$ resultante de multiplicar una matriz fila por una matriz columna. Si lo hacemos inteligentemente se obtiene (compruébese)
+\[lm:\begin{pmatrix}
+x & y & z
+\end{pmatrix}\begin{pmatrix}
+a\\
+b\\
+c
+\end{pmatrix}
+\begin{pmatrix}
+a' & b' & c'
+\end{pmatrix}\begin{pmatrix}
+x\\
+y\\
+z
+\end{pmatrix}=0\]
+Adoptemos a continuación unos cuantos convenios de notación para facilitarnos la vida. Se ruega que se tengan en cuenta pues serán utilizados a lo largo del capítulo sin previo aviso.
+\[\begin{array}{cc}
+U=\begin{pmatrix}
+a & b & c
+\end{pmatrix}^t\qquad&\qquad U'^t=\begin{pmatrix}
+a' & b' & c'
+\end{pmatrix}\\
+X=\begin{pmatrix}
+x & y & z
+\end{pmatrix}^t\qquad &  \qquad M=UU'^t\end{array}\]
+Con estas notaciones es claro que \[lm:X^tUU'^tX=0\sii lm:X^tMX=0\]
+Sin embargo, una cálculo rápido nos dice que la matriz $M$, por lo general, no es simétrica. En efecto, explícitamente vemos que
+\[M=\begin{pmatrix}
+aa' & ab' & ac'\\
+ba' & bb' & bc'\\
+ca' & cb' & cc'\\
+\end{pmatrix}\not=\begin{pmatrix}
+aa' & ba' & ca'\\
+ab' & bb' & cb'\\
+ac' & bc' & cc'
+\end{pmatrix}=M^t\]
+Una posible solución a este problema es invocar el poder de los resultados obtenidos en los lemas \ref{C8_lem_descomposicion} y \ref{C8_lem_antisimetricaNula} y para obtener la matriz de la cónica ``de verdad''
+\begin{equation*}lm:X^tMX=X^t(M_s+M_a)X=X^tM_sX=X^t\frac{1}{2}(M+M^t)X=X^t(M+M^t)X=0\end{equation*}
+Usando nuestras notaciones, normalmente escribiremos
+\begin{equation}
+	lm:X^t(UU'^t+U'U^t)X=0
+\end{equation}
+\subsubsection{Rango de la Matriz de una Cónica Producto de Rectas}
+Una vez hallada la matriz de un producto de rectas, calculemos el rango de la misma. Esto nos será de ayuda en el futuro para encontrar una caracterización matricial de las cónicas degeneradas.
+
+Para realizar este cálculo, consideremos dos casos. Consideremos primero el situación en la que realizamos el producto de dos rectas distintas.
+
+Al ser $l$ y $m$ dos rectas distintas, sus dualizados correspondientes también serán distintos. Veamos esto con detalle
+\[\begin{array}{cc}
+l: & ax+by+cz=0\\
+m: & a'x+b'y+c'z=0
+\end{array}\]
+Es claro que sus dualizados son las formas lineales $l^*$ y $m^*$ que tienen por matrices asociadas
+\[\begin{array}{cc}
+l^*: & \begin{pmatrix}
+a & b & c
+\end{pmatrix}\\
+m^*: & \begin{pmatrix}
+a' & b' & c'
+\end{pmatrix}
+\end{array}\]
+Tomando como base de $E^*$ la base dual $\mc{B}^*$ asociada a $\mc{B}$, tenemos que los dualizados de las rectas proyectivas $l$ y $m$ son los puntos proyectivos duales dados por las coordenadas homogéneas (en la referencia asociada a $\mc{B}^*$)
+\[\begin{array}{cc}
+l^*: & (a:b:c)\\
+m^*: & (a':b':c')
+\end{array}\]
+Al ser distintos $l^*$ y $m^*$, los vectores del espacio dual $E^*$, $(a,b,c)$ y $(a', b',c')$, serán linealmente independientes. Este resultado es vital en el razonamiento que sigue.
+
+Tomemos la matriz asociada a la cónica $lm$, e interprétemosla ingeniosamente como un producto de matrices por bloques (compruébese)
+\[UU'^t+U'U^t=\left(\begin{array}{c|c}
+U&U'
+\end{array}\right)\left(\begin{array}{c}
+U'^t\\
+\hline U^t
+\end{array}\right)\]
+De esta forma, hemos escrito la matriz de la cónica como un producto de matrices de rango $2$. Por ende, el rango del producto de dichas matrices no puede exceder dicho rango.
+
+De hecho, el rango de este producto es $2$. Para ver esto tenemos que observar que la matriz resultante de realizar el producto puede verse por columnas como
+\[\left(\begin{array}{c|c|c}
+Ua'+U'a&Ub'+U'b&Uc'+U'c
+\end{array}\right)\]
+Es claro que si la matriz tuviera rango $1$, todas sus columnas serían proporcionales. Si esto pasara tendríamos
+\begin{multline}
+	Ua'+U'a=\lambda_1(Ub'+U'b)=\lambda_2(Uc'+U'c)\sii\\
+	\sii U(a'-\lambda_1b'-c'\lambda_2)+U'(a-\lambda_1b-c\lambda_2)=0
+\end{multline}
+ES MUY TARDE Y SIGO SIN SABER POR QUÉ COJONES EL RANGO ES DOS
+\begin{obs}
+	Es evidente que si tengo $4$ puntos alineados, y un quinto punto, si tomamos la recta que pasa por los cuatro primeros puntos y una recta cualquiera que pase por el quinto, tenemos una cónica.
+	
+	Por tanto las condiciones que impongamos para que $5$ puntos determinen totalmente una cónica deben prohibir que esto suceda.
+	
+	Como caso particular, si los $5$ puntos están alineados, la unión de la recta que pasa por los $5$ puntos y otra recta cualquiera es también una cónica (un caso más extremo si cabe).
+\end{obs}
+\subsection{Haces de Cónicas}
+Dadas dos cónicas distintas, $\mc{C}_1$ y $\mc{C}_2$, podemos interpretarlas como dos puntos de $\proy^5$.
+\begin{defi}[Haz de Cónicas]
+	Definimos el \ti{haz de cónicas} engendrado por $\mc{C}_1$ y $\mc{C}_2$ como la recta $\mc{C}_1\mc{C}_2$ de $\proy^5$.
+\end{defi}
+Es claro que el haz de rectas engendrado por $\mc{C}_1$ y $\mc{C}_2$ viene dado por las siguientes ecuaciones paramétricas homogéneas
+\[\mc{C}_1\mc{C}_2\equiv\mathrm{Haz}(\mc{C}_1,\mc{C}_2):\alpha\mc{C}_1+\beta\mc{C}_2=0\]
+Usualmente usaremos la deshomogeneización habitual dividiendo por $\alpha$ y considerando un parámetro no homogéneo.
+\[\begin{array}{cc}\mathrm{Haz}(\mc{C}_1,\mc{C}_2):\mc{C}_1+\frac{\beta}{\alpha}\mc{C}_2\stackrel{\mathrm{not.}}{=}\mc{C}_1+\lambda\mc{C}_2\qquad&\qquad\lambda\in\overline{\K}=\K\cup\{\infty\}\end{array}\]
+Es claro que $\lambda=\infty$ si y solo si $\alpha=0$, por esto, cuando $\lambda=\infty$ nos referimos a la cónica $\mc{C}_2$.
+Veamos un ejemplo concreto para asentar esto.
+\begin{exa}
+	Poner dos cónicas concretas y calcular el haz que generan...
+\end{exa}
+\subsubsection{Haz de Cónicas que pasan por Cuatro Puntos}
+POR REVISAR
+
+Es fácil ver ahora que, en general, cuatro puntos proyectivos determinan un haz de cónicas.
+
+En efecto, basta con calcular dos cónicas que pasen por los cuatro puntos $A,B,C,D$. Por la sección anterior sabemos que la unión de dos rectas es una cónica, por lo que basta tomar como cónicas que engendran el haz las uniones de rectas $AB\cup CD$ y $AC\cup BD$.
+
+Hecho esto, dado un quinto punto $e$, bastaría determinar $\lambda$ para que la cónica pase por dicho punto.
+
+Veamoslo con un ejemplo
+\begin{exa}
+	Ejemplo que puso Valdés en la Pizarra
+	
+	Sean los puntos
+	\[\begin{array}{ccc}
+		A=(1,1)&&B=(1,0)\\
+		C=(-1,2)&&D=(0,0)\\
+		&e=(-3,2)&
+	\end{array}\]
+	terminar
+\end{exa}
+\subsection{Teorema de Determinación}
+\begin{theo}[Teorema de Determinación]
+	Dados $5$ puntos distintos de $\proy^2$ no estando $4$ de ellos alineados, hay una única cónica que pasa por ellos.
+\end{theo}
+\begin{proof}
+	Como no hay cuatro alineados, hay tres que forman un triangulo, que será parte de nuestra referencia.
+	
+	Reducimos la ecuación de la cónica dada la ventajosidad de la referencia.
+	
+	Distinguimos casos entre si hay agun punto que pueda no estar en el triangulo y si no queda más cojones que esté
+	
+	Es una distinción de casos bastante trivial (luego la hago).
+\end{proof}
 \section{Clasificación de las Cónicas No Degeneradas}
 En esta sección se realizará una clasificación de las cónicas proyectivas en función de su número de puntos de corte con la recta del infinito, a la que denotaremos $l_\infty$.
 
@@ -503,8 +683,4 @@ Para que esta clasificación no resulte demasiado abstracta al lector, pongamos 
 	\end{array}\right\}\leadsto x^2=0\]
 	Teniendo en cuenta esto, los puntos que cumplen las restricciones impuestas por ambas ecuaciones son los de la forma $(0,\lambda,0)$ (los cuales, además, son solución doble). Estos generan un único rayo. Por ende, la cónica y la recta del infinito únicamente se cortan en un punto. Esto es lo mismo que decir que $C$ es una parábola.
 \end{exa}
-\section{Determinaciones de una Cónica}
-El objetivo de esta sección será demostrar que, bajo ciertas condiciones, cinco puntos del espacio proyectivo $\proy^2$ determinan unívocamente una cónica.
-\subsection{Cónicas como Producto de dos Rectas}
-Dadas dos rectas de $\proy^2$, a las que $l$
 \section{Deshomogeneizaciones de una Cónica}

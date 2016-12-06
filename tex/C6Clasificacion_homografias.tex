@@ -30,7 +30,7 @@ Veamos en cada uno de los casos cuál es la expresión de la homografía que tie
 \subsection{Dos puntos fijos distintos}
 Sea $h$ una homografía de $\proy^1$ con dos puntos fijos $M$ y $N$ distintos. Tratamos de encontrar el valor de los parámetros $\alpha, \beta,\gamma,\delta$ para poder describir las homografías de este tipo. Como sabemos que $M$ y $N$ son puntos fijos, sus coordenadas no homogéneas deben cumplir la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo}. Por tanto, una forma de hallar estos parámetros sería sustituir las coordenadas no homogéneas de los puntos fijos en dicha ecuación y ver para que valores de $\alpha, \beta,\gamma,\delta$ se cumple. 
 
-Para facilitar este cálculo tomamos la referencia $\mf{R}=\{M,N;E\}$, donde $E$ es un punto cualquiera distinto de $M$ y $N$. En esta referencia las coordenadas no homogénea de $M$ y $N$ son $\infty$ y $0$, respectivamente. Por tanto, la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo} admite como soluciones $0$ y $\infty$. Sustituyendo estos valores en la ecuación obtenemos que 
+Para facilitar este cálculo tomamos la referencia $\mf{R}=\{M,N;e\}$, donde $e$ es un punto cualquiera distinto de $M$ y $N$. En esta referencia las coordenadas no homogénea de $M$ y $N$ son $\infty$ y $0$, respectivamente. Por tanto, la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo} admite como soluciones $0$ y $\infty$. Sustituyendo estos valores en la ecuación obtenemos que 
 \begin{equation*}
 	\alpha\cdot 0+(\beta+\gamma)0+\delta=0\sii\delta=0
 \end{equation*}
@@ -61,7 +61,7 @@ donde la constante $k$ se llama \tb{módulo de la homografía}. Notemos que dada
 		\alpha+(\beta+\gamma)\frac{1}{\infty}+\delta\frac{1}{\infty^2}=0\sii \alpha=0
 	\end{equation*}
 \end{obs}
-Es importante observar que, aunque la ecuación $\theta'=k\theta$ se denomina canónica, en realidad no lo es mucho, ya que esta expresión se ha obtenido tomando la referencia $\mf{R}=\{M,N;E\}$. Notemos que si en vez de tomar como referencia $\mf{R}$ tomamos $\overline{\mf{R}}=\{N,M;E\}$, la ecuación cambia.
+Es importante observar que, aunque la ecuación $\theta'=k\theta$ se denomina canónica, en realidad no lo es mucho, ya que esta expresión se ha obtenido tomando la referencia $\mf{R}=\{M,N;e\}$. Notemos que si en vez de tomar como referencia $\mf{R}$ tomamos $\overline{\mf{R}}=\{N,M;e\}$, la ecuación cambia.
 
 En efecto, el cambio de $\mf{R}$ a $\overline{\mf{R}}$ viene dado por la homografía que trasforma $(1:0)$ en $(0:1)$ y $(0:1)$ en $(1:0)$. Sustituyendo estas trasformaciones, en coordenadas no homogéneas, en la ecuación~\eqref{C6_transformada_moebius}, obtenemos que la ecuación de la homografía que transforma $\mf{R}$ en $\overline{\mf{R}}$ es
 \begin{equation*}
@@ -73,24 +73,24 @@ Por tanto, la ecuación $\theta'=k\theta$ respecto a la referencia $\overline{\m
 \end{equation*}
 por lo que en este caso el módulo de la homografía con puntos fijos $M$ y $N$ sería $1/k$. 
 
-Podríamos preguntarnos entonces porque darle el apellido canónico. Aunque una permutación de los puntos $M$ y $N$ en la referencia nos da un valor del módulo de la homografía distinto, el parámetro $k$ está geométricamente asociado a la homografía, cosa que veremos no ocurrirá con parámetros posteriores. Es decir, solo está ligado a la homografía y al orden de los puntos $M$ y $N$ en la referencia, y dependiendo de este obtendremos $k$ o $1/k$. Observemos que no depende del punto unidad $E$ que hayamos tomado. Por tanto, la ecuación
+Podríamos preguntarnos entonces porque darle el apellido canónico. Aunque una permutación de los puntos $M$ y $N$ en la referencia nos da un valor del módulo de la homografía distinto, el parámetro $k$ está geométricamente asociado a la homografía, cosa que veremos no ocurrirá con parámetros posteriores. Es decir, solo está ligado a la homografía y al orden de los puntos $M$ y $N$ en la referencia, y dependiendo de este obtendremos $k$ o $1/k$. Observemos que no depende del punto unidad $e$ que hayamos tomado. Por tanto, la ecuación
 \begin{equation}
 	\label{C6_theta_ktheta}
 	\theta'=k\theta
 \end{equation}
 puede considerarse canónica.
 
-El parámetro $k$ puede ser hallado a través de la razón doble, ya que estamos tratando homografías. En efecto, dada una homografía $h$ que deja fijos los puntos $M$ y $N$ y, por tanto, en la referencia $\mf{R}=\{M,N;E\}$ viene descrita por la ecuación~\eqref{C6_theta_ktheta} para cierto $k$, se tiene que
+El parámetro $k$ puede ser hallado a través de la razón doble, ya que estamos tratando homografías. En efecto, dada una homografía $h$ que deja fijos los puntos $M$ y $N$ y, por tanto, en la referencia $\mf{R}=\{M,N;e\}$ viene descrita por la ecuación~\eqref{C6_theta_ktheta} para cierto $k$, se tiene que
 \begin{equation}
 	\{M,N,P,h(P)\}=\{\infty,0,\theta,\theta'=k\theta\}=k
 \end{equation}
-para un punto $P$ cualquiera independientemente de $E$. Si permutamos los puntos $M$ y $N$, por la simetría de la razón doble se tiene que
+para un punto $P$ cualquiera independientemente de $e$. Si permutamos los puntos $M$ y $N$, por la simetría de la razón doble se tiene que
 \begin{equation}
 	\{N,M,P,h(P)\}=\frac{1}{k}
 \end{equation}
-independientemente de $E$. Esto nos demuestra de nuevo que el módulo depende solo de la homografía y del orden de los puntos fijos.
+independientemente de $e$. Esto nos demuestra de nuevo que el módulo depende solo de la homografía y del orden de los puntos fijos.
 
-Hagamos un pequeño inciso que retomaremos más adelante. Si escribimos, en la referencia $\mf{R}=\{M,N,E\}$, la matriz asociada a una homografía $h$ que tiene dos puntos fijos $M$ y $N$ obtenemos
+Hagamos un pequeño inciso que retomaremos más adelante. Si escribimos, en la referencia $\mf{R}=\{M,N,e\}$, la matriz asociada a una homografía $h$ que tiene dos puntos fijos $M$ y $N$ obtenemos
 \begin{equation*}
 	\left( \begin{array}{cc}
 	a&0\\
@@ -110,7 +110,7 @@ Por tanto, hemos encontrado una referencia en la cual la homografía $h$ es diag
 \subsection{Un punto fijo doble}
 Veamos ahora qué ecuación describe a una homografía $h$ de $\proy^1$ que deja fijo un solo punto. Si $M$ es el punto fijo de $h$, entonces la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo} debe admitir como solución la coordenada no homogénea de $M$. Por tanto, procederemos como en el caso anterior. Tomaremos una referencia adecuada y sustituiremos la coordenada no homogénea de $M$, respecto a dicha referencia, en la ecuación~\eqref{C6_eq_homografia_segundo_orden_punto_fijo} para hallar los parámetros $\alpha, \beta,\gamma,\delta$.
 
-Dado que solo hay un punto fijo, tomamos como referencia $\mf{R}=\{M,X;E\}$, donde $X$ y $E$ son puntos diferentes y distintos de $M$. En esta referencia la coordenada no homogénea de $M$ es $\infty$. Por tanto, para cualquier homografía con un punto fijo doble, tomando la referencia adecuada, se puede decir que dicha homografía deja fijo el infinito. Dado que ya justificamos anteriormente los cálculo con $\infty$ esta vez lo haremos sin tener cuidado. Recordemos que podíamos escribir
+Dado que solo hay un punto fijo, tomamos como referencia $\mf{R}=\{M,X;e\}$, donde $X$ y $e$ son puntos diferentes y distintos de $M$. En esta referencia la coordenada no homogénea de $M$ es $\infty$. Por tanto, para cualquier homografía con un punto fijo doble, tomando la referencia adecuada, se puede decir que dicha homografía deja fijo el infinito. Dado que ya justificamos anteriormente los cálculo con $\infty$ esta vez lo haremos sin tener cuidado. Recordemos que podíamos escribir
 \begin{equation*}
 	\alpha\theta^2+(\beta+\gamma)\theta+\delta=0\ra\alpha+(\beta+\gamma)\frac{1}{\theta}+\delta\frac{1}{\theta^2}=0
 \end{equation*}
@@ -136,11 +136,11 @@ A este tipo de homografías de las denomina \ti{elaciones} y se dice que dejan f
 
 Notemos que esta vez el apellido canónico no es merecido, al contrario que en el caso anterior, pues el parámetro $\mu$ no está geométricamente asociado a la homografía. 
 
-Veámoslo. Partiendo de la referencia $\mf{R}=\{M,X;E\}$, realizamos un cambio de coordenadas que lleve el infinito al infinito. Por ejemplo, aplicamos una homografía con ecuación
+Veámoslo. Partiendo de la referencia $\mf{R}=\{M,X;e\}$, realizamos un cambio de coordenadas que lleve el infinito al infinito. Por ejemplo, aplicamos una homografía con ecuación
 \begin{equation*}
 	\overline{\theta}=\frac{1}{k}\theta
 \end{equation*}
-es decir, una homografía $h$ que en esa referencia deje fijos el cero y el infinito. Por tanto, estamos pasando de la referencia $\mf{R}$ a la referencia $\overline{\mf{R}}=\{M,X;h(E)\}$. 
+es decir, una homografía $h$ que en esa referencia deje fijos el cero y el infinito. Por tanto, estamos pasando de la referencia $\mf{R}$ a la referencia $\overline{\mf{R}}=\{M,X;h(e)\}$. 
 
 La ecuación $\theta'=\theta+\mu$ respecto a la referencia $\overline{\mf{R}}$, que se obtiene despejando en la ecuación anterior $\theta$ en función de $\overline{\theta}$ y sustituyendo, es
 \begin{equation*}
@@ -318,7 +318,7 @@ es decir, es una transformación afín de la recta.\\
 
 Estos dos resultados dan lugar al siguiente lema.
 \begin{lem}\label{C6_lem_infinito_p1_sii_afinidad}
-	Dada una homografía de $\proy^1$ y $\mf{R}=\{x_0,x_1;E\}$ una referencia arbitraria. Entonces $h$ deja fijo el infinito, es decir, deja fijo el punto $x_0$, si y solo si $c=0$, o equivalentemente, si y solo si es una afinidad.
+	Dada una homografía de $\proy^1$ y $\mf{R}=\{x_0,x_1;e\}$ una referencia arbitraria. Entonces $h$ deja fijo el infinito, es decir, deja fijo el punto $x_0$, si y solo si $c=0$, o equivalentemente, si y solo si es una afinidad.
 \end{lem}
 
 El cálculo de los puntos fijos de la homografía de $\proy^1$ dada al principio de esta sección, aquella cuya matriz asociada es
@@ -374,7 +374,7 @@ Una simple comprobación nos permite asegurar que el punto $(1:0)$ es punto fijo
 El lema~\ref{C6_lem_infinito_p1_sii_afinidad} se puede generalizar a una homografía de $\proy^n$. A continuación expondremos y demostraremos dicho resultado.
 
 \begin{prop}
-	Sea $h$ una homografía de $\proy^n$ y $\mf{R}=\{x_0,\cdots,x_n;E\}$ una referencia arbitraria. El hiperplano $H$ dado por la ecuación implícita $x_n=0$ se denomina plano del infinito. Si $h$ deja invariante el plano del infinito entonces es una aplicación afín.
+	Sea $h$ una homografía de $\proy^n$ y $\mf{R}=\{x_0,\cdots,x_n;e\}$ una referencia arbitraria. El hiperplano $H$ dado por la ecuación implícita $x_n=0$ se denomina plano del infinito. Si $h$ deja invariante el plano del infinito entonces es una aplicación afín.
 \end{prop}
 \begin{obs}
 	Que una homografía deje invariante un hiperplano $H$ no significa que deje invariante cada punto del hiperplano, es decir, que los puntos de $H$ sean puntos fijos, sino que la imagen de un punto de $H$ pertenece al hiperplano, pero no tiene por qué ser el mismo punto.
@@ -523,7 +523,7 @@ Estudiemos cómo se caracterizan las involuciones y cómo describirlas.
 	
 	Supongamos que existe un punto $P\in\proy^1$ que cumple $h(P)\not=P$ y $h^2(P)=P$. Sea $P'=h(P)$, entonces lo anterior es equivalente a que $h(P)=P'$ y $h(P')=P$, con $P'\not=P$.
 	
-	Tomemos $\mf{R}=\{P,P';E\}$ como referencia de $\proy^1$ y encontremos la expresión de la ecuación general de la cónica en esta referencia. Notemos que en este referencia las coordenadas del punto $P$ son $(1:0)$, mientras que las del punto $P'$ son $(0:1)$. Recordemos que la ecuación general en coordenadas homogéneas se podía escribir como
+	Tomemos $\mf{R}=\{P,P';e\}$ como referencia de $\proy^1$ y encontremos la expresión de la ecuación general de la cónica en esta referencia. Notemos que en este referencia las coordenadas del punto $P$ son $(1:0)$, mientras que las del punto $P'$ son $(0:1)$. Recordemos que la ecuación general en coordenadas homogéneas se podía escribir como
 	\begin{equation*}
 		\alpha xx'+\beta xy'+\gamma x'y+\delta yy'=0
 	\end{equation*}
@@ -541,7 +541,7 @@ Estudiemos cómo se caracterizan las involuciones y cómo describirlas.
 	
 	Por tanto, dado cualquier punto $Q$ de $\proy^1$, distinto de los puntos fijos de $h$ pues para ellos se cumple trivialmente, se tiene que $h^2(Q)=Q$. Con esto se concluye que $h^2=id$ y, por tanto, $h$ es involución.
 \end{proof}
-Esta demostración nos proporciona una información adicional: la ecuación general de una involución respecto a una referencia de la forma $\mf{R}=\{P,h(P);E\}$, donde $P$ no es un punto fijo, es
+Esta demostración nos proporciona una información adicional: la ecuación general de una involución respecto a una referencia de la forma $\mf{R}=\{P,h(P);e\}$, donde $P$ no es un punto fijo, es
 \begin{equation}
  \theta\theta'=\lambda
 \end{equation}
@@ -647,7 +647,7 @@ Por tanto, las involuciones pertenecen al primer grupo de homografías tratadas 
 
 Concluimos así que $h$ es una involución si y solo si el par $(P,h(P))$ está separado armónicamente del par $(M,N)$ de puntos fijos.
 
-Recordando lo estudiado al principio de este capítulo, y dado que una involución tiene dos puntos fijos y $k=-1$, se tiene que la ecuación canónica, respecto a la referencia $\mf{R}=\{M,N;E\}$, de la involución es
+Recordando lo estudiado al principio de este capítulo, y dado que una involución tiene dos puntos fijos y $k=-1$, se tiene que la ecuación canónica, respecto a la referencia $\mf{R}=\{M,N;e\}$, de la involución es
 \begin{equation}
 	\theta'=-\theta
 \end{equation}
@@ -728,7 +728,7 @@ Observemos que si $\theta$ y $\theta'$ son las soluciones de la ecuación anteri
 \end{equation}
 se define el \ti{haz de ecuaciones de segundo grado} asociado a $S_1$ y $S_2$ como el subespacio de dimensión 1 generado por estos rayos
 \begin{equation}
-	S=S_1+\lambda S_2 \tq \lambda\in\proy^1
+	S=S_1+\lambda S_2 \tq \lambda\in\overline{\K}
 \end{equation}
 \end{defi}
 Diremos que un par $(P,P')$ es solución de $S$ si, para cierto $\lambda$, sus coordenadas no homogéneas $\theta$ y $\theta'$ son las soluciones de la ecuación de segundo grado dada por $S_1+\lambda S_2$.

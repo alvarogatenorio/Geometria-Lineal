@@ -595,9 +595,9 @@ Dadas dos cónicas distintas, $\mc{C}_1$ y $\mc{C}_2$, podemos interpretarlas co
 	Definimos el \ti{haz de cónicas} engendrado por $\mc{C}_1$ y $\mc{C}_2$ como la recta $\mc{C}_1\mc{C}_2$ de $\proy^5$.
 \end{defi}
 Es claro que el haz de rectas (??) engendrado por $\mc{C}_1$ y $\mc{C}_2$ viene dado por las siguientes ecuaciones paramétricas homogéneas
-\[\mc{C}_1\mc{C}_2\equiv\mathrm{Haz}(\mc{C}_1,\mc{C}_2):\alpha\mc{C}_1+\beta\mc{C}_2=0\]
+\[\mc{C}_1\mc{C}_2\equiv\haz_{\mc{C}_1,\mc{C}_2}:\alpha\mc{C}_1+\beta\mc{C}_2=0\]
 Usualmente usaremos la deshomogeneización habitual dividiendo por $\alpha$ y considerando un parámetro no homogéneo.
-\[\begin{array}{cc}\mathrm{Haz}(\mc{C}_1,\mc{C}_2):\mc{C}_1+\frac{\beta}{\alpha}\mc{C}_2\stackrel{\mathrm{not.}}{=}\mc{C}_1+\lambda\mc{C}_2\qquad&\qquad\lambda\in\overline{\K}=\K\cup\{\infty\}\end{array}\]
+\[\begin{array}{cc}\haz_{\mc{C}_1,\mc{C}_2}:\mc{C}_1+\frac{\beta}{\alpha}\mc{C}_2\stackrel{\mathrm{not.}}{=}\mc{C}_1+\lambda\mc{C}_2\qquad&\qquad\lambda\in\overline{\K}=\K\cup\{\infty\}\end{array}\]
 Es claro que $\lambda=\infty$ si y solo si $\alpha=0$, por esto, cuando $\lambda=\infty$ nos referimos a la cónica $\mc{C}_2$.
 Veamos un ejemplo concreto para asentar esto.
 \begin{exa}
@@ -980,7 +980,7 @@ Hagamos ahora una construcción geométrica de la recta Polar(P) (mostrada en la
 
 IMAGEN
 
-Tomamos dos rectas $r_0$ y $r_1$ del Haz(P) que cortan con la cónica en los puntos $M_0$, $N_0$ y $M_1$, $N_1$, respectivamente. El cuarto armónico $P_0'$ de $P$ respecto del par $(M_0,N_0)$ pertenece a la recta Polar(P), al igual que el cuarto armónico $P_1'$ de $P$ respecto del par $(M_1,N_1)$. Tenemos así dos puntos que pertenecen a la recta polar del punto $P$.
+Tomamos dos rectas $r_0$ y $r_1$ del $\haz_P$ que cortan con la cónica en los puntos $M_0$, $N_0$ y $M_1$, $N_1$, respectivamente. El cuarto armónico $P_0'$ de $P$ respecto del par $(M_0,N_0)$ pertenece a la recta Polar(P), al igual que el cuarto armónico $P_1'$ de $P$ respecto del par $(M_1,N_1)$. Tenemos así dos puntos que pertenecen a la recta polar del punto $P$.
 
 Para encontrar los puntos $P_0'$ y $P_1'$ procedemos de la siguiente manera. Se recomienda ir dibujándolo mientras se explica para entender el proceso. Si se siguen los pasos indicados, la figura resultante debe ser equivalente a la figura ?.
 
@@ -1029,7 +1029,7 @@ Recordemos que, al hablar de cónicas y cambios de referencia, pusimos la mano e
 
 Dada una cónica no degenerada $C$ en cierta referencia proyectiva, realizaremos un cambio de referencia de tal forma que, la ecuación de la cónica en la referencia final, sea la ecuación de una parábola. De esta forma, bastará con parametrizar una parábola para obtener la parametrización de cualquier cónica no degenerada.
 
-Para ello, tomemos dos puntos $X_0$ y $X_2$ de la cónica y escojamos $X_1$ como el punto de corte de las rectas tangentes a la cónica en $X_0$ y $X_2$. Nuestra referencia será $\mf{R}=\{X_0,X_1,X_2;E\}$, donde $E$ es un punto de la cónica distinto al resto.
+Para ello, tomemos dos puntos $X_0$ y $X_2$ de la cónica y escojamos $X_1$ como el punto de corte de las rectas tangentes a la cónica en $X_0$ y $X_2$. Nuestra referencia será $\mf{R}=\{X_0,X_1,X_2;e\}$, donde $e$ es un punto de la cónica distinto al resto.
 
 IMAGEN
 
@@ -1126,17 +1126,17 @@ Deshomogeneizando se transforma en
 \end{equation}
 Por tanto, tomando la referencia indicada, cualquier cónica no degenerada es la parábola $y^2=xz$. Nótese la importancia de este hecho. Esto implica que, una vez que tengamos parametrizada la parábola $y^2=x$, tendremos parametrizada cualquier cónica no degenerada en la referencia $\mf{R}$ adecuada. Para obtener la parametrización en la referencia inicial (aquella en la que la cónica no era una parábola) bastará con cambiar de referencia la parametrización de la parábola.
 
-Y, ¡oh, dioses benévolos!, parametrizar una parábola es extremadamente sencillo. Si elegimos el plano $z=1$ como representante afín, la parábola $y^2=xz$ consta de los puntos proyectivos $(\theta^2:\theta:1)$, para $\theta\in \proy^1$. Observemos que el punto correspondiente a $\theta=\infty$ es el $(1:0:0)$.
+Y, ¡oh, dioses benévolos!, parametrizar una parábola es extremadamente sencillo. Si elegimos el plano $z=1$ como representante afín, la parábola $y^2=xz$ consta de los puntos proyectivos $(\theta^2:\theta:1)$, para $\theta\in \overline{\K}$. Observemos que el punto correspondiente a $\theta=\infty$ es el $(1:0:0)$.
 
 Veremos a continuación un ejemplo concreto, pero antes, una pequeña observación.
 \begin{obs}
-	Aunque se ha desmostado matricialmente que, escogiendo la referencia $\mf{R}=\{X_0,X_1,X_2;E\}$ correspondiente, cualquier cónica no degenerada se trasforma en la parábola $Y^2=X$, puede deducirse directamente de esta elección. Dado que puede resultar poco obvio, se decidió plantear primero la solución matricial. A continuación daremos una idea de como deducirlo.\\
+	Aunque se ha desmostado matricialmente que, escogiendo la referencia $\mf{R}=\{X_0,X_1,X_2;e\}$ correspondiente, cualquier cónica no degenerada se trasforma en la parábola $Y^2=X$, puede deducirse directamente de esta elección. Dado que puede resultar poco obvio, se decidió plantear primero la solución matricial. A continuación daremos una idea de como deducirlo.\\
 	
 	Teniendo en cuenta los puntos de la referencia, las rectas tangentes a la cónica que pasan por $X_1$, es decir, las rectas $X_0X_1$ y $X_2X_1$, son las rectas $z=0$ y $x=0$ respectivamente. Si tomamos $z=0$ como la recta del infinito, nuestra cónica es tangente al infinito. Atendiendo a la clasificación de cónicas no degeneradas, se trata de una parábola. También es tangente a la recta $x=0$, por lo que tiene que ser una parábola de la forma
 	
 	IMAGEN
 	
-	Por último, pasa por el punto $X_2$, que se corresponde al punto $(X,Y)=(0,0)$, y por el punto $E$, que se corresponde a $(X,Y)=(1,1)$. Por tanto, no tiene más remedio que ser la cónica $Y^2=X$
+	Por último, pasa por el punto $X_2$, que se corresponde al punto $(X,Y)=(0,0)$, y por el punto $e$, que se corresponde a $(X,Y)=(1,1)$. Por tanto, no tiene más remedio que ser la cónica $Y^2=X$
 	
 	IMAGEN
 \end{obs}
@@ -1189,7 +1189,7 @@ Vayamos con el ejemplo prometido.
 	\end{equation*}
 	Por tanto, la parametrización de la cónica $C$ en la referencia $\mf{R}$ es 
 	\begin{equation*}
-	 C=\{(\theta^2:\theta:1)\tq \theta\in\proy^1\}
+	 C=\{(\theta^2:\theta:1)\tq \theta\in\overline{\K}\}
 	\end{equation*}
 	Para parametrizar $C$ en la referencia inicial solo es necesario realizar un cambio de coordenadas. Si $X$ son las coordenadas de un punto en la referencia inicial y $\overline{X}$ las coordenadas de un punto en la referencia $\mf{R}$, sabemos que se cumple
 	\begin{equation*}
@@ -1204,7 +1204,7 @@ Vayamos con el ejemplo prometido.
 	\end{equation}
 	Finalmente, la parametrización de la cónica $C$ pedida es
 	\begin{equation*}
-		C=\{(dsakdjalksjdkla)\tq \theta\in\proy^1\}
+		C=\{(dsakdjalksjdkla)\tq \theta\in\overline{\K}\}
 	\end{equation*}
 \end{exa}
 \begin{obs}[Una cónica es un $\proy^1$] HACER BIEN
@@ -1231,7 +1231,7 @@ Un resultado inmediato de la sección anterior es el siguiente.
 	Dada una cónica $C$ en cierta referencia $\mf{R}$, esta puede parametrizarse como 
 	\begin{equation}
 	\label{C8_eq_parametrizacion_polinomios}
-	C=\{(p_1(\theta):p_2(\theta):p_3(\theta))\tq\theta\in\proy^1\}
+	C=\{(p_1(\theta):p_2(\theta):p_3(\theta))\tq\theta\in\overline{\K}\}
 	\end{equation}
 	donde $p_1(\theta),p_2(\theta),p_3(\theta)$ son polinomios de grado menor o igual que 2 linealmente independientes.
 	
@@ -1302,30 +1302,30 @@ Por tanto, dada cualquier terna de polinomios de grado menor o igual que 2 linea
 \subsection{Otras parametrizaciones}
 Terminemos este apartado con una forma sencilla y rápida de parametrizar cónicas.\\
 
-Escojamos un punto $X_0$ de la cónica y parametrizemos el haz de rectas con base ese punto. Una forma de hacer esto sería escoger otros dos puntos distintos $X_1,X_2$ , bien en la cónica o fuera de ella, y hallar las rectas que pasen por ellos y por $X_0$. Con esto, tendríamos dos rectas del haz, que podemos tomar como base. Supongamos que las rectas $X_0X_1$ y $X_0X_2$ representan los puntos $(a_0:a_1:a_2)$ y $(b_0:b_1:b_2)$ en el dual, respectivamente. Entonces, la ecuación paramétrica del Haz($X_0$) sería 
-\[Haz(X_0)=\{(a_0+\theta b_0:a_1+\theta b_1:a_2+\theta b_2)\tq \theta\in\proy^1\}\]
-Cualquier recta del haz cortará a la cónica en dos puntos. Uno de ellos será $X_0$ y el otro un punto $P$ arbitrario. Queda excluida la recta del haz tangente a la cónica, pues solo corta en $X_0$. Por tanto, si cortamos una recta genérica del Haz($X_0$) con la cónica, mediante la ecuación de Joachimstal, obtendremos la expresión de un punto arbitrario de la cónica, en función de $\theta$. Esto nos proporciona una parametrización de la cónica.
+Escojamos un punto $X_0$ de la cónica y parametrizemos el haz de rectas con base ese punto. Una forma de hacer esto sería escoger otros dos puntos distintos $X_1,X_2$ , bien en la cónica o fuera de ella, y hallar las rectas que pasen por ellos y por $X_0$. Con esto, tendríamos dos rectas del haz, que podemos tomar como base. Supongamos que las rectas $X_0X_1$ y $X_0X_2$ representan los puntos $(a_0:a_1:a_2)$ y $(b_0:b_1:b_2)$ en el dual, respectivamente. Entonces, la ecuación paramétrica del $\haz_{X_0}$ sería 
+\[\haz_{X_0}=\{(a_0+\theta b_0:a_1+\theta b_1:a_2+\theta b_2)\tq \theta\in\overline{\K}\}\]
+Cualquier recta del haz cortará a la cónica en dos puntos. Uno de ellos será $X_0$ y el otro un punto $P$ arbitrario. Queda excluida la recta del haz tangente a la cónica, pues solo corta en $X_0$. Por tanto, si cortamos una recta genérica del $\haz_{X_0}$ con la cónica, mediante la ecuación de Joachimstal, obtendremos la expresión de un punto arbitrario de la cónica, en función de $\theta$. Esto nos proporciona una parametrización de la cónica.
 
 Es importante observar que, si escogemos otra base del haz de rectas, la parametrización resultante cambia.
 \section{Teorema de Steiner}
 A continuación expondremos un resultado que relaciona cónicas y homografías entre haces de rectas.
 \begin{theo}[Teorema de Steiner]
 	\label{C8_teo_steiner}
-	Dada una homografía $h:Haz(A)\rightarrow Haz(B)$ entre los haces de rectas de bases $A$ y $B$, respectivamente. Se consideran los puntos de la forma $P=l\cap h(l)$. Entonces, dichos puntos engendran una única cónica. Además, esta resulta ser degenerada si y solo si $h$ es una perspectividad.
+	Dada una homografía $h:\haz_A\rightarrow \haz_B$ entre los haces de rectas de bases $A$ y $B$, respectivamente. Se consideran los puntos de la forma $P=l\cap h(l)$. Entonces, dichos puntos engendran una única cónica. Además, esta resulta ser degenerada si y solo si $h$ es una perspectividad.
 \end{theo}
 \begin{proof}Dividamos la demostración en dos partes:
 	\begin{enumerate}
 		\item La homografía $h$ no es una perspetividad.
 		
-		Para demostrar que los puntos $P=l\cap h(l)$ se encuentran en una cónica, determinemos primero la homografía $h$. Es decir, dada una recta arbitraria del Haz($A$), encontremos una expresión de su imagen. Para ello, dado que es una homografía, necesitamos tres puntos y sus imagenes, en este caso tres rectas y sus imágenes. A su vez, para poder describir estas rectas, necesitamos fijar una referencia proyectiva.
+		Para demostrar que los puntos $P=l\cap h(l)$ se encuentran en una cónica, determinemos primero la homografía $h$. Es decir, dada una recta arbitraria del $\haz_A$, encontremos una expresión de su imagen. Para ello, dado que es una homografía, necesitamos tres puntos y sus imagenes, en este caso tres rectas y sus imágenes. A su vez, para poder describir estas rectas, necesitamos fijar una referencia proyectiva.
 		
 		Observemos que la recta $AB$ pertenece a ambos haces. Por tanto, tendrá tanto una imagen a través de $h$ como una imagen inversa. Esto nos permite tomar como referencia los puntos $A,B$ y $X_0=h^{-1}(AB)\cap h(AB)$, más un punto unidad $e$ que determinaremos más adelante. Podríamos preguntarnos el porqué de esta elección. Hagamos unas pequeñas observaciones y en seguida lo entenderemos.
 		
 		IMAGEN
 		
-		Notemos que $h^{-1}(AB)$ es una recta que pertenece al Haz($A$) y que pasa por $X_0$. Por tanto, no tiene más remedio que ser la recta $AX_0$. Lo mismo ocurre con la recta $h(AB)$, que pertenece al Haz($B$). Por ello, $h(AB)=BX_0$. Esto implica que $BX_0$ es la imagen, a través de la homografía, de $AB$ y que $AB$ es la imagen de $AX_0$. 
+		Notemos que $h^{-1}(AB)$ es una recta que pertenece al $\haz_A$ y que pasa por $X_0$. Por tanto, no tiene más remedio que ser la recta $AX_0$. Lo mismo ocurre con la recta $h(AB)$, que pertenece al $\haz_B$. Por ello, $h(AB)=BX_0$. Esto implica que $BX_0$ es la imagen, a través de la homografía, de $AB$ y que $AB$ es la imagen de $AX_0$. 
 		
-		Tenemos pues dos rectas ($AB$ y $AX_0$) y sus imágnes ($BX_0$ y $AB$). Nos falta una tercera, que será una recta $l$ del Haz($A$) distinta de $AB$. Tomemos entonces el punto unidad $e=l\cap h(l)$. De esta forma $l=Ae$ y $h(l)=Be$. Como hemos escogido la referencia \[\mf{R}=\{A,X_0,B;e\}=\{(1:0:0),(0:1:0),(0:0:1),(1:1:1)\}\]
+		Tenemos pues dos rectas ($AB$ y $AX_0$) y sus imágnes ($BX_0$ y $AB$). Nos falta una tercera, que será una recta $l$ del $\haz_A$ distinta de $AB$. Tomemos entonces el punto unidad $e=l\cap h(l)$. De esta forma $l=Ae$ y $h(l)=Be$. Como hemos escogido la referencia \[\mf{R}=\{A,X_0,B;e\}=\{(1:0:0),(0:1:0),(0:0:1),(1:1:1)\}\]
 		las ecuaciones implícitas de las rectas son
 		\begin{equation*}
 			AB:y=0, \quad AX_0: z=0, \quad BX_0:x=0, \quad l:y-z=0, \quad h(l):x-y=0
@@ -1333,7 +1333,7 @@ A continuación expondremos un resultado que relaciona cónicas y homografías e
 		de tal forma que la homografía
 		\begin{equation*}
 			\begin{array}{cccc}
-			h:& Haz(A)&\rightarrow&Haz(B)\\
+			h:&\haz_A&\rightarrow&\haz_B\\
 			&z=0 &\rightarrow& y=0\\
 			&y=0 &\rightarrow& x=0\\
 			&y-z=0 &\rightarrow& x-y=0
@@ -1343,23 +1343,23 @@ A continuación expondremos un resultado que relaciona cónicas y homografías e
 		
 		Para poder encontrar la expresión de la imagen de una recta arbitraria del haz con base $A$, debemos parametrizar ambos haces. Esto se puede hacer con dos cualesquiera de sus rectas. Tomemos las parametrizaciones
 		\begin{equation*}
-			Haz(A)=\{y-\theta z=0\tq \theta\in\proy^1\}, \quad Haz(B)=\{x-\theta y=0\tq \theta\in\proy^1\}
+			\haz_A=\{y-\theta z=0\tq \theta\in\overline{\K}\}, \quad \haz_B=\{x-\theta y=0\tq \theta\in\overline{\K}\}
 		\end{equation*}
-		Por tanto, la imagen de cualquier recta arbitraria del Haz($A$), que se puede escribir como $y-\theta z=0$, es la recta $x-\theta y=0$.
+		Por tanto, la imagen de cualquier recta arbitraria del $\haz_A$, que se puede escribir como $y-\theta z=0$, es la recta $x-\theta y=0$.
 		
-		Por fin podemos hallar la expresión de un punto $P=l\cap h(l)$ arbitrario. Este no será otro que la intersección de las rectas $y-\theta z=0$ y $x-\theta y=0$. Realizando este sencillo cálculo obtenemos que los puntos $P$ son los puntos $\{(\theta^2:\theta:1)\tq \theta\in\proy^1\}$. Dado que esta es la parametrización de una parábola, queda demostrado que engendran una cónica no degenerada. Por otro lado, la unicidad proviene del hecho de que cinco puntos, no estando cuatro de ellos alineados, determinan una única cónica.
+		Por fin podemos hallar la expresión de un punto $P=l\cap h(l)$ arbitrario. Este no será otro que la intersección de las rectas $y-\theta z=0$ y $x-\theta y=0$. Realizando este sencillo cálculo obtenemos que los puntos $P$ son los puntos $\{(\theta^2:\theta:1)\tq \theta\in\overline{\K}\}$. Dado que esta es la parametrización de una parábola, queda demostrado que engendran una cónica no degenerada. Por otro lado, la unicidad proviene del hecho de que cinco puntos, no estando cuatro de ellos alineados, determinan una única cónica.
 		
 		\item La homografía $h$ es una perspectividad. 
 		
-		Al ser una homografía, es claro que el conjunto de puntos $\{P=l\cap h(l)\tq l\in Haz(A)\}$ engendran una única cónica. Debemos demostrar que esta cónica es degenerada si y solo si $h$ es una perspectividad.
+		Al ser una homografía, es claro que el conjunto de puntos $\{P=l\cap h(l)\tq l\in \haz_A\}$ engendran una única cónica. Debemos demostrar que esta cónica es degenerada si y solo si $h$ es una perspectividad.
 		
-		Si la homografía $h$ es una perspectividad, entonces $h(l)=\engen{O^*\cap l,B}$, donde $O^*$ es la recta base de la perspectividad. Además, deja fija la recta $AB$. Por tanto, $\{P=l\cap h(l)\tq l\in Haz(A)\}=O^*\cup AB$, es decir, contiene una recta. Se concluye que la cónica es degenerada.
+		Si la homografía $h$ es una perspectividad, entonces $h(l)=\engen{O^*\cap l,B}$, donde $O^*$ es la recta base de la perspectividad. Además, deja fija la recta $AB$. Por tanto, $\{P=l\cap h(l)\tq l\in \haz_A\}=O^*\cup AB$, es decir, contiene una recta. Se concluye que la cónica es degenerada.
 		
-		Por otro lado, si la cónica engendrada por los puntos $P=l\cap h(l)$ con $l\in Haz(A)$ es degenerada, entonces será producto de dos rectas. Aplicando la observación~\ref{C8_obs_conicaProducto_union} se tiene que $\{P=l\cap h(l)\tq l\in Haz(A)\}=m\cup r$ para ciertas rectas $m$ y $r$. Basta demostrar que una de esas rectas es la recta $AB$. En tal caso, dado $P\in AB$ tal que $P=l\cap h(l)$ para cierta recta $l$ del haz con base $A$, se tiene que $l=PA$ y $h(l)=PB$. Como $P\in AB$, se concluye que $l=AB$ y $h(l)=AB$. Por tanto, la recta $AB$ queda fija. Esto implica que $h$ es perspectividad.
+		Por otro lado, si la cónica engendrada por los puntos $P=l\cap h(l)$ con $l\in\haz_A$ es degenerada, entonces será producto de dos rectas. Aplicando la observación~\ref{C8_obs_conicaProducto_union} se tiene que $\{P=l\cap h(l)\tq l\in \haz_A\}=m\cup r$ para ciertas rectas $m$ y $r$. Basta demostrar que una de esas rectas es la recta $AB$. En tal caso, dado $P\in AB$ tal que $P=l\cap h(l)$ para cierta recta $l$ del haz con base $A$, se tiene que $l=PA$ y $h(l)=PB$. Como $P\in AB$, se concluye que $l=AB$ y $h(l)=AB$. Por tanto, la recta $AB$ queda fija. Esto implica que $h$ es perspectividad.
 		
-		Demostremos por tanto que $m$ o $r$ es la recta $AB$. Recordemos del primer apartado que $A=h^{-1}(AB)\cap AB$ y $B=AB\cap h(AB)$. Por tanto, $A$ y $B$ pertenecen a la cónica, y, con ello, $A,B\in m\cup r$. Si ambos puntos se encuentran en la misma recta, no hay nada que demostrar. Supongamos, por tanto, que $A\in m$ y $B\in r\backslash r\cap m$, lo cual implica que $m\in Haz(A)$ y $r\in Haz(B)$, y lleguemos a un absurdo.
+		Demostremos por tanto que $m$ o $r$ es la recta $AB$. Recordemos del primer apartado que $A=h^{-1}(AB)\cap AB$ y $B=AB\cap h(AB)$. Por tanto, $A$ y $B$ pertenecen a la cónica, y, con ello, $A,B\in m\cup r$. Si ambos puntos se encuentran en la misma recta, no hay nada que demostrar. Supongamos, por tanto, que $A\in m$ y $B\in r\backslash r\cap m$, lo cual implica que $m\in \haz_A$ y $r\in \haz_B$, y lleguemos a un absurdo.
 		
-		Sea $l\in Haz(A)$ distinta de $m$. Entonces $P=l\cap h(l)\in r$, ya que en caso contrario $P\in m$ y entonces $l=PA=m$. Como $h(l)=PB$ y $P,B\in r$, se conlcuye que $h(l)=r$ para toda recta $l$ del Haz$(A)$ distinta de $m$. Esto es absurdo ya que $h$ es una homografía.
+		Sea $l\in \haz_A$ distinta de $m$. Entonces $P=l\cap h(l)\in r$, ya que en caso contrario $P\in m$ y entonces $l=PA=m$. Como $h(l)=PB$ y $P,B\in r$, se conlcuye que $h(l)=r$ para toda recta $l$ del $\haz_A$ distinta de $m$. Esto es absurdo ya que $h$ es una homografía.
 		
 		Con esto queda demostrado que $A,B$ deben pertenecer a la misma recta y, con ello, que $AB$ permanece fija.
 	\end{enumerate}
@@ -1373,7 +1373,7 @@ Veamos un ejemplo del teorema anterior.
 \begin{exa}[Aplicación del Teorema de Steiner] HACER CUENTAS EN SAGE
 	Calcúlese la cónica asociada a la homografía $h$ entre haces de rectas que transforma $x=-2z$, $3x+2y=2z$, $2x+3y=8z$ en las rectas $x-2y=-2z$, $x=2z$, $x+y=4z$, respectivamente.\\
 	
-	Para calcular la cónica debemos hallar los puntos de la forma $P=l\cap h(l)$. Para ello, tomaremos una recta genérica del primer haz y la cortaremos con su imagen, obteniendo así una parametrización de $\{P=l\cap h(l)\tq l\in Haz\}$, y con ello de la cónica.
+	Para calcular la cónica debemos hallar los puntos de la forma $P=l\cap h(l)$. Para ello, tomaremos una recta genérica del primer haz y la cortaremos con su imagen, obteniendo así una parametrización de $\{P=l\cap h(l)\tq l\in \haz\}$, y con ello de la cónica.
 	
 	Es necesario que primero parametricemos los haces de rectas. Las rectas dadas se corresponden con los siguientes puntos del dual:
 	\begin{equation*}
@@ -1388,7 +1388,7 @@ Veamos un ejemplo del teorema anterior.
 	
 	La parametrización de la cónica, los puntos $P=l\cap h(l)$, viene dada por la intersección de estas dos rectas. Este es un cálculo común, cuyo resultado es
 	\begin{equation*}
-		\mc{C}=\{(gsdgfsdadgdfghdf)\tq \theta\in\proy^1\}
+		\mc{C}=\{(gsdgfsdadgdfghdf)\tq \theta\in\overline{\K}\}
 	\end{equation*}
 	Podríamos hallar la matriz asociada a esta cónica. Para ello, dada una matriz genérica
 	\begin{equation*}
@@ -1421,11 +1421,11 @@ Como ya anticipamos, dado que las cónicas son un $\proy^1$, podemos definir en 
 \begin{proof}
 	Tomamos la referencia $\mf{R}=\{P,X_1,P';e\}$, de tal forma que $e\in\mc{C}$ sea distinto a $P$ y $P'$ y que $X_1$ sea el polo de $PP'$. Por la sección~\ref{C8_subsec_parametrizacion_como_parabola} sabemos que, en este referencia, la cónica se parametriza como
 	\begin{equation*}
-		\mc{C}=\{(\theta^2:\theta:1)\tq\theta\in\proy^1\}
+		\mc{C}=\{(\theta^2:\theta:1)\tq\theta\in\overline{\K}\}
 	\end{equation*}
-	Podemos describir una recta arbitraria de $\haz_P$ como $l=PQ$, siendo $l\cap\mc{C}=\{P,Q\}$. Dado que $Q$ es un punto de la cónica, tendrá coordenadas $(\theta^2:\theta:1)$. Además, por la referencia elegida, $P=(1:0:0)$. Con ello, $l:y-\theta z=0$. De la misma forma, su imagen ($h(l)=P'Q$) será la recta $x-\theta y=0$.
+	Podemos describir una recta arbitraria de $\haz_P$ como $l=PQ$, siendo $l\cap\mc{C}=\{P,Q\}$, es decir, tomamos Dado que $Q$ es un punto de la cónica, tendrá coordenadas $(\theta^2:\theta:1)$. Además, por la referencia elegida, $P=(1:0:0)$. Con ello, $l:y-\theta z=0$. De la misma forma, su imagen ($h(l)=P'Q$) será la recta $x-\theta y=0$.
 	
-	Por tanto, la aplicación proyectiva $h$ transforma $y-\theta z=0$ en $x-\theta y=0$.
+	Por tanto, la aplicación proyectiva $h$ transforma $y-\theta z=0$ en $x-\theta y=0$. Pasando a coordenadas no homogéneas, $h:\theta\rightarrow \theta$, por lo que es la identidad y, por tanto, es homografía.
 \end{proof}
 \begin{obs}
 	Observamos que este teorema es el recíproco del Teorema de Steiner.

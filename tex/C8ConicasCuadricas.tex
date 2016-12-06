@@ -394,12 +394,12 @@ Pongamos en valor este último resultado con un ejemplo.
 \begin{exa}[Cálculo de la Matriz de una Cuádrica]
 	Dadas las siguientes cónicas, calculemos automáticamente sus matrices asociadas obteniendo la mitad de las matrices Hessianas de los polinomios.
 	\[\begin{array}{c}
-	C_1:x^2+y^2+z^2=0\leadsto\frac{1}{2}\begin{pmatrix}
+	\mc{C}_1:x^2+y^2+z^2=0\leadsto\frac{1}{2}\begin{pmatrix}
 	1 & 0 & 0\\
 	0 & 1 & 0\\
 	0 & 0 & 1
 	\end{pmatrix}\\
-	C_2:x^2+y^2+2z^2=0\leadsto\frac{1}{2}\begin{pmatrix}
+	\mc{C}_2:x^2+y^2+2z^2=0\leadsto\frac{1}{2}\begin{pmatrix}
 	1 & 0 & 0\\
 	0 & 1 & 0\\
 	0 & 0 & 2
@@ -660,7 +660,7 @@ Para que esta clasificación no resulte demasiado abstracta al lector, pongamos 
 \begin{exa}[Elipse]
 	\label{C8_exa_elipse}
 	Consideramos la cónica dada por la siguiente ecuación:
-	\[C:x^2+y^2-z^2=0\]
+	\[\mc{C}:x^2+y^2-z^2=0\]
 	Intersequemos la cónica con la recta $l_\infty:z=0$ para poder clasificarla.
 	\[\left.\begin{array}{c}
 	x^2+y^2-z^2=0\\
@@ -670,9 +670,9 @@ Para que esta clasificación no resulte demasiado abstracta al lector, pongamos 
 \end{exa}
 \begin{exa}[Hipérbola]
 	Clasifiquemos la cónica de ecuación:
-	\[C:X^2-Y^2=1\]
+	\[\mc{C}:X^2-Y^2=1\]
 	Antes de que cunda el pánico, nótese que esta ecuación nos viene dada en forma ``deshomogeneizada'' (si no no sería la ecuación de una cónica). Al homogeneizarla nos queda algo bastante más familiar:
-	\[C:x^2-y^2-z^2=0\]
+	\[\mc{C}:x^2-y^2-z^2=0\]
 	Calculemos los puntos de corte con $z=0$:
 	\[\left.\begin{array}{c}
 	x^2-y^2-z^2=0\\
@@ -682,17 +682,17 @@ Para que esta clasificación no resulte demasiado abstracta al lector, pongamos 
 	\[\begin{array}{cc}
 	\class{(\lambda,\lambda,0)}=(1:1:0)\qquad & \qquad \class{(\lambda,-\lambda,0)}=(1:-1:0)
 	\end{array}\]
-	Por ende, la cónica $C$ tiene dos puntos de corte con la recta del infinito, esto significa que es de tipo hiperbólico.
+	Por ende, la cónica $\mc{C}$ tiene dos puntos de corte con la recta del infinito, esto significa que es de tipo hiperbólico.
 \end{exa}
 \begin{exa}[Parábola]
 	Se nos da la siguiente cónica en forma no homogénea:
-	\[C:Y=X^2\]
+	\[\mc{C}:Y=X^2\]
 	Calculemos (tras homogeneizar) los puntos de corte de la misma con $l_\infty$.
 	\[\left.\begin{array}{c}
 	zy-x^2=0\\
 	z=0
 	\end{array}\right\}\leadsto x^2=0\]
-	Teniendo en cuenta esto, los puntos que cumplen las restricciones impuestas por ambas ecuaciones son los de la forma $(0,\lambda,0)$ (los cuales, además, son solución doble). Estos generan un único rayo. Por ende, la cónica y la recta del infinito únicamente se cortan en un punto. Esto es lo mismo que decir que $C$ es una parábola.
+	Teniendo en cuenta esto, los puntos que cumplen las restricciones impuestas por ambas ecuaciones son los de la forma $(0,\lambda,0)$ (los cuales, además, son solución doble). Estos generan un único rayo. Por ende, la cónica y la recta del infinito únicamente se cortan en un punto. Esto es lo mismo que decir que $\mc{C}$ es una parábola.
 \end{exa}
 \section{Deshomogeneizaciones de una Cónica}
 
@@ -742,22 +742,22 @@ Al igual que hicimos con cónicas no degeneradas, realizaremos una clasificació
 \begin{defi}
 	Diremos que una cónica, dada por la ecuación
 	\begin{equation}
-	C:X^tAX=0
+	\mc{C}:X^tAX=0
 	\end{equation}
 	es \ti{degenerada} si contiene una recta.
 \end{defi}
 
 Esta definición de cónica degenerada no es muy manejable. Por ello, veamos la siguiente proposición
 \begin{prop}\label{C8_prop_rango_menor_3_degenerada}
-	Sea $C$ una cónica cuya matriz en cierta referencia es $A$. Si $rg(A)<3$ entonces $C$ es una cónica degenerada.
+	Sea $\mc{C}$ una cónica cuya matriz en cierta referencia es $A$. Si $rg(A)<3$ entonces $\mc{C}$ es una cónica degenerada.
 \end{prop}
 
 \begin{proof}
-	Para demostrar que la cónica $C$ es degenerada veamos que contiene una recta. Si el rango de la matriz $A$ es menor que $3$, entonces el núcleo de $A$ no es vacío. Por tanto, existe un vector $y_0$ tal que $AY_0=0$, donde $Y_0$ representa el vector columna de $y_0$. Esto implica que $Y_0^tAY_0=0$, por lo que, al menos, el punto $[y_0]$ pertenece a la cónica.
+	Para demostrar que la cónica $\mc{C}$ es degenerada veamos que contiene una recta. Si el rango de la matriz $A$ es menor que $3$, entonces el núcleo de $A$ no es vacío. Por tanto, existe un vector $y_0$ tal que $AY_0=0$, donde $Y_0$ representa el vector columna de $y_0$. Esto implica que $Y_0^tAY_0=0$, por lo que, al menos, el punto $[y_0]$ pertenece a la cónica.
 	
 	Sea $[z_0]$ otro punto de la cónica, distinto de $[y_0]$. Veamos que la recta $YZ$ generada por $[z_0]$ e $[y_0]$ está contenida en la cónica. Con esto quedaría demostrado que la cónica es degenerada.
 	
-	Sea un punto $[y_0+\theta z_0]$ de la recta $YZ$. Si este punto perteneciese a $C$ para todo $\theta$, la recta $YZ$ estaría contenida en la cónica. Veamos que cumple la ecuación de la cónica, sea cual sea el valor de $\theta$:
+	Sea un punto $[y_0+\theta z_0]$ de la recta $YZ$. Si este punto perteneciese a $\mc{C}$ para todo $\theta$, la recta $YZ$ estaría contenida en la cónica. Veamos que cumple la ecuación de la cónica, sea cual sea el valor de $\theta$:
 	\begin{equation}\label{C8_eq_joanch_conicas_deg}
 	(Y_0+\theta Z_0)^tA(Y_0+\theta Z_0)=Y_0^tAY_0+\theta Y_0^tAZ_0+\theta Z_0^tAY_0+\theta^2Z_0^tAZ_0=Y_0^tAY_0+2\theta Z_0^tAY_0+\theta^2Z_0^tAZ_0
 	\end{equation}
@@ -771,9 +771,9 @@ Esta definición de cónica degenerada no es muy manejable. Por ello, veamos la 
 A continuación veamos un teorema que nos da la expresión de una cónica degenerada.
 
 \begin{theo}\label{C8_theo_conica_degenerada_es_producto_rectas}
-	Una cónica $C$ es degenerada si y solo si es producto de dos rectas. Es decir, es de la forma
+	Una cónica $\mc{C}$ es degenerada si y solo si es producto de dos rectas. Es decir, es de la forma
 	\begin{equation}
-	C:l\cdot m=0 \quad o \quad C:l^2=0
+	\mc{C}:l\cdot m=0 \quad o \quad \mc{C}:l^2=0
 	\end{equation}
 	donde $l$ y $m$ son rectas distintas.
 \end{theo}
@@ -781,9 +781,9 @@ A continuación veamos un teorema que nos da la expresión de una cónica degene
 \begin{proof}
 	$\bla$ Esta implicación quedó demostrada en la observación~\ref{C8_obs_conicaProducto_union}. En ella se vio que, si una cónica es producto de dos rectas (iguales o distintas), entonces contiene una recta, siendo, por tanto, una cónica degenerada.
 	
-	$\bra$ Sea la cónica $C$ descrita por la ecuación
+	$\bra$ Sea la cónica $\mc{C}$ descrita por la ecuación
 	\begin{equation}\label{eq_conica_teo_degenerada}
-	C: ax^2+by^2+cz^2+2fyz+2gxz+2hxy=0
+	\mc{C}: ax^2+by^2+cz^2+2fyz+2gxz+2hxy=0
 	\end{equation}
 	Si es degenerada entonces, por definición, contiene una recta $l$. Cambiando de referencia, si es preciso, podemos suponer que la recta es $l:x=0$. Dado que la recta está contenida en la cónica, la ecuación~\eqref{eq_conica_teo_degenerada} debe anularse en todos los puntos de la recta, es decir, en todos los puntos de la forma $(0,y,z)$ cualesquiera que sean $z$ e $y$. Con ello
 	\begin{equation}
@@ -791,15 +791,15 @@ A continuación veamos un teorema que nos da la expresión de una cónica degene
 	\end{equation}
 	La cónica pasa a ser
 	\begin{equation}
-	C: ax^2+2gxz+2hxy=x(ax+2gz+2hy)=0
+	\mc{C}: ax^2+2gxz+2hxy=x(ax+2gz+2hy)=0
 	\end{equation}
-	donde $ax+2gz+2hy=0$ es la ecuación implícita de una recta. Se obtiene así que $C:l\cdot m=0$ donde $m$ puede ser igual o distinta a $l$.
+	donde $ax+2gz+2hy=0$ es la ecuación implícita de una recta. Se obtiene así que $\mc{C}:l\cdot m=0$ donde $m$ puede ser igual o distinta a $l$.
 \end{proof}
 
 Una vez demostrado este teorema podemos hacer una clasificación de las cónicas degeneradas atendiendo al rango de $A$. Para ello demostremos primero el siguiente lema.
 
 \begin{lem}\label{C8_lem_nucleo_interseccion_rectas}
-	Sea $C:l\cdot m=0$ una cónica degenerada con matriz $A$ simétrica. Entonces, el núcleo de $A$ es la intersección de las rectas $l$ y $m$.
+	Sea $\mc{C}:l\cdot m=0$ una cónica degenerada con matriz $A$ simétrica. Entonces, el núcleo de $A$ es la intersección de las rectas $l$ y $m$.
 \end{lem}
 
 \begin{proof}
@@ -831,7 +831,7 @@ Sabemos que una cónica degenerada es producto de dos rectas distintas o de dos 
 
 Todas estas deducciones pueden hacerse en sentido inverso aplicando el lema~\ref{C8_lem_nucleo_interseccion_rectas}. Sin embargo, recordemos que esto ya había sido demostrado, a través de otro razonamiento, en el apartado ''Rango de la Matriz de una Cónica producto de Rectas" de la sección~\ref{C8_subsec_producto_rectas}. Como prometimos, aquí está la otra implicación.
 
-Resumiendo, sea una cónica degenerada $C:l\cdot m=0$, entonces
+Resumiendo, sea una cónica degenerada $\mc{C}:l\cdot m=0$, entonces
 \begin{equation}
 \begin{split}
 l\not=m &\Leftrightarrow rg(A)=2,\\
@@ -844,7 +844,7 @@ Veamos un ejemplo de como hallar la expresión de una cónica degenerada.
 \begin{exa}
 	Sea la cónica degenerada
 	\begin{equation}
-	C: x^2-y^2-xz+yz=0
+	\mc{C}: x^2-y^2-xz+yz=0
 	\end{equation}
 	Expresar la cónica como producto de dos rectas.
 	
@@ -861,7 +861,7 @@ Veamos un ejemplo de como hallar la expresión de una cónica degenerada.
 	-1&1&0
 	\end{array}\right)
 	\end{equation}
-	Se trata de hacer con una cónica concreta lo explicado en la demostración del lema~\ref{C8_lem_nucleo_interseccion_rectas}. Si el núcleo de la matriz $A$ de la cónica es una recta, entonces la cónica es de la forma $l^2=0$ y la recta del núcleo es precisamente la recta $l$. Sino, como ocurre en este caso, dado un punto del núcleo de $A$, la recta generada por él y por otro punto distinto de la cónica está contenida en ella. Por tanto, si hallamos dos puntos pertenecientes a la cónica, distintos entre ellos y al núcleo de la matriz, podremos generar dos rectas distintas, que serán las rectas de $C$.
+	Se trata de hacer con una cónica concreta lo explicado en la demostración del lema~\ref{C8_lem_nucleo_interseccion_rectas}. Si el núcleo de la matriz $A$ de la cónica es una recta, entonces la cónica es de la forma $l^2=0$ y la recta del núcleo es precisamente la recta $l$. Sino, como ocurre en este caso, dado un punto del núcleo de $A$, la recta generada por él y por otro punto distinto de la cónica está contenida en ella. Por tanto, si hallamos dos puntos pertenecientes a la cónica, distintos entre ellos y al núcleo de la matriz, podremos generar dos rectas distintas, que serán las rectas de $\mc{C}$.
 	
 	Buscamos pues el núcleo de la matriz $A$.
 	\begin{equation}
@@ -876,7 +876,7 @@ Veamos un ejemplo de como hallar la expresión de una cónica degenerada.
 	-x+y=0
 	\end{cases}
 	\end{equation}
-	Por tanto, el núcleo de $A$ es el punto $y_0=(x:y:2x)=(1:1:2)$. Lo más fácil para conseguir dos puntos de la cónica $C$ distintos entre ellos y a $y_0$ es intersecar la cónica con una recta, que no contenga a $y_0$. En este caso, por ejemplo, elegimos la recta $z=0$. La intersección viene dada por:
+	Por tanto, el núcleo de $A$ es el punto $y_0=(x:y:2x)=(1:1:2)$. Lo más fácil para conseguir dos puntos de la cónica $\mc{C}$ distintos entre ellos y a $y_0$ es intersecar la cónica con una recta, que no contenga a $y_0$. En este caso, por ejemplo, elegimos la recta $z=0$. La intersección viene dada por:
 	\begin{equation}
 	\begin{cases}
 	x^2-y^2-xz+yz=0\\
@@ -890,14 +890,15 @@ Veamos un ejemplo de como hallar la expresión de una cónica degenerada.
 	y_0w_0&:x+y-z=0
 	\end{split}
 	\end{equation}
-	Por tanto, la cónica $C$ es
+	Por tanto, la cónica $\mc{C}$ es
 	\begin{equation}
-	C: (x-y)(x+y-z)=0
+	\mc{C}: (x-y)(x+y-z)=0
 	\end{equation}
 \end{exa}
 Cualquiera diría que este es el procedimiento habitual para hallar la expresión de una cónica degenerada como producto de rectas. Desde luego, no lo es. Más adelante veremos como hacer esto decentemente.
 \begin{obs}
-	La intersección entre una cónica y una recta viene dada por una ecuación de segundo grado, que tendrá dos soluciones (bien sean distintas o dobles). Por tanto, siempre nos es posible encontrar una recta que corte en dos puntos con la cónica.
+	\label{C8_obs_conica_recta_interseccion2puntos}
+	La intersección entre una cónica y una recta viene dada por una ecuación de segundo grado, que tendrá dos soluciones (bien sean distintas o dobles). Por tanto, una recta siempre corta en dos puntos con la cónica (distintos o iguales).
 	
 	En efecto, una recta viene parametrizada por dos puntos $y_0$ y $z_0$ de la forma $[y_0+\theta z_0]$. La intersección de esta recta con la cónica serán aquellos puntos, es decir aquellos valores de $\theta$, para los que el vector columna $Y_0+\theta Z_0$ cumple la ecuación de la cónica. La ecuación resultante de sustituir dicho vector en la ecuación de la cónica es la mostrada en la ecuación~\eqref{C8_eq_joanch_conicas_deg}, que es de segundo grado en la variable $\theta$. Más adelante daremos nombre a esta ecuación.
 \end{obs}
@@ -920,11 +921,11 @@ La recta polar del punto $P$ respecto a una cónica se denota Polar($P$). Equiva
 
 A partir de la definición determinemos la ecuación implícita de la recta polar de un punto $P$. Aunque la definición es válida para cualquier punto $P$, ya esté en la cónica, sea exterior a ella o interior, comenzaremos tomando un punto $P$ que se encuentre fuera de la cónica. 
 
-Así pues, sea $C$ una cónica, cuya ecuación viene dada por
+Así pues, sea $\mc{C}$ una cónica, cuya ecuación viene dada por
 \begin{equation}
 X^tAX=0,
 \end{equation}
-y un punto $P$ exterior a $C$. Sea una recta arbitraria $r$ del haz de base $P$ tal que $r\cap C=\{M,N\}$, con $M$ y $N$ distintos. Buscamos los puntos $P'$ tales que $\{M,N;P,P'\}=-1$. Por tanto, $P'$ debe estar en la recta $r$. Parametrizamos la recta $r$, tomando representantes de los puntos $P=[\vec{p}]$ y $P'=[\vec{p}']$:
+y un punto $P$ exterior a $\mc{C}$. Sea una recta arbitraria $r$ del haz de base $P$ tal que $r\cap \mc{C}=\{M,N\}$, con $M$ y $N$ distintos. Buscamos los puntos $P'$ tales que $\{M,N;P,P'\}=-1$. Por tanto, $P'$ debe estar en la recta $r$. Parametrizamos la recta $r$, tomando representantes de los puntos $P=[\vec{p}]$ y $P'=[\vec{p}']$:
 \begin{equation*}
 	r:[\vec{p}+\theta \vec{p}']
 \end{equation*}
@@ -938,7 +939,7 @@ Por tanto,
 \begin{equation}
 -1=\{M,N;P,P'\}=\{\theta_M,\theta_N;0,\infty\}\Leftrightarrow \theta_M=-\theta_N
 \end{equation}
-Tenemos así una restricción para los puntos $M$ y $N$. Recordemos que además son la intersección de la recta $r$ con la cónica $C$. Los puntos de corte viene dados por la ecuación
+Tenemos así una restricción para los puntos $M$ y $N$. Recordemos que además son la intersección de la recta $r$ con la cónica $\mc{C}$. Los puntos de corte viene dados por la ecuación
 \begin{equation}
 (\vec{P}^t+\theta \vec{P}')^tA(\vec{P}^t+\theta \vec{P}')=\vec{P}^tA\vec{P}+2\theta \vec{P}^tA\vec{P}'+\theta^2\vec{P}'^tA\vec{P}'=0
 \end{equation}
@@ -957,13 +958,16 @@ El punto $P$ y la matriz $A$ son conocidos, por tanto, el producto $\vec{P}^tA$ 
 x\\ y\\ z
 \end{array}\right) =0
 \end{equation}
-Notemos que esto es la ecuación de una recta con coeficientes $u_1,u_2$ y $u_3$. Dado que los puntos que cumplen la ecuación son los $P'$, esta no es otra que la ecuación implícita de la recta polar del punto $P$ respecto a la cónica $C$.
+Notemos que esto es la ecuación de una recta con coeficientes $u_1,u_2$ y $u_3$. Dado que los puntos que cumplen la ecuación son los $P'$, esta no es otra que la ecuación implícita de la recta polar del punto $P$ respecto a la cónica $\mc{C}$.
 
 Es decir, los coeficientes de la recta Polar(P) vienen dados por
 \begin{equation}
 u=\vec{P}^tA\Rightarrow u^t=A\vec{P}
 \end{equation}
-Si el punto $P$ fuese interior a la cónica, los puntos de corte de las rectas del haz con base $P$ y la cónica $C$ serían puntos imaginarios conjugados.
+Si el punto $P$ fuese interior a la cónica, los puntos de corte de las rectas del haz con base $P$ y la cónica $\mc{C}$ serían puntos imaginarios conjugados.
+\begin{obs}
+	Si $l_0$ es la recta polar del punto $P$, es decir, si $P$ es el polo de $l_0$, entonces $P=A^*l_0$.
+\end{obs}
 \begin{obs}
 	Conviene recordar la notación utilizada en este apartado, pues será usada en ocasiones de aquí en adelante. En concreto, $P$ es un punto proyectivo tal que $P=[\vec{p}]$ y $\vec{P}$ es el vector columna de $\vec{p}$.
 \end{obs}
@@ -994,7 +998,7 @@ Al principio de esta sección se mostró una construcción geométrica y en ella
 	Una recta es \ti{tangente} a una cónica si la corta en un punto con multiplicidad mayor que uno.
 \end{defi}
 \begin{lem}
-	Sea $r$ la recta polar de un punto $P$ respecto a una cónica $C$, con matriz $A$. Entonces, las rectas $PP_i'$ con $i=0,1$, donde $P_i'$ son los puntos de corte de la recta polar con la cónica, son tangentes a $C$.
+	Sea $r$ la recta polar de un punto $P$ respecto a una cónica $\mc{C}$, con matriz $A$. Entonces, las rectas $PP_i'$ con $i=0,1$, donde $P_i'$ son los puntos de corte de la recta polar con la cónica, son tangentes a $\mc{C}$.
 \end{lem}
 \begin{proof}
 	La recta $PP_0'$ tiene como ecuación paramétrica
@@ -1009,7 +1013,7 @@ Al principio de esta sección se mostró una construcción geométrica y en ella
 	\begin{equation}
 	\vec{P}^tA\vec{P}=0
 	\end{equation}
-	Recordemos que esta era una ecuación de segundo grado con solución doble $\theta=\infty$. Por tanto, el punto de corte de la recta $PP_0'$ con la cónica, que es $[\vec{p}+\infty\vec{p_0}']=P_0'$, es doble, por lo que su multiplicidad es mayor que uno. Se conlcuye así que la recta $PP_0'$ es tangente a la cónica. De forma análoga $PP_1'$ es tangente a $C$.
+	Recordemos que esta era una ecuación de segundo grado con solución doble $\theta=\infty$. Por tanto, el punto de corte de la recta $PP_0'$ con la cónica, que es $[\vec{p}+\infty\vec{p_0}']=P_0'$, es doble, por lo que su multiplicidad es mayor que uno. Se conlcuye así que la recta $PP_0'$ es tangente a la cónica. De forma análoga $PP_1'$ es tangente a $\mc{C}$.
 \end{proof}
 
 \begin{obs}
@@ -1027,7 +1031,7 @@ Existen diversas formas de parametrizar cónicas no degeneradas. Sin embargo, ha
 \label{C8_subsec_parametrizacion_como_parabola}
 Recordemos que, al hablar de cónicas y cambios de referencia, pusimos la mano en el fuego al intuir que, con un cambio de referencia adecuado, podríamos trasformar una cónica en cualquier otra (preservando la degeneración). Esta parametrización es una muestra de que, efectivamente, es posible. Desarrollémosla en detalle.\\
 
-Dada una cónica no degenerada $C$ en cierta referencia proyectiva, realizaremos un cambio de referencia de tal forma que, la ecuación de la cónica en la referencia final, sea la ecuación de una parábola. De esta forma, bastará con parametrizar una parábola para obtener la parametrización de cualquier cónica no degenerada.
+Dada una cónica no degenerada $\mc{C}$ en cierta referencia proyectiva, realizaremos un cambio de referencia de tal forma que, la ecuación de la cónica en la referencia final, sea la ecuación de una parábola. De esta forma, bastará con parametrizar una parábola para obtener la parametrización de cualquier cónica no degenerada.
 
 Para ello, tomemos dos puntos $X_0$ y $X_2$ de la cónica y escojamos $X_1$ como el punto de corte de las rectas tangentes a la cónica en $X_0$ y $X_2$. Nuestra referencia será $\mf{R}=\{X_0,X_1,X_2;e\}$, donde $e$ es un punto de la cónica distinto al resto.
 
@@ -1041,7 +1045,7 @@ Hallemos la matriz de la cónica resultante de realizar este cambio de referenci
 	g & f & c
 	\end{array}\right) 
 \end{equation*}
-Como $X_0\in C$, debe cumplir la ecuación de la cónica en la nueva referencia. Dado que en esta referencia $X_0=(1:0:0)$, debe cumplirse la siguiente ecuación:
+Como $X_0\in \mc{C}$, debe cumplir la ecuación de la cónica en la nueva referencia. Dado que en esta referencia $X_0=(1:0:0)$, debe cumplirse la siguiente ecuación:
 \begin{equation*}
 	\begin{pmatrix}
 		1 & 0 & 0
@@ -1050,7 +1054,7 @@ Como $X_0\in C$, debe cumplir la ecuación de la cónica en la nueva referencia.
 		1\\0\\0
 	\end{array}\right) =0\sii a=0
 \end{equation*}
-Realizando la misma operación para el punto $X_2=(0:0:1)$ se tiene que $X_2\in C\sii c=0$. Con ello, la matriz de la cónica queda
+Realizando la misma operación para el punto $X_2=(0:0:1)$ se tiene que $X_2\in \mc{C}\sii c=0$. Con ello, la matriz de la cónica queda
 \begin{equation*}
 	A=\left( \begin{array}{ccc}
 		0 & h & g\\
@@ -1116,7 +1120,7 @@ Si escribimos la ecuación de la cónica en esta referencia, a partir de la matr
 \begin{equation*}
 	ky^2=-2xz
 \end{equation*}
-Esta ya es la ecuación de una parábola. Sin embargo, podemos ir más allá. Nuestro punto unidad ha sido olvidado, pero recordemos que lo escogimos de tal forma que perteneciese a la cónica. Por tanto, $(1:1:1)\in C$. Sustituyéndolo en la ecuación anterior obtenemos que $k=-2$. Así, la ecuación de la cónica, en la referencia proyectiva $\mf{R}$, es
+Esta ya es la ecuación de una parábola. Sin embargo, podemos ir más allá. Nuestro punto unidad ha sido olvidado, pero recordemos que lo escogimos de tal forma que perteneciese a la cónica. Por tanto, $(1:1:1)\in \mc{C}$. Sustituyéndolo en la ecuación anterior obtenemos que $k=-2$. Así, la ecuación de la cónica, en la referencia proyectiva $\mf{R}$, es
 \begin{equation}
 	y^2=xz
 \end{equation}
@@ -1142,10 +1146,9 @@ Veremos a continuación un ejemplo concreto, pero antes, una pequeña observaci�
 \end{obs}
 Vayamos con el ejemplo prometido.
 \begin{exa}[Parametrización de cónicas]\label{C8_exa_parametrizacion_parabola}
-	HACER LAS CUENTAS EN SAGE
 	Parametrizar la cónica dada por la siguiente ecuación:
 	\begin{equation}
-		C:4x^2+xy+y^2-23xz-5yz+30z^2=0
+		\mc{C}:4x^2+xy+y^2-23xz-5yz+30z^2=0
 	\end{equation}
 	La matriz de la cónica es 
 	\begin{equation*}
@@ -1187,11 +1190,11 @@ Vayamos con el ejemplo prometido.
 		-1 & 0 & 0
 		\end{array}\right)
 	\end{equation*}
-	Por tanto, la parametrización de la cónica $C$ en la referencia $\mf{R}$ es 
+	Por tanto, la parametrización de la cónica $\mc{C}$ en la referencia $\mf{R}$ es 
 	\begin{equation*}
-	 C=\{(\theta^2:\theta:1)\tq \theta\in\overline{\K}\}
+	 \mc{C}=\{(\theta^2:\theta:1)\tq \theta\in\overline{\K}\}
 	\end{equation*}
-	Para parametrizar $C$ en la referencia inicial solo es necesario realizar un cambio de coordenadas. Si $X$ son las coordenadas de un punto en la referencia inicial y $\overline{X}$ las coordenadas de un punto en la referencia $\mf{R}$, sabemos que se cumple
+	Para parametrizar $\mc{C}$ en la referencia inicial solo es necesario realizar un cambio de coordenadas. Si $X$ son las coordenadas de un punto en la referencia inicial y $\overline{X}$ las coordenadas de un punto en la referencia $\mf{R}$, sabemos que se cumple
 	\begin{equation*}
 		\rho X=M\overline{X}
 	\end{equation*}
@@ -1200,15 +1203,15 @@ Vayamos con el ejemplo prometido.
 		X^t=(M\overline{X})^t=
 		\begin{pmatrix}
 		\theta^2 & \theta & 1
-		\end{pmatrix}M^t=(dsakdjalksjdkla)
+		\end{pmatrix}M^t=(8\theta^2-3\theta+27,12\theta^2-3\theta-9,4\theta^2+3\theta+9)
 	\end{equation}
-	Finalmente, la parametrización de la cónica $C$ pedida es
+	Finalmente, la parametrización de la cónica $\mc{C}$ pedida es
 	\begin{equation*}
-		C=\{(dsakdjalksjdkla)\tq \theta\in\overline{\K}\}
+		\mc{C}=\{(8\theta^2-3\theta+27,12\theta^2-3\theta-9,4\theta^2+3\theta+9)\tq \theta\in\overline{\K}\}
 	\end{equation*}
 \end{exa}
 \begin{obs}[Una cónica es un $\proy^1$] HACER BIEN
-	Una vez que sabemos parametrizar cónicas es cuestión de segundos darnos cuenta de que estamos tratando la cónicas como un $\proy^1$. En efecto, consideramos la referencia utilizada durante toda esta sección, $\mf{R}=\{X_0,X_1,X_2;e\}$ con $X_0,X_2,e\in C$. La aplicación
+	Una vez que sabemos parametrizar cónicas es cuestión de segundos darnos cuenta de que estamos tratando la cónica como un $\proy^1$. En efecto, consideramos la referencia utilizada durante toda esta sección, $\mf{R}=\{X_0,X_1,X_2;e\}$ con $X_0,X_2,e\in \mc{C}$. La aplicación
 	\[\begin{array}{cccc}
 		h:& \mc{C}&\rightarrow &\proy^1\\
 		&X&\rightarrow &\theta\\
@@ -1219,6 +1222,8 @@ Vayamos con el ejemplo prometido.
 	es la aplicación proyectiva identidad.
 	
 	Esto es realmente bello, ya que podremos definir en una cónica todo aquello que definíamos en un $\proy^1$: razón doble, homografías, involuciones, etc.
+	
+	Hay que tener cuidado y no confundirnos con la observación~\ref{C8_obs_conica_p5}. Cada cónica puede considerarse un $\proy^1$ y, a su vez, cada cónica es un punto en $\proy^5$.
 \end{obs}
 \begin{obs}
 	Una vez que tenemos la cónica parametrizada, si queremos recuperar la matriz de la cónica, lo único que debemos hacer es obligar a la parametrización a cumplir la ecuación de la cónica y hallar así los coeficientes de la matriz.
@@ -1228,17 +1233,17 @@ Vayamos con el ejemplo prometido.
 Un resultado inmediato de la sección anterior es el siguiente.
 \begin{lem}
 	\label{C8_lem_conicas_polinomios}
-	Dada una cónica $C$ en cierta referencia $\mf{R}$, esta puede parametrizarse como 
+	Dada una cónica $\mc{C}$ en cierta referencia $\mf{R}$, esta puede parametrizarse como 
 	\begin{equation}
 	\label{C8_eq_parametrizacion_polinomios}
-	C=\{(p_1(\theta):p_2(\theta):p_3(\theta))\tq\theta\in\overline{\K}\}
+	\mc{C}=\{(p_1(\theta):p_2(\theta):p_3(\theta))\tq\theta\in\overline{\K}\}
 	\end{equation}
 	donde $p_1(\theta),p_2(\theta),p_3(\theta)$ son polinomios de grado menor o igual que 2 linealmente independientes.
 	
 	Recíprocamente, dados tres polinomios de grado menor o igual que 2 linealmente independientes, estos parametrizan una cónica.
 \end{lem}
 \begin{proof}
-	Sea una cónica $C$ en la referencia $\mf{R}$, veamos que puede parametrizarse como indica la ecuación~\eqref{C8_eq_parametrizacion_polinomios}. Si $C$ es una parábola el resultado es trivial. Supongamos, por tanto, que, en dicha referencia, $C$ no es una parábola. Tomemos entonces la referencia $\overline{\mf{R}}$ en la cual la cónica se parametriza como la parábola $y^2=xz$. Sea $M$ la matriz de cambio de la referencia $\overline{\mf{R}}$ a la referencia $\mf{R}$. Como vimos en el ejemplo~\ref{C8_exa_parametrizacion_parabola} , un punto genérico de la cónica en la referencia $\mf{R}$ puede escribirse como
+	Sea una cónica $\mc{C}$ en la referencia $\mf{R}$, veamos que puede parametrizarse como indica la ecuación~\eqref{C8_eq_parametrizacion_polinomios}. Si $\mc{C}$ es una parábola el resultado es trivial. Supongamos, por tanto, que, en dicha referencia, $\mc{C}$ no es una parábola. Tomemos entonces la referencia $\overline{\mf{R}}$ en la cual la cónica se parametriza como la parábola $y^2=xz$. Sea $M$ la matriz de cambio de la referencia $\overline{\mf{R}}$ a la referencia $\mf{R}$. Como vimos en el ejemplo~\ref{C8_exa_parametrizacion_parabola} , un punto genérico de la cónica en la referencia $\mf{R}$ puede escribirse como
 	\begin{equation}
 		X=M\overline{X}=M
 		\left( \begin{array}{c}
@@ -1365,12 +1370,13 @@ A continuación expondremos un resultado que relaciona cónicas y homografías e
 	\end{enumerate}
 \end{proof}
 \begin{obs}
+	\label{C8_homografia_Steiner_tangentes}
 	Sabemos que, dada una homografía $h$ entre haces de rectas, los puntos $P=l\cap h(l)$ son una cónica. Recordemos que $A$ y $B$ pertenecían a la cónica. Por tanto, la recta $l$ corta a la cónica en los puntos $P$ y $A$. Con ello,  $h(l)$ es la recta que pasa por $B$ y $P$, siendo este último el punto de corte de $l$ con la cónica distinto de $A$. Gracias a esto podemos saber adonde manda $h$ determinadas rectas del haz. 
 	
 	En concreto, la tangente $l$ a la cónica en el punto $A$ se transforma en la recta $AB$. En efecto, abusando del lenguaje, podemos decir que la tangente a $A$ corta a la cónica en el punto $A$ y en el punto $A$. Dado que su imagen es la recta que pasa por $B$ y el otro punto de corte que no es $A$, $h(l)$ es la recta $AB$. De forma similar se deduce que $AB$ se transforma en la recta tangente a $B$.
 \end{obs}
 Veamos un ejemplo del teorema anterior.
-\begin{exa}[Aplicación del Teorema de Steiner] HACER CUENTAS EN SAGE
+\begin{exa}[Aplicación del Teorema de Steiner] REVISAR CUENTAS
 	Calcúlese la cónica asociada a la homografía $h$ entre haces de rectas que transforma $x=-2z$, $3x+2y=2z$, $2x+3y=8z$ en las rectas $x-2y=-2z$, $x=2z$, $x+y=4z$, respectivamente.\\
 	
 	Para calcular la cónica debemos hallar los puntos de la forma $P=l\cap h(l)$. Para ello, tomaremos una recta genérica del primer haz y la cortaremos con su imagen, obteniendo así una parametrización de $\{P=l\cap h(l)\tq l\in \haz\}$, y con ello de la cónica.
@@ -1382,13 +1388,13 @@ Veamos un ejemplo del teorema anterior.
 			b_0=(1:-2:2), \quad b_1=(1:0:-2), \quad b_2=(1:1:-4)
 		\end{split}
 	\end{equation*}
-	de tal forma que la homografía $h$ transforma $a_i$ en $b_i$. Tomamos como referencia del primer haz $\mf{R}=\{a_0,a_1;a_2\}$ y, como referencia del segundo, $\overline{\mf{R}}=\{b_0,b_1;b_2\}$, de tal forma que $h:\mf{R}\rightarrow  \overline{\mf{R}}$. Realizando unas sencillas cuentas obtenemos que las bases asociadas son $\mc{B}=\{(3,0,6),(-15,-10,10)\}$ y $\overline{\mc{B}}=\{(3,-6,6),(-1,0,2)\}$. Así, $\widehat{h}$ transforma $\mc{B}$ en $\overline{\mc{B}}$.
+	de tal forma que la homografía $h$ transforma $a_i$ en $b_i$. Tomamos como referencia del primer haz $\mf{R}=\{a_0,a_1;a_2\}$ y, como referencia del segundo, $\overline{\mf{R}}=\{b_0,b_1;b_2\}$, de tal forma que $h:\mf{R}\rightarrow  \overline{\mf{R}}$. Realizando unas sencillas cuentas obtenemos que las bases asociadas son $\mc{B}=\{(-5,0,-10),(9,6,-6)\}$ y $\overline{\mc{B}}=\{(-1,2,-2),(3,0,-6)\}$. Así, $\widehat{h}$ transforma $\mc{B}$ en $\overline{\mc{B}}$.
 	
-	De esta forma, una recta genérica del primer haz $l=\class{(-15\theta+3,-10\theta,10\theta+6)}$ se transforma en $h(l)=\class{(-\theta+3,-6,2\theta+6)}$.
+	De esta forma, una recta genérica del primer haz $l=\class{(9\theta-5,6\theta,-6\theta-10)}$ se transforma en $h(l)=\class{(3\theta-1,2, -6\theta-2)}$.
 	
 	La parametrización de la cónica, los puntos $P=l\cap h(l)$, viene dada por la intersección de estas dos rectas. Este es un cálculo común, cuyo resultado es
 	\begin{equation*}
-		\mc{C}=\{(gsdgfsdadgdfghdf)\tq \theta\in\overline{\K}\}
+		\mc{C}=\{(18\theta^2-10,-18\theta^2+18\theta,9\theta^2-12\theta+5)\tq \theta\in\overline{\K}\}
 	\end{equation*}
 	Podríamos hallar la matriz asociada a esta cónica. Para ello, dada una matriz genérica
 	\begin{equation*}
@@ -1402,15 +1408,30 @@ Veamos un ejemplo del teorema anterior.
 	\begin{equation*}
 		X^tAX=0
 	\end{equation*}
-	donde $X=$ SEGUIR CUANDO TENGA SAGE.
+	donde $X=(18\theta^2-10,-18\theta^2+18\theta,9\theta^2-12\theta+5)$. Esto nos dará un polinomio de segundo grado cuyos coeficientes deben ser todos nulos, para que se cumpla la ecuación de la cónica. Resolviendo las ecuaciones resultantes de igualar cada uno de los coeficientes a cero, obtenemos que
+	\begin{equation*}
+		a=1, \ b=2, \ c=-8, \ h=1, \ f=-2, \ g=-1
+	\end{equation*}
+	Por tanto, la matriz de la cónica es
+	\begin{equation*}
+		A=\left( \begin{array}{ccc}
+			1 & 1 & -1\\
+			1 & 2 & -2\\
+			-1 & -2 & -8
+		\end{array}\right) 
+	\end{equation*}
+	siendo por tanto su ecuación
+	\begin{equation*}
+		\mc{C}=x^2+2y^2-8z^2+2xy-2xz-4yz=0.
+	\end{equation*}
 \end{exa}
 
 \section{Razón doble en cónicas}
-Como ya anticipamos, dado que las cónicas son un $\proy^1$, podemos definir en ellas la razón doble. Antes, y para asegurarnos de que la definición sea buena, enunciaremos un teorema.
+Como ya anticipamos, dado que toda cónica es un $\proy^1$, podemos definir en ellas la razón doble. Antes, y para asegurarnos de que la definición sea buena, enunciaremos un teorema.
 
 \begin{theo}[Teorema de Chasles]
 	Sea una cónica $\mc{C}$ no degenerada y dos puntos $P,P'\in\mc{C}$. Entonces, la aplicación entre haces de rectas definida como
-	\begin{equation}
+	\begin{equation}\label{C8_eq_teo_chasles}
 		\begin{array}{cccc}
 		h:& \haz_P&\rightarrow &\haz_{P'}\\
 		& l&\rightarrow & h(l)=P'Q
@@ -1428,5 +1449,87 @@ Como ya anticipamos, dado que las cónicas son un $\proy^1$, podemos definir en 
 	Por tanto, la aplicación proyectiva $h$ transforma $y-\theta z=0$ en $x-\theta y=0$. Pasando a coordenadas no homogéneas, $h:\theta\rightarrow \theta$, por lo que es la identidad y, por tanto, es homografía.
 \end{proof}
 \begin{obs}
-	Observamos que este teorema es el recíproco del Teorema de Steiner.
+	Obsérvese que este teorema es el recíproco del Teorema de Steiner y nos liga dos haces cualesquiera con base un punto de la cónica. Para hallar las imágenes de ciertas rectas podemos tener en cuenta la observación~\ref{C8_homografia_Steiner_tangentes}.
 \end{obs}
+\begin{defi}\label{C8_def_razondoble}
+	Dada una cónica $\mc{C}$, se define la razón doble de cuatro puntos $P_1,P_2,P_3,P_4\in\mc{C}$ como
+	\begin{equation}
+		\{P_1,P_2;P_3,P_4\}=\{PP_1,PP_2;PP_3,PP_4\}
+	\end{equation}
+	donde $P\in\mc{C}$ es un punto arbitrario distinto de los otros cuatro.
+\end{defi}
+Comprobemos que está bien definida, es decir, que no depende del quinto punto $P\in\mc{C}$ que elijamos. Sea entonces otro punto distinto $P'\in\mc{C}$ y tomemos los haces $\haz_P$ y $\haz_P'$. Por el Teorema de Chasles sabemos que, la aplicación proyectiva $h$ entre los haces definida por la ecuación~\eqref{C8_eq_teo_chasles}, es una homografía. Además, por la observación~\ref{C8_obs_conica_recta_interseccion2puntos} sabemos que una recta corta en dos puntos a una cónica. Dado que $P,P_i\in\mc{C}$, para $i=1,2,3,4$, se tiene que la recta $PP_i$ corta con $\mc{C}$ en los puntos $P$ y $P_i$. Por tanto, como las homografías preservan la razón doble,
+\begin{equation}
+	\{PP_1,PP_2;PP_3,PP_4\}=\{h(PP_1),h(PP_2);h(PP_3),h(PP_4)\}=\{P'P_1,P'P_2;P'P_3,P'P_4\}
+\end{equation}
+quedando así demostrado que la razón doble está bien definida.
+
+\subsection{Cálculo de la razón doble}
+Hemos definido la razón doble de cuatro puntos de una cónica como la razón doble de cuatro rectas. Por tanto, el cálculo es el mismo que cuando veíamos este caso en el capítulo Razón Doble.\\
+
+Obsérvese que si paramétrizamos la cónica con la referencia adecuada, los puntos $P_i$ pueden escribirse como $P_i=(\theta_i^2:\theta_i:1)$. Si tomamos como quinto punto el $X_0=(1:0:0)\in\mc{C}$ de la referencia entonces, las rectas de la definición de razón doble son $X_0P_i:y-\theta_iz=0$. En el espacio proyectivo dual serían $X_0P_i=(0:1:-\theta_i)$. 
+
+Siguiendo lo visto en el capítulo cinco, la razón doble de $P_1,P_2,P_3,P_4\in\mc{C}$ es
+\begin{multline}
+	\{P_1,P_2;P_3,P_4\}=\{PP_1,PP_2;PP_3,PP_4\}=\\=\{(0:1:-\theta_1),(0:1:-\theta_2);(0:1:-\theta_3),(0:1:-\theta_4)\}=\{\theta_1,\theta_2;\theta_3,\theta_4\}
+\end{multline}\\
+De forma más general, si la cónica está parametrizada por tres polinomios, de tal forma que $P_i=(p_0(\theta_i),p_1(\theta_i),p_1(\theta_i))$, la razón doble es
+\begin{equation}
+\{P_1,P_2;P_3,P_4\}=\{\theta_1,\theta_2;\theta_3,\theta_4\}
+\end{equation}
+En efecto, basta tener en cuenta el cambio de coordenadas $\rho\overline{X}=HX$, donde $H$ viene dada por 
+\begin{equation*}
+	\left( \begin{array}{c}
+	p_1(\theta)\\p_2(\theta)\\p_3(\theta)
+	\end{array}\right)=H
+	\left( \begin{array}{c}
+	\theta^2\\\theta\\1
+	\end{array}\right)
+\end{equation*}
+que nos permite pasar de la referencia $\mf{R}$ en la cual la cónica es una parábola, a la referencia donde la cónica viene parametrizada por los polinomios dados. Aunque el punto $P_i=(x_i:y_i:z_i)$ puede tener diferentes coordenadas en la referencia $\mf{R}$, el valor de $\theta$ será el mismo. Teniendo en cuenta esto y el resultado anterior, se tiene que
+\begin{equation*}
+	\{P_1,P_2;P_3,P_4\}=\{\theta_1,\theta_2;\theta_3,\theta_4\}
+\end{equation*}
+
+\subsection{Razón doble en cónicas duales}
+Por supuesto, todo esto tiene su análogo dual. Primero veamos que tenemos derecho a definir el concepto de razón doble en una cónica dual. Como vimos, toda cónica es un $\proy^1$. Dado que la dimensión de un espacio proyectivo y su dual coinciden, toda cónica dual es un $\proy^1$. Por tanto, podemos definir razón doble. De hecho, esta definición no será más que el dualizado de la definición anterior.
+\begin{defi}
+	Dada una cónica dual $\mc{C}^*$, se define la razón doble de cuatro rectas $l_1,l_2,l_3,l_4\in\mc{C}^*$ como
+	\begin{equation}
+		\{l_1,l_2;l_3,l_4\}=\{l\cap l_1,l\cap l_2;l\cap l_3,l\cap l_4\}
+	\end{equation}
+	donde $l\in\mc{C}^*$ es una recta arbitraria distinta de las otras cuatro.
+\end{defi}
+Es claro que esta definición es buena, es decir, que no depende de $l$, ya que es simplemente el dualizado de la definición~\ref{C8_def_razondoble} (la cual no dependía de $P$).
+
+MEJORAR ESTO CUANDO ALVARO PASE LO SUYO
+
+Es lógico pensar que la razón doble de cuatro rectas de la cónica dual, que son rectas tangentes a $\mc{C}$ en un punto, sea igual que la razón doble de los puntos de tangencia. Recordemos que estos puntos de tangencia eran los polos de las rectas tangentes. Por tanto, nos gustaría que, si $P_i=C^*l_i$, entonces $\{l_1,l_2;l_3,l_4\}=\{P_1,P_2;P_3,P_4\}$, donde $C^*$ es la adjunta de la matriz de la cónica. Para llegar a este resultado necesitamos un lema previo.
+\begin{lem}
+	Sea una cónica $\mc{C}$ y un punto $P$. La aplicación
+	\begin{equation}
+		\begin{array}{cccc}
+		g:&\haz_P&\rightarrow &\proy^2\\
+		&l&\rightarrow & Q
+		\end{array}
+	\end{equation}
+	donde $Q$ es el polo de $l$, es una homografía cuya imagen es una recta.
+\end{lem}
+\begin{proof}
+	Tomemos $l_1$ y $l_2$ dos rectas del haz para hallar su ecuación paramétrica. Así
+	\begin{equation*}
+		\haz_P=\{l=l_1+\theta l_2\tq\theta\in\overline{\K}\}
+	\end{equation*}
+	Si $C$ es la matriz asociada a la cónica, el polo de una recta $l$ genérica viene dado por
+	\begin{equation*}
+		Q=C^*l=C^*(l_1+\theta l_2)=C^*l_1+\theta C^*l_2
+	\end{equation*}
+	De esta forma, la aplicación definida en el enunciado puede describirse de la siguiente forma
+	\begin{equation*}
+		\begin{array}{cccc}
+		g:&\haz_P&\rightarrow &\proy^2\\
+		&l_1+\theta l_2&\rightarrow & C^*l_1+\theta C^*l_2
+		\end{array}
+	\end{equation*}
+	La imagen de $g$ recorre la recta $C^*l_1+\theta C^*l_2$. Además, en coordenadas no homogéneas, $g:\theta\rightarrow \theta$, por lo que es una homografía.
+\end{proof}

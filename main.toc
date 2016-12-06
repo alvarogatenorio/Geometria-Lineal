@@ -100,17 +100,19 @@
 \contentsline {subsection}{\numberline {8.9.1}Parametrizaci\IeC {\'o}n de c\IeC {\'o}nicas como par\IeC {\'a}bolas}{105}{subsection.8.9.1}
 \contentsline {subsection}{\numberline {8.9.2}Parametrizaci\IeC {\'o}n de c\IeC {\'o}nicas y polinomios}{108}{subsection.8.9.2}
 \contentsline {subsection}{\numberline {8.9.3}Otras parametrizaciones}{109}{subsection.8.9.3}
-\contentsline {section}{\numberline {8.10}Teorema de Steiner}{109}{section.8.10}
+\contentsline {section}{\numberline {8.10}Teorema de Steiner}{110}{section.8.10}
 \contentsline {section}{\numberline {8.11}Raz\IeC {\'o}n doble en c\IeC {\'o}nicas}{112}{section.8.11}
-\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{113}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{113}{section.Alph1.1}
-\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{114}{subsection.Alph1.1.1}
-\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{115}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{115}{subsection.Alph1.2.1}
-\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{115}{section*.15}
-\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{116}{section*.16}
-\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{116}{section*.17}
-\contentsline {paragraph}{Observaciones}{116}{section*.18}
-\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{116}{section*.19}
-\contentsline {section}{\numberline {A.3}Dualidad}{117}{section.Alph1.3}
-\contentsline {chapter}{\numberline {B}Mierdas varias}{119}{appendix.Alph2}
+\contentsline {subsection}{\numberline {8.11.1}C\IeC {\'a}lculo de la raz\IeC {\'o}n doble}{113}{subsection.8.11.1}
+\contentsline {subsection}{\numberline {8.11.2}Raz\IeC {\'o}n doble en c\IeC {\'o}nicas duales}{113}{subsection.8.11.2}
+\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{115}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{115}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{116}{subsection.Alph1.1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{117}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{117}{subsection.Alph1.2.1}
+\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{117}{section*.15}
+\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{118}{section*.16}
+\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{118}{section*.17}
+\contentsline {paragraph}{Observaciones}{118}{section*.18}
+\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{118}{section*.19}
+\contentsline {section}{\numberline {A.3}Dualidad}{119}{section.Alph1.3}
+\contentsline {chapter}{\numberline {B}Mierdas varias}{121}{appendix.Alph2}

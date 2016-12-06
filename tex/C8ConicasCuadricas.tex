@@ -748,7 +748,7 @@ Al igual que hicimos con cónicas no degeneradas, realizaremos una clasificació
 \end{defi}
 
 Esta definición de cónica degenerada no es muy manejable. Por ello, veamos la siguiente proposición
-\begin{prop}\label{C8:prop_rango_menor_3_degenerada}
+\begin{prop}\label{C8_prop_rango_menor_3_degenerada}
 	Sea $C$ una cónica cuya matriz en cierta referencia es $A$. Si $rg(A)<3$ entonces $C$ es una cónica degenerada.
 \end{prop}
 
@@ -758,7 +758,7 @@ Esta definición de cónica degenerada no es muy manejable. Por ello, veamos la 
 	Sea $[z_0]$ otro punto de la cónica, distinto de $[y_0]$. Veamos que la recta $YZ$ generada por $[z_0]$ e $[y_0]$ está contenida en la cónica. Con esto quedaría demostrado que la cónica es degenerada.
 	
 	Sea un punto $[y_0+\theta z_0]$ de la recta $YZ$. Si este punto perteneciese a $C$ para todo $\theta$, la recta $YZ$ estaría contenida en la cónica. Veamos que cumple la ecuación de la cónica, sea cual sea el valor de $\theta$:
-	\begin{equation}\label{C8:eq_joanch_conicas_deg}
+	\begin{equation}\label{C8_eq_joanch_conicas_deg}
 	(Y_0+\theta Z_0)^tA(Y_0+\theta Z_0)=Y_0^tAY_0+\theta Y_0^tAZ_0+\theta Z_0^tAY_0+\theta^2Z_0^tAZ_0=Y_0^tAY_0+2\theta Z_0^tAY_0+\theta^2Z_0^tAZ_0
 	\end{equation}
 	El primer y segundo sumando se anulan debido a que $y_0$ pertenece al núcleo de $A$. El tercero por su parte se anula porque $\class{z_0}$ pertenece a la cónica. De esto se concluye que
@@ -770,7 +770,7 @@ Esta definición de cónica degenerada no es muy manejable. Por ello, veamos la 
 
 A continuación veamos un teorema que nos da la expresión de una cónica degenerada.
 
-\begin{theo}\label{C8:theo_conica_degenerada_es_producto_rectas}
+\begin{theo}\label{C8_theo_conica_degenerada_es_producto_rectas}
 	Una cónica $C$ es degenerada si y solo si es producto de dos rectas. Es decir, es de la forma
 	\begin{equation}
 	C:l\cdot m=0 \quad o \quad C:l^2=0
@@ -798,7 +798,7 @@ A continuación veamos un teorema que nos da la expresión de una cónica degene
 
 Una vez demostrado este teorema podemos hacer una clasificación de las cónicas degeneradas atendiendo al rango de $A$. Para ello demostremos primero el siguiente lema.
 
-\begin{lem}\label{C8:lem_nucleo_interseccion_rectas}
+\begin{lem}\label{C8_lem_nucleo_interseccion_rectas}
 	Sea $C:l\cdot m=0$ una cónica degenerada con matriz $A$ simétrica. Entonces, el núcleo de $A$ es la intersección de las rectas $l$ y $m$.
 \end{lem}
 
@@ -823,13 +823,13 @@ Una vez demostrado este teorema podemos hacer una clasificación de las cónicas
 	\end{equation}
 	con lo que $y_0\in \ker(A)$.\\
 	
-	Veamos que $\ker(A)\subset l\cap m$. Sea un punto del núcleo $[y_0]\in \ker(A)$. Por lo visto en la demostración de la proposición~\ref{C8:prop_rango_menor_3_degenerada} se tiene que, dado un punto cualquiera $[z_0]$ de la cónica distinto de $[y_0]$, la recta generada por ambos puntos está contenida en la cónica. Si la cónica es producto de dos rectas iguales ya hemos terminado, pues esa recta es precisamente la engendrada por $[z_0]$ e $[y_0]$. Sino, puedo coger otro punto $[w_0]$ de la cónica, que no pertenezca a la recta generada por $[z_0]$ e $[y_0]$. De nuevo, la recta generada por $[w_0]$ e $[y_0]$ está contenida en la cónica. Por tanto, $[y_0]$ pertenece a las dos rectas de la cónica, es decir, está en la intersección.
+	Veamos que $\ker(A)\subset l\cap m$. Sea un punto del núcleo $[y_0]\in \ker(A)$. Por lo visto en la demostración de la proposición~\ref{C8_prop_rango_menor_3_degenerada} se tiene que, dado un punto cualquiera $[z_0]$ de la cónica distinto de $[y_0]$, la recta generada por ambos puntos está contenida en la cónica. Si la cónica es producto de dos rectas iguales ya hemos terminado, pues esa recta es precisamente la engendrada por $[z_0]$ e $[y_0]$. Sino, puedo coger otro punto $[w_0]$ de la cónica, que no pertenezca a la recta generada por $[z_0]$ e $[y_0]$. De nuevo, la recta generada por $[w_0]$ e $[y_0]$ está contenida en la cónica. Por tanto, $[y_0]$ pertenece a las dos rectas de la cónica, es decir, está en la intersección.
 \end{proof}
 Este lema, junto con el teorema anterior, nos permiten clasificar las cónicas degeneradas. 
 
 Sabemos que una cónica degenerada es producto de dos rectas distintas o de dos iguales. Si el rango de la matriz asociada es $rg(A)=2$ entonces el $\ker(A)$ es un único punto. Esto implica, por el lema anterior, que las rectas intersecan en un punto, por lo que se trata de una cónica producto de dos rectas distintas. Por otro lado, si $rg(A)=1$ entonces el $\ker(A)$ es una recta. Atendiendo de nuevo al lema anterior, de esto se deduce que la cónica es producto de dos rectas iguales.
 
-Todas estas deducciones pueden hacerse en sentido inverso aplicando el lema~\ref{C8:lem_nucleo_interseccion_rectas}. Sin embargo, recordemos que esto ya había sido demostrado, a través de otro razonamiento, en el apartado ''Rango de la Matriz de una Cónica producto de Rectas" de la sección~\ref{C8_subsec_producto_rectas}. Como prometimos, aquí está la otra implicación.
+Todas estas deducciones pueden hacerse en sentido inverso aplicando el lema~\ref{C8_lem_nucleo_interseccion_rectas}. Sin embargo, recordemos que esto ya había sido demostrado, a través de otro razonamiento, en el apartado ''Rango de la Matriz de una Cónica producto de Rectas" de la sección~\ref{C8_subsec_producto_rectas}. Como prometimos, aquí está la otra implicación.
 
 Resumiendo, sea una cónica degenerada $C:l\cdot m=0$, entonces
 \begin{equation}
@@ -861,7 +861,7 @@ Veamos un ejemplo de como hallar la expresión de una cónica degenerada.
 	-1&1&0
 	\end{array}\right)
 	\end{equation}
-	Se trata de hacer con una cónica concreta lo explicado en la demostración del lema~\ref{C8:lem_nucleo_interseccion_rectas}. Si el núcleo de la matriz $A$ de la cónica es una recta, entonces la cónica es de la forma $l^2=0$ y la recta del núcleo es precisamente la recta $l$. Sino, como ocurre en este caso, dado un punto del núcleo de $A$, la recta generada por él y por otro punto distinto de la cónica está contenida en ella. Por tanto, si hallamos dos puntos pertenecientes a la cónica, distintos entre ellos y al núcleo de la matriz, podremos generar dos rectas distintas, que serán las rectas de $C$.
+	Se trata de hacer con una cónica concreta lo explicado en la demostración del lema~\ref{C8_lem_nucleo_interseccion_rectas}. Si el núcleo de la matriz $A$ de la cónica es una recta, entonces la cónica es de la forma $l^2=0$ y la recta del núcleo es precisamente la recta $l$. Sino, como ocurre en este caso, dado un punto del núcleo de $A$, la recta generada por él y por otro punto distinto de la cónica está contenida en ella. Por tanto, si hallamos dos puntos pertenecientes a la cónica, distintos entre ellos y al núcleo de la matriz, podremos generar dos rectas distintas, que serán las rectas de $C$.
 	
 	Buscamos pues el núcleo de la matriz $A$.
 	\begin{equation}
@@ -899,7 +899,7 @@ Cualquiera diría que este es el procedimiento habitual para hallar la expresió
 \begin{obs}
 	La intersección entre una cónica y una recta viene dada por una ecuación de segundo grado, que tendrá dos soluciones (bien sean distintas o dobles). Por tanto, siempre nos es posible encontrar una recta que corte en dos puntos con la cónica.
 	
-	En efecto, una recta viene parametrizada por dos puntos $y_0$ y $z_0$ de la forma $[y_0+\theta z_0]$. La intersección de esta recta con la cónica serán aquellos puntos, es decir aquellos valores de $\theta$, para los que el vector columna $Y_0+\theta Z_0$ cumple la ecuación de la cónica. La ecuación resultante de sustituir dicho vector en la ecuación de la cónica es la mostrada en la ecuación~\eqref{C8:eq_joanch_conicas_deg}, que es de segundo grado en la variable $\theta$. Más adelante daremos nombre a esta ecuación.
+	En efecto, una recta viene parametrizada por dos puntos $y_0$ y $z_0$ de la forma $[y_0+\theta z_0]$. La intersección de esta recta con la cónica serán aquellos puntos, es decir aquellos valores de $\theta$, para los que el vector columna $Y_0+\theta Z_0$ cumple la ecuación de la cónica. La ecuación resultante de sustituir dicho vector en la ecuación de la cónica es la mostrada en la ecuación~\eqref{C8_eq_joanch_conicas_deg}, que es de segundo grado en la variable $\theta$. Más adelante daremos nombre a esta ecuación.
 \end{obs}
 
 \section{Recta polar de un punto respecto de una cónica}
@@ -945,7 +945,7 @@ Tenemos así una restricción para los puntos $M$ y $N$. Recordemos que además 
 que se obtiene simplemente de sustituir la ecuación paramétrica de $r$, donde $\vec{P}$ son vectores columna, en la ecuación de la cónica (cosa que ya hemos hecho antes varias veces). Recibe el nombre de \textbf{ecuación de Joachimstal} y nos permite calcular la intersección de una cónica y una recta.
 
 Dado que en este caso la intersección son los puntos $M$ y $N$, las soluciones a esta ecuación deben ser $\theta_N$ y $\theta_M=-\theta_N$. Una ecuación de segundo grado tiene soluciones iguales y de signo opuesto si y solo si el término de grado uno es nulo. Por tanto, necesariamente
-\begin{equation}\label{C8:eq_puntos_recta_polar}
+\begin{equation}\label{C8_eq_puntos_recta_polar}
 \vec{P}^tA\vec{P}'=0
 \end{equation}
 Por ende, los puntos $P'$ buscados deben cumplir esta ecuación.
@@ -1005,7 +1005,7 @@ Al principio de esta sección se mostró una construcción geométrica y en ella
 	\begin{equation}
 	(\vec{P}^t+\theta \vec{P}')^tA(\vec{P}^t+\theta \vec{P}')=\vec{P}^tA\vec{P}+2\theta \vec{P}^tA\vec{P}'+\theta^2\vec{P}'^tA\vec{P}'=0
 	\end{equation}
-	El segundo sumando se anula por pertenecer $P_0'$ a la recta polar de $P$ (ecuación~\eqref{C8:eq_puntos_recta_polar}). El tercero también es nulo, ya que $P_0'$ pertenece a la cónica. La ecuación se reduce a 
+	El segundo sumando se anula por pertenecer $P_0'$ a la recta polar de $P$ (ecuación~\eqref{C8_eq_puntos_recta_polar}). El tercero también es nulo, ya que $P_0'$ pertenece a la cónica. La ecuación se reduce a 
 	\begin{equation}
 	\vec{P}^tA\vec{P}=0
 	\end{equation}
@@ -1024,6 +1024,7 @@ Gracias al lema anterior, si demostrásemos que, desde un punto $P$ exterior a l
 \section{Parametrización de cónicas}
 Existen diversas formas de parametrizar cónicas no degeneradas. Sin embargo, hay una de ellas que resulta especialmente útil, pues nos permite parametrizar cualquier cónica no degenerada como una parábola. Comenzaremos con ella.
 \subsection{Parametrización de cónicas como parábolas}
+\label{C8_subsec_parametrizacion_como_parabola}
 Recordemos que, al hablar de cónicas y cambios de referencia, pusimos la mano en el fuego al intuir que, con un cambio de referencia adecuado, podríamos trasformar una cónica en cualquier otra (preservando la degeneración). Esta parametrización es una muestra de que, efectivamente, es posible. Desarrollémosla en detalle.\\
 
 Dada una cónica no degenerada $C$ en cierta referencia proyectiva, realizaremos un cambio de referencia de tal forma que, la ecuación de la cónica en la referencia final, sea la ecuación de una parábola. De esta forma, bastará con parametrizar una parábola para obtener la parametrización de cualquier cónica no degenerada.
@@ -1207,7 +1208,20 @@ Vayamos con el ejemplo prometido.
 	\end{equation*}
 \end{exa}
 \begin{obs}[Una cónica es un $\proy^1$] HACER BIEN
-	Una vez que sabemos parametrizar cónicas es cuestión de segundos darnos cuenta de que estamos tratando la cónicas como un $\proy^1$. Esto es realmente bello, ya que podremos definir en una cónica todo aquello que definíamos en un $\proy^1$: razón doble, homografías, involuciones, etc.
+	Una vez que sabemos parametrizar cónicas es cuestión de segundos darnos cuenta de que estamos tratando la cónicas como un $\proy^1$. En efecto, consideramos la referencia utilizada durante toda esta sección, $\mf{R}=\{X_0,X_1,X_2;e\}$ con $X_0,X_2,e\in C$. La aplicación
+	\[\begin{array}{cccc}
+		h:& \mc{C}&\rightarrow &\proy^1\\
+		&X&\rightarrow &\theta\\
+		&X_0=\infty&\rightarrow &\infty\\
+		&X_1=0&\rightarrow &0\\
+		&e=1&\rightarrow &1\\
+	\end{array}\]
+	es la aplicación proyectiva identidad.
+	
+	Esto es realmente bello, ya que podremos definir en una cónica todo aquello que definíamos en un $\proy^1$: razón doble, homografías, involuciones, etc.
+\end{obs}
+\begin{obs}
+	Una vez que tenemos la cónica parametrizada, si queremos recuperar la matriz de la cónica, lo único que debemos hacer es obligar a la parametrización a cumplir la ecuación de la cónica y hallar así los coeficientes de la matriz.
 \end{obs}
 
 \subsection{Parametrización de cónicas y polinomios}
@@ -1286,16 +1300,17 @@ Por tanto, dada cualquier terna de polinomios de grado menor o igual que 2 linea
  	\end{equation*}
 \end{exa}
 \subsection{Otras parametrizaciones}
-Antes de ver un resultado importante, que nos proporciona también una forma de parametrizar cónicas, veamos una forma sencilla y rápida de hacerlo.\\
+Terminemos este apartado con una forma sencilla y rápida de parametrizar cónicas.\\
 
 Escojamos un punto $X_0$ de la cónica y parametrizemos el haz de rectas con base ese punto. Una forma de hacer esto sería escoger otros dos puntos distintos $X_1,X_2$ , bien en la cónica o fuera de ella, y hallar las rectas que pasen por ellos y por $X_0$. Con esto, tendríamos dos rectas del haz, que podemos tomar como base. Supongamos que las rectas $X_0X_1$ y $X_0X_2$ representan los puntos $(a_0:a_1:a_2)$ y $(b_0:b_1:b_2)$ en el dual, respectivamente. Entonces, la ecuación paramétrica del Haz($X_0$) sería 
 \[Haz(X_0)=\{(a_0+\theta b_0:a_1+\theta b_1:a_2+\theta b_2)\tq \theta\in\proy^1\}\]
 Cualquier recta del haz cortará a la cónica en dos puntos. Uno de ellos será $X_0$ y el otro un punto $P$ arbitrario. Queda excluida la recta del haz tangente a la cónica, pues solo corta en $X_0$. Por tanto, si cortamos una recta genérica del Haz($X_0$) con la cónica, mediante la ecuación de Joachimstal, obtendremos la expresión de un punto arbitrario de la cónica, en función de $\theta$. Esto nos proporciona una parametrización de la cónica.
 
 Es importante observar que, si escogemos otra base del haz de rectas, la parametrización resultante cambia.
-\subsection{Teorema de Steiner}
-A continuación expondremos un resultado que relaciona cónicas y homografías entre haces de rectas. Además, como anticipamos, permite parametrizar cónicas.
+\section{Teorema de Steiner}
+A continuación expondremos un resultado que relaciona cónicas y homografías entre haces de rectas.
 \begin{theo}[Teorema de Steiner]
+	\label{C8_teo_steiner}
 	Dada una homografía $h:Haz(A)\rightarrow Haz(B)$ entre los haces de rectas de bases $A$ y $B$, respectivamente. Se consideran los puntos de la forma $P=l\cap h(l)$. Entonces, dichos puntos engendran una única cónica. Además, esta resulta ser degenerada si y solo si $h$ es una perspectividad.
 \end{theo}
 \begin{proof}Dividamos la demostración en dos partes:
@@ -1338,7 +1353,80 @@ A continuación expondremos un resultado que relaciona cónicas y homografías e
 		
 		Al ser una homografía, es claro que el conjunto de puntos $\{P=l\cap h(l)\tq l\in Haz(A)\}$ engendran una única cónica. Debemos demostrar que esta cónica es degenerada si y solo si $h$ es una perspectividad.
 		
-		La homografía $h$ es una perspectividad si y solo si $h(l)=\engen{O^*\cap l,B}$, donde $O^*$ es la recta base de la perspectividad. Además, es perspectividad si y solo si deja fija la recta $AB$. Por tanto, $h$ es una perspectividad si y solo si $\{P=l\cap h(l)\tq l\in Haz(A)\}=O^*\cup AB$, es decir, el conjunto de los puntos $P=l\cap h(l)$ contiene una recta. Dado que estos pertenecen a una cónica, se concluye que $h$ es una perspectividad si y solo si la cónica es degenerada.
+		Si la homografía $h$ es una perspectividad, entonces $h(l)=\engen{O^*\cap l,B}$, donde $O^*$ es la recta base de la perspectividad. Además, deja fija la recta $AB$. Por tanto, $\{P=l\cap h(l)\tq l\in Haz(A)\}=O^*\cup AB$, es decir, contiene una recta. Se concluye que la cónica es degenerada.
+		
+		Por otro lado, si la cónica engendrada por los puntos $P=l\cap h(l)$ con $l\in Haz(A)$ es degenerada, entonces será producto de dos rectas. Aplicando la observación~\ref{C8_obs_conicaProducto_union} se tiene que $\{P=l\cap h(l)\tq l\in Haz(A)\}=m\cup r$ para ciertas rectas $m$ y $r$. Basta demostrar que una de esas rectas es la recta $AB$. En tal caso, dado $P\in AB$ tal que $P=l\cap h(l)$ para cierta recta $l$ del haz con base $A$, se tiene que $l=PA$ y $h(l)=PB$. Como $P\in AB$, se concluye que $l=AB$ y $h(l)=AB$. Por tanto, la recta $AB$ queda fija. Esto implica que $h$ es perspectividad.
+		
+		Demostremos por tanto que $m$ o $r$ es la recta $AB$. Recordemos del primer apartado que $A=h^{-1}(AB)\cap AB$ y $B=AB\cap h(AB)$. Por tanto, $A$ y $B$ pertenecen a la cónica, y, con ello, $A,B\in m\cup r$. Si ambos puntos se encuentran en la misma recta, no hay nada que demostrar. Supongamos, por tanto, que $A\in m$ y $B\in r\backslash r\cap m$, lo cual implica que $m\in Haz(A)$ y $r\in Haz(B)$, y lleguemos a un absurdo.
+		
+		Sea $l\in Haz(A)$ distinta de $m$. Entonces $P=l\cap h(l)\in r$, ya que en caso contrario $P\in m$ y entonces $l=PA=m$. Como $h(l)=PB$ y $P,B\in r$, se conlcuye que $h(l)=r$ para toda recta $l$ del Haz$(A)$ distinta de $m$. Esto es absurdo ya que $h$ es una homografía.
+		
+		Con esto queda demostrado que $A,B$ deben pertenecer a la misma recta y, con ello, que $AB$ permanece fija.
 	\end{enumerate}
 \end{proof}
-Veamos un ejemplo de como utilizar el teorema anterior para parametrizar cónicas.
+\begin{obs}
+	Sabemos que, dada una homografía $h$ entre haces de rectas, los puntos $P=l\cap h(l)$ son una cónica. Recordemos que $A$ y $B$ pertenecían a la cónica. Por tanto, la recta $l$ corta a la cónica en los puntos $P$ y $A$. Con ello,  $h(l)$ es la recta que pasa por $B$ y $P$, siendo este último el punto de corte de $l$ con la cónica distinto de $A$. Gracias a esto podemos saber adonde manda $h$ determinadas rectas del haz. 
+	
+	En concreto, la tangente $l$ a la cónica en el punto $A$ se transforma en la recta $AB$. En efecto, abusando del lenguaje, podemos decir que la tangente a $A$ corta a la cónica en el punto $A$ y en el punto $A$. Dado que su imagen es la recta que pasa por $B$ y el otro punto de corte que no es $A$, $h(l)$ es la recta $AB$. De forma similar se deduce que $AB$ se transforma en la recta tangente a $B$.
+\end{obs}
+Veamos un ejemplo del teorema anterior.
+\begin{exa}[Aplicación del Teorema de Steiner] HACER CUENTAS EN SAGE
+	Calcúlese la cónica asociada a la homografía $h$ entre haces de rectas que transforma $x=-2z$, $3x+2y=2z$, $2x+3y=8z$ en las rectas $x-2y=-2z$, $x=2z$, $x+y=4z$, respectivamente.\\
+	
+	Para calcular la cónica debemos hallar los puntos de la forma $P=l\cap h(l)$. Para ello, tomaremos una recta genérica del primer haz y la cortaremos con su imagen, obteniendo así una parametrización de $\{P=l\cap h(l)\tq l\in Haz\}$, y con ello de la cónica.
+	
+	Es necesario que primero parametricemos los haces de rectas. Las rectas dadas se corresponden con los siguientes puntos del dual:
+	\begin{equation*}
+		\begin{split}
+			a_0=(1:0:2), \quad a_1=(3:2:-2), \quad a_2=(2:3:-8)\\
+			b_0=(1:-2:2), \quad b_1=(1:0:-2), \quad b_2=(1:1:-4)
+		\end{split}
+	\end{equation*}
+	de tal forma que la homografía $h$ transforma $a_i$ en $b_i$. Tomamos como referencia del primer haz $\mf{R}=\{a_0,a_1;a_2\}$ y, como referencia del segundo, $\overline{\mf{R}}=\{b_0,b_1;b_2\}$, de tal forma que $h:\mf{R}\rightarrow  \overline{\mf{R}}$. Realizando unas sencillas cuentas obtenemos que las bases asociadas son $\mc{B}=\{(3,0,6),(-15,-10,10)\}$ y $\overline{\mc{B}}=\{(3,-6,6),(-1,0,2)\}$. Así, $\widehat{h}$ transforma $\mc{B}$ en $\overline{\mc{B}}$.
+	
+	De esta forma, una recta genérica del primer haz $l=\class{(-15\theta+3,-10\theta,10\theta+6)}$ se transforma en $h(l)=\class{(-\theta+3,-6,2\theta+6)}$.
+	
+	La parametrización de la cónica, los puntos $P=l\cap h(l)$, viene dada por la intersección de estas dos rectas. Este es un cálculo común, cuyo resultado es
+	\begin{equation*}
+		\mc{C}=\{(gsdgfsdadgdfghdf)\tq \theta\in\proy^1\}
+	\end{equation*}
+	Podríamos hallar la matriz asociada a esta cónica. Para ello, dada una matriz genérica
+	\begin{equation*}
+		A=\left( \begin{array}{ccc}
+			a & h & g\\
+			h & b & f\\
+			g & f & c
+		\end{array}\right) 
+	\end{equation*}
+	debemos resolver la ecuación
+	\begin{equation*}
+		X^tAX=0
+	\end{equation*}
+	donde $X=$ SEGUIR CUANDO TENGA SAGE.
+\end{exa}
+
+\section{Razón doble en cónicas}
+Como ya anticipamos, dado que las cónicas son un $\proy^1$, podemos definir en ellas la razón doble. Antes, y para asegurarnos de que la definición sea buena, enunciaremos un teorema.
+
+\begin{theo}[Teorema de Chasles]
+	Sea una cónica $\mc{C}$ no degenerada y dos puntos $P,P'\in\mc{C}$. Entonces, la aplicación entre haces de rectas definida como
+	\begin{equation}
+		\begin{array}{cccc}
+		h:& \haz_P&\rightarrow &\haz_{P'}\\
+		& l&\rightarrow & h(l)=P'Q
+		\end{array}
+	\end{equation}
+	donde $l\cap\mc{C}=\{P,Q\}$, es una homografía.
+\end{theo}
+\begin{proof}
+	Tomamos la referencia $\mf{R}=\{P,X_1,P';e\}$, de tal forma que $e\in\mc{C}$ sea distinto a $P$ y $P'$ y que $X_1$ sea el polo de $PP'$. Por la sección~\ref{C8_subsec_parametrizacion_como_parabola} sabemos que, en este referencia, la cónica se parametriza como
+	\begin{equation*}
+		\mc{C}=\{(\theta^2:\theta:1)\tq\theta\in\proy^1\}
+	\end{equation*}
+	Podemos describir una recta arbitraria de $\haz_P$ como $l=PQ$, siendo $l\cap\mc{C}=\{P,Q\}$. Dado que $Q$ es un punto de la cónica, tendrá coordenadas $(\theta^2:\theta:1)$. Además, por la referencia elegida, $P=(1:0:0)$. Con ello, $l:y-\theta z=0$. De la misma forma, su imagen ($h(l)=P'Q$) será la recta $x-\theta y=0$.
+	
+	Por tanto, la aplicación proyectiva $h$ transforma $y-\theta z=0$ en $x-\theta y=0$.
+\end{proof}
+\begin{obs}
+	Observamos que este teorema es el recíproco del Teorema de Steiner.
+\end{obs}

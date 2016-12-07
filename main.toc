@@ -103,7 +103,7 @@
 \contentsline {section}{\numberline {8.10}Teorema de Steiner}{110}{section.8.10}
 \contentsline {section}{\numberline {8.11}Raz\IeC {\'o}n doble en c\IeC {\'o}nicas}{112}{section.8.11}
 \contentsline {subsection}{\numberline {8.11.1}C\IeC {\'a}lculo de la raz\IeC {\'o}n doble}{113}{subsection.8.11.1}
-\contentsline {subsection}{\numberline {8.11.2}Raz\IeC {\'o}n doble en c\IeC {\'o}nicas duales}{113}{subsection.8.11.2}
+\contentsline {subsection}{\numberline {8.11.2}Raz\IeC {\'o}n doble en c\IeC {\'o}nicas duales}{114}{subsection.8.11.2}
 \contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{115}{appendix.Alph1}
 \contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{115}{section.Alph1.1}
 \contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{116}{subsection.Alph1.1.1}

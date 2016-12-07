@@ -1307,11 +1307,15 @@ Por tanto, dada cualquier terna de polinomios de grado menor o igual que 2 linea
 \subsection{Otras parametrizaciones}
 Terminemos este apartado con una forma sencilla y rápida de parametrizar cónicas.\\
 
-Escojamos un punto $X_0$ de la cónica y parametrizemos el haz de rectas con base ese punto. Una forma de hacer esto sería escoger otros dos puntos distintos $X_1,X_2$ , bien en la cónica o fuera de ella, y hallar las rectas que pasen por ellos y por $X_0$. Con esto, tendríamos dos rectas del haz, que podemos tomar como base. Supongamos que las rectas $X_0X_1$ y $X_0X_2$ representan los puntos $(a_0:a_1:a_2)$ y $(b_0:b_1:b_2)$ en el dual, respectivamente. Entonces, la ecuación paramétrica del $\haz_{X_0}$ sería 
+Escojamos un punto $X_0$ de la cónica y parametrizemos el haz de rectas $\haz_{X_0}$, escogiendo dos rectas del haz ($X_0X_1$ y $X_0X_2$) como base. Supongamos que las rectas $X_0X_1$ y $X_0X_2$ representan los puntos $(a_0:a_1:a_2)$ y $(b_0:b_1:b_2)$ en el dual, respectivamente. Entonces, la ecuación paramétrica del $\haz_{X_0}$ sería 
 \[\haz_{X_0}=\{(a_0+\theta b_0:a_1+\theta b_1:a_2+\theta b_2)\tq \theta\in\overline{\K}\}\]
 Cualquier recta del haz cortará a la cónica en dos puntos. Uno de ellos será $X_0$ y el otro un punto $P$ arbitrario. Queda excluida la recta del haz tangente a la cónica, pues solo corta en $X_0$. Por tanto, si cortamos una recta genérica del $\haz_{X_0}$ con la cónica, mediante la ecuación de Joachimstal, obtendremos la expresión de un punto arbitrario de la cónica, en función de $\theta$. Esto nos proporciona una parametrización de la cónica.
 
-Es importante observar que, si escogemos otra base del haz de rectas, la parametrización resultante cambia.
+Es importante observar que, si escogemos otra base del haz de rectas, la parametrización resultante cambia.\\
+
+Este procedimiento es rápido... siempre que no tenga que hacerse a mano. En ese caso, hay una forma de ``arreglar'' este método para que sea asequible. 
+
+Una vez que tenemos nuestro haz $\haz_{X_0}$, con base un punto de la cónica, lo intersecamos con una recta cualquiera. Esto nos proporcionará un punto $P_\theta$ que dependerá de $\theta$, pues al cortar hemos utilizado una recta genérica del haz. Una vez que hemos conseguido este punto hallamos la ecuación paramétrica de la recta $X_0P_\theta=\{\class{\vec{x}_0+\mu \vec{p}_\theta}\tq \mu,\theta\in\overline{\K}\}$. Esta recta cortará en un punto, distinto de $X_0$, a la cónica. Aprovechando que tenemos la ecuación paramétrica de $X_0P_\theta$, al intersecarla con la cónica, cogemos la ecuación implícita de esta última. Obtendremos así un valor concreto para $\mu$. Esto nos proporcionará una parametrización de la cónica. De este modo, el cálculo es mucho más asequible si se va a realizar a mano.
 \section{Teorema de Steiner}
 A continuación expondremos un resultado que relaciona cónicas y homografías entre haces de rectas.
 \begin{theo}[Teorema de Steiner]

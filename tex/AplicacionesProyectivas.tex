@@ -3,25 +3,46 @@
 En este capítulo vamos a tratar de extrapolar uno de los conceptos más centrales del álgebra lineal al contexto proyectivo. Tratamos de estudiar las aplicaciones entre espacios proyectivos cuyo comportamiento consideramos ``bueno''.
 
 En el mundo lineal, estas aplicaciones eran los llamados homomorfismos entre espacios vectoriales o símplemente aplicaciones lineales. Aquí, en el mundo de los rayos, las llamaremos \ti{aplicaciones proyectivas}.
+
+Las secciones \ref{C4_definicion} y \ref{C4_propiedadesElementales} están dedicadas a resultados teóricos elementales. Por su parte, las secciones \ref{C4_proyeccionesConicas} y \ref{C4_homografias} realizan un estudio elemental de algunas aplicaciones proyectivas notables, las llamadas \ti{proyecciones cónicas} (no inyectivas) y las \ti{homografías} (inyectivas) respectivamente. El capítulo finaliza con la sección \ref{C4_matrices}, que define el concepto de matriz asociada a una aplicación proyectiva y presenta algunos ejemplos útiles.
 \section{Definición}
 \label{C4_definicion}
 Sean dos espacios proyectivos $X$ e $Y$ asociados a sendos espacios vectoriales, $\widehat{X}$ e $\widehat{Y}$ respectivamente.
 
-Nuestro objetivo es definir una aplicación proyectiva entre dos espacios proyectivos a partir de una aplicación lineal entre sus respectivos espacios lineales de forma natural. Intentémoslo y veamos qué dificultades se nos presentan.
+Nuestro objetivo es definir una aplicación entre dos espacios proyectivos a partir de una aplicación lineal entre sus respectivos espacios lineales de forma natural. En resumidas cuentas, trataremos de seguir el diagrama
+\[\xymatrix{
+	\widehat{X} \ar[r]^{\widehat{h}} \ar@{~>}[d]^{\pi}& \widehat{Y} \ar@{~>}[d]^{\pi}\\
+	X \ar[r]^{h}& Y
+}
+\]
+Intentémoslo y veamos qué dificultades se nos presentan.
 
-Sea $\widehat{h}:\widehat{X}\to\widehat{Y}$ una aplicación lineal arbitraria. Lo deseable sería definir la aplicación proyectiva asociada a $\widehat{h}$ como aquella que, a cada rayo le asigna el rayo engendrado por la imagen de uno de sus representantes. Visto formalmente, si $x=\class{u}$:
-\[\begin{array}{c}
-X\stackrel{h}{\to}Y\\
-x\mapsto\class{\widehat{h}(u)}
-\end{array}\]
+Sea $\widehat{h}:\widehat{X}\to\widehat{Y}$ una aplicación lineal arbitraria. Lo deseable sería definir la aplicación proyectiva asociada a $\widehat{h}$ como aquella que, a cada rayo le asigna el rayo engendrado por la imagen de uno de sus representantes. Visto formalmente, si $x=\class{u}$
+\[
+\xymatrix{
+{
+\begin{array}{rc}
+\widehat{h}:&\widehat{X}\to\widehat{Y}\\
+&u\mapsto\widehat{h}(u)
+\end{array}
+}
+\ar@{~>}[r]&
+{
+\begin{array}{rc}
+h: & X\to Y\\
+& x\mapsto\class{\widehat{h}(u)}
+\end{array}
+}
+}
+\]
 Este intento de definición tan intuitivo e inocente presenta dos problemas. El primero de ellos es que si $\widehat{h}(u)=0$ entonces el rayo $\class{\widehat{h}(u)}$ no está definido.
 
 Esto lo arreglamos de una forma natural, restringiendo el dominio de $\widehat{h}$ a los vectores de $\widehat{X}$ que no se anulan mediante $\widehat{h}$. Es decir, ahora $\widehat{h}$ queda definida en $\widehat{X}\setminus \ker\left(\widehat{h}\right)$.
 
-Trasladando esta restricción al contexto proyectivo obtenemos este segundo intento de definición de aplicación proyectiva asociada a cierta aplicación lineal:
-\[\begin{array}{c}
-X\setminus\proy\left(\ker\left(\widehat{h}\right)\right)\stackrel{h}{\to}Y\\
-x\mapsto\class{\widehat{h}(u)}
+Trasladando esta restricción al contexto proyectivo obtenemos este segundo intento de definición de aplicación proyectiva asociada a cierta aplicación lineal
+\[\begin{array}{cc}
+h:&X\setminus\proy\left(\ker\left(\widehat{h}\right)\right)\to Y\\
+&x\mapsto\class{\widehat{h}(u)}
 \end{array}\]
 Antes de hacer algunas aclaraciones adicionales acerca de este primer problema que se nos ha presentado, demos una pequeña definición (por comodidad tipográfica).
 \begin{defi}[Centro]
@@ -36,11 +57,28 @@ El segundo problema que planteaba nuestra definición era saber si está bien de
 Sean $\class{u'}=x=\class{u}$. Es evidente que $u' = \lambda u$ para cierto $\lambda$ no nulo. Entonces:
 \[\class{\widehat{h}(u')}=\class{\widehat{h}(\lambda u)}=\class{\lambda\widehat{h}(u)}=\class{\widehat{h}(u)}\]
 
+Tras estas comprobaciones ya podemos definir con todas las de la ley el concepto de aplicación proyectiva.
+\begin{defi}[Aplicación Proyectiva]
+	Sean dos espacios proyectivos $X$ e $Y$.
+	
+	Una aplicación $h:X\to Y$ se dice \ti{aplicación proyectiva} si existe una aplicación lineal $\widehat{h}:\widehat{X}\to\widehat{Y}$ de manera que
+	\[\begin{array}{cc}
+	h:&X\setminus\proy\left(\ker\left(\widehat{h}\right)\right)\to Y\\
+	&x\mapsto\class{\widehat{h}(u)}
+	\end{array}\]
+\end{defi}
+Es claro que toda aplicación lineal tiene una única aplicación proyectiva asociada, sin embargo, debemos tener cuidado con un caso extemo.
+\begin{obs}[Aplicación Idénticamente Nula]
+	Si consideramos la aplicación lineal idénticamente nula entre dos espacios vectoriales, su aplicación proyectiva asociada quedará definida sobre el conjunto vacío. Por tanto, diremos que el homomorfismo lineal nulo no tiene aplicación proyectiva asociada.
+\end{obs}
+Que la definición de aplicación proyectiva se apoye tanto en el concepto de homomorfismo lineal es una gran virtud, pues esto nos abre las puertas a usar a nuestro favor todos los resultados conocidos de aplicaciones lineales.
+
 Para terminar la sección advertimos de que en algunos textos, a la hora de representar una aplicación proyectiva omiten (abusando de notación) especificar que al espacio de partida se le extrae el centro $\mc{Z}$. 
 \section{Propiedades Elementales}
+\label{C4_propiedadesElementales}
 En esta sección estudiaremos diversas propiedades básicas de las aplicaciones proyectivas.
 
-Comencemos viendo cuál es la relación entre las aplicaciones proyectivas inyectivas (y respectivamente sobreyectvas) y sus aplicaciones lineales asociadas.
+Comencemos viendo cuál es la relación entre las aplicaciones proyectivas inyectivas (y respectivamente sobreyectivas) y sus aplicaciones lineales asociadas.
 \begin{lem}[Inyectividad y Sobreyectividad]
 	\label{C4_lem_inyectividadSobreyectividad}
 	Sea $h$ una aplicación proyectiva. Se cumple:
@@ -51,12 +89,26 @@ Comencemos viendo cuál es la relación entre las aplicaciones proyectivas inyec
 \end{lem}
 \begin{proof}
 	\begin{enumerate}
-		\item Suponiendo que $h$ es inyectiva, si $\widehat{h}$ no lo fuera, entonces tendría un núcleo no trivial, es decir, existiría cierto $u\not=0$ tal que $\widehat{h}(u)=0$. A su vez, como $\widehat{h}$ no puede ser la aplicación idénticamente nula, existirá un $v\not=0$ de manera que $\widehat{h}(v)\not=0$. Es un ejercicio trivial (que se deja al lector) la comprobación de que los vectores $v$ y $w=u+v$ son linealmente independientes. Esto quiere decir que los puntos proyectivos $x=\class{v}$ e $y=\class{w}$ son distintos. Sin embargo, al tomar sus imágenes por $h$ obtenemos:
-		\[h(y)=\class{\widehat{h}(w)}=\class{\widehat{h}(u+v)}=\class{\widehat{h}(u)+\widehat{h}(v)}=\class{\widehat{h}(v)}=h(x)\]
-		Lo cual contradice nuestra hipótesis. Recíprocamente, si $\widehat{h}$ es inyectiva, usando la definción de aplicación proyectiva y la linealidad e inyectividad de $\widehat{h}$ tenemos que:
-		\begin{multline}
-			h(x)=h(y)\sii h(\class{u})=h(\class{v})\sii\class{\widehat{h}(u)}=\class{\widehat{h}(v)}\sii\\\sii\widehat{h}(u)=\lambda \widehat{h}(v)\sii\widehat{h}(u)=\widehat{h}(\lambda v)\sii u = \lambda v\sii\class{u}=\class{v}\sii x=y
-		\end{multline}
+		\item Suponiendo que $h$ es inyectiva, si $\widehat{h}$ no lo fuera, entonces tendría un núcleo no trivial, es decir, existiría cierto $u\not=0$ tal que $\widehat{h}(u)=0$. A su vez, como $\widehat{h}$ no puede ser la aplicación idénticamente nula, existirá un $v\not=0$ de manera que $\widehat{h}(v)\not=0$.
+		
+		La comprobación de que los vectores $v$ y $w=u+v$ son linealmente independientes es un ejercicio trivial. Hagámoslo rápidamente
+		\[
+		\alpha v + \beta(u+v)=0
+		\]
+		Si $\beta = 0$ entonces $\alpha v = 0$, y como $v\not=0$ tendríamos que $\alpha=0$.
+		
+		En caso contrario, si $\beta\not=0$ podemos despejar de la siguiente manera
+		\begin{equation*}\alpha v +\beta(u+v)=0\sii v(\alpha+\beta)+\beta u=0\sii v\frac{\alpha+\beta}{-\beta}=u\end{equation*}
+		Esta última igualdad implicaría que $u$ es múltiplo de $v$ y, por ende, $v\in\ker(\widehat{h})$, lo cual es absurdo.
+		
+		Esto quiere decir que los puntos proyectivos $x=\class{v}$ e $y=\class{w}$ son distintos. Sin embargo, al tomar sus imágenes por $h$ obtenemos:
+		\[h(y)=\class{\widehat{h}(w)}=\class{\widehat{h}(u+v)}=\class{\cancel{\widehat{h}(u)}+\widehat{h}(v)}=\class{\widehat{h}(v)}=h(x)\]
+		Lo cual contradice nuestra hipótesis.
+		
+		Recíprocamente, si $\widehat{h}$ es inyectiva, usando la definción de aplicación proyectiva y la linealidad e inyectividad de $\widehat{h}$ tenemos que:
+		\begin{multline*}
+			h(x)=h(y)\stackrel{\mathrm{def.}}{\sii} h(\class{u})=h(\class{v})\stackrel{\mathrm{def.}}{\sii}\class{\widehat{h}(u)}=\class{\widehat{h}(v)}\sii\\\stackrel{\mathrm{def.}}{\sii}\widehat{h}(u)=\lambda \widehat{h}(v)\sii\widehat{h}(u)=\widehat{h}(\lambda v)\sii u = \lambda v\sii\class{u}=\class{v}\stackrel{\mathrm{def.}}{\sii} x=y
+		\end{multline*}
 		\item Suponiendo que $\widehat{h}$ es sobreyectiva, dado un $y\in Y$, veamos que existe un $x\in X\setminus\mc{Z}$ tal que $h(x)=y$. En efecto, $y=\class{v}$, como $\widehat{h}$ es sobreyectiva, existe un $u\in \widehat{X}$ tal que $\widehat{h}(u)=v$, luego, tomando clases:
 		\[h(x)=\class{\widehat{h}(u)}=\class{v}=y\]
 		Recíprocamente, si $h$ es sobreyectiva, dado $v\in\widehat{Y}$ es claro que existe un $x\in X\setminus\mc{Z}$ tal que: 
@@ -64,15 +116,19 @@ Comencemos viendo cuál es la relación entre las aplicaciones proyectivas inyec
 		Luego $v=\widehat{h}(\lambda u)$, lo que prueba la sobreyectividad de $\widehat{h}$.
 	\end{enumerate}
 \end{proof}
-\begin{cor}[Biyectividad]\label{C4:cor_biyectividad}
+\begin{cor}[Biyectividad]\label{C4_cor_biyectividad}
 	Una aplicación proyectiva es biyectiva si y solo si su aplicación lineal asociada es un isomorfismo.
 \end{cor}
+\begin{proof}
+	Evidente, basta observar que para que una aplicación proyectiva sea inyectiva, su aplicación lineal subyacente debe ser inyectiva y sobreyectiva (luego isomorfismo).
+\end{proof}
+Cabe destacar que la inversa de una aplicación proyectiva biyectiva también es aplicación proyectiva (ya que la inversa de un isomorfismo también es isomorfismo).
 
-Veamos con un ejemplo que ya, con lo poco que sabemos podemos demostrar cosillas bastante interesantes:
+Veamos con un ejemplo que ya, con lo poco que sabemos podemos demostrar cosillas bastante interesantes.
 \begin{exa}[Aplicaciones No Inyectivas Constantes]
 	Veamos que las aplicaciones proyectivas no inyectivas que parten de un subespacio proyectivo de dimensión $1$ son constantes.
 	
-	Para ello usamos el lema \ref{C4_lem_inyectividadSobreyectividad}. Si una aplicación cumpliera las características de nuestra hipótesis, su aplicación lineal correspondiente partiría de un espacio vectorial de dimensión $2$ y tampoco sería inyectiva, siendo su núcleo un subespacio de dimensión $1$ y su imagen otro subespacio de dimensión $1$. Al proyectivizar nos que nuestra aplicación parte de un espacio proyectivo de dimensión $1$ (extrayendo el punto asociado al núcleo) y llega a un espacio proyectivo conformado por un único punto (el proyectivizado de la imagen de su aplicación lineal).
+	Para ello usamos el lema \ref{C4_lem_inyectividadSobreyectividad}. Si una aplicación cumpliera las características de nuestra hipótesis, su aplicación lineal correspondiente partiría de un espacio vectorial de dimensión $2$ y tampoco sería inyectiva, siendo su núcleo un subespacio de dimensión $1$ y su imagen otro subespacio de dimensión $1$. Al proyectivizar vemos que nuestra aplicación parte de un espacio proyectivo de dimensión $1$ (extrayendo el punto asociado al núcleo) y llega a un espacio proyectivo conformado por un único punto (el proyectivizado de la imagen de su aplicación lineal).
 \end{exa}
 Veamos ahora que tanto la imagen como la imagen inversa de una variedad por una aplicación proyectiva es otra variedad.
 \begin{lem}[Preservación de Variedades]
@@ -84,18 +140,23 @@ Veamos ahora que tanto la imagen como la imagen inversa de una variedad por una 
 	\end{enumerate}
 \end{lem}
 \begin{proof}
-	Probaremos únicamente el segundo apartado (el otro se demuestra de forma análoga). Probemos en primer lugar el ``además'', de donde deduciremos automáticamente el resultado.
+	Probemos en primer lugar el ``además'', de donde deduciremos automáticamente el resultado.
 	
-	Sea $w\in \widehat{h^{-1}}(\widehat{W'})$. Esto es equivalente a decir que $\widehat{h}(w)\in\widehat{W'}$. En caso de que $\widehat{h}(w)=0$ tendríamos que $\class{w}\in\mc{Z}$. En caso contrario tenemos:
-	\[\class{\widehat{h}(w)}=h(\class{w})\in W'\sii\class{w}\in h^{-1}(W')\]
-	Saltando al espacio lineal, combinando ambos casos, tenemos que:
-	\[w\in\pi^{-1}\left(h^{-1}(W')\cup\mc{Z}\right)\]
-	Como todos los pasos que hemos hecho son equivalencias, también tenemos el otro contenido.
-	
-	Como $\widehat{h^{-1}}(\widehat{W'})$ es un subespacio vectorial, $\pi^{-1}\left(h^{-1}(W')\cup\mc{Z}\right)$ también lo es, y por ende, al proyectivizar obtendremos una variedad proyectiva, que es precisamente $h^{-1}(W')\cup\mc{Z}$.
+	\begin{enumerate}
+		\item[\ti{2.}] Sea $w\in \widehat{h^{-1}}(\widehat{W'})$. Esto es equivalente a decir que $\widehat{h}(w)\in\widehat{W'}$. En caso de que $\widehat{h}(w)=0$ tendríamos que $\class{w}\in\mc{Z}$. En caso contrario tenemos:
+		\[\class{\widehat{h}(w)}=h(\class{w})\in W'\sii\class{w}\in h^{-1}(W')\]
+		Saltando al espacio lineal, combinando ambos casos, tenemos que:
+		\[w\in\pi^{-1}\left(h^{-1}(W')\cup\mc{Z}\right)\]
+		Como todos los pasos que hemos hecho son equivalencias, también tenemos el otro contenido.
+		
+		Como $\widehat{h^{-1}}(\widehat{W'})$ es un subespacio vectorial, $\pi^{-1}\left(h^{-1}(W')\cup\mc{Z}\right)$ también lo es, y por ende, al proyectivizar obtendremos una variedad proyectiva, que es precisamente $h^{-1}(W')\cup\mc{Z}$.
+		\item[\ti{1.}] Análogamente a la demostración del apartado anterior, sea $y\in\widehat{h}(\widehat{W})$. Esto es equivalente a decir que existe un $x\in\widehat{W}$ tal que $\widehat{h}(x)=y$. Llegados a este punto, distinguimos casos. Si $\widehat{h}(x)=0$, entonces $\class{x}\in W\cap\mc{Z}$, y, por tanto, $h(\class{x})$ no está definido. Si, por el contrario, $h(x)\not=0$, entonces $\class{x}\in W$ y $h(\class{x})\in h(W)$. Con todo esto tenemos que $\class{y}\in W\setminus\mc{Z}$. Como todos los pasos que hemos hecho son reversibles, podemos concluir
+		\[\widehat{h}(\widehat{W})=\pi^{-1}(h(W\setminus\mc{Z}))\]
+	\end{enumerate}
+	Con lo que concluye la demostración.
 \end{proof}
 
-Pasemos a comprobar cómo se comportan las aplicaciones proyectivas respecto de la composición.
+Pasemos a comprobar que las aplicaciones proyectivas tienen un buen comportamiento respecto de la composición.
 \begin{lem}[Composición de Aplicaciones Proyectivas]
 	\label{C4_lem_composicionProyectivas}
 	La composición de dos aplicaciones proyectivas ($f$ y $g$) es una aplicación proyectiva, siempre y cuando la composición de sus respectivas aplicaciones lineales asociadas no sea idénticamente nula ($\widehat{f}\circ \widehat{g}\not=0$).
@@ -107,9 +168,13 @@ Pasemos a comprobar cómo se comportan las aplicaciones proyectivas respecto de 
 	\[\begin{array}{c}X_1\setminus\mc{Z}_1 \stackrel{g}{\to} X_2\setminus\mc{Z}_2 \stackrel{f}{\to} X_3\\
 	\class{u} \mapsto g(\class{u})=\class{\widehat{g}(u)} \mapsto (f\circ g)(\class{u})=f(\class{\widehat{g}(u)})=\class{\widehat{f}(\widehat{g}(u))}=\class{(\widehat{f}\circ\widehat{g})(u)}
 	\end{array}\]
-	Además, nótese que $\widehat{\mc{Z}_1}\subset\ker(\widehat{f}\circ\widehat{g})$ y, por ende, $\widehat{g^{-1}}(\widehat{\mc{Z}_2})=\ker(\widehat{f}\circ\widehat{g})$. Esto quiere decir:
+	Con lo que el resultado queda demostrado. Sin embargo, conviene dar, además, una bonita caracterización de la nulidad de la composición de dos aplicaciones proyectivas.
+	
+	Nótese que $\ker(\widehat{g})=\widehat{\mc{Z}_1}\subset\ker(\widehat{f}\circ\widehat{g})$. En efecto, dado un $x\in\ker(\widehat{g})$, tenemos que
+	\[(\widehat{f}\circ\widehat{g})(x)=\widehat{f}(\widehat{g}(x))=\widehat{f}(0)=0\]
+	Veamos que además se cumple que $\widehat{g^{-1}}(\widehat{\mc{Z}_2})=\widehat{g^{-1}}(\ker(\widehat{f}))=\ker(\widehat{f}\circ\widehat{g})$. En efecto, si $x\in\ker(\widehat{f}\circ\widehat{g})$ distingamos casos. Si $g(x)=0$ es claro que $g(x)\in\ker(\widehat{f})$ y, por tanto, $x\in\widehat{g^{-1}}(\ker(\widehat{f}))$, en caso contrario, si $g(x)\not\in\ker(\widehat{f})$ llegamos a contradicción con la hipótesis. Recíprocamente, si $x\in\widehat{g^{-1}}(\ker(\widehat{f}))$ es claro que $g(x)\in\ker(\widehat{f})$ y, por ende, $(\widehat{f}\circ\widehat{g})(x)=0$, de donde se sigue el resultado.
 	\[\mc{Z}=\proy(\widehat{g^{-1}}(\widehat{\mc{Z}_2}))\]
-	Por tanto, $\widehat{f}\circ \widehat{g}=0\sii \widehat{g}(\widehat{X_1})\subset\widehat{\mc{Z}_2}$.
+	Por tanto, $\widehat{f}\circ \widehat{g}=0\sii \widehat{g}(\widehat{X_1})\subset\widehat{\mc{Z}_2}=\ker(\widehat{f})$. Lo cual es una bonita caracterización de las cosas malas que nos pueden llegar a suceder y con las que debemos tener cuidado.
 \end{proof}
 
 Un resultado deseable, aunque para nada inmediato, es el de que podamos clasificar a las aplicaciones lineales que inducen cierta aplicación proyectiva por ser múltiplos entre sí. Veámoslo:
@@ -121,7 +186,7 @@ Un resultado deseable, aunque para nada inmediato, es el de que podamos clasific
 	\begin{itemize}
 		\item[$\bra$] Sean dos aplicaciones lineales $\widehat{g},\widehat{h}:E\to E'$ tales que inducen la misma aplicación proyectiva. Esto es:
 		\[\begin{array}{c}
-		\proy(E)\setminus\mc{Z}\stackrel{\varphi}{\to}\proy(E')\\
+		\proy(E)\setminus\mc{Z}\to\proy(E')\\
 		x=\class{u}\mapsto\varphi(x)=\class{\widehat{g}(u)}=\class{\widehat{h}(u)}
 		\end{array}\]
 		Para que esto pueda suceder es condición indispensable que ambas aplicaciones tengan el mismo kernel:
@@ -130,36 +195,45 @@ Un resultado deseable, aunque para nada inmediato, es el de que podamos clasific
 		\[\class{\widehat{g}(u)}=\class{\widehat{h}(u)}\ \forall u\not\in\widehat{\mc{Z}}\ra\widehat{g}(u)=\lambda_u\widehat{h}(u)\]
 		Por ende, nuestro objetivo es demostrar que dicho $\lambda_u$ es el mismo para todos los vectores.
 		
+		Para hacer esto, consideremos una base del $\ker(\widehat{g})$ y ampliémosla a una base de $E$. Considerando el subespacio vectorial $U$ engendrado por los vectores añadidos a la base de $\ker(\widehat{g})$, tenemos la siguiente descomposición de $E$ en suma directa
+		\[E=\ker(\widehat{g})\oplus U\]
+		Esto quiere decir, que para todo vector $v\in E$, podemos escribir $v=w+u$, donde $w\in\ker(\widehat{g})$ y $u\in U$.
+		
 		Distingamos dos casos (para no talar árboles de más echaremos las cuentas rápido).
 		\begin{itemize}
 			\item Sean $u,v\in E\setminus\ker(\widehat{g})$ tales que $u=\mu v$. Tenemos que:
 			\[
 			\widehat{g}(u)=\lambda_u\widehat{h}(u)
-			\sii\mu\widehat{g}(v)=\lambda_u\mu\widehat{h}(v)\sii\lambda_v\widehat{h}(v)=\lambda_u\widehat{h}(v)\sii\lambda_u=\lambda_v
+			\sii\cancel{\mu}\widehat{g}(v)=\lambda_u\cancel{\mu}\widehat{h}(v)\sii\lambda_v\cancel{\widehat{h}(v)}=\lambda_u\cancel{\widehat{h}(v)}\sii\lambda_u=\lambda_v
 			\]
-			\item Sea $u,v\in E\setminus\ker(\widehat{g})$ linealmente independientes y sea $w=u+v$. Echando las cuentas:
+			\item Sea $u,v\in U$ linealmente independientes y sea $w=u+v$. Echando las cuentas:
 			\begin{multline}\widehat{g}(w)=\lambda_w\widehat{h}(w)\sii\\\sii\widehat{g}(u)+\widehat{g}(v)=\lambda_w(\widehat{h}(u)+\widehat{h}(v))\sii\\
 			\sii \lambda_u\widehat{h}(u)+\lambda_v\widehat{h}(v)=\lambda_w(\widehat{h}(u)+\widehat{h}(v))\sii\\
 			\sii(\lambda_u-\lambda_w)\widehat{h}(u)+(\lambda_v-\lambda_w)\widehat{h}(v)=0\end{multline}
-			Como $\widehat{h}(u)$ y $\widehat{h}(v)$ son linealmente independientes (compruébese), se tiene que: \[\lambda_u=\lambda_v=\lambda_w\].
+			Si $\widehat{h}(u)$ y $\widehat{h}(v)$ fueran linealmente independientes tendríamos que \[\lambda_u=\lambda_v=\lambda_w\]
+			En efecto, como $U\cap\ker(\widehat{h})=\{0\}$, $\widehat{h}$ es inyectiva en $U$, y, por tanto,
+			\[\alpha\widehat{h}(u)+\beta\widehat{h}(v)=0\sii \widehat{h}(\alpha u +\beta v)=0\sii \alpha u +\beta v=0\]
 		\end{itemize}
+		Y de aquí el resultado se obtiene inmediatamente.
 		\item[$\bla$] Inmediato, ya que si $\widehat{h}(u)=\lambda\widehat{g}(u)$ para todo $u$, tomando clases:
 		\[h(u)=\class{\widehat{h}(u)}=\class{\lambda\widehat{g}(u)}=\class{\widehat{g}(u)}=g(u)\]
 	\end{itemize}
+	Con lo que concluye la demostración.
 \end{proof}
 Al teorema \ref{C4_teo_lemaCorrespondencia} le bautizamos con el nombre de ``lema de la correspondencia'', porque lo que viene a decir (siendo muy retorcidos) es que las aplicaciones proyectivas entre dos espacios proyectivos están en biyección con los elementos del espacio proyectivo $\proy(\mathrm{Hom}(\widehat{X},\widehat{Y}))$.
 
+Por este motivo, a veces se dice que las aplicaciones proyectivas son simplemente el ``proyectivizado'' de una aplicación lineal.
 \section{Proyecciones Cónicas}
-Dedicaremos esta sección al estudio de un tipo especialmente relevante de aplicaciones proyectivas no homográficas, las llamadas \ti{proyecciones cónicas}.
+\label{C4_proyeccionesConicas}
+Dedicaremos esta sección al estudio de un tipo especialmente relevante de aplicaciones proyectivas no inyectivas, las llamadas \ti{proyecciones cónicas}.
 
 Antes de lanzarnos al estudio general de estas aplicaciones presentemos un par de ejemplos que más adelante nos ayudarán a entender intuitivamente el por qué del apellido ``cónicas'' de estas aplicaciones.
-
 \begin{exa}[Punto sobre Recta]
 	\label{C4_exa_puntoRecta}
-	En el plano proyectivo $\proy^2$ consideramos un punto $z$ y una recta $Y$ (recordemos que es un subespacio proyectivo) tal que $z\not\in Y$. En estas condiciones definimos la aplicación:
-	\[\begin{array}{ccc}
-		\proy^2\setminus\{z\}&\stackrel{h}{\to}& Y\\
-		x&\mapsto& h(x)=\engen{x,z}\cap Y
+	En el plano proyectivo $\proy^2$ consideramos un punto $Z$ y una recta $y$ (recordemos que $y$ es un subespacio proyectivo) tal que $Z\not\in y$. En estas condiciones definimos la aplicación
+	\[\begin{array}{cc}
+		\pi:&\proy^2\setminus\{Z\}\to y\\
+		&x\mapsto \pi(x)=\engen{x,Z}\cap y
 	\end{array}\]
 	\begin{figure}[h]
 		\centering
@@ -172,26 +246,48 @@ Antes de lanzarnos al estudio general de estas aplicaciones presentemos un par d
 
 No demostraremos que la aplicación del ejemplo \ref{C4_exa_puntoRecta} es, en efecto, una aplicación proyectiva, ya que al final de la sección daremos una demostración general para todas las proyecciones cónicas, de las que esta aplicación en concreto es un caso particular.
 
-El ejemplo \ref{C4_exa_puntoRecta} se puede generalizar para dimensiones superiores, basta mantener que $z$ sea un punto de $\proy^n$ e $Y$ un hiperplano.
+El ejemplo \ref{C4_exa_puntoRecta} se puede generalizar para dimensiones superiores, como vemos a continuación.
 \begin{exa}[Punto sobre Hiperplano]
 	\label{C4_exa_puntoHiperplano}
-	En el plano proyectivo $\proy^n$ consideramos el punto $z$ y el hiperplano $Y$ tal que $z\not\in Y$. Definimos la aplicación:
-	\[\begin{array}{c}
-	\proy^n\setminus\{z\}\stackrel{h}{\to} Y\\
-	x\mapsto h(x)=\engen{x,z}\cap Y
+	En el plano proyectivo $\proy^n$ consideramos el punto $Z$ y el hiperplano $y$ tal que $Z\not\in y$. Definimos la aplicación:
+	\[\begin{array}{cc}
+	\pi:&\proy^n\setminus\{Z\}\to y\\
+	&x\mapsto \pi(x)=\engen{x,Z}\cap y
 	\end{array}\]
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=.3]{Graficos/puntoPlano.png}
+		\caption{Ilustración de una Proyección Punto--Plano.}
+		\label{C4_puntoPlano}
+	\end{figure}
 \end{exa}
-Otra generalización de los ejemplos anteriores es la siguiente (menos intuitiva y más dificil de ver):
+\begin{obs}[Cónicas]
+	\label{C4_obs_conicas}
+	El apellido ``cónicas'' de las aplicaciones que vamos a estudiar en esta sección es debido a una interpretación geométrica del caso particular presentado en la figura \ref{C4_puntoPlano}. En ese contexto, el conjunto de puntos cuya imagen describe una circunferencia es un cono.
+\end{obs}
+Otra generalización de los ejemplos anteriores es la siguiente.
 \begin{exa}[Recta sobre Recta]
-	En el espacio proyectivo $\proy^3$ se consideran las rectas $l$ y $l'$ tales que $l\cap l'=\emptyset$. Definimos la aplicación:
-	\[\begin{array}{c}
-	\proy^3\setminus l\stackrel{h}{\to}l'\\
-	x\mapsto\engen{x,l}\cap l'
+	En el espacio proyectivo $\proy^3$ se consideran las rectas $l$ y $l'$ tales que $l\cap l'=\emptyset$. Definimos la aplicación
+	\[\begin{array}{cc}
+	\pi:&\proy^3\setminus l\to l'\\
+	&x\mapsto\engen{x,l}\cap l'
 	\end{array}\]
 	Observamos simplemente que $\engen{x,l}$ siempre se corta con $l'$ en un punto (consecuencia inmediata de la fórmula de Grassmann).
-	
-	IMAGEN
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=.3]{Graficos/rectaRecta.png}
+		\caption{Ilustración de una Proyección Recta--Recta.}
+		\label{C4_rectaRecta}
+	\end{figure}
 \end{exa}
+
+\begin{obs}[Intrepretación de las Aplicaciones Proyectivas]
+	Cabe destacar que una de las interpretaciones más usadas y útiles de las aplicaciones proyectivas es entenderlas como correspondencias entre subvariedades proyectivas de un espacio más grande que las contenga.
+	
+	Así, una aplicación proyectiva entre dos espacios de dimensión uno (rectas proyectivas) podrá verse como como una correspondencia entre dos rectas de un plano proyectivo.
+	
+	A lo largo de lo que resta de sección haremos buen uso de esta interpretación.
+\end{obs}
 
 Llegados a este punto, ha llegado la hora de definir \ti{proyección cónica} en toda su generalidad.
 \begin{defi}[Proyección Cónica]
@@ -202,10 +298,13 @@ Llegados a este punto, ha llegado la hora de definir \ti{proyección cónica} en
 		\item $\dim(Z)+\dim(Y)=\dim(X)-1$
 	\end{enumerate}
 	Definimos la aplicación:
-	\[\begin{array}{c}
-	X\setminus Z\stackrel{h}{\to} Y\\
-	x\mapsto\engen{x,Z}\cap Y
+	\[\begin{array}{cc}
+	\pi:&X\setminus Z\to Y\\
+	&x\mapsto\engen{x,Z}\cap Y
 	\end{array}\]
+	Poniendo un poco de literatura a esta definición tan abstracta, podemos decir que, en resumen, $X$ e $Y$ no pueden cortarse y la suma de sus dimensiones debe ser el total menos $1$.
+	
+	A la variedad $Z$ se le suele llamar \ti{centro} de la proyección.
 \end{defi}
 Automáticamente se nos presentan una serie de cuestiones que trataremos de responder a continuación:
 \begin{enumerate}
@@ -221,12 +320,12 @@ Como diría Jack el Destripador, vayamos por partes:
 	Usando la fórmula de Grassmann:
 	\begin{equation}
 		\label{C4_eq_interseccionUnipuntual1}
-		\dim\engen{\engen{x,Z},Y}=\dim\engen{x,Z}+\dim\engen{Y}-\dim\engen{x,Z}\cap Y
+		\dim\engen{\engen{x,Z},Y}=\dim\engen{x,Z}+\dim\engen{Y}-\dim(\engen{x,Z}\cap Y)
 	\end{equation}
 	En primer lugar, veamos cuál es la dimensión de $\engen{x,Z}$, para lo cual usaremos, de nuevo, la fórmula de Grassmann.
 	\begin{equation}
 		\label{C4_eq_interseccionUnipuntual2}
-		\dim\engen{x,Z}=\dim(x)+\dim(Z)+\dim(x\cap Z)
+		\dim\engen{x,Z}=\cancel{\dim(x)}+\dim(Z)-\dim(x\cap Z)
 	\end{equation}
 	Como $\dim(x)=0$ (por ser un punto) y la dimensión de $\dim(x\cap Z)=-1$, ya que, por definición de proyección cónica $x\not\in Z$, y, por tanto, $x\cap Z=\emptyset$. Sustituyendo en \eqref{C4_eq_interseccionUnipuntual2} se obtiene:
 	\begin{equation}
@@ -236,14 +335,14 @@ Como diría Jack el Destripador, vayamos por partes:
 	Sustituyendo este resultado en \eqref{C4_eq_interseccionUnipuntual1} obtenemos:
 	\begin{equation}
 		\label{C4_eq_interseccionUnipuntual4}
-		\dim\engen{\engen{x,Z},Y}=\dim(Z)+1+\dim\engen{Y}-\dim\engen{x,Z}\cap Y
+		\dim\engen{\engen{x,Z},Y}=\dim(Z)+1+\dim\engen{Y}-\dim(\engen{x,Z}\cap Y)
 	\end{equation}
 	Como, por hipótesis $\dim(Z)+\dim(Y)=\dim(X)-1$, sustituyendo en \eqref{C4_eq_interseccionUnipuntual4} queda:
 	\begin{equation}
 		\label{C4_eq_interseccionUnipuntual5}
 		\dim\engen{\engen{x,Z},Y}=\dim(X)-\dim\engen{x,Z}\cap Y
 	\end{equation}
-	Centrémonos ahora en el otro miembro de la igualdad. En primer lugar, es claro que:
+	Centrémonos ahora en el otro miembro de la igualdad. En primer lugar, por simple cuestión notacional diremos que:
 	\[\dim\engen{\engen{x,Z},Y}=\dim\engen{x,Z,Y}\]
 	Parece intuitivo pensar que $Z$ e $Y$ generan $X$. Veámoslo:
 	\begin{equation}
@@ -262,7 +361,7 @@ Como diría Jack el Destripador, vayamos por partes:
 	\end{equation}
 	Despejando, el resultado se sigue inmediatamente.
 \end{proof}
-La proposición \ref{C4_prop_interseccionUnipuntual} prueba que $h$ está bien definida como aplicación.
+La proposición \ref{C4_prop_interseccionUnipuntual} prueba que $\pi$ está bien definida como aplicación.
 
 Una pequeña observación antes de probar que las proyecciones cónicas son, efectivamente, aplicaciones proyectivas, es que los espacios lineales asociados a $Z$ y a $Y$ son complementarios.
 \begin{obs}[Espacios Lineales Complementarios]
@@ -282,9 +381,9 @@ Una pequeña observación antes de probar que las proyecciones cónicas son, efe
 Probemos ahora que las proyecciones cónicas son aplicaciones proyectivas. Y que, de hecho, son las aplicaciones proyectivas asociadas a \ti{proyecciones vectoriales}. (De ahí surge el nombre de ``proyección'').
 \begin{prop}[Proyección Vectorial]
 	\label{C4_prop_proyeccionVectorial}
-	La aplicación $h$ tiene a la siguiente aplicación lineal (proyección vectorial de $\widehat{X}$ sobre $\widehat{Y}$) como asociada:
+	La aplicación $\pi$ tiene a la siguiente aplicación lineal (proyección vectorial de $\widehat{X}$ sobre $\widehat{Y}$) como asociada:
 	\[\begin{array}{c}
-	\widehat{X}=\widehat{Z}\oplus\widehat{Y}\stackrel{\widehat{h}}{\to}\widehat{Y}\\
+	\widehat{X}=\widehat{Z}\oplus\widehat{Y}\stackrel{\widehat{\pi}}{\to}\widehat{Y}\\
 	u=v+w\mapsto w
 	\end{array}\]
 	Siendo $v\in \widehat{Z}$ y $w\in \widehat{Y}$, es decir, la descomposición de $x$ en suma de vectores de $\widehat{Z}$ e $\widehat{Y}$.
@@ -302,31 +401,47 @@ Probemos ahora que las proyecciones cónicas son aplicaciones proyectivas. Y que
 \end{proof}
 La proposición \ref*{C4_prop_proyeccionVectorial} demuestra que las proyecciones cónicas en general son aplicaciones proyectivas, dando la aplicación lineal asociada (una proyección vectorial).
 
-Antes de finalizar la sección daremos una explicación del por qué del apellido ``cónicas'' de estas aplicaciones. Además, daremos dos ejemplos detallados para que el lector se familiarice con el tratamiento de estas aplicaciones, y que, además, constituye un gran repaso de capítulos anteriores. Por último, propondremos un ejercicio al lector.
-
-\begin{obs}[Cónicas]
-	\label{C4_obs_conicas}
-	Este apellido es debido a que, en el caso particular presentado en el ejemplo \ref{C4_exa_puntoHiperplano}, si tomamos la imagen de una circunferencia por la proyección cónica obtenemos una curva cónica. Esta curva es la formada por la intersección entre el hiperplano $Y$ la familia de rectas que pasan por $z$ y un punto de la circunferencia.
-\end{obs}
-
 El siguiente ejemplo ilustra la importancia de asegurarse de que cumplimos con todos los requisitos a la hora de difinir una proyección cónica.
 \begin{exa}[Proyección Punto -- Plano Degenerada]
-	Dado el punto $z=(1:0:-1:1)$ y el plano $\pi:2x-y+z-t=0$, se pide hallar la imagen de un punto genérico $p=(x:y:z:t)$ por la proyección cónica con centro $z$ sobre $\pi$.
+	Sea una referencia proyetciva $\mf{R}$ sobre la cual realizaremos todos los cálculos.
 	
-	Por definición tenemos que $h(p)=zp\cap\pi$. Dicho de otra forma, nuestro trabajo se reduce a calcular la intersección de una recta y un plano. Como tenemos el plano $\pi$ expresado en forma de su ecuación implícita, tratemos de hallar las ecuaciones paramétricas de $zp$. Estas son, en su versión no homogénea:
-	\[zp:\class{(x+\theta:y:z-\theta:t+\theta)}\]
+	Dado el punto $Z=(1:0:-1:1)$ y el plano $\pi:2x-y+z-t=0$, se pide hallar la imagen de un punto genérico $p=(x:y:z:t)$ por la proyección cónica con centro $Z$ sobre $\pi$.
+	
+	Por definición tenemos que $h(p)=Zp\cap\pi$. Dicho de otra forma, nuestro trabajo se reduce a calcular la intersección de una recta y un plano. Como tenemos el plano $\pi$ expresado en forma de su ecuación implícita, tratemos de hallar las ecuaciones paramétricas de $Zp$. Estas son, en su versión no homogénea:
+	\begin{equation}\label{C4_parametrizacion}Zp:\class{(x+\theta:y:z-\theta:t+\theta)}\end{equation}
 	Así pues ahora solo basta con sustituir en la ecuación implítita de $\pi$ y despejar $\theta$. Sin embargo:
 	\[2(x+\theta)-y+(z-\theta)-(t+\theta)=0\sii2x-y+z-t=0\]
-	Como vemos, $\theta$ se ha esfumado en el proceso. ¿Como debemos interpretar este resultado? Bueno, quizá ayude imaginarse que $p$ es un punto concreto, es decir, que las variables $x,y,z,t$ de la anterior ecuación son ``numeracos''.
+	Como vemos, $\theta$ se ha esfumado en el proceso. ¿Como debemos interpretar este resultado?
 	
-	Hecho esto, nos quedará un número igualado a $0$. Si esta igualdad es falsa uno podría pensar que la recta no corta al plano nunca (ya que no lo hace para ningún valor de $\theta$), pero esto sabemos que no es así, ya que una recta y un hiperplano siempre se cortan. Es en este momento cuando hay que recordar que hay ocasiones en las que $\theta$ no está definido, en concreto, ningún valor de $\theta$ nos define el punto $z$. Por ende, este es el punto de corte.
+	Bueno, quizá ayude imaginarse que $p$ es un punto concreto, es decir, que las variables $x,y,z,t$ de la anterior ecuación son ``numeracos''. Hecho esto, nos quedará un número igualado a $0$. En esta situación pueden presentársenos dos situaciones.
+	\begin{enumerate}
+		\item Si la igualdad es falsa, conviene recordar que la ecuación \eqref{C4_parametrizacion} es una \ti{parametrización} de la recta $Zp$, esto quiere decir que para cada valor de $\theta$, la ecuación nos ``escupe'' un punto de la recta.
+		
+		Por tanto, lo que está ocurriendo es que, independientemente del punto de la recta que nos escupa la ecuación, este no pertenece al plano.
+		
+		Sin embargo, como estamos usando una parametrización no homogénea hay un punto que se queda sin parametrizar, es decir, la ecuación no lo expulsa para ningún valor ``normal'' de $\theta$, este es el punto $Z$.
+		
+		Como por la fórmula de Grassmann un hiperplano y una recta siempre se cortan, este es el punto de corte con el plano.
+		\item Por el contrario, si la igualdad es cierta, independientemente del valor de $\theta$ que insertemos, la ecuación nos devuelve un punto sobre el plano. Esto significa que la recta $Zp$ está contenida en el plano $\pi$.
+	\end{enumerate}
+	Nótese que la aplicación no es una proyección cónica ya que incumple los términos de su definición.
 	
-	En otro caso, nos puede quedar la igualdad trivial, que no quiere decir otra cosa que que la recta $zp$ está contenida en el plano $\pi$. Por ende, en este caso, la imagen de $p\in\pi$ no está bien definida, ya que es toda una recta.
+	Es más, no está bien definida, ya que la imagen de un punto $p\in\pi$ no es un punto (como debería) sino una recta.
 \end{exa}
-\begin{exerc}[Clasificación de Proyecciones Cónicas]
-	Enumere las proyecciones cónicas de $\proy^4$, clasificándolas en función de las subvariedades $Z$ e $Y$ que las caracterizan.
+\begin{exa}[Clasificación de las Proyecciones Cónicas de $\proy^n$]
+	Es claro que podemos clasificar las proyecciones cónicas de $\proy^n$ en función de las dimensiones de su centro y su espacio de destino.
+	
+	Por ejemplo, las proyecciones cónicas de $\proy^1$ son del tipo punto -- punto (todas ellas constantes).
+	
+	Las proyecciones de $\proy^2$ son del tipo punto -- recta y recta -- punto. 
+	
+	Por su parte, las de $\proy^3$ se agrupan en punto -- plano, recta -- recta y plano -- punto.
+\end{exa}
+\begin{exerc}[Clasificación de las Proyecciones Cónicas de $\proy^4$]
+	Clasifique las proyecciones de $\proy^4$.
 \end{exerc}
 \section{Homografías}
+\label{C4_homografias}
 En esta sección introduciremos unas aplicaciones proyectivas bastante notables, las llamadas ``homografías'', que se estudiaran con enorme profundidad en capítulos posteriores.
 \begin{defi}[Homografía]
 	\label{C4_def_homografia}
@@ -343,10 +458,13 @@ Antes de empezar a desgranar las propiedades de estas aplicaciones, pongamos un 
 	\end{array}\]
 	
 	Esta aplicación es una homografía, de hecho, es una restricción de la aplicación definida en el ejemplo \ref{C4_exa_puntoRecta}. En definitiva, dado un punto y dos rectas, tenemos una homografía.
-	
-	IMAGEN
 \end{exa}
-
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.3]{Graficos/perspectividad.eps}
+	\caption{Ilustración de una Homografía.}
+	\label{C4_img_perspectividad}
+\end{figure}
 Una propiedad importante de las homografías es que pueden transformarse de forma natural a en aplicaciones biyectivas.
 \begin{obs}[Biyectividad de las Homografías]
 	Al ser las homografías aplicaciones inyectivas, si la dimensión del espacio de partida y de llegada coinciden, la aplicación en cuestión es biyectiva. Este hecho se debe a la fórmula de las dimensiones para aplicaciones lineales.
@@ -386,6 +504,7 @@ Sin embargo, podemos ir aún más allá. Consideremos el siguiente homomorfismo 
 Luego, por el primer teorema de isomorfía, se tiene que $\K^*$ es isomorfo a $H$ con lo que concluimos:
 \begin{equation}\mathbf{GP}(X)\cong\frac{\mathbf{GL}(\widehat{X})}{\K^*}\end{equation}
 \section{Aplicaciones Proyectivas y Matrices}
+\label{C4_matrices}
 Uno de los resultados más notables y relevantes del álgebra lineal es que una aplicación lineal queda totalmente determinada por la imagen de los vectores la base del espacio de partida. Tratemos de traducir esto al contexto de las aplicaciones proyectivas.
 
 
@@ -398,8 +517,9 @@ Recordamos que, dado un vector $u\in E$ y un homomorfismo $h:E\to E'$, fijadas s
 \end{equation}
 En este contexto, $X$ representa una matriz columna cuyos coeficientes se corresponden con las coordenadas del vector $u$ respecto de $\mc{B}$. Análogamente, $Y$ es una matriz columna cuyos coeficientes son las coordenadas de $h(u)$ respecto de $\mc{B}'$. Por su parte, $M_{\mc{B}\mc{B}'}(h)$ es la llamada \ti{matriz asociada a $h$} respecto de $\mc{B}$ y $\mc{B}'$. Las columnas de la matriz $M_{\mc{B}\mc{B}'}(h)$ se corresponden con las coordenadas en la base $\mc{B}'$ de la imagen de los vectores de la base $\mc{B}$. 
 
-Asimismo conviene recordar qué relación había entre $M_{\mc{B}\mc{B}'}(h)$ y $M_{\overline{\mc{B}}\overline{\mc{B}'}}(h)$. Esta relación era:
+Asimismo, conviene recordar qué relación había entre $M_{\mc{B}\mc{B}'}(h)$ y $M_{\overline{\mc{B}}\overline{\mc{B}'}}(h)$. Esta relación era:
 \begin{equation}
+\label{C4_eq_formulaLineales2}
 	M_{\overline{\mc{B}}\overline{\mc{B}'}}(h)=Q^{-1}M_{\mc{B}\mc{B}'}(h)P
 \end{equation}
 donde $P^{-1}$ y $Q^{-1}$ son, respectivamente, las matrices de cambio de base de $\mc{B}$ a $\overline{\mc{B}}$ y de $\mc{B}'$ a $\overline{\mc{B}'}$. (Ver apéndice \ref{A1_cambioBase}).
@@ -412,21 +532,28 @@ Denotando por $W$ a la matriz columna cuyos coeficientes son las coordenadas hom
 \begin{equation}
 	h(\class{w})=\class{\widehat{h}(w)}\equiv\class{M_{\mc{B}\mc{B}'}(\widehat{h})W}
 \end{equation}
-Nótese que hemos cometido un abuso de notación ya que $M_{\mc{B}\mc{B}'}(\widehat{h})W$ es una matriz columna. Sin embargo, la consideramos como un vector para poder tomar el rayo engendrado por él.
+Nótese que hemos cometido un abuso de notación, ya que $M_{\mc{B}\mc{B}'}(\widehat{h})W$ es una matriz columna. Sin embargo, la consideramos como un vector para poder tomar el rayo engendrado por él.
 
-Que no cunda la euforia, todavía tenemos un problema por subsanar, ya que al ser las bases asociadas a $\mf{R}$ y $\mf{R}'$ únicas salvo múltiplos nadie me impide coger la base $\lambda\mc{B}$ (para cierto escalar $\lambda$ no nulo) en lugar de la base $\mc{B}$.
+Que no cunda la euforia, todavía tenemos un problema por subsanar, ya que al ser las bases asociadas a $\mf{R}$ y $\mf{R}'$ únicas salvo múltiplos nadie me impide coger la base $\lambda\mc{B}$ (para cierto escalar $\lambda$ no nulo) en lugar de la base $\mc{B}$. Veamos como afecta esta situación incómoda a la matriz asociada.
 
-Sin embargo, las matrices de cambio entre bases asociadas (y sus inversas) son múltiplos de la identidad (por ser las unas múltiplos de las otras). Esta propiedad trae a colación un viejo resultado acerca de matrices que reza que al multiplicar una matriz (ya sea por la izquierda o por la derecha) por $\lambda I_n$ es equivalente a multiplicar la matriz por $\lambda$. Así pues tenemos que:
+Sabemos que la matriz asociada se ve afectada según la relación \eqref{C4_eq_formulaLineales2}, por ende, solo tenemos que calcular las matrices de cambio de base.
+
+Las matrices de cambio entre bases asociadas (y sus inversas) son múltiplos de la identidad (por ser las unas múltiplos de las otras). Esta propiedad trae a colación un viejo resultado acerca de matrices que reza que al multiplicar una matriz (ya sea por la izquierda o por la derecha) por $\lambda I_n$ es equivalente a multiplicar la matriz por $\lambda$. Así pues tenemos que:
 \begin{equation}
-	\class{M_{\lambda \mc{B}\mu\mc{B}'}(\widehat{h})W}=\class{M_{\mc{B}\mc{B}'}(\widehat{h})\lambda\mu W}=\class{M_{\mc{B}\mc{B}'}(\widehat{h})W}=:h(\class{w})
+	h(\class{w}):=\class{M_{\lambda \mc{B}\mu\mc{B}'}(\widehat{h})W}=\class{M_{\mc{B}\mc{B}'}(\widehat{h})\lambda\mu W}=\class{M_{\mc{B}\mc{B}'}(\widehat{h})W}=:h(\class{w})
 \end{equation}
-Pongamos algunos ejemplos para asentar todo esto.
+Otro desgraciado problema que se nos presenta es que nadie nos obliga a escoger $\widehat{h}$ como aplicación lineal asocada a $h$, podríamos haber escogido $\alpha\widehat{h}$, si embargo, las matrices de estas dos aplicaciones solo difieren por el factor
+Pongamos algunos ejemplos para asentar todo esto. En concreto, el siguiente ejemplo es extremadamente importante y lo pondremos en valor en capítulos posteriores.
 \begin{exa}[Transformaciones de Möbius]
 	\label{C4_exa_mobius}
-	Sea $h:\proy^1\to\proy^1$ una aplicación proyectiva. Consideramos la referencia $\mf{R}:=\{\class{u},\class{v};e\}$ cuya base asociada es $\mc{B}=\{u,v\}$, tanto en el espacio de llegada como en el de salida. Sabemos además que $\widehat{h}(u)=au+bv$ y que $\widehat{h}(v)=cu+dv$.
+	Sea $h:\proy^1\to\proy^1$ una aplicación proyectiva. Consideramos la referencia $\mf{R}:=\{\class{u},\class{v};e\}$ cuya base asociada (una fijada por nosotros) es $\mc{B}=\{u,v\}$, tanto en el espacio de llegada como en el de salida.
 	
-	Sea un punto $x=(x_0:x_1)_{\mf{R}}$, por lo que acabamos de ver, su imagen por $h$ es:
-	\[h(x)=\class{\rho(y_0,y_1)^t}=\class{\begin{pmatrix}
+	Sabemos además que $\widehat{h}(u)=au+bv=(a,b)_{\mc{B}}$ y que $\widehat{h}(v)=cu+dv=(c,d)_{\mc{B}}$.
+	
+	Sea un punto $x=(x_0:x_1)_{\mf{R}}$ (del que fijamos un representante $(x_0,x_1)_{\mc{B}}$), por lo que acabamos de ver, su imagen por $h$ es
+	\[h(x)=\class{\begin{pmatrix}
+		y_0 \\ y_1
+		\end{pmatrix}}=\class{\begin{pmatrix}
 	a & c\\
 	b & d
 	\end{pmatrix}\begin{pmatrix}
@@ -435,8 +562,8 @@ Pongamos algunos ejemplos para asentar todo esto.
 	\end{pmatrix}}\]
 	Usualmente lo escribiremos de forma ecuacional:
 	\[\begin{array}{l}
-	\rho y_0 = ax_0+cx_1\\
-	\rho y_1 = bx_0+dx_1
+	y_0 = ax_0+cx_1=()\\
+	y_1 = bx_0+dx_1=()
 	\end{array}\]
 	Podríamos quedarnos ahí, sin embargo seguiremos el proceso de ``deshomogeneización'' habitual, que nos será de gran utilidad en el futuro.
 	

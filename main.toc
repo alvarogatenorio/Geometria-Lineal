@@ -116,4 +116,4 @@
 \contentsline {paragraph}{Observaciones}{120}{section*.18}
 \contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{120}{section*.19}
 \contentsline {section}{\numberline {A.3}Dualidad}{121}{section.Alph1.3}
-\contentsline {chapter}{\numberline {B}Mierdas varias}{123}{appendix.Alph2}
+\contentsline {chapter}{\numberline {B}Cosas pendientes}{123}{appendix.Alph2}

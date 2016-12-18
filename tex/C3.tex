@@ -35,7 +35,7 @@ expresado en \ti{coordenadas homogéneas} respecto de la referencia $\mf{R}$. A 
 	Dados los puntos $P=(1:2:-1)$ y $Q=(0:1:3)$ se nos pide dar unas ecuaciones paramétricas de la recta $PQ$.
 	
 	Siguiendo los pasos expuestos, los rayos que conforman la recta $PQ$ son de la forma:
-	\[\class{\alpha(1,2,-1)+\beta(0,1,3)}\tq \alpha,\beta\in\K\tq(\alpha,\beta)\not=(0,0)\]
+	\[\class{\alpha(1,2,-1)+\beta(0,1,3)} \text{ tal que } \alpha,\beta\in\K\text{ y }(\alpha,\beta)\not=(0,0)\]
 	Si expandimos un poco la expresión queda:
 	\[\class{(\alpha,2\alpha+\beta,-\alpha+3\beta)}\]
 	En otras palabras, la recta $PQ$ son los rayos enegendrados por los vectores $w=(x_0,x_1,x_2)$ de manera que se cumple (matricialmente):
@@ -62,33 +62,33 @@ De esta forma, la recta ya no queda descrita por dos parámetros homogéneos $\a
 Sin embargo, hemos de tener cuidado pues, como más de uno ya se habrá dado cuenta, es posible que en algunos casos $\alpha$ se anule, por ende, $\theta$ quedaría indefinido. Como este caso se corresponde con un único punto (ya que los vectores de la forma $\beta v$ representan el mismo rayo), y este es precisamente $Q$, diremos que una recta queda descrita por la siguiente \ti{ecuación paramétrica no homogénea}:
 \begin{equation}
 	\label{C3_eq_descripcionRecta}
-	PQ:\{\class{u+\theta v}\tq \theta\in\K\}\cup\{Q\}
+	PQ=\{\class{u+\theta v}\tq \theta\in\K\}\cup\{Q\}
 \end{equation}
 Como es una pena (y un estorbo) tener que indicar que añadimos el punto $Q$ cada vez que queremos escribir la ecuación paramétrica de una recta, lo que hacemos es ampliar el rango de valores que puede tomar $\theta$.
 
 De esta forma, cuando $\alpha=0$, definimos que $\theta$ toma como valor el símbolo $\infty$. Por ende, el conjunto de valores que puede tomar $\theta$ queda amplicado, de forma que $\theta\in\K\cup\{\infty\}:=\overline{\K}$, significando esto que, por definición, $\class{u+\infty v}=\class{v}=Q$. Describiremos pues la recta como:
 \begin{equation}
 	\label{C3_eq_descripcionRectaP1}
-	PQ:\{\class{u+\theta v}\tq \theta\in\overline{\K}\}
+	PQ=\{\class{u+\theta v}\tq \theta\in\overline{\K}\}
 \end{equation}
 Dados los vectores $u=(u_0,u_1,\cdots,u_n)$ y $v=(v_0,v_1,\cdots,v_n)$ si los sustituimos en la ecuación~\eqref{C3_eq_descripcionRectaP1} obtenemos:
 \begin{equation*}
 	\label{C_3_eq_parametrica_recta}
 	\begin{split}
-		PQ:&\{\class{(u_0,u_1,\cdots,u_n)+\theta(v_0,v_1,\cdots,v_n)}\tq \theta\in\overline{\K}\}=\\
+		PQ=&\{\class{(u_0,u_1,\cdots,u_n)+\theta(v_0,v_1,\cdots,v_n)}\tq \theta\in\overline{\K}\}=\\
 		&=\{\class{(u_0+\theta v_0,u_1+\theta v_1,\cdots,u_n+\theta v_n)}\tq \theta\in\overline{\K}\}
 	\end{split}
 \end{equation*}
 que se puede escribir a su vez como: 
 \begin{equation}
-	PQ:\{(u_0+\theta v_0:u_1+\theta v_1:\cdots:u_n+\theta v_n)\tq \theta\in\overline{\K}\}
+	PQ=\{(u_0+\theta v_0:u_1+\theta v_1:\cdots:u_n+\theta v_n)\tq \theta\in\overline{\K}\}
 \end{equation}
 denominada \tb{ecuación paramétrica de la recta}, en coordenadas no homogéneas.
 \begin{exa}[Parametrización de una Recta Concreta]
 	\label{C3_exa_rectaConcreta}
 	Dados los puntos $P=(1:2:-1)$ y $Q=(0:1:3)$ se nos pide parametrizar la recta $PQ$. Siguiendo los pasos expuestos en este apartado, la ecuación paramétrica de la recta $PQ$ queda:
 	\[
-	PQ:\{(1:2+\theta:-1+3\theta)\tq\theta\in\overline{\K}\}
+	PQ=\{(1:2+\theta:-1+3\theta)\tq\theta\in\overline{\K}\}
 	\]
 	donde, cuando $\theta=\infty$, nos referimos al punto $Q=(0:1:3)$.
 \end{exa}
@@ -247,14 +247,14 @@ Por un lado, tenemos que $x,y,z$ y $x',y',z'$ están relacionados a través de l
 	x'\\
 	y'\\
 	z'
-	\end{array}\right)\sim M 
+	\end{array}\right)=\rho M 
 	\left( \begin{array}{c}
 		x\\
 		y\\
 		z
 	\end{array}\right)
 \end{equation*}
-Por tanto, 
+donde $\rho$ es un factor de proporcionalidad. Por tanto, 
 \begin{equation*}
 	(a \ b \ c)\left( \begin{array}{c}
 		x\\
@@ -264,7 +264,7 @@ Por tanto,
 		x'\\
 		y'\\
 		z'
-	\end{array}\right)\sim(a' \ b' \ c')M 
+	\end{array}\right)=\rho(a' \ b' \ c')M 
 	\left( \begin{array}{c}
 		x\\
 		y\\
@@ -273,13 +273,13 @@ Por tanto,
 \end{equation*}
 de lo cual se deduce que
 \begin{equation}
-	(a \ b \ c)\sim (a' \ b' \ c') M
+	(a \ b \ c)=\rho (a' \ b' \ c') M
 \end{equation}
 Así, finalmente podemos decir que los coeficientes de la recta $r$ en la referencia $\mf{R}'$ vienen dados por:
 \begin{equation}
 	\rho (a' \ b' \ c')=(a \ b \ c)M^*
 \end{equation}
-donde $\rho$ es un factor de proporcionalidad. Recordemos que podíamos usar el adjunto en vez de el inverso de una matriz. Con esto ya quedaría determinada la recta en la referencia $\mf{R}'$. Si revisamos el apartado de cambios de referencia veremos que $M=P^*$, donde $P$ es la matriz de cambio de base (asociadas). Por tanto, la ecuación anterior se puede escribir como
+Recordemos que podíamos usar el adjunto en vez de el inverso de una matriz. Con esto ya quedaría determinada la recta en la referencia $\mf{R}'$. Si revisamos el apartado de cambios de referencia veremos que $M=P^*$, donde $P$ es la matriz de cambio de base (asociadas). Por tanto, la ecuación anterior se puede escribir como
 \begin{equation}
 \rho (a' \ b' \ c')=(a \ b \ c)P
 \end{equation}
@@ -309,7 +309,7 @@ Si $\alpha=0$ y $\beta\not=0\not=\mu$, entonces estaremos haciendo referencia al
 Teniendo en cuenta estas indeterminaciones, el plano $\engen{P,Q,S}$ puede describirse a través de
 \begin{equation}
 \label{C3_eq_descripcionPlanoP1}
-\engen{P,Q,S}:\{\class{u+\theta v+\gamma s}\tq \theta,\gamma\in\overline{\K}\}
+\engen{P,Q,S}=\{\class{u+\theta v+\gamma s}\tq \theta,\gamma\in\overline{\K}\}
 \end{equation}
 siendo esta la \tb{ecuación paramétrica del plano}, en coordenadas no homogéneas.
 
@@ -361,7 +361,7 @@ Por el momento, dado que es mucho más intuitivo explicar el concepto  con hiper
 \begin{defi}
 	Dado un punto $p\in\proy^2$, se define el \ti{haz de rectas} por el punto $p$, o con base $p$, al conjunto de todas las rectas de $\proy^2$ que pasan por $p$.
 \end{defi}
-Observemos que dos cualesquiera rectas de este haz generan el plano proyectivo. Por tanto dadas tres rectas del haz con ecuaciones implícitas
+Observemos que, dos cualesquiera rectas de este haz, generan el plano proyectivo. Por tanto, dadas tres rectas del haz con ecuaciones implícitas
 \begin{equation}
 	\label{C3_eq_implicitas_rectas_haz}
 	\begin{split}
@@ -389,7 +389,7 @@ son equivalentes. Esto implica que una de las ecuaciones es combinación lineal 
 para determinados $\alpha$ y $\beta$. Si $\alpha\not=0$ podemos dividir por él, y la ecuación quedaría
 \begin{equation}
 	\label{C3_eq_recta_haz_nohom}
-	(a_0x+a_1y+a_2z)+\theta(b_0x+b_1y+b_2z)=0\tq \theta=\frac{\beta}{\alpha}
+	(a_0x+a_1y+a_2z)+\theta(b_0x+b_1y+b_2z)=0, \ \text{ tal que } \theta=\frac{\beta}{\alpha}
 \end{equation}
 en coordenadas no homogéneas. 
 
@@ -413,11 +413,11 @@ Esta descripción es la misma que la realizada en el apartado~\ref{C3_sec_rectas
 
 Sean pues dos rectas $r$ y $r'$ del haz de rectas en $\proy^2$. Estas, por la ecuación~\eqref{C3_eq_implicitas_rectas_haz}, representan los puntos $(a_0:a_1:a_2)$ y $(b_0:b_1:b_2)$ en $\proy^{2^*}$. La ecuación paramétrica del haz de rectas, o recta dual $p^*$, es, en coordenadas homogéneas
 \begin{equation}
-	p^*:\{\class{\alpha (a_0,a_1,a_2)+\beta (b_0,b_1,b_2)\tq \alpha,\beta\in\R}\}
+	p^*=\{\class{\alpha (a_0,a_1,a_2)+\beta (b_0,b_1,b_2)\tq \alpha,\beta\in\R}\}
 \end{equation}
 En coordenadas no homogéneas adopta la forma
 \begin{equation}
-p^*:\{\class{(a_0,a_1,a_2)+\theta (b_0,b_1,b_2)}\tq \theta\in\overline{\K}\}=\{(a_0+\theta b_0:a_1+\theta b_1:a_2+\theta b_2)\tq \theta\in\overline{\K}\}
+p^*=\{\class{(a_0,a_1,a_2)+\theta (b_0,b_1,b_2)}\tq \theta\in\overline{\K}\}=\{(a_0+\theta b_0:a_1+\theta b_1:a_2+\theta b_2)\tq \theta\in\overline{\K}\}
 \end{equation}
 Hagamos una rápida comprobación de que esto es coherente con lo explicado al principio de este apartado, sin tener en cuenta la dualidad. 
 

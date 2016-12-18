@@ -578,14 +578,12 @@ Es claro que si la matriz tuviera rango $1$, todas sus columnas serían proporci
 	Ua'+U'a=\lambda_1(Ub'+U'b)=\lambda_2(Uc'+U'c)\sii\\
 	\sii U(a'-\lambda_1b'-c'\lambda_2)+U'(a-\lambda_1b-c\lambda_2)=0
 \end{multline}
-ES MUY TARDE Y SIGO SIN SABER POR QUÉ COJONES EL RANGO ES DOS
-
 Acabamos de ver, por tanto, que si una cónica es producto de dos rectas distintas, entonces el rango de su matriz asociada es 2. Si las rectas son iguales, entonces el rango es 1. Más adelante veremos el recíproco, para el que son necesarios una serie de resultados previos.
 
 \begin{obs}
 	Es evidente que si tengo $4$ puntos alineados, y un quinto punto, si tomamos la recta que pasa por los cuatro primeros puntos y una recta cualquiera que pase por el quinto, tenemos una cónica.
 	
-	Por tanto las condiciones que impongamos para que $5$ puntos determinen totalmente una cónica deben prohibir (?? explica esto mejor porfa, se que no lo has terminado aun, pero para que lo tengas en cuenta) que esto suceda.
+	Por tanto las condiciones que impongamos para que $5$ puntos determinen totalmente una cónica deben prohibir que esto suceda.
 	
 	Como caso particular, si los $5$ puntos están alineados, la unión de la recta que pasa por los $5$ puntos y otra recta cualquiera es también una cónica (un caso más extremo si cabe).
 \end{obs}
@@ -594,7 +592,7 @@ Dadas dos cónicas distintas, $\mc{C}_1$ y $\mc{C}_2$, podemos interpretarlas co
 \begin{defi}[Haz de Cónicas]
 	Definimos el \ti{haz de cónicas} engendrado por $\mc{C}_1$ y $\mc{C}_2$ como la recta $\mc{C}_1\mc{C}_2$ de $\proy^5$.
 \end{defi}
-Es claro que el haz de rectas (??) engendrado por $\mc{C}_1$ y $\mc{C}_2$ viene dado por las siguientes ecuaciones paramétricas homogéneas
+Es claro que el haz de cónicas engendrado por $\mc{C}_1$ y $\mc{C}_2$ viene dado por las siguientes ecuaciones paramétricas homogéneas
 \[\mc{C}_1\mc{C}_2\equiv\haz_{\mc{C}_1,\mc{C}_2}:\alpha\mc{C}_1+\beta\mc{C}_2=0\]
 Usualmente usaremos la deshomogeneización habitual dividiendo por $\alpha$ y considerando un parámetro no homogéneo.
 \[\begin{array}{cc}\haz_{\mc{C}_1,\mc{C}_2}:\mc{C}_1+\frac{\beta}{\alpha}\mc{C}_2\stackrel{\mathrm{not.}}{=}\mc{C}_1+\lambda\mc{C}_2\qquad&\qquad\lambda\in\overline{\K}=\K\cup\{\infty\}\end{array}\]
@@ -614,15 +612,13 @@ Hecho esto, dado un quinto punto $e$, bastaría determinar $\lambda$ para que la
 
 Veamoslo con un ejemplo
 \begin{exa}
-	Ejemplo que puso Valdés en la Pizarra
-	
 	Sean los puntos
 	\[\begin{array}{ccc}
 		A=(1,1)&&B=(1,0)\\
 		C=(-1,2)&&D=(0,0)\\
 		&e=(-3,2)&
 	\end{array}\]
-	terminar
+	TERMINAR
 \end{exa}
 \subsection{Teorema de Determinación}
 \begin{theo}[Teorema de Determinación]
@@ -633,9 +629,11 @@ Veamoslo con un ejemplo
 	
 	Reducimos la ecuación de la cónica dada la ventajosidad de la referencia.
 	
-	Distinguimos casos entre si hay agun punto que pueda no estar en el triangulo y si no queda más cojones que esté
+	Distinguimos casos entre si hay agun punto que pueda no estar en el triangulo y si no hay más remedio que esté
 	
-	Es una distinción de casos bastante trivial (luego la hago).
+	Es una distinción de casos bastante trivial
+	
+	TERMINAR
 \end{proof}
 \section{Clasificación de las Cónicas No Degeneradas}
 En esta sección se realizará una clasificación de las cónicas proyectivas en función de su número de puntos de corte con la recta del infinito, a la que denotaremos $l_\infty$.
@@ -1301,8 +1299,9 @@ Por tanto, dada cualquier terna de polinomios de grado menor o igual que 2 linea
  	\end{equation}
  	Por tanto, la cónica engendrada por los polinomios dados es aquella cuya matriz asociada es
  	\begin{equation*}
-	 	\overline{A}=CALCULAR
+	 	\overline{A}=
  	\end{equation*}
+ 	TERMINAR
 \end{exa}
 \subsection{Otras parametrizaciones}
 Terminemos este apartado con una forma sencilla y rápida de parametrizar cónicas.\\
@@ -1505,8 +1504,6 @@ Por supuesto, todo esto tiene su análogo dual. Primero veamos que tenemos derec
 	donde $l\in\mc{C}^*$ es una recta arbitraria distinta de las otras cuatro.
 \end{defi}
 Es claro que esta definición es buena, es decir, que no depende de $l$, ya que es simplemente el dualizado de la definición~\ref{C8_def_razondoble} (la cual no dependía de $P$).
-
-MEJORAR ESTO CUANDO ALVARO PASE LO SUYO
 
 Es lógico pensar que la razón doble de cuatro rectas de la cónica dual, que son rectas tangentes a $\mc{C}$ en un punto, sea igual que la razón doble de los puntos de tangencia. Recordemos que estos puntos de tangencia eran los polos de las rectas tangentes. Por tanto, nos gustaría que, si $P_i=C^*l_i$, entonces $\{l_1,l_2;l_3,l_4\}=\{P_1,P_2;P_3,P_4\}$, donde $C^*$ es la adjunta de la matriz de la cónica. Para llegar a este resultado necesitamos un lema previo.
 \begin{lem}

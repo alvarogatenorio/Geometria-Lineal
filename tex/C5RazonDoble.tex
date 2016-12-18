@@ -1,5 +1,5 @@
 \chapter{Razón Doble}
-El objetivo de este capítulo es ver que, dadas dos rectas proyectivas $\proy(E)$ y $\proy(E')$, con $\dim(E)=\dim(E')=2$,  existe una homografía que transforma cuatro puntos distintos cualesquiera de $\proy(E)$ en otros cuatro puntos distintos de $\proy(E')$. Esto nos llevará a la definición de razón doble y a estudiar sus características y propiedades.
+El objetivo de este capítulo es ver que, dadas dos rectas proyectivas $\proy(E)$ y $\proy(E')$, existe una homografía que transforma cuatro puntos distintos cualesquiera de $\proy(E)$ en otros cuatro puntos distintos de $\proy(E')$. Esto nos llevará a la definición de razón doble y a estudiar sus características y propiedades.
 
 \section{Definición}
 Empecemos tratando un caso más sencillo, tres puntos. Es fácil demostrar haciendo uso del álgebra lineal, como haremos a continuación, que, dadas dos rectas proyectivas, existe una única homografía que transforma tres puntos distintos cualesquiera en otros tres puntos distintos.
@@ -22,7 +22,7 @@ Empecemos tratando un caso más sencillo, tres puntos. Es fácil demostrar hacie
 Veamos un ejemplo. Para ello recordemos primero que una homografía de la recta proyectiva en sí misma, tomando la misma referencia,  puede definirse a través de coordenadas no homogéneas como
 \begin{equation}
 	\label{C5_eq_homografia_nohom}
-	\frac{x'}{y'}=\theta'=\frac{a\frac{x}{y}+b}{c\frac{x}{y}+d}=\frac{a\theta+b}{c\theta +d}\tq ad-bc\not=0
+	\frac{x'}{y'}=\theta'=\frac{a\frac{x}{y}+b}{c\frac{x}{y}+d}=\frac{a\theta+b}{c\theta +d}, \ \text{ tal que } ad-bc\not=0
 \end{equation}
 lo que denominábamos \ti{transformación de Möbius}.
 \begin{exa}
@@ -45,14 +45,14 @@ lo que denominábamos \ti{transformación de Möbius}.
 		x'\\ y'
 	\end{array}\right)
 	\end{equation*}
-	y, sustituyendo los valores de los puntos dados, resolver el sistema de ecuaciones, cuyas incógnitas son $a,b,c,d$ y $\rho$:
+	y, sustituyendo los valores de los puntos dados, resolver el sistema de ecuaciones:
 	\begin{equation*}
 		\left( \begin{array}{cc}
 			a&b\\ c&d
 		\end{array}\right) 
 		\left( \begin{array}{c}
 			0\\ 1
-		\end{array}\right)=\rho
+		\end{array}\right)=\rho_1
 		\left( \begin{array}{c}
 			1\\ 1
 		\end{array}\right)
@@ -63,7 +63,7 @@ lo que denominábamos \ti{transformación de Möbius}.
 		\end{array}\right) 
 		\left( \begin{array}{c}
 			1\\ 0
-		\end{array}\right)=\rho
+		\end{array}\right)=\rho_2
 		\left( \begin{array}{c}
 			-1\\ 1
 		\end{array}\right)
@@ -74,14 +74,14 @@ lo que denominábamos \ti{transformación de Möbius}.
 		\end{array}\right) 
 		\left( \begin{array}{c}
 			2\\ 1
-		\end{array}\right)=\rho
+		\end{array}\right)=\rho_3
 		\left( \begin{array}{c}
 			0\\ 1
 		\end{array}\right)
 	\end{equation*}
 	Sin embargo, esto puede resultar muy pesado. Si utilizamos la definición de homografía dada por la ecuación~\eqref{C5_eq_homografia_nohom}, el cálculo resulta mucho más llevadero. Así, para determinar la homografía basta hallar la expresión en coordenadas no homogéneas que la define, que se obtiene sustituyendo los valores proporcionados en la ecuación~\eqref{C5_eq_homografia_nohom} y resolviendo el sistema. Observamos que el punto $(1:0)$ se transforma en $\theta=\infty$. Para resolver esta indeterminación, se multiplica la fracción arriba y abajo por $y$
 	\begin{equation}
-		\theta'=\frac{a\frac{x}{y}+b}{c\frac{x}{y}+d}=\frac{ax+by}{cx +dy}\tq ad-bc\not=0
+		\theta'=\frac{a\frac{x}{y}+b}{c\frac{x}{y}+d}=\frac{ax+by}{cx +dy}
 	\end{equation}
 	Así, las ecuaciones resultantes son
 	\begin{equation*}
@@ -91,9 +91,9 @@ lo que denominábamos \ti{transformación de Möbius}.
 			0&=\frac{a2+b1}{c2 +d1}\ra 2a+b=0
 		\end{split}
 	\end{equation*}
-	Observamos que este sistema homogéneo es compatible indeterminado, no nos proporciona valores exactos de los coeficientes de la matriz sino que dependen de un parámetro. En geometría proyectiva, esto es suficiente para resolver el sistema debido a que, en este caso, nos vale tanto la matriz de la aplicación lineal como un múltiplo suyo. Es decir, en general, nos valen tanto las soluciones del sistema como un múltiplo suyo. Por tanto, en geometría proyectiva no necesitamos soluciones exactas, sino \tb{rayos de soluciones}. Es importante tener en cuenta que esto solo es posible cuando deshomogeneizamos el sistema, es decir, cuando trabajamos con $\theta$.
+	Observamos que este sistema homogéneo es compatible indeterminado, no nos proporciona valores concretos de los coeficientes de la matriz, sino que dependen de un parámetro. En geometría proyectiva, esto es suficiente para resolver el sistema debido a que, en este caso, nos vale tanto la matriz de la aplicación lineal como un múltiplo suyo. Es decir, nos valen tanto las soluciones del sistema como un múltiplo suyo, \tb{rayos de soluciones}.
 	
-	Así, si no tenemos un sistema determinado, $a=\lambda$ y con ello $c=-\lambda, \ b=-2\lambda$ y $d=-2\lambda$, siendo así la matriz
+	Así, para el caso que nos ocupa, $a=\lambda$ y con ello $c=-\lambda, \ b=-2\lambda$ y $d=-2\lambda$, siendo así la matriz
 	\begin{equation*}
 	 \lambda \left( \begin{array}{cc}
 	 1&-2\\ -1&-2
@@ -109,7 +109,6 @@ lo que denominábamos \ti{transformación de Möbius}.
 	\begin{equation*}
 		\theta'=-1=\frac{a\theta+b}{c\theta +d}=\frac{a\infty+b}{c\infty +d}=\frac{a\infty}{c\infty}=\frac{a}{c}\ra a=-c
 	\end{equation*}
-	Por tanto, a partir de ahora, daremos por buenos estos cálculos con $\infty$ en principio sin sentido.
 \end{exa}
 \begin{obs}
 	De lo explicado en el ejemplo anterior acerca de los sistemas que se obtienen al trabajar con coordenadas no homogéneas se deduce que, para determinar una homografía de $\proy^1$, son suficientes $3$ puntos y sus imágenes, pues nos vale con obtener un rayo de soluciones.
@@ -188,7 +187,7 @@ Con esta definición el lema se traduce en que toda homografía de una recta pro
 	
 	Por otro lado, denotando $p_i=(x_i:y_i)$ y $h(p_i)=(x'_i:y'_i)$ y teniendo en cuenta que toda homografía se puede describir con la relación
 	\begin{equation*}
-		\theta'=\frac{a\theta+b}{c\theta +d}\tq ad-bc\not=0
+		\theta'=\frac{a\theta+b}{c\theta +d}
 	\end{equation*}
 	para determinados $a,b,c$ y $d$, donde $\theta=\frac{x_i}{y_i}$ y $\theta'=\frac{x'_i}{y'_i}$, es obvio que $h(\theta_i)=h(\frac{x_i}{y_i})=\frac{x'_i}{y'_i}=\theta'_i$ para todo $i\in\{1,2,3,4\}$. Del lema anterior se deduce que
 	\begin{equation*}
@@ -312,7 +311,7 @@ Esto nos da las 24 reordenaciones posibles. Resulta entonces que si $\{\theta_1,
 		\{p_1,p_2;p_3,p_4\}=-1
 	\end{equation}
 \end{defi}
-Si cuatro puntos de una recta proyectiva son una cuaterna armónica, entonces es posible hacer la siguiente construcción geométrica, denominada \tb{cuadrilátero completo}, donde $p_1p_{arbitrario}$, $p_2p_{arbitrario}$ y $p_1p_{arbitrario1}$ son rectas arbitrarias, por tanto también lo son los puntos $p_{arbitrario}$ y $p_{arbitrario1}$.
+Si cuatro puntos de una recta proyectiva son una cuaterna armónica, entonces es posible hacer la siguiente construcción geométrica, denominada \tb{cuadrilátero completo}, donde $p_1p_a$, $p_2p_a$ y $p_1p_{a1}$ son rectas arbitrarias, por tanto también lo son los puntos $p_a$ y $p_{a1}$.
 
 \begin{figure}[h]
 	\centering
@@ -327,42 +326,42 @@ El recíproco también es cierto, como se muestra en la siguiente proposición.
 	
 \end{prop}
 \begin{proof}
-	Tomamos como referencia los puntos $p_1,p_2,p_{arbitario}$ y el punto de corte de las rectas $p_1p_{arbitrario1}$ y $p_3p_{arbitrario}$, que denotaremos $e$. Esto es posible ya que, como se observa en la figura, son proyectivamente independientes.
-	\[\mf{R}=\{p_1,p_2,p_{arbitrario};e\}\]
+	Tomamos como referencia los puntos $p_1,p_2,p_{arbitario}$ y el punto de corte de las rectas $p_1p_{a1}$ y $p_3p_a$, que denotaremos $e$. Esto es posible ya que, como se observa en la figura, son proyectivamente independientes.
+	\[\mf{R}=\{p_1,p_2,p_a;e\}\]
 	Debemos entonces expresar los puntos $p_1,p_2,p_3$ y $p_4$ respecto a esta referencia. Los primeros son sencillos, $p_1=(1:0:0)$ y $p_2=(0:1:0)$. 
 	
 	Por otro lado, $p_3$ es la intersección de las rectas $ep_{arbitario}$ y $p_1p_2$. Estas pueden ser descritas por las ecuaciones
 	\begin{equation*}
-		ep_{arbitrario}:=\class{\alpha(1,1,1)+\beta(0,0,1)\tq \alpha,\beta\in \R}=(1:1:1+\theta)\cup\{p_{arbitrario}\}\tq\theta\in\R
+		ep_a:=\class{\alpha(1,1,1)+\beta(0,0,1)\tq \alpha,\beta\in \R}=(1:1:1+\theta)\cup\{p_a\}\tq\theta\in\R
 	\end{equation*}
 	\begin{equation*}
 		p_1p_2:z=0
 	\end{equation*}
 	siendo por tanto el punto de corte 
 	\[p_3=(1:1:0)\]
-	De la misma forma podemos calcular $p_4$ como la intersección de las rectas $p_1p_2$ y $Dp_{arbitrario1}$, donde $D$ es el punto de corte de las rectas $p_1p_{arbitrario}$ y $p_2e$. Por tanto, para calcular las coordenadas de $p_4$ respecto a la referencia $\mf{R}$, primero debemos obtener las de $D$ y las de $p_{arbitrario1}$.
+	De la misma forma podemos calcular $p_4$ como la intersección de las rectas $p_1p_2$ y $Dp_{a1}$, donde $D$ es el punto de corte de las rectas $p_1p_a$ y $p_2e$. Por tanto, para calcular las coordenadas de $p_4$ respecto a la referencia $\mf{R}$, primero debemos obtener las de $D$ y las de $p_{a1}$.
 	
 	Comencemos con $D$. Las rectas de las cuales es intersección pueden describirse a través de 
 	\begin{equation*}
 		p_2e:\class{\alpha(1,1,1)+\beta(0,1,0)\tq\alpha,\beta\in \R}=(1:1+\theta:1)\cup\{p_2\}\tq\theta\in\R
 	\end{equation*}
 	\begin{equation*}
-		p_1p_{arbitrario}:y=0
+		p_1p_a:y=0
 	\end{equation*}
 	por lo que el punto buscado es
 	\[D=(1:0:1)\]
-	Para calcular $p_{arbitrario1}$ tenemos que las rectas correspondientes vienen dadas por
+	Para calcular $p_{a1}$ tenemos que las rectas correspondientes vienen dadas por
 	\begin{equation*}
 		p_1E:\class{\alpha(1,1,1)+\beta(1,0,0)\tq\alpha,\beta\in \R}=(1+\theta:1:1)\cup\{p_1\}\tq\theta\in\R
 	\end{equation*}
 	\begin{equation*}
-		p_2p_{arbitrario}:x=0
+		p_2p_a:x=0
 	\end{equation*}
 	siendo el punto de corte
-	\[p_{arbitrario1}=(0:1:1)\]
+	\[p_{a1}=(0:1:1)\]
 	Podemos ya calcular las coordenadas de $p_4$ como la intersección de 
 	\begin{equation*}
-		Dp_{arbitrario1}:\class{\alpha(1,0,1)+\beta(0,1,1)\tq\alpha,\beta\in \R}=(1:\theta:1+\theta)\cup\{p_{arbitrario1}\}\tq\theta\in\R
+		Dp_{a1}:\class{\alpha(1,0,1)+\beta(0,1,1)\tq\alpha,\beta\in \R}=(1:\theta:1+\theta)\cup\{p_{a1}\}\tq\theta\in\R
 	\end{equation*}
 	\begin{equation*}
 		p_1p_2:z=0
@@ -376,7 +375,7 @@ El recíproco también es cierto, como se muestra en la siguiente proposición.
 		\{p_1,p_2;p_3,p_4\}=\{(1:0:0),(0:1:0);(1:1:0),(1:-1:0)\}=\{\infty,0;1,-1\}=-1
 	\end{equation}
 \end{proof}
-dado que en esta construcción las rectas $p_1p_{arbitrario}$, $p_2p_{arbitrario}$ y $p_1p_{arbitrario1}$ y los puntos $p_{arbitrario}$ y $p_{arbitrario1}$ son arbitrarios, elijamos los que elijamos vamos a obtener siempre el mismo punto $p_4$. 
+dado que en esta construcción las rectas $p_1p_a$, $p_2p_a$ y $p_1p_{a1}$ y los puntos $p_a$ y $p_{a1}$ son arbitrarios, elijamos los que elijamos vamos a obtener siempre el mismo punto $p_4$. 
 
 El orden de la cuaterna armónica es relativamente importante ya que, aunque algunas permutaciones cambian su valor, las reordenaciones
 \begin{equation*}
@@ -384,7 +383,7 @@ El orden de la cuaterna armónica es relativamente importante ya que, aunque alg
 \end{equation*}
 siguen dando como resultado $-1$.
 
-Es importante mencionar varias cosas acerca de esta construcción. El punto $p_3$ está entre el punto $p_1$ y el punto medio entre $p_1$ y $p_2$ si y solo si el punto $p_4$ está a la izquierda de $p_1$. Por el contrario, $p_3$ está entre el punto medio y el punto $p_2$  si y solo si el punto $p_4$ está a la derecha de $p_2$. Si el punto $p_3$ no está entre $p_1$ y $p_2$, entonces lo estará $p_4$. Por último, $p_3$ está en el punto medio si y solo si $p_4$ está en el infinito. Esto significa que la recta $p_4p_{arbitrario1}$ es paralela a la recta donde se encuentran los puntos.
+Es importante mencionar varias cosas acerca de esta construcción. El punto $p_3$ está entre el punto $p_1$ y el punto medio entre $p_1$ y $p_2$ si y solo si el punto $p_4$ está a la izquierda de $p_1$. Por el contrario, $p_3$ está entre el punto medio y el punto $p_2$  si y solo si el punto $p_4$ está a la derecha de $p_2$. Si el punto $p_3$ no está entre $p_1$ y $p_2$, entonces lo estará $p_4$. Por último, $p_3$ está en el punto medio si y solo si $p_4$ está en el infinito. Esto significa que la recta $p_4p_{a1}$ es paralela a la recta donde se encuentran los puntos.
 
 Observemos que si, al calcular la razón doble tomamos como referencia los puntos $p_1,p_2,p_3$, entonces, necesariamente, $\theta_4=-1$.
 \begin{equation*}
@@ -440,12 +439,12 @@ La utilidad de esto se ve muy claramente cuando se proyecta sobre los ejes coord
 	\end{array}\]
 	De esta forma, como las homografías preservan la razón doble, tenemos que:
 	\[\{A,B;C,D\}=\{\pi(A),\pi(B);\pi(C),\pi(D)\}=\{(0:0:-1),(0:1:0);(0:1:-2),(0:1:1)\}\]
-	Si ahora consideramos la homografía $\pi'$ que identifica canónicamente a la recta $r'$ con $\proy^1$, dada por la proyección:
+	Si ahora consideramos la homografía $\pi'$ que identifica canónicamente a la recta $r'$ con $\proy^1$, dada por la proyección
 	\[\begin{array}{c}
 	r'\stackrel{\pi'}{\to}\proy^1\\
 	x=(0:b:c)\mapsto(b:c)
 	\end{array}\]
-	De nuevo, como las homografías preservan la razón doble obtenemos:
+	de nuevo, como las homografías preservan la razón doble obtenemos:
 	\[\{A,B;C,D\}=\{(0:-1),(1:0);(1:-2),(1:1)\}\]
 	Y esto ya lo sabemos calcular. Nótese que nos debería dar el mismo resultado que el ejemplo \ref{C5_exa_puntosAlineados}. En efecto:
 	\[\{A,B;C,D\}=\left\{0,\infty;-\frac{1}{2},1\right\}=\frac{\frac{1}{2}}{\infty+\frac{1}{2}}:\frac{-1}{\infty-1}=-\frac{1}{2}\]
@@ -481,3 +480,5 @@ Pongamos un ejemplo con rectas concretas para verlo más claro.
 \end{exa}
 \subsubsection{Método de los Haces de Rectas}
 Otra forma de calcular la razón doble de cuatro rectas concurrentes es recurrir a los haces de rectas. Expliquemos esto. Dadas cuatro rectas $r_1,r_2,r_3,r_4$ que se cortan en un mismo punto $O$, consideremos el haz de rectas de base $O$, al que denotaremos por $\haz_O$.
+
+SIN TERMINAR

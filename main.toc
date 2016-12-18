@@ -14,106 +14,106 @@
 \contentsline {subsection}{\numberline {1.4.2}Referencias Proyectivas}{10}{subsection.1.4.2}
 \contentsline {subsection}{\numberline {1.4.3}Base Asociada a una Referencia Proyectiva}{11}{subsection.1.4.3}
 \contentsline {section}{\numberline {1.5}Cambios de Referencia Proyectiva}{14}{section.1.5}
-\contentsline {section}{\numberline {1.6}Problemas}{17}{section.1.6}
-\contentsline {chapter}{\numberline {2}Dualidad}{18}{chapter.2}
-\contentsline {section}{\numberline {2.1}Dualidad en espacios vectoriales}{18}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Formas Lineales e Hiperplanos}{18}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Dualidad Can\IeC {\'o}nica}{20}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Principio de Dualidad}{23}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Dualidad en espacios proyectivos}{24}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Formas Lineales e Hiperplanos Proyectivos}{24}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Dualidad Can\IeC {\'o}nica}{25}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Principio de Dualidad para espacios proyectivos}{26}{subsection.2.2.3}
-\contentsline {chapter}{\numberline {3}Ecuaciones de Variedades Proyectivas}{28}{chapter.3}
-\contentsline {section}{\numberline {3.1}Rectas Proyectivas}{28}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Ecuaciones Param\IeC {\'e}tricas}{28}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Ecuaci\IeC {\'o}n Impl\IeC {\'\i }cita}{30}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Intersecci\IeC {\'o}n de dos Rectas Proyectivas}{31}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Cambio de referencia de rectas proyectivas}{32}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Planos Proyectivos}{33}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Ecuaciones param\IeC {\'e}tricas}{33}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Ecuaci\IeC {\'o}n impl\IeC {\'\i }cita}{34}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Haz de hiperplanos}{34}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Haz de rectas}{34}{subsection.3.3.1}
-\contentsline {subsubsection}{Intersecci\IeC {\'o}n de dos rectas proyectivas}{36}{section*.4}
-\contentsline {subsection}{\numberline {3.3.2}Haz de hiperplanos}{37}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Teorema de Pappus}{37}{section.3.4}
-\contentsline {chapter}{\numberline {4}Aplicaciones Proyectivas}{41}{chapter.4}
-\contentsline {section}{\numberline {4.1}Definici\IeC {\'o}n}{41}{section.4.1}
-\contentsline {section}{\numberline {4.2}Propiedades Elementales}{42}{section.4.2}
-\contentsline {section}{\numberline {4.3}Proyecciones C\IeC {\'o}nicas}{46}{section.4.3}
-\contentsline {section}{\numberline {4.4}Homograf\IeC {\'\i }as}{50}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Homograf\IeC {\'\i }as y Teor\IeC {\'\i }a de Grupos}{51}{subsection.4.4.1}
-\contentsline {section}{\numberline {4.5}Aplicaciones Proyectivas y Matrices}{52}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Recordatorio de \IeC {\'A}lgebra Lineal}{52}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Matriz Asociada a una Aplicaci\IeC {\'o}n Proyectiva}{52}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Transformaciones de M\IeC {\"o}bius}{53}{subsection.4.5.3}
-\contentsline {chapter}{\numberline {5}Raz\IeC {\'o}n Doble}{56}{chapter.5}
-\contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n}{56}{section.5.1}
-\contentsline {section}{\numberline {5.2}Propiedades}{59}{section.5.2}
-\contentsline {section}{\numberline {5.3}Simetr\IeC {\'\i }as de la raz\IeC {\'o}n doble}{61}{section.5.3}
-\contentsline {section}{\numberline {5.4}Cuaternas Arm\IeC {\'o}nicas}{62}{section.5.4}
-\contentsline {section}{\numberline {5.5}C\IeC {\'a}lculo de la Raz\IeC {\'o}n Doble en $\mathbb {P}^n$}{64}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Raz\IeC {\'o}n Doble en $\mathbb {P}^n$}{64}{subsection.5.5.1}
-\contentsline {subsubsection}{Procedimiento Referencial}{64}{section*.5}
-\contentsline {subsubsection}{Procedimiento de Proyecciones}{65}{section*.6}
-\contentsline {subsection}{\numberline {5.5.2}Raz\IeC {\'o}n Doble y Dualidad}{65}{subsection.5.5.2}
-\contentsline {subsubsection}{M\IeC {\'e}todo de los Haces de Rectas}{66}{section*.7}
-\contentsline {chapter}{\numberline {6}Clasificaci\IeC {\'o}n de homograf\IeC {\'\i }as}{67}{chapter.6}
-\contentsline {section}{\numberline {6.1}Clasificaci\IeC {\'o}n de homograf\IeC {\'\i }as de $\mathbb {P}^1$. Puntos fijos}{67}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Dos puntos fijos distintos}{67}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Un punto fijo doble}{69}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Formas can\IeC {\'o}nicas de Jordan y puntos fijos}{70}{section.6.2}
-\contentsline {section}{\numberline {6.3}Aplicaciones afines}{72}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Aplicaciones afines y homograf\IeC {\'\i }as de $\mathbb {P}^n$}{74}{subsection.6.3.1}
-\contentsline {section}{\numberline {6.4}Involuciones}{75}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Haz de ecuaciones de segundo grado}{79}{subsection.6.4.1}
-\contentsline {chapter}{\numberline {7}Perspectividades}{82}{chapter.7}
-\contentsline {section}{\numberline {7.1}Teorema de Desargues}{82}{section.7.1}
-\contentsline {section}{\numberline {7.2}Perspectividades}{84}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Perspectividades y Dualidad}{84}{subsection.7.2.1}
-\contentsline {section}{\numberline {7.3}Factorizaci\IeC {\'o}n de Homograf\IeC {\'\i }as}{85}{section.7.3}
-\contentsline {section}{\numberline {7.4}Teorema del Eje}{86}{section.7.4}
-\contentsline {section}{\numberline {7.5}Otras Demostraciones del Teorema de Desargues}{87}{section.7.5}
-\contentsline {chapter}{\numberline {8}C\IeC {\'o}nicas y Cu\IeC {\'a}dricas}{88}{chapter.8}
-\contentsline {section}{\numberline {8.1}Conceptos Previos. Formas Bilineales y Cuadr\IeC {\'a}ticas}{88}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Formas Bilineales}{88}{subsection.8.1.1}
-\contentsline {subsubsection}{Matriz Asociada a una Forma Bilineal}{89}{section*.8}
-\contentsline {subsection}{\numberline {8.1.2}Formas Cuadr\IeC {\'a}ticas}{89}{subsection.8.1.2}
-\contentsline {subsubsection}{Matriz Asociada a una Forma Cuadr\IeC {\'a}tica}{92}{section*.9}
-\contentsline {subsubsection}{Formas Cuadr\IeC {\'a}ticas y Polinomios}{92}{section*.10}
-\contentsline {subsubsection}{Estructura Vectorial de las Formas Cuadr\IeC {\'a}ticas}{93}{section*.11}
-\contentsline {section}{\numberline {8.2}Cu\IeC {\'a}dricas y Matrices}{94}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Cu\IeC {\'a}dricas y $\mathbb {P}^\xi $}{96}{subsection.8.2.1}
-\contentsline {section}{\numberline {8.3}Determinaci\IeC {\'o}n de una C\IeC {\'o}nica}{97}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}C\IeC {\'o}nicas Degeneradas. Producto de Rectas}{97}{subsection.8.3.1}
-\contentsline {subsubsection}{Matriz de una C\IeC {\'o}nica Producto de Rectas}{97}{section*.12}
-\contentsline {subsubsection}{Rango de la Matriz de una C\IeC {\'o}nica Producto de Rectas}{98}{section*.13}
-\contentsline {subsection}{\numberline {8.3.2}Haces de C\IeC {\'o}nicas}{99}{subsection.8.3.2}
-\contentsline {subsubsection}{Haz de C\IeC {\'o}nicas que pasan por Cuatro Puntos}{99}{section*.14}
-\contentsline {subsection}{\numberline {8.3.3}Teorema de Determinaci\IeC {\'o}n}{100}{subsection.8.3.3}
-\contentsline {section}{\numberline {8.4}Clasificaci\IeC {\'o}n de las C\IeC {\'o}nicas No Degeneradas}{100}{section.8.4}
-\contentsline {section}{\numberline {8.5}Deshomogeneizaciones de una C\IeC {\'o}nica}{101}{section.8.5}
-\contentsline {section}{\numberline {8.6}Cu\IeC {\'a}dricas, c\IeC {\'o}nicas y cambio de referencia}{101}{section.8.6}
-\contentsline {section}{\numberline {8.7}C\IeC {\'o}nicas degeneradas}{102}{section.8.7}
-\contentsline {section}{\numberline {8.8}Recta polar de un punto respecto de una c\IeC {\'o}nica}{105}{section.8.8}
-\contentsline {section}{\numberline {8.9}Parametrizaci\IeC {\'o}n de c\IeC {\'o}nicas}{108}{section.8.9}
-\contentsline {subsection}{\numberline {8.9.1}Parametrizaci\IeC {\'o}n de c\IeC {\'o}nicas como par\IeC {\'a}bolas}{108}{subsection.8.9.1}
-\contentsline {subsection}{\numberline {8.9.2}Parametrizaci\IeC {\'o}n de c\IeC {\'o}nicas y polinomios}{111}{subsection.8.9.2}
-\contentsline {subsection}{\numberline {8.9.3}Otras parametrizaciones}{112}{subsection.8.9.3}
-\contentsline {section}{\numberline {8.10}Teorema de Steiner}{113}{section.8.10}
-\contentsline {section}{\numberline {8.11}Raz\IeC {\'o}n doble en c\IeC {\'o}nicas}{115}{section.8.11}
-\contentsline {subsection}{\numberline {8.11.1}C\IeC {\'a}lculo de la raz\IeC {\'o}n doble}{116}{subsection.8.11.1}
-\contentsline {subsection}{\numberline {8.11.2}Raz\IeC {\'o}n doble en c\IeC {\'o}nicas duales}{117}{subsection.8.11.2}
-\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{118}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{118}{section.Alph1.1}
-\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{119}{subsection.Alph1.1.1}
-\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{120}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{120}{subsection.Alph1.2.1}
-\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{120}{section*.15}
-\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{121}{section*.16}
-\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{121}{section*.17}
-\contentsline {paragraph}{Observaciones}{121}{section*.18}
-\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{121}{section*.19}
-\contentsline {section}{\numberline {A.3}Dualidad}{122}{section.Alph1.3}
-\contentsline {chapter}{\numberline {B}Mierdas varias}{124}{appendix.Alph2}
+\contentsline {section}{\numberline {1.6}Problemas}{16}{section.1.6}
+\contentsline {chapter}{\numberline {2}Dualidad}{17}{chapter.2}
+\contentsline {section}{\numberline {2.1}Dualidad en espacios vectoriales}{17}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Formas Lineales e Hiperplanos}{17}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Dualidad Can\IeC {\'o}nica}{19}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Principio de Dualidad}{22}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Dualidad en espacios proyectivos}{23}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Formas Lineales e Hiperplanos Proyectivos}{23}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Dualidad Can\IeC {\'o}nica}{24}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Principio de Dualidad para espacios proyectivos}{25}{subsection.2.2.3}
+\contentsline {chapter}{\numberline {3}Ecuaciones de Variedades Proyectivas}{27}{chapter.3}
+\contentsline {section}{\numberline {3.1}Rectas Proyectivas}{27}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Ecuaciones Param\IeC {\'e}tricas}{27}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Ecuaci\IeC {\'o}n Impl\IeC {\'\i }cita}{29}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Intersecci\IeC {\'o}n de dos Rectas Proyectivas}{30}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Cambio de referencia de rectas proyectivas}{31}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Planos Proyectivos}{32}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Ecuaciones param\IeC {\'e}tricas}{32}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Ecuaci\IeC {\'o}n impl\IeC {\'\i }cita}{33}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Haz de hiperplanos}{33}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Haz de rectas}{33}{subsection.3.3.1}
+\contentsline {subsubsection}{Intersecci\IeC {\'o}n de dos rectas proyectivas}{35}{section*.4}
+\contentsline {subsection}{\numberline {3.3.2}Haz de hiperplanos}{36}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Teorema de Pappus}{36}{section.3.4}
+\contentsline {chapter}{\numberline {4}Aplicaciones Proyectivas}{40}{chapter.4}
+\contentsline {section}{\numberline {4.1}Definici\IeC {\'o}n}{40}{section.4.1}
+\contentsline {section}{\numberline {4.2}Propiedades Elementales}{41}{section.4.2}
+\contentsline {section}{\numberline {4.3}Proyecciones C\IeC {\'o}nicas}{45}{section.4.3}
+\contentsline {section}{\numberline {4.4}Homograf\IeC {\'\i }as}{49}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Homograf\IeC {\'\i }as y Teor\IeC {\'\i }a de Grupos}{50}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.5}Aplicaciones Proyectivas y Matrices}{51}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Recordatorio de \IeC {\'A}lgebra Lineal}{51}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Matriz Asociada a una Aplicaci\IeC {\'o}n Proyectiva}{51}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Transformaciones de M\IeC {\"o}bius}{52}{subsection.4.5.3}
+\contentsline {chapter}{\numberline {5}Raz\IeC {\'o}n Doble}{55}{chapter.5}
+\contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n}{55}{section.5.1}
+\contentsline {section}{\numberline {5.2}Propiedades}{58}{section.5.2}
+\contentsline {section}{\numberline {5.3}Simetr\IeC {\'\i }as de la raz\IeC {\'o}n doble}{60}{section.5.3}
+\contentsline {section}{\numberline {5.4}Cuaternas Arm\IeC {\'o}nicas}{61}{section.5.4}
+\contentsline {section}{\numberline {5.5}C\IeC {\'a}lculo de la Raz\IeC {\'o}n Doble en $\mathbb {P}^n$}{63}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Raz\IeC {\'o}n Doble en $\mathbb {P}^n$}{63}{subsection.5.5.1}
+\contentsline {subsubsection}{Procedimiento Referencial}{63}{section*.5}
+\contentsline {subsubsection}{Procedimiento de Proyecciones}{64}{section*.6}
+\contentsline {subsection}{\numberline {5.5.2}Raz\IeC {\'o}n Doble y Dualidad}{64}{subsection.5.5.2}
+\contentsline {subsubsection}{M\IeC {\'e}todo de los Haces de Rectas}{65}{section*.7}
+\contentsline {chapter}{\numberline {6}Clasificaci\IeC {\'o}n de homograf\IeC {\'\i }as}{66}{chapter.6}
+\contentsline {section}{\numberline {6.1}Clasificaci\IeC {\'o}n de homograf\IeC {\'\i }as de $\mathbb {P}^1$. Puntos fijos}{66}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Dos puntos fijos distintos}{66}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Un punto fijo doble}{68}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Formas can\IeC {\'o}nicas de Jordan y puntos fijos}{69}{section.6.2}
+\contentsline {section}{\numberline {6.3}Aplicaciones afines}{71}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Aplicaciones afines y homograf\IeC {\'\i }as de $\mathbb {P}^n$}{73}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.4}Involuciones}{74}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Haz de ecuaciones de segundo grado}{78}{subsection.6.4.1}
+\contentsline {chapter}{\numberline {7}Perspectividades}{81}{chapter.7}
+\contentsline {section}{\numberline {7.1}Teorema de Desargues}{81}{section.7.1}
+\contentsline {section}{\numberline {7.2}Perspectividades}{83}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Perspectividades y Dualidad}{83}{subsection.7.2.1}
+\contentsline {section}{\numberline {7.3}Factorizaci\IeC {\'o}n de Homograf\IeC {\'\i }as}{84}{section.7.3}
+\contentsline {section}{\numberline {7.4}Teorema del Eje}{85}{section.7.4}
+\contentsline {section}{\numberline {7.5}Otras Demostraciones del Teorema de Desargues}{86}{section.7.5}
+\contentsline {chapter}{\numberline {8}C\IeC {\'o}nicas y Cu\IeC {\'a}dricas}{87}{chapter.8}
+\contentsline {section}{\numberline {8.1}Conceptos Previos. Formas Bilineales y Cuadr\IeC {\'a}ticas}{87}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Formas Bilineales}{87}{subsection.8.1.1}
+\contentsline {subsubsection}{Matriz Asociada a una Forma Bilineal}{88}{section*.8}
+\contentsline {subsection}{\numberline {8.1.2}Formas Cuadr\IeC {\'a}ticas}{88}{subsection.8.1.2}
+\contentsline {subsubsection}{Matriz Asociada a una Forma Cuadr\IeC {\'a}tica}{91}{section*.9}
+\contentsline {subsubsection}{Formas Cuadr\IeC {\'a}ticas y Polinomios}{91}{section*.10}
+\contentsline {subsubsection}{Estructura Vectorial de las Formas Cuadr\IeC {\'a}ticas}{92}{section*.11}
+\contentsline {section}{\numberline {8.2}Cu\IeC {\'a}dricas y Matrices}{93}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Cu\IeC {\'a}dricas y $\mathbb {P}^\xi $}{95}{subsection.8.2.1}
+\contentsline {section}{\numberline {8.3}Determinaci\IeC {\'o}n de una C\IeC {\'o}nica}{96}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}C\IeC {\'o}nicas Degeneradas. Producto de Rectas}{96}{subsection.8.3.1}
+\contentsline {subsubsection}{Matriz de una C\IeC {\'o}nica Producto de Rectas}{96}{section*.12}
+\contentsline {subsubsection}{Rango de la Matriz de una C\IeC {\'o}nica Producto de Rectas}{97}{section*.13}
+\contentsline {subsection}{\numberline {8.3.2}Haces de C\IeC {\'o}nicas}{98}{subsection.8.3.2}
+\contentsline {subsubsection}{Haz de C\IeC {\'o}nicas que pasan por Cuatro Puntos}{98}{section*.14}
+\contentsline {subsection}{\numberline {8.3.3}Teorema de Determinaci\IeC {\'o}n}{99}{subsection.8.3.3}
+\contentsline {section}{\numberline {8.4}Clasificaci\IeC {\'o}n de las C\IeC {\'o}nicas No Degeneradas}{99}{section.8.4}
+\contentsline {section}{\numberline {8.5}Deshomogeneizaciones de una C\IeC {\'o}nica}{100}{section.8.5}
+\contentsline {section}{\numberline {8.6}Cu\IeC {\'a}dricas, c\IeC {\'o}nicas y cambio de referencia}{100}{section.8.6}
+\contentsline {section}{\numberline {8.7}C\IeC {\'o}nicas degeneradas}{101}{section.8.7}
+\contentsline {section}{\numberline {8.8}Recta polar de un punto respecto de una c\IeC {\'o}nica}{104}{section.8.8}
+\contentsline {section}{\numberline {8.9}Parametrizaci\IeC {\'o}n de c\IeC {\'o}nicas}{107}{section.8.9}
+\contentsline {subsection}{\numberline {8.9.1}Parametrizaci\IeC {\'o}n de c\IeC {\'o}nicas como par\IeC {\'a}bolas}{107}{subsection.8.9.1}
+\contentsline {subsection}{\numberline {8.9.2}Parametrizaci\IeC {\'o}n de c\IeC {\'o}nicas y polinomios}{110}{subsection.8.9.2}
+\contentsline {subsection}{\numberline {8.9.3}Otras parametrizaciones}{111}{subsection.8.9.3}
+\contentsline {section}{\numberline {8.10}Teorema de Steiner}{112}{section.8.10}
+\contentsline {section}{\numberline {8.11}Raz\IeC {\'o}n doble en c\IeC {\'o}nicas}{114}{section.8.11}
+\contentsline {subsection}{\numberline {8.11.1}C\IeC {\'a}lculo de la raz\IeC {\'o}n doble}{115}{subsection.8.11.1}
+\contentsline {subsection}{\numberline {8.11.2}Raz\IeC {\'o}n doble en c\IeC {\'o}nicas duales}{116}{subsection.8.11.2}
+\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{117}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{117}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{118}{subsection.Alph1.1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{119}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{119}{subsection.Alph1.2.1}
+\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{119}{section*.15}
+\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{120}{section*.16}
+\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{120}{section*.17}
+\contentsline {paragraph}{Observaciones}{120}{section*.18}
+\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{120}{section*.19}
+\contentsline {section}{\numberline {A.3}Dualidad}{121}{section.Alph1.3}
+\contentsline {chapter}{\numberline {B}Mierdas varias}{123}{appendix.Alph2}

@@ -137,7 +137,7 @@ Antes de comenzar consideramos fijadas las bases $\mc{B}$ de $E$ y $\{1\}$ de $\
 
 En el caso de los hiperplanos, los identificábamos con el conjunto de las formas lineales cuyo núcleo era dicho hiperplano. Dicho de otra forma, el conjunto de las aplicaciones lineales que anulaban todos los vectores del hiperplano.
 
-Siguiendo esta idea, probaremos a identificar una variedad lineal arbitraria con con el conjunto de aplicaciones que anulan dicha variedad. Dicho conjunto es, si recordamos, nuestro viejo amigo el \ti{anulador} de dicha variedad.
+Siguiendo esta idea, probaremos a identificar una variedad lineal arbitraria con el conjunto de aplicaciones que anulan dicha variedad. Este conjunto es, si recordamos, nuestro viejo amigo el \ti{anulador} de la variedad.
 
 \begin{defi}[Anulador de un subespacio vectorial]
 	\label{C2_def_anulador}
@@ -146,7 +146,7 @@ Siguiendo esta idea, probaremos a identificar una variedad lineal arbitraria con
 	W^{\perp}:=\{\alpha\in E^*\tq \alpha(u)=0 \ \forall u\in W\}=\{\alpha\in E^*\tq W\subset ker(\alpha)\}
 	\end{equation}
 \end{defi}
-Inmeditamente se comprueba que el anulador de un subespacio vectorial es un subespacio vectorial del dual asociado. 
+Inmeditamente se comprueba que, el anulador de un subespacio vectorial, es un subespacio vectorial del dual asociado. 
 
 \begin{obs}[Generalización de la Noción de Anulador]
 	Se puede, generalizar la definición de anulador, no solo para subespacios sino tambien para subconjuntos arbitrarios de un espacio vectorial. La conveniencia de esta generalización viene dada porque desbloquea algunos resultados técnicos de gran utilidad. Como la importancia de esto aquí es muy reducida, tanto la generalización de la definición \ref{C2_def_anulador} como los resultados más elementales se han trasladado al apéndice. En concreto a la definición \ref{A1_def_anulador} y al lema \ref{A1_lem_anuladorBase}.
@@ -201,7 +201,7 @@ Intentemos reeditar el lema de la correspondencia \ref{C2_lem_correspondencia} d
 	Dicho de otra forma, un subespacio $U$ de dimensión $r$ ``dualiza'' en un subespacio $U^\perp$ de dimensión $n-r$ (su codimensión).
 \end{obs}
 
-Recapitulando, hemos conseguido construir un puente ``sólido'' y ``de ida y vuelta''entre las variedades de un espacio vectorial y las de su dual ``vía anuladores'' y ``vía antianuladores'' respectivamente.
+Recapitulando, hemos conseguido construir un puente ``sólido'' y ``de ida y vuelta'' entre las variedades de un espacio vectorial y las de su dual ``vía anuladores'' y ``vía antianuladores'' respectivamente.
 
 Para el lector que haya optado por omitir la demostración del lema \ref{C2_lem_correspondenciaAnulador} el término ``antianulador'' resultará extraño. Definámoslo aparte:
 \begin{defi}[Antianulador]
@@ -216,9 +216,9 @@ Es claro que esto no es más que la imagen inversa de la aplicación del lema \r
 \end{equation}
 
 \begin{obs}[Abusos de Notación Habituales]
-	Algunos textos (y docentes) denotan al antianulador de la misma forma que lo hacen con el anulador. Además, para dar verosimilitud a este abuso de notación, definen el anulador de un subespacio de $E^*$ como lo que nosotros conocemos como antianulador. Dicho abuso de notación les permite hacer afirmaciones como:
+	A veces, el antianulador se denota como el anulador. Además, para dar verosimilitud a este abuso de notación, se define el anulador de un subespacio de $E^*$ como lo que nosotros conocemos como antianulador. Dicho abuso de notación permite hacer afirmaciones como:
 	\[(W^\perp)^\perp=W\]
-	Lo cual, a priori, con nuestra notación, es una trola bastante grande.
+	Lo cual, a priori, con nuestra notación, no es cierto.
 	
 	Sin embargo, trabajando con cuidado, podemos demostrar que, efectivamente, con nuestras notaciones se cumple que el operador anulador es ``esencialmente involutivo''. Es decir:
 	\begin{equation}
@@ -226,7 +226,7 @@ Es claro que esto no es más que la imagen inversa de la aplicación del lema \r
 	\end{equation}
 	Esto significa que existe un isomorfismo entre el anulador del anulador un subespacio (un subespacio del dual del dual) y el subespacio en sí. No solo eso, se puede demostrar que dicho isomorfismo es especialmente agradable, por lo que se le da el nombre de \ti{canónico}.
 	
-	Como la prueba de este hecho no pinta mucho aquí, se ha trasladado al apéndice \ref{A}.
+	La prueba de este hecho se ha trasladado al apéndice \ref{A}.
 \end{obs}
 Veamos a continuación una serie de propiedades que nos serán de gran ayuda cuando conozcamos el llamado ``principio de dualidad'', en la sección \ref{C2_principioDualidadLineal}. Estas propiedades pueden resumirse en dos; la inversión de las contenciones y las leyes de DeMorgan.
 \begin{prop}[Propiedades del Anulador]

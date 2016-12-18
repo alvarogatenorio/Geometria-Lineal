@@ -96,7 +96,7 @@ Del lema \ref{C1_lem_caracterizacionVariedades} se deduce que los subespacios ve
 
 \begin{obs}[Lema de la Correspondencia]
 	\label{C1_obs_lemaCorrespondencia}
-	Sea $\mc{P}$ el conjunto de las variedades proyectivas de $\proy(E)$. Asimismo sea el conjunto $\mc{L}$ compuesto por las variedades lineales de $E$. Es claro, por la definición de variedad proyectiva \ref{C1_def_variedadProyectiva}y por el lema \ref{C1_lem_caracterizacionVariedades}, que la siguiente aplicación es una biyección:
+	Sea $\mc{P}$ el conjunto de las variedades proyectivas de $\proy(E)$. Asimismo sea el conjunto $\mc{L}$ compuesto por las variedades lineales de $E$. Es claro, por la definición de variedad proyectiva \ref{C1_def_variedadProyectiva}y por el lema \ref{C1_lem_caracterizacionVariedades} , que la siguiente aplicación es una biyección:
 	\[
 		\begin{array}{ccc}
 		\mc{P} & \stackrel{\Phi}{\to} & \mc{L}\\
@@ -195,7 +195,7 @@ Estamos ahora en condiciones de presentar el ejemplo de \ti{espacio canónico}, 
 	El espacio proyectivo asociado a un espacio vectorial de la forma $E=\K^{n+1}$ se denomina \ti{espacio canónico} y se denota por:\[\proy(E):\equals{not.}\proy^n\]
 \end{exa}
 Una igualdad recurrente en matemáticas es la llamada \ti{fórmula de Grassmann}, que se presenta con diversas versiones en áreas tan dispersas de las matemáticas como la teoría de conjuntos, la probabilidad, la teoría de grupos, el álgebra lineal,... Como no podía ser de otra manera, también está presente en los espacios proyectivos.
-\begin{theo}[Fórmula de Grassmann, Teorema de la Incidencia]
+\begin{theo}[Fórmula de Grassmann. Teorema de la Incidencia]
 	\label{C1_teo_grassmann}
 	Sean $X,Y\subset\proy(E)$ dos variedades proyectivas. Se tiene que:
 	\[\dim(\engen{X,Y})=\dim(X)+\dim(Y)-\dim(X\cap Y)\]
@@ -219,7 +219,7 @@ Sea $E$ un $\K$--espacio vectorial cualquiera de dimensión $n+1$. Sabemos por �
 \label{C1_eq_combinacionLineal}
 x=\sum_{i=0}^{n}\lambda_ie_i\stackrel{\textrm{not.}}{\equiv}(\lambda_0,\dots,\lambda_n)_{\mc{B}}\stackrel{\textrm{not.}}{\equiv}\mc{B}X
 \end{equation}
-Nótese que la tercera equivalencia de la ecuación~\eqref{C1_eq_combinacionLineal}, es un mero abuso de notación muy extendido para hacer la notación más compacta.
+Nótese que la tercera equivalencia de la ecuación~\eqref{C1_eq_combinacionLineal}, es un mero abuso de notación muy extendido para que esta sea más compacta.
 
 Volviendo al mundo proyectivo, queremos encontrar cierta colección de puntos proyectivos en función de los cuales poder escribir todos los demás. 
 \subsection{Coordenadas Homogéneas}
@@ -237,7 +237,7 @@ Con esto podría decirse que hemos cumplido el objetivo de la sección, ya que, 
 
 Sin embargo, estamos creando una referencia en base a otra ya existente, lo cual no es muy recomendable salvo si nuestra referencia base (base del espacio vectorial) es \ti{estándar} o \ti{canónica}, lo cual sólo ocurre en contadas ocasiones, por ejemplo, en los espacios canónicos.
 \subsection{Referencias Proyectivas}
-Para evitar los problemas derivados de la aproximación presentada en el apartado anterior, debemos concentrarnos en la idea de que lo que debemos hacer es encontrar una colección de elementos del espacio proyectivo en función de los cuales poder escribir todos los demás. A ese conjunto de puntos lo llamaremos \ti{referencia proyectiva}.
+Para evitar los problemas derivados de la aproximación presentada en el apartado anterior, debemos concentrarnos en la idea de que lo que debemos hacer es encontrar una colección de elementos del espacio proyectivo, en función de los cuales poder escribir todos los demás. A ese conjunto de puntos lo llamaremos \ti{referencia proyectiva}.
 \begin{defi}[Independencia Proyectiva]
 	\label{C1_def_independenciaProyectiva}
 	Sea un conjunto $\{p_0,\dots,p_r\}\subset\proy(E)$, diremos que son \ti{proyectivamente independientes} si ninguno de ellos está en la variedad proyectiva engendrada por los restantes.
@@ -401,21 +401,17 @@ Como sabemos (\ref{A1_cambioBase}), se cumplen las llamadas ``ecuaciones del cam
 \end{equation*}
 donde $P$ es la matriz cuyas columnas son las coordenadas de los vectores de la base $\mc{B}'$ respecto de la base $\mc{B}$. Así pues, basta poner $X'$ en ``formato de coordenadas'' para poder decir que hemos encontrado una representación (única salvo múltiplos) del punto $x$ en base a la referencia $\mf{R}'$. Es decir
 \begin{equation}
-	 X'\sim P^{-1}X
+	 \rho X'=P^{-1}X
 \end{equation}
-donde el símbolo $\sim$ indica que son proporcionales salvo múltiplo. Dado que podemos tomar múltiplos sin problema alguno y como
+donde $\rho$ es simplemente la constante de proporcionalidad. Dado que podemos tomar múltiplos sin problema alguno y como
 \begin{equation*}
 	P^{-1}=\frac{1}{\det{P}}P^*
 \end{equation*}
-donde $P^*$ es la adjunta traspuesta definida en álgebra lineal, podemos escribir
-\begin{equation*}
-	X'\sim P^*X
-\end{equation*}
-De esta forma, la ecuación de cambio de coordenadas entre referencias proyectivas es
+donde $P^*$ es la adjunta traspuesta definida en álgebra lineal, la ecuación de cambio de coordenadas entre referencias proyectivas puede escribirse como
 \begin{equation}
-	\rho X'=P^*X
+	\rho' X'=P^*X
 \end{equation}
-donde $\rho$ es simplemente la constante de proporcionalidad. Usualmente denotaremos $M=P^*$ a la matriz de cambio de coordenadas entre referencias.
+Usualmente denotaremos $M=P^*$ a la matriz de cambio de coordenadas entre referencias.
 
 Un ejemplo clarificará todos estos cambalaches.
 \begin{exa}[Cambio de Referencia Proyectiva]

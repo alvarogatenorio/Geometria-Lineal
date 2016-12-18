@@ -47,6 +47,7 @@
 \contentsline {section}{\numberline {4.5}Aplicaciones Proyectivas y Matrices}{52}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Recordatorio de \IeC {\'A}lgebra Lineal}{52}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Matriz Asociada a una Aplicaci\IeC {\'o}n Proyectiva}{52}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Transformaciones de M\IeC {\"o}bius}{53}{subsection.4.5.3}
 \contentsline {chapter}{\numberline {5}Raz\IeC {\'o}n Doble}{56}{chapter.5}
 \contentsline {section}{\numberline {5.1}Definici\IeC {\'o}n}{56}{section.5.1}
 \contentsline {section}{\numberline {5.2}Propiedades}{59}{section.5.2}

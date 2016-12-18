@@ -530,11 +530,14 @@ Nuestro objetivo es, dadas las coordenadas homogéneas de cierto rayo $\class{w}
 
 Denotando por $W$ a la matriz columna cuyos coeficientes son las coordenadas homogéneas de $w$ respecto de $\mf{R}$ (únicas salvo múltiplos) se cumple que
 \begin{equation}
+\label{C4_eq_matriz}
 	h(\class{w})=\class{\widehat{h}(w)}\equiv\class{M_{\mc{B}\mc{B}'}(\widehat{h})W}
 \end{equation}
 Nótese que hemos cometido un abuso de notación, ya que $M_{\mc{B}\mc{B}'}(\widehat{h})W$ es una matriz columna. Sin embargo, la consideramos como un vector para poder tomar el rayo engendrado por él.
 
-Que no cunda la euforia, todavía tenemos un problema por subsanar, ya que al ser las bases asociadas a $\mf{R}$ y $\mf{R}'$ únicas salvo múltiplos nadie me impide coger la base $\lambda\mc{B}$ (para cierto escalar $\lambda$ no nulo) en lugar de la base $\mc{B}$. Veamos como afecta esta situación incómoda a la matriz asociada.
+Queremos ver que la ecuación \eqref{C4_eq_matriz} es de validez general, es decir, que una aplicación proyectiva queda totalmente determinada por la matriz de una de sus aplicaciones lineales asociadas. Para demostrar esto debemos subsanar los problemas que se nos vayan presentando.
+
+El primer problema que se nos plantea es que las bases asociadas a $\mf{R}$ y $\mf{R}'$ no son únicas, sino únicas salvo múltiplos. Nadie nos impide coger la base $\lambda\mc{B}$ (para cierto escalar $\lambda$ no nulo) en lugar de la base $\mc{B}$. Veamos como afecta esta situación incómoda a la matriz asociada.
 
 Sabemos que la matriz asociada se ve afectada según la relación \eqref{C4_eq_formulaLineales2}, por ende, solo tenemos que calcular las matrices de cambio de base.
 
@@ -542,51 +545,98 @@ Las matrices de cambio entre bases asociadas (y sus inversas) son múltiplos de 
 \begin{equation}
 	h(\class{w}):=\class{M_{\lambda \mc{B}\mu\mc{B}'}(\widehat{h})W}=\class{M_{\mc{B}\mc{B}'}(\widehat{h})\lambda\mu W}=\class{M_{\mc{B}\mc{B}'}(\widehat{h})W}=:h(\class{w})
 \end{equation}
-Otro desgraciado problema que se nos presenta es que nadie nos obliga a escoger $\widehat{h}$ como aplicación lineal asocada a $h$, podríamos haber escogido $\alpha\widehat{h}$, si embargo, las matrices de estas dos aplicaciones solo difieren por el factor
-Pongamos algunos ejemplos para asentar todo esto. En concreto, el siguiente ejemplo es extremadamente importante y lo pondremos en valor en capítulos posteriores.
-\begin{exa}[Transformaciones de Möbius]
-	\label{C4_exa_mobius}
-	Sea $h:\proy^1\to\proy^1$ una aplicación proyectiva. Consideramos la referencia $\mf{R}:=\{\class{u},\class{v};e\}$ cuya base asociada (una fijada por nosotros) es $\mc{B}=\{u,v\}$, tanto en el espacio de llegada como en el de salida.
+Otro desgraciado problema que se nos presenta es que no hay nada que nos fuerce a escoger $\widehat{h}$ como aplicación lineal asocada a $h$, podríamos haber escogido $\alpha\widehat{h}$ (lema de la correspondencia \ref{C4_teo_lemaCorrespondencia}).
+
+Sin embargo, las matrices de estas dos aplicaciones solo difieren por el factor $\alpha$ (son múltiplos entre sí). En otras palabras
+\begin{equation}h(\class{w}):=\class{M_{\mc{B}\mc{B}'}(\alpha \widehat{h})W}=\class{\alpha M_{\mc{B}\mc{B}'}(\widehat{h})W}=\class{ M_{\mc{B}\mc{B}'}(\widehat{h})W}=:h(\class{w})\end{equation}
+Tras todo esto, podemos definir formalmente la idea de matriz asociada a una aplicación proyectiva.
+\begin{defi}[Matriz Asociada]
+	Decimos que $M$ es la matriz asociada a una aplicación proyectiva $h$ si $M$ es la matriz asociada a una aplicación lineal $\widehat{h}$ asociada a $h$.
+\end{defi}
+\begin{obs}[Rayo de Matrices Asociadas]
+	Es claro que la matriz asociada a una aplicación proyectiva no es única, pero si que es única salvo múltiplos. Esto hace que cada aplicación proyectiva tenga asociada un ``rayo de matrices''.
+\end{obs}
+
+Cuando trabajemos con aplicaciones de un espacio en sí mismo conviene fijar la misma referencia $\mf{R}$ para ambos espacios. Veamos un ejemplo de por qué esto es conveniente.
+\begin{exa}[Identidad]
+	Sea $h:\proy^1\to\proy^1$ una aplicación proyectiva. Fijada la referencia proyectiva $\mf{R}:=\{x_0,x_1;e\}$ del espacio de partida, supongamos que $h$ es inyectiva y por tanto podemos fijar la referencia $\mf{R}':=\{h(x_0),h(x_1);h(e)\}$ del espacio de llegada.
 	
-	Sabemos además que $\widehat{h}(u)=au+bv=(a,b)_{\mc{B}}$ y que $\widehat{h}(v)=cu+dv=(c,d)_{\mc{B}}$.
+	Se tiene entonces que la matriz asociada a la aplicación lineal asociada es la identidad.
 	
-	Sea un punto $x=(x_0:x_1)_{\mf{R}}$ (del que fijamos un representante $(x_0,x_1)_{\mc{B}}$), por lo que acabamos de ver, su imagen por $h$ es
-	\[h(x)=\class{\begin{pmatrix}
-		y_0 \\ y_1
-		\end{pmatrix}}=\class{\begin{pmatrix}
-	a & c\\
-	b & d
+	Este hecho perturba bastante a la hora de trabajar, por lo que debemos evitarlo, tomando la misma referencia tanto en el espacio de partida como en el espacio de llegada.
+\end{exa}
+
+\subsection{Transformaciones de Möbius}
+En esta sección veremos una forma muy útil de escribir las aplicaciones proyectivas entre rectas proyectivas. Será fundamental para la clasificación que realizaremos de las homografías de $\proy^1$ en capítulos posteriores.
+
+Sea $h:\proy^1\to\proy^1$ una aplicación proyectiva.
+
+Consideramos la referencia $\mf{R}$ para ambos espacios (entrada y salida) a partir de la cual fijamos una base $\mc{B}$, también para ambos espacios.
+
+Supongamos asimismo que conocemos la matriz asociada a $h$ (una de ellas).
+
+De esta forma tenemos que, para un punto proyectivo $x=(x_0:x_1)_{\mf{R}}=\class{(x_0,x_1)_{\mc{B}}}$, podemos calcular su imagen $h(x)=(y_0:y_1)_{\mf{R}}=\class{(y_0,y_1)_{\mc{B}}}$ haciendo uso de la matriz de $h$
+
+\[h(x)\equiv\class{\begin{pmatrix}
+	y_0 \\ y_1
+	\end{pmatrix}}=\class{\begin{pmatrix}
+	a & b\\
+	c & d
 	\end{pmatrix}\begin{pmatrix}
 	x_0\\
 	x_1
-	\end{pmatrix}}\]
-	Usualmente lo escribiremos de forma ecuacional:
-	\[\begin{array}{l}
-	y_0 = ax_0+cx_1=()\\
-	y_1 = bx_0+dx_1=()
-	\end{array}\]
-	Podríamos quedarnos ahí, sin embargo seguiremos el proceso de ``deshomogeneización'' habitual, que nos será de gran utilidad en el futuro.
-	
-	Dividiendo sendas ecuaciones queda:
-	\[\frac{y_0}{y_1}=\frac{ax_0+cx_1}{bx_0+dx_1}\]
-	Si además dividimos el término de la derecha por $x_1$ tenemos:
-	\[\frac{y_0}{y_1}=\frac{a\frac{x_0}{x_1}+c}{b\frac{x_0}{x_1}+d}\]
-	Denotando $\theta':=\frac{y_0}{y_1}$ y $\theta:=\frac{x_0}{x_1}$ nos queda:
-	\[\theta'=\frac{a\theta+c}{b\theta+d}\]
-	
-	Antes de que se nos lapide por blasfemos, nótese que, como es evidente, hay indeterminaciones. En efecto, cuando la segunda componente homogénea de nuestro punto inicial es nula el valor $\theta$ no está definido. Cuando esto pasa, el valor $\theta'$ es:
-	\[\theta'=\frac{ax_0}{bx_0}=\frac{a}{b}\]
-	lo cual siempre está definido (salvo que $b$ sea nulo). Es por esto que a veces se toma el siguiente convenio notacional, que hace realidad el sueño de todo chaval. Asignamos a $\theta$ el símbolo $\infty$ y operamos de la siguiente manera tan intuitiva (y peligrosa):
-	
-	\[\theta'=\frac{a\infty+c}{b\infty+d}=\frac{a\cancel{\infty}}{b\cancel{\infty}}=\frac{a}{b}\]
-	Aunque puede seguirse este convenio (y en ocasiones lo haremos), ante la duda, se recomienda pasar todo al terreno estable de las coordenadas homogéneas.
-	
-	Para no perder el contexto, nótese que ahora nuestro punto inicial $x$ queda totalmente determinado por $\theta$ (admitiendo que pueda tomar como valor el símbolo $\infty$ cuando la segunda coordenada homogénea sea $0$, ya que, al fin y al cabo, esto sólo pasa para un único rayo).
-	
-	Asimismo, $h(x)$ queda totalmente determinado por el valor $\theta'$, asumiendo a su vez que puede tomar como valor $\infty$ cuando su segunda coordenada homogénea se anule. Usualmente cometeremos un abuso de notación escribiendo $h(\theta)=\theta'$.
-	
-	Estas transformaciones son de enorme utilidad en el análisis complejo, es por ello que tienen nombre propio, \ti{transformaciones de Möbius}.
-\end{exa}
+\end{pmatrix}}\]
+En estas circunstancias se suele decir que la aplicación $h$ se define por las ecuaciones
+\begin{equation}
+\label{C4_eq_formaHomogenea}
+h:\left\{\begin{array}{l}
+y_0 = ax_0+bx_1\\
+y_1 = cx_0+dx_1
+\end{array}\right.\end{equation}
+La justificación de esto es que \[h(x)=\class{\widehat{h}((x_0,x_1)_{\mc{B}})}=\class{(y_0,y_1)_{\mc{B}}}=\class{(ax_0+bx_1,cx_0+dx_1)_{\mc{B}}}=(ax_0+bx_1:cx_0+dx_1)_{\mf{R}}\]
+
+A la expresión de la ecuación \eqref{C4_eq_formaHomogenea} se le llama \tb{forma homogénea de $h$}.
+
+Como las coordenadas de $h(x)$ son únicas salvo múltiplos, podemos multiplicar ambas componentes por el inverso de $cx_0+dx_1$, siempre y cuando $cx_0+dx_1$ sea no nulo. De esta forma obtenemos la llamada \tb{forma no homogénea de $h$}
+\[h(x)=\left(\frac{ax_0+bx_1}{cx_0+dx_1}:1\right)\stackrel{\mathrm{not.}}{=}(\xi:1)\]
+Conviene tener cuidado con las formas no homogéneas pues cuando $cx_0+dx_1$ es nulo, el cociente de la forma no homogénea de $h$ no está definido.
+
+Como esto solo ocurre cuando la segunda componente de $h(x)$ se anula, es decir, cuando $h(x)=(1:0)_{\mf{R}}$, decimos que si $cx_0+dx_1=0$ entonces $\xi$ toma el valor $\infty$.
+
+Es por este problema que surge la llamada forma de $h$ en \tb{transformación de Möbius}.
+
+Es claro que dado un punto $x=(x_0:x_1)_{\mf{R}}$, sus coordenadas homogéneas son únicas salvo múltiplos. Por ende, podemos multiplicar por el inverso de $x_1$ (siempre y cuando $x_1$ sea no nulo). De esta forma nos queda
+\[x=(x_0:x_1)_{\mf{R}}=\left(\frac{x_0}{x_1}:1\right)_{\mf{R}}\stackrel{\mathrm{not.}}{=}(\theta:1)\equiv\theta\]
+Al valor $\theta$ lo llamamos \ti{parámetro no homogéneo} de $x$.
+
+En este caso, se nos presenta el mismo problema que en el anterior, cuando $x_1=0$, $\theta$ no está definida. Este caso solo se da cuando el punto $x$ tiene por coordenadas $(1:0)_{\mf{R}}$, o sus proporcionales, que representan el mismo punto. Para subsanar esto, definimos $\theta$ como $\infty$ cuando $x_1=0$. Es decir
+
+\[x=(\lambda:0)_{\mf{R}}=(1:0)_{\mf{R}}\stackrel{\mathrm{def.}}{=}(\infty:1)\equiv\infty\]
+Ahora, hagamos uso de la matriz asociada a $h$ para calcular la imagen de $x$
+\[h(x)=\class{\widehat{h}((\theta:1)_{\mc{B}})}=\class{\begin{pmatrix}
+	a & b\\
+	c & d
+	\end{pmatrix}\begin{pmatrix}
+	\theta\\
+	1
+	\end{pmatrix}}=(a\theta+b:c\theta+d)_{\mf{R}}\]
+Como $h(x)$ no deja de ser un punto, podemos ``deshomogeneizarlo'' de la misma forma en la que lo hicimos con $x$. Así, obtenemos
+\[h(x)=(a\theta+b:c\theta+d)_{\mf{R}}=\left(\frac{a\theta+b}{c\theta+d}:1\right)\stackrel{\mathrm{not.}}{=}(\theta':1)\equiv\theta'\]
+Abreviando, normalmente escribimos
+\begin{equation}
+	h(x)\equiv h(\theta)=\theta'=\frac{a\theta+b}{c\theta+d}
+\end{equation}
+Nótese que debemos tener cuidado ya que cuando $c\theta+d=0$ entonces $\theta'$ quedaría indefinido pero como esto solamente pasa cuando $h(x)=(1:0)_{\mf{R}}$, definimos en este caso $\theta'$ con el valor $\infty$ (exactamente igual que como hicimos con $x$).
+
+Expresar una aplicación $h$ como una trasformación de Möbius entraña un riesgo adicional. Pues si $\theta=\infty$ no tenemos mucha idea de cómo operar con estos valores. Lo mejor para definir algunas reglas algebraicas para los mismos es ver qué ocurre en la forma no homogénea e intentar extrapolarlo a la transformación de Möbius. Hagámoslo
+
+\[h((1:0)_{\mf{R}})=\left(\frac{ax_0}{cx_0}:1\right)_{\mf{R}}=\left(\frac{a}{c}:1\right)_{\mf{R}}\]
+En el caso de las trasformaciones de Möbius quedaría
+\[h(\infty)=\theta'=\frac{a\infty+b}{c\infty+d}=\frac{a\cancel{\infty}}{c\cancel{\infty}}=\frac{a}{c}\]
+Lo cual es bastante intuitivo y natural.
+
+Estas forma de escribir las aplicaciones entre rectas tiene un nombre tan estrafalario debido a que tienen un análogo en la rama de análisis complejo, donde son omnipresentes.
+
 En este ejemplo se generalizamos la idea del anterior para una proyección cónica.
 \begin{exa}[Proyección Punto -- Plano]
 	Dado el punto $z=(1:0:-1:2)$ y el plano $\pi:2x-y+z-t=0$, se pide hallar la imagen de un punto genérico $p=(x:y:z:t)$ por la proyección cónica con centro $z$ sobre $\pi$.
@@ -633,10 +683,4 @@ En este ejemplo se generalizamos la idea del anterior para una proyección cóni
 	X'=\frac{x}{t} & Y'=\frac{y}{t} & Z'=\frac{z}{t}
 	\end{array}\]
 	Es claro que en todo este proceso quedan por definir un montón de singularidades, en concreto, queda indefinido todo el plano $\pi':-2x+y-z+3t=0$, que puede interpretarse como el plano paralelo a $\pi$ que pasa por $z$. En efecto, este plano lo conforman puntos cuya imagen a través de la proyección, como siempre, viene definida por $h(p)=zp\cap \pi$. Dado que $h(p)=\infty$ para todo punto $p\in\pi'$, la intersección es el infinito, por lo que $\pi'$ debe ser paralelo a $\pi$, y no puede ser otro que el plano paralelo a $\pi$ que pasa por $z$.
-\end{exa}
-Antes de finalizar el capítulo, hagamos un pequeño inciso. Cuando trabajemos con aplicaciones de un espacio en sí mismo conviene fijar la misma referencia $\mf{R}$ para ambos espacios. Veamos un ejemplo de por qué esto es conveniente.
-\begin{exa}[Identidad]
-	Sea $h:\proy^1\to\proy^1$ una aplicación proyectiva. Fijada la referencia proyectiva $\mf{R}:=\{\class{u},\class{v};e\}$ del espacio de partida, supongamos que $h$ es tal que podemos fijar la referencia protectiva $\mf{R}':=\{h(\class{u}),h(\class{v});h(e)\}$ del espacio de llegada.
-	
-	Se tiene entonces que la matriz asociada a la aplicación lineal asociada es la identidad. Este hecho perturba bastante a la hora de trabajar, por lo que debemos evitarlo, tomando la misma referencia.
 \end{exa}

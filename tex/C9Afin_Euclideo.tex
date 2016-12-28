@@ -1,0 +1,217 @@
+\chapter{Geometría afín y euclídea}
+En este capítulo repasaremos la noción de espacio afín y euclídeo. Veremos cómo obtener el espacio afín, y euclídeo, a partir del proyectivo. Por tanto, trasladaremos nociones como la suma, el punto medio o el ángulo que forman dos vectores, al espacio proyectivo. Posteriormente, aplicaremos todo esto a las cónicas.
+
+\section{Geometría afín}
+\subsection{Introducción}
+Recordemos como se definía un espacio afín.
+\begin{defi}[Espacio afín]\label{C9_def_espacio_afin}
+	Dado un conjunto no vacío $\afin$ y un espacio vectorial V, se define \ti{espacio afín}, sobre un cuerpo $\K$, a la terna $(\afin,V,\psi)$, donde
+	\begin{equation*}
+		\begin{array}{cccc}
+			\psi: & \afin \times \afin & \rightarrow &V\\
+			& (a,b) & \rightarrow & \overrightarrow{ab}
+		\end{array}
+	\end{equation*}
+	tal que 
+	\begin{enumerate}
+		\item Para cada $a\in\afin$, la aplicación $\psi_a: b\rightarrow \overrightarrow{ab}$ es una biyección.
+		
+		\item Para cada terna $a,b,c\in\afin$, se tiene que $\overrightarrow{ab}+\overrightarrow{bc}=\overrightarrow{ac}$.
+	\end{enumerate}
+\end{defi}
+Los elementos de $\afin$ se denominan puntos. Muy a menudo se denotará como espacio afín únicamente al conjunto $\afin$, cometiendo así un abuso de notación.
+
+Por otro lado, $V$ se dice que es el espacio vectorial asociado al espacio afín. además, se define la dimensión del esapcio afín $\afin$ como la dimensión del espacio vectorial $V$.
+
+La propiedad 1 de la definición nos dice que, si tenemos un espacio afín y fijamos un punto, entonces ese espacio afín pasa a ser un espacio vectorial con origen el punto fijado.
+
+A continuación mostraremos un ejemplo que, a pesar de ser sencillo, nos permite introducir una notación muy útil.
+\begin{exa}
+	En el conjunto $\R^2$ podemos definir una estructura de espacio afín sobre el espacio vectorial $\R^2$. La aplicación sería 
+	\begin{equation*}
+		\begin{array}{cccc}
+		\psi: & \R^2 \times \R^2 & \rightarrow &\R^2\\
+		& (a,b)=(a_1,a_2,b_1,b_2) & \rightarrow & \overrightarrow{ab}=(b_1-a_1,b_2-a_2)
+		\end{array}
+	\end{equation*}
+	donde $a=(a_1,a_2)$ y $b=(b_1,b_2)$ son dos puntos de $\R^2$.
+	
+	Debemos comprobar que la aplicación definida cumple las propiedades 1 y 2. Para cada punto $a=(a_1,a_2)$ la aplicación $\psi_a$ es inyectiva, ya que $(b_1-a_1,b_2-a_2)=(b'_1-a_1,b'_2-a_2)$ si y solo si $(b_1,b_2)=(b'_1,b'_2)$. Por otro lado, para cada $a=(a_1,a_2)$, dado $v=(v_1,v_2)\in V$, vector del espacio vectorial, el punto $b=(a_1+v_1,a_2+v_2)$ es el único que verifica $\psi_a(b)=\overrightarrow{ab}=v$. Esto prueba la sobrectividad de $\psi_a$.
+	
+	Es trivial comprobar que se cumple la segunda propiedad.
+\end{exa} 
+\begin{obs}
+	Lo realizado en el ejemplo anterior no solo se puede extender a $\R^n$, definiendo $\overrightarrow{ab}=(x_1-y_1,\cdots,x_n-y_n)$, sino a cualquier espacio vectorial. Para ello, dados dos elementos $x,y\in V$, la aplicación $\psi$ queda definida por $\overrightarrow{xy}=x-y$. Es fácil, y se deja al lector, comprobar que cumple las propiedades 1 y 2.
+\end{obs}
+\begin{obs}[Notación]\label{c9_obs_notacion}
+	Debido a la forma en la que se obtiene el punto $b=(a_1+v_1,a_2+v_2)$ en el ejercicio anterior, comúnmente se adopta la notación $b=a+v$ y se denomina el trasladado por $v$ del punto $a$. Nótese que, dados $a$ y $v$, el punto $b$ es único. además, se comete un abuso de notación, ya que el signo $+$ no representa ninguna operación.
+\end{obs}
+
+A continuación mostraremos algunas de las propiedades del espacio afín.
+\begin{lem}
+	Dados $a,b,c,D\in\afin$, se tiene que
+	\begin{enumerate}
+		\item $\overrightarrow{ab}=0\sii a=b$.
+		\item $\overrightarrow{ba}=-\overrightarrow{ab}$.
+		\item Ley del paralelogramo: si $\overrightarrow{ab}=\overrightarrow{cd}$, entonces $\overrightarrow{ac}=\overrightarrow{bd}$.
+		\item Dados $v,w\in V$, se tiene que $\overrightarrow{(a+v)(b+w)}=\overrightarrow{ab}+w-v$.
+	\end{enumerate}
+\end{lem}
+\begin{proof}
+	A no ser que Álvaro me pida demostrarlas, se quedan como ejercicio al lector.
+\end{proof}
+
+De forma equivalente a los subespacios vectoriales, en el espacio afín aparece la noción de variedad afín o subespacio afín.
+\begin{defi}
+	Sea $a\in\afin$ y $W$ un subespacio vectorial de $V$, de define \ti{variedad afín} que pasa por el punto $a$ al conjunto
+	\begin{equation*}
+		L=\{b\in\afin\tq \overrightarrow{ab}\in W\}
+	\end{equation*}
+	Se dice que $W$ es el espacio de dirección de $L$.
+\end{defi}
+Gracias a la notación introducida en la observación~\ref{c9_obs_notacion}, las variedades afines se pueden describir como
+\begin{equation*}
+	L=a+W=\{a+w\tq w\in W\}
+\end{equation*}
+El problema ahora está determinar cuando un conjunto $\afin$ es una variedad afín. Para ello, demostremos la siguiente proposición.
+\begin{prop}
+	Sea $\afin$ un espacio afín sobre el espacio vectorial $V$. Entonces:
+	\begin{enumerate}
+		\item Si $b\in L=a+W$, entonces $L=b+W$.
+		\item Si $L$ es una variedad afín con espacio de dirección $W$, entonces
+		\begin{equation}
+		W=\{\overrightarrow{pq}\tq p,q\in L\}
+		\end{equation}
+	\end{enumerate}
+\end{prop}
+\begin{proof}
+	\begin{enumerate}
+		\item Tengamos en cuenta que, dado que $b\in L$, se tiene que $\overrightarrow{ab}\in W$. Probaremos el resultado por doble inclusión.
+		
+		Sea $c\in L=a+W$. Entonces, $\overrightarrow{ac}\in W$. así, por la propiedad 2 de la definición de espacio afín, $\overrightarrow{bc}=\overrightarrow{ba}+\overrightarrow{ac}\in W$. Por tanto, $c\in b+W$.
+		
+		Sea $c\in b+W$. Entonces $\overrightarrow{bc}\in W$. De nuevo, podemos escribir $\overrightarrow{ac}=\overrightarrow{ab}+\overrightarrow{bc}\in W$. Por tanto, $c\in a+W=L$.
+		
+		\item Sea $L$ una variedad afín, con espacio de dirección $W$ y dos puntos $p,q\in L$. Por el apartado anterior, podemos escribir $L=p+W$, lo cual implica que $\overrightarrow{pq}\in W$. Nos queda comprobar que, cualquier vector de $W$ se puede escribir como $\overrightarrow{pq}$, donde ambos puntos pertenecen a $L$. así, dado $w\in W$ y un punto $p\in L$, sabemos que existe un único $q\in L$ tal que $q=P+w$, lo cual implica que $q\in L$, pues $L=p+W$, y $w=\overrightarrow{pq}$.
+	\end{enumerate}
+\end{proof}
+Esta proposición realiza afirmaciones realmente interesantes. La primera nos indica que cualquier punto que pertenezca a la variedad afín puede considerarse para definirla. La segunda afirmación nos proporciona una forma de saber cuando un conjunto es una variedad afín, como habíamos anticipado. En efecto, este apartado afirma que un subconjunto del espacio afín es variedad afín si el conjunto de los vectores $\overrightarrow{pq}$, tal que $p,q\in L$, es un subespacio vectorial.
+
+Además, si $L$ es una variedad afín, con espacio de dirección $W$, entonces la aplicación
+\begin{equation*}
+\begin{array}{cccc}
+\psi: & L \times L & \rightarrow &W\\
+& (p,q) & \rightarrow & \overrightarrow{pq}
+\end{array}
+\end{equation*}
+dota a $L$ de estructura de espacio afín sobre $W$, ya que, por la proposición anterior, para cada par de puntos de $L$ determina un vector de $W$. Es decir, si $\afin$ es un espacio afín sobre $V$, cada variedad afín es, a su vez, espacio afín sobre su espacio de dirección. Por tanto, la dimensión de una variedad afín $L$ es la dimensión de su espacio de dirección $W$.
+
+De esta forma, dado un espacio afín $\afin$, sobre $V$, de dimensión $n$, podemos verlo como hiperplano afín de un espacio afín de dimensión $n+1$, con tal de definir como espacio de dirección de $\afin$ el espacio vectorial, que ahora sería hiperplano vectorial, $V$.
+
+Es importante también tener en cuenta la posición relativa de dos variedades afines.
+\begin{defi}[Posición relativa de variedades afines]
+	Dadas dos variedades afines $L=a+W$ y $M=b+U$, diremos que se \tb{cortan} si $L\cap M\not=\emptyset$. Si la intersección es vacía puede ocurrir que $W\subset U$ (o $U\subset W$). En tal caso diremos que las variedades son \tb{paralelas}. En caso contrario, diremos que se \tb{cruzan}.
+\end{defi}
+
+Por último, trataremos los sistemas de referencia y las coordenadas en el espacio afín.
+\begin{defi}
+	Dado un espacio afín $\afin$ sobre el espacio vectorial $V$, se define \ti{sistema de referencia cartesiano} al conjunto $R=\{O; B\}$, donde $O$ es un punto de $\afin$, denominado \ti{origen del sistema de referencia}, y $B$ es una base de $V$.
+\end{defi}
+Así, las coordenadas de un punto $A\in\afin$, en el sistema de referencia $R$, se definen como las coordenadas del vector $\overrightarrow{OA}$ en la base $B$.
+
+De esta forma, dado dos puntos cuyas coordenadas en una referencia $R$ son $A=(a_1,\cdots,a_n)_R$ y $B=(b_1,\cdots,b_n)_R$, el vector $\overrightarrow{AB}$ es el vector $\overrightarrow{AB}=\overrightarrow{OA}+\overrightarrow{OB}=\overrightarrow{OB}-\overrightarrow{OA}$. Es decir, sus coordenadas son $\overrightarrow{AB}=(b_1-a_1,\cdots,b_n-a_n)$. Esto coincide con la expresión utilizada anteriormente.
+
+\subsection{Espacio afín y proyectivo}
+Una vez repasado la noción de espacio afín y sus principales propiedades, intentemos definirlo a partir del espacio proyectivo. Presentamos así una primera definición, que veremos cumple la definición~\ref{C9_def_espacio_afin} y, por tanto, se trata de un espacio afín.
+\begin{defi}[Espacio afín]
+	Dado un espacio proyectivo $\proy(E)$ de dimensión $n$. La elección de un hiperplano proyectivo $H_\infty\subset \proy(E)$, al que denominaremos \ti{hiperplano del infinito}, proporciona una estructura afín en $\proy(E)$, de tal forma que $\afin=\proy(E)\backslash H_\infty$ es un espacio afín, de dimensión $n$.
+\end{defi}
+Para comprobar que, efectivamente, $\afin$ es un espacio afín, es necesario definir el espacio vectorial asociado. No debemos olvidar en ningún momento que los puntos de $\afin$ son puntos proyectivos. Definamos, entonces, la siguiente relación de equivalencia.
+\begin{defi}
+	Sea un par $(P,Q)\in\afin\times\afin$. Diremos que $(P,Q)$ está relacionado con $(P',Q')$ si y solo si $PP'$ es paralelo a $QQ'$ y $PQ$ es paralelo a $P'Q'$. Es decir, si forman un paralelogramo.
+\end{defi}
+Se deja al lector la comprobación de que se trata de una relación de equivalencia. Por paralelos se entiende que la rectas formadas por los dos puntos se corten en el infinito, es decir, en $H_\infty$.
+
+IMAGEN
+
+Según Valdés, considerar la clase del par $(P,Q)$ es equivalente a considerar los vectores del infinito que subyacen a tu definición de hiperplano. Y yo no se que cojones significa eso. Pero lleva a decir lo siguiente.
+
+Por tanto, $\afin\times\afin/\sim=V$ es el espacio vectorial asociado a $\afin$. Así, escribiremos
+\[[(P,Q)]:=\overrightarrow{PQ}\]
+para los vectores de $V$. Habría que ver que la dimensión de este espacio vectorial es $n$ para tener que la de $\afin$ es $n$.\\
+
+Para ver que se cumplen las dos propiedades de la definición~\ref{C9_def_espacio_afin} de espacio afín, y con ello poder afirmar finalmente que $\afin=\proy(E)\backslash H_\infty$ es un espacio afín, es necesario definir la noción de suma de vectores.
+\begin{defi}[Suma de vectores]
+	Dados los vectores $\overrightarrow{PQ}$ y $\overrightarrow{PR}$, tomamos las rectas $PQ$ y $PR$ y trazamos las rectas $r,s$ que pasan por $R$ y $Q$ y son paralelas a $PQ$ y $PR$, respectivamente. Entonces, se define la suma $\overrightarrow{PR}+\overrightarrow{PQ}$ como $\overrightarrow{PS}$, donde $S$ es el punto de corte de las rectas $r$ y $s$.
+\end{defi}
+Usualmente se escribe $R+\overrightarrow{PQ}=S$. Observemos que este no es más que el abuso de notación hecho en la observación~\ref{c9_obs_notacion}.\\
+
+Con esto podemos afirmar que se cumple la primera propiedad de la definición~\ref{C9_def_espacio_afin} de espacio afín. En efecto, la aplicación $\psi_P:Q\rightarrow \overrightarrow{PQ}=\class{(P,Q)}$ es una biyección. Dados dos vectores $\overrightarrow{PQ}$ y $\overrightarrow{PT}$, son iguales si y solo si pertenecen a la misma clase, es decir, si $PQ$ es paralelo a $PT$ y $PP$ es paralelo a $QT$. Esto ocurre únicamente si $Q=T$, lo cual prueba la inyectividad. Por otro lado, dado $P$ y el vector $\overrightarrow{PQ}$, se tiene que $Q=P+\overrightarrow{PQ}$.
+
+Lo mismo ocurre con la segunda propiedad. Dados $P,Q,T\in\afin$, se tiene que $\overrightarrow{PQ}+\overrightarrow{QT}=\overrightarrow{PT}$. Basta aplicar la definición de suma.\\
+
+Es fácil observar que si, en vez de el espacio proyectivo $\proy(E)$, tomamos una variedad proyectiva $Y\subset\proy(E)$ de dimensión $r$ (que no esté contenida en $H_\infty$) y elegimos un hiperplano $W_\infty\subset H_\infty$ en dicha variedad, $L=Y\backslash W_\infty$ es una variedad afín.
+
+En efecto, $Y$ puede verse como un espacio proyectivo de dimensión $r$. Entonces, por lo que acabamos de demostrar, la elección del hiperplano del infinito $W_\infty$ nos asegura que $L=Y\backslash W_\infty$ es un espacio afín de dimensión $r$. Como $L=Y\backslash W_\infty\subset\proy(E)\backslash H_\infty$, $L$ es un subespacio afín de $\afin$. Además, podemos escribir $L=Y\backslash W_\infty=Y\cap\afin$ y $W_\infty=Y\cap H_\infty$.
+
+\subsection{Propiedades del espacio afín}
+Una vez que sabemos que $\afin=\proy(E)\backslash H_\infty$ es un espacio afín, nos gustaría poder definir los diferentes conceptos que surgen en un espacio afín en este también. Para ello, debemos definirlos desde la geometría proyectiva.\\
+
+Sería deseable tener una definición de \tb{suma con producto por escalares}, es decir, poder describir puntos como $X=P+\alpha\overrightarrow{PQ}$, donde $P,Q\in\afin$ y $\alpha\in\K$.
+
+Para ello, consideramos la recta proyectiva engendrada por $P$ y $Q$ y tomamos una referencia proyectiva en ella, dada por $\mf{R}=\{P_\infty,P;Q\}$, donde $P_\infty$ es el corte de la recta $PQ$ con el infinito. De esta forma, las coordenadas $X$ en esta referencia son $(\alpha:1)$. Entonces, se cumple que
+\begin{equation*}
+	\{P_\infty,P;Q,X\}=\{(1:0),(0:1);(1:1),(\alpha:1)\}=\alpha
+\end{equation*}
+Por tanto, dados dos puntos proyectivos $P,Q\in\afin$ y un escalar $\alpha$, $X=P+\alpha\overrightarrow{PQ}$ es el único punto que cumple
+\[\{P_\infty,P;Q,X\}=\alpha\]
+
+La otra noción a considerar sería el \tb{punto medio de un segmento}.
+
+Sean entonces tres puntos proyectivos $P,Q,P'$. Tomamos una referencia $\mf{R}=\{P_\infty,P;Q\}$ de la recta proyectiva engendrada por $Q$ y $P'$, donde $P_\infty$ es el corte de dicha recta con el infinito. Entonces, $P$ es el punto medio de $P'$ y $Q$ si y solo si $P'=P-\overrightarrow{PQ}$, es decir, si y solo si
+\begin{equation}
+	\{P_\infty,P;Q,P'\}=-1
+\end{equation}
+Equivalentemente, podríamos decir que $P$ es el punto medio de $P'$ y $Q$ si y solo si el par $(Q,P')$ separa armónicamente al par $(P_\infty,P)$.
+\subsection{Definición de espacio afín alternativa}
+En esta sección presentaremos una definición alternativa de espacio afín a partir del espacio proyectivo, pero equivalente a la anterior dada. Para ello consideremos un espacio proyectivo $\proy(E)$ de dimensión $n$.\\
+
+Sea un hiperplano proyectivo $H_\infty=\proy(\widehat{H_\infty})\subset\proy(E)$. Este tendrá una ecuación implícita
+\begin{equation*}
+	u_0x_0+\cdots +u_nx_n=U^tX=0
+\end{equation*}
+De esta forma $\widehat{H_\infty}=\{X\in E\tq U^tX=0\}$.
+
+Consideramos el espacio afín definido por
+\begin{equation*}
+ \overline{\afin}=\{x\in E\tq U^tX=b\}
+\end{equation*}
+Veamos que existe una biyección entre $\overline{\afin}$ y $\afin=\proy(E)\backslash H_\infty$. De esta forma, podremos identificar $\afin$ con el espacio afín $\overline{\afin}$. Así, $\afin$ será un espacio afín con $\widehat{H_\infty}$ como espacio vectorial asociado.\\
+
+Demostremos pues que la aplicación definida por
+\begin{equation*}
+	\begin{array}{ccc}
+		\afin=\proy(E)\backslash H_\infty & \rightarrow & \overline{\afin}\\
+		\class{x} & \rightarrow & \frac{b}{U^t X}X
+	\end{array}
+\end{equation*}
+es una biyección. Observemos primero que está bien definida, ya que $\class{x}\not\in H_\infty$ y, por tanto, $U^t X\not =0$.
+
+HACER DEMOSTRACIÓN
+
+La misma definición alternativa se puede hacer para las variedades afines $L=Y\cap\afin$. En este caso obtendríamos que $\widehat{W_\infty}$ es el espacio de dirección de $L$.
+
+Por último, reinterpretemos el paralelismo en términos de la geometría proyectiva.
+
+\begin{lem}
+	Sean dos variedades afines $L=Y\cap\afin$ y $M=K\cap\afin$ del espacio afín $\afin=\proy(E)\backslash H_\infty$. Entonces, son paralelas si y solo si
+	\begin{equation}
+		Y\cap H_\infty\subset K\cap H_\infty \quad o \quad 	K\cap H_\infty\subset Y\cap H_\infty
+	\end{equation}
+\end{lem}
+\begin{proof}
+	Basta recordar que $Y\cap H_\infty$, $K\cap H_\infty$ son los espacios de dirección de $L$ y $M$, respectivamente, y que dos variedades son paralelas si sus espacios de dirección están uno contenido en el otro.
+\end{proof}
+
+\subsection{Referencias afines y proyectivas}
+

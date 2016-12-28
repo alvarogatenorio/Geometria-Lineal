@@ -105,15 +105,22 @@
 \contentsline {section}{\numberline {8.11}Raz\IeC {\'o}n doble en c\IeC {\'o}nicas}{114}{section.8.11}
 \contentsline {subsection}{\numberline {8.11.1}C\IeC {\'a}lculo de la raz\IeC {\'o}n doble}{115}{subsection.8.11.1}
 \contentsline {subsection}{\numberline {8.11.2}Raz\IeC {\'o}n doble en c\IeC {\'o}nicas duales}{116}{subsection.8.11.2}
-\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{117}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{117}{section.Alph1.1}
-\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{118}{subsection.Alph1.1.1}
-\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{119}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{119}{subsection.Alph1.2.1}
-\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{119}{section*.15}
-\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{120}{section*.16}
-\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{120}{section*.17}
-\contentsline {paragraph}{Observaciones}{120}{section*.18}
-\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{120}{section*.19}
-\contentsline {section}{\numberline {A.3}Dualidad}{121}{section.Alph1.3}
-\contentsline {chapter}{\numberline {B}Cosas pendientes}{123}{appendix.Alph2}
+\contentsline {chapter}{\numberline {9}Geometr\IeC {\'\i }a af\IeC {\'\i }n y eucl\IeC {\'\i }dea}{117}{chapter.9}
+\contentsline {section}{\numberline {9.1}Geometr\IeC {\'\i }a af\IeC {\'\i }n}{117}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Introducci\IeC {\'o}n}{117}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Espacio af\IeC {\'\i }n y proyectivo}{119}{subsection.9.1.2}
+\contentsline {subsection}{\numberline {9.1.3}Propiedades del espacio af\IeC {\'\i }n}{120}{subsection.9.1.3}
+\contentsline {subsection}{\numberline {9.1.4}Definici\IeC {\'o}n de espacio af\IeC {\'\i }n alternativa}{121}{subsection.9.1.4}
+\contentsline {subsection}{\numberline {9.1.5}Referencias afines y proyectivas}{121}{subsection.9.1.5}
+\contentsline {chapter}{\numberline {A}\IeC {\'A}lgebra Lineal}{122}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Coordenadas en Espacios Vectoriales}{122}{section.Alph1.1}
+\contentsline {subsection}{\numberline {A.1.1}Matriz de Cambio de Base}{123}{subsection.Alph1.1.1}
+\contentsline {section}{\numberline {A.2}Ecuaciones de Subespacios}{124}{section.Alph1.2}
+\contentsline {subsection}{\numberline {A.2.1}Existencia de las Ecuaciones Cartesianas}{124}{subsection.Alph1.2.1}
+\contentsline {subsubsection}{Ecuaciones Param\IeC {\'e}tricas}{124}{section*.15}
+\contentsline {subsubsection}{Ecuaciones Cartesianas o Impl\IeC {\'\i }citas}{125}{section*.16}
+\contentsline {paragraph}{M\IeC {\'e}todo Ortop\IeC {\'e}dico}{125}{section*.17}
+\contentsline {paragraph}{Observaciones}{125}{section*.18}
+\contentsline {paragraph}{M\IeC {\'e}todo de Eliminaci\IeC {\'o}n de Par\IeC {\'a}metros}{125}{section*.19}
+\contentsline {section}{\numberline {A.3}Dualidad}{126}{section.Alph1.3}
+\contentsline {chapter}{\numberline {B}Cosas pendientes}{128}{appendix.Alph2}

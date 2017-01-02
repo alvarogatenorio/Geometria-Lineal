@@ -303,50 +303,50 @@ En concreto, lo que hemos hecho con las comprobaciones anteriores es verificar q
 es un homomorfismo lineal (donde $M$ representa la matriz asociada a $\Phi$). La sobreyectividad, al igual que la inyectividad, es evidente (observacion \ref{C8_obs_correspondencia}).
 \section{Cuádricas y Matrices}
 Ahora, hagamos valer toda la aburrida teoría algebraica de la sección anterior. Para empezar, estamos en disposición de definir con todo rigor el concepto de ``cuádrica''.
+
+Sea $E$ un $\K$--espacio vectorial de dimensión finita.
 \begin{defi}[Cuádrica]
 	\label{C8_def_cuadrica}
-	Se llama \ti{cuádrica proyectiva} de $\proy(\K^n)$ (para $n\geq 3$) al cojunto de rayos de $\proy(\K^n)$ que se anulan al pasar por una forma cuadrádrica $\Phi:\K^n\to\K$.
+	Se llama \ti{cuádrica proyectiva} de $\proy(E)$ al cojunto de rayos de $\proy(E)$ que se anulan al pasar por una forma cuadrática $\Phi:E\to\K$.
 	
 	Es decir, dado una forma cuadrática $\Phi$, definimos la cuádrica $\mc{C}$ asociada a $\Phi$ como el conjunto de rayos que verifican:
-	\[\Phi(x)=0\]
-	Para cualquier representante $x$ del rayo $\class{x}$.
+	\[\Phi(\vec{x})=0\]
+	para cualquier representante vectorial $\vec{x}$ del rayo $\class{\vec{x}}$.
 \end{defi}
-El lector atento estará pensando que nos estamos precipitando, ya que es posible que la definición \ref{C8_def_cuadrica} no sea ``buena''. Es decir, alguno podría concebir que un vector $(x_1,\dots,x_n)$ anulara al polinomio $\Phi$, y sin embargo, alguno de sus múltiplos no lo hiciera. El siguiente resultado muestra que esto no es posible.
+El lector atento estará pensando que nos estamos precipitando, ya que es posible que la definición \ref{C8_def_cuadrica} no sea ``buena''. Es decir, alguno podría concebir que un vector $\vec{x}$ se anulara por la forma cuadrática $\Phi$, y sin embargo, alguno de sus múltiplos no lo hiciera. El siguiente resultado muestra que esto no es posible.
 \begin{lem}[Buena Definición]
-	Si el vector $x$ es anulado por una forma cuadrática $\Phi$, entonces cualquier múltiplo suyo (no nulo) también se anulará.
+	Si el vector $\vec{x}$ es anulado por una forma cuadrática $\Phi$, entonces cualquier múltiplo suyo (no nulo) también será anulado por $\Phi$.
 \end{lem}
 \begin{proof}
-	En efecto, si $\Phi(x)=0$, veamos que $\Phi(\lambda x)=0$. Usemos símplemente la definición de forma cuadrática y las propiedades de la bilinealidad.
-	\[\Phi(\lambda x)=f(\lambda x,\lambda x)=\lambda^2f(x,x)=\lambda^2\Phi(x)=0\]
+	En efecto, si $\Phi(\vec{x})=0$, veamos que $\Phi(\lambda \vec{x})=0$. Usemos símplemente la definición de forma cuadrática y las propiedades de la bilinealidad.
+	\[\Phi(\lambda \vec{x})=f(\lambda \vec{x},\lambda \vec{x})=\lambda^2f(\vec{x},\vec{x})=\lambda^2\Phi(\vec{x})=0\]
 	Con lo que ya podemos dormir tranquilos, nuestra definición era buena.
 \end{proof}
 \begin{obs}[Ecuación Matricial]
 	\label{C8_obs_ecuacionMatricial}
-	Normalmente diremos que, fijada una base $\mc{B}$ de $\K^n$, una cuádrica no es más que el conjunto de soluciones de la ecuación
+	Normalmente diremos que, fijada una base $\mc{B}$ de $E$, una cuádrica no es más que el conjunto de rayos que verifican la ecuación matricial
 	\begin{equation}
-		\mc{C}:\Phi(x)=X^tMX=0
+		\mc{C}:\Phi(\vec{x})=X^tMX=0
 	\end{equation}
 	Donde $M$ representa la matriz de forma bilineal simétrica asociada a $\Phi$ respecto de la base $\mc{B}$.
 	
-	Si expandimos la expresión matricial nos queda la ecuación \eqref{C8_eq_polinomio}.
+	Si expandimos la expresión matricial nos queda la ecuación \eqref{C8_eq_polinomio} (compruébese).
 \end{obs}
-Definido ya el concepto de cuádrica, vale la pena definir a parte un caso particular sobre que el que trabajaremos casi todo el tiempo, las llamadas ``cónicas''.
+Definido ya el concepto de cuádrica, vale la pena definir de forma separada un caso particular sobre que el que trabajaremos casi todo el tiempo, las llamadas ``cónicas''.
 \begin{defi}[Cónica]
-	Se llama \ti{cónica proyectiva} a una cuádrica proyectiva de $\proy(\K^3)$.
+	Se llama \ti{cónica proyectiva} a una cuádrica proyectiva de $\proy(E)$, cuando $E$ es un espacio vectorial de dimensión $3$.
 \end{defi}
-A raiz de la observación \ref{C8_obs_ecuacionMatricial} surge de forma natural de definición de \ti{matriz de una cuádrica}.
+A raíz de la observación \ref{C8_obs_ecuacionMatricial} surge de forma natural de definición de \ti{matriz de una cuádrica}.
 \begin{defi}[Matriz de una Cuádrica]
 	\label{C8_def_matrizCuadrica}
-	Diremos que $M$ es la matriz de una cuádrica $\mc{C}$ si dicha cuádrica es la asociada a la forma cuadrática $\Phi$ que tiene a $M$ por matriz asociada.
+	Fijada una referencia proyectiva $\mf{R}$, diremos que $M$ es la matriz de una cuádrica $\mc{C}$ si dicha cuádrica es la asociada a la forma cuadrática $\Phi$ que tiene a $M$ por matriz asociada respecto de la base $\mc{B}$ asociada a $\mf{R}$.
 \end{defi}
 A un lector cuidadoso la definición \ref{C8_def_matrizCuadrica} le huele a cuerno quemado. Expliquemos esto.
 
-En la definición \ref{C8_def_matrizCuadrica} definimos a una matriz (simétrica, recordemos) $M$ como \tb{la} matriz de una cuádrica. Cabría preguntarse pues si es que una cuádrica no tiene más que una matriz asociada, o lo que es lo mismo, si no es posible que varias formas cuádraticas den lugar a la misma cónica. la siguiente observación aclarará un poco las cosas.
+En la definición \ref{C8_def_matrizCuadrica} nombramos a una matriz (simétrica, recordemos) $M$ como \tb{la} matriz de una cuádrica. Cabría preguntarse pues si es que una cuádrica no tiene más que una matriz asociada, o lo que es lo mismo, si no es posible que varias formas cuadráticas den lugar a la misma cuádrica. La siguiente observación aclarará un poco las cosas.
 \begin{obs}[Pseudo Correspondencia]
 	\label{C8_obs_pseudoCorrespondenciaCuadricas}
-	Queremos ver que un rayo de formas cuadráticas generan la misma cuádrica, sin embargo, de momento nadie nos asegura que dos rayos distintos no puedan generar la misma cuádrica.
-	
-	Denotemos por $\mf{C}$ el conjunto de cuádricas proyectivas de $\proy(E)$. Traduciendo lo que acabamos de decir, estamos afirmando que la aplicación
+	Veamos que todos los elementos de un ``rayo de formas cuadráticas'' generan la misma cuádrica. En efecto, denotemos por $\mf{C}$ el conjunto de cuádricas proyectivas de $\proy(E)$. Traduciendo lo que acabamos de decir, estamos afirmando que la aplicación
 	\[\begin{array}{cc}
 	\varphi:&\proy(\mathrm{Cuad}(E))\to\mf{C}\\
 	& \class{\Phi}\mapsto \mc{C}
@@ -354,13 +354,15 @@ En la definición \ref{C8_def_matrizCuadrica} definimos a una matriz (simétrica
 	\[\begin{array}{cc}
 	\Phi(x)=0\qquad&\qquad\lambda\Phi(x)=0
 	\end{array}\]
-	son equivalentes. Además, la sobreyectividad es clara (por definición).
+	son equivalentes. Además, la sobreyectividad es clara (por definición de cuádrica).
+	
+	 Nótese de momento nadie nos asegura el recíproco, es decir, que dos rayos distintos no puedan generar la misma cuádrica.
 \end{obs}
-La observación \ref{C8_obs_pseudoCorrespondenciaCuadricas} nos viene a decir que la matriz asociada a una cuádrica no es única, ya que, una cuádrica está asociada a, al menos un rayo de formas cuadráticas, siendo las matrices de estas múltiplos entre sí. Por ende, nos es indiferente tomar por matriz de una cuádrica una o uno de sus múltiplos por un factor escalar no nulo.
+La observación \ref{C8_obs_pseudoCorrespondenciaCuadricas} nos viene a decir que la matriz asociada a una cuádrica no es única, ya que, una cuádrica está asociada a, al menos un rayo de formas cuadráticas, siendo las matrices de estas múltiplos entre sí (compruébese). Por ende, nos es indiferente tomar por matriz de una cuádrica una o uno de sus múltiplos por un factor escalar no nulo.
 
 Este hecho nos hace la vida más fácil y proyectivamente feliz.
 
-Un ``agujero'' importante en nuestra formación, es que, no sabemos (sin morir en el intento) calcular la matriz de una cónica dada la ecuación (desarollada) que la define. Lo único que tenemos es un método memorístico chapucero que sólo es válido para dimensión $3$. Esto pone de manifiesto la necesidad imperiosa de un resultado que facilite nuestra existencia. Como los Dioses no siempre son crueles, lo hay.
+Un ``agujero'' importante en nuestra formación, es que, no sabemos (sin morir en el intento) calcular la matriz de una cuádrica dada la ecuación (desarollada) que la define. Lo único que tenemos es un método memorístico chapucero que sólo es válido para dimensión $3$, es decir, para cónicas. Esto pone de manifiesto la necesidad imperiosa de un resultado que facilite nuestra existencia. Como los Dioses no siempre son crueles, lo hay.
 \begin{prop}[Matriz Asociada y Matriz Hessiana]
 	\label{C8_prop_Hessiana}
 	Dada una forma cuadrática $\Phi$, su matriz asociada (simétrica), $A$, es: \[A=\frac{1}{2}\mathrm{Hess}\left(\widetilde{\Phi_{\mc{B}}}\right)\]
@@ -376,7 +378,7 @@ Un ``agujero'' importante en nuestra formación, es que, no sabemos (sin morir e
 	\frac{\partial P}{\partial x_1x_n}(x) & \cdots & \frac{\partial P}{\partial x_nx_n}(x)
 	\end{pmatrix}\]
 	
-	Hallemos pues un coeficiente arbitrario de la matriz Hessiana derivando dos veces $\widetilde{\Phi_{\mc{B}}})$ respecto de las variables $x_i$ y $x_j$.
+	Hallemos pues un coeficiente arbitrario de la matriz Hessiana derivando dos veces $\widetilde{\Phi_{\mc{B}}}$ respecto de las variables $x_i$ y $x_j$.
 	
 	No olvidemos que sabemos por hipótesis que el polinomio puede ponerse en forma matricial. Los corchetes son solo notacionales.
 	\[\widetilde{\Phi_{\mc{B}}}(x_1,\dots,x_n)=(X^t)(AX)=\sum_{k=1}^{n}\left[x_k\left(\sum_{l=1}^{n}a_{kl}x_l\right)\right]\]
@@ -386,7 +388,7 @@ Un ``agujero'' importante en nuestra formación, es que, no sabemos (sin morir e
 		\frac{\partial \widetilde{\Phi_{\mc{B}}}(x_1,\dots,x_n)}{\partial x_j\partial x_i}=\frac{\partial}{\partial x_j}\left(\frac{\partial \widetilde{\Phi_{\mc{B}}}(x_1,\dots,x_n)}{\partial x_i}\right)=\\=\frac{\partial}{\partial x_j}\left(\sum_{k\not= i}^{n}\left[x_k\frac{\partial}{\partial x_i}\left(\sum_{l=1}^{n}a_{kl}x_l\right)\right]+\left(\sum_{l=1}^{n}a_{il}x_l+x_ia_{ii}\right)\right)=\\
 		=\frac{\partial}{\partial x_j}\left(\sum_{k\not=i}^{n}x_ka_{ki}+x_ia_{ii}+\sum_{l=1}^{n}a_{il}x_l\right)=\\=\frac{\partial}{\partial x_j}\left(\sum_{k=1}^{n}x_ka_{ki}+\sum_{l=1}^{n}a_{il}x_l\right)=a_{ji}+a_{ij}=2a_{ij}
 	\end{multline}
-	Por ende, cada coeficiente de la matriz Hessiana es la mitad del coeficiente correspondiente de la matriz de la forma cuadrática.
+	Por ende, cada coeficiente de la matriz Hessiana es el doble del coeficiente correspondiente de la matriz de la forma cuadrática.
 	
 	Por definición, las derivadas algebraicas de un polinomio son únicas, luego esto reafirma que cada forma cuadrática está asociada a una única matriz simétrica. Además, de esta forma, tenemos un procedimiento efectivo y mecánico para calcularla.
 \end{proof}
@@ -408,7 +410,7 @@ Pongamos en valor este último resultado con un ejemplo.
 	Sin embargo, sabemos, por la observacion \ref{C8_obs_pseudoCorrespondenciaCuadricas} que multiplicar o no por un factor no nulo es irrelevante, y en este caso no nos conviene.
 \end{exa}
 \subsection{Cuádricas y $\proy^\xi$}
-En esta sección veremos que el conjunto de las cuádricas proyectivas de $\proy(\K^n)$ se identifica con un espacio proyectivo $\proy^\xi$ para cierto $\xi\in\N$ que calcularemos explícitamente.
+En esta sección veremos que el conjunto de las cuádricas proyectivas de $\proy(E)$ se identifica con un espacio proyectivo $\proy^\xi$ para cierto $\xi\in\N$ que calcularemos explícitamente.
 
 Para probar este alucinante resultado pediremos al lector un pequeño sacrificio de sangre, un acto de fe. El sacrificio consiste en dar por probado (lo probaremos más adelante) que la aplicación definida en la observación \ref{C8_obs_pseudoCorrespondenciaCuadricas} es una biyección. Es decir, que cada cuádrica está asociada a un único rayo de formas cuadráticas.
 
@@ -442,38 +444,76 @@ Hagamos notar que, de hecho, fijada una base, podemos calcular explícitamente l
 	2 & 4 & 5\\
 	3 & 5 & 6
 	\end{pmatrix}\]
-	Las coordenadas en la base canónica de $\mathrm{Sim}(3)$ de la matriz de la cónica son
+	Las coordenadas en cierta ordenación de la base estándar de $\mathrm{Sim}(3)$ de la matriz de la cónica son
 	\[\mc{C}:(1,4,6,2,5,3)\in\mathrm{Sim}(3)\]
 	Proyectivizando
 	\[\mc{C}:(1:4:6:2:5:3)\in\proy(\mathrm{Sim}(3))\cong\proy^5\]
 	Este es un proceso habitual y muy útil. Nótese que al cambiar de base, todo puede cambiar muchísimo.
 \end{exa}
+En la siguiente sección comenzaremos a abandonar la generalidad de las cuádricas para centrarnos en las cónicas.
+
 \section{Determinación de una Cónica}
-El objetivo de esta sección es demostrar que, bajo ciertas condiciones, una cónica queda totalmente determinada por $5$ puntos.
+A continuación nos hacemos la siguiente pregunta. ¿Cuántos puntos determinan totalmente una cónica? Es decir, ¿es posible que al escoger cierto número de puntos haya una única cónica que pase por ellos?
+
+Dicho de otra forma, ¿puedo identificar una cónica por un conjunto concreto de puntos por los que pasa?
+\subsection{Intento de Resolución}
+\label{C8_intento}
+Tratemos de resolver este problema desde un punto de vista algebraico con un procedimiento ``\ti{quick and dirty}''.
+
+Sea $E$ un $\K$--espacio vectorial de dimensión $3$.
+
+Sean $X_1,\dots,X_n$ un conjunto de $n$ puntos de $\proy(E)$. Veamos si hay alguna cónica que pase por dichos puntos, y, en su caso, veamos si esta es única.
+
+Si hubiera alguna cónica $\mc{C}$ que pasara por dichos puntos, esta tendría cierta matriz simétrica $M$ que cumpliría las restricciones
+\begin{equation}
+\label{C8_eq_restricciones}
+	\vec{X_i}^tM\vec{X_i}=0\qquad\forall i\in\{1,\dots,n\}
+\end{equation}
+para cualesquiera representantes vectoriales (fijos) de los puntos proyectivos.
+
+Las restricciones dadas por la ecuación \eqref{C8_eq_restricciones} afectan a los valores que puedan tomar los coeficientes de la matriz de la cónica. Así pues, estas restricciones pueden asegurar la inexistencia de la cónica, su unicidad, o bien ser demasiado ``débiles'' y dejar la puerta abierta a que haya varias cónicas que pasen por dichos puntos.
+
+En cualquier caso, si nos fijamos en las restricciones y en la ecuación \eqref{C8_eq_polinomio}, nos damos cuenta de que conforman un sistema homogéneo de ecuaciones lineales. En concreto, un sistema de $n$ ecuaciones y $6$ incógnitas.
+
+Podemos interpretar dicho sistema como las ecuaciones cartesianas de un subespacio de $\mathrm{Sim}(3)$.
+
+Así pues, si la única solución es la trivial, no habrá ninguna cónica que pase por dichos puntos, ya que la matriz nula carece de proyectivizado.
+
+Por el contrario, si las soluciones del sistema son un subespacio de dimensión $1$ (un rayo), entonces habrá una única cónica que pase por dichos puntos.
+
+Por último, si las soluciones tienen dimensión mayor que $1$, habrá varios puntos que pasen por dicha cónica.
+
+En definitiva, es claro que si al final quedan $5$ ecuaciones no redundantes, la cónica que pase por dichos puntos será única. Por ende, después de todo este lío, hemos descubierto que $5$ puntos determinan totalmente única cónica si y solo si sus restricciones asociadas (ecuación \eqref{C8_eq_restricciones}) son un sistema de ecuaciones con matriz de coeficientes invertible.
+
+En esta sección veremos, de forma geométrica, qué condiciones tienen que cumplir $5$ puntos para determinar totalmente una cónica.
+
+Antes de meternos en el meollo del asunto, sobre un concepto muy útil que será de vital importancia a lo largo de la sección (y posteriormente). Las cónicas degeneradas y el producto de rectas.
 \subsection{Cónicas Degeneradas. Producto de Rectas}
 \label{C8_subsec_producto_rectas}
-Esta apartado no es más que un adelanto de la sección~\ref{C8_sec_conicas_degeneradas}, donde se tratarán en profundidad las cónicas degeneradas. En ella se utilizarán algunos de los resultados aquí obtenidos. Por tanto, y aunque lo volveremos a hacer más adelante, definamos cónica degenerada.
-\begin{defi} 
-	Diremos que una cónica es degenerada si contiene una recta.
-\end{defi}
-A continuación nos centraremos en el producto de dos rectas.
+Este apartado no es más que un adelanto de la sección~\ref{C8_sec_conicas_degeneradas}, donde se tratarán en profundidad las cónicas degeneradas. En ella se utilizarán algunos de los resultados aquí obtenidos.
 
-Sean $l,m$ dos rectas de $\proy^2=\proy(E)$. Como buenas rectas, fijada una base $\mc{B}$ de $E$, estas vendrán dadas por sendas ecuaciones cartesianas (únicas salvo múltiplos)
+Comencemos definiendo el concepto de cónica degenerada.
+\begin{defi}[Cónica Degenerada]
+	Diremos que una cónica $\mc{C}$ es \ti{degenerada} si contiene una recta. Es decir, si existe una recta $r\subset\proy(E)$ de manera que todo punto $x\in r$ de la recta también pertenece a la cónica $\mc{C}$.
+\end{defi}
+A continuación vamos a ver una forma de construir cónicas degeneradas a partir de rectas, el llamado ``producto de rectas''.
+
+Sean $l,m$ dos rectas de $\proy(E)$. Como buenas rectas, fijada una base $\mc{B}$ de $E$, estas vendrán dadas por sendas ecuaciones cartesianas (únicas salvo múltiplos)
 \[\begin{array}{cc}
 l: & ax+by+cz=0\\
 m: & a'x+b'y+c'z=0
 \end{array}\]
-Donde los coeficientes $a,b,c,a',b',c'\in\K$.
+Donde $a,b,c,a',b',c'$ son coeficientes del cuerpo $\K$.
 \begin{defi}[Producto de Rectas]
 	Definimos el producto de dos rectas $l$ y $m$ del plano proyectivo como el conjunto de puntos proyectivos que verifican la ecuación resultante de hacer el producto de sus ecuaciones cartesianas.
 	
 	A este conjunto lo denotaremos por $lm$
-	\[lm:(ax+by+cz)(a'x+b'y+c'z)=0\]
+	\begin{equation}lm:(ax+by+cz)(a'x+b'y+c'z)=0\end{equation}
 \end{defi}
 
 \begin{obs}[Cónicas y Producto de Rectas]
 	\label{C8_obs_conicaProducto}
-	Es claro que el producto de dos rectas $lm$ es una cónica. Basta ver que al desarrollar ese producto nos queda una ecuación idéntica a la ecuación \eqref{C8_eq_polinomio}.
+	Es claro que el producto de dos rectas $lm$ es una cónica. Basta ver que al desarrollar ese producto nos queda una ecuación idéntica a la ecuación \eqref{C8_eq_polinomio} (compruébese).
 \end{obs}
 \begin{obs}[Producto de Rectas y Unión de Rectas]
 	\label{C8_obs_conicaProducto_union}
@@ -482,7 +522,7 @@ Donde los coeficientes $a,b,c,a',b',c'\in\K$.
 	Sin embargo, la cosa no acaba aquí, ya que, de hecho, todo punto del producto $lm$ es un elemento de $l\cup m$. Esto es debido a que, en caso de existir un elemento ajeno a ambas rectas, tanto el primero como el segundo de los términos del producto serían no nulos. Como el resultado de este producto debe ser, por hipótesis, nulo, tendríamos que el cuerpo $\K$ tiene divisores de cero, lo cual es absurdo.
 	
 	Así pues, se tiene
-	\[lm = l\cup m\]
+	\begin{equation}lm = l\cup m\end{equation}
 	Esto nos indica que un producto de rectas es una cónica degenerada (ya que contiene a una recta). Por tanto, esto nos proporciona una auténtica fábrica de cónicas degeneradas. De hecho, como veremos más adelante, todas las cónicas degeneradas son un producto de rectas.
 \end{obs}
 \subsubsection{Matriz de una Cónica Producto de Rectas}
@@ -492,7 +532,7 @@ Para ello, en primer lugar descompongamos el producto de dos rectas de forma mat
 
 Dada la ecuación de un producto de rectas
 \[lm:(ax+by+cz)(a'x+b'y+c'z)=0\]
-podemos entender cada término del producto como la matriz $1\times 1$ resultante de multiplicar una matriz fila por una matriz columna. Si lo hacemos inteligentemente se obtiene (compruébese)
+podemos entender cada término del producto como la matriz $1\times 1$ resultante de multiplicar una matriz fila por una matriz columna. Si lo hacemos inteligentemente obtenemos (compruébese)
 \[lm:\begin{pmatrix}
 x & y & z
 \end{pmatrix}\begin{pmatrix}
@@ -518,7 +558,7 @@ X=\begin{pmatrix}
 x & y & z
 \end{pmatrix}^t\qquad &  \qquad M=UU'^t\end{array}\]
 Con estas notaciones es claro que \[lm:X^tUU'^tX=0\sii lm:X^tMX=0\]
-Sin embargo, una cálculo rápido nos dice que la matriz $M$, por lo general, no es simétrica. En efecto, explícitamente vemos que
+Sin embargo, un cálculo rápido nos dice que la matriz $M$, por lo general, no es simétrica. En efecto, explícitamente vemos que
 \[M=\begin{pmatrix}
 aa' & ab' & ac'\\
 ba' & bb' & bc'\\
@@ -534,12 +574,14 @@ Usando nuestras notaciones, normalmente escribiremos
 \begin{equation}
 	lm:X^t(UU'^t+U'U^t)X=0
 \end{equation}
-\subsubsection{Rango de la Matriz de una Cónica Producto de Rectas}
+
 Una vez hallada la matriz de un producto de rectas, calculemos el rango de la misma. Esto nos será de ayuda en el futuro para encontrar una caracterización matricial de las cónicas degeneradas.
 
-Para realizar este cálculo, consideremos dos casos. Primero la situación en la que realizamos el producto de dos rectas distintas.
+Para realizar este cálculo, consideraremos dos casos.
+\subsubsection{Rango de la Matriz de una Cónica Producto de Rectas Distintas}
+Consideremos en primer lugar la situación en la que realizamos el producto de dos rectas distintas.
 
-Al ser $l$ y $m$ dos rectas distintas, sus dualizados correspondientes también serán distintos. Veamos esto con detalle
+Al ser $l$ y $m$ dos rectas distintas, sus dualizados correspondientes (puntos) también serán distintos. Veamos esto con detalle
 \[\begin{array}{cc}
 l: & ax+by+cz=0\\
 m: & a'x+b'y+c'z=0
@@ -569,72 +611,363 @@ U'^t\\
 \end{array}\right)\]
 De esta forma, hemos escrito la matriz de la cónica como un producto de matrices de rango $2$. Por ende, el rango del producto de dichas matrices no puede exceder dicho rango.
 
-De hecho, el rango de este producto es $2$. Para ver esto tenemos que observar que la matriz resultante de realizar el producto puede verse por columnas como
+De hecho, el rango de este producto es $2$. Para ver esto tenemos que observar que la matriz resultante de realizar el producto puede verse por columnas (por ser una matriz simétrica) como
 \[\left(\begin{array}{c|c|c}
 Ua'+U'a&Ub'+U'b&Uc'+U'c
 \end{array}\right)\]
-Es claro que si la matriz tuviera rango $1$, todas sus columnas serían proporcionales. Si esto pasara tendríamos
-\begin{multline}
-	Ua'+U'a=\lambda_1(Ub'+U'b)=\lambda_2(Uc'+U'c)\sii\\
-	\sii U(a'-\lambda_1b'-c'\lambda_2)+U'(a-\lambda_1b-c\lambda_2)=0
-\end{multline}
-Acabamos de ver, por tanto, que si una cónica es producto de dos rectas distintas, entonces el rango de su matriz asociada es 2. Si las rectas son iguales, entonces el rango es 1. Más adelante veremos el recíproco, para el que son necesarios una serie de resultados previos.
+Ahora debemos observar que alguno de los coeficientes de la recta $l$ debe ser no nulo. Podemos suponer sin pérdida de generalidad que este coeficiente no nulo es $a$.
 
-\begin{obs}
-	Es evidente que si tengo $4$ puntos alineados, y un quinto punto, si tomamos la recta que pasa por los cuatro primeros puntos y una recta cualquiera que pase por el quinto, tenemos una cónica.
+Hecho esto, es claro que si la matriz tuviera rango $1$, todas sus columnas serían proporcionales. En particular, la primera columna sería proporcional a la segunda y a la tercera. De este hecho se desprenden las ecuaciones
+\begin{gather}
+	\label{C8_eq_rango1}
+	Ua'+U'a=\lambda(Ub'+U'b)\\
+	\label{C8_eq_rango2}
+	Ua'+U'a=\mu(Uc'+Uc)
+\end{gather}
+para ciertos $\lambda,\mu\in\K$ no nulos, ya que si alguno de ellos fuera nulo tendríamos que
+\[Ua'+U'a=0\]
+Como $U$ y $U'$ son linealmente independientes esto significaría que $a=0$, lo cual va contra nuestra hipótesis de que $a$ no es nulo.
+
+Si desarrollamos las ecuaciones \eqref{C8_eq_rango1} y \eqref{C8_eq_rango2} sacando factor común a $U$ y a $U'$ obtenemos que
+\begin{gather}
+	U(a'-\lambda b')+U'(a-\lambda b)=0\\
+	U(a'-\lambda c')+U'(a-\lambda c)=0
+\end{gather}
+Como $U$ y $U'$ son linealmente independientes deducimos las igualdades
+\begin{equation}
+	\begin{array}{cc}
+	a' = \lambda b' \qquad&\qquad a' = \mu c'\\
+	a = \lambda b \qquad&\qquad a = \mu c 
+	\end{array}
+\end{equation}
+Como $\lambda$ y $\mu$ son no nulos y $\K$ es un cuerpo, tendrán inverso, y, por ende, los vectores $U$ y $U'$ son de la forma
+\begin{equation}
+	\begin{array}{cc}
+	U=(a,\lambda^{-1}a,\mu^{-1}a)\qquad&\qquad U'=(a',\lambda^{-1}a', \mu^{-1}a')
+	\end{array}
+\end{equation}
+Observamos que $a'$ no puede ser nulo, pues entonces todos los coeficientes de la recta $m$ serían nulos, lo cual es absurdo. Dicho esto, como $a$ y $a'$ son elementos no nulos de un cuerpo, se dividen entre sí, es decir, existe un factor no nulo $\alpha$ tal que $a=\alpha a'$.
+
+Hecha esta observación tenemos que
+\begin{equation}
+\begin{array}{cc}
+U=(\alpha a',\lambda^{-1}\alpha a',\mu^{-1}\alpha a')\qquad&\qquad U'=(a',\lambda^{-1}a', \mu^{-1}a')
+\end{array}
+\end{equation}
+En conclusión, $U'=\alpha U$, lo cual contradice la independencia lineal de $U$ y $U'$. Por tanto, el rango de la matriz no tiene más remedio que ser $2$.
+\subsubsection{Rango de la Matriz de una Cónica Producto de Rectas Iguales}
+En el caso de hacer el producto de dos rectas iguales el cálculo del rango es casi trivial comparado con el caso anterior. Veámoslo.
+
+En primer lugar, veamos cuál es la matriz asociada a la cónica. Debemos tener en cuenta que los vectores $U$ y $U'$ son iguales por serlos las dos rectas que multiplicamos
+\begin{equation}
+	M=UU'^t+U'U^t=2UU^t\equiv UU^t=\begin{pmatrix}
+	a\\
+	b\\
+	c
+	\end{pmatrix}\begin{pmatrix}
+	a & b & c
+	\end{pmatrix}=\left(\begin{array}{c}
+	aU^t\\
+	\hline bU^t\\
+	\hline cU^t
+	\end{array}\right)
+\end{equation}
+Como las filas de la matriz $M$ son todas proporcionales, esta tiene rango $1$, con lo cual hemos terminado.
+\subsection{Teorema de Determinación}
+En este apartado traducimos al lenguaje geométrico lo ya avanzado en el apartado \ref{C8_intento}. Es decir, que, bajo ciertas condiciones, $5$ puntos determinan totalmente un cónica.
+
+Antes de presentar el teorema en concreto, tratemos de justificar lo intuitivo de su enunciado.
+\subsubsection{Cinco Puntos Alineados}
+	Supongamos que tomo un conjunto de $5$ puntos. Yo se que bajo ciertas circunstancias, estos me van a determinar una cónica. Tratando de jugar con los casos extremos, tomo $5$ puntos alineados.
+	
+	Si ahora trazo la recta sobre la que se encuentran los puntos y realizo su unión con cualquier otra recta, obtengo una cónica que pasa por los $5$ puntos.
+	
+	Evidentemente esta cónica no es única ya que la elección de la segunda recta no es, ni mucho menos, única.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=.15]{Graficos/alineados5.eps}
+		\caption{Ilustración de una de las cónicas que pasan por cinco puntos alineados.}
+		\label{C8_img_alineados5}
+	\end{figure}
+	
+	Por ende, una restricción que debemos imponer a los $5$ puntos para que estos identifiquen a una única cónica es que no estén alineados.
+\subsubsection{Cuatro Puntos Alineados}
+	Continuando con esta idea de jugar con los casos extremos, tomo un conjunto de $5$ puntos de los cuales $4$ de ellos están alineados.
+	
+	Si tomamos la recta que pasa por los cuatro primeros puntos y una recta cualquiera que pase por el quinto, tenemos una cónica.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=.15]{Graficos/alineados4.eps}
+		\caption{Ilustración de una de las cónicas que pasan por cuatro puntos alineados.}
+		\label{C8_img_alineados4}
+	\end{figure}
+	
+	Esta cónica tampoco es única ya que la elección de la segunda recta es arbitraria de entre las sectas del haz con base el quinto punto. Por tanto, aquí tenemos una condición mas a excluir.
 	
 	Por tanto las condiciones que impongamos para que $5$ puntos determinen totalmente una cónica deben prohibir que esto suceda.
 	
-	Como caso particular, si los $5$ puntos están alineados, la unión de la recta que pasa por los $5$ puntos y otra recta cualquiera es también una cónica (un caso más extremo si cabe).
-\end{obs}
+\subsubsection{Tres Puntos Alineados}
+	Continuemos con nuestra particular danza al borde del abismo y tomemos un conjunto de $5$ puntos de los cuales $3$ de ellos estén alineados.
+	
+	Una posible cónica que pase por estos puntos es la formada por la recta en la se encuentran los $3$ puntos alineados y la recta que une los dos restantes.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=.15]{Graficos/alineados3.eps}
+		\caption{Ilustración de la cónica que pasa por tres puntos alineados.}
+		\label{C8_img_alineados3}
+	\end{figure}
+	
+	Por primera vez, hemos obtenido una construcción única, sin embargo, uno podría preguntarse si no hay más cónicas (no degeneradas) que pasen por dichos puntos.
+	
+	La respuesta es no, y puede comprobarse siguiendo el procedimiento presentado en el apartado \ref{C8_intento} (se deja al lector la comprobación).
+	
+	Esto nos da, por así decirlo un golpe de moral para intentar demostrar el teorema, ya que podríamos imponer como condición a los puntos que $4$ de ellos no estén alineados. Así lo haremos.
+\subsubsection{Teorema de Determinación}
+Pasemos pues a enunciar y demostrar el teorema de determinación de una cónica por $5$ puntos, cuya demostración puede parecer larga, pero realmente es muy simple.
+\begin{theo}[Teorema de Determinación]
+	\label{C8_teo_determinacion}
+	Dados $5$ puntos distintos de $\proy(E)$, no estando $4$ de ellos alineados, hay una única cónica que pasa por ellos.
+\end{theo}
+\begin{proof}
+	Sean los puntos $X_0,X_1,X_2,X_3,X_4$.
+	
+	Como no hay $4$ puntos alineados, habrá $3$ que formen un triángulo, el cual tomaremos como parte de una referencia.
+	
+	Podemos suponer sin pérdida de generalidad que $X_0,X_1,X_2$ forman un triángulo. De esta forma tenemos
+	\begin{equation}
+		\mf{R}=\{X_0,X_1,X_2;e\}
+	\end{equation}
+	para cierto punto unidad $e$.
+	
+	Recordemos brevemente que las coordenadas de $X_0,X_1,X_2$ en la referencia $\mf{R}$ son
+	\begin{equation*}
+		\begin{array}{ccc}
+			X_0=(1:0:0)_{\mf{R}}\qquad &\qquad X_1=(0:1:0)_{\mf{R}} \qquad&\qquad X_2=(0:0:1)_{\mf{R}}
+		\end{array}
+	\end{equation*}
+	
+	Si hubiera una cónica que pasara por los $5$ puntos, esta tendría cierta matriz simétrica $M$ que cumpla las restricciones
+	\begin{equation}
+		\begin{array}{ccc}
+		\vec{X_0}^tM\vec{X_0}=0\qquad&\qquad
+		\vec{X_1}^tM\vec{X_1}=0\qquad&\qquad
+		\vec{X_2}^tM\vec{X_2}=0
+		\end{array}
+	\end{equation}
+	Para cualesquiera representantes vectoriales de $X_0,X_1,X_2$.
+	
+	Si consideremos que la matriz $M$ viene dada por
+	\begin{equation*}
+		M=\begin{pmatrix}
+			a & h & g\\
+			h & b & f\\
+			g & f & c
+		\end{pmatrix}
+	\end{equation*}
+	y echamos las cuentas correspondientes a las restricciones obtenemos que
+	\begin{equation*}
+		a=0\qquad\qquad b=0\qquad\qquad c=0
+	\end{equation*}
+
+Así, usando la ecuación \ref{C8_eq_polinomio} obtenemos que la ecuación que nos define la cónica es de la forma
+\begin{equation}
+	fyz+gxz+hxy=0
+\end{equation}
+
+	Llegados a este punto se nos pueden presentar dos situaciones. La primera es que podamos coger como punto unidad alguno de los cinco puntos originales. El otro caso es el complementario.
+	\begin{enumerate}
+		\item Si alguno de los puntos restantes no se encuentra sobre los lados del triángulo, podemos tomar dicho punto como punto unidad de nuestra referencia $\mf{R}$. 
+		
+		Supongamos sin pérdida de generalidad que $X_3$ no se encuentra sobre los lados del triángulo.
+		
+		En tal caso, tomando a $X_3$ como punto unidad, es claro que sus coordenadas respecto de la referencia $\mf{R}$ serán
+		\begin{equation*}
+			X_3=(1:1:1)_{\mf{R}}
+		\end{equation*}
+		Como la cónica también debe pasar por $X_3$, la matriz $M$ deberá verificar la restricción
+		\begin{equation*}
+			\vec{X_3}^tM\vec{X_3}=0
+		\end{equation*}
+		Si echamos las cuentas, esto nos arroja que se debe cumplir que
+		\begin{equation*}
+			f+g+h=0
+		\end{equation*}
+		Como la cónica también ha de pasar por $X_4=(x_4,y_4,z_4)_{\mf{R}}$, la matriz de la cónica debe cumplir la restricción adicional
+		\begin{equation*}
+			y_4z_4f+x_4z_4g+x_4y_4h=0
+		\end{equation*}
+	En definitiva, tenemos un sistema homogéneo de ecuaciones lineales que tiene por matriz de coeficientes
+	\begin{equation}
+		\begin{pmatrix}
+		1 & 1 & 1\\
+		y_4z_4 & x_4z_4 & x_4y_4
+		\end{pmatrix}
+	\end{equation}
+	Como ya adelantamos, para que la cónica sea única, el rango de esta matriz deberá ser $2$. Para comprobar este hecho, supongamos que el rango es $1$, es decir, que se anulan todos los menores de orden $2$ de la matriz.
+	
+	Haciendo esto, obtenemos el siguiente sistema de ecuaciones
+	\begin{equation}
+		\left\{
+			\begin{array}{l}
+			x_4z_4-x_4y_4=0\\
+			x_4y_4-y_4z_4=0\\
+			y_4z_4-x_4z_4=0
+			\end{array}
+		\right.\leadsto\left\{
+		\begin{array}{l}
+		x_4(z_4-y_4)=0\\
+		y_4(x_4-z_4)=0\\
+		z_4(y_4-x_4)=0
+		\end{array}
+		\right.
+	\end{equation}
+	Comencemos analizando la primera ecuación.
+	
+	Si $x_4=0$ entonces, por la segunda ecuación, $y_4z_4=0$, como $y_4$ y $z_4$ son elementos de un cuerpo, alguno de los dos será nulo. Esto implica que $X_4$ tiene las mismas coordenadas homogéneas (salvo múltiplos) que $X_1$ o $X_2$, lo cual es absurdo por ser todos los puntos distintos.
+	
+	Si por el contrario $z_4=y_4$, por la segunda ecuación se tiene que $x_4=z_4$, en tal caso $X_4$ tendría las mismas coordenadas homogéneas que $X_3$, lo cual vuelve a ser absurdo.
+	
+	Por ende, en este caso, el rango de la matriz es $2$ y la cónica que pasa por los $5$ puntos es única.
+		\item Si $X_3$ y $X_4$ están sobre los lados del triángulo de referencia, es claro que no pueden pertenecer al mismo lado, ya que si no habría $4$ puntos alineados.
+		
+		Podemos suponer que $X_3$ está sobre la recta $l:X_0X_1$ y que $X_4$ está sobre la recta $m:X_1X_2$.
+		
+		Es claro que el producto de rectas $lm$ es una cónica que contiene a los cinco puntos. Veamos que es única.
+		
+		Observamos que las coordenadas de $X_3$ y $X_4$ respecto de $\mf{R}$ son
+		\begin{equation}
+			X_3=(x_3:y_3:0)_{\mf{R}}\qquad \qquad X_4=(0:y_4:z_4)_{\mf{R}}
+		\end{equation}
+		Si forzamos a la cónica a pasar por $X_4$, aplicando la restricción pertinente y echando las cuentas tendríamos que
+		\begin{equation*}
+			fy_4z_4=0
+		\end{equation*}
+		Esto fuerza a que $f=0$ ya que si se anularan $y_4$ o $z_4$ el punto $X_4$ pasaría a tener las mismas coordenadas homogéneas que $X_1$ o $X_2$, lo cual es imposible.
+		
+		Si adicionalmente forzamos a la cónica a pasar por $X_3$ obtendríamos que debe cumplirse que
+		\begin{equation*}
+			hx_3y_3=0
+		\end{equation*}
+	Por un argumento simétrico al anterior obtenemos que $h=0$.
+	Así pues la cónica es única, ya que es la que tiene por rayo de matrices asociadas
+	\begin{equation}
+		\begin{pmatrix}
+		0 & 0 & g\\
+		0 & 0 & 0\\
+		g & 0 & 0
+		\end{pmatrix}
+	\end{equation}
+	Que es precisamente la matriz del producto de rectas $lm$.
+	\end{enumerate}
+Con lo que concluye la prueba.
+\end{proof}
+En el siguiente apartado daremos una vuelta de tuerca adicional al resultado anterior, que pondrá de manifiesto la relevancia de poder pensar en las cónicas como puntos de un espacio proyectivo de dimensión $5$.
 \subsection{Haces de Cónicas}
-Dadas dos cónicas distintas, $\mc{C}_1$ y $\mc{C}_2$, podemos interpretarlas como dos puntos de $\proy^5$.
-\begin{defi}[Haz de Cónicas]
-	Definimos el \ti{haz de cónicas} engendrado por $\mc{C}_1$ y $\mc{C}_2$ como la recta $\mc{C}_1\mc{C}_2$ de $\proy^5$.
-\end{defi}
-Es claro que el haz de cónicas engendrado por $\mc{C}_1$ y $\mc{C}_2$ viene dado por las siguientes ecuaciones paramétricas homogéneas
-\[\mc{C}_1\mc{C}_2\equiv\haz_{\mc{C}_1,\mc{C}_2}:\alpha\mc{C}_1+\beta\mc{C}_2=0\]
-Usualmente usaremos la deshomogeneización habitual dividiendo por $\alpha$ y considerando un parámetro no homogéneo.
-\[\begin{array}{cc}\haz_{\mc{C}_1,\mc{C}_2}:\mc{C}_1+\frac{\beta}{\alpha}\mc{C}_2\stackrel{\mathrm{not.}}{=}\mc{C}_1+\lambda\mc{C}_2\qquad&\qquad\lambda\in\overline{\K}=\K\cup\{\infty\}\end{array}\]
-Es claro que $\lambda=\infty$ si y solo si $\alpha=0$, por esto, cuando $\lambda=\infty$ nos referimos a la cónica $\mc{C}_2$.
-Veamos un ejemplo concreto para asentar esto.
-\begin{exa}
-	Poner dos cónicas concretas y calcular el haz que generan...
-\end{exa}
-\subsubsection{Haz de Cónicas que pasan por Cuatro Puntos}
-POR REVISAR
+El objetivo de este apartado es estudiar el conjunto de cónicas que pasan por cuatro puntos no alineados. El estudio de estas cónicas nos llevará a un método de cálculo más sencillo para determinar la cónica que pasa por $5$ puntos.
 
-Es fácil ver ahora que, en general, cuatro puntos proyectivos determinan un haz de cónicas.
+En primer lugar, trabajemos sobre algunos conceptos auxiliares.
+\begin{obs}[Recta de Cónicas]
+Sean $\mc{C}_1$ y $\mc{C}_2$ dos cónicas distintas vistas como dos puntos de $\proy^5$.
 
-En efecto, basta con calcular dos cónicas que pasen por los cuatro puntos $A,B,C,D$. Por la sección anterior sabemos que la unión de dos rectas es una cónica, por lo que basta tomar como cónicas que engendran el haz las uniones de rectas $AB\cup CD$ y $AC\cup BD$.
+Consideramos la recta de $\proy^5$ que pasa por $\mc{C}_1$ y $\mc{C}_2$. Esta recta queda parametrizada por
+\begin{equation}
+	\mc{C}_1\mc{C}_2:\class{\vec{\mc{C}_1}+\theta\vec{\mc{C}_2}}
+\end{equation}
+donde $\theta\in\overline{\K}$ y $\vec{\mc{C}_1}$, $\vec{\mc{C}_2}$ son representantes vectoriales de dichas cónicas en el espacio vectorial de las matrices simétricas $\mathrm{Sim}(3)$.
 
-Hecho esto, dado un quinto punto $e$, bastaría determinar $\lambda$ para que la cónica pase por dicho punto.
+Es decir, acabamos de definir una ``\ti{recta de cónicas}'' a partir de dos cónicas.
+\end{obs}
+Nuestro objetivo ahora es demostrar que dados $4$ puntos no alineados cualesquiera, estos determinan totalmente una recta de cónicas.
 
-Veamoslo con un ejemplo
-\begin{exa}
-	Sean los puntos
+Para demostrar esto iremos por partes. En primer lugar veremos que por $4$ puntos no alineados siempre podremos trazar dos cónicas distintas $\mc{C}_1$ y $\mc{C}_2$.
+
+Tras esto, nos preguntaremos si, en caso de poder trazar otras dos cónicas distintas por dichos cuatro puntos $\mc{C}_1'$ y $\mc{C}_2'$, la recta $\mc{C}_1'\mc{C}_2'$ es la misma que la recta $\mc{C}_1\mc{C}_2$.
+
+Adicionalmente, veremos que todas cónicas de la recta $\mc{C}_1\mc{C}_2$ pasan por los cuatro puntos iniciales.
+\subsubsection{Construcción de Dos Cónicas por Cuatro Puntos}
+Sean $A,B,C,D$ cuatro puntos no alineados. Es claro que estos puntos no determinan una única cónica ya que siempre puedo trazar dos cónicas distintas, y especialmente simples, que pasen por los cuatro puntos. En efecto, estas cónicas son
+\begin{equation}
+	\label{C8_eq_construccion}
+	\mc{C}_1=AB\cdot CD\qquad\qquad\mc{C}_2=AC\cdot BD
+\end{equation}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.2]{Graficos/haz1.eps}
+	\caption{Ilustración de dos cónicas que pasan por $4$ puntos.}
+	\label{C8_img_haz1}
+\end{figure}
+La comprobación de que ambas cónicas pasan por los cuatro puntos es trivial, ya que $\mc{C}_1=AB\cup CD$. Es decir, contiene a la recta $AB$, luego también contiene a $A$ y a $B$. Asimismo contiene a la recta $CD$, luego por supuesto a los puntos $C$ y $D$. Análogamente se comprueba para la otra cónica.
+
+Queda ahora asegurarse de que estas cónicas son siempre distintas. Esta comprobación se basa en que ambas cónicas pueden ser vistas como conjuntos de dos rectas. Por ende, la cónica $\mc{C}_1$ será igual a la cónica $\mc{C}_2$ si y solo si la recta $AB$ es igual a la recta $AC$ o bien a la recta $BD$. Suponiendo que $AB=AC$ obtenemos que los puntos $A$, $B$ y $C$ están alineados y que la recta $CD$ es igual a la recta $BD$, de donde se desprende que $C$, $B$ y $D$ están alineados. De aquí concluimos que los $4$ puntos están alineados y por tanto llegamos a una contradicción. La comprobación del otro caso es totalmente simétrica.
+\subsubsection{Cuatro Puntos Determinan una Recta de Cónicas}
+Para probar que dados dos pares de cónicas $(\mc{C}_1,\mc{C}_2)$ y $(\mc{C}_1',\mc{C}_2')$ que pasan por los puntos $A,B,C,D$ las rectas $\mc{C}_1\mc{C}_2$ y $\mc{C}_1'\mc{C}_2'$ son iguales basta con reeditar la demostración del teorema de determinación (teorema \ref{C8_teo_determinacion}). Lo haremos sin dar demasiados detalles.
+
+Tomamos como triángulo de referencia tres puntos no alineados de los cuatro iniciales. Renombrando los puntos si es preciso, podemos suponer que $A$, $B$ y $C$ forman un triangulo de referencia. Hecho esto, distingamos dos casos.
+
+Si puedo tomar $D$ como punto unidad, al exigirle a una matriz genérica de cónica que pase por los $4$ puntos obtengo que esta debe cumplir las siguientes restricciones.
+\begin{equation*}
+	\left\{\begin{array}{c}
+	a=0\\
+	b=0\\
+	c=0\\
+	f+g+h=0
+	\end{array}\right.
+\end{equation*}
+El conjunto de matrices que satisfacen dichas restricciones es un plano de $\mathrm{Sim}(3)$, luego una única recta de cónicas en $\proy^5$.
+
+Si no puedo tomar $D$ como punto unidad se obtienen las ecuaciones
+\begin{equation*}
+	\left\{\begin{array}{c}
+		a=0\\
+		b=0\\
+		c=0\\
+		f=0
+	\end{array}\right.
+\end{equation*}
+que son, de nuevo, las ecuaciones cartesianas de un plano de $\mathrm{Sim}(3)$.
+En conclusión, toda cónica que pasa por cuatro puntos pertenece a la misma recta de cónicas.
+
+Nótese que esta demostración también nos hubiera valido para demostrar que siempre podemos trazar dos cónicas distintas por $4$ puntos no alineados, sin embargo, la prueba que dimos antes nos proporciona una construcción explícita más útil.
+\begin{obs}[Haces de Cónicas]
+	Adicionalmente observamos que dadas dos cónicas que pasan por $4$ puntos y la recta de cónicas definida por ellas, todas las cónicas de la recta pasan por los cuatro puntos.
+	
+	Esto se debe a que las cónicas que pasan por $4$ puntos son una recta de cónicas (como acabamos de demostrar), luego la variedad generada por dos cónicas de la recta estará contenida en la recta de las cónicas que pasan por los cuatro puntos (y de hecho, obviamente es esa recta).
+\end{obs}
+
+Para concluir simplemente cabe mencionar que, como $4$ puntos identifican unívocamente una recta de cónicas tal que todas las cónicas de la recta pasan por dichos $4$ puntos, se suele decir que la recta de cónicas que pasa por dichos cuatro puntos es un ``\ti{haz de cónicas}'' con base esos cuatro puntos. Si dichos cuatro puntos son $A$, $B$, $C$ y $D$ normalmente escribiremos
+\begin{equation}
+	\haz(A,B,C,D)
+\end{equation}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.05]{Graficos/HazDeConicasPorCuatroPuntos.eps}
+	\caption{Ilustración algunas de las cónicas de $\haz(A,B,C,D)$}
+	\label{C8_img_haz2}
+\end{figure}
+
+La utilidad de los haces de cónicas es similar a la utilidad de los haces de rectas, y es que permiten calcular de la cónica que pasa por $5$ puntos de una forma bastante sencilla. Veámoslo con un ejemplo.
+\begin{exa}[Cálculo de la Cónica que Pasa por Cinco Puntos]
+	Sean los puntos escritos en coordenadas no homogéneas respecto de alguna referencia $\mf{R}$.
 	\[\begin{array}{ccc}
 		A=(1,1)&&B=(1,0)\\
 		C=(-1,2)&&D=(0,0)\\
-		&e=(-3,2)&
+		&E=(-3,2)&
 	\end{array}\]
-	TERMINAR
+	Construyamos el haz de cónicas que pasa por los puntos $A,B,C,D$ usando la construcción de la ecuación \eqref{C8_eq_construccion}.
+	
+	Echando las cuentas obtenemos las ecuaciones que definen a las cónicas $AB\cdot CD$ y $AC\cdot BD$. Estas son
+	\begin{equation*}
+		\begin{array}{cc}
+			AB\cdot CD : \qquad&\qquad AC\cdot BD :
+		\end{array}
+	\end{equation*}
 \end{exa}
-\subsection{Teorema de Determinación}
-\begin{theo}[Teorema de Determinación]
-	Dados $5$ puntos distintos de $\proy^2$ no estando $4$ de ellos alineados, hay una única cónica que pasa por ellos.
-\end{theo}
-\begin{proof}
-	Como no hay cuatro alineados, hay tres que forman un triangulo, que será parte de nuestra referencia.
-	
-	Reducimos la ecuación de la cónica dada la ventajosidad de la referencia.
-	
-	Distinguimos casos entre si hay agun punto que pueda no estar en el triangulo y si no hay más remedio que esté
-	
-	Es una distinción de casos bastante trivial
-	
-	TERMINAR
-\end{proof}
+
+Llamamos la atención de que aún no hemos probado que toda recta de cónicas pueda ser identificada por $4$ puntos. Es algo que dejamos pendiente para el futuro. 
 \section{Clasificación de las Cónicas No Degeneradas}
 En esta sección se realizará una clasificación de las cónicas proyectivas en función de su número de puntos de corte con la recta del infinito, a la que denotaremos $l_\infty$.
 

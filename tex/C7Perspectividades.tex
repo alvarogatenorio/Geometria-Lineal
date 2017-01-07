@@ -155,18 +155,43 @@ Vemos a continuación una consecuencia bastante importante (pues resulve el prob
 	Una homografía $h:l\to l$ (siendo $l$ una recta de $\proy^2$) puede generarse como composición de, a lo sumo, tres perspectividades.
 \end{cor}
 \begin{proof}
-	Consideremos $l'$ cualquier recta distinta de $l$. Tomemos asimismo un punto $V$ que no se encuentre ni en $l$ ni en $l'$. Planteamos la perspectividad $\pi_V$ de centro $V$, que nace en $l$ y muere en $l'$. Para poder trabajar cómodamente caractericémosla por sus imágenes de tres puntos distintos de $l$, a los que llamaremos $P,Q$ y $R$. A dichas imágenes las llamaremos $P',Q'$ y $R'$ respectivamente.
-	
-	Ahora tomemos la homografía $h':l'\to l$ definida por las condiciones:
+	Supongamos que la homografía $h$ en cuestión viene definida por los siguientes tres puntos distintos de $l$ y sus imágenes
 	\[\begin{array}{ccc}
-	P'\mapsto P\qquad&\qquad
-	Q'\mapsto Q\qquad&\qquad
-	R'\mapsto R
+	P\mapsto \overline{P}\qquad&\qquad
+	Q\mapsto \overline{Q}\qquad&\qquad
+	R\mapsto \overline{R}
 	\end{array}\]
+	Consideremos $l'$ cualquier recta distinta de $l$. Tomemos asimismo un punto $V$ que no se encuentre ni en $l$ ni en $l'$. Planteamos la perspectividad $\pi_V$ de centro $V$, que nace en $l$ y muere en $l'$. Para poder trabajar cómodamente caractericémosla por sus imágenes de los tres puntos anteriores $P,Q$ y $R$. A dichas imágenes las llamaremos $P',Q'$ y $R'$ respectivamente.
+	
+	\begin{center}
+		\includegraphics[scale=.9]{Graficos/Desargues/perspectividad}
+	\end{center}
+	
+	Ahora tomemos la homografía $h':l'\to l$ definida por las condiciones
+	\[\begin{array}{ccc}
+	P'\mapsto \overline{P}\qquad&\qquad
+	Q'\mapsto \overline{Q}\qquad&\qquad
+	R'\mapsto \overline{R}
+	\end{array}\]
+	la cual es única.
+	
 	Es claro que $h=h'\circ\pi_V$, pero como $h'$ es homografía, basta aplicar la proposición \ref{C7_prop_factorizacion} para obtener que:
 	\[h=\pi_1\circ\pi_2\circ\pi_V\]
 	Como todas son perspectividades, hemos terminado.
 \end{proof}
+
+\begin{obs}
+	Este corolario nos proporciona una demostración alternativa de que la construcción del cuadrilátero completo produce cuaternas armónicas. En efecto, consideremos el cuadrilátero completo formado por los puntos $A,B,C,D$, el cual se muestra en la siguiente figura. 
+	\begin{center}
+		\includegraphics[scale=.9]{Graficos/Desargues/cuadrilatero}
+	\end{center}
+	Consideramos la perspectividad $\pi_O$ de centro $O$, que transforma los puntos $A,B,C,D$ en $B',A',C',D$ respectivamente, y la pespectividad $\pi_V$ de centro $V$, que transforma los puntos $A',B',C',D$ en $A,B,C,D$, respectivamente. Al ser homografías se tiene que
+	\[\{A,B;C,D\}=\{B',A';C',D\}=\{B,A;C,D\}\]
+	Por las propiedades de la razón doble (sección~\ref{C5_sec_simetrias}) si $\{A,B;C,D\}=\lambda$, entonces $\{B,A;C,D\}=\frac{1}{\lambda}$. Por tanto, necesariamente, $\lambda=1$ o $-1$.
+	
+	Dado que son puntos distintos, podemos escoger como referencia los primeros tres $\mf{R}=\{A,B;C\}$. Esto nos daría, como ya vimos, que $\lambda$ es la coordenada de $D$ respecto a $\mf{R}$. Si $\lambda=1$, entonces $D=C$, lo cual no ocurre pues los hemos escogido distintos. Por tanto, se concluye que 
+	\[\{A,B;C,D\}=-1\]
+\end{obs}
 \section{Teorema del Eje}
 \label{C7_Eje}
 SIN TERMINAR
@@ -192,3 +217,35 @@ El enunciado del siguiente teorema puede resultar algo confuso a primera vista, 
 	contenidos...
 \end{obs}
 \section{Otras Demostraciones del Teorema de Desargues}
+A continuación, ofrecemos una demostración alternativa del Teorema de Desargues. Dado que, como vimos, una de las implicaciones es la dual de la otra, solo haremos la demostración de la condición suficiente.
+\begin{theo}[Teorema de Desargues]
+	Dados dos triángulos en el plano proyectivo $ABC$, $A'B'C'$ con vértices distintos. Consideremos los puntos:
+	\[\begin{array}{c}
+	Z=AB\cap A'B'\\
+	Y=AC\cap A'C'\\
+	X=CB\cap C'B'
+	\end{array}\]
+	Los tríangulos están en perspectiva si y solo si $X,Y,Z$ son colineales.
+	\begin{center}
+		\includegraphics[scale=.45]{Graficos/Desargues/desargues2}
+	\end{center}
+\end{theo}
+\begin{proof}
+	Sean las rectas $a=AA',b=BB'$ y $c=CC'$, consideremos la perspectividad de centro $Z$
+	\[\pi_Z:a\rightarrow b,\]
+	la perspectividad de centro $X$
+	\[\pi_X:b\rightarrow c\]
+	y la perspectividad de centro $Y$
+	\[\pi_Y:a\rightarrow c\]
+	Es seguro que todas son perspectividades, ya que dejan fijo el punto $O=a\cap b=b\cap c=a\cap c$.
+	
+	La composición de las dos primeras es la aplicación proyectiva
+	\[\pi=\pi_X\circ \pi_Z:a\rightarrow c\]
+	Dado que $\pi(O)=\pi_X(\pi_Z(O))=O=a\cap c$ se concluye que también es una perspectividad.
+	
+	Veamos que punto es el centro de $\pi$. Como $\pi(A)=\pi_X(\pi_Z(A))=C$, $\pi(A')=\pi_X(\pi_Z(A'))=C'$ y el centro viene dado por $A\pi(A)\cap A'\pi(C')$, el centro de la perspectividad no es otro que el punto $AC\cap A'C'=Y$. Por tanto, $\pi=\pi_Y$.
+	
+	Tomemos ahora los puntos $q=ZX\cap c,p=ZX\cap a$ y $t=ZX\cap b$. Se tiene que
+	\[\pi(p)=\pi_X(\pi_Z(p))=\pi_X(t)=q\]
+	Recordemos que, por otro lado, habíamos visto que $\pi=\pi_Y$. Por tanto, $\pi_Y(p)=q$. Esto implica que los puntos $Y,p$ y $q$ están alineados. Como, por construcción de $p$ y $q$, los puntos $X,Z,p,q$ también están alineados, se tiene que $Y,X$ y $Z$ están alineados, concluyendo así nuestra demostración.
+\end{proof}

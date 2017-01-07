@@ -1,0 +1,29 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[papersize={100mm,100mm}]{geometry}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.52,0.12) rectangle (7.48,6.52);
+\draw [domain=-0.52:22.48] plot(\x,{(--4.09-3.7*\x)/-1.7});
+\draw [domain=-0.52:22.48] plot(\x,{(--2.9768--1.08*\x)/4.22});
+\draw [domain=-0.52:22.48] plot(\x,{(--20.8448-2.62*\x)/2.52});
+\draw [domain=-0.52:22.48] plot(\x,{(--13.345281303623754-3.1034125260872316*\x)/0.6311103147332253});
+\begin{scriptsize}
+\draw [fill=qqqqff] (3.32,4.82) circle (3pt);
+\draw[color=black] (3.64,4.97) node[scale=1.5] {$O$};
+\draw [fill=xdxdff] (1.62,1.12) circle (3pt);
+\draw[color=black] (1.8,0.97) node[scale=1.5] {$A$};
+\draw[color=black] (4.22,6.39) node[scale=1.5] {$r$};
+\draw[color=black] (0.2,1) node[scale=1.5] {$l$};
+\draw [fill=xdxdff] (3.951110314733225,1.7165874739127687) circle (3pt);
+\draw[color=black] (4.1,2.09) node[scale=1.5] {$B$};
+\draw[color=black] (3.22,6.39) node[scale=1.5] {$s$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}

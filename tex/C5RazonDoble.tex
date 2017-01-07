@@ -13,7 +13,7 @@ Empecemos tratando un caso más sencillo, tres puntos. Es fácil demostrar hacie
 	
 	Existe un único isomorfismo 
 	\[\widehat{h}:E\rightarrow E'\]
-	que trasforma $\mc{B}$ en $\mc{B'}$. La aplicación proyectiva asociada a esta aplicación lineal es una homografía, de hecho es biyectiva (Corolario~\ref{C4:cor_biyectividad}) que transforma $p_i$ en $p'_i$, para $i=0,1,2$. Además es única al serlo $\widehat{h}$.
+	que trasforma $\mc{B}$ en $\mc{B'}$. La aplicación proyectiva asociada a esta aplicación lineal es una homografía, de hecho es biyectiva (Corolario~\ref{C4_cor_biyectividad}) que transforma $p_i$ en $p'_i$, para $i=0,1,2$. Además es única al serlo $\widehat{h}$.
 \end{proof}
 
 \begin{obs}
@@ -279,7 +279,7 @@ Como se puede observar en la demostración, la razón doble nos permite definir 
 	Por tanto, la homografía $h$ tal que $\theta'=\frac{-\theta-1}{2\theta}$ es la homografía pedida.
 \end{exa}
 
-\section{Simetrías de la razón doble}
+\section{Simetrías de la razón doble}\label{C5_sec_simetrias}
 
 La razón doble ha sido descrita como un cociente de parámetros no homogéneos ordenados de la siguiente manera $\{\theta_1,\theta_2;\theta_3,\theta_4\}$. Cabe preguntarse si las 24 posibles permutaciones de las coordenadas $\theta_i$ darán la misma razón doble.
 
@@ -311,11 +311,11 @@ Esto nos da las 24 reordenaciones posibles. Resulta entonces que si $\{\theta_1,
 		\{p_1,p_2;p_3,p_4\}=-1
 	\end{equation}
 \end{defi}
-Si cuatro puntos de una recta proyectiva son una cuaterna armónica, entonces es posible hacer la siguiente construcción geométrica, denominada \tb{cuadrilátero completo}, donde $p_1p_a$, $p_2p_a$ y $p_1p_{a1}$ son rectas arbitrarias, por tanto también lo son los puntos $p_a$ y $p_{a1}$.
+Si cuatro puntos de una recta proyectiva son una cuaterna armónica, entonces es posible hacer la siguiente construcción geométrica, denominada \tb{cuadrilátero completo}, donde $p_1D$, $p_2D$ y $p_1F$ son rectas arbitrarias, por tanto también lo son los puntos $D$ y $F$.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.4]{Graficos/RazonDoble/razon_doble-eps-converted-to}
+	\includegraphics[scale=.6]{Graficos/RazonDoble/razon_doble}
 	\caption{Cuaterna armónica}
 	\label{C5_img_cuaterna_armonica}
 \end{figure}
@@ -326,42 +326,42 @@ El recíproco también es cierto, como se muestra en la siguiente proposición.
 	
 \end{prop}
 \begin{proof}
-	Tomamos como referencia los puntos $p_1,p_2,p_{arbitario}$ y el punto de corte de las rectas $p_1p_{a1}$ y $p_3p_a$, que denotaremos $e$. Esto es posible ya que, como se observa en la figura, son proyectivamente independientes.
-	\[\mf{R}=\{p_1,p_2,p_a;e\}\]
+	Tomamos como referencia los puntos $p_1,p_2,p_{arbitario}$ y el punto de corte de las rectas $p_1F$ y $p_3D$, que denotaremos $e$. Esto es posible ya que, como se observa en la figura, son proyectivamente independientes.
+	\[\mf{R}=\{p_1,p_2,D;e\}\]
 	Debemos entonces expresar los puntos $p_1,p_2,p_3$ y $p_4$ respecto a esta referencia. Los primeros son sencillos, $p_1=(1:0:0)$ y $p_2=(0:1:0)$. 
 	
 	Por otro lado, $p_3$ es la intersección de las rectas $ep_{arbitario}$ y $p_1p_2$. Estas pueden ser descritas por las ecuaciones
 	\begin{equation*}
-		ep_a:=\class{\alpha(1,1,1)+\beta(0,0,1)\tq \alpha,\beta\in \R}=(1:1:1+\theta)\cup\{p_a\}\tq\theta\in\R
+		eD:=\class{\alpha(1,1,1)+\beta(0,0,1)\tq \alpha,\beta\in \R}=(1:1:1+\theta)\cup\{D\}\tq\theta\in\R
 	\end{equation*}
 	\begin{equation*}
 		p_1p_2:z=0
 	\end{equation*}
 	siendo por tanto el punto de corte 
 	\[p_3=(1:1:0)\]
-	De la misma forma podemos calcular $p_4$ como la intersección de las rectas $p_1p_2$ y $Dp_{a1}$, donde $D$ es el punto de corte de las rectas $p_1p_a$ y $p_2e$. Por tanto, para calcular las coordenadas de $p_4$ respecto a la referencia $\mf{R}$, primero debemos obtener las de $D$ y las de $p_{a1}$.
+	De la misma forma podemos calcular $p_4$ como la intersección de las rectas $p_1p_2$ y $DF$, donde $D$ es el punto de corte de las rectas $p_1D$ y $p_2e$. Por tanto, para calcular las coordenadas de $p_4$ respecto a la referencia $\mf{R}$, primero debemos obtener las de $D$ y las de $F$.
 	
 	Comencemos con $D$. Las rectas de las cuales es intersección pueden describirse a través de 
 	\begin{equation*}
 		p_2e:\class{\alpha(1,1,1)+\beta(0,1,0)\tq\alpha,\beta\in \R}=(1:1+\theta:1)\cup\{p_2\}\tq\theta\in\R
 	\end{equation*}
 	\begin{equation*}
-		p_1p_a:y=0
+		p_1D:y=0
 	\end{equation*}
 	por lo que el punto buscado es
 	\[D=(1:0:1)\]
-	Para calcular $p_{a1}$ tenemos que las rectas correspondientes vienen dadas por
+	Para calcular $F$ tenemos que las rectas correspondientes vienen dadas por
 	\begin{equation*}
-		p_1E:\class{\alpha(1,1,1)+\beta(1,0,0)\tq\alpha,\beta\in \R}=(1+\theta:1:1)\cup\{p_1\}\tq\theta\in\R
+		p_1F:\class{\alpha(1,1,1)+\beta(1,0,0)\tq\alpha,\beta\in \R}=(1+\theta:1:1)\cup\{p_1\}\tq\theta\in\R
 	\end{equation*}
 	\begin{equation*}
-		p_2p_a:x=0
+		p_2D:x=0
 	\end{equation*}
 	siendo el punto de corte
-	\[p_{a1}=(0:1:1)\]
+	\[F=(0:1:1)\]
 	Podemos ya calcular las coordenadas de $p_4$ como la intersección de 
 	\begin{equation*}
-		Dp_{a1}:\class{\alpha(1,0,1)+\beta(0,1,1)\tq\alpha,\beta\in \R}=(1:\theta:1+\theta)\cup\{p_{a1}\}\tq\theta\in\R
+		DF:\class{\alpha(1,0,1)+\beta(0,1,1)\tq\alpha,\beta\in \R}=(1:\theta:1+\theta)\cup\{F\}\tq\theta\in\R
 	\end{equation*}
 	\begin{equation*}
 		p_1p_2:z=0
@@ -375,7 +375,7 @@ El recíproco también es cierto, como se muestra en la siguiente proposición.
 		\{p_1,p_2;p_3,p_4\}=\{(1:0:0),(0:1:0);(1:1:0),(1:-1:0)\}=\{\infty,0;1,-1\}=-1
 	\end{equation}
 \end{proof}
-dado que en esta construcción las rectas $p_1p_a$, $p_2p_a$ y $p_1p_{a1}$ y los puntos $p_a$ y $p_{a1}$ son arbitrarios, elijamos los que elijamos vamos a obtener siempre el mismo punto $p_4$. 
+dado que en esta construcción las rectas $p_1D$, $p_2D$ y $p_1F$ y los puntos $D$ y $F$ son arbitrarios, elijamos los que elijamos vamos a obtener siempre el mismo punto $p_4$. 
 
 El orden de la cuaterna armónica es relativamente importante ya que, aunque algunas permutaciones cambian su valor, las reordenaciones
 \begin{equation*}
@@ -383,7 +383,7 @@ El orden de la cuaterna armónica es relativamente importante ya que, aunque alg
 \end{equation*}
 siguen dando como resultado $-1$.
 
-Es importante mencionar varias cosas acerca de esta construcción. El punto $p_3$ está entre el punto $p_1$ y el punto medio entre $p_1$ y $p_2$ si y solo si el punto $p_4$ está a la izquierda de $p_1$. Por el contrario, $p_3$ está entre el punto medio y el punto $p_2$  si y solo si el punto $p_4$ está a la derecha de $p_2$. Si el punto $p_3$ no está entre $p_1$ y $p_2$, entonces lo estará $p_4$. Por último, $p_3$ está en el punto medio si y solo si $p_4$ está en el infinito. Esto significa que la recta $p_4p_{a1}$ es paralela a la recta donde se encuentran los puntos.
+Es importante mencionar varias cosas acerca de esta construcción. El punto $p_3$ está entre el punto $p_1$ y el punto medio entre $p_1$ y $p_2$ si y solo si el punto $p_4$ está a la izquierda de $p_1$. Por el contrario, $p_3$ está entre el punto medio y el punto $p_2$  si y solo si el punto $p_4$ está a la derecha de $p_2$. Si el punto $p_3$ no está entre $p_1$ y $p_2$, entonces lo estará $p_4$. Por último, $p_3$ está en el punto medio si y solo si $p_4$ está en el infinito. Esto significa que la recta $p_4F$ es paralela a la recta donde se encuentran los puntos.
 
 Observemos que si, al calcular la razón doble tomamos como referencia los puntos $p_1,p_2,p_3$, entonces, necesariamente, $\theta_4=-1$.
 \begin{equation*}
@@ -424,7 +424,9 @@ Sean una recta $r$ de $\proy^n$ y cuatro puntos proyectivos $A,B,C,D\in r$. Para
 \subsubsection{Procedimiento de Proyecciones}
 Consideremos ahora una aplicación $h$ entre dos rectas $r$ y $r'$ de $\proy^2$ como la del ejemplo \ref{C4_exa_fabricaHomografias}, es claro que esta proyección es una homografía.
 
-IMAGEN
+\begin{center}
+	\includegraphics[scale=.3]{Graficos/perspectividad.eps}
+\end{center}
 
 Así pues, como las homografías conservan la razón doble, calcular la razón doble de los puntos alineados $A,B,C,D$ será equivalente a calcular la razón doble de sus imágenes por $h$. Es decir:
 \[\{A,B;C,D\}=\{h(A),h(B);h(C),h(D)\}\]
@@ -479,6 +481,57 @@ Pongamos un ejemplo con rectas concretas para verlo más claro.
 	Hecho esto, podemos extender el concepto de cuaterna armónica a cuaterca armónica formada por cuatro rectas concurrentes.
 \end{exa}
 \subsubsection{Método de los Haces de Rectas}
-Otra forma de calcular la razón doble de cuatro rectas concurrentes es recurrir a los haces de rectas. Expliquemos esto. Dadas cuatro rectas $r_1,r_2,r_3,r_4$ que se cortan en un mismo punto $O$, consideremos el haz de rectas de base $O$, al que denotaremos por $\haz_O$.
+Otra forma de calcular la razón doble de cuatro rectas concurrentes es recurrir a los haces de rectas. Expliquemos esto. Dadas cuatro rectas $r_1,r_2,r_3,r_4$ que se cortan en un mismo punto $O$, consideremos el haz de rectas de base $O$, al que denotaremos por $\haz_O$. Sea otra recta $l$ que no pertenece al haz y consideremos la aplicación proyectiva
+\[\begin{array}{cccc}
+h:&\haz_O&\rightarrow & l\\
+& r&\rightarrow & r\cap l
+\end{array}\]
 
-SIN TERMINAR
+\begin{center}
+	\includegraphics[scale=.8]{Graficos/RazonDoble/rectas_dual}
+\end{center}
+Si demostramos que $h$ es una homografía, entonces
+\begin{equation}
+ \{r_1,r_2;r_3,r_4\}=\{h(r_1),h(r_2);h(r_3),h(r_4)\}=\{r_1\cap l,r_2\cap l;r_3\cap l,r_4\cap l\}
+\end{equation}
+Para ello, veamos cual es la imagen de una recta arbitraria del haz. Es necesario, entonces, parametrizar el haz y tomar una referencia.
+
+Sean $r,s\in\haz_O$ dos rectas distintas del haz y consideremos a referencia $\mf{R}=\{O,h(r),h(s);e\}$ de $\proy^2$. Denotando $h(r)=A$ y $h(s)=B$, la referencia queda $\mf{R}=\{O,A,B;e\}$. Como $h(r)=r\cap l $ y $h(s)=s\cap l$, se tiene que
+\[\begin{array}{c}
+r_1=lA:z=0\\
+s=lB:y=0\\
+l=AB:x=0
+\end{array}\]
+Tomamos entonces como referencia del haz $\mf{\overline{R}}=\{s=[y=0],r=[z=0];[y+z=0]\}$. Así, una recta arbitraria $m\in\haz_O$ puede escribirse como $m:y+\theta z=0$ para cierto $\theta\in\overline{\K}$. De esta forma, $h(m)=m\cap l=(0:-\theta:1)$. Por tanto, la aplicación definida se describe a través de la ecuación $h(\theta)=\theta'=-\theta$ que no es más que una transformación de Möbius. Por tanto, $h$ es una homografía.
+
+Una observación importante es la siguiente.
+\begin{lem}
+	Cuatro puntos del plano proyectivo $P_1,P_2,P_3,P_4$ forman una cuaterna armónica entonces las rectas $DP_1,DP_2,DP_3,DP_4$ forman una cuaterna armónica de rectas en el dual, donde $D$ es un punto arbitrario.
+\end{lem}
+\begin{proof}
+	Basta fijarse en la construcción del cuadrilátero completo. Tomaremos los mismos nombres de los puntos de corte para que la explicación resulte más sencilla.
+	
+	Si $P_1,P_2,P_3,P_4$ forman una cuaterna armónica entonces podremos construir un cuadrilátero completo, donde los puntos $D,F$ serán arbitrarios. Si consideramos las rectas $DP_1,DP_2,DP_3,DP_4$, pertenecientes al haz $\haz_D$ y tomamos como recta $l$ la recta $P_1P_2$, se tiene que
+	\[\{DP_1,DP_2;DP_3,DP_4\}=\{P_1,P_2;P_3,P_4\}=-1\]
+\end{proof}
+Esto nos muestra que, cuando tengamos un cuadrilátero completo, no solo formarán una cuaterna armónica los puntos $P_1,P_2,P_3,P_4$, sino también las rectas antes mencionadas.
+
+Por último, veamos un ejemplo.
+\begin{exa}
+	Consideremos las rectas concurrentes del ejercicio anterior, es decir
+	\[\begin{array}{c}
+	r_1:x-y=0\\
+	r_2:x+z=0\\
+	r_3:2x-y+z=0\\
+	r_4:y+z=0
+	\end{array}\]
+	y tomemos como recta $l:x=0$. La razón doble de las cuatro rectas concurrentes es
+	 \begin{multline*}
+	 	\{r_1,r_2;r_3,r_4\}=\{r_1\cap l,r_2\cap l;r_3\cap l,r_4\cap l\}0\\
+	 	=\{(0:0:1),(0:1:0);(0:1:1),(0:1:-1)\}=\{\infty, 0; -1,1\}=-1
+	 \end{multline*}
+\end{exa}
+Este método para calcular la razón doble puede extenderse a un haz de hiperplanos. Análogamente al caso de rectas, si se tienen $\sigma_1,\sigma_2,\sigma_3,\sigma_4$ hiperplanos de $\proy^n$ distintos pertenecientes a un haz de hiperplanos $\haz_\pi$ y sea $r\subset\proy^n$ una recta tal que $r\cap\pi=\emptyset$, entonces
+\begin{equation}
+	\{\sigma_1,\sigma_2;\sigma_3,\sigma_4\}=\{\sigma_1\cap r,\sigma_2\cap r;\sigma_3\cap r,\sigma_4\cap r\}
+\end{equation} 

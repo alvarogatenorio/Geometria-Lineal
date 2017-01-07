@@ -1,0 +1,42 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[papersize={180mm,120mm}]{geometry}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-2.0069421487603266,-1.18314049586777) rectangle (12.07305785123968,7.136859504132238);
+\draw [domain=-2.4069421487603266:20.27305785123968] plot(\x,{(-0.-0.*\x)/1.});
+\draw (-1.8269421487603275,1.07685950413223287) node[anchor=north west,scale=1.4] {$\mathbb{P}^1$};
+\draw (-1.3069421487603263,-0.4231404958677675) node[anchor=north west,scale=1.4] {$P_1$};
+\draw (4.093057851239676,-0.4631404958677675) node[anchor=north west,scale=1.4] {$P_3$};
+\draw (7.053057851239677,-0.38314049586776744) node[anchor=north west,scale=1.4] {$P_2$};
+\draw [line width=1.6pt,domain=-2.4069421487603266:20.27305785123968] plot(\x,{(--5.342984987364231--4.748099173553721*\x)/4.082644628099175});
+\draw [line width=1.6pt,domain=-2.4069421487603266:20.27305785123968] plot(\x,{(-34.05446600642036--4.748099173553721*\x)/-4.214876033057852});
+\draw (3.353057851239676,4.996859504132236) node[anchor=north west,scale=1.4] {$D$};
+\draw [line width=1.6pt,dash pattern=on 1pt off 2pt on 5pt off 4pt,domain=-2.4069421487603266:20.27305785123968] plot(\x,{(-24.244343747011854--4.748099173553721*\x)/-2.148760330578513});
+\draw (5.053057851239676,2.996859504132235) node[anchor=north west,scale=1.4] {$F$};
+\draw [line width=1.6pt,dash pattern=on 1pt off 2pt on 5pt off 4pt,domain=-2.4069421487603266:20.27305785123968] plot(\x,{(--3.1016938053435092--2.7563524562761907*\x)/5.850713321637329});
+\draw [dash pattern=on 5pt off 5pt,domain=-2.4069421487603266:20.27305785123968] plot(\x,{(-17.35531822682431--2.419793401370921*\x)/-3.1611973086139207});
+\draw [dash pattern=on 5pt off 5pt,domain=-2.4069421487603266:20.27305785123968] plot(\x,{(--12.123691288816264-1.0740274101597813*\x)/2.5571680072542433});
+\draw (11.193057851239677,-0.2631404958677674) node[anchor=north west,scale=1.4] {$P_4$};
+\begin{scriptsize}
+\draw [fill=qqqqff] (-1.1252892561983425,0.) circle (3pt);
+\draw [fill=qqqqff] (5.106115702479345,0.) circle (3pt);
+\draw [fill=qqqqff] (7.1722314049586835,0.) circle (3pt);
+\draw [fill=xdxdff] (2.957355371900832,4.748099173553721) circle (3pt);
+\draw [fill=xdxdff] (4.725424065438986,2.7563524562761907) circle (3pt);
+\draw [fill=uuuuuu] (4.011034096344763,2.419793401370921) circle (3pt);
+\draw [fill=uuuuuu] (2.1682560581847428,3.830379866435972) circle (3pt);
+\draw [fill=qqqqff] (11.288065066246906,0.) circle (3pt);
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}

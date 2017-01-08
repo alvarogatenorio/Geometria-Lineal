@@ -1025,7 +1025,6 @@ Para que esta clasificación no resulte demasiado abstracta al lector, pongamos 
 	\end{array}\right\}\leadsto x^2=0\]
 	Teniendo en cuenta esto, los puntos que cumplen las restricciones impuestas por ambas ecuaciones son los de la forma $(0,\lambda,0)$ (los cuales, además, son solución doble). Estos generan un único rayo. Por ende, la cónica y la recta del infinito únicamente se cortan en un punto. Esto es lo mismo que decir que $\mc{C}$ es una parábola.
 \end{exa}
-\section{Deshomogeneizaciones de una Cónica}
 
 \section{Cuádricas, cónicas y cambio de referencia}
 Hasta ahora hemos hablado de cuádricas y su matriz asociada en cierta referencia proyectiva. Pero ¿y si queremos escribir la ecuación de la cuádrica o su matriz en otra referencia? A continuación veremos como hacer esto.\\
@@ -1357,12 +1356,12 @@ Gracias al lema anterior, si demostrásemos que, desde un punto $P$ exterior a l
 	Esta última construcción puede verse como un caso límite de la anterior cuando acercamos los puntos $N_0$ y $N_1$ entre sí y los puntos $M_0$ y $M_1$ entre sí (o bien los puntos $N_0$ y $M_0$ por un lado, y los puntos $M_1$ y $N_1$ por otro).
 \end{obs}
 
-Nos queda por último hablar de la recta polar de un punto \tb{perteneciente a la cónica} no degenerada $C$. Aunque dedujimos que los coeficientes de la recta Polar($Q$) eran $AQ$ (donde $A$ es la matriz de la cónica) suponiendo que $Q$ era un punto exterior a la cónica, tomaremos esto como válido también para puntos de la cónica. Es importante recalcar que en este caso no tenemos la propiedad de la cuaterna armónica.
+Nos queda por último hablar de la recta polar de un punto \tb{perteneciente a la cónica} no degenerada $\mc{C}$. Aunque dedujimos que los coeficientes de la recta Polar($Q$) eran $AQ$ (donde $A$ es la matriz de la cónica) suponiendo que $Q$ era un punto exterior a la cónica, tomaremos esto como válido también para puntos de la cónica. Es importante recalcar que en este caso no tenemos la propiedad de la cuaterna armónica.
 
-Por tanto, dado un punto $P\in C$, los coeficientes de la recta Polar($P$) son $AP$. Veamos que consecuencias tiene esto.
+Por tanto, dado un punto $P\in \mc{C}$, los coeficientes de la recta Polar($P$) son $AP$. Veamos que consecuencias tiene esto.
 
 \begin{lem}
-	Sea una cónica $C$ no degenerada, con matriz $A$, y un punto $P=\class{\vec{p}}\in C$, entonces la recta Polar($P$) es tangente a la cónica.
+	Sea una cónica $\mc{C}$ no degenerada, con matriz $A$, y un punto $P=\class{\vec{p}}\in \mc{C}$, entonces la recta Polar($P$) es tangente a la cónica.
 \end{lem}
 \begin{proof}
 	Para demostrar que es una recta tangente veamos que la ecuación de Joachimstal tiene solución doble.
@@ -1375,7 +1374,7 @@ Por tanto, dado un punto $P\in C$, los coeficientes de la recta Polar($P$) son $
 	\begin{equation*}
 	(\vec{P}+\theta \vec{Q})^tA(\vec{P}+\theta \vec{Q})=\vec{P}^tA\vec{P}+2\theta \vec{P}^tA\vec{Q}+\theta^2\vec{Q}^tA\vec{Q}=0
 	\end{equation*}
-	El primer sumando es nulo por pertenecer $P$ a la cónica y el segundo por ser $Q$ conjugado de $P$ respecto a $C$. Queda entonces la ecuación
+	El primer sumando es nulo por pertenecer $P$ a la cónica y el segundo por ser $Q$ conjugado de $P$ respecto a $\mc{C}$. Queda entonces la ecuación
 	\[\theta^2\vec{Q}^tA\vec{Q}=0\]
 	que tiene $\theta=0$ como solución doble.
 \end{proof}
@@ -1392,7 +1391,7 @@ Por ser tangente, la ecuación de Joachimstal
 debe tener solución doble. Esto ocurre si y solo si el discriminante es nulo, es decir, si y solo si
 \[(2\vec{P}^tA\vec{Q})^2-4(\vec{P}^tA\vec{P})(\vec{Q}^tA\vec{Q})=0\]
 \[(\vec{P}^tA\vec{Q})^2-(\vec{P}^tA\vec{P})(\vec{Q}^tA\vec{Q})=0\]
-Si escribimos $\vec{q}=(x,y,z)$ el resultado de la ecuación anterior es una ecuación de segundo grado en $x,y,z$, que es la ecuación de la cónica degenerada formada por las rectas tangentes a $C$. Desarrollémoslo para obtener también la matriz de dicha cónica. Por sencillez, renombremos $\vec{q}=\vec{x}=(x,y,z)$.
+Si escribimos $\vec{q}=(x,y,z)$ el resultado de la ecuación anterior es una ecuación de segundo grado en $x,y,z$, que es la ecuación de la cónica degenerada formada por las rectas tangentes a $\mc{C}$. Desarrollémoslo para obtener también la matriz de dicha cónica. Por sencillez, renombremos $\vec{q}=\vec{x}=(x,y,z)$.
 \[(\vec{P}^tA\vec{X})^2-(\vec{P}^tA\vec{P})(\vec{X}^tA\vec{X})=0\]
 \[\vec{X}^tA\vec{P}\vec{P}^tA\vec{X}-\vec{X}^t(\vec{P}^tA\vec{P})A\vec{X}=0\]
 Por tanto, la ecuación de la \tb{cónica formada por las rectas tangentes} a la cónica que pasan por el punto $P$ es
@@ -1405,7 +1404,7 @@ siendo así su matriz
 \end{equation}
 
 \section{Cónicas Duales}
-Sea una cónica no degenerada $C$ y un punto $X\in C$. Sabemos que la recta tangente a $C$ en el punto $X$ es la polar de $X$. Por tanto, tiene coeficientes $u=AX$. Podemos escribir entonces el punto $X$ como $X=A^{-1}u$. Como $X$ pertenece a la cónica cumple su ecuación, es decir
+Sea una cónica no degenerada $\mc{C}$ y un punto $X\in \mc{C}$. Sabemos que la recta tangente a $\mc{C}$ en el punto $X$ es la polar de $X$. Por tanto, tiene coeficientes $u=AX$. Podemos escribir entonces el punto $X$ como $X=A^{-1}u$. Como $X$ pertenece a la cónica cumple su ecuación, es decir
 \[X^tAX=0\]
 Por tanto,
 \[(A^{-1}u)^tA(A^{-1}u)=0\sii u^tA^{-1}u=0\]
@@ -1413,18 +1412,22 @@ Dado que $u$ son los coeficientes de una recta, en el dual son las coordenadas d
 \begin{equation}\label{C8_eq_conicadual}
 	u^tA^*u=0
 \end{equation}
-Nótese que cualquier recta tangente a la cónica $C$ satisface la ecuación anterior, pues $X$ es arbitrario. Recíprocamente, si una recta $u$ satisface la ecuación de la cónica dual, entonces podemos definir $X=A^{-1}u\sii u=AX$, siendo entonces esta la recta tangente a $C$ en $X$. Podemos pues introducir la siguiente definición.
+Nótese que cualquier recta tangente a la cónica $\mc{C}$ satisface la ecuación anterior, pues $X$ es arbitrario.
+
+Recíprocamente, si una recta $u$ satisface la ecuación de la cónica dual, entonces es tangente a $\mc{C}$. En efecto, sean $u$ los coeficientes de una recta que pertenece a la cónica dual, podemos definir $X=A^*u\sii u=AX$, siendo entonces esta la recta tangente a $\mc{C}$ en $X$ siempre que $X\in \mc{C}$. Pero, efectivamente, $X$ pertenece a la cónica pues
+\[X^tAX=(A^*u)^tAA^*c=u^tA^*u=0\] 
+Podemos pues introducir la siguiente definición.
 \begin{defi}[Cónica dual asociada a una cónica no degenerada]
-	Dada una cónica no degenerada $C$, las rectas tangentes a $C$ son una cónica de rectas en el dual denominada \ti{cónica dual}.
+	Dada una cónica no degenerada $\mc{C}$, las rectas tangentes a $\mc{C}$ son una cónica de rectas en el dual denominada \ti{cónica dual}, la cual denotaremos por $\mc{C}^*$.
 \end{defi}
 \begin{center}
 	\includegraphics[scale=.45]{Graficos/Conicas/ConicaDual.jpg}
 \end{center}
 Veamos un ejemplo
 \begin{exa}[Cónica Dual]
-	Sea $C:Y-X^2=0$ una cónica no degenerada. Hallar la ecuación de la cónica dual y la expresión de una recta tangente a $C$ arbitraria.\\
+	Sea $\mc{C}:Y-X^2=0$ una cónica no degenerada. Hallar la ecuación de la cónica dual y la expresión de una recta tangente a $\mc{C}$ arbitraria.\\
 	
-	Primero, homogeneizamos la cónica, obteniendo $C:yz-x^2=0$. La matriz de la cónica es
+	Primero, homogeneizamos la cónica, obteniendo $\mc{C}:yz-x^2=0$. La matriz de la cónica es
 	\[A=\left( \begin{array}{ccc}
 		2&0&0\\
 		0&0&-1\\
@@ -1437,18 +1440,18 @@ Veamos un ejemplo
 		 0&2&0
 	\end{array}\right) \]
 	La ecuación de la cónica dual $C^*$ será 
-	\[C^*:\left( \begin{array}{ccc}
+	\[\mc{C}^*:\left( \begin{array}{ccc}
 	u&v&w
 	\end{array}\right) A^*\left( \begin{array}{c}
 	u\\v\\w
-	\end{array}\right) =0\sii C^*:-u^2+4vw=0\]
+	\end{array}\right) =0\sii\mc{C}^*:-u^2+4vw=0\]
 	Por tanto, $C^*$ está formada por rectas $ux+vy+wz=0$ cuyos coeficientes cumplen la relación
 	\[u^2=4vw\sii \left( \frac{u}{w}\right) ^2=4\frac{v}{w}\]
 	Dado que estas rectas son las rectas tangentes a $C$, deshomogeneizando podemos escribir las mismas como
 	\[ux+vy+wz=0\sii \frac{u}{w}x+\frac{v}{w}y+z=0\sii Ux+\frac{U^2}{4}y+1=0\]
 	donde $U=\frac{u}{w}$. 
 	
-	Comprobemos que, efectivamente, las rectas tangentes a $C$ son de esa forma. Un punto arbitrario de la cónica $C$ podemos escribirlos como $(X,Y)=(X,X^2)$. Calculamos la recta tangente como sabemos desde primero, utilizando derivadas. Teniendo en cuenta que $Y'=2X$, la tangente en el punto $(X_0,Y_0)=(X_0,X_0^2)$ queda
+	Comprobemos que, efectivamente, las rectas tangentes a $\mc{C}$ son de esa forma. Un punto arbitrario de la cónica $\mc{C}$ podemos escribirlos como $(X,Y)=(X,X^2)$. Calculamos la recta tangente como sabemos desde primero, utilizando derivadas. Teniendo en cuenta que $Y'=2X$, la tangente en el punto $(X_0,Y_0)=(X_0,X_0^2)$ queda
 	\[Y-Y_0-2X_0(x-x_0)=0\sii Y-X_0^2=2X_0(X-X_0)=0\sii\]
 	\[-2X_0X+Y+X_0^2=0\sii -\frac{2}{X_0}X+\frac{1}{X_0^2}Y +1=0\]
 	Efectivamente, como $-\frac{2}{X_0}=U$, se cumple que $V=\frac{1}{X_0^2}=\frac{U^2}{4}$.
@@ -1456,7 +1459,47 @@ Veamos un ejemplo
 \subsection{Cónicas duales degeneradas}
 Sería insatisfactorio que el concepto de cónica dual solo estuviese definido para cónicas no degeneradas. Por suerte, no es así. Dado que las cónicas degeneradas pueden tener matrices de rango $1$ o $2$, distingamos ambos casos.\\
 
-Sea $C$ una cónica degenerada tal que el rango de su matriz $A$ es $2$.
+Sea $\mc{C}$ una cónica degenerada tal que el rango de su matriz $A$ es $2$. Entonces, será una cónica de la forma $\mc{C}:l m$ siendo $l,m$ dos rectas distintas. Es claro que las rectas tangentes a $\mc{C}$, aquellas que cortan con multiplicidad mayor que uno, son las que pasan por $l\cap m$. Por tanto, tendría sentido que la cónica dual, que hemos definido como el conjunto de las rectas tangentes a $\mc{C}$ fuese el haz de rectas con base $l\cap m$.
+
+Veamos que si $X_0=(a_0:b_0:c_0)$ es el punto de corte de ambas rectas, entonces $\haz_{X_0}$ es una cónica dual y que, en efecto, es la cónica dual asociada a $\mc{C}:l m$.
+
+Recordemos del tema $3$ que el $\haz_{X_0}$ es la recta de $\proy^{2*}$ con ecuación implícita $a_0u+b_0v+c_0w=0$. Para no perdernos, con $p^*$ nos referiremos a la recta $\haz_{X_0}$ del dual. El haz y $p^*$ son lo mismo, pero para saber donde estamos trabajando, si es en $\proy^2$ o $\proy^{2*}$, tomaremos notaciones diferentes.
+
+La recta $p^*$ podemos verla como la cónica dual degenerada de ecuación $(p^*)^2=(a_0u+b_0v+c_0w)^2=0$. Escribámoslo matricialmente. Siendo 
+\[X_0=\left( \begin{array}{c}
+a_0\\b_0\\c_0
+\end{array}\right) ,\quad U=\left( \begin{array}{c}
+u\\v\\w
+\end{array}\right) \]
+se tiene que la ecuación de la cónica dual degenerada es
+\[(X_0^tU)^2=0\sii U^tX_0X_0^tU=0\]
+Por tanto, el haz de rectas $\haz_{X_0}$ es una cónica dual degenerada cuya matriz es $A^*=X_0X_0^t$.
+
+Nos queda comprobar que es la cónica dual asociada a $\mc{C}:lm$. Para ello tendríamos que demostrar que la matriz de $\mc{C}$ es $A$.
+
+Como $X_0=l\cap m$, y recordando del tema $3$, si $u,v$ son los coeficientes de las rectas $l$ y $m$, respectivamente, podemos escribir $X_0=(u\times v)$, donde $\times$ denota el producto vectorial. Así, la matriz de la cónica dual puede escribirse como
+\begin{equation}
+	A^*=-(u\times v)(u\times v)^t
+\end{equation}
+Si retomamos el ejercicio $91$ de los problemas de geometría lineal podemos asegurar la siguiente igualdad
+\begin{equation}
+	A^*=-(u\times v)(u\times v)^t=(uv^t+vu^t)^*
+\end{equation}
+Por otro lado, en la sección~\ref{C8_subsec_producto_rectas} vimos que la matriz de la cónica $\mc{C}$ es precisamente $uv^t+vu^t$. Por tanto, queda comprobado que la matriz de la cónica dual es la adjunta de la matriz de $\mc{C}$.
+
+Así, $\mc{C}^*=\haz_{X_0}$ sigue siendo la cónica dual asociada a $\mc{C}$ que me proporciona todas las rectas tangentes a la misma y cuya matriz es $A^*$.\\
+
+Vayamos con el otro caso. Sea $\mc{C}$ una cónica degenerada tal que el rango de su matriz $A$ es $1$. Entonces, será una cónica de la forma $\mc{C}:l^2$. Las rectas tangentes a $\mc{C}$, aquellas con multiplicidad en el corte mayor que uno, son todas las rectas del plano proyectivo. Por tanto,la ecuación
+\[u^tA^*u=0\]
+debe cumplirse para cualquier recta de coeficientes $u$. Esto ocurre si y solo si $A^*$ es la matriz nula. Dado que $rg(A)=1$ todas las submatrices de orden $2$ de $A$ tienen determinante nulo. Por tanto, de nuevo, podemos asegurar que la cónica dual asociada a $\mc{C}$ nos proporciona todas las rectas tangentes a la misma y tiene por matriz $A^*$.\\
+
+Resumamos todo esto en una definición.
+\begin{defi}[Cónica dual asociada a una cónica degenerada]
+	Sea $\mc{C}$ una cónica degenerada con matriz $A$, las rectas tangentes a $\mc{C}$ son una cónica de rectas en el dual. Esto implica que, si $\mc{C}:lm$, la cónica dual asociada es $\haz_{l\cap m}$ con matriz $A^*$. Por otro laso si $\mc{C}:l^2$, la cónica dual asociada son todas las rectas del plano.
+\end{defi}
+\begin{obs}
+	Es importante observar que en el caso de las cónicas degeneradas la cónica dual de la cónica dual no se identifica con la cónica inicial.
+\end{obs}
 
 \section{Parametrización de cónicas}
 Existen diversas formas de parametrizar cónicas no degeneradas. Sin embargo, hay una de ellas que resulta especialmente útil, pues nos permite parametrizar cualquier cónica no degenerada como una parábola. Comenzaremos con ella.
@@ -1944,7 +1987,7 @@ Por supuesto, todo esto tiene su análogo dual. Primero veamos que tenemos derec
 \end{defi}
 Es claro que esta definición es buena, es decir, que no depende de $l$, ya que es simplemente el dualizado de la definición~\ref{C8_def_razondoble} (la cual no dependía de $P$).
 
-Es lógico pensar que la razón doble de cuatro rectas de la cónica dual, que son rectas tangentes a $\mc{C}$ en un punto, sea igual que la razón doble de los puntos de tangencia. Recordemos que estos puntos de tangencia eran los polos de las rectas tangentes. Por tanto, nos gustaría que, si $P_i=C^*l_i$, entonces $\{l_1,l_2;l_3,l_4\}=\{P_1,P_2;P_3,P_4\}$, donde $C^*$ es la adjunta de la matriz de la cónica. Para llegar a este resultado necesitamos un lema previo.
+Es lógico pensar que la razón doble de cuatro rectas de la cónica dual, que son rectas tangentes a $\mc{C}$ en un punto, sea igual que la razón doble de los puntos de tangencia. Recordemos que estos puntos de tangencia eran los polos de las rectas tangentes. Por tanto, nos gustaría que, si $P_i=A^*l_i$, entonces $\{l_1,l_2;l_3,l_4\}=\{P_1,P_2;P_3,P_4\}$, donde $A^*$ es la adjunta de la matriz de la cónica. Para llegar a este resultado necesitamos un lema previo.
 \begin{lem}
 	Sea una cónica $\mc{C}$ y un punto $P$. La aplicación
 	\begin{equation}
@@ -1953,7 +1996,7 @@ Es lógico pensar que la razón doble de cuatro rectas de la cónica dual, que s
 		&l&\rightarrow & Q
 		\end{array}
 	\end{equation}
-	donde $Q$ es el polo de $l$, es una homografía cuya imagen es una recta.
+	donde $Q$ es el polo de $l$, es una homografía cuya imagen es la recta polar de $P$.
 \end{lem}
 \begin{proof}
 	Tomemos $l_1$ y $l_2$ dos rectas del haz para hallar su ecuación paramétrica. Así
@@ -1962,14 +2005,169 @@ Es lógico pensar que la razón doble de cuatro rectas de la cónica dual, que s
 	\end{equation*}
 	Si $C$ es la matriz asociada a la cónica, el polo de una recta $l$ genérica viene dado por
 	\begin{equation*}
-		Q=C^*l=C^*(l_1+\theta l_2)=C^*l_1+\theta C^*l_2
+		Q=A^*l=A^*(l_1+\theta l_2)=A^*l_1+\theta A^*l_2
 	\end{equation*}
 	De esta forma, la aplicación definida en el enunciado puede describirse de la siguiente forma
 	\begin{equation*}
 		\begin{array}{cccc}
 		g:&\haz_P&\rightarrow &\proy^2\\
-		&l_1+\theta l_2&\rightarrow & C^*l_1+\theta C^*l_2
+		&l_1+\theta l_2&\rightarrow & A^*l_1+\theta A^*l_2
 		\end{array}
 	\end{equation*}
-	La imagen de $g$ recorre la recta $C^*l_1+\theta C^*l_2$. Además, en coordenadas no homogéneas, $g:\theta\rightarrow \theta$, por lo que es una homografía.
+	La imagen de $g$ recorre la recta $A^*l_1+\theta A^*l_2$. Además, en coordenadas no homogéneas, $g:\theta\rightarrow \theta$, por lo que es una homografía.
+	
+	Veamos que esta recta es la Polar($P$). Dado que $Q$ es el polo de $l$, la recta $l$ es la recta Polar($Q$). Como $P\in l$ para cualquier recta del haz, se tiene que $P\in$ Polar($Q$) y, por tanto, $Q$ está en Polar($P$). Con esto se tiene que los polos de las rectas del haz pertenecen a la recta polar de $P$. Como también pertenecen a la recta $A^*l_1+\theta A^*l_2$ se concluye que esta es la polar de $P$.
 \end{proof}
+Con esto ya podemos realizar la demostración cómodamente.
+\begin{prop}
+		Dada una cónica dual $\mc{C}^*$ y cuatro rectas $l_1,l_2,l_3,l_4\in\mc{C}^*$ y sus respectivos puntos de tangencia $P_1,P_2,P_3,P_4\in\mc{C}$, se tiene que 
+		\begin{equation}
+		\{l_1,l_2;l_3,l_4\}=\{P_1,P_2;P_3,P_4\}
+		\end{equation}
+\end{prop}
+\begin{proof}
+	Basta probar que la aplicación proyectiva definida por
+	\begin{equation*}
+		\begin{array}{cccc}
+			h:&\mc{C}&\rightarrow &\mc{C}^*\\
+			& P&\rightarrow &l=Polar(P)
+		\end{array}
+	\end{equation*}
+	es una homografía. En efecto, en tal caso, dado que la recta polar de un punto perteneciente a la cónica es la recta tangente en ese punto, el resultado se sigue.
+	
+	Vayamos con la comprobación. Sea un punto $V\in\mc{C}$ distinto de $P$ consideremos la siguiente composición de homografías
+	\begin{equation*}
+		\begin{array}{ccccccc}
+			\mc{C}&\xrightarrow{h_1}&\haz_V&\xrightarrow{g}& Polar(V)&\xrightarrow{h_2}&\mc{C}^*\\
+			P&\rightarrow &PV&\rightarrow&Q&\rightarrow&QP
+		\end{array}
+	\end{equation*}
+	donde $g$ es la homografía del lema anterior, por lo que $Q$ es el polo de $PV$.
+	
+	Tomemos la composición $h_2\circ g\circ h_1$ y veamos que está bien definida. La recta $PV$ es la recta polar de $Q$. Como sabemos, las rectas engendradas por $Q$ y los puntos de corte de Polar($Q$) con la cónica, son rectas tangentes a la misma. Como $P$ es uno de estos puntos, la recta $QP$ es tangente y, por tanto, pertenece a la cónica dual. Además, por ser tangente en el punto $P$ se trata de la recta polar de $P$. Esto implica que $h=h_2\circ g\circ h_1$. Como la composición de homografías es homografía, hemos terminado.
+	\begin{center}
+		\includegraphics[scale=.8]{Graficos/Conicas/RazonDobleDual}
+	\end{center}
+\end{proof}
+\begin{obs}
+	No se ha obviado el hecho de que en la demostración anterior no se ha comprobado que las aplicaciones $h_1$ y $h_2$ son homografías. Dado que la demostración sirven para afianzar conceptos, se deja como ejercicio al lector.
+\end{obs}
+
+\section{Involuciones de la cónica}
+
+Dado que toda cónica es un $\proy^1$, se pueden definir involuciones en la cónica. En esta sección se demostrará un resultado realmente fuerte, ya que nos proporciona una forma de construir cualquier involución de la cónica.
+
+\begin{prop}
+	Dada una cónica $\mc{C}$ no degenerada y un punto $X_1\not\in\mc{C}$, el conjunto de pares $(P,P')$ de puntos de $\mc{C}$ alineados con $X_1$ definen una involución de la cónica. Además, todas las involuciones de $\mc{C}$ se construyen de este modo.
+	\begin{center}
+		\includegraphics[scale=1]{Graficos/Conicas/Involucion}
+	\end{center}
+\end{prop}
+\begin{proof}
+	Sean $X_0$ y $X_2$ los puntos de corte de las rectas tangentes desde $X_1$ a $\mc{C}$ y $e\in\mc{C}$ otro punto distinto. Tomemos la referencia $\mf{R}=\{X_0,X_1,X_2;e\}$, que sabemos que nos parametriza la cónica como una parábola. Así, el par de puntos $(P,P')$ alineados con $X_1$ pueden escribirse como $P=(\theta^2:\theta:1)$ y $P'=(\theta'^2:\theta':1)$.
+	
+	El hecho de que la aplicación definida por el conjunto de pares $(P,P')$ sea involutiva es obvio. Nos queda pues probar que es una homografía distinta de la identidad para demostrar que es una involución. Para ello, basta encontrar una relación  entre $\theta$ y $\theta'$ que sea una homografía.
+	
+	La recta $PP'$ viene dada por
+	\[\left| \begin{array}{ccc}
+		x&y&z\\
+		\theta^2&\theta&1\\
+		\theta'^2&\theta'&1
+	\end{array}\right| =0\]
+	Además, $X_1=(0:1:0)$ perteneces a la recta $PP'$ si y solo si
+	\[\left| \begin{array}{ccc}
+	0&1&0\\
+	\theta^2&\theta&1\\
+	\theta'^2&\theta'&1
+	\end{array}\right| =0\sii \theta^2-\theta'^2=0\sii \theta=\pm\theta'\]
+	La relación no puede ser $\theta=\theta'$ ya que en ese caso la recta que pasa por $X_1$ cortaría a la cónica en un solo punto doble, y eso solo ocurre con las dos rectas tangentes. Por tanto, $\theta=-\theta'$, relación que define una homografía distinta de la identidad entre los puntos $(P,P')$. De hecho, es una relación involutiva, pues el módulo $k=-1$. Queda demostrado pues que se trata de una involución.\\
+	
+	Veamos que toda involución de la cónica se construye de este modo.
+	
+	Sea $h$ una involución de la cónica, definida por la ecuación general
+	\begin{equation*}
+		\alpha\theta'\theta+\beta(\theta'+\theta)+\delta=0
+	\end{equation*}
+	Tomamos entonces el punto $X_1=(\delta:-\beta:\alpha)$. Demostremos que la involución definida a partir de este punto es la misma que la original. Para ello, de nuevo, hallemos la relación entre las coordenadas no homogéneas de dos puntos $P=(\theta^2:\theta:1)$ y $P'=(\theta'^2:\theta':1)$ alineados con $X_1$. Como acabamos de ver, esta viene dada por
+	\[\left| \begin{array}{ccc}
+	\delta&-\beta&\alpha\\
+	\theta^2&\theta&1\\
+	\theta'^2&\theta'&1
+	\end{array}\right| =0\sii \delta(\theta-\theta')+\beta(\theta^2-\theta'^2)+\alpha(\theta^2\theta'-\theta'^2\theta)=0\]
+	Como $P\not=P'$, se tiene que $(\theta-\theta')\not=0$, pudiendo así dividir por ello. Queda
+	\[\delta +\beta(\theta+\theta')+\alpha\theta\theta'=0\]
+	que es precisamente la ecuación de la involución original.
+\end{proof}
+\begin{obs}
+	Otra forma de demostrar el ``\ti{además}'' de la proposición es considerar una involución de la cónica y dos pares de la misma. Esos dos pares determinan dos rectas que se cortan en un punto. Al considerar la involución a partir de ese punto de corte (con la construcción de la proposición) esta coincidirá con la original en los dos pares elegidos. Como una involución queda determinada por dos pares, son la misma involución.
+\end{obs}
+\begin{obs}
+	Observemos que los dos puntos fijos de una involución construida a partir de un punto $X_1$ son los puntos de corte de la recta Polar($X_1$) con la cónica.
+\end{obs}
+
+\section{Homografías de la cónica}
+Al igual que con las involuciones, se pueden definir en la cónica todo tipo de homografías. Por ello, conviene recuperar algunos de los teoremas más importantes relacionados con las homografías y dar a conocer otros nuevos.
+
+\begin{theo}[Teorema del Eje]
+	Sea $\mc{C}$ una cónica no degenerada y $h:\mc{C}\rightarrow\mc{C}$ una homografía. Entonces el conjunto
+	\begin{equation}
+		\{Ph(Q)\cap h(P)Q\tq PQ\in\mc{C}\}
+	\end{equation}
+	es una recta, denominada \ti{eje de la homografía}.
+\end{theo}
+\begin{proof}
+	Para realizar la demostración de este teorema dividamos las homografías en dos grupos, aquellas con dos puntos fijos distintos y las homografías con un punto fijo doble. Dado que nos encontramos en $\C$ es seguro que esto engloba todas las posibles homografías.\\
+	
+	\underline{Caso 1}: Sea $h$ una homografía con dos puntos fijos distintos $M$ y $N$. Tomemos como referencia $\mf{R}=\{M,X_1,N,e\}$ donde $X_1$ es el polo de la recta $MN$ y $e$ es un punto de la cónica distinto a los demás. De esta forma, la cónica queda parametrizada como una parábola. Además, los puntos fijos pasan a ser el cero y el infinito. Recordemos del tema $6$ que en tal caso la ecuación de $h$ es 
+	\[\theta'=k\theta\]
+	donde $k$ es el módulo de la homografía.
+	
+	Por tanto, si 
+	\[P=(\theta_0^2:\theta_0:1),\quad Q=(\theta_1^2:\theta_1:1)\]
+	sus imágenes son
+	\[h(P)=(k^2\theta_0^2:k\theta_0:1),\quad h(Q)=(k^2\theta_1^2:k\theta_1:1)\]
+	Para hallar los puntos $Ph(Q)\cap h(P)Q$, escribamos las ecuaciones de las rectas $Ph(Q)$ y $h(P)Q$ y solucionemos el sistema. De forma general, la recta que pasa por dos puntos distintos de la cónica $(\theta^2:\theta:1)$ y $(\theta'^2:\theta':1)$ viene dada por 
+	\[\left| \begin{array}{ccc}
+	x&y&z\\
+	\theta^2&\theta&1\\
+	\theta'^2&\theta'&1
+	\end{array}\right| =0\sii x(\theta-\theta')-y(\theta^2-\theta'^2)+z(\theta^2\theta'-\theta'^2\theta)=0\]
+	Como son puntos distintos, y como ya hicimos antes, podemos dividir por $(\theta-\theta')$, y queda
+	\begin{equation}\label{C8_eq_teo_eje}
+		x -y(\theta+\theta')+z\theta\theta'=0
+	\end{equation}
+	Particularicemos al caso que nos atañe. El sistema de ecuaciones a resolver es:
+	\begin{equation*}
+		\begin{split}
+			Ph(Q):& \ x-(\theta_0+k\theta_1)y+k\theta_0\theta_1z=0\\
+			Qh(P):& \ x-(\theta_1+k\theta_0)y+k\theta_1\theta_0z=0
+		\end{split}
+	\end{equation*}
+	Restando ambas ecuaciones obtenemos
+	\[(1-k)(\theta_1-\theta_0)y=0\]
+	Como no se trata de identidad $k\not=1$. Además, $\theta_0\not=\theta_1$. Por tanto, podemos reducir la ecuación anterior a
+	\[y=0\]
+	Es decir, cualquier solución del sistema de ecuaciones, que son los puntos $Ph(Q)\cap h(P)Q$ que pertenecen a ambas rectas, está en la recta $y=0$. Obsérvese que con esto no solo hemos demostrado que el conjunto
+	\[\{Ph(Q)\cap h(P)Q\tq PQ\in\mc{C}\}\]
+	es una recta, sino que esa recta, el eje de la homografía, es \tb{la recta que pasa por los puntos fijos}.\\
+	
+	\underline{Caso 2}: Sea $h$ una homografía con un punto fijo doble $M$. Consideremos puntos $X_2\in\mc{C}$ y $X_1\not\in\mc{C}$ tales que $X_1$ sea el polo de la recta $MX_2$. Tomemos entonces la referencia $\mf{R}=\{M,X_1,X_2;e\}$, donde $e$ es un punto distinto de la cónica. De nuevo, en esta referencia, la cónica se parametriza como una parábola. Además, el punto fijo pasa a ser el infinito. Por lo visto en el tema $6$, la ecuación de la homografía en esta referencia es
+	\[\theta'=\theta+\mu\]
+	Al igual que ante, para hallar los puntos $Ph(Q)\cap h(P)Q$, escribiremos las ecuaciones de las rectas $Ph(Q)$ y $h(P)Q$ y solucionaremos el sistema. Aprovechándonos de la ecuación~\ref{C8_eq_teo_eje} el sistema a resolver es
+	\begin{equation*}
+		\begin{split}
+			Ph(Q):& \ x-(\theta_0+\theta_1+\mu)y+\theta_0(\theta_1+\mu)z=0\\
+			Qh(P):& \ x-(\theta_1+\theta_0+\mu)y+\theta_1(\theta_0+\mu)z=0
+		\end{split}
+	\end{equation*}
+	Restando ambas ecuaciones obtenemos
+	\[\mu(\theta_0-\theta_1)z=0\]
+	Dado que la homografía no es la identidad, $\mu\not=0$. Como los puntos elegidos son distintos se tiene que cualquier solución del sistema de ecuaciones, es decir, los puntos $Ph(Q)\cap h(P)Q$, están en la recta $z=0$. De nuevo, no solo hemos demostrado lo pedido, sino que además hemos probado que en el caso de que la homografía tenga un punto fijo doble, el eje de la homografía es \tb{la recta tangente a la cónica en el punto fijo}.
+\end{proof}
+\begin{obs}
+	Dada una homografía $h:\mc{C}\rightarrow\mc{C}$, la imagen por $h$ de cualquier punto $X\in\mc{C}$ puede construirse usando los puntos fijos de la homografía. En efecto, si conocemos otro punto $P$, su imagen $h(P)$ y los puntos fijos (o el punto fijo), como estos me determinan el eje de la homografía y sabemos que $Ph(X)\cap h(P)X$ está en el eje, conocemos $XP'\cap eje$. Con lo cual, podemos hallar $h(X)$. Esto se muestra en las siguientes figuras.
+	\begin{center}
+		\includegraphics[scale=1]{Graficos/Conicas/TeoremaDelEje1} \
+		\includegraphics[scale=.9]{Graficos/Conicas/TeoremaDelEje2}
+	\end{center}
+\end{obs}

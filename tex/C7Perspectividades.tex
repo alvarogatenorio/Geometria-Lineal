@@ -194,27 +194,65 @@ Vemos a continuación una consecuencia bastante importante (pues resulve el prob
 \end{obs}
 \section{Teorema del Eje}
 \label{C7_Eje}
-SIN TERMINAR
-
 Para finalizar el capítulo enunciemos y demostremos el llamado ``Teorema del Eje''.
 
-El enunciado del siguiente teorema puede resultar algo confuso a primera vista, sin embargo, un breve vistazo a la figura IMAGEN debería despejar todas las dudas.
+El enunciado del siguiente teorema puede resultar algo confuso a primera vista, sin embargo, un breve vistazo a las figuras que se muestran a continuación debería despejar todas las dudas.
 \begin{theo}[Teorema del Eje]
 	\label{C7_teo_eje}
-	Sean dos rectas $l,l'\subset\proy^2$ y una homografía $h:l\to l'$. Se cumple que el conjunto:
+	Sean dos rectas $l,l'\subset\proy^2$ distintas y una homografía $h:l\to l'$. Se cumple que el conjunto:
 	\[e:=\{x\in\proy^2\tq x=Ph(Q)\cap Qh(P)\tq P,Q\in l\}\]
-	Es una recta. A esta la llamaremos \ti{eje} de la homografía $h$. 
-	
-	IMAGEN
-	
+	es una recta. A esta la llamaremos \ti{eje} de la homografía $h$. 
 \end{theo}
 \begin{proof}
-	Procedamos a la demostración del resultado mediante una distinción de casos. En primer lugar se tratará el caso en el que $h$ es una perspectividad, para después pasar al caso general.
+	Procedamos a la demostración del resultado mediante una distinción de casos. En primer lugar se tratará el caso en el que $h$ es una perspectividad, para después pasar al caso general.\\
 	
-	Suponiendo que $h$ es una perspectividad de centro $V$, consideramos los puntos $P,Q\in l$ y sus respectivas imágenes $P'Q'\in l'$. Asimismo consideramos el punto $X=PQ'\cap P'Q$. Veamos que $e=OX$, donde $O=l\cap l'$.
+	\underline{Caso 1}: Suponiendo que $h$ es una perspectividad de centro $V$, consideramos los puntos $P,Q\in l$ arbitrarios y sus respectivas imágenes $P'Q'\in l'$. Asimismo consideramos el punto $X=PQ'\cap P'Q$. Veamos que $e=OX$, donde $O=l\cap l'$.
+	
+	Como se observa en la imagen los puntos $V,Q,R,Q'$ forman una cuaterna armónica, ya que la construcción geométrica mostrada no es otra que el cuadrilátero completo. Por tanto, como vimos, $\{l,l',OX,OV\}=-1$. Además, recordemos que (como ocurría con los puntos) dadas tres rectas la construcción del cuadrilátero completo nos proporciona siempre la misma cuarta recta, con la cual se forma una cuaterna armónica. Como las rectas $l,l',OV$ son fijas, esto obliga a que la recta $OX$ sea fija. Esto prueba que la recta $OX$ esta formada por puntos de la forma $Ph(Q)\cap Qh(P)$. Es decir, es el eje de la perspectividad.
+	\begin{center}
+		\includegraphics[scale=.9]{Graficos/TeoremaDelEje/TeoremaDelEjeCaso1}
+	\end{center}
+	\underline{Caso 2}: Supongamos que $h$ no es una perspectividad. Entonces, no deja fijo $l\cap l'=O$. Podemos considerar, por tanto, los puntos $h(O)=V\in l'$ y $
+	h^{-1}(O)=U\in l$, ambos distintos de $O$. Veamos que $UV$ es el eje de la homografía. 
+	
+	Para ello, dados dos puntos $P,Q\in l$ arbitrarios y sus imágenes, que denotaremos por $P',Q'\in l'$, basta comprobar que $X=PQ'\cap P'Q\in UV$.
+	\begin{center}
+		\includegraphics[scale=.9]{Graficos/TeoremaDelEje/TeoremaDelEjeCaso2}
+	\end{center}
+	Si demostrásemos que existe una homografía $g$ tal que
+	\[\begin{array}{cccc}
+	g:&l&\rightarrow &l'\\
+	&P&\rightarrow&Q'\\
+	&Q&\rightarrow&P'\\
+	&U&\rightarrow&V\\
+	&O&\rightarrow&O
+	\end{array}\]
+	entonces será una perspectividad por dejar fijo el punto $O=l\cap l'$. El centro de $g$ tendrá que pertenecer a las rectas $PQ',QP'$ y $UV$. Dado que las rectas $PQ'$ y $QP'$ se cortan en el punto $X$, este es el único punto que pertenece a ambas. Por tanto, necesariamente este debe ser el centro, y por ello $X\in UV$, que es lo que buscábamos.
+	
+	Veamos que la homografía $g$ existe. Para ello, comprobemos que se preserva la razón doble. Al ser $h$ homografía y por simetría se tiene que
+	\begin{multline}
+		\{P,Q;U,O\}=\{h(P),h(Q);h(U),h(O)\}=\{P',Q';O,V\}=\{Q',P';V,O\}
+	\end{multline}
+	Una vez que esto queda comprobado, por el Teorema~\ref{C5_teo_hom4puntos_sii_razondoble} existe la homografía $g$.
 \end{proof}
-\begin{obs}[Caracterización de las Perspectividades]
-	contenidos...
+
+\begin{obs}[Teorema de Pappus]
+	Una consecuencia del Teorema del Eje es el Teorema de Pappus. Recordemos el enunciado del Teorema de Pappus.
+	
+	\textit{Sean $r$ y $r'$ dos rectas diferentes de $\proy(E)$. Entonces, para cualesquiera seis puntos distintos $A,B,C\in r$ y $A',B',C'\in r'$, los puntos
+	\begin{equation*}
+		X=AB'\cap A'B \ ; \qquad Y=AC'\cap A'C \ ; \qquad Z=BC'\cap B'C
+	\end{equation*}
+	están alineados.}
+
+	En efecto, existe una única homografía de $r$ en $r'$ que transforma los puntos $A,B,C$ en los puntos $A',B',C'$. Aplicando el Teorema del Eje es inmediato que $X,Y,Z$ están alineados.
+\end{obs}
+
+\begin{obs}
+	Dada una homografía $h:l\rightarrow l'$, donde $l$ y $l'$ son dos rectas distintas, la imagen por $h$ de cualquier punto $X\in l$ puede construirse usando el eje de la homografía. En efecto, si conocemos otro punto $P$, su imagen $h(P)$ y el eje de la homografía $eje$, como sabemos que $Ph(X)\cap h(P)X$ está en el eje y conocemos $XP'\cap eje$, podemos hallar $h(X)$.
+	\begin{center}
+		\includegraphics[scale=1]{Graficos/TeoremaDelEje/DeterminacionImagenHom}
+	\end{center} 
 \end{obs}
 \section{Otras Demostraciones del Teorema de Desargues}
 A continuación, ofrecemos una demostración alternativa del Teorema de Desargues. Dado que, como vimos, una de las implicaciones es la dual de la otra, solo haremos la demostración de la condición suficiente.

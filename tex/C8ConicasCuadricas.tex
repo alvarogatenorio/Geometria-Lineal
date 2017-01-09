@@ -2164,10 +2164,144 @@ Al igual que con las involuciones, se pueden definir en la cónica todo tipo de 
 	\[\mu(\theta_0-\theta_1)z=0\]
 	Dado que la homografía no es la identidad, $\mu\not=0$. Como los puntos elegidos son distintos se tiene que cualquier solución del sistema de ecuaciones, es decir, los puntos $Ph(Q)\cap h(P)Q$, están en la recta $z=0$. De nuevo, no solo hemos demostrado lo pedido, sino que además hemos probado que en el caso de que la homografía tenga un punto fijo doble, el eje de la homografía es \tb{la recta tangente a la cónica en el punto fijo}.
 \end{proof}
-\begin{obs}
+\begin{obs}\label{C8_obs_determinaciom_homconica_eje}
 	Dada una homografía $h:\mc{C}\rightarrow\mc{C}$, la imagen por $h$ de cualquier punto $X\in\mc{C}$ puede construirse usando los puntos fijos de la homografía. En efecto, si conocemos otro punto $P$, su imagen $h(P)$ y los puntos fijos (o el punto fijo), como estos me determinan el eje de la homografía y sabemos que $Ph(X)\cap h(P)X$ está en el eje, conocemos $XP'\cap eje$. Con lo cual, podemos hallar $h(X)$. Esto se muestra en las siguientes figuras.
 	\begin{center}
 		\includegraphics[scale=1]{Graficos/Conicas/TeoremaDelEje1} \
 		\includegraphics[scale=.9]{Graficos/Conicas/TeoremaDelEje2}
 	\end{center}
 \end{obs}
+
+Para terminar esta sección, demostremos un teorema que relaciona cónicas y hexágonos.
+
+\begin{theo}[Teorema de Pascal]
+	Hay una cónica no degenerada que pasa por los puntos de un hexágono si y solo si los puntos de intersección de los lados opuestos del hexágono son colineales. Esto es si y solo si los puntos
+	\begin{equation}
+		A_1A_2\cap A_5A_4, \quad A_1A_6\cap A_3A_4, \quad A_5A_6\cap A_3A_2
+	\end{equation}
+	son colineales, donde los puntos $A_1,A_2,A_3,A_4,A_5,A_6$ se muestran en la figura.
+	\begin{center}
+		\includegraphics[scale=1]{Graficos/Conicas/TeoremaPascal}
+	\end{center}
+\end{theo}
+\begin{proof}
+	$\bra$ Supongamos que los seis puntos de un hexágono $A_1,A_2,A_3,A_4,A_5,A_6$ pertenecen la cónica no degenerada $\mc{C}$. Por lo visto en el capítulo de homografías, y dado que la cónica es un $\proy^1$, existe una única homografía de la cónica $h$ que transforma
+	\begin{equation*}
+		\begin{array}{cccc}
+			h:&\mc{C}&\rightarrow &\mc{C}\\
+			& A_1&\rightarrow &A_4\\
+			& A_5&\rightarrow &A_2\\
+			& A_3&\rightarrow &A_6
+		\end{array}
+	\end{equation*}
+	Por el Teorema del Eje, las intersecciones
+	\begin{equation*}
+		A_1A_2\cap A_5A_4, \quad A_1A_6\cap A_3A_4, \quad A_5A_6\cap A_3A_2
+	\end{equation*}
+	están alineadas.\\
+	
+	$\bla$ Sean los seis puntos de un hexágono $A_1,A_2,A_3,A_4,A_5,A_6$ supongamos que los puntos dado por
+	\begin{equation*}
+		A_1A_2\cap A_5A_4, \quad A_1A_6\cap A_3A_4, \quad A_5A_6\cap A_3A_2
+	\end{equation*}
+	están alineados. Sea $\mc{C}$ la única cónica que pasa por los cinco puntos $A_1,A_2,A_3,A_4,A_5$. Si $A_6\in\mc{C}$ ya está hecho. Supongamos, por tanto, que no es así. Entonces, el punto $A_6'=A_1A_6\cap\mc{C}$ pertenece a la cónica. Veamos que $A_6=A_6'$, concluyendo así que $A_6\in\mc{C}$.
+	
+	Tenemos así seis puntos de un hexágono $A_1,A_2,A_3,A_4,A_5,A_6'$ que pertenecen a una cónica. Aplicamos la implicación que acabamos de demostrar y obtenemos que los puntos
+	\begin{equation*}
+		A_1A_2\cap A_5A_4, \quad A_1A_6'\cap A_3A_4, \quad A_5A_6'\cap A_3A_2
+	\end{equation*}
+	están alineados. Denotemos por $l$ la recta a la cual pertenecen. Dado que
+	\begin{equation*}
+		A_1A_6'\cap A_3A_4=A_1A_6\cap A_3A_4
+	\end{equation*}
+	pues $A_6'\in A_1A_6$, la recta $l$ obtenida con $A_6'$ es la misma que la recta obtenida con $A_6$, pues el punto $A_1A_2\cap A_5A_4$ es idéntico. Además, esta recta $l$ es el eje de la homografía definida en el apartado anterior. Como se vio en la observación~\ref{C8_obs_determinaciom_homconica_eje}, conocidos $A_5,A_3,h(A_5)=A_2$ y el eje de la homografía, podemos hallar $h(A_3)$. Si denotamos $N=A_3A_2\cap l$, se tiene que $h(A_3)=A_5N\cap \mc{C}=A_6'$. Pero por el apartado anterior, $h(A_3)=A_6$. Se concluye pues que $A_6=A_6'$.
+\end{proof}
+
+Recordemos que una vez demostrado un teorema, por el principio de dualidad, el enunciado dual del mismo quedará demostrado. En este caso, el Teorema de Pascal Dual tiene nombre propio y se enuncia a continuación.
+
+\begin{theo}[Teorema de Brianchon]
+	Los seis lados de un hexágono son tangentes a una cónica si y solo si las rectas que unen pares de puntos opuestos del hexágono son concurrentes.
+	\begin{center}
+		\includegraphics[scale=1.1]{Graficos/Conicas/TeoremaBrianchon}
+	\end{center}
+\end{theo}
+
+\section{Clasificación de haces de cónicas}
+TERMINAR. SOLO RESUMEN. NO EXPLICADO
+
+En esta sección presentaremos las distintas situaciones que se pueden dar en los haces de cónicas, así como las situaciones duales. Un haz de cónicas queda determinado por cuatro puntos. Atendiendo a la multiplicidad con que corten las cónicas a esos puntos podemos realizar una clasificación de los haces.
+
+Recordemos que los haces se decribían a través de
+\[\mc{C}_1+\theta\mc{C}_2\]
+donde $\mc{C}_1$ y $\mc{C}_2$ son dos cónicas pertenecientes al haz. Como siempre es posible encontrar una cónica no degenerada, en general, describiremos los haces como
+\[S+\theta S'\]
+donde $S$ es una cónica no degenerada y $S'$ es otra cónica del haz, que puede ser degenerada o no.
+
+La clasificación es la siguiente, donde los $'$ en los número indican que nos estamos refiriendo a la situación dual.
+
+\tb{1. Haz genérico}\\
+
+\tb{1'. Haz dual genérico}\\
+
+\tb{2. Haz con un punto doble}\\
+
+\tb{2'. Haz dual con una recta doble}\\
+
+\tb{3. Haz con un punto triple}\\
+
+\tb{3'. Haz dual con una recta triple}\\
+
+\tb{4. Haz con un punto cuádruple}\\
+
+\tb{4'. Haz dual con una recta cuádruple}\\
+
+\tb{5. Haz con dos puntos dobles}\\
+
+\tb{5. Haz dual con dos rectas dobles}\\
+
+Es importante observar que no siempre se puede describir un haz a partir de dos cónicas degeneradas. También resaltaremos que las situaciones duales presentadas no tienen por que ser el dual del haz. De hecho, solo hay dos situaciones autoduales (5).
+
+Veamos un ejemplo para concluir con la clasificación.
+\begin{exa}
+	Dar todas las cónicas tangentes al eje de abcisas en el cero y que pasan por el $(0,1)$ y el $(1,1)$.
+	\begin{center}
+		\includegraphics[scale=.8]{Graficos/Conicas/Ejemplohaz}
+	\end{center}
+	Todas las cónicas pedidas son las cónicas de un haz con punto doble. Busquemos dos cónicas sencillas del haz para describirlo. Las más sencillas son:
+	\[S:X(X-Y)=0, \quad S':Y(Y-1)\]
+	Las cónicas pedidas son
+	\[X(X-Y)+\theta(Y-1)Y=0\]
+\end{exa}
+
+También relacionado con los haces de cónicas, enunciemos y demostremos el siguiente teorema
+
+\begin{theo}
+	Un haz de cónicas $S+\theta S'$ genera una involución sobre cualquier recta $l$ que no pase por ninguno de los puntos de la base del haz.
+	\begin{center}
+		\includegraphics[scale=.9]{Graficos/Conicas/TeoremaDesargues}
+	\end{center}
+\end{theo}
+\begin{proof}
+	Sean dos puntos $P=\class{\vec{p}}$ y $Q=\class{\vec{q}}$ pertenecientes la recta $l$, podemos parametrizar esta recta como
+	\[l:\{\class{\vec{p}+\theta\vec{q}}\tq\theta\in\overline{\K}\}\]
+	Calculamos la intersección de la recta con el haz. Esta viene dada por la ecuación de Joachimstal
+	\begin{equation*}
+		(\vec{P}+\theta \vec{Q})^t(A+\theta A')(\vec{P}+\theta \vec{Q})=(\vec{P}+\theta \vec{Q})^tA(\vec{P}+\theta \vec{Q})+\theta(\vec{P}+\theta \vec{Q})^tA'(\vec{P}+\theta \vec{Q})=0
+	\end{equation*}
+	Cada sumando de la ecuación anterior es un polinomio de segundo grado. Por tanto, se trata de un haz de ecuaciones de segundo grado, que como vimos determina una involución. Además, nos indica que los pares de punto $(P,P')$ de la involución que el haz genera sobre $l$ son los puntos de corte de la recta $l$ con las cónicas del haz.
+\end{proof}
+\begin{cor}
+	En general hay dos cónicas de un haz tangentes a una recta dada
+\end{cor}
+\begin{proof}
+	Sea un haz de cónicas y una recta $l$ que no pase por ningún punto de la base del haz. Por el teorema anterior este genera una involución sobre $l$. Las involuciones tienen dos puntos fijos. Por tanto, hay dos cónicas del haz que cortan a la recta $l$ es un punto doble, es decir, que son tangentes a la misma.
+\end{proof}
+\begin{cor}
+	Una recta genérica corta a los tres pares de lados de un cuadrilátero en pares de puntos de involución.
+	\begin{center}
+		\includegraphics[scale=1]{Graficos/Conicas/CorolarioDesargues}
+	\end{center}
+\end{cor}
+\begin{proof}
+	Es una consecuencia inmediata del Teorema de Desargues ya que los tres pares de lados del cuadrilátero son tres cónicas degeneradas del haz cuyos puntos de la base son los vértices del cuadrilátero.
+\end{proof}

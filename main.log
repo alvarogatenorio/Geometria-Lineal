@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.27)  9 JAN 2017 01:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.27)  11 JAN 2017 23:34
 entering extended mode
 **./main.tex
 (main.tex
@@ -3343,32 +3343,32 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 202.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 202.
-LaTeX Info: Redefining \. on input line 221.
-LaTeX Info: Redefining \% on input line 221.
+LaTeX Info: Redefining \. on input line 219.
+LaTeX Info: Redefining \% on input line 219.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 219.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 219.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 219.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 219.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 219.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 219.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 219.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 219.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 219.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 219.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 219.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 219.
  [58]
 Underfull \hbox (badness 10000) in paragraph at lines 233--235
 
@@ -3389,32 +3389,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
  []
 
-LaTeX Info: Redefining \. on input line 266.
-LaTeX Info: Redefining \% on input line 266.
+LaTeX Info: Redefining \. on input line 259.
+LaTeX Info: Redefining \% on input line 259.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 266.
+(babel)             in language append on input line 259.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 266.
+(babel)             in language append on input line 259.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 266.
+(babel)             in language append on input line 259.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 266.
+(babel)             in language append on input line 259.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 266.
+(babel)             in language append on input line 259.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 266.
+(babel)             in language append on input line 259.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 266.
+(babel)             in language append on input line 259.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 266.
+(babel)             in language append on input line 259.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 266.
+(babel)             in language append on input line 259.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 266.
+(babel)             in language append on input line 259.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 266.
+(babel)             in language append on input line 259.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 266.
+(babel)             in language append on input line 259.
 [59]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language append on input line 282.
@@ -6324,73 +6324,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 1755--1757
  []
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1785.
+(babel)             in language append on input line 1788.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1785.
+(babel)             in language append on input line 1788.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1785.
+(babel)             in language append on input line 1788.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1785.
+(babel)             in language append on input line 1788.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1785.
+(babel)             in language append on input line 1788.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1785.
+(babel)             in language append on input line 1788.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1786--1787
+Underfull \hbox (badness 10000) in paragraph at lines 1789--1790
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1792--1793
+Underfull \hbox (badness 10000) in paragraph at lines 1795--1796
 
  []
 
-LaTeX Info: Redefining \. on input line 1797.
-LaTeX Info: Redefining \% on input line 1797.
+LaTeX Info: Redefining \. on input line 1800.
+LaTeX Info: Redefining \% on input line 1800.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 [127]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1797.
+(babel)             in language append on input line 1800.
 
 <Graficos/Conicas/TeoremaSteiner.pdf, id=2291, 183.68625pt x 157.58875pt>
 File: Graficos/Conicas/TeoremaSteiner.pdf Graphic file (type pdf)
 
 <use Graficos/Conicas/TeoremaSteiner.pdf>
 Package pdftex.def Info: Graficos/Conicas/TeoremaSteiner.pdf used on input line
- 1803.
+ 1806.
 (pdftex.def)             Requested size: 146.94917pt x 126.07115pt.
 
 <Graficos/Conicas/TeoremaSteiner1.pdf, id=2292, 211.79124pt x 211.79124pt>
@@ -6398,210 +6398,222 @@ File: Graficos/Conicas/TeoremaSteiner1.pdf Graphic file (type pdf)
 
 <use Graficos/Conicas/TeoremaSteiner1.pdf>
 Package pdftex.def Info: Graficos/Conicas/TeoremaSteiner1.pdf used on input lin
-e 1814.
+e 1817.
 (pdftex.def)             Requested size: 169.43321pt x 169.43321pt.
-LaTeX Info: Redefining \. on input line 1817.
-LaTeX Info: Redefining \% on input line 1817.
+LaTeX Info: Redefining \. on input line 1818.
+LaTeX Info: Redefining \% on input line 1818.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1817.
+(babel)             in language append on input line 1818.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1817.
+(babel)             in language append on input line 1818.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1817.
+(babel)             in language append on input line 1818.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1817.
+(babel)             in language append on input line 1818.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1817.
+(babel)             in language append on input line 1818.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1817.
+(babel)             in language append on input line 1818.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1817.
+(babel)             in language append on input line 1818.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1817.
+(babel)             in language append on input line 1818.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1817.
+(babel)             in language append on input line 1818.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1817.
+(babel)             in language append on input line 1818.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1817.
+(babel)             in language append on input line 1818.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1817.
- [128 <./Graficos/Conicas/TeoremaSteiner.pdf> <./Graficos/Conicas/TeoremaSteine
-r1.pdf>]
-LaTeX Info: Redefining \. on input line 1853.
-LaTeX Info: Redefining \% on input line 1853.
+(babel)             in language append on input line 1818.
+ [128 <./Graficos/Conicas/TeoremaSteiner.pdf>]
+LaTeX Info: Redefining \. on input line 1850.
+LaTeX Info: Redefining \% on input line 1850.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1853.
+(babel)             in language append on input line 1850.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1853.
+(babel)             in language append on input line 1850.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1853.
+(babel)             in language append on input line 1850.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1853.
+(babel)             in language append on input line 1850.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1853.
+(babel)             in language append on input line 1850.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1853.
+(babel)             in language append on input line 1850.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1853.
+(babel)             in language append on input line 1850.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1853.
+(babel)             in language append on input line 1850.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1853.
+(babel)             in language append on input line 1850.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1853.
+(babel)             in language append on input line 1850.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1853.
+(babel)             in language append on input line 1850.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1853.
- [129]
-Underfull \hbox (badness 10000) in paragraph at lines 1865--1866
+(babel)             in language append on input line 1850.
+ [129 <./Graficos/Conicas/TeoremaSteiner1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1868--1869
 
  []
 
-LaTeX Info: Redefining \. on input line 1907.
-LaTeX Info: Redefining \% on input line 1907.
+LaTeX Info: Redefining \. on input line 1886.
+LaTeX Info: Redefining \% on input line 1886.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1907.
+(babel)             in language append on input line 1886.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1907.
+(babel)             in language append on input line 1886.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1907.
+(babel)             in language append on input line 1886.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1907.
+(babel)             in language append on input line 1886.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1907.
+(babel)             in language append on input line 1886.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1907.
+(babel)             in language append on input line 1886.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1907.
+(babel)             in language append on input line 1886.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1907.
+(babel)             in language append on input line 1886.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1907.
+(babel)             in language append on input line 1886.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1907.
+(babel)             in language append on input line 1886.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1907.
+(babel)             in language append on input line 1886.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1907.
+(babel)             in language append on input line 1886.
 [130]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1914.
+(babel)             in language append on input line 1917.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1914.
+(babel)             in language append on input line 1917.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1914.
+(babel)             in language append on input line 1917.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1914.
+(babel)             in language append on input line 1917.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1914.
+(babel)             in language append on input line 1917.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1914.
+(babel)             in language append on input line 1917.
+LaTeX Info: Redefining \. on input line 1950.
+LaTeX Info: Redefining \% on input line 1950.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1952.
+(babel)             in language append on input line 1950.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1952.
+(babel)             in language append on input line 1950.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1952.
+(babel)             in language append on input line 1950.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1952.
+(babel)             in language append on input line 1950.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1952.
+(babel)             in language append on input line 1950.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1952.
+(babel)             in language append on input line 1950.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 1950.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 1950.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 1950.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 1950.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 1950.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 1950.
+ [131]
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 1955.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 1955.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 1955.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 1955.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 1955.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 1955.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1953--1954
+Underfull \hbox (badness 10000) in paragraph at lines 1956--1957
 
  []
 
-LaTeX Info: Redefining \. on input line 1956.
-LaTeX Info: Redefining \% on input line 1956.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1956.
+(babel)             in language append on input line 1982.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1956.
+(babel)             in language append on input line 1982.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1956.
+(babel)             in language append on input line 1982.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1956.
+(babel)             in language append on input line 1982.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1956.
+(babel)             in language append on input line 1982.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1956.
+(babel)             in language append on input line 1982.
+LaTeX Info: Redefining \. on input line 1993.
+LaTeX Info: Redefining \% on input line 1993.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1956.
+(babel)             in language append on input line 1993.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1956.
+(babel)             in language append on input line 1993.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1956.
+(babel)             in language append on input line 1993.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1956.
+(babel)             in language append on input line 1993.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1956.
+(babel)             in language append on input line 1993.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1956.
-[131]
+(babel)             in language append on input line 1993.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 1979.
+(babel)             in language append on input line 1993.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 1979.
+(babel)             in language append on input line 1993.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 1979.
+(babel)             in language append on input line 1993.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 1979.
+(babel)             in language append on input line 1993.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 1979.
+(babel)             in language append on input line 1993.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 1979.
-LaTeX Info: Redefining \. on input line 2009.
-LaTeX Info: Redefining \% on input line 2009.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2009.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2009.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2009.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2009.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2009.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2009.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2009.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2009.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2009.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2009.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2009.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2009.
- [132]
-<Graficos/Conicas/RazonDobleDual.pdf, id=2347, 247.92625pt x 151.56625pt>
+(babel)             in language append on input line 1993.
+[132]
+<Graficos/Conicas/RazonDobleDual.pdf, id=2342, 247.92625pt x 151.56625pt>
 File: Graficos/Conicas/RazonDobleDual.pdf Graphic file (type pdf)
 
 <use Graficos/Conicas/RazonDobleDual.pdf>
 Package pdftex.def Info: Graficos/Conicas/RazonDobleDual.pdf used on input line
- 2049.
+ 2052.
 (pdftex.def)             Requested size: 198.34126pt x 121.25316pt.
+LaTeX Info: Redefining \. on input line 2053.
+LaTeX Info: Redefining \% on input line 2053.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2056.
+(babel)             in language append on input line 2053.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2056.
+(babel)             in language append on input line 2053.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2056.
+(babel)             in language append on input line 2053.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2056.
+(babel)             in language append on input line 2053.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2056.
+(babel)             in language append on input line 2053.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2056.
-LaTeX Info: Redefining \. on input line 2059.
-LaTeX Info: Redefining \% on input line 2059.
+(babel)             in language append on input line 2053.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 2053.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 2053.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 2053.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 2053.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 2053.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 2053.
+ [133]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language append on input line 2059.
 Package babel Info: Redefining spanish shorthand >>
@@ -6614,333 +6626,318 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 2059.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 2059.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2059.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2059.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2059.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2059.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2059.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2059.
- [133 <./Graficos/Conicas/RazonDobleDual.pdf>] <Graficos/Conicas/Involucion.pdf
-, id=2358, 134.5025pt x 159.59625pt>
+
+<Graficos/Conicas/Involucion.pdf, id=2355, 134.5025pt x 159.59625pt>
 File: Graficos/Conicas/Involucion.pdf Graphic file (type pdf)
 
 <use Graficos/Conicas/Involucion.pdf>
 Package pdftex.def Info: Graficos/Conicas/Involucion.pdf used on input line 206
-3.
+6.
 (pdftex.def)             Requested size: 134.50215pt x 159.59584pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2082--2084
+LaTeX Info: Redefining \. on input line 2079.
+LaTeX Info: Redefining \% on input line 2079.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 2079.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 2079.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 2079.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 2079.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 2079.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 2079.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 2079.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 2079.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 2079.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 2079.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 2079.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 2079.
+ [134 <./Graficos/Conicas/RazonDobleDual.pdf> <./Graficos/Conicas/Involucion.pd
+f>]
+Underfull \hbox (badness 10000) in paragraph at lines 2085--2087
 
  []
 
-LaTeX Info: Redefining \. on input line 2098.
-LaTeX Info: Redefining \% on input line 2098.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2098.
+(babel)             in language append on input line 2111.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2098.
+(babel)             in language append on input line 2111.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2098.
+(babel)             in language append on input line 2111.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2098.
+(babel)             in language append on input line 2111.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2098.
+(babel)             in language append on input line 2111.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2098.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2098.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2098.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2098.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2098.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2098.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2098.
-[134 <./Graficos/Conicas/Involucion.pdf>]
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2108.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2108.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2108.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2108.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2108.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2108.
+(babel)             in language append on input line 2111.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2119--2120
+Underfull \hbox (badness 10000) in paragraph at lines 2122--2123
 
  []
 
-LaTeX Info: Redefining \. on input line 2149.
-LaTeX Info: Redefining \% on input line 2149.
+LaTeX Info: Redefining \. on input line 2125.
+LaTeX Info: Redefining \% on input line 2125.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2149.
+(babel)             in language append on input line 2125.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2149.
+(babel)             in language append on input line 2125.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2149.
+(babel)             in language append on input line 2125.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2149.
+(babel)             in language append on input line 2125.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2149.
+(babel)             in language append on input line 2125.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2149.
+(babel)             in language append on input line 2125.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2149.
+(babel)             in language append on input line 2125.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2149.
+(babel)             in language append on input line 2125.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2149.
+(babel)             in language append on input line 2125.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2149.
+(babel)             in language append on input line 2125.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2149.
+(babel)             in language append on input line 2125.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2149.
+(babel)             in language append on input line 2125.
 [135]
-Underfull \hbox (badness 10000) in paragraph at lines 2151--2153
+Underfull \hbox (badness 10000) in paragraph at lines 2154--2156
 
  []
 
-<Graficos/Conicas/TeoremaDelEje1.pdf, id=2379, 199.74625pt x 136.51pt>
+LaTeX Info: Redefining \. on input line 2167.
+LaTeX Info: Redefining \% on input line 2167.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 2167.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 2167.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 2167.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 2167.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 2167.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 2167.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 2167.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 2167.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 2167.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 2167.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 2167.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 2167.
+[136] <Graficos/Conicas/TeoremaDelEje1.pdf, id=2383, 199.74625pt x 136.51pt>
 File: Graficos/Conicas/TeoremaDelEje1.pdf Graphic file (type pdf)
 
 <use Graficos/Conicas/TeoremaDelEje1.pdf>
 Package pdftex.def Info: Graficos/Conicas/TeoremaDelEje1.pdf used on input line
- 2170.
+ 2173.
 (pdftex.def)             Requested size: 199.74576pt x 136.50966pt.
 
-<Graficos/Conicas/TeoremaDelEje2.pdf, id=2380, 222.8325pt x 149.55875pt>
+<Graficos/Conicas/TeoremaDelEje2.pdf, id=2384, 222.8325pt x 149.55875pt>
 File: Graficos/Conicas/TeoremaDelEje2.pdf Graphic file (type pdf)
 
 <use Graficos/Conicas/TeoremaDelEje2.pdf>
 Package pdftex.def Info: Graficos/Conicas/TeoremaDelEje2.pdf used on input line
- 2171.
+ 2174.
 (pdftex.def)             Requested size: 200.5474pt x 134.60162pt.
-LaTeX Info: Redefining \. on input line 2181.
-LaTeX Info: Redefining \% on input line 2181.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2181.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2181.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2181.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2181.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2181.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2181.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2181.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2181.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2181.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2181.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2181.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2181.
- [136 <./Graficos/Conicas/TeoremaDelEje1.pdf> <./Graficos/Conicas/TeoremaDelEje
-2.pdf>]
-<Graficos/Conicas/TeoremaPascal.pdf, id=2389, 171.64125pt x 161.60374pt>
+
+<Graficos/Conicas/TeoremaPascal.pdf, id=2385, 171.64125pt x 161.60374pt>
 File: Graficos/Conicas/TeoremaPascal.pdf Graphic file (type pdf)
 
 <use Graficos/Conicas/TeoremaPascal.pdf>
 Package pdftex.def Info: Graficos/Conicas/TeoremaPascal.pdf used on input line 
-2184.
+2187.
 (pdftex.def)             Requested size: 171.64081pt x 161.60335pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2200--2202
+LaTeX Info: Redefining \. on input line 2203.
+LaTeX Info: Redefining \% on input line 2203.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 2203.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 2203.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 2203.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 2203.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 2203.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 2203.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 2203.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 2203.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 2203.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 2203.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 2203.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 2203.
+ [137 <./Graficos/Conicas/TeoremaDelEje1.pdf> <./Graficos/Conicas/TeoremaDelEje
+2.pdf> <./Graficos/Conicas/TeoremaPascal.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 2203--2205
 
  []
 
-LaTeX Info: Redefining \. on input line 2224.
-LaTeX Info: Redefining \% on input line 2224.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2224.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2224.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2224.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2224.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2224.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2224.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2224.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2224.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2224.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2224.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2224.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2224.
-[137 <./Graficos/Conicas/TeoremaPascal.pdf>]
 <Graficos/Conicas/TeoremaBrianchon.pdf, id=2399, 163.61125pt x 132.495pt>
 File: Graficos/Conicas/TeoremaBrianchon.pdf Graphic file (type pdf)
 
 <use Graficos/Conicas/TeoremaBrianchon.pdf>
 Package pdftex.def Info: Graficos/Conicas/TeoremaBrianchon.pdf used on input li
-ne 2225.
+ne 2228.
 (pdftex.def)             Requested size: 179.97292pt x 145.74492pt.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2229.
+(babel)             in language append on input line 2232.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2229.
+(babel)             in language append on input line 2232.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2229.
+(babel)             in language append on input line 2232.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2229.
+(babel)             in language append on input line 2232.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2229.
+(babel)             in language append on input line 2232.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2229.
-
-Underfull \hbox (badness 10000) in paragraph at lines 2242--2243
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2244--2245
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2246--2247
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2248--2249
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2250--2251
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2252--2253
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2254--2255
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2256--2257
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2258--2259
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2260--2261
-
- []
-
-LaTeX Info: Redefining \. on input line 2263.
-LaTeX Info: Redefining \% on input line 2263.
+(babel)             in language append on input line 2232.
+LaTeX Info: Redefining \. on input line 2243.
+LaTeX Info: Redefining \% on input line 2243.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2263.
+(babel)             in language append on input line 2243.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2263.
+(babel)             in language append on input line 2243.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2263.
+(babel)             in language append on input line 2243.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2263.
+(babel)             in language append on input line 2243.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2263.
+(babel)             in language append on input line 2243.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2263.
+(babel)             in language append on input line 2243.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2263.
+(babel)             in language append on input line 2243.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2263.
+(babel)             in language append on input line 2243.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2263.
+(babel)             in language append on input line 2243.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2263.
+(babel)             in language append on input line 2243.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2263.
+(babel)             in language append on input line 2243.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2263.
-[138 <./Graficos/Conicas/TeoremaBrianchon.pdf>]
+(babel)             in language append on input line 2243.
+ [138 <./Graficos/Conicas/TeoremaBrianchon.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 2245--2246
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2247--2248
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2249--2250
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2251--2252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2253--2254
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2255--2256
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2257--2258
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2259--2260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2261--2262
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2263--2264
+
+ []
+
 <Graficos/Conicas/Ejemplohaz.pdf, id=2408, 219.82124pt x 198.7425pt>
 File: Graficos/Conicas/Ejemplohaz.pdf Graphic file (type pdf)
 
 <use Graficos/Conicas/Ejemplohaz.pdf>
-Package pdftex.def Info: Graficos/Conicas/Ejemplohaz.pdf used on input line 226
-8.
+Package pdftex.def Info: Graficos/Conicas/Ejemplohaz.pdf used on input line 227
+1.
 (pdftex.def)             Requested size: 175.85722pt x 158.9942pt.
-
-<Graficos/Conicas/TeoremaDesargues.pdf, id=2409, 233.87375pt x 171.64125pt>
+LaTeX Info: Redefining \. on input line 2283.
+LaTeX Info: Redefining \% on input line 2283.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 2283.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 2283.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 2283.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 2283.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 2283.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 2283.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language append on input line 2283.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language append on input line 2283.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language append on input line 2283.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language append on input line 2283.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language append on input line 2283.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language append on input line 2283.
+ [139 <./Graficos/Conicas/Ejemplohaz.pdf>] <Graficos/Conicas/TeoremaDesargues.p
+df, id=2416, 233.87375pt x 171.64125pt>
 File: Graficos/Conicas/TeoremaDesargues.pdf Graphic file (type pdf)
 
 <use Graficos/Conicas/TeoremaDesargues.pdf>
 Package pdftex.def Info: Graficos/Conicas/TeoremaDesargues.pdf used on input li
-ne 2281.
+ne 2284.
 (pdftex.def)             Requested size: 210.4844pt x 154.47568pt.
-LaTeX Info: Redefining \. on input line 2292.
-LaTeX Info: Redefining \% on input line 2292.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2292.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2292.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2292.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2292.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2292.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2292.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language append on input line 2292.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language append on input line 2292.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language append on input line 2292.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language append on input line 2292.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language append on input line 2292.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language append on input line 2292.
- [139 <./Graficos/Conicas/Ejemplohaz.pdf> <./Graficos/Conicas/TeoremaDesargues.
-pdf>]
-<Graficos/Conicas/CorolarioDesargues.pdf, id=2420, 277.035pt x 168.63pt>
+
+<Graficos/Conicas/CorolarioDesargues.pdf, id=2417, 277.035pt x 168.63pt>
 File: Graficos/Conicas/CorolarioDesargues.pdf Graphic file (type pdf)
 
 <use Graficos/Conicas/CorolarioDesargues.pdf>
 Package pdftex.def Info: Graficos/Conicas/CorolarioDesargues.pdf used on input 
-line 2302.
+line 2305.
 (pdftex.def)             Requested size: 277.03432pt x 168.62958pt.
 )
 LaTeX Info: Redefining \. on input line 24.
@@ -6969,10 +6966,12 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language append on input line 24.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language append on input line 24.
- [140 <./Graficos/Conicas/CorolarioDesargues.pdf>]
+ [140 <./Graficos/Conicas/TeoremaDesargues.pdf> <./Graficos/Conicas/CorolarioDe
+sargues.pdf>]
 \openout2 = `./tex/C9Afin_Euclideo.aux'.
 
- (tex/C9Afin_Euclideo.tex
+
+(tex/C9Afin_Euclideo.tex
 Cap\'{\i }tulo 9.
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language append on input line 1.
@@ -7594,7 +7593,7 @@ X 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/rsfs/rsfs10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/xypic/xyatip10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/xypic
 /xybtip10.pfb>
-Output written on main.pdf (154 pages, 2794095 bytes).
+Output written on main.pdf (154 pages, 2794370 bytes).
 PDF statistics:
  2887 PDF objects out of 2984 (max. 8388607)
  1108 named destinations out of 1200 (max. 500000)

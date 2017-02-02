@@ -326,11 +326,11 @@ El recíproco también es cierto, como se muestra en la siguiente proposición.
 	
 \end{prop}
 \begin{proof}
-	Tomamos como referencia los puntos $p_1,p_2,p_{arbitario}$ y el punto de corte de las rectas $p_1F$ y $p_3D$, que denotaremos $e$. Esto es posible ya que, como se observa en la figura, son proyectivamente independientes.
+	Tomamos como referencia los puntos $p_1,p_2,D$ y el punto de corte de las rectas $p_1F$ y $p_3D$, que denotaremos $e$. Esto es posible ya que, como se observa en la figura, son proyectivamente independientes.
 	\[\mf{R}=\{p_1,p_2,D;e\}\]
 	Debemos entonces expresar los puntos $p_1,p_2,p_3$ y $p_4$ respecto a esta referencia. Los primeros son sencillos, $p_1=(1:0:0)$ y $p_2=(0:1:0)$. 
 	
-	Por otro lado, $p_3$ es la intersección de las rectas $ep_{arbitario}$ y $p_1p_2$. Estas pueden ser descritas por las ecuaciones
+	Por otro lado, $p_3$ es la intersección de las rectas $eD$ y $p_1p_2$. Estas pueden ser descritas por las ecuaciones
 	\begin{equation*}
 		eD:=\class{\alpha(1,1,1)+\beta(0,0,1)\tq \alpha,\beta\in \R}=(1:1:1+\theta)\cup\{D\}\tq\theta\in\R
 	\end{equation*}
@@ -339,9 +339,9 @@ El recíproco también es cierto, como se muestra en la siguiente proposición.
 	\end{equation*}
 	siendo por tanto el punto de corte 
 	\[p_3=(1:1:0)\]
-	De la misma forma podemos calcular $p_4$ como la intersección de las rectas $p_1p_2$ y $DF$, donde $D$ es el punto de corte de las rectas $p_1D$ y $p_2e$. Por tanto, para calcular las coordenadas de $p_4$ respecto a la referencia $\mf{R}$, primero debemos obtener las de $D$ y las de $F$.
+	De la misma forma podemos calcular $p_4$ como la intersección de las rectas $p_1p_2$ y $QF$, donde $Q$ es el punto de corte de las rectas $p_1D$ y $p_2e$. Por tanto, para calcular las coordenadas de $p_4$ respecto a la referencia $\mf{R}$, primero debemos obtener las de $Q$ y las de $F$.
 	
-	Comencemos con $D$. Las rectas de las cuales es intersección pueden describirse a través de 
+	Comencemos con $Q$. Las rectas de las cuales es intersección pueden describirse a través de 
 	\begin{equation*}
 		p_2e:\class{\alpha(1,1,1)+\beta(0,1,0)\tq\alpha,\beta\in \R}=(1:1+\theta:1)\cup\{p_2\}\tq\theta\in\R
 	\end{equation*}
@@ -349,10 +349,10 @@ El recíproco también es cierto, como se muestra en la siguiente proposición.
 		p_1D:y=0
 	\end{equation*}
 	por lo que el punto buscado es
-	\[D=(1:0:1)\]
+	\[Q=(1:0:1)\]
 	Para calcular $F$ tenemos que las rectas correspondientes vienen dadas por
 	\begin{equation*}
-		p_1F:\class{\alpha(1,1,1)+\beta(1,0,0)\tq\alpha,\beta\in \R}=(1+\theta:1:1)\cup\{p_1\}\tq\theta\in\R
+		p_1e:\class{\alpha(1,1,1)+\beta(1,0,0)\tq\alpha,\beta\in \R}=(1+\theta:1:1)\cup\{p_1\}\tq\theta\in\R
 	\end{equation*}
 	\begin{equation*}
 		p_2D:x=0
@@ -361,21 +361,21 @@ El recíproco también es cierto, como se muestra en la siguiente proposición.
 	\[F=(0:1:1)\]
 	Podemos ya calcular las coordenadas de $p_4$ como la intersección de 
 	\begin{equation*}
-		DF:\class{\alpha(1,0,1)+\beta(0,1,1)\tq\alpha,\beta\in \R}=(1:\theta:1+\theta)\cup\{F\}\tq\theta\in\R
+		QF:\class{\alpha(1,0,1)+\beta(0,1,1)\tq\alpha,\beta\in \R}=(1:\theta:1+\theta)\cup\{F\}\tq\theta\in\R
 	\end{equation*}
 	\begin{equation*}
 		p_1p_2:z=0
 	\end{equation*}
 	Con ello obtenemos que
 	\[p_4=(1:-1:0)\]
-	Una vez hecho esto basta comprobar que la razón doble de $p_1,p_2p_3$ y $p_4$ es $-1$. Para ello haremos uso de resultados del apartado de cálculo de razones dobles, ya que de momento no hemos visto cómo calcular la razón doble de puntos que no pertenecen a una recta proyectiva, como es el caso.
+	Una vez hecho esto basta comprobar que la razón doble de $p_1,p_2,p_3$ y $p_4$ es $-1$. Para ello haremos uso de resultados del apartado de cálculo de razones dobles, ya que de momento no hemos visto cómo calcular la razón doble de puntos que no pertenecen a una recta proyectiva, como es el caso.
 	
 	Entonces, como veremos más adelante
 	\begin{equation}
 		\{p_1,p_2;p_3,p_4\}=\{(1:0:0),(0:1:0);(1:1:0),(1:-1:0)\}=\{\infty,0;1,-1\}=-1
 	\end{equation}
 \end{proof}
-dado que en esta construcción las rectas $p_1D$, $p_2D$ y $p_1F$ y los puntos $D$ y $F$ son arbitrarios, elijamos los que elijamos vamos a obtener siempre el mismo punto $p_4$. 
+Dado que en esta construcción las rectas $p_1D$, $p_2D$ y $p_1F$ y los puntos $D$ y $F$ son arbitrarios, elijamos los que elijamos vamos a obtener siempre el mismo punto $p_4$. 
 
 El orden de la cuaterna armónica es relativamente importante ya que, aunque algunas permutaciones cambian su valor, las reordenaciones
 \begin{equation*}
@@ -387,7 +387,7 @@ Es importante mencionar varias cosas acerca de esta construcción. El punto $p_3
 
 Observemos que si, al calcular la razón doble tomamos como referencia los puntos $p_1,p_2,p_3$, entonces, necesariamente, $\theta_4=-1$.
 \begin{equation*}
-	\{p_1,p_2;p_3,p_4\}=\{\infty,0,1,-1\}=-1
+	-1=\{p_1,p_2;p_3,p_4\}=\{\infty,0;1,\theta_4\}=\theta_4
 \end{equation*}
 
 \section{Cálculo de la Razón Doble en $\proy^n$}

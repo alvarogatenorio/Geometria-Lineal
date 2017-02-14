@@ -1,3 +1,12 @@
+%Versión 1.0.1
+%Álvaro García Tenorio
+%Clara Isabel López González
+%Iván Prada Cazalla
+%Versión post-geometría documentada.
+
+%Las mejoras realizadas en este paquete han de ser, en la medida de lo posible, retrocompatibles (para mejorar la flexibilidad).
+
+%Paquete de Estilo
 \ProvidesPackage{style}
 
 %Paquetes de Márgenes
@@ -8,6 +17,7 @@
 \usepackage[utf8]{inputenc}
 
 %Paquetes para Referencias Cruzadas
+%Posiblemente se Añadan Modificaciones
 \usepackage[linktoc=all]{hyperref}
 
 %Imagenes
@@ -29,15 +39,15 @@
 %Diagramas.
 \usepackage[all]{xy}
 
-%cColor
+%Color.
 \usepackage{color}
 
-%Paquetes para Entornos
+%Paquetes para Entornos.
 \usepackage{amsthm}
-%Entornos personalizados
+%Entornos personalizados.
 \usepackage{thmtools}
 
-%Entornos especiales
+%Entornos especiales (Rombitos en los ejemplos y las observaciones).
 \declaretheoremstyle[
   spaceabove=\topsep, spacebelow=\topsep,
   notefont=\mdseries, notebraces={(}{)},
@@ -65,7 +75,7 @@
 %Tachar
 \usepackage{cancel}
 
-%Cuadrado Negro
+%Cuadrado Negro Relleno
 \renewcommand\qedsymbol{$\blacksquare$}
 
 %Conjuntos Usuales
@@ -91,7 +101,7 @@
 \newcommand{\bsubset}{\fbox{$\subset$}}
 \newcommand{\bsetsub}{\fbox{$\supset$}}
 
-%Tal Que de Anibal
+%Tal Que de Anibal (Deprecated)
 \newcommand{\tq}{\shortparallel}
 
 %Tipos de Letra
@@ -106,7 +116,7 @@
 \newcommand{\smz}{\setminus\{0\}}
 \newcommand{\zset}{\{0\}}
 
-%Cosas Específicas
+%Cosas Específicas (Geometría Lineal)
 \newcommand{\class}[1]{	 \left [ #1 \right ]}
 \newcommand{\proy}{\mathbb{P}}
 \newcommand{\haz}{\mathscr{H}}
@@ -114,3 +124,5 @@
 \newcommand{\lengen}[1]{\mc{L}(#1)}
 \newcommand{\an}[1]{\text{an}(#1)}
 \newcommand{\afin}{\mathcal{A}}
+
+%Cosas Específicas (Topología) (En previsión de que haya)

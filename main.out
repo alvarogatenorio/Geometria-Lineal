@@ -98,17 +98,20 @@
 \BOOKMARK [1][-]{section.8.12}{Involuciones de la c\363nica}{chapter.8}% 98
 \BOOKMARK [1][-]{section.8.13}{Homograf\355as de la c\363nica}{chapter.8}% 99
 \BOOKMARK [1][-]{section.8.14}{Clasificaci\363n de haces de c\363nicas}{chapter.8}% 100
-\BOOKMARK [0][-]{chapter.9}{Geometr\355a af\355n y eucl\355dea}{}% 101
-\BOOKMARK [1][-]{section.9.1}{Geometr\355a af\355n}{chapter.9}% 102
-\BOOKMARK [2][-]{subsection.9.1.1}{Introducci\363n}{section.9.1}% 103
-\BOOKMARK [2][-]{subsection.9.1.2}{Espacio af\355n y proyectivo}{section.9.1}% 104
-\BOOKMARK [2][-]{subsection.9.1.3}{Propiedades del espacio af\355n}{section.9.1}% 105
-\BOOKMARK [2][-]{subsection.9.1.4}{Definici\363n de espacio af\355n alternativa}{section.9.1}% 106
-\BOOKMARK [2][-]{subsection.9.1.5}{Referencias afines y proyectivas}{section.9.1}% 107
-\BOOKMARK [0][-]{appendix.Alph1}{\301lgebra Lineal}{}% 108
-\BOOKMARK [1][-]{section.Alph1.1}{Coordenadas en Espacios Vectoriales}{appendix.Alph1}% 109
-\BOOKMARK [2][-]{subsection.Alph1.1.1}{Matriz de Cambio de Base}{section.Alph1.1}% 110
-\BOOKMARK [1][-]{section.Alph1.2}{Ecuaciones de Subespacios}{appendix.Alph1}% 111
-\BOOKMARK [2][-]{subsection.Alph1.2.1}{Existencia de las Ecuaciones Cartesianas}{section.Alph1.2}% 112
-\BOOKMARK [1][-]{section.Alph1.3}{Dualidad}{appendix.Alph1}% 113
-\BOOKMARK [0][-]{appendix.Alph2}{Cosas pendientes}{}% 114
+\BOOKMARK [0][-]{chapter.9}{Geometr\355a Af\355n y Eucl\355dea}{}% 101
+\BOOKMARK [1][-]{section.9.1}{Objetivos}{chapter.9}% 102
+\BOOKMARK [1][-]{section.9.2}{Espacio Af\355n Cl\341sico}{chapter.9}% 103
+\BOOKMARK [2][-]{subsection.9.2.1}{Definici\363n y Ejemplos}{section.9.2}% 104
+\BOOKMARK [2][-]{subsection.9.2.2}{Espacio af\355n y proyectivo}{section.9.2}% 105
+\BOOKMARK [2][-]{subsection.9.2.3}{Propiedades del espacio af\355n}{section.9.2}% 106
+\BOOKMARK [2][-]{subsection.9.2.4}{Definici\363n de espacio af\355n alternativa}{section.9.2}% 107
+\BOOKMARK [2][-]{subsection.9.2.5}{Referencias afines y proyectivas}{section.9.2}% 108
+\BOOKMARK [0][-]{appendix.Alph1}{\301lgebra Matricial}{}% 109
+\BOOKMARK [0][-]{appendix.Alph2}{Geometr\355a Vectorial}{}% 110
+\BOOKMARK [1][-]{section.Alph2.1}{Coordenadas en Espacios Vectoriales}{appendix.Alph2}% 111
+\BOOKMARK [2][-]{subsection.Alph2.1.1}{Matriz de Cambio de Base}{section.Alph2.1}% 112
+\BOOKMARK [1][-]{section.Alph2.2}{Ecuaciones de Subespacios}{appendix.Alph2}% 113
+\BOOKMARK [2][-]{subsection.Alph2.2.1}{Existencia de las Ecuaciones Cartesianas}{section.Alph2.2}% 114
+\BOOKMARK [1][-]{section.Alph2.3}{Dualidad}{appendix.Alph2}% 115
+\BOOKMARK [0][-]{appendix.Alph3}{Espacio Proyectivo y Topolog\355a}{}% 116
+\BOOKMARK [0][-]{appendix.Alph4}{Cosas pendientes}{}% 117

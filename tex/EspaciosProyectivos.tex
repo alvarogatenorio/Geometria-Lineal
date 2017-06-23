@@ -1,15 +1,19 @@
-\chapter{Espacio Proyectivo y Variedades Proyectivas}
-\label{C1}
-\section{El Espacio Proyectivo}
-\label{C1_espacioProyectivo}
+\chapter{Espacio proyectivo y variedades proyectivas}
+%En este capítulo usaremos la abreviatura "epro".
+\label{epro}
+
+%-----Por hacer-----
+%Introduccion.
+
+\section{El espacio proyectivo}
 Sea $E$ un $\K$--espacio vectorial arbitrario.
 
-Podemos realizar dos aproximaciones equivalentes a la noción de espacio proyectivo, que confundiremos según nos convenga. Cabe destacar que la segunda de estas aproximaciones tiene especial interés en la \ti{topología}, por estar basada en conjuntos cociente.
+Podemos realizar dos aproximaciones equivalentes a la noción de ``espacio proyectivo'', que confundiremos según nos convenga. Cabe destacar que la segunda de estas aproximaciones tiene especial interés desde el punto de vista de la \tbi{topología}, por estar basada en conjuntos cociente, pero esos asuntos se salen del alcance de estas notas.
 \subsection{Primera Aproximación}
 \label{C1_S1_primeraAprox}
 \begin{defi}[Espacio Proyectivo]
 	\label{C1_def_espacioProyectivo1}
-	Se define el \ti{espacio proyectivo} asociado a $E$ como el conjunto de los subespacios vectoriales de dimensión $1$ de $E$. Lo denotaremos por $\proy(E)$.
+	Se define el \tbi{espacio proyectivo} asociado a $E$ como el conjunto de los subespacios vectoriales de dimensión $1$ de $E$. Lo denotaremos por $\proy(E)$.
 \end{defi}
 Expresando el contenido de la definición \ref{C1_def_espacioProyectivo1} con una notación conjuntista obtenemos lo siguiente.
 \begin{equation}
@@ -150,7 +154,7 @@ Una forma de resolver este problema es, a la luz del lema \ref{C1_lem_caracteriz
 	Es decir, la variedad lineal asociada a la variedad proyectiva engendrada por $A$ es aquella que engendra la preproyección de $A$ sobre $E$.
 \end{lem}
 \begin{proof}\begin{itemize}
-		\item[\bsetsub] Como $A\subset\engen{A}$ entonces $\pi^{-1}(A)\subset\widehat{\engen{A}}\ra\lengen{\pi^{-1}(A)}\subset\widehat{\engen{A}}$
+		\item[\bsupset] Como $A\subset\engen{A}$ entonces $\pi^{-1}(A)\subset\widehat{\engen{A}}\ra\lengen{\pi^{-1}(A)}\subset\widehat{\engen{A}}$
 		\item[\bsubset]$A\subset\pi({\lengen{\pi^{-1}(A)}})$ ya que $\lengen{\pi^{-1}(A)}\supset\pi^{-1}(A)$. Como $\lengen{\pi^{-1}(A)}$ es un subespacio vectorial, su proyectivizado será una subvariedad proyectiva $X$, por lo cual $X=\pi({\lengen{\pi^{-1}(A)}})$. Como por la primera desigualdad conjusista de esta segunda parte de la demostración nos dice que $A\subset X$, tenemos la desigualdad: \[A\subset\engen{A}\subset X=\pi({\lengen{\pi^{-1}(A)}})\]
 		Aplicando $\pi^{-1}$ a la desigualdad obtenemos:
 		\[\pi^{-1}(\engen{A})=\widehat{\engen{A}}\smz\subset\lengen{\pi^{-1}(A)}\smz\]

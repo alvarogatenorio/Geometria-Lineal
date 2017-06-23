@@ -1,0 +1,37 @@
+\documentclass[a4paper, 10pt, twoside, titlepage, openright, onecolumn, final]{book}
+
+\usepackage{style}
+
+\title{\tb{Geometría Lineal}}
+\author{Álvaro García Tenorio
+	\thanks{\texttt{alvgar14@ucm.es}}\and
+	Clara Isabel López González
+	\thanks{\texttt{claraisl@ucm.es}}}
+\date{\today}
+
+\begin{document}
+	%Título e índice.
+	\maketitle
+	\tableofcontents
+	%Capítulos.
+	\include{./tex/Prefacio}
+	\addcontentsline{toc}{chapter}{Prefacio}
+	\part{Geometría proyectiva. Variedades proyectivas lineales}
+	\include{./tex/EspaciosProyectivos}
+	\include{./tex/Dualidad}
+	\include{./tex/VariedadesProyectivas}
+	\include{./tex/AplicacionesProyectivas}
+	\include{./tex/RazonDoble}
+	\include{./tex/ClasificacionHomografias}
+	\include{./tex/Perspectividades}
+	\part{Variedades cuadráticas. Conexiones con otras geometrías}
+	\include{./tex/ConicasCuadricas}
+	\include{./tex/AfinEuclideo}
+	\part{Anexos}
+	\appendix
+	%Repaso de geometría vectorial.
+	\include{./tex/RepasoGeometriaVectorial}
+	%Espacio afín.
+	%Espacio proyectivo y topología.
+	\printindex[general]
+\end{document}

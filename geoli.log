@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.15)  23 JUN 2017 10:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.15)  24 JUN 2017 15:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -776,6 +776,10 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 
 
 Writing index file general.idx
+\topologias@idxfile=\write4
+\openout4 = `topologias.idx'.
+
+Writing index file topologias.idx
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
@@ -887,6 +891,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip51
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 31.
+
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -1053,7 +1059,7 @@ Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 \the@fancyput=\toks29
 \this@fancyput=\toks30
 \EndVerbatimTokens=\toks31
-\Verbatim@Outfile=\write4
+\Verbatim@Outfile=\write5
 \Verbatim@Infile=\read1
 ) (/usr/share/texlive/texmf-dist/tex/generic/xypic/xy.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xypic/xy.tex Bootstrap'ing:
@@ -1101,7 +1107,7 @@ Loading kernel: messages; fonts; allocations: state,
 \K@dXdY=\dimen260
 \K@dYdX=\dimen261
 \xyread@=\read2
-\xywrite@=\write5
+\xywrite@=\write6
 \csp@=\count167
 \quotPTK@=\dimen262
 
@@ -1230,7 +1236,7 @@ ex
 \pgf@yb=\dimen277
 \pgf@xc=\dimen278
 \pgf@yc=\dimen279
-\w@pgf@writea=\write6
+\w@pgf@writea=\write7
 \r@pgf@reada=\read3
 \c@pgf@counta=\count175
 \c@pgf@countb=\count176
@@ -1643,14 +1649,14 @@ Package: thm-amsthm 2014/04/21 v66
 Package thmtools Info: Key `qed' (with value `$\diamondsuit $')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=examplestyle' on input line 87.
+(thmtools)             that uses `style=examplestyle' on input line 88.
 \c@exa=\count269
 \c@obs=\count270
 \c@const=\count271
 Package thmtools Info: Key `qed' (with value `$\square $')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=solustyle' on input line 102.
+(thmtools)             that uses `style=solustyle' on input line 103.
 \c@solu=\count272
 \c@defi=\count273
 \c@prob=\count274
@@ -1725,7 +1731,7 @@ LaTeX Font Info:    ... okay on input line 12.
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 \AtBeginShipoutBox=\box90
-Package hyperref Info: Link coloring OFF on input line 12.
+Package hyperref Info: Link coloring ON on input line 12.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1739,8 +1745,8 @@ LaTeX Info: Redefining \pageref on input line 12.
 LaTeX Info: Redefining \nameref on input line 12.
 
 (./geoli.out) (./geoli.out)
-\@outlinefile=\write7
-\openout7 = `geoli.out'.
+\@outlinefile=\write8
+\openout8 = `geoli.out'.
 
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -1907,8 +1913,8 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 110.
  [4])
-\tf@toc=\write8
-\openout8 = `geoli.toc'.
+\tf@toc=\write9
+\openout9 = `geoli.toc'.
 
 LaTeX Info: Redefining \. on input line 17.
 LaTeX Info: Redefining \% on input line 17.
@@ -1940,22 +1946,22 @@ Package babel Info: Redefining spanish shorthand "?
 \openout2 = `./tex/Prefacio.aux'.
 
  (./tex/Prefacio.tex
-Package epstopdf Info: Source file: <Graficos/by-nc-sa.eps>
-(epstopdf)                    date: 2017-03-16 20:59:17
-(epstopdf)                    size: 71022 bytes
-(epstopdf)             Output file: <Graficos/by-nc-sa-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-16 21:02:02
-(epstopdf)                    size: 8299 bytes
-(epstopdf)             Command: <repstopdf --outfile=Graficos/by-nc-sa-eps-conv
-erted-to.pdf Graficos/by-nc-sa.eps>
+Package epstopdf Info: Source file: <Graficos/licencia.eps>
+(epstopdf)                    date: 2017-06-24 15:08:46
+(epstopdf)                    size: 71465 bytes
+(epstopdf)             Output file: <Graficos/licencia-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-06-24 15:22:35
+(epstopdf)                    size: 8366 bytes
+(epstopdf)             Command: <repstopdf --outfile=Graficos/licencia-eps-conv
+erted-to.pdf Graficos/licencia.eps>
 (epstopdf)             \includegraphics on input line 18.
 Package epstopdf Info: Output file is already uptodate.
 
-<Graficos/by-nc-sa-eps-converted-to.pdf, id=753, 121.45375pt x 43.16125pt>
-File: Graficos/by-nc-sa-eps-converted-to.pdf Graphic file (type pdf)
+<Graficos/licencia-eps-converted-to.pdf, id=753, 121.45375pt x 43.16125pt>
+File: Graficos/licencia-eps-converted-to.pdf Graphic file (type pdf)
 
-<use Graficos/by-nc-sa-eps-converted-to.pdf>
-Package pdftex.def Info: Graficos/by-nc-sa-eps-converted-to.pdf used on input l
+<use Graficos/licencia-eps-converted-to.pdf>
+Package pdftex.def Info: Graficos/licencia-eps-converted-to.pdf used on input l
 ine 18.
 (pdftex.def)             Requested size: 121.45343pt x 43.16113pt.
 )
@@ -1987,7 +1993,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 17.
  [6
 
- <./Graficos/by-nc-sa-eps-converted-to.pdf>]
+ <./Graficos/licencia-eps-converted-to.pdf>]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 18.
 Package babel Info: Redefining spanish shorthand >>
@@ -8824,10 +8830,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 41581 strings out of 493029
- 895468 string characters out of 6136234
- 1097122 words of memory out of 5000000
- 43171 multiletter control sequences out of 15000+600000
+ 41584 strings out of 493029
+ 895515 string characters out of 6136234
+ 1097165 words of memory out of 5000000
+ 43173 multiletter control sequences out of 15000+600000
  23715 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,21n,86p,10432b,698s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -8861,7 +8867,7 @@ m7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on geoli.pdf (167 pages, 2537056 bytes).
+Output written on geoli.pdf (167 pages, 2539540 bytes).
 PDF statistics:
  3015 PDF objects out of 3580 (max. 8388607)
  2739 compressed objects within 28 object streams

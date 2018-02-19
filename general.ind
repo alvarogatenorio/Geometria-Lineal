@@ -1,6 +1,23 @@
 \begin{theindex}
 
-  \item espacio proyectivo, \hyperpage{9}
+  \item espacio
+    \subitem lineal, \hyperpage{9}
+    \subitem proyectivo, \hyperpage{9}
+
+  \indexspace
+
+  \item proyecci\IeC {\'o}n
+    \subitem can\IeC {\'o}nica, \hyperpage{10}
+  \item punto
+    \subitem proyectivo, \hyperpage{10}
+
+  \indexspace
+
+  \item quasirayo, \hyperpage{10}
+
+  \indexspace
+
+  \item rayo, \hyperpage{9}
 
   \indexspace
 

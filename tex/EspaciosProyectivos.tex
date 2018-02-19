@@ -1,79 +1,77 @@
 \chapter{Espacio proyectivo y variedades proyectivas}
 %En este capítulo usaremos la abreviatura "epro".
 \label{epro}
-
-%-----Por hacer-----
-%Introduccion.
-
+\epigraph{``\ti{Nadie entre aquí que no sepa Geometría}''}{Frontispicio de la Academia de Platón}
 \section{El espacio proyectivo}
 Sea $E$ un $\K$--espacio vectorial arbitrario.
 
-Podemos realizar dos aproximaciones equivalentes a la noción de ``espacio proyectivo'', que confundiremos según nos convenga. Cabe destacar que la segunda de estas aproximaciones tiene especial interés desde el punto de vista de la \tbi{topología}, por estar basada en conjuntos cociente, pero esos asuntos se salen del alcance de estas notas.
-\subsection{Primera Aproximación}
-\label{C1_S1_primeraAprox}
-\begin{defi}[Espacio Proyectivo]
-	\label{C1_def_espacioProyectivo1}
-	Se define el \tbi{espacio proyectivo} asociado a $E$ como el conjunto de los subespacios vectoriales de dimensión $1$ de $E$. Lo denotaremos por $\proy(E)$.
+Podemos aproximarnos de dos formas distintas a la noción de ``\tbi[espacio!proyectivo]{espacio proyectivo}'', como veremos, ambas aproximaciones son equivaletes, de modo que las confundiremos cuando nos convenga. Cabe destacar que la segunda de estas aproximaciones tiene especial interés desde el punto de vista de la \tbi{topología}, por estar basada en conjuntos cociente, pero esos asuntos se salen del alcance de estas notas.
+\subsection{Primera aproximación}
+Antes de comenzar, cabe mencionar que para referirnos a los espacios vectoriales, a veces usaremos el termino ``\tbi[espacio!lineal]{espacio lineal}''.
+\begin{defi}[Espacio proyectivo]
+	\label{epro_def_espacioProyectivo1}
+	Se define el \tbi[espacio!proyectivo]{espacio proyectivo} asociado al espacio vectorial $E$ como el conjunto de los subespacios vectoriales de $E$ con dimensión $1$. Usualmente lo denotaremos por $\proy(E)$.
 \end{defi}
-Expresando el contenido de la definición \ref{C1_def_espacioProyectivo1} con una notación conjuntista obtenemos lo siguiente.
-\begin{equation}
-\label{C1_eq_espacioProyectivoConjuntista}
-	\proy(E):\equals{def.}\{\class{u}\tq u\in E\smz\}
-\end{equation}
-En la ecuación~\eqref{C1_eq_espacioProyectivoConjuntista} hay una notación implícita que pasamos a explicar a continuación.
+Esta definición, presentada así, es como un diamante en bruto que debemos pulir un poco si lo que pretendemos es extraer algo útil de ella, motivo por el cual presentamos la siguiente definición.
 \begin{defi}[Rayo]
-	\label{C1_def_rayo}
-	Sea $u\in E\smz$, se denomina \ti{rayo} engendrado por $u$ al conjunto de todos los vectores proporcionales a $u$, es decir:
-	\[\class{u}:\equals{def.}\{\lambda u\tq \lambda\in\K\}\] 
+	\label{epro_def_rayo}
+	Sea $u\in E\smz$, se denomina \tbi{rayo} engendrado por $u$ al conjunto de todos los vectores proporcionales a $u$, es decir
+	\begin{equation*}
+		\class{u}:\equals{def.}\{\lambda u\tq \lambda\in\K\}
+	\end{equation*} 
 \end{defi}
-A partir de ahora, consideraremos a los rayos como los \ti{puntos} del espacio proyectivo.
+Esta última definición es pertinente, ya que, como recordamos (o no) todo subespacio vectorial $U$ de dimensión $1$ posee una base formada por un único vector (llamémosle $u$), o dicho de otra manera, $U$ está generado por un único vector $u$. Es decir, todos los vectores que conforman $U$ son las combinaciones lineales de $u$, es decir, el rayo engendrado por $u$. ¿Y a qué viene todo esto? Pues a que podemos definir el espacio proyectivo asociado a un espacio lineal en términos de rayos (suena mucho mejor). En efecto
+\begin{equation*}
+	\proy(E):\equals{def.}\{\class{u}\tq u\in E\smz\}
+\end{equation*}
+Como el lector ya habrá advertido, el espacio proyectivo es un conjunto de rayos, es por este motivo que a los rayos usualmente se les llama \tbi[punto!proyectivo]{puntos proyectivos}.
 
-Es importante tener siempre presente que $u$ \tb{no} pertenece al espacio proyectivo, ya que los elementos del espacio proyectivo no son vectores sino rayos engendrados por vectores.
-
-Antes de continuar, notemos algunos casos curiosos.
-\begin{obs}[Casos Extremos]
-	\label{C1_obs_casosExtremos}
+Es importante tener siempre presente que los vectores \tb{no} son elementos del espacio proyectivo, confundir un vector $u\in E$ con su rayo engendrado $\class{u}\in\proy(E)$ está tipificado como delito de alta traición en el código penal proyectivo, y desencadenará la ira de Zeus.
+\begin{obs}[Casos extremos]
+	\label{epro_obs_casosExtremos}
+	Antes de continuar, presentemos algunos casos curiosos, pero no demasiado exóticos.
 	\begin{enumerate}
-		\item Si $E=\zset$ entonces, por definición $\proy(E)=\emptyset$, ya que no hay ningún subespacio de dimensión 1.
-		\item Si $\dim(E)=1$ entonces $\proy(E)$ consta de un único elemento, el rayo generado por el vector de la base de $E$ (o cualquier otro no nulo).
+		\item Si $E=\zset$ entonces, por definición, $\proy(E)=\emptyset$, ya que no hay subespacios de dimensión $1$.
+		\item Si $\dim(E)=1$, entonces $\proy(E)$ consta de un único elemento, el rayo generado por el vector de una base de $E$, es decir, cualquier vector no nulo.\qedhere
 	\end{enumerate}
 \end{obs}
-\subsection{Segunda Aproximación}
-\label{C1_S1_segundaAprox}
-La definición \ref{C1_def_espacioProyectivo1} tiene una traducción natural en términos de relaciones de equivalencia y conjuntos cociente.
-\begin{defi}[Relación de Proporcionalidad]
-	\label{C1_def_proporcionalidad}
+\subsection{Segunda aproximación}
+La definición \ref{epro_def_espacioProyectivo1} tiene una traducción natural en términos de relaciones de equivalencia y conjuntos cociente, que es la que pasamos a comentar aquí.
+\begin{defi}[Relación de proporcionalidad]
+	\label{epro_def_proporcionalidad}
 	Se comprueba inmediatamente que la relación $\mc{R}$ definida en $E\smz$ como
-	\[u\mc{R}v\siidef \exists \lambda\in\K^*\tq u = \lambda v\]
-	es de equivalencia, siendo la clase de equivalencia de un vector $v$ el conjunto de todos los proporcionales a él, es decir, el \ti{cuasirayo} generado por $v$ (rayo al que se le ha sustraído el $0$).
+	\begin{equation*}
+		u\mc{R}v\siidef \text{hay un } \lambda\in\K\smz\text{ tal que } u = \lambda v
+	\end{equation*}
+	es de equivalencia, siendo la clase de equivalencia de un vector $u$ el conjunto de todos los proporcionales a él (excluyendo el vector nulo), es decir, el rayo engendrado por $u$ excepto el vector cero, a veces llamaremos ``\tbi{quasirayo} generado por $u$'' a este conjunto.
 \end{defi}
-La clase del vector $u$ según la relación de equivalencia definida en \ref{C1_def_proporcionalidad} será denotada por $u\mc{R}$. Es trivial ver que se cumple:
-\[u\mc{R}=\class{u}\smz\]
-\begin{defi}[Espacio Proyectivo]
-	\label{C1_def_espacioProyectivo2}
+La clase de un vector $u\in E$ según la relación de equivalencia definida en \ref{epro_def_proporcionalidad} será denotada por $u\mc{R}$. Y, como ya adelantamos
+\begin{equation*}
+	u\mc{R}=\class{u}\smz
+\end{equation*}
+Una vez hechos todos los preliminares, podemos redefinir el espacio proyectivo en términos del conjunto cociente engendrado por la relación de equivalencia que acabamos de presentar.
+\begin{defi}[Espacio proyectivo]
+	\label{epro_def_espacioProyectivo2}
 	Definimos espacio proyectivo asociado a $E$ como el conjunto de las clases de equivalencia de $\mc{R}$, es decir, el conjunto cociente $\frac{E\smz}{\mc{R}}$.
 \end{defi}
-\subsection{Equivalencia de las Aproximaciones}
-\label{C1_S1_equivalenciaAprox}
-Veamos ahora que, intuitivamente, podemos confundir ambas aproximaciones a la noción de espacio proyectivo, estableciendo una biyección entre los conjuntos resultantes de las definiciones \ref{C1_def_espacioProyectivo1} y \ref{C1_def_espacioProyectivo2}. La aplicación natural entre ambos conjuntos es la de asociar al cuasirayo engendrado por un vector su rayo correspondiente, es decir:
-\begin{equation}
-\label{C1_eq_indentificacionNociones}
-	\begin{array}{ccc}
-	\frac{E\smz}{\mc{R}} & \stackrel{\Phi}{\to} & \proy(E)\\
-	u\mc{R} & \mapsto & \class{u}
+\subsection{Equivalencia de las aproximaciones}
+Veamos ahora que, intuitivamente, podemos confundir ambas aproximaciones a la noción de espacio proyectivo, estableciendo una biyección ``natural'' entre los conjuntos resultantes de las definiciones \ref{epro_def_espacioProyectivo1} y \ref{epro_def_espacioProyectivo2}. La aplicación ``natural'' entre ambos conjuntos es la de asociar al quasirayo engendrado por un vector su rayo correspondiente, es decir
+\begin{equation*}
+	\begin{array}{cc}
+	\Phi:&\frac{E\smz}{\mc{R}}\to\proy(E)\\
+	&u\mc{R}\mapsto\class{u}
 	\end{array}
-\end{equation}
-Ver que es una biyección y que está bien definida es un ejercicio fácil que se deja al lector.
-\subsection{Proyección Canónica}
-\label{C1_S1_proyeccionCanonica}
-Una nueva forma muy útil de identificar el espacio proyectivo asociado a $E$ es mediante la imágen de la llamada \ti{proyección canónica}, que es la aplicación (evidentemente sobreyectiva) que a cada vector le asocia su rayo engendrado.
-\begin{equation}
+\end{equation*}
+Ver que efectivamente es una biyección y que está bien definida es un ejercicio fácil que se deja al pobre e incauto lector.
+\subsection{Proyección canónica}
+Una forma muy útil de relacionar el espacio proyectivo asociado a $E$ y el propio espacio lineal $E$, es mediante la llamada \tbi[proyección!canónica]{proyección canónica}, que es la aplicación (evidentemente sobreyectiva y potencialmente no inyectiva) que a cada vector le asocia su rayo engendrado, o sea
+\begin{equation*}
 \label{C1_eq_proyeccionCanonica}
-	\begin{array}{ccc}
-	E\smz & \stackrel{\pi}{\to} & \proy(E)\\
-	u & \mapsto & \class{u}\equiv u\mc{R}
+	\begin{array}{cc}
+	\pi:&E\smz\to\proy(E)\\
+	&u\mapsto\class{u}\equiv u\mc{R}
 	\end{array}
-\end{equation}
+\end{equation*}
 \section{Variedades Proyectivas}
 \label{C1_variedadesProyectivas}
 Como es típico en álgebra, trataremos de estudiar los subconjuntos de una estructura que mantienen dicha estructura; en este caso, estudiaremos las variedades o subespacios de espacios proyectivos. Este es un concepto que puede resultar confuso en una primera lectura, pero que es de importancia crucial.

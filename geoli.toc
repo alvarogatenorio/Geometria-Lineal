@@ -3,18 +3,18 @@
 \contentsline {part}{I\hspace {1em}Geometr\IeC {\'\i }a proyectiva. Variedades proyectivas lineales}{7}{part.1}
 \contentsline {chapter}{\numberline {1}Espacio proyectivo y variedades proyectivas}{9}{chapter.1}
 \contentsline {section}{\numberline {1.1}El espacio proyectivo}{9}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Primera Aproximaci\IeC {\'o}n}{9}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Segunda Aproximaci\IeC {\'o}n}{9}{subsection.1.1.2}
-\contentsline {subsection}{\numberline {1.1.3}Equivalencia de las Aproximaciones}{10}{subsection.1.1.3}
-\contentsline {subsection}{\numberline {1.1.4}Proyecci\IeC {\'o}n Can\IeC {\'o}nica}{10}{subsection.1.1.4}
-\contentsline {section}{\numberline {1.2}Variedades Proyectivas}{10}{section.1.2}
+\contentsline {subsection}{\numberline {1.1.1}Primera aproximaci\IeC {\'o}n}{9}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Segunda aproximaci\IeC {\'o}n}{10}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Equivalencia de las aproximaciones}{10}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Proyecci\IeC {\'o}n can\IeC {\'o}nica}{10}{subsection.1.1.4}
+\contentsline {section}{\numberline {1.2}Variedades Proyectivas}{11}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Operaciones con Variedades Proyectivas}{11}{subsection.1.2.1}
 \contentsline {section}{\numberline {1.3}Dimensiones y F\IeC {\'o}rmula de Grassmann}{13}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Dimensiones y F\IeC {\'o}rmula de Grassmann}{13}{subsection.1.3.1}
 \contentsline {section}{\numberline {1.4}Referencias Proyectivas}{14}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Coordenadas Homog\IeC {\'e}neas}{14}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Referencias Proyectivas}{14}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Base Asociada a una Referencia Proyectiva}{15}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.1}Coordenadas Homog\IeC {\'e}neas}{15}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Referencias Proyectivas}{15}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Base Asociada a una Referencia Proyectiva}{16}{subsection.1.4.3}
 \contentsline {section}{\numberline {1.5}Cambios de Referencia Proyectiva}{18}{section.1.5}
 \contentsline {chapter}{\numberline {2}Dualidad}{21}{chapter.2}
 \contentsline {section}{\numberline {2.1}Dualidad en espacios vectoriales}{21}{section.2.1}

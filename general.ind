@@ -1,11 +1,27 @@
 \begin{theindex}
 
-  \item espacio
-    \subitem lineal, \hyperpage{9}
-    \subitem proyectivo, \hyperpage{9}
+  \item codimensi\IeC {\'o}n, \hyperpage{13}
 
   \indexspace
 
+  \item dimensi\IeC {\'o}n, \hyperpage{13}
+
+  \indexspace
+
+  \item espacio
+    \subitem can\IeC {\'o}nico, \hyperpage{14}
+    \subitem lineal, \hyperpage{9}
+    \subitem proyectivo, \hyperpage{9}, \hyperpage{13}
+
+  \indexspace
+
+  \item f\IeC {\'o}rmula
+    \subitem de Grassmann, \hyperpage{14}
+
+  \indexspace
+
+  \item plano
+    \subitem proyectivo, \hyperpage{13}
   \item proyecci\IeC {\'o}n
     \subitem can\IeC {\'o}nica, \hyperpage{10}
   \item punto
@@ -18,9 +34,22 @@
   \indexspace
 
   \item rayo, \hyperpage{9}
+  \item recta
+    \subitem proyectiva, \hyperpage{13}
+
+  \indexspace
+
+  \item subespacio
+    \subitem proyectivo, \hyperpage{11}
 
   \indexspace
 
   \item topolog\IeC {\'\i }a, \hyperpage{9}
+
+  \indexspace
+
+  \item variedad
+    \subitem proyectiva, \hyperpage{11}
+    \subitem proyectiva engendrada, \hyperpage{12}
 
 \end{theindex}

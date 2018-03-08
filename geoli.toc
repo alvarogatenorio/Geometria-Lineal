@@ -7,12 +7,12 @@
 \contentsline {subsection}{\numberline {1.1.2}Segunda aproximaci\IeC {\'o}n}{10}{subsection.1.1.2}
 \contentsline {subsection}{\numberline {1.1.3}Equivalencia de las aproximaciones}{10}{subsection.1.1.3}
 \contentsline {subsection}{\numberline {1.1.4}Proyecci\IeC {\'o}n can\IeC {\'o}nica}{10}{subsection.1.1.4}
-\contentsline {section}{\numberline {1.2}Variedades Proyectivas}{11}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Operaciones con Variedades Proyectivas}{11}{subsection.1.2.1}
-\contentsline {section}{\numberline {1.3}Dimensiones y F\IeC {\'o}rmula de Grassmann}{13}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Dimensiones y F\IeC {\'o}rmula de Grassmann}{13}{subsection.1.3.1}
-\contentsline {section}{\numberline {1.4}Referencias Proyectivas}{14}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Coordenadas Homog\IeC {\'e}neas}{15}{subsection.1.4.1}
+\contentsline {section}{\numberline {1.2}Variedades proyectivas}{11}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Operaciones con variedades proyectivas}{12}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.3}Dimensiones y f\IeC {\'o}rmula de Grassmann}{13}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Dimensiones y f\IeC {\'o}rmula de Grassmann}{13}{subsection.1.3.1}
+\contentsline {section}{\numberline {1.4}Referencias proyectivas}{14}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Coordenadas Homog\IeC {\'e}neas}{14}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {1.4.2}Referencias Proyectivas}{15}{subsection.1.4.2}
 \contentsline {subsection}{\numberline {1.4.3}Base Asociada a una Referencia Proyectiva}{16}{subsection.1.4.3}
 \contentsline {section}{\numberline {1.5}Cambios de Referencia Proyectiva}{18}{section.1.5}

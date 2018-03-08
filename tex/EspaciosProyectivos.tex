@@ -7,12 +7,12 @@ Sea $E$ un $\K$--espacio vectorial arbitrario.
 
 Podemos aproximarnos de dos formas distintas a la noción de ``\tbi[espacio!proyectivo]{espacio proyectivo}'', como veremos, ambas aproximaciones son equivaletes, de modo que las confundiremos cuando nos convenga. Cabe destacar que la segunda de estas aproximaciones tiene especial interés desde el punto de vista de la \tbi{topología}, por estar basada en conjuntos cociente, pero esos asuntos se salen del alcance de estas notas.
 \subsection{Primera aproximación}
-Antes de comenzar, cabe mencionar que para referirnos a los espacios vectoriales, a veces usaremos el termino ``\tbi[espacio!lineal]{espacio lineal}''.
+Antes de comenzar, cabe mencionar que para referirnos a los espacios vectoriales, a veces usaremos el término ``\tbi[espacio!lineal]{espacio lineal}''.
 \begin{defi}[Espacio proyectivo]
 	\label{epro_def_espacioProyectivo1}
 	Se define el \tbi[espacio!proyectivo]{espacio proyectivo} asociado al espacio vectorial $E$ como el conjunto de los subespacios vectoriales de $E$ con dimensión $1$. Usualmente lo denotaremos por $\proy(E)$.
 \end{defi}
-Esta definición, presentada así, es como un diamante en bruto que debemos pulir un poco si lo que pretendemos es extraer algo útil de ella, motivo por el cual presentamos la siguiente definición.
+Esta definición, presentada así, es como un diamante en bruto que debemos pulir un poco si lo que pretendemos es extraer algo útil de ella, motivo por el cual presentamos el siguiente concepto.
 \begin{defi}[Rayo]
 	\label{epro_def_rayo}
 	Sea $u\in E\smz$, se denomina \tbi{rayo} engendrado por $u$ al conjunto de todos los vectores proporcionales a $u$, es decir
@@ -20,7 +20,7 @@ Esta definición, presentada así, es como un diamante en bruto que debemos puli
 		\class{u}:\equals{def.}\{\lambda u\tq \lambda\in\K\}
 	\end{equation*} 
 \end{defi}
-Esta última definición es pertinente, ya que, como recordamos (o no) todo subespacio vectorial $U$ de dimensión $1$ posee una base formada por un único vector (llamémosle $u$), o dicho de otra manera, $U$ está generado por un único vector $u$. Es decir, todos los vectores que conforman $U$ son las combinaciones lineales de $u$, es decir, el rayo engendrado por $u$. ¿Y a qué viene todo esto? Pues a que podemos definir el espacio proyectivo asociado a un espacio lineal en términos de rayos (suena mucho mejor). En efecto
+Esta última definición es pertinente, ya que, como recordamos (o no) todo subespacio vectorial $U$ de dimensión $1$ posee una base formada por un único vector (llamémosle $u$), o dicho de otra manera, $U$ está generado por un único vector $u$. Es decir, todos los vectores que conforman $U$ son las combinaciones lineales de $u$, o sea, el rayo engendrado por $u$. ¿Y a qué viene todo esto? Pues a que podemos definir el espacio proyectivo asociado a un espacio lineal en términos de rayos (suena mucho mejor). En efecto
 \begin{equation*}
 	\proy(E):\equals{def.}\{\class{u}\tq u\in E\smz\}
 \end{equation*}
@@ -66,154 +66,177 @@ Ver que efectivamente es una biyección y que está bien definida es un ejercici
 \subsection{Proyección canónica}
 Una forma muy útil de relacionar el espacio proyectivo asociado a $E$ y el propio espacio lineal $E$, es mediante la llamada \tbi[proyección!canónica]{proyección canónica}, que es la aplicación (evidentemente sobreyectiva y potencialmente no inyectiva) que a cada vector le asocia su rayo engendrado, o sea
 \begin{equation*}
-\label{C1_eq_proyeccionCanonica}
 	\begin{array}{cc}
 	\pi:&E\smz\to\proy(E)\\
 	&u\mapsto\class{u}\equiv u\mc{R}
 	\end{array}
 \end{equation*}
-\section{Variedades Proyectivas}
-\label{C1_variedadesProyectivas}
-Como es típico en álgebra, trataremos de estudiar los subconjuntos de una estructura que mantienen dicha estructura; en este caso, estudiaremos las variedades o subespacios de espacios proyectivos. Este es un concepto que puede resultar confuso en una primera lectura, pero que es de importancia crucial.
-\begin{defi}[Variedad Proyectiva]
-	\label{C1_def_variedadProyectiva}
-	Dado un subconjunto $X$ de un espacio proyectivo $\proy(E)$, se dirá que $X$ es una variedad proyectiva de $\proy(E)$ si existe una variedad lineal de $E$, a la que llamaremos $\hat{X}$ de manera que el espacio proyectivo asociado a $\hat{X}$ coincide con $X$. Escrito de otra forma:
-	\[
-		X=\proy(\hat{X})=\pi(\hat{X}\smz)
-	\]
+\section{Variedades proyectivas}
+Como es típico en el álgebra (y en las matemáticas en general), trataremos de estudiar los subconjuntos de una determinada ``estructura'' que mantienen dicha ``estructura''.
+
+En este caso, estudiaremos las \tbi[variedad!proyectiva]{variedades} o \tbi[subespacio!proyectivo]{subespacios} de espacios proyectivos. Este es un concepto que puede resultar confuso en una primera lectura, pero que es de importancia crucial.
+\begin{defi}[Variedad proyectiva]
+	\label{epro_def_variedades}
+	Dado un subconjunto $X$ de un espacio proyectivo $\proy(E)$, se dirá que $X$ es una variedad proyectiva de $\proy(E)$ si existe una variedad lineal de $E$, a la que llamaremos $\widehat{X}$, de manera que el espacio proyectivo asociado a $\widehat{X}$ coincide con $X$. Escrito de otra forma
+	\begin{equation*}
+		X=\proy(\widehat{X})=\pi(\widehat{X}\smz)
+	\end{equation*}
 \end{defi}
 
 El siguiente lema demuestra que hay dos enfoques equivalentes a la idea de variedad proyectiva.
-\begin{lem}[Caracterización de las Variedades]
-	\label{C1_lem_caracterizacionVariedades}
+\begin{lem}[Caracterización de las variedades]
+	\label{epro_lem_caracterizacionVariedades}
 	$X$ es variedad proyectiva si y solo si $\pi^{-1}(X)\cup\zset$ es un subespacio vectorial de $E$.
 \end{lem}
-\begin{proof}
+\begin{proof} Veamos ambas implicaciones, al estilo de la vieja escuela.
 \begin{itemize}
-	\item[$\bra$] Como $X$ es variedad proyectiva existe cierta variedad lineal $\widehat{X}$ de forma que \\$\pi(\widehat{X}\smz)=X$. Basta ver que $\pi^{-1}(X)\cup\zset$ es un subespacio vectorial. Si Dios existe y está de nuestra parte se tendrá  $\widehat{X}=\pi^{-1}(X)\cup\zset$, con lo que habríamos terminado. En efecto, la igualdad que queremos obtener es equivalente (quitando el cero a ambos lados y aplicando la proyección canónica) a la igualdad: \[\pi(\widehat{X}\smz)=\pi(\pi^{-1}(X))=X\]Lo cual tenemos por hipótesis.
-	\item[$\bla$] Si $\pi^{-1}(X)\cup\zset$ es un subespacio vectorial, su proyectivo asociado será $\pi(\pi^{-1}(X))=X$, con lo que hemos encontrado una variedad lineal de $E$ de forma que $X$ es su espacio proyectivo asociado. Por la definición \ref{C1_def_variedadProyectiva} hemos terminado.
+	\item[$\bra$]Como $X$ es una variedad proyectiva, por definición, hay una variedad lineal $\widehat{X}$ de manera que $\pi(\widehat{X}\smz)=X$.
+	
+	Nuestra estrategia consistirá en demostrar que $\pi^{-1}(X)\cup\zset=\widehat{X}$, con lo que ya tendríamos que $\pi^{-1}(X)\cup\zset$ es una variedad lineal. Veamos pues que esto es cierto. Si recordamos, $\pi(\widehat{X}\smz)=X$, de modo que, aplicando $\pi^{-1}$ a ambos lados tenemos que
+	\begin{equation*}
+		\pi^{-1}(\pi(\widehat{X}\smz))=\pi^{-1}(X)
+	\end{equation*}
+	Además (y, aunque lo parezca, no es algo trivial) $\pi^{-1}(\pi(\widehat{X}\smz))=\widehat{X}\smz$.
+	
+	En efecto, dado $x\in\pi^{-1}(\pi(\widehat{X}\smz))$, se tiene que $\pi(x)\in\pi(\widehat{X}\smz)=\{\class{y}\tq y\in\widehat{X}\smz\}$, luego hay un $y_0\in\widehat{X}\smz$ de manera que $\class{y_0}=\class{x}=\pi(x)$, por lo que habrá un $\lambda_0\in\K$ de forma que $x=\lambda_0y_0$, de donde se deduce que $x\in\widehat{X}\smz$. Por otra parte, dado, $x\in\widehat{X}\smz$, como $\pi(x)=\class{x}=\{\lambda x\tq \lambda\in\K\}$ tenemos que
+	\begin{equation*}
+		\pi^{-1}(\{\pi(x)\})= \{y\in E\smz\tq\pi(y)=\class{y}\in\{\pi(x)\}\}=\{y\in E\smz\tq y=\lambda x\text{ con }\lambda\in\K\}
+	\end{equation*}
+	con lo que, evidentemente, $x\in\pi^{-1}(\{\pi(x)\})\subset\pi^{-1}(\pi(\widehat{X}\smz))$.
+	
+	En definitiva, hemos demostrado que $\pi^{-1}(\pi(\widehat{X}\smz))=\widehat{X}\smz$, por tanto, $\widehat{X}\smz=\pi^{-1}(X)$, uniendo el vector nulo obtenemos que $\widehat{X}=\pi^{-1}(X)\cup\zset$ (como queríamos).
+	\item[$\bla$] Si $\pi^{-1}(X)\cup\zset$ es un subespacio vectorial, su proyectivo asociado será $\pi(\pi^{-1}(X))=X$ (la igualdad se da por la sobreyectividad de $\pi$), con lo que hemos encontrado una variedad lineal de $E$ de forma que $X$ es su espacio proyectivo asociado, luego, por la definición de variedad proyectiva, hemos terminado.\qedhere
 \end{itemize}
 \end{proof}
-Del lema \ref{C1_lem_caracterizacionVariedades} se deduce que los subespacios vectoriales de $E$ y los subespacios proyectivos de $\proy(E)$ están en biyección, siendo este un resultado análogo al del llamado \ti{lema de la correspondencia} de la teoría de grupos y anillos. Estudiemos más a fondo este hecho.
-
-\begin{obs}[Lema de la Correspondencia]
-	\label{C1_obs_lemaCorrespondencia}
-	Sea $\mc{P}$ el conjunto de las variedades proyectivas de $\proy(E)$. Asimismo sea el conjunto $\mc{L}$ compuesto por las variedades lineales de $E$. Es claro, por la definición de variedad proyectiva \ref{C1_def_variedadProyectiva}y por el lema \ref{C1_lem_caracterizacionVariedades} , que la siguiente aplicación es una biyección:
-	\[
-		\begin{array}{ccc}
-		\mc{P} & \stackrel{\Phi}{\to} & \mc{L}\\
-		X & \mapsto & \pi^{-1}(X)\cup\zset
-		\end{array}
-	\]
-	Aunque trivial, es recomendable recordar, que se preservan las contenciones, es decir:
-	\[X\subset Y \sii \pi^{-1}(X)\subset \pi^{-1}(Y)\]
+Del lema anterior se deduce que los subespacios vectoriales de $E$ y los subespacios proyectivos de $\proy(E)$ están en biyección, siendo este un resultado análogo (en cierto sentido) al llamado \ti{lema de la correspondencia} de la teoría de grupos y anillos. Estudiemos más a fondo este hecho.
+\begin{obs}[Lema de la correspondencia]
+	Sea $\mc{P}$ el conjunto de las variedades proyectivas de $\proy(E)$. Asimismo sea el conjunto $\mc{L}$ compuesto por las variedades lineales de $E$. Es claro, por la definición de variedad proyectiva \eqref{epro_def_variedades} y por el lema \ref{epro_lem_caracterizacionVariedades}, que la siguiente aplicación es una biyección
+	\begin{equation*}
+	\begin{array}{cc}
+	\Phi:&\mc{P}\to\mc{L}\\
+	&X\mapsto\pi^{-1}(X)\cup\zset
+	\end{array}
+	\end{equation*}
+	Aunque trivial, es recomendable recordar que las biyecciones preservan las contenciones, es decir
+	\begin{equation*}
+	X\subset Y \sii \pi^{-1}(X)\cup\zset\subset \pi^{-1}(Y)\cup\zset
+	\end{equation*}
+	Esta tontuna es útil, pues nos permite afirmar que el espacio proyectivo asociado a un subespacio $U$ de $E$, es un subespacio proyectivo de $\proy(E)$ (y viceversa, por supuesto).
 \end{obs}
-\subsection{Operaciones con Variedades Proyectivas}
-Tras estas observaciones estamos en condiciones de abordar dos problemas elementales pero importantes. Estos son:
+\subsection{Operaciones con variedades proyectivas}
+Tras estas observaciones, estamos en condiciones de abordar dos problemas elementales pero importantes. Estos son
 \begin{enumerate}
-	\item Determinar si la intersección de variedades proyectivas es variedad proyectiva.
-	\item Obtener una descripción explícita de los elementos que conforman la mínima variedad que contiene a un subconjunto del espacio proyectivo.
+	\item Determinar si la intersección de variedades proyectivas es una variedad proyectiva.
+	\item Obtener una descripción explícita de los elementos que conforman la mínima variedad proyectiva que contiene a un subconjunto del espacio proyectivo.
 \end{enumerate}
-\begin{lem}[Intersección de Variedades Proyectivas]
-	\label{C1_lem_interseccionVariedades}
+Pasemos a resolverlos sin más dilación.
+\begin{lem}[Intersección de variedades proyectivas]
+	\label{epro_lem_interseccionVariedades}
 	Sea la familia de variedades proyectivas $\{X_i\tq i\in I\}$, se tiene que la intersección $X=\bigcap_{i\in I}X_i$ es una variedad proyectiva.
 	
-	Además, se verifica $\hat{X}=\bigcap_{i\in I}\hat{X_i}$, es decir, el espacio vectorial subyacente a la intersección de variedades, es la intersección de los espacios vectoriales asociados a las variedades que interseco.
-	
+	Además, se verifica $\widehat{X}=\bigcap_{i\in I}\widehat{X_i}$, es decir, el espacio vectorial subyacente a la intersección de variedades, es la intersección de los espacios vectoriales asociados a las variedades que interseco.
 \end{lem}
 \begin{proof}
-	Debemos demostrar que $\bigcap_{i\in I}X_i$ es variedad proyectiva. Esto pasa, por el lema \ref{C1_lem_caracterizacionVariedades}, si y solo si $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\cup\zset$ es un espacio vectorial. Si tenemos suerte, se cumplirá que $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)=\bigcap_{i\in I}\pi^{-1}(X_i)$. Supongamos que tenemos suerte (luego lo demostraremos), en tal caso, por ser cada $X_i$ una variedad proyectiva y, por tanto, $\pi^{-1}(X_i)\cup\zset$ un subespacio vectorial, unido a que la intersección arbitraria de espacios vectoriales un espacio vectorial, se tiene que $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\cup\zset$ es un subespacio vectorial, como queríamos demostrar.
+	Debemos demostrar que $\bigcap_{i\in I}X_i$ es variedad proyectiva. Esto pasa, por el lema \ref{epro_lem_caracterizacionVariedades}, si y solo si $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\cup\zset$ es un espacio vectorial. Si tenemos suerte, se cumplirá que $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)=\bigcap_{i\in I}\pi^{-1}(X_i)$. En efecto, tenemos suerte, ya que esta es una propiedad que cumplen las imágenes inversas de cualquier función.
 	
-	Finalmente, comprobemos que, efectivamente, hemos tenido suerte.
-	\begin{multline*}
-		x\in\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\sii \pi(x)=\class{x}\in\bigcap_{i\in I}X_i\sii\class{x}\in X_i\ \forall i\in I\sii\\\pi^{-1}(\class{x})=x\in\pi^{-1}(X_i)\forall i\in I\sii x\in\bigcap_{i\in I}\pi^{-1}(X_i)
-	\end{multline*}
-	con lo que se obtiene la igualdad deseada.
+	Así pues, por ser cada $X_i$ una variedad proyectiva y, por tanto, $\pi^{-1}(X_i)\cup\zset$ un subespacio vectorial, unido al hecho de que la intersección arbitraria de espacios vectoriales continúa siendo un espacio vectorial, se tiene que $\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\cup\zset$ es un subespacio vectorial, como queríamos demostrar.
 	
-	El \ti{además} se obtiene muy fácilmente:\[\hat{X}=\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\cup\zset=\bigcap\pi^{-1}(X_i)\cup\zset=\bigcap_{i\in I}\hat{X_i}\]
+	El \ti{además} se obtiene muy fácilmente. En efecto
+	\begin{equation*}
+		\widehat{X}=\pi^{-1}\left(\bigcap_{i\in I}X_i\right)\cup\zset=\bigcap\pi^{-1}(X_i)\cup\zset=\bigcap_{i\in I}\widehat{X_i}\qedhere
+	\end{equation*}
 \end{proof}
-Con el lema \ref{C1_lem_interseccionVariedades} queda resuelto el primer problema planteado en esta sección. Pasemos ahora a estudiar la noción de variedad proyectiva engendrada por un subconjunto cualquiera $A$ de $\proy(E)$ así como sus propiedades.
-\begin{defi}[Variedad Engendrada por un Subconjunto]
-	\label{C1_def_variedadEngendrada}
-	Sea $A\subset\proy(E)$ no vacío. Se define la \ti{variedad proyectiva engendrada por $A$} al menor subespacio proyectivo que contiene a $A$. A esta se la denotará por $\engen{A}$.
+Con el lema \ref{epro_lem_interseccionVariedades} queda resuelto el primer problema planteado en esta sección. Pasemos ahora a estudiar la noción de variedad proyectiva engendrada por un subconjunto cualquiera $A$ de $\proy(E)$ así como sus propiedades.
+\begin{defi}[Variedad engendrada por un subconjunto]
+	\label{epro_def_variedadEngendrada}
+	Sea $A\subset\proy(E)$ no vacío. Se define la \tbi[variedad!proyectiva engendrada]{variedad proyectiva engendrada por $A$} como el menor subespacio proyectivo que contiene a $A$. A esta se la denotará por $\engen{A}$.
 \end{defi}
 Vamos a demostrar la existencia de dicha variedad construyéndola mediante un truco muy habitual en matemáticas.
-\begin{obs}[Existencia de la Variedad Engendrada]
-	\label{C1_obs_variedadEngendrada}
+\begin{obs}[Existencia de la variedad engendrada]
+	\label{epro_obs_variedadEngendrada}
 	Sea $\mc{L}$ la familia de las variedades proyectivas de $\proy(E)$ que contienen a $A$. Es trivial demostrar que $\bigcap_{X\in\mc{L}}X$ es la menor variedad proyectiva que contiene a $A$.
 	
-	Que es variedad proyectiva es evidente por el lema \ref{C1_lem_interseccionVariedades}. Es la menor variedad ya que, dada cualquer otra variedad que contenga a $A$, esta pertenecerá a la familia $\mc{L}$, por lo que su intersección estará contenida en la variedad.
+	Que es variedad proyectiva es evidente por el lema \ref{epro_lem_interseccionVariedades}. Es la menor variedad, ya que, dada cualquer otra variedad $Y$ que contenga a $A$, esta pertenecerá a la familia $\mc{L}$, por lo que su intersección estará contenida en $Y$.
 \end{obs}
-La \ref{C1_obs_variedadEngendrada} demuestra la existencia de la variedad engendrada de la misma forma que demostramos la existencia de un subespacio vectorial engendrado por un conjunto, o del subgrupo generado por un conjunto, lo que deja claro la importancia de este truco. Sin embargo, esta demostración no nos da una descripción explícita de los elementos de la variedad.
+La observación \ref{epro_obs_variedadEngendrada} demuestra la existencia de la variedad engendrada de la misma forma que demostramos la existencia de un subespacio vectorial engendrado por un conjunto, o del subgrupo generado por un conjunto, lo que deja claro la importancia de este truco. Sin embargo, esta demostración no nos da una descripción explícita de los elementos de la variedad.
 
-Una forma de resolver este problema es, a la luz del lema \ref{C1_lem_caracterizacionVariedades}, encontrar la variedad lineal asociada a la variedad engendrada.
-\begin{lem}[Variedad Lineal Asociada a una Variedad Engendrada]
-	\label{C1_lem_variedadLinealAsociada}Se tiene que \[\widehat{\engen{A}}=\lengen{\pi^{-1}(A)}\]
-	Es decir, la variedad lineal asociada a la variedad proyectiva engendrada por $A$ es aquella que engendra la preproyección de $A$ sobre $E$.
+Una forma de resolver este problema es, a la luz del lema \ref{epro_lem_caracterizacionVariedades}, encontrar la variedad lineal asociada a la variedad engendrada.
+\begin{lem}[Variedad lineal asociada a una variedad engendrada]
+	Se tiene que \[\widehat{\engen{A}}=\lengen{\pi^{-1}(A)}\]
+	Es decir, la variedad lineal asociada a la variedad proyectiva engendrada por $A$ es aquella que engendra la ``preproyección'' de $A$ sobre $E$.
 \end{lem}
-\begin{proof}\begin{itemize}
-		\item[\bsupset] Como $A\subset\engen{A}$ entonces $\pi^{-1}(A)\subset\widehat{\engen{A}}\ra\lengen{\pi^{-1}(A)}\subset\widehat{\engen{A}}$
-		\item[\bsubset]$A\subset\pi({\lengen{\pi^{-1}(A)}})$ ya que $\lengen{\pi^{-1}(A)}\supset\pi^{-1}(A)$. Como $\lengen{\pi^{-1}(A)}$ es un subespacio vectorial, su proyectivizado será una subvariedad proyectiva $X$, por lo cual $X=\pi({\lengen{\pi^{-1}(A)}})$. Como por la primera desigualdad conjusista de esta segunda parte de la demostración nos dice que $A\subset X$, tenemos la desigualdad: \[A\subset\engen{A}\subset X=\pi({\lengen{\pi^{-1}(A)}})\]
-		Aplicando $\pi^{-1}$ a la desigualdad obtenemos:
-		\[\pi^{-1}(\engen{A})=\widehat{\engen{A}}\smz\subset\lengen{\pi^{-1}(A)}\smz\]
+\begin{proof}
+	Procedamos por doble contención
+	\begin{itemize}
+		\item[\bsupset] Como $A\subset\engen{A}$ entonces $\pi^{-1}(A)\subset\widehat{\engen{A}}$, luego $\lengen{\pi^{-1}(A)}\subset\widehat{\engen{A}}$.
+		\item[\bsubset]Como $\pi^{-1}(A)\subset\lengen{\pi^{-1}(A)}\smz$, aplicando $\pi$ se tiene (por su sobreyectividad) que $A\subset \pi(\lengen{\pi^{-1}(A)}\smz)$. Al ser $\lengen{\pi^{-1}(A)}$ un subespacio vectorial, su proyectivizado será una subvariedad proyectiva $X$, en concreto, $X=\pi(\lengen{\pi^{-1}(A)}\smz)$. Como dedujimos al principio, $A\subset X$, luego tenemos la desigualdad
+		\begin{equation*}
+			A\subset\engen{A}\subset X=\pi(\lengen{\pi^{-1}(A)}\smz)
+		\end{equation*}
+		y aplicando $\pi^{-1}$ obtenemos
+		\begin{equation*}
+			\pi^{-1}(\engen{A})=\widehat{\engen{A}}\smz\subset\lengen{\pi^{-1}(A)}\smz\qedhere
+		\end{equation*}
 	\end{itemize}
 \end{proof}
-El lema \ref{C1_lem_variedadLinealAsociada} nos da una descripción explícita de los elementos de la variedad engendrada por un conjunto, basta aplicar la proyección canónica para obtener:
-\begin{equation}\label{C1_eq_explicitaEngendrados}
-	\engen{A}=\pi(\lengen{\pi^{-1}(A)})
+El lema anterior nos da una descripción explícita de los elementos de la variedad engendrada por un conjunto, basta aplicar la proyección canónica para obtener
+\begin{equation}\label{epro_eq_explicitaEngendrados}
+	\engen{A}=\pi(\lengen{\pi^{-1}(A)}\smz)
 \end{equation}
-
 Tengamos especialmente en cuenta el caso de las variedades engendradas por conjuntos finitos.
-\begin{exa}[Variedades Engendradas por Conjuntos Finitos]
+\begin{exa}[Variedades engendradas por conjuntos finitos]
 	\label{C1_exa_generadoresFinitos}
-	Sea $A=\{p_1,\dots,p_n\}$, denotaremos $\engen{A}=\engen{p_1,\dots,p_n}$, escogiendo un representante arbitrario para cada $p_i=\class{u_i}$ obtenemos, por \ref{C1_eq_explicitaEngendrados} que
-	\[\engen{p_1,\dots,p_n}=\pi(\lengen{u_1,\dots,u_n})\]
+	Sea $A=\{p_1,\dots,p_n\}$, denotaremos $\engen{p_1,\dots,p_n}:=\engen{A}$, escogiendo un representante $u_i\in E\smz$ arbitrario para cada $p_i$ obtenemos, por la ecuación \eqref{epro_eq_explicitaEngendrados}, que
+	\begin{equation*}
+		\engen{p_1,\dots,p_n}=\pi(\lengen{u_1,\dots,u_n}\smz)\qedhere
+	\end{equation*}
 \end{exa}
-\section{Dimensiones y Fórmula de Grassmann}
+\section{Dimensiones y fórmula de Grassmann}
 Prosiguiendo en nuestra traducción de los conceptos del mundo vectorial al idioma proyectivo introduciremos el concepto de dimensión de un espacio proyectivo y deduciremos la llamada fórmula de Grassmann.
 
-\subsection{Dimensiones y Fórmula de Grassmann}
+\subsection{Dimensiones y fórmula de Grassmann}
 Es importante tener claro que los espacios proyectivos \tb{no} son espacios vectoriales, ya que no hemos definido la noción de suma de rayos o producto de rayos por escalares. Sin embargo, parece razonable extender la noción de dimensión a los espacios proyectivos.
 
-Intuitivamente, al considerar las rectas vectoriales como puntos estamos, entre comillas, perdiendo un grado de libertad. Esta idea es recogida por la siguiente definición. 
+Intuitivamente, al considerar las rectas vectoriales como puntos estamos, entre comillas, perdiendo un ``grado de libertad''. Esta idea es recogida por la siguiente definición. 
 \begin{defi}[Dimensión de un Espacio Proyectivo]
-	\label{C1_def_dimension}
-	Si $E$ es un espacio vectorial de dimensión $n$, se define la dimensión de $\proy(E)$ como $n-1$. Es decir, la \ti{codimensión} de un espacio proyectivo respecto de su espacio lineal asociado es $1$.
+	\label{epro_def_dimension}
+	Si $E$ es un $\K$--espacio vectorial de dimensión $n$, se define la \tbi{dimensión} de $\proy(E)$ como $n-1$. Es decir, la \tbi{codimensión} de un espacio proyectivo respecto de su espacio lineal asociado es $1$.
 \end{defi}
-
-Usualmente nos referiremos a los espacios proyectivos de dimensión $1$ como \ti{rectas proyectivas}, a los de dimensión $2$ como \ti{planos proyectivos} y a los de dimensión $3$ como \ti{espacios proyectivos}.
+Usualmente nos referiremos a los espacios proyectivos de dimensión $1$ como \tbi[recta!proyectiva]{rectas proyectivas}, a los de dimensión $2$ como \tbi[plano!proyectivo]{planos proyectivos} y a los de dimensión $3$ como \tbi[espacio!proyectivo]{espacios proyectivos}.
 
 Es importante distinguir algunos casos extremos que pueden parecer chocantes.
-\begin{obs}[Casos Extremos]
-	\label{C1_obs_casosExtremosDim}
+\begin{obs}[Casos extremos]
+	\label{epro_obs_casosExtremosDim}
 	\begin{enumerate}
 		\item Si $E$ es un espacio vectorial de dimensión $1$, entonces $\proy(E)$ tiene dimensión nula, lo cual tiene sentido al estar conformado por un solo punto.
-		\item Si $E =\zset$, es decir, un espacio vectorial de dimensión $0$, resulta que su espacio proyectivo tiene dimensión $-1$.
+		\item Si $E =\zset$, es decir, un espacio vectorial de dimensión $0$, resulta que su espacio proyectivo tiene dimensión $-1$.\qedhere
 	\end{enumerate}
 \end{obs}
 Estamos ahora en condiciones de presentar el ejemplo de \ti{espacio canónico}, cuya notación no hubiéramos entendido hasta ahora.
-\begin{exa}[Espacio Canónico]
+\begin{exa}[Espacio canónico]
 	\label{C1_exa_espacioCanonico}
-	El espacio proyectivo asociado a un espacio vectorial de la forma $E=\K^{n+1}$ se denomina \ti{espacio canónico} y se denota por:\[\proy(E):\equals{not.}\proy^n\]
+	El espacio proyectivo asociado a un espacio vectorial de la forma $E=\K^{n+1}$ se denomina \tbi[espacio!canónico]{espacio canónico} y se denota por $\proy^n:=\proy(E)$
 \end{exa}
-Una igualdad recurrente en matemáticas es la llamada \ti{fórmula de Grassmann}, que se presenta con diversas versiones en áreas tan dispersas de las matemáticas como la teoría de conjuntos, la probabilidad, la teoría de grupos, el álgebra lineal,... Como no podía ser de otra manera, también está presente en los espacios proyectivos.
-\begin{theo}[Fórmula de Grassmann. Teorema de la Incidencia]
+Una igualdad recurrente en matemáticas es la llamada \tbi[fórmula!de Grassmann]{fórmula de Grassmann}, que se presenta con diversas versiones en áreas tan dispersas de las matemáticas como la teoría de conjuntos, la probabilidad, la teoría de grupos, el álgebra lineal,... Como no podía ser de otra manera, también está presente en los espacios proyectivos.
+\begin{theo}[Fórmula de Grassmann. Teorema de la incidencia]
 	\label{C1_teo_grassmann}
-	Sean $X,Y\subset\proy(E)$ dos variedades proyectivas. Se tiene que:
-	\[\dim(\engen{X,Y})=\dim(X)+\dim(Y)-\dim(X\cap Y)\]
+	Sean $X,Y$ dos variedades proyectivas. Se tiene que (nótese el abuso de notación)
+	\begin{equation*}
+		\dim(\engen{X,Y})=\dim(X)+\dim(Y)-\dim(X\cap Y)
+	\end{equation*}
 \end{theo}
 \begin{proof}
 	Apoyándonos en la fórmula de Grassmann para espacios vectoriales, sale fácilmente. En efecto, como  \[\dim(\engen{X,Y})=\dim(\widehat{\engen{X,Y}})-1\] y además \[\dim(X)+\dim(Y)-\dim(X\cap Y)=\dim(\widehat{X})-1+\dim(\widehat{Y})-1-\dim(\widehat{X\cap Y})+1\] por la fórmula de Grassmann en espacios vectoriales sabemos que los dos miembros de la derecha de sendas igualdades coinciden.
 \end{proof}
 Este teorema arroja un corolario importante, del que debemos extraer la idea de que en los espacios proyectivos las cosas se cortan muy fácilmente. Es por esto que se conoce a la geometría proyectiva como \ti{geometría de la incidencia}.
-\begin{cor}[Hiperplanos y Rectas]
+\begin{cor}[Hiperplanos y rectas]
 	\label{C1_cor_rectaHiperplano}
 	Una recta y un hiperplano proyectivos siempre se cortan.
 \end{cor}
 \begin{proof}
 	Basta sustituir las dimensiones en la fórmula de Grassmann teniendo en cuenta que $\dim(\proy(E))\geq\dim(\engen{X,Y})$, despejando se concluye que $\dim(\engen{X,Y})\geq 0$, y, por tanto, hay al menos un punto común.
 \end{proof}
-\section{Referencias Proyectivas}
+\section{Referencias proyectivas}
 En esta sección trataremos de extrapolar el concepto de \ti{base} de un espacio vectorial a los espacios proyectivos.
 
 Sea $E$ un $\K$--espacio vectorial cualquiera de dimensión $n+1$. Sabemos por álgebra lineal que, dada $\mc{B}:=\{e_0,\dots,e_n\}$ una base de $E$, cualquier vector $x\in E$ puede escribirse de manera única como combinación lineal de los vectores que conforman la base, es decir, para ciertos $\lambda_i$ con $i\in\{0,\dots,n\}$ se tiene:

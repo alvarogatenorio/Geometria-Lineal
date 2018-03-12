@@ -12,10 +12,10 @@
 \contentsline {section}{\numberline {1.3}Dimensiones y f\IeC {\'o}rmula de Grassmann}{13}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Dimensiones y f\IeC {\'o}rmula de Grassmann}{13}{subsection.1.3.1}
 \contentsline {section}{\numberline {1.4}Referencias proyectivas}{14}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Coordenadas Homog\IeC {\'e}neas}{14}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Referencias Proyectivas}{15}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Base Asociada a una Referencia Proyectiva}{16}{subsection.1.4.3}
-\contentsline {section}{\numberline {1.5}Cambios de Referencia Proyectiva}{18}{section.1.5}
+\contentsline {subsection}{\numberline {1.4.1}Coordenadas homog\IeC {\'e}neas}{15}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Referencias proyectivas}{15}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Base asociada a una referencia proyectiva}{16}{subsection.1.4.3}
+\contentsline {section}{\numberline {1.5}Cambios de referencia proyectiva}{18}{section.1.5}
 \contentsline {chapter}{\numberline {2}Dualidad}{21}{chapter.2}
 \contentsline {section}{\numberline {2.1}Dualidad en espacios vectoriales}{21}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Formas Lineales e Hiperplanos}{21}{subsection.2.1.1}

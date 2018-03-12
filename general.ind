@@ -1,6 +1,15 @@
 \begin{theindex}
 
+  \item base
+    \subitem asociada a una referencia proyectiva, \hyperpage{16}
+    \subitem can\IeC {\'o}nica, \hyperpage{15}
+    \subitem inducida, \hyperpage{15}
+
+  \indexspace
+
   \item codimensi\IeC {\'o}n, \hyperpage{13}
+  \item coordenadas
+    \subitem homog\IeC {\'e}neas, \hyperpage{15}
 
   \indexspace
 
@@ -20,12 +29,18 @@
 
   \indexspace
 
+  \item independencia
+    \subitem proyectiva, \hyperpage{15}
+
+  \indexspace
+
   \item plano
     \subitem proyectivo, \hyperpage{13}
   \item proyecci\IeC {\'o}n
     \subitem can\IeC {\'o}nica, \hyperpage{10}
   \item punto
     \subitem proyectivo, \hyperpage{10}
+    \subitem unidad, \hyperpage{18}
 
   \indexspace
 
@@ -36,6 +51,8 @@
   \item rayo, \hyperpage{9}
   \item recta
     \subitem proyectiva, \hyperpage{13}
+  \item referencia
+    \subitem proyectiva, \hyperpage{15, 16}
 
   \indexspace
 

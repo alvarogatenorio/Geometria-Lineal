@@ -162,7 +162,9 @@ La observación \ref{epro_obs_variedadEngendrada} demuestra la existencia de la 
 
 Una forma de resolver este problema es, a la luz del lema \ref{epro_lem_caracterizacionVariedades}, encontrar la variedad lineal asociada a la variedad engendrada.
 \begin{lem}[Variedad lineal asociada a una variedad engendrada]
-	Se tiene que \[\widehat{\engen{A}}=\lengen{\pi^{-1}(A)}\]
+	Se tiene que \begin{equation*}
+		\widehat{\engen{A}}=\lengen{\pi^{-1}(A)}
+	\end{equation*}
 	Es decir, la variedad lineal asociada a la variedad proyectiva engendrada por $A$ es aquella que engendra la ``preproyección'' de $A$ sobre $E$.
 \end{lem}
 \begin{proof}
@@ -180,13 +182,13 @@ Una forma de resolver este problema es, a la luz del lema \ref{epro_lem_caracter
 	\end{itemize}
 \end{proof}
 El lema anterior nos da una descripción explícita de los elementos de la variedad engendrada por un conjunto, basta aplicar la proyección canónica para obtener
-\begin{equation}\label{epro_eq_explicitaEngendrados}
+\begin{equation}
+\label{epro_eq_explicitaEngendrados}
 	\engen{A}=\pi(\lengen{\pi^{-1}(A)}\smz)
 \end{equation}
 Tengamos especialmente en cuenta el caso de las variedades engendradas por conjuntos finitos.
 \begin{exa}[Variedades engendradas por conjuntos finitos]
-	\label{C1_exa_generadoresFinitos}
-	Sea $A=\{p_1,\dots,p_n\}$, denotaremos $\engen{p_1,\dots,p_n}:=\engen{A}$, escogiendo un representante $u_i\in E\smz$ arbitrario para cada $p_i$ obtenemos, por la ecuación \eqref{epro_eq_explicitaEngendrados}, que
+	Sea $A=\{p_1,\dots,p_n\}$, denotaremos $\engen{p_1,\dots,p_n}:=\engen{A}$ (usaremos abusos de notación similares continuamente y sin previo aviso), escogiendo un representante $u_i\in E\smz$ arbitrario para cada $p_i$ obtenemos, por la ecuación \eqref{epro_eq_explicitaEngendrados}, que
 	\begin{equation*}
 		\engen{p_1,\dots,p_n}=\pi(\lengen{u_1,\dots,u_n}\smz)\qedhere
 	\end{equation*}
@@ -199,14 +201,12 @@ Es importante tener claro que los espacios proyectivos \tb{no} son espacios vect
 
 Intuitivamente, al considerar las rectas vectoriales como puntos estamos, entre comillas, perdiendo un ``grado de libertad''. Esta idea es recogida por la siguiente definición. 
 \begin{defi}[Dimensión de un Espacio Proyectivo]
-	\label{epro_def_dimension}
 	Si $E$ es un $\K$--espacio vectorial de dimensión $n$, se define la \tbi{dimensión} de $\proy(E)$ como $n-1$. Es decir, la \tbi{codimensión} de un espacio proyectivo respecto de su espacio lineal asociado es $1$.
 \end{defi}
 Usualmente nos referiremos a los espacios proyectivos de dimensión $1$ como \tbi[recta!proyectiva]{rectas proyectivas}, a los de dimensión $2$ como \tbi[plano!proyectivo]{planos proyectivos} y a los de dimensión $3$ como \tbi[espacio!proyectivo]{espacios proyectivos}.
 
 Es importante distinguir algunos casos extremos que pueden parecer chocantes.
 \begin{obs}[Casos extremos]
-	\label{epro_obs_casosExtremosDim}
 	\begin{enumerate}
 		\item Si $E$ es un espacio vectorial de dimensión $1$, entonces $\proy(E)$ tiene dimensión nula, lo cual tiene sentido al estar conformado por un solo punto.
 		\item Si $E =\zset$, es decir, un espacio vectorial de dimensión $0$, resulta que su espacio proyectivo tiene dimensión $-1$.\qedhere
@@ -214,7 +214,6 @@ Es importante distinguir algunos casos extremos que pueden parecer chocantes.
 \end{obs}
 Estamos ahora en condiciones de presentar el ejemplo de \ti{espacio canónico}, cuya notación no hubiéramos entendido hasta ahora.
 \begin{exa}[Espacio canónico]
-	\label{C1_exa_espacioCanonico}
 	El espacio proyectivo asociado a un espacio vectorial de la forma $E=\K^{n+1}$ se denomina \tbi[espacio!canónico]{espacio canónico} y se denota por $\proy^n:=\proy(E)$
 \end{exa}
 Una igualdad recurrente en matemáticas es la llamada \tbi[fórmula!de Grassmann]{fórmula de Grassmann}, que se presenta con diversas versiones en áreas tan dispersas de las matemáticas como la teoría de conjuntos, la probabilidad, la teoría de grupos, el álgebra lineal,... Como no podía ser de otra manera, también está presente en los espacios proyectivos.
@@ -226,230 +225,252 @@ Una igualdad recurrente en matemáticas es la llamada \tbi[fórmula!de Grassmann
 	\end{equation*}
 \end{theo}
 \begin{proof}
-	Apoyándonos en la fórmula de Grassmann para espacios vectoriales, sale fácilmente. En efecto, como  \[\dim(\engen{X,Y})=\dim(\widehat{\engen{X,Y}})-1\] y además \[\dim(X)+\dim(Y)-\dim(X\cap Y)=\dim(\widehat{X})-1+\dim(\widehat{Y})-1-\dim(\widehat{X\cap Y})+1\] por la fórmula de Grassmann en espacios vectoriales sabemos que los dos miembros de la derecha de sendas igualdades coinciden.
+	Apoyándonos en la fórmula de Grassmann para espacios vectoriales, sale fácilmente. En efecto, como  \begin{equation*}
+		\dim(\engen{X,Y})=\dim(\widehat{\engen{X,Y}})-1
+	\end{equation*} y además \begin{equation*}
+		\dim(X)+\dim(Y)-\dim(X\cap Y)=\dim(\widehat{X})-1+\dim(\widehat{Y})-1-\dim(\widehat{X\cap Y})+1
+	\end{equation*} por la fórmula de Grassmann en espacios vectoriales sabemos que los dos miembros de la derecha de sendas igualdades coinciden.
 \end{proof}
 Este teorema arroja un corolario importante, del que debemos extraer la idea de que en los espacios proyectivos las cosas se cortan muy fácilmente. Es por esto que se conoce a la geometría proyectiva como \ti{geometría de la incidencia}.
 \begin{cor}[Hiperplanos y rectas]
-	\label{C1_cor_rectaHiperplano}
 	Una recta y un hiperplano proyectivos siempre se cortan.
 \end{cor}
 \begin{proof}
-	Basta sustituir las dimensiones en la fórmula de Grassmann teniendo en cuenta que $\dim(\proy(E))\geq\dim(\engen{X,Y})$, despejando se concluye que $\dim(\engen{X,Y})\geq 0$, y, por tanto, hay al menos un punto común.
+	Sea $H$ un hiperplano proyectivo y $r$ una recta proyectiva. Basta sustituir las dimensiones en la fórmula de Grassmann, teniendo en cuenta que $\dim(\proy(E))\geq\dim(\engen{H,r})$ y que $\dim(H)+\dim(r)=\dim(\proy(E))$.
+	
+	Despejando (se dejan los detalles al lector) se concluye que $\dim(H\cap r)\geq 0$, y, por tanto, hay al menos un punto común.
 \end{proof}
 \section{Referencias proyectivas}
 En esta sección trataremos de extrapolar el concepto de \ti{base} de un espacio vectorial a los espacios proyectivos.
 
-Sea $E$ un $\K$--espacio vectorial cualquiera de dimensión $n+1$. Sabemos por álgebra lineal que, dada $\mc{B}:=\{e_0,\dots,e_n\}$ una base de $E$, cualquier vector $x\in E$ puede escribirse de manera única como combinación lineal de los vectores que conforman la base, es decir, para ciertos $\lambda_i$ con $i\in\{0,\dots,n\}$ se tiene:
+Sea $E$ un $\K$--espacio vectorial cualquiera de dimensión $n+1$. Sabemos (o deberíamos) por álgebra lineal que, dada $\mc{B}:=\{e_0,\dots,e_n\}$ una base de $E$, cualquier vector $x\in E$ puede escribirse de manera única como combinación lineal de los vectores que conforman la base, es decir, para ciertos $\lambda_i$ con $i\in\{0,\dots,n\}$ se tiene
 \begin{equation}
-\label{C1_eq_combinacionLineal}
+\label{epro_eq_combinacionLineal}
 x=\sum_{i=0}^{n}\lambda_ie_i\stackrel{\textrm{not.}}{\equiv}(\lambda_0,\dots,\lambda_n)_{\mc{B}}\stackrel{\textrm{not.}}{\equiv}\mc{B}X
 \end{equation}
-Nótese que la tercera equivalencia de la ecuación~\eqref{C1_eq_combinacionLineal}, es un mero abuso de notación muy extendido para que esta sea más compacta.
+Nótese que para verle sentido a las equivalencias de la ecuación \eqref{epro_eq_combinacionLineal}, sería conveniente echarle un ojo a la sección \ref{kkk}, donde se habla con detalle de estas notaciones que tanto nos facilitan la existencia.
 
-Volviendo al mundo proyectivo, queremos encontrar cierta colección de puntos proyectivos en función de los cuales poder escribir todos los demás. 
-\subsection{Coordenadas Homogéneas}
-\label{C1_coordenadasHomogeneas}
-Si tomamos un punto proyectivo $x:=\class{u}\in\proy(E)$, por la ecuación~\eqref{C1_eq_combinacionLineal} podremos escribir:
+Volviendo al mundo proyectivo, queremos encontrar cierta colección de puntos proyectivos en función de los cuales poder ``escribir'' todos los demás. 
+\subsection{Coordenadas homogéneas}
+\label{epro_coordenadasHomogeneas}
+Si tomamos un punto proyectivo $x:=\class{u}\in\proy(E)$, por la ecuación \eqref{epro_eq_combinacionLineal} podremos escribir
 \begin{equation}
-	\label{C1_eq_coordenadasHomogeneas}
-	x:\class{u}=\class{(\lambda_0,\dots,\lambda_n)_{\mc{B}}}:\stackrel{\textrm{not.}}{\equiv}(\lambda_0:\dots:\lambda_n)
+	\label{epro_eq_coordenadasHomogeneas}
+	x:=\class{u}=\class{(\lambda_0,\dots,\lambda_n)_{\mc{B}}}:\stackrel{\textrm{not.}}{\equiv}(\lambda_0:\dots:\lambda_n)_{\mc{B}}
 \end{equation}
-Al último miembro de la ecuación~\eqref{C1_eq_coordenadasHomogeneas} se le llama \ti{escritura de $x$ en coordenadas homogéneas}.
+Al último miembro de la ecuación \eqref{epro_eq_coordenadasHomogeneas} se le llama \ti{escritura de $x$ en} \tbi[coordenadas!homogéneas]{coordenadas homogéneas} \ti{respecto de la base} $\mc{B}$.
 
 Nótese que, \tb{fijada una base}, las coordenadas homogéneas de un punto proyectivo son únicas salvo proporcionalidad, ya que si se toma un representante $u'$ distinto del rayo vectorial, su escritura respecto de la base $\mc{B}$ será proporcional a la de $u$ (los representantes son múltiplos entre sí).
 
-Con esto podría decirse que hemos cumplido el objetivo de la sección, ya que, dada una base de $E$, podemos escribir en función de ella a cualquier punto proyectivo.
+Con esto, podría decirse que hemos cumplido el objetivo de la sección, ya que, dada una base de $E$, podemos describir (en función de ella) a cualquier punto proyectivo.
 
-Sin embargo, estamos creando una referencia en base a otra ya existente, lo cual no es muy recomendable salvo si nuestra referencia base (base del espacio vectorial) es \ti{estándar} o \ti{canónica}, lo cual sólo ocurre en contadas ocasiones, por ejemplo, en los espacios canónicos.
-\subsection{Referencias Proyectivas}
-Para evitar los problemas derivados de la aproximación presentada en el apartado anterior, debemos concentrarnos en la idea de que lo que debemos hacer es encontrar una colección de elementos del espacio proyectivo, en función de los cuales poder escribir todos los demás. A ese conjunto de puntos lo llamaremos \ti{referencia proyectiva}.
-\begin{defi}[Independencia Proyectiva]
-	\label{C1_def_independenciaProyectiva}
-	Sea un conjunto $\{p_0,\dots,p_r\}\subset\proy(E)$, diremos que son \ti{proyectivamente independientes} si ninguno de ellos está en la variedad proyectiva engendrada por los restantes.
+Sin embargo, al hacer esto, estamos creando una ``referencia'' en base a otra ya existente, lo cual no es muy recomendable, salvo si nuestra referencia ``primigenia'' ( que es una base del espacio vectorial) es ``\ti{estándar}'' o ``\ti{canónica}'', lo cual sólo ocurre en contadas ocasiones, por ejemplo, en los espacios canónicos, donde tenemos las famosas \tbi[base!canónica]{bases canónicas}.
+\subsection{Referencias proyectivas}
+Para evitar los problemas derivados de la aproximación presentada en el apartado anterior, debemos concentrarnos en la idea de que lo que debemos hacer es encontrar una colección de elementos del espacio proyectivo, en función de los cuales poder escribir todos los demás. A ese conjunto de puntos lo llamaremos \tbi[referencia!proyectiva]{referencia proyectiva}.
+\begin{defi}[Independencia proyectiva]
+	\label{epro_def_independenciaProyectiva}
+	Sea un conjunto $\{p_0,\dots,p_r\}\subset\proy(E)$, diremos que son \tbi[independencia!proyectiva]{proyectivamente independientes} si ninguno de ellos está en la variedad proyectiva engendrada por los restantes.
 \end{defi}
-Con un poco de trabajo adicional extraemos la siguiente caracterización de la independencia proyectiva.
-\begin{lem}[Caracterización de la Indepencia Proyectiva]
-	\label{C1_lem_caracterizacionIndependencia}
+Con un poco de trabajo adicional extraemos la siguiente caracterización de la independencia proyectiva, que, como no podía ser de otra manera, se basa en su concepto hermano, la independencia lineal.
+\begin{lem}[Caracterización de la indepencia proyectiva]
+	\label{epro_lem_caracterizacionIndependencia}
 	Un conjunto de puntos proyectivos es proyectivamente independiente si y solo si sus representantes (cualesquiera) son linealmente independientes, sin depender de la elección de los mismos. 
 \end{lem}
 \begin{proof}
-	Decir que los representantes son linealmente independientes es equivalente a decir que, dado un de ellos, no puede ser expresado como combinación lineal de los restantes y por ende no se encuentra en la variedad lineal engendrada por estos. Por la ecuación~\eqref{C1_eq_explicitaEngendrados} sabemos que:
-	\[u_i\not\in\lengen{u_0,\dots,u_{i-1},u_{u+1},\dots,u_{r}}\sii\class{p_i}\not\in\engen{p_0,\dots,p_{i-1},p_{i+1},\dots,p_r}\]
+	Decir que los representantes son linealmente independientes es equivalente a decir que, dado un de ellos, no puede ser expresado como combinación lineal de los restantes y por ende no se encuentra en la variedad lineal engendrada por estos. Por la ecuación \eqref{epro_eq_explicitaEngendrados} sabemos que
+	\begin{equation*}
+		u_i\not\in\lengen{u_0,\dots,u_{i-1},u_{u+1},\dots,u_{r}}\sii p_i=\class{u_i}\not\in\engen{p_0,\dots,p_{i-1},p_{i+1},\dots,p_r}\qedhere
+	\end{equation*}
 \end{proof}
-\begin{obs}[Base Inducida]
-	\label{C1_obs_baseInducida}
-	En un espacio proyectivo de dimensión $n$, podemos escoger (como mucho) un conjunto de $n+1$ puntos proyectivamente independientes ya que, para cualquier elección de representantes de estos puntos, se obtendrían $n+1$ vectores linealmente independientes del espacio vectorial asociado $E$, de dimensión $n+1$, en el cual estos vectores, por definición formarían una base a la que llamaremos \ti{base inducida}.
+\begin{obs}[Base inducida]
+	\label{epro_obs_baseInducida}
+	En un espacio proyectivo de dimensión $n$, podemos escoger (como mucho) un conjunto de $n+1$ puntos proyectivamente independientes ya que, para cualquier elección de representantes de estos puntos, se obtendrían $n+1$ vectores linealmente independientes del espacio vectorial asociado $E$, de dimensión $n+1$, en el cual estos vectores, por definición formarían una base a la que llamaremos \tbi[base!inducida]{base inducida}.
 \end{obs}
-Hay un gran problema con la definición \ref{C1_def_independenciaProyectiva}, y es que, dados $n+1$ puntos proyectivos, inducimos una familia de bases de $E$ demasiado ``grande''. Con grande nos referimos a que no solo inducimos una base junto con todas las proporcionales a ella (resultantes de aplicarle el mismo factor de escala a todos sus vectores), sino muchas más.
-\begin{obs}[No Unicidad de la Base Inducida]
-	\label{C1_obs_noUnicidadBase}
-	Dada una elección de representantes $\{u_o,\dots,u_n\}$ que son una base de $E$, entonces, el conjunto de representantes $\{\lambda_0u_0,\dots,\lambda_nu_n\}$, con $\lambda_i\in\K^*$ también conforma una base de $E$.
+Hay un gran problema con la definición \ref{epro_def_independenciaProyectiva}, y es que, dados $n+1$ puntos proyectivos, inducimos una familia de bases de $E$ demasiado ``grande''. Con ``grande'' nos referimos a que no solo inducimos una base junto con todas las proporcionales a ella (resultantes de aplicarle el mismo factor de escala a todos sus vectores), sino muchas más (lo cual es bastante indeseable).
+\begin{obs}[No unicidad de la base inducida]
+	\label{epro_obs_noUnicidadBase}
+	Dados $n+1$ puntos proyectivamente independientes y dada una elección de representantes $\{u_0,\dots,u_n\}$ (que son una base de $E$), entonces, el conjunto de representantes $\{\lambda_0u_0,\dots,\lambda_nu_n\}$, con $\lambda_i\in\K\smz$ también conforma una base de $E$.
 \end{obs}
-
 Para solucionar este problema deberemos añadir alguna restricción más a la definición de base inducida.
-\begin{defi}[Referencia Proyectiva]
-	\label{C1_def_refereciaProyectiva}
-	Dado un espacio proyectivo de dimensión $n$, una \ti{referencia proyectiva} es un conjunto \tb{ordenado} $\mf{R}$ de $n+2$ puntos de tal forma que cada $n+1$ de ellos son proyectivamente independientes. 
+\begin{defi}[Referencia proyectiva]
+	\label{epro_def_refereciaProyectiva}
+	Dado un espacio proyectivo de dimensión $n$, una \tbi[referencia!proyectiva]{referencia proyectiva} es un conjunto \tb{ordenado} $\mf{R}$ de $n+2$ puntos de tal forma que cada $n+1$ de ellos son proyectivamente independientes. 
 \end{defi}
-
-A pesar de ser una referencia proyectiva un conjunto ordenado normalmente lo escribiremos con la notación usual para conjuntos.
-
+A pesar de ser una referencia proyectiva un conjunto ordenado, normalmente lo escribiremos con la notación usual para conjuntos.
 \begin{obs}[Reordenación]
-	\label{C1_obs_reordenacionReferencias}
-	Dada una referencia $\mf{R}$, cualquier reordenación de la misma sigue siendo referencia proyectiva.
+	\label{epro_obs_reordenacionReferencias}
+	Dada una referencia $\mf{R}$, cualquier reordenación de la misma sigue siendo referencia proyectiva (esto es evidente por la definición).
 \end{obs} 
-
-\begin{exa}[Referencias Proyectivas en Dimensiones Bajas]
-	\label{C1_exa_dimensionesBajas}
+\begin{exa}[Referencias proyectivas en dimensiones bajas]
+	\label{epro_exa_dimensionesBajas}
+	Veamos algunos ejemplos que nos permitirán palpar un poco la esencia de lo que estamos haciendo.
 	\begin{enumerate}
 		\item En caso de querer dar una referencia de la recta proyectiva deberemos elegir tres puntos proyectivamente independientes dos a dos.
-		\item Si queremos referenciar el plano proyectivo deberemos dar lo que se llama \ti{triangulo de referencia}, es decir, una elección de cuatro puntos proyectivamente independientes tres a tres. Esto es equivalente a decir que, para cualquier elección de tres puntos, estos formen un triángulo no degenerado.
-		\item La misma idea se extrapola al espacio proyectivo, donde habría que escoger un \ti{tetraedro de referencia}.
+		\item Si queremos ``referenciar'' un plano proyectivo deberemos dar lo que se llama \ti{triángulo de referencia}, es decir, una elección de cuatro puntos proyectivamente independientes tres a tres. Es recomendable (intuitivamente) ver esto como el hecho de que para cualquier elección de tres puntos, estos formen un triángulo ``no degenerado''.
+		\item La misma idea se extrapola a un espacio proyectivo, donde habría que escoger un \ti{tetraedro de referencia}.
 	\end{enumerate}
 	Para dimensiones más altas se hablará de \ti{hipertetraedros de referencia}.
 \end{exa}
-\subsection{Base Asociada a una Referencia Proyectiva}
-Siguiendo la idea de las observaciones \ref{C1_obs_baseInducida} y \ref{C1_obs_noUnicidadBase} vamos a estudiar las propiedades de las llamadas \ti{bases asociadas} a referencias proyectivas.
-\begin{defi}[Base Asociada]
-	\label{C1_def_baseAsociada}
-	Una base $\mc{B}$ de $E$ se dice \ti{asociada} a la referencia proyectiva $\mf{R}$ si sus vectores son representantes de los $n+1$ primeros puntos proyectivos, y además, la suma de sus vectores es representante del último de los puntos.
+\subsection{Base asociada a una referencia proyectiva}
+Siguiendo la idea de las observaciones \ref{epro_obs_baseInducida} y \ref{epro_obs_noUnicidadBase} vamos a estudiar las propiedades de las llamadas \tbi[base!asociada a una referencia proyectiva]{bases asociadas} a referencias proyectivas.
+\begin{defi}[Base asociada]
+	\label{epro_def_baseAsociada}
+	Una base $\mc{B}$ de $E$ se dice \tbi[base!asociada a una referencia proyectiva]{asociada} a la referencia proyectiva $\mf{R}$ si sus vectores son representantes de los $n+1$ primeros puntos proyectivos, y además, la suma de sus vectores es representante del último de los puntos.
 \end{defi}
 Nótese que una base asociada no es más que una base inducida con una pequeña restricción más, con la suerte de que esta es fundamental para solucionar el problema de la no unicidad salvo proporcionalidad, tal y como muestra el siguiente teorema, cuya demostración contituye un \tb{método de construcción de bases asociadas}.
-\begin{theo}[Unicidad de la Base Asociada]
-	\label{C1_teo_unicidadBase}
+\begin{theo}[Unicidad de la base asociada]
+	\label{epro_teo_unicidadBase}
 	Para cada referencia proyectiva $\mf{R}$ de $\proy(E)$ hay una base asociada única salvo un factor no nulo común a todos los elementos de la base.
 \end{theo}
 \begin{proof}
 	\begin{enumerate}
-		\item Probemos la \tb{existencia} de dicha base. Dada una referencia proyectiva $\mf{R}$, tomemos representantes de cada uno de los puntos. Por ser $\mf{R}$ referencia proyectiva y por el lema \ref{C1_lem_caracterizacionIndependencia} los representantes de los $n+1$ primeros puntos forman una base de $E$, y, por ende, el representante del último punto puede escribirse como combinación lineal de los anteriores. Denotando por $u_i$ al representante escogido para el $i$--ésimo punto se tiene que:
-		\[u_{n+1}=\sum_{i=0}^{n}a_iu_i\]
-		Veamos que $\mc{B}=\{a_iu_i\tq 0\leq i\leq n\}$ es una base de $E$ y además sus vectores son representantes de los $n+1$ primeros puntos de $\mf{R}$. Esto es debido a que ninguno de los coeficientes $a_i$ es nulo. Si alguno lo fuera, por ejemplo $a_0=0$, se tendríamos la relación:
-		\[
-		u_{n+1}=\sum_{i=1}^{n}a_iv_i\in\lengen{v_1,\dots,v_n}
-		\] Lo cual va contra la hipótesis de independencia proyectiva. Además, la suma de sus vectores es un representante del último punto de la referencia. Luego $\mc{B}$ es base asociada a $\mf{R}$.
-		\item Para demostrar la unicidad supongamos la existencia de dos bases asociadas:
+		\item Probemos la \tb{existencia} de dicha base. Dada una referencia proyectiva $\mf{R}$, tomemos representantes de cada uno de los puntos. Por ser $\mf{R}$ referencia proyectiva y por el lema \ref{epro_lem_caracterizacionIndependencia} los representantes de los $n+1$ primeros puntos forman una base de $E$, y, por ende, el representante del último punto puede escribirse como combinación lineal de los anteriores. Denotando por $u_i$ al representante escogido para el $i$--ésimo punto se tiene que
+		\begin{equation*}
+			u_{n+1}=\sum_{i=0}^{n}a_iu_i
+		\end{equation*}
+		Veamos que $\mc{B}=\{a_iu_i\tq 0\leq i\leq n\}$ es una base de $E$ y además sus vectores son representantes de los $n+1$ primeros puntos de $\mf{R}$. Esto es debido a que ninguno de los coeficientes $a_i$ es nulo. Si alguno lo fuera, por ejemplo $a_0=0$, se tendríamos la relación
+		\begin{equation*}
+			u_{n+1}=\sum_{i=1}^{n}a_iv_i\in\lengen{v_1,\dots,v_n}	
+		\end{equation*}
+		Lo cual va contra la hipótesis de independencia proyectiva. Además, la suma de sus vectores es un representante del último punto de la referencia. Luego $\mc{B}$ es base asociada a $\mf{R}$.
+		\item Para demostrar la unicidad supongamos la existencia de dos bases asociadas
 		\begin{gather*}
 			\mc{B}:=\{u_0,\dots,u_n\}\\
 			\mc{B}':=\{u_0',\dots,u_n'\}
 		\end{gather*}
-		Instantáneamente se ve que $u_i'=u_i\lambda_i$ para algún $\lambda\in\K^*$ para todos los $i\in\{0,\dots,n\}$, ya que sino no serían representantes de los primeros elementos de la referencia. Además, se debe dar la condición:
-		\[\class{\sum_{i=0}^{n}u_i}=\class{\sum_{i=0}^{n}u_i'}\] y, por lo tanto, las sumas deben ser proporcionales, de lo que se desprende:
-		\[\sum_{i=0}^{n}u_i'=\sum_{i=0}^{n}u_i\lambda_i=\lambda\sum_{i=0}^{n}u_i\]
-		Es decir, las bases son proporcionales.
+		Instantáneamente se ve que $u_i'=u_i\lambda_i$ para algún $\lambda\in\K\smz$ para todos los $i\in\{0,\dots,n\}$, ya que, si no, no serían representantes de los primeros elementos de la referencia. Además, se debe dar la condición
+		\begin{equation*}
+			\class{\sum_{i=0}^{n}u_i}=\class{\sum_{i=0}^{n}u_i'}
+		\end{equation*}
+		y, por lo tanto, las sumas deben ser proporcionales, de lo que se desprende
+		\begin{equation*}
+			\sum_{i=0}^{n}u_i'=\sum_{i=0}^{n}u_i\lambda_i=\lambda\sum_{i=0}^{n}u_i
+		\end{equation*}
+		Es decir, las bases son proporcionales.\qedhere
 	\end{enumerate}
 \end{proof}
-La comprobación de que un conjunto ordenado de $n+2$ puntos es referencia proyectiva puede ser muy tediosa ya que consiste en realizar $\binom{n+2}{n+1}=n+2$ determiantes de orden $n+1$. El lema \ref{C1_lem_comprobacionReferencias} es extramadamente útil pues reduce esta comprobación al cálculo de un determinante de orden $n+1$ y a la inversión de una matriz de orden $n+1$.
-\begin{lem}[Comprobación de Referencias Proyectivas]
-	\label{C1_lem_comprobacionReferencias}
-	Para comprobar que $n+2$ puntos proyectivos $x_i=\class{v_i}$ conforman una referencia proyectiva basta comprobar las siguientes condiciones:\begin{enumerate}
+La comprobación de que un conjunto ordenado de $n+2$ puntos es referencia proyectiva puede ser muy tediosa ya que consiste en realizar $\binom{n+2}{n+1}=n+2$ determiantes de orden $n+1$. El lema \ref{epro_lem_comprobacionReferencias} es extramadamente útil pues reduce esta comprobación al cálculo de un determinante de orden $n+1$ y a la inversión de una matriz de orden $n+1$. Esto es algo que el ordenador agradece.
+\begin{lem}[Comprobación de referencias proyectivas]
+	\label{epro_lem_comprobacionReferencias}
+	Para comprobar que $n+2$ puntos proyectivos $x_i=\class{v_i}$ conforman una referencia proyectiva basta comprobar las siguientes condiciones\begin{enumerate}
 		\item Los $n+1$ primeros puntos son proyectivamente independientes.
-		\item Al escribir $v_{n+1}=\sum_{i=0}^{n}\lambda_iv_i$ se tiene que $\lambda_i\not=0\ \forall\ 0\leq i\leq n$
+		\item Al escribir $v_{n+1}=\sum_{i=0}^{n}\lambda_iv_i$ se tiene que $\lambda_i\not=0$ para todo $i\in\{0,\dots,n\}$
 	\end{enumerate}
 \end{lem}
 \begin{proof}
-	Si se cumplen las condiciones del enunciado se tiene que $\{\lambda_0u_0,\dots,\lambda_nu_n\}$ es una base de $E$. Si a este conjunto le añadimos $v_{n+1}$, sabemos por álgebra lineal que es un conjunto linealmente dependiente y un sistema de generadores de $E$. Por ende, alguno de los vectores del conjunto puede ponerse como combinación lineal de los demás, y extrayendo este elemento del conjunto, este seguirá siendo sistema de generadores. Obviamente, $v_{n+1}$ puede ponerse como combinación lineal de los demás, pero esto no nos ayuda. Lo interesante es, que como todos los coeficientes $\lambda_i$ son no nulos, podemos despejar cualquier $v_i$ de la ecuación, de esta forma:
-	\[v_{n+1}=\sum_{i=0}^{n}\lambda_iv_i\sii v_i = \sum_{j\not=i,n+1}\frac{\lambda_j}{-\lambda_i}u_j+\frac{1}{\lambda_i}u_{n+1}\]
+	Si se cumplen las condiciones del enunciado se tiene que $\{\lambda_0u_0,\dots,\lambda_nu_n\}$ es una base de $E$. Si a este conjunto le añadimos $v_{n+1}$, sabemos por álgebra lineal que es un conjunto linealmente dependiente y un sistema de generadores de $E$. Por ende, alguno de los vectores del conjunto puede ponerse como combinación lineal de los demás, y extrayendo este elemento del conjunto, este seguirá siendo sistema de generadores. Obviamente, $v_{n+1}$ puede ponerse como combinación lineal de los demás, pero esto no nos ayuda. Lo interesante es, que como todos los coeficientes $\lambda_i$ son no nulos, podemos despejar cualquier $v_i$ de la ecuación, de esta forma
+	\begin{equation*}
+		v_{n+1}=\sum_{i=0}^{n}\lambda_iv_i\sii v_i = \sum_{j\not=i,n+1}\frac{\lambda_j}{-\lambda_i}u_j+\frac{1}{\lambda_i}u_{n+1}
+	\end{equation*}
 	Entonces podemos formar $\binom{n+2}{n+1}=n+2$ conjuntos diferentes de $n+1$ vectores, si todos ellos formaran bases habríamos terminado, pero esto es evidente, ya que son sistemas de generadores de $n+1$ elementos, es decir, bases.
 \end{proof}
 Para clarificar un poco las cosas se presenta el siguiente ejemplo.
 \begin{exa}[Referencia de $\proy^2$]
-	\label{C1_exa_basesAsociadas}
-	En $\proy^2$ nos dan los puntos: \begin{gather*}a_0=(1:0:1),\ a_1=(0:2:1)\\a_2=(0:0:1),\ a_3=(1:-1:0)
+	\label{epro_exa_basesAsociadas}
+	En $\proy^2$ nos dan los puntos \begin{gather*}a_0=\class{(1,0,1)},\ a_1=\class{(0,2,1)}\\a_2=\class{(0,0,1)},\ a_3=\class{(1,-1,0)}
 	\end{gather*}
-	
-	Las coordenadas homogéneas vienen dadas según la base estándar de $\R^3$.
-	
 	Se pide estudiar si dichos puntos conforman una referencia proyectiva.
 	
-	Siguiendo el lema \ref{C1_lem_comprobacionReferencias} para ahorrarnos cálculos, vemos que los representantes de $a_0$, $a_1$ y $a_2$ son una base de $\R^3$
+	Siguiendo el lema \ref{epro_lem_comprobacionReferencias} para ahorrarnos cálculos, vemos que los representantes de $a_0$, $a_1$ y $a_2$ son una base de $\R^3$
 		\begin{equation*}
 		u_0=(1,0,1),\ u_1=(0,2,1),\ u_2=(0,0,1)
 		\end{equation*}
-	En efecto, al calcular el determinante:
+	En efecto, al calcular el determinante
 	\[\begin{vmatrix}
 	1 & 0 & 1\\
 	0 & 2 & 1\\
 	0 & 0 & 1
 	\end{vmatrix}\not= 0\]
-	Ahora, tomando $u_3=(1,-1,0)$ como representante de $a_3$, bastaría resolver el sistema de ecuaciones lineales (que sabemos compatible determinado) dado por:
-	\[\alpha u_0+\beta u_1 + \gamma u_2 = u_3\]
-	Si la matriz columna solución no tiene ningún coeficiente nulo la colección de puntos original conforma una referencia proyectiva de base asociada dada por el método de construcción de bases asociadas (teorema \ref{C1_teo_unicidadBase}), es decir, la base asociada sería:\[\mc{B}=\{\alpha u_0,\beta u_1, \gamma u_2\}\]
-	
-	Con un poquito de magia se obtiene que:\[\alpha = 1,\ \beta = -\frac{1}{2},\ \gamma = -\frac{1}{2}\]
-	Como no son todos nulos, los puntos originales conforman una referencia proyectiva.
-	
-	Una base asociada sería:
-	\[
-	\mc{B}=\left\{(1,0,1), \left(0,-1,-\frac{1}{2}\right),\left(0,0,-\frac{1}{2}\right)\right\}
-	\]
-	
-	Como esta base es única salvo proporcionalidad, podríamos multiplicar todo por $2$ para que nos queda algo más bonito:
-	\[
-	\mc{B}'=\left\{(2,0,2), \left(0,-2,-1\right),\left(0,0,-1\right)\right\}
-	\]
+	Ahora, tomando $u_3=(1,-1,0)$ como representante de $a_3$, bastaría resolver el sistema de ecuaciones lineales (que sabemos compatible determinado) dado por
+	\begin{equation*}
+		\alpha u_0+\beta u_1 + \gamma u_2 = u_3
+	\end{equation*}
+	Si la matriz columna solución no tiene ningún coeficiente nulo la colección de puntos original conforma una referencia proyectiva de base asociada dada por el método de construcción de bases asociadas (teorema \ref{epro_teo_unicidadBase}), es decir, la base asociada sería\begin{equation*}
+		\mc{B}=\{\alpha u_0,\beta u_1, \gamma u_2\}
+	\end{equation*}
+	Con un poquito de magia se obtiene que\begin{equation*}
+		\alpha = 1,\ \beta = -\frac{1}{2},\ \gamma = -\frac{1}{2}
+	\end{equation*}
+	Como son todos no nulos, los puntos originales conforman una referencia proyectiva. Una base asociada sería
+	\begin{equation*}
+		\mc{B}=\left\{(1,0,1), \left(0,-1,-\frac{1}{2}\right),\left(0,0,-\frac{1}{2}\right)\right\}
+	\end{equation*}
+	Como esta base es única salvo proporcionalidad, podríamos multiplicar todo por $2$ para que nos queda algo más bonito
+	\begin{equation*}
+		\mc{B}'=\left\{(2,0,2), \left(0,-2,-1\right),\left(0,0,-1\right)\right\}\qedhere
+	\end{equation*}
 \end{exa}
 Antes de continuar, fijemos una notación para referirnos a referencias proyectivas.
 
-Dada una referencia proyectiva $\mf{R}$, la denotaremos por los puntos que la conforman de la siguiente manera:
+Dada una referencia proyectiva $\mf{R}$, la denotaremos por los puntos que la conforman de la siguiente manera
 \begin{equation}
-\label{C1_eq_notacionReferencias}
+\label{epro_eq_notacionReferencias}
 \mf{R}=\{p_0,\dots,p_n;e\}
 \end{equation}
-Donde $e$ representa el último punto al que llamaremos \ti{punto unidad}.
-\begin{defi}[Coordenadas Homogéneas respecto de una Referencia $\mf{R}$]
-	\label{C1_def_coordenadasReferencia}
+Donde $e$ representa el último punto al que llamaremos \tbi[punto!unidad]{punto unidad}.
+\begin{defi}[Coordenadas homogéneas respecto de una referencia $\mf{R}$]
+	\label{epro_def_coordenadasReferencia}
 	Dado un punto proyectivo $p\in\proy(E)$ y una referencia proyectiva $\mf{R}$, se dice que $p=(x_0:\dots :x_n)_{\mf{R}}$ si, para cualquier elección de $u$ (representante del rayo $p$) y cualquier elección de base asociada $\mc{B}$ a $\mf{R}$, se tiene que
-	\[u=\lambda(x_0,\dots,x_n)_{\mc{B}}\]
+	\begin{equation*}
+		u=\lambda(x_0,\dots,x_n)_{\mc{B}}\text{ con } \lambda\in\K\smz
+	\end{equation*}
 \end{defi}
-Es evidente, por lo visto en la sección \ref{C1_coordenadasHomogeneas} y en el teorema \ref{C1_teo_unicidadBase}, que la definición \ref{C1_def_coordenadasReferencia} es sólida.
-\section{Cambios de Referencia Proyectiva}
+Es evidente, por lo visto en la sección \ref{epro_coordenadasHomogeneas} y en el teorema \ref{epro_teo_unicidadBase}, que la definición \ref{epro_def_coordenadasReferencia} es sólida.
+\section{Cambios de referencia proyectiva}
 Cuando realizábamos cambios de base en álgebra lineal nos preguntábamos cuáles eran las relaciones entre las coordenadas de un vector respecto de una y otra base. Bajando al mundo proyectivo nos hacemos la misma pregunta. ¿Cómo cambian las coordenadas homogéneas de un punto al realizar cambios en la referencia proyectiva?
 
-Sean dos referencias proyectivas $\mf{R}$ y $\mf{R}'$, las cuales tendrán sendas bases asociadas $\mc{B}$ y $\mc{B}'$ (únicas salvo múltiplos) (teorema \ref{C1_teo_unicidadBase}).
+Sean dos referencias proyectivas $\mf{R}$ y $\mf{R}'$, las cuales tendrán sendas bases asociadas $\mc{B}$ y $\mc{B}'$ (únicas salvo múltiplos, por el teorema \ref{epro_teo_unicidadBase}).
 
-Sea un punto $x\in\proy(E)$. Es claro que podemos expresar este punto en coordenadas homogéneas respecto de la referencia $\mf{R}$ de la siguiente manera:
-\[x=\class{u}=\class{(\alpha_0,\dots,\alpha_n)_\mc{B}}\]
-Asimismo también es claro que $x$ admite una representación en términos de la referencia $\mf{R}'$:
-\[x=\class{u}=\class{(\beta_0,\dots,\beta_n)_{\mc{B}'}}\]
+Sea un punto $x\in\proy(E)$. Es claro que podemos expresar este punto en coordenadas homogéneas respecto de la referencia $\mf{R}$ de la siguiente manera
+\begin{equation*}
+	x=\class{u}=\class{(\alpha_0,\dots,\alpha_n)_\mc{B}}
+\end{equation*}
+Asimismo también es claro que $x$ admite una representación en términos de la referencia $\mf{R}'$
+\begin{equation*}
+	x=\class{u}=\class{(\beta_0,\dots,\beta_n)_{\mc{B}'}}
+\end{equation*}
 Un problema que se presenta habitualmente es, conocida la representación de un vector respecto de cierta referencia $\mf{R}$, ¿cómo obtengo la representación respecto de otra referencia $\mf{R}'$ de mi elección?
 
-Solucionemos este problema aplicando lo que ya sabemos de álgebra lineal. Antes de comenzar, fijemos notaciones:
+Solucionemos este problema aplicando lo que ya sabemos de álgebra lineal. Antes de comenzar, fijemos notaciones
 \begin{gather*}
 	u=\mc{B}X\equiv(\alpha_0,\dots,\alpha_n)_\mc{B}\\
 	u=\mc{B}'X'\equiv(\beta_0,\dots,\beta_n)_{\mc{B}'}
 \end{gather*}
-donde los símbolos $\mc{B}$ y $\mc{B}'$ representan las matrices fila que contienen los vectores de las bases $\mc{B}$ y $\mc{B}'$ respectivamente. Asimismo, los símbolos $X$ y $X'$ representan las matrices columna de los coeficientes $\alpha_i$ (conocidos) y $\beta_i$ (desconocidos) respectivamente. Nótese que es esto es un abuso de notación, ya que no hemos definido el producto de dos matrices de estos tipos.
+donde, recordemos, los símbolos $\mc{B}$ y $\mc{B}'$ representan las matrices fila que contienen los vectores de las bases $\mc{B}$ y $\mc{B}'$ respectivamente. Asimismo, los símbolos $X$ y $X'$ representan las matrices columna de los coeficientes $\alpha_i$ (conocidos) y $\beta_i$ (desconocidos) respectivamente.
 
-Como sabemos (\ref{A1_cambioBase}), se cumplen las llamadas ``ecuaciones del cambio de base'', que dicen:
+Como sabemos (\ref{A1_cambioBase}), se cumplen las llamadas ``ecuaciones del cambio de base'', que dicen
 \begin{equation*}
 	X'=P^{-1}X
 \end{equation*}
-donde $P$ es la matriz cuyas columnas son las coordenadas de los vectores de la base $\mc{B}'$ respecto de la base $\mc{B}$. Así pues, basta poner $X'$ en ``formato de coordenadas'' para poder decir que hemos encontrado una representación (única salvo múltiplos) del punto $x$ en base a la referencia $\mf{R}'$. Es decir
+donde $P$ es la matriz cuyas columnas son las coordenadas de los vectores de la base $\mc{B}'$ respecto de la base $\mc{B}$. Así pues, basta poner $X'$ en ``formato de coordenadas'' para poder decir que hemos encontrado una representación (única salvo múltiplos) del punto $x$ en base a la referencia $\mf{R}'$.
+
+Como las coordenadas homogéneas son únicas salvo múltiplos, podemos reescribir la ecuación anterior como
 \begin{equation}
-	 \rho X'=P^{-1}X
+\label{epro_eq_cambioRef}
+	 X'=\lambda P^{-1}X
 \end{equation}
-donde $\rho$ es simplemente la constante de proporcionalidad. Dado que podemos tomar múltiplos sin problema alguno y como
+donde $\lambda\in\K\smz$ es simplemente la constante de proporcionalidad. Además, como se verifica que
 \begin{equation*}
 	P^{-1}=\frac{1}{\det{P}}P^*
 \end{equation*}
-donde $P^*$ es la adjunta traspuesta definida en álgebra lineal, la ecuación de cambio de coordenadas entre referencias proyectivas puede escribirse como
+donde $P^*$ es la matriz adjunta traspuesta de $P$, la ecuación de cambio de coordenadas entre referencias \eqref{epro_eq_cambioRef} proyectivas puede escribirse como
 \begin{equation}
-	\rho' X'=P^*X
+	X'=\lambda P^*X
 \end{equation}
-Usualmente denotaremos $M=P^*$ a la matriz de cambio de coordenadas entre referencias.
+Usualmente denotaremos $M:=P^*$ a la matriz de cambio de coordenadas entre referencias.
 
 Un ejemplo clarificará todos estos cambalaches.
-\begin{exa}[Cambio de Referencia Proyectiva]
-	Se considera el plano proyectivo $\proy^2$ y las referencias proyectivas:
+\begin{exa}[Cambio de referencia proyectiva]
+	Se considera el plano proyectivo $\proy^2$ y las referencias proyectivas
 	\begin{gather*}
-		\mf{R}:=\{(2:0:-1),(1:-1:0),(1:-1:1);(1:0:-1)\}\\
-		\mf{R}':=\{(1:1:1),(0:1:1),(1:0:1);(2:2:3)\}
+		\mf{R}:=\{\class{(2,0,-1)},\class{(1,-1,0)},\class{(1,-1,1)};\class{(1,0,-1)}\}\\
+		\mf{R}':=\{\class{(1,1,1)},\class{(0,1,1)},\class{(1,0,1)};\class{(2,2,3)}\}
 	\end{gather*}
-	Si queremos calcular las coordenadas homogéneas del punto $(2:2:2)$ respecto de $\mf{R}$ y $\mf{R'}$ deberemos tener en cuenta un par de cosas. La primera, es que las coordenadas homogéneas de todos los puntos escritos hasta ahora hace referencia a la base canónica de $\R^3$.
+	Si queremos calcular las coordenadas homogéneas del punto $\class{(2,2,2)}$ respecto de $\mf{R}$ y $\mf{R'}$ deberemos tener en cuenta un par de cosas. La primera, es que, al estar en un espacio proyectivo canónico, disponemos de una referencia canónica (aquella que tiene como base asociada la base canónica) de modo que podemos escribir todos los puntos en las coordenadas homogéneas asociadas a dicha referencia de forma inmediata.
 	
 	Por ende, basta con calcular la matriz de cambio de base de la base canónica a las bases asociadas por $\mf{R}$ y $\mf{R}'$, lo cual es algo facilísimo (una vez obtenidas sendas bases).
 	
-	Como la obtención de las mismas no es el objetivo de esta sección, las presentaremos directamente, sin embargo, si uno no se fía, siempre puede acudir al ejemplo \ref{C1_exa_basesAsociadas} y al teorema \ref{C1_teo_unicidadBase}, donde se expone un método para calcular la base asociada a una referencia.
+	Como la obtención de las mismas no es el objetivo de esta sección, las presentaremos directamente, sin embargo, si uno no se fía, siempre puede acudir al ejemplo \ref{epro_exa_basesAsociadas} y al teorema \ref{epro_teo_unicidadBase}, donde se expone un método para calcular la base asociada a una referencia.
 	\begin{gather*}
 		\mc{B}_{\mf{R}}=\{(2,0,-1),(1,-1,0),(-1,1,-1)\}\\
 		\mc{B}_{\mf{R}'}=\{(1,1,1),(0,1,1),(1,0,1)\}
@@ -484,14 +505,14 @@ Un ejemplo clarificará todos estos cambalaches.
 			2 & 2 & 2
 		\end{pmatrix}^t\equiv (2,0,0)_{\mc{B}_{\mf{R}'}}
 	\end{gather*}
-	Así pues el punto $(2:2:2)$ escrito en la referencia cuya base asociada es la canónica (o un múltiplo suyo) se escribe, salvo múltiplos, como $(2:-6:-4)$ en base a la referencia $\mf{R}$ y como $(2:0:0)$ en base a la referencia $\mf{R}'$.
+	Así pues el punto $\class{(2,2,2)}$ se escribe, salvo múltiplos, como $(2:-6:-4)$ en base a la referencia $\mf{R}$ y como $(2:0:0)$ en base a la referencia $\mf{R}'$.
 	
-	Esto suele escribirse de la siguiente manera:
+	Esto suele escribirse de la siguiente manera
 	\begin{gather*}
-		x=(2:2:2)=\rho(2:-6:-4)_{\mf{R}}\ \forall \rho\in\R\smz\\
-		x=(2:2:2)=\rho(2:0:0)_{\mf{R}'}\ \forall \rho\in\R\smz
+		x=(2:2:2)=\lambda(2:-6:-4)_{\mf{R}}\text{ para todo } \lambda\in\K\smz\\
+		x=(2:2:2)=\lambda(2:0:0)_{\mf{R}'}\text{ para todo } \lambda\in\K\smz
 	\end{gather*}
-	Por ende, podemos escoger representaciones más o menos bonitas para nuestro punto dividiendo nuestras coordenadas homogéneas por el escalar no nulo que nos convenga. En ese caso:
+	Donde la primera escritura de $x$ en ambas ecuaciones se corresponde a la referencia cuya base asociada es la canónica. En definitiva, podemos escoger representaciones más o menos bonitas para nuestro punto jugando con la equivalencia salvo proporcionalidad. Por ejemplo
 	\begin{gather*}
 		x=(1:-3:-2)_{\mf{R}}\\
 		x=(1:0:0)_{\mf{R}'}

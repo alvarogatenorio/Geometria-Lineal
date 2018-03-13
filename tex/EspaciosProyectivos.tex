@@ -2,6 +2,7 @@
 %En este capítulo usaremos la abreviatura "epro".
 \label{epro}
 \epigraph{``\ti{Nadie entre aquí que no sepa Geometría}''}{Frontispicio de la Academia de Platón}
+
 \section{El espacio proyectivo}
 Sea $E$ un $\K$--espacio vectorial arbitrario.
 
@@ -248,7 +249,7 @@ Sea $E$ un $\K$--espacio vectorial cualquiera de dimensión $n+1$. Sabemos (o de
 \label{epro_eq_combinacionLineal}
 x=\sum_{i=0}^{n}\lambda_ie_i\stackrel{\textrm{not.}}{\equiv}(\lambda_0,\dots,\lambda_n)_{\mc{B}}\stackrel{\textrm{not.}}{\equiv}\mc{B}X
 \end{equation}
-Nótese que para verle sentido a las equivalencias de la ecuación \eqref{epro_eq_combinacionLineal}, sería conveniente echarle un ojo a la sección \ref{kkk}, donde se habla con detalle de estas notaciones que tanto nos facilitan la existencia.
+Nótese que para verle sentido a las equivalencias de la ecuación \eqref{epro_eq_combinacionLineal}, sería conveniente echarle un ojo a la sección \ref{repasoVect_cambioBase}, donde se habla con detalle de estas notaciones que tanto nos facilitan la existencia.
 
 Volviendo al mundo proyectivo, queremos encontrar cierta colección de puntos proyectivos en función de los cuales poder ``escribir'' todos los demás. 
 \subsection{Coordenadas homogéneas}
@@ -277,7 +278,7 @@ Con un poco de trabajo adicional extraemos la siguiente caracterización de la i
 	Un conjunto de puntos proyectivos es proyectivamente independiente si y solo si sus representantes (cualesquiera) son linealmente independientes, sin depender de la elección de los mismos. 
 \end{lem}
 \begin{proof}
-	Decir que los representantes son linealmente independientes es equivalente a decir que, dado un de ellos, no puede ser expresado como combinación lineal de los restantes y por ende no se encuentra en la variedad lineal engendrada por estos. Por la ecuación \eqref{epro_eq_explicitaEngendrados} sabemos que
+	Decir que los representantes son linealmente independientes es equivalente a decir que, dado uno de ellos, no puede ser expresado como combinación lineal de los restantes y por ende no se encuentra en la variedad lineal engendrada por estos. Por la ecuación \eqref{epro_eq_explicitaEngendrados} sabemos que
 	\begin{equation*}
 		u_i\not\in\lengen{u_0,\dots,u_{i-1},u_{u+1},\dots,u_{r}}\sii p_i=\class{u_i}\not\in\engen{p_0,\dots,p_{i-1},p_{i+1},\dots,p_r}\qedhere
 	\end{equation*}
@@ -286,7 +287,7 @@ Con un poco de trabajo adicional extraemos la siguiente caracterización de la i
 	\label{epro_obs_baseInducida}
 	En un espacio proyectivo de dimensión $n$, podemos escoger (como mucho) un conjunto de $n+1$ puntos proyectivamente independientes ya que, para cualquier elección de representantes de estos puntos, se obtendrían $n+1$ vectores linealmente independientes del espacio vectorial asociado $E$, de dimensión $n+1$, en el cual estos vectores, por definición formarían una base a la que llamaremos \tbi[base!inducida]{base inducida}.
 \end{obs}
-Hay un gran problema con la definición \ref{epro_def_independenciaProyectiva}, y es que, dados $n+1$ puntos proyectivos, inducimos una familia de bases de $E$ demasiado ``grande''. Con ``grande'' nos referimos a que no solo inducimos una base junto con todas las proporcionales a ella (resultantes de aplicarle el mismo factor de escala a todos sus vectores), sino muchas más (lo cual es bastante indeseable).
+Hay un gran problema con la definición \ref{epro_def_independenciaProyectiva}, y es que, dados $n+1$ puntos proyectivos, inducimos una familia de bases de $E$ demasiado ``grande''. Con ``grande'' nos referimos a que no solo inducimos una base junto con todas las proporcionales a ella (resultantes de aplicarle el mismo factor de escala a todos sus vectores), sino muchas más, lo cual es bastante indeseable. Lo bonito sería tener únicamente un ``rayo de bases''.
 \begin{obs}[No unicidad de la base inducida]
 	\label{epro_obs_noUnicidadBase}
 	Dados $n+1$ puntos proyectivamente independientes y dada una elección de representantes $\{u_0,\dots,u_n\}$ (que son una base de $E$), entonces, el conjunto de representantes $\{\lambda_0u_0,\dots,\lambda_nu_n\}$, con $\lambda_i\in\K\smz$ también conforma una base de $E$.
@@ -523,3 +524,50 @@ Un ejemplo clarificará todos estos cambalaches.
 	 
 	 En el contexto proyectivo esto sigue siendo cierto, basta darse cuenta de que $x$ es en realidad el primer punto de la referencia $\mf{R}$, por lo que admite una representación tan agradable. Este hecho, cuya comprobación se deja al lector, es de gran utilidad, por lo que será empleado sin previo aviso a lo largo del texto. 
 \end{exa}
+\section{Problemas}
+Siempre que se trabaje sobre espacios canónicos, y a no ser que se especifique lo contrario, supondremos que los puntos proyectivos están escritos respecto de la referencia canónica.
+\begin{prob}
+	Decídase si los puntos $(1:0:2)$, $(2:-1:3)$ y $(1:-1:1)$ están alineados.
+\end{prob}
+\begin{prob}
+	Demuéstrese que existe una única recta $r$ de un espacio proyectivo tridimensional que corta en dos rectas $s$ y $t$ que se cruzan (no se cortan) y pasa por un punto $p$ no perteneciente a ninguna de las dos rectas.
+\end{prob}
+\begin{prob}
+	Si $p=(x_0:x_1)\in\proy^1$, encuéntrense sus coordenadas respecto del triángulo de referencia formado por los puntos $(2:-1)$, $(1:1)$ y $(0:1)$.
+\end{prob}
+\begin{prob}
+	Demuéstrese que si $X,Y\subset\proy(E)$ son subespacios proyectivos tales que $\dim(X) + \dim(Y) = \dim(\proy(E))$ entonces $X\cap Y\not=\emptyset$.
+\end{prob}
+\begin{prob}
+	Demuéstrese que $X\subset\proy(E)$ es una variedad proyectiva si y sólo si para cualesquiera dos puntos $P,Q\in X$ la recta $PQ:=\engen{P,Q}$ está enteramente contenida en $X$.
+\end{prob}
+\begin{prob}
+	Demuéstrese que si $X,Y\subset \proy(E)$ son variedades proyectivas entonces la variedad proyectiva $\engen{X,Y}$ es la unión de todas las rectas $PQ:=\engen{P,Q}$ con $P\in X$ y $Q\in Y$.
+\end{prob}
+\begin{prob}
+	Calcúlese el número de puntos que hay en un espacio proyectivo de dimensión $n$ sobre un cuerpo finito con $q$ elementos.
+	%plano de Fano
+\end{prob}
+\begin{prob}
+	Demuéstrese que tres rectas distintas de un espacio proyectivo tridimensional que se cortan dos a dos o bien están contenidas en un plano o bien pasan por un punto
+	común.
+\end{prob}
+\begin{prob}
+	Encuéntrese una referencia proyectiva $\mf{R}$ y la matriz $M$ de cambio de coordenadas que haga que los puntos $(2:1)$, $(-1:2)$ y $(1:1)$ pasen a tener
+	coordenadas $(-1:3)_{\mf{R}}$, $(0:2)_{\mf{R}}$ y $(-1:1)_{\mf{R}}$, respectivamente.
+\end{prob}
+\begin{prob}
+	Estúdiese si la referencia $\mf{R}=\{(1:1:0),(0:1:1),(1:1:1);(-1:0:1)\}$ es una referencia proyectiva. Si lo es, encuéntrense la matriz de cambio de coordenadas respecto a la referencia canónica.
+\end{prob}
+\begin{prob}
+	Las coordenadas de un punto genérico $P$ son $(x:y:z)$ respecto a un sistema de coordenadas en el que $A$, $B$ y $C$ son los puntos ``de referencia'' y $D$ es el
+	punto unidad. Asimismo, las coordenadas de $P$ son $(x':y':z')$ en el sistema en el que los puntos ``de referencia'' son $D$, $B$ y $C$ y el punto unidad es $A$.
+	
+	Encuéntrese la matriz de cambio de coordenadas entre ambas referencias. Hállese también la matriz de cambio de coordenadas desde la primera referencia hasta otra donde $A$, $B$, $C$ y $D$ tienen coordenadas $(-1:1:1)$, $(1:-1:1)$, $(1:1:-1)$ y $(1:1:1)$, respectivamente.
+\end{prob}
+\begin{prob}
+	Estúdiese para qué valores del parámetro $a$ los puntos $(1:0:2)$, $(0:1:1)$, $(-1:1:1)$ y $(1:a:1)$ resultan ser una referencia proyectiva.
+\end{prob}
+\begin{prob}
+	Encuéntrese una biyección entre la recta proyectiva compleja $\proy(\C^2)$ y la esfera $\mc{S}_2:=\{(x,y,z)\in\R^3\tq x^2+y^2+z^2=1\}$
+\end{prob}

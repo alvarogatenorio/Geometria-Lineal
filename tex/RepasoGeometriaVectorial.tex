@@ -1,36 +1,13 @@
-\chapter{Geometría Vectorial}
-\label{GeometriaVectorial}
-Este apéndice está especialmente pensado para los alumnos de los dobles grados, que, a fecha de escribir este texto, cursan la asignatura de geometría lineal y la de álgebra lineal con un año de separación.
-
-Este hecho añade a la presente materia un plus de dificultad, pues hace echar mano constantemente de la bibliografía de primer curso, que, en muchas ocasiones, no es sufiente, por ejemplo en el estudio de la \ti{dualidad}.
-
-Algo que merece la pena recalcar es que aquí únicamente se incluyen los resultados más elementales acerca de dualidad, ya que sabemos por experiencia que los resultados más profundos se omiten en un primer curso de álgebra lineal (a pesar de ser harto necesarios aquí). Es por esta razón, no hacer visitar un apéndice al lector sin necesidad, que estos conceptos gozan de sección propia en el texto ordinario.
-
-El objetivo de este anexo no es otro que recopilar los conceptos y resultados que consideramos totalmente imprescindibles para seguir el texto, no obstante, no pretende ser, ni mucho menos, tan completo o rico en ejemplos como otros títulos específicos de álgebra lineal que se recomiendan en la bibliografía.
-\section{Coordenadas en Espacios Vectoriales}
+\chapter{Repaso de geometría vectorial}
+\section{Algunos resultados de álgebra matricial}
+MULTIPLICACIÓN DE MATRICES POR BLOQUES
+\section{Coordenadas y cambios de base}
+\label{repasoVect_cambioBase}
 El objetivo de esta sección es servir como pequeño área de repaso a la hora de entrar en conceptos íntimamente ligados con los cambios de base en espacios vectoriales. Un ejemplo claro de esto son los cambios de referencia proyectiva.
 
-Sea $E$ un $\K$--espacio vectorial de dimensión finita $n$.
 
-Asimismo, consideraremos la base $\mc{B}:=\{b_1,\dots,b_n\}$ de $E$.
 
-\begin{prop}[Escritura Única de un Vector]
-	\label{A1_prop_escrituraUnicaVector}
-	Dado un vector $u\in E$, este tiene una escritura \tb{única} como combinación lineal de los vectores de la base $\mc{B}$.
-\end{prop}
-\begin{proof}
-	La existencia de esta escritura es evidente, por ser $\mc{B}$ una base de $E$, y, por tanto, un sistema de generadores. En consecuencia, lo único que hay que probar es la unicidad de dicha combinación lineal. En efecto, supongamos que hubiera dos:
-	\[u=\alpha_1b_1+\dots+\alpha_nb_n=\beta_1b_1+\dots+\beta_nb_n
-	\]
-	Pasando todo al segundo miembro y sacando factor común obtenemos:
-	\[(\alpha_1-\beta_1)b_1+\dots+(\alpha_n-\beta_n)b_n=0\]
-	Como los vectores de la base son linealmente independientes, se tiene que todos los coeficientes deben ser nulos. Es decir:
-	\[\begin{array}{lr}
-	\alpha_i-\beta_i=0 & \forall i\in\{1,\dots,n\}
-	\end{array}\]
-	De donde se sigue la necesaria igualdad de ambas escrituras.
-\end{proof}
-\begin{obs}[Coordenadas de un Vector Respecto de una Base]
+\begin{obs}[Coordenadas de un vector respecto de una base]
 	\label{A1_obs_coordenadasVector}
 	Es evidente que, \tb{fijada una base}, todo vector queda caracterizado por su escritura como combinación lineal de los vectores de dicha base. Es por este motivo que, dado un vector $u\in E$ cualquiera, emplearemos la siguiente notación:
 	\[
@@ -40,18 +17,8 @@ Asimismo, consideraremos la base $\mc{B}:=\{b_1,\dots,b_n\}$ de $E$.
 \end{obs}
 Por supuesto, si decidimos tomar otra base $\mc{B}'$, las coordenadas de los vectores respecto de la base $\mc{B}'$ serán, en general, distintas a las coordenadas respecto de $\mc{B}$.
 
-Un problema interesante, y que resolveremos en \ref{A1_cambioBase}, consiste en encontrar una relación o ligadura entre ambas coordenadas.
-
-\begin{obs}[Coordenadas del $i$--ésimo Vector de la Base]
-	\label{A1_obs_coordenadasVectorBase}
-	Dado el vector $b_i$, es interesante notar que sus coordenadas respecto de la base $\mc{B}$, de la que, recordemos, es el $i$--ésimo vector, son:
-	\[
-	b_i=(0,\dots,\overbrace{1}^{i},\dots,0)_{\mc{B}}
-	\]
-	La comprobación es inmediata y se deja al lector.
-\end{obs}
-\subsection{Matriz de Cambio de Base}
-\label{A1_cambioBase}
+Un problema interesante, consiste en encontrar una relación o ligadura entre ambas coordenadas.
+\subsection{Cambios de base}
 Sean $\mc{B}:=\{e_1,\dots,e_n\}$ y $\mc{B}':=\{e_1',\dots,e_n'\}$ dos bases de un espacio vectorial $E$.
 En estas condiciones, dado un vector cualquiera $u\in E$, podemos escribirlo de dos maneras distintas:
 \begin{gather}
@@ -191,103 +158,3 @@ Antes de meternos con el segundo método (que aligera los cálculos), necesitamo
 	Dado un sistema homogéneo de $n$ ecuaciones lineales, para que su conjunto de soluciones dependa de $r$ parámetros, es decir, para que obtenegamos unas ecuaciones paramétricas con $r$ incógnitas, debe haber exactamente $n-r$ ``ecuaciones esenciales''.
 \end{proof}
 \paragraph{Método de Eliminación de Parámetros} Para obtener unas ecuaciones cartesianas a partir de unas ecuaciones paramétricas, basta interpretar a las ecuaciones paramétricas como la solución al sistema homogéneo de ecuaciones lineales que queremos encontrar. Es decir, deberemos aplicar el algoritmo de Gauss--Jordan al revés.
-\newpage
-\section{Dualidad}
-Sea $E$ un $\K$--espacio vectorial de dimensión $n$.
-\begin{defi}[Espacio Dual]
-	Se llama \ti{espacio dual} de $E$ al conjunto todas de las aplicaciones lineales que nacen en $E$ y mueren en $\K$. Es decir:
-	\[E^*:=\{f\in\mathrm{Hom}(E,\K)\}\]
-	A las aplicaciones lineales que conforman el espacio dual se las denomina \ti{formas lineales}.
-\end{defi}
-Nótese que si $E^*$ recibe el nombre de ``espacio'', es porque se lo merece, es decir, $E^*$ tiene estructura de espacio vectorial (la comprobación es inmediata).
-
-A continuación calculamos de manera inmediata la dimensión del espacio dual.
-\begin{lem}[Dimensión del Espacio Dual]
-	$\dim(E)=\dim(E^*)$
-\end{lem}
-\begin{proof}
-	contenidos...
-\end{proof}
-
-Continuemos definiendo varios conceptos imprescindibles del espacio dual.
-\begin{defi}[Anulador de un Subconjunto]
-	\label{A1_def_anulador}
-	Sea $S$ un subconjunto de $E$, denominamos \ti{anulador de $S$} al conjunto de las formas lineales tales que anulan todos los vectores de $S$. Es decir:
-	\[S^{\perp}=\{f\in E^*\tq f(u)=0\ \forall u\in S\}\]
-\end{defi}
-Es un ejercicio de cálculo rutinario la demostración de que el anulador de un subespacio de $E$ es un subespacio de $E^*$.
-
-Una propiedad interesante de los anuladores es que el anulador de un subconjunto $S$, coincide con el anulador de la variedad lineal engendrada por $S$. Veámoslo.
-
-\begin{lem}[Anuladores y Variedades Engendradas]
-	\label{A1_lem_anuladorBase} Sea $S$ un subconjunto arbitrario no vacío de $E$, entonces:
-	\[S^{\perp}=\lengen{S}^{\perp}\]
-\end{lem}\begin{proof}
-\begin{itemize}
-	\item[\bsubset] Consideremos una forma lineal $f\in S^{\perp}$, como todo vector de $x\in\lengen{S}$ se escribe de la forma $x=\alpha_1s_1+\dots+\alpha_rs_r$, está claro que, usando la linealidad de $f$, $f(x)=0$.
-	\item[\bsupset] Como $S\subset\lengen{S}$, toda forma lineal que anule los vectores de $\lengen{S}$ también anulará a los vectores de $S$.
-\end{itemize}
-\end{proof}
-Se presenta a continuación un resultado importante en el estudio de la dualidad. Se incluye aquí por poseer una demostración que solo aportaría ruido en el texto principal. A pesar de parecer trivial, a mi entender, no lo es tanto.
-\begin{prop}[Criterio de Equivalencia de Ecuaciones Homogéneas]
-	\label{A1_prop_criterioEquivalencia}
-	Dadas dos ecuaciones lineales homogéneas equivalentes:
-	\begin{gather*}
-		A\equiv a_1x_1+\dots+a_nx_n=0\\
-		B\equiv b_1x_1+\dots+b_nx_n=0
-	\end{gather*}
-	Entonces son múltiplos la una de la otra, es decir:
-	\[b_i=\lambda a_i\ \forall i\in\{1,\dots,n\}\]
-\end{prop}
-\begin{proof}
-	Supongamos que no.
-	
-	Cada ecuación tendrá una matriz fila asociada:
-	\begin{gather*}
-		A=\begin{pmatrix}
-			a_1 & \cdots & a_n
-		\end{pmatrix}\\
-		B=\begin{pmatrix}
-			b_1 & \cdots & b_n
-		\end{pmatrix}
-	\end{gather*}
-	Por definición de ``equivalencia por filas'', estas dos matrices serán equivalentes por filas si y solo si una es múltiplo de la otra, como esto no pasa, las matrices no son equivalentes por filas y por ende tendrán distinta forma normal de Hermite por filas.
-	\begin{gather*}
-		A\equiv H_A^f=\begin{pmatrix}
-			1 & a_2' & \cdots & a_n'
-		\end{pmatrix}\\
-		B\equiv H_B^f=\begin{pmatrix}
-			1 & b_2' & \cdots & b_n'
-		\end{pmatrix}
-	\end{gather*}
-	
-	Estas matrices inducen sendas ecuaciones lineales equivalentes a la primera y segunda ecuación respectivamente.
-	
-	Como $H_A^f\not=H_B^f$ existe al menos un $i\in\{2,\dots,n\}$ tal que $a_i'\not=b_i'$. Supongamos sin pérdida de generalidad (pues siempre podemos renombrar y recolocar incógnitas) que:
-	\begin{gather*}
-		a_i'=b_i'\ \forall i\in\{2,\dots,r\}\\
-		a_j'\not=b_j'\ \forall j\in\{r+1,\dots,n\}
-	\end{gather*}
-	Sea $(\alpha_1,\dots,\alpha_n)$ una solución no trivial con las $n-r$ últimas componentes no nulas (esto siempre puede hacerse al depender la solución de la ecuación de $n-1$ parámetros) para la primera ecuación. Veámos que, en caso de ser solución de la segunda, ambas ecuaciones serían múltiplos la una de la otra (llegando así a un absurdo).
-	
-	Por el momento tenemos:
-	\[B\equiv\alpha_1+b_2'\alpha_2+\dots+b_n'\alpha_n=\xi\]
-	
-	Sumamos la primera ecuación a la segunda y reagrupamos términos:
-	\[2\alpha_1+2a_2'\alpha_2+\dots+2a_r'\alpha_r+\alpha_{r+1}(a_{r+1}'+b_{r+1}')+\dots+\alpha_n(a_n'+b_n')=\xi+0=\xi\]
-	Con una notación más compacta:
-	\[2\alpha_1+2\sum_{i=2}^{r}a_i'\alpha_i+\sum_{j=r+1}^{n}(a_j'+b_j')\alpha_j=\xi\]
-	Tratemos de encontrar una expresión para $\xi$, partiendo de que:
-	\[ A\equiv2\alpha_1+2\sum_{i=2}^{r}a_i'\alpha_i+2\sum_{j=r+1}^{n}a_j'\alpha_j=0\]
-	Pasando el segundo término al otro lado:
-	\[2\alpha_1+2\sum_{i=2}^{r}a_i'\alpha_i=-2\sum_{j=r+1}^{n}a_j'\alpha_j\]
-	Sumando $\sum_{j=r+1}^{n}(a_j'+b_j')\alpha_i$ a ambos lados:
-	\[2\alpha_1+2\sum_{i=2}^{r}a_i'\alpha_i+\sum_{j=r+1}^{n}(a_j'+b_j')\alpha_j=-2\sum_{j=r+1}^{n}a_j'\alpha_j+\sum_{j=r+1}^{n}(a_j'+b_j')\alpha_j=\xi\]
-	Luego por fin, reagrupando:
-	\[\xi=\sum_{j=r+1}^{n}\alpha_{j}(b_{j}'-a_{j}')\]
-	Recapitulemos. Teníamos que:
-	\[\alpha_1+b_2'\alpha_2+\dots+b_n'\alpha_n=\xi\]
-	Si $\xi=0$ tendríamos que:
-	\begin{multline*}B\equiv\alpha_1+b_2'\alpha_2+\dots+b_n'\alpha_n\stackrel{\xi=0}{=}\alpha_1+b_2'\alpha_2+\dots+b_n'\alpha_n-\xi=\\ =\alpha_1+\sum_{i=2}^{r}a_i'\alpha_i+\sum_{j=r+1}^{n}b_j'\alpha_j-\sum_{j=r+1}^{n}\alpha_{j}(b_{j}'-a_{j}')=\alpha_1+\sum_{k=2}^{n}a_k'\alpha_k=0\end{multline*}
-	Luego $b_k'=a_k'\ \forall j\in\{r+1,\dots,n\}$, lo cual contradice que las formas normales de Hermite sean distintas.
-\end{proof}

@@ -1,5 +1,5 @@
 \BOOKMARK [0][-]{section*.5}{Prefacio}{}% 1
-\BOOKMARK [-1][-]{part.1}{I Geometr\355a proyectiva. Variedades proyectivas lineales}{}% 2
+\BOOKMARK [-1][-]{part.1}{I Geometr\355a proyectiva pura. Variedades proyectivas lineales}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Espacio proyectivo y variedades proyectivas}{part.1}% 3
 \BOOKMARK [1][-]{section.1.1}{El espacio proyectivo}{chapter.1}% 4
 \BOOKMARK [2][-]{subsection.1.1.1}{Primera aproximaci\363n}{section.1.1}% 5
@@ -15,104 +15,105 @@
 \BOOKMARK [2][-]{subsection.1.4.2}{Referencias proyectivas}{section.1.4}% 15
 \BOOKMARK [2][-]{subsection.1.4.3}{Base asociada a una referencia proyectiva}{section.1.4}% 16
 \BOOKMARK [1][-]{section.1.5}{Cambios de referencia proyectiva}{chapter.1}% 17
-\BOOKMARK [0][-]{chapter.2}{Dualidad}{part.1}% 18
-\BOOKMARK [1][-]{section.2.1}{Dualidad en espacios vectoriales}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.1.1}{Formas Lineales e Hiperplanos}{section.2.1}% 20
-\BOOKMARK [2][-]{subsection.2.1.2}{Dualidad Can\363nica}{section.2.1}% 21
-\BOOKMARK [2][-]{subsection.2.1.3}{Principio de Dualidad}{section.2.1}% 22
-\BOOKMARK [1][-]{section.2.2}{Dualidad en espacios proyectivos}{chapter.2}% 23
-\BOOKMARK [2][-]{subsection.2.2.1}{Formas Lineales e Hiperplanos Proyectivos}{section.2.2}% 24
-\BOOKMARK [2][-]{subsection.2.2.2}{Dualidad Can\363nica}{section.2.2}% 25
-\BOOKMARK [2][-]{subsection.2.2.3}{Principio de Dualidad para espacios proyectivos}{section.2.2}% 26
-\BOOKMARK [0][-]{chapter.3}{Ecuaciones de Variedades Proyectivas}{part.1}% 27
-\BOOKMARK [1][-]{section.3.1}{Rectas Proyectivas}{chapter.3}% 28
-\BOOKMARK [2][-]{subsection.3.1.1}{Ecuaciones Param\351tricas}{section.3.1}% 29
-\BOOKMARK [2][-]{subsection.3.1.2}{Ecuaci\363n Impl\355cita}{section.3.1}% 30
-\BOOKMARK [2][-]{subsection.3.1.3}{Intersecci\363n de dos Rectas Proyectivas}{section.3.1}% 31
-\BOOKMARK [2][-]{subsection.3.1.4}{Cambio de referencia de rectas proyectivas}{section.3.1}% 32
-\BOOKMARK [1][-]{section.3.2}{Planos Proyectivos}{chapter.3}% 33
-\BOOKMARK [2][-]{subsection.3.2.1}{Ecuaciones param\351tricas}{section.3.2}% 34
-\BOOKMARK [2][-]{subsection.3.2.2}{Ecuaci\363n impl\355cita}{section.3.2}% 35
-\BOOKMARK [1][-]{section.3.3}{Haz de hiperplanos}{chapter.3}% 36
-\BOOKMARK [2][-]{subsection.3.3.1}{Haz de rectas}{section.3.3}% 37
-\BOOKMARK [2][-]{subsection.3.3.2}{Haz de hiperplanos}{section.3.3}% 38
-\BOOKMARK [1][-]{section.3.4}{Teorema de Pappus}{chapter.3}% 39
-\BOOKMARK [0][-]{chapter.4}{Aplicaciones Proyectivas}{part.1}% 40
-\BOOKMARK [1][-]{section.4.1}{Definici\363n}{chapter.4}% 41
-\BOOKMARK [1][-]{section.4.2}{Propiedades Elementales}{chapter.4}% 42
-\BOOKMARK [1][-]{section.4.3}{Proyecciones C\363nicas}{chapter.4}% 43
-\BOOKMARK [1][-]{section.4.4}{Homograf\355as}{chapter.4}% 44
-\BOOKMARK [2][-]{subsection.4.4.1}{Homograf\355as y Teor\355a de Grupos}{section.4.4}% 45
-\BOOKMARK [1][-]{section.4.5}{Aplicaciones Proyectivas y Matrices}{chapter.4}% 46
-\BOOKMARK [2][-]{subsection.4.5.1}{Recordatorio de \301lgebra Lineal}{section.4.5}% 47
-\BOOKMARK [2][-]{subsection.4.5.2}{Matriz Asociada a una Aplicaci\363n Proyectiva}{section.4.5}% 48
-\BOOKMARK [2][-]{subsection.4.5.3}{Transformaciones de M\366bius}{section.4.5}% 49
-\BOOKMARK [0][-]{chapter.5}{Raz\363n Doble}{part.1}% 50
-\BOOKMARK [1][-]{section.5.1}{Definici\363n}{chapter.5}% 51
-\BOOKMARK [1][-]{section.5.2}{Propiedades}{chapter.5}% 52
-\BOOKMARK [1][-]{section.5.3}{Simetr\355as de la raz\363n doble}{chapter.5}% 53
-\BOOKMARK [1][-]{section.5.4}{Cuaternas Arm\363nicas}{chapter.5}% 54
-\BOOKMARK [1][-]{section.5.5}{C\341lculo de la Raz\363n Doble en Pn}{chapter.5}% 55
-\BOOKMARK [2][-]{subsection.5.5.1}{Raz\363n Doble en Pn}{section.5.5}% 56
-\BOOKMARK [2][-]{subsection.5.5.2}{Raz\363n Doble y Dualidad}{section.5.5}% 57
-\BOOKMARK [0][-]{chapter.6}{Clasificaci\363n de homograf\355as}{part.1}% 58
-\BOOKMARK [1][-]{section.6.1}{Clasificaci\363n de homograf\355as de P1. Puntos fijos}{chapter.6}% 59
-\BOOKMARK [2][-]{subsection.6.1.1}{Dos puntos fijos distintos}{section.6.1}% 60
-\BOOKMARK [2][-]{subsection.6.1.2}{Un punto fijo doble}{section.6.1}% 61
-\BOOKMARK [1][-]{section.6.2}{Formas can\363nicas de Jordan y puntos fijos}{chapter.6}% 62
-\BOOKMARK [1][-]{section.6.3}{Aplicaciones afines}{chapter.6}% 63
-\BOOKMARK [2][-]{subsection.6.3.1}{Aplicaciones afines y homograf\355as de Pn}{section.6.3}% 64
-\BOOKMARK [1][-]{section.6.4}{Involuciones}{chapter.6}% 65
-\BOOKMARK [2][-]{subsection.6.4.1}{Haz de ecuaciones de segundo grado}{section.6.4}% 66
-\BOOKMARK [0][-]{chapter.7}{Perspectividades}{part.1}% 67
-\BOOKMARK [1][-]{section.7.1}{Teorema de Desargues}{chapter.7}% 68
-\BOOKMARK [1][-]{section.7.2}{Perspectividades}{chapter.7}% 69
-\BOOKMARK [2][-]{subsection.7.2.1}{Perspectividades y Dualidad}{section.7.2}% 70
-\BOOKMARK [1][-]{section.7.3}{Factorizaci\363n de Homograf\355as}{chapter.7}% 71
-\BOOKMARK [1][-]{section.7.4}{Teorema del Eje}{chapter.7}% 72
-\BOOKMARK [1][-]{section.7.5}{Otras Demostraciones del Teorema de Desargues}{chapter.7}% 73
-\BOOKMARK [-1][-]{part.2}{II Variedades cuadr\341ticas. Conexiones con otras geometr\355as}{}% 74
-\BOOKMARK [0][-]{chapter.8}{C\363nicas y Cu\341dricas}{part.2}% 75
-\BOOKMARK [1][-]{section.8.1}{Conceptos Previos. Formas Bilineales y Cuadr\341ticas}{chapter.8}% 76
-\BOOKMARK [2][-]{subsection.8.1.1}{Formas Bilineales}{section.8.1}% 77
-\BOOKMARK [2][-]{subsection.8.1.2}{Formas Cuadr\341ticas}{section.8.1}% 78
-\BOOKMARK [1][-]{section.8.2}{Cu\341dricas y Matrices}{chapter.8}% 79
-\BOOKMARK [2][-]{subsection.8.2.1}{Cu\341dricas y P}{section.8.2}% 80
-\BOOKMARK [1][-]{section.8.3}{Determinaci\363n de una C\363nica}{chapter.8}% 81
-\BOOKMARK [2][-]{subsection.8.3.1}{Intento de Resoluci\363n}{section.8.3}% 82
-\BOOKMARK [2][-]{subsection.8.3.2}{C\363nicas Degeneradas. Producto de Rectas}{section.8.3}% 83
-\BOOKMARK [2][-]{subsection.8.3.3}{Teorema de Determinaci\363n}{section.8.3}% 84
-\BOOKMARK [2][-]{subsection.8.3.4}{Haces de C\363nicas}{section.8.3}% 85
-\BOOKMARK [1][-]{section.8.4}{Clasificaci\363n de las C\363nicas No Degeneradas}{chapter.8}% 86
-\BOOKMARK [1][-]{section.8.5}{Cu\341dricas, c\363nicas y cambio de referencia}{chapter.8}% 87
-\BOOKMARK [1][-]{section.8.6}{C\363nicas degeneradas}{chapter.8}% 88
-\BOOKMARK [1][-]{section.8.7}{Recta polar de un punto respecto de una c\363nica}{chapter.8}% 89
-\BOOKMARK [1][-]{section.8.8}{C\363nicas Duales}{chapter.8}% 90
-\BOOKMARK [2][-]{subsection.8.8.1}{C\363nicas duales degeneradas}{section.8.8}% 91
-\BOOKMARK [1][-]{section.8.9}{Parametrizaci\363n de c\363nicas}{chapter.8}% 92
-\BOOKMARK [2][-]{subsection.8.9.1}{Parametrizaci\363n de c\363nicas como par\341bolas}{section.8.9}% 93
-\BOOKMARK [2][-]{subsection.8.9.2}{Parametrizaci\363n de c\363nicas y polinomios}{section.8.9}% 94
-\BOOKMARK [2][-]{subsection.8.9.3}{Otras parametrizaciones}{section.8.9}% 95
-\BOOKMARK [1][-]{section.8.10}{Teorema de Steiner}{chapter.8}% 96
-\BOOKMARK [1][-]{section.8.11}{Raz\363n doble en c\363nicas}{chapter.8}% 97
-\BOOKMARK [2][-]{subsection.8.11.1}{C\341lculo de la raz\363n doble}{section.8.11}% 98
-\BOOKMARK [2][-]{subsection.8.11.2}{Raz\363n doble en c\363nicas duales}{section.8.11}% 99
-\BOOKMARK [1][-]{section.8.12}{Involuciones de la c\363nica}{chapter.8}% 100
-\BOOKMARK [1][-]{section.8.13}{Homograf\355as de la c\363nica}{chapter.8}% 101
-\BOOKMARK [1][-]{section.8.14}{Clasificaci\363n de haces de c\363nicas}{chapter.8}% 102
-\BOOKMARK [0][-]{chapter.9}{Geometr\355a Af\355n y Eucl\355dea}{part.2}% 103
-\BOOKMARK [1][-]{section.9.1}{Espacio Af\355n Cl\341sico}{chapter.9}% 104
-\BOOKMARK [2][-]{subsection.9.1.1}{Definici\363n y Ejemplos}{section.9.1}% 105
-\BOOKMARK [2][-]{subsection.9.1.2}{Variedades afines}{section.9.1}% 106
-\BOOKMARK [2][-]{subsection.9.1.3}{Espacio af\355n y proyectivo}{section.9.1}% 107
-\BOOKMARK [2][-]{subsection.9.1.4}{Propiedades del espacio af\355n}{section.9.1}% 108
-\BOOKMARK [2][-]{subsection.9.1.5}{Definici\363n de espacio af\355n alternativa}{section.9.1}% 109
-\BOOKMARK [2][-]{subsection.9.1.6}{Referencias afines y proyectivas}{section.9.1}% 110
-\BOOKMARK [-1][-]{part.3}{III Anexos}{}% 111
-\BOOKMARK [0][-]{appendix.Alph1}{Geometr\355a Vectorial}{part.3}% 112
-\BOOKMARK [1][-]{section.Alph1.1}{Coordenadas en Espacios Vectoriales}{appendix.Alph1}% 113
-\BOOKMARK [2][-]{subsection.Alph1.1.1}{Matriz de Cambio de Base}{section.Alph1.1}% 114
-\BOOKMARK [1][-]{section.Alph1.2}{Ecuaciones de Subespacios}{appendix.Alph1}% 115
-\BOOKMARK [2][-]{subsection.Alph1.2.1}{Existencia de las Ecuaciones Cartesianas}{section.Alph1.2}% 116
-\BOOKMARK [1][-]{section.Alph1.3}{Dualidad}{appendix.Alph1}% 117
-\BOOKMARK [0][-]{section*.29}{\315ndice general}{part.3}% 118
+\BOOKMARK [1][-]{section.1.6}{Problemas}{chapter.1}% 18
+\BOOKMARK [0][-]{chapter.2}{Dualidad}{part.1}% 19
+\BOOKMARK [1][-]{section.2.1}{Dualidad en espacios vectoriales}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.1.1}{Formas Lineales e Hiperplanos}{section.2.1}% 21
+\BOOKMARK [2][-]{subsection.2.1.2}{Dualidad Can\363nica}{section.2.1}% 22
+\BOOKMARK [2][-]{subsection.2.1.3}{Principio de Dualidad}{section.2.1}% 23
+\BOOKMARK [1][-]{section.2.2}{Dualidad en espacios proyectivos}{chapter.2}% 24
+\BOOKMARK [2][-]{subsection.2.2.1}{Formas Lineales e Hiperplanos Proyectivos}{section.2.2}% 25
+\BOOKMARK [2][-]{subsection.2.2.2}{Dualidad Can\363nica}{section.2.2}% 26
+\BOOKMARK [2][-]{subsection.2.2.3}{Principio de Dualidad para espacios proyectivos}{section.2.2}% 27
+\BOOKMARK [0][-]{chapter.3}{Ecuaciones de variedades proyectivas}{part.1}% 28
+\BOOKMARK [1][-]{section.3.1}{Rectas Proyectivas}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.1.1}{Ecuaciones Param\351tricas}{section.3.1}% 30
+\BOOKMARK [2][-]{subsection.3.1.2}{Ecuaci\363n Impl\355cita}{section.3.1}% 31
+\BOOKMARK [2][-]{subsection.3.1.3}{Intersecci\363n de dos Rectas Proyectivas}{section.3.1}% 32
+\BOOKMARK [2][-]{subsection.3.1.4}{Cambio de referencia de rectas proyectivas}{section.3.1}% 33
+\BOOKMARK [1][-]{section.3.2}{Planos Proyectivos}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.2.1}{Ecuaciones param\351tricas}{section.3.2}% 35
+\BOOKMARK [2][-]{subsection.3.2.2}{Ecuaci\363n impl\355cita}{section.3.2}% 36
+\BOOKMARK [1][-]{section.3.3}{Haz de hiperplanos}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.3.1}{Haz de rectas}{section.3.3}% 38
+\BOOKMARK [2][-]{subsection.3.3.2}{Haz de hiperplanos}{section.3.3}% 39
+\BOOKMARK [1][-]{section.3.4}{Teorema de Pappus}{chapter.3}% 40
+\BOOKMARK [0][-]{chapter.4}{Aplicaciones Proyectivas}{part.1}% 41
+\BOOKMARK [1][-]{section.4.1}{Definici\363n}{chapter.4}% 42
+\BOOKMARK [1][-]{section.4.2}{Propiedades Elementales}{chapter.4}% 43
+\BOOKMARK [1][-]{section.4.3}{Proyecciones C\363nicas}{chapter.4}% 44
+\BOOKMARK [1][-]{section.4.4}{Homograf\355as}{chapter.4}% 45
+\BOOKMARK [2][-]{subsection.4.4.1}{Homograf\355as y Teor\355a de Grupos}{section.4.4}% 46
+\BOOKMARK [1][-]{section.4.5}{Aplicaciones Proyectivas y Matrices}{chapter.4}% 47
+\BOOKMARK [2][-]{subsection.4.5.1}{Recordatorio de \301lgebra Lineal}{section.4.5}% 48
+\BOOKMARK [2][-]{subsection.4.5.2}{Matriz Asociada a una Aplicaci\363n Proyectiva}{section.4.5}% 49
+\BOOKMARK [2][-]{subsection.4.5.3}{Transformaciones de M\366bius}{section.4.5}% 50
+\BOOKMARK [0][-]{chapter.5}{Raz\363n Doble}{part.1}% 51
+\BOOKMARK [1][-]{section.5.1}{Definici\363n}{chapter.5}% 52
+\BOOKMARK [1][-]{section.5.2}{Propiedades}{chapter.5}% 53
+\BOOKMARK [1][-]{section.5.3}{Simetr\355as de la raz\363n doble}{chapter.5}% 54
+\BOOKMARK [1][-]{section.5.4}{Cuaternas Arm\363nicas}{chapter.5}% 55
+\BOOKMARK [1][-]{section.5.5}{C\341lculo de la Raz\363n Doble en Pn}{chapter.5}% 56
+\BOOKMARK [2][-]{subsection.5.5.1}{Raz\363n Doble en Pn}{section.5.5}% 57
+\BOOKMARK [2][-]{subsection.5.5.2}{Raz\363n Doble y Dualidad}{section.5.5}% 58
+\BOOKMARK [0][-]{chapter.6}{Clasificaci\363n de homograf\355as}{part.1}% 59
+\BOOKMARK [1][-]{section.6.1}{Clasificaci\363n de homograf\355as de P1. Puntos fijos}{chapter.6}% 60
+\BOOKMARK [2][-]{subsection.6.1.1}{Dos puntos fijos distintos}{section.6.1}% 61
+\BOOKMARK [2][-]{subsection.6.1.2}{Un punto fijo doble}{section.6.1}% 62
+\BOOKMARK [1][-]{section.6.2}{Formas can\363nicas de Jordan y puntos fijos}{chapter.6}% 63
+\BOOKMARK [1][-]{section.6.3}{Aplicaciones afines}{chapter.6}% 64
+\BOOKMARK [2][-]{subsection.6.3.1}{Aplicaciones afines y homograf\355as de Pn}{section.6.3}% 65
+\BOOKMARK [1][-]{section.6.4}{Involuciones}{chapter.6}% 66
+\BOOKMARK [2][-]{subsection.6.4.1}{Haz de ecuaciones de segundo grado}{section.6.4}% 67
+\BOOKMARK [0][-]{chapter.7}{Perspectividades}{part.1}% 68
+\BOOKMARK [1][-]{section.7.1}{Teorema de Desargues}{chapter.7}% 69
+\BOOKMARK [1][-]{section.7.2}{Perspectividades}{chapter.7}% 70
+\BOOKMARK [2][-]{subsection.7.2.1}{Perspectividades y Dualidad}{section.7.2}% 71
+\BOOKMARK [1][-]{section.7.3}{Factorizaci\363n de Homograf\355as}{chapter.7}% 72
+\BOOKMARK [1][-]{section.7.4}{Teorema del Eje}{chapter.7}% 73
+\BOOKMARK [1][-]{section.7.5}{Otras Demostraciones del Teorema de Desargues}{chapter.7}% 74
+\BOOKMARK [-1][-]{part.2}{II Variedades cuadr\341ticas. Conexiones con otras geometr\355as}{}% 75
+\BOOKMARK [0][-]{chapter.8}{C\363nicas y Cu\341dricas}{part.2}% 76
+\BOOKMARK [1][-]{section.8.1}{Conceptos Previos. Formas Bilineales y Cuadr\341ticas}{chapter.8}% 77
+\BOOKMARK [2][-]{subsection.8.1.1}{Formas Bilineales}{section.8.1}% 78
+\BOOKMARK [2][-]{subsection.8.1.2}{Formas Cuadr\341ticas}{section.8.1}% 79
+\BOOKMARK [1][-]{section.8.2}{Cu\341dricas y Matrices}{chapter.8}% 80
+\BOOKMARK [2][-]{subsection.8.2.1}{Cu\341dricas y P}{section.8.2}% 81
+\BOOKMARK [1][-]{section.8.3}{Determinaci\363n de una C\363nica}{chapter.8}% 82
+\BOOKMARK [2][-]{subsection.8.3.1}{Intento de Resoluci\363n}{section.8.3}% 83
+\BOOKMARK [2][-]{subsection.8.3.2}{C\363nicas Degeneradas. Producto de Rectas}{section.8.3}% 84
+\BOOKMARK [2][-]{subsection.8.3.3}{Teorema de Determinaci\363n}{section.8.3}% 85
+\BOOKMARK [2][-]{subsection.8.3.4}{Haces de C\363nicas}{section.8.3}% 86
+\BOOKMARK [1][-]{section.8.4}{Clasificaci\363n de las C\363nicas No Degeneradas}{chapter.8}% 87
+\BOOKMARK [1][-]{section.8.5}{Cu\341dricas, c\363nicas y cambio de referencia}{chapter.8}% 88
+\BOOKMARK [1][-]{section.8.6}{C\363nicas degeneradas}{chapter.8}% 89
+\BOOKMARK [1][-]{section.8.7}{Recta polar de un punto respecto de una c\363nica}{chapter.8}% 90
+\BOOKMARK [1][-]{section.8.8}{C\363nicas Duales}{chapter.8}% 91
+\BOOKMARK [2][-]{subsection.8.8.1}{C\363nicas duales degeneradas}{section.8.8}% 92
+\BOOKMARK [1][-]{section.8.9}{Parametrizaci\363n de c\363nicas}{chapter.8}% 93
+\BOOKMARK [2][-]{subsection.8.9.1}{Parametrizaci\363n de c\363nicas como par\341bolas}{section.8.9}% 94
+\BOOKMARK [2][-]{subsection.8.9.2}{Parametrizaci\363n de c\363nicas y polinomios}{section.8.9}% 95
+\BOOKMARK [2][-]{subsection.8.9.3}{Otras parametrizaciones}{section.8.9}% 96
+\BOOKMARK [1][-]{section.8.10}{Teorema de Steiner}{chapter.8}% 97
+\BOOKMARK [1][-]{section.8.11}{Raz\363n doble en c\363nicas}{chapter.8}% 98
+\BOOKMARK [2][-]{subsection.8.11.1}{C\341lculo de la raz\363n doble}{section.8.11}% 99
+\BOOKMARK [2][-]{subsection.8.11.2}{Raz\363n doble en c\363nicas duales}{section.8.11}% 100
+\BOOKMARK [1][-]{section.8.12}{Involuciones de la c\363nica}{chapter.8}% 101
+\BOOKMARK [1][-]{section.8.13}{Homograf\355as de la c\363nica}{chapter.8}% 102
+\BOOKMARK [1][-]{section.8.14}{Clasificaci\363n de haces de c\363nicas}{chapter.8}% 103
+\BOOKMARK [0][-]{chapter.9}{Geometr\355a Af\355n y Eucl\355dea}{part.2}% 104
+\BOOKMARK [1][-]{section.9.1}{Espacio Af\355n Cl\341sico}{chapter.9}% 105
+\BOOKMARK [2][-]{subsection.9.1.1}{Definici\363n y Ejemplos}{section.9.1}% 106
+\BOOKMARK [2][-]{subsection.9.1.2}{Variedades afines}{section.9.1}% 107
+\BOOKMARK [2][-]{subsection.9.1.3}{Espacio af\355n y proyectivo}{section.9.1}% 108
+\BOOKMARK [2][-]{subsection.9.1.4}{Propiedades del espacio af\355n}{section.9.1}% 109
+\BOOKMARK [2][-]{subsection.9.1.5}{Definici\363n de espacio af\355n alternativa}{section.9.1}% 110
+\BOOKMARK [2][-]{subsection.9.1.6}{Referencias afines y proyectivas}{section.9.1}% 111
+\BOOKMARK [-1][-]{part.3}{III Anexos}{}% 112
+\BOOKMARK [0][-]{appendix.Alph1}{Repaso de geometr\355a vectorial}{part.3}% 113
+\BOOKMARK [1][-]{section.Alph1.1}{Algunos resultados de \341lgebra matricial}{appendix.Alph1}% 114
+\BOOKMARK [1][-]{section.Alph1.2}{Coordenadas y cambios de base}{appendix.Alph1}% 115
+\BOOKMARK [2][-]{subsection.Alph1.2.1}{Cambios de base}{section.Alph1.2}% 116
+\BOOKMARK [1][-]{section.Alph1.3}{Ecuaciones de Subespacios}{appendix.Alph1}% 117
+\BOOKMARK [2][-]{subsection.Alph1.3.1}{Existencia de las Ecuaciones Cartesianas}{section.Alph1.3}% 118
+\BOOKMARK [0][-]{section*.29}{\315ndice general}{part.3}% 119

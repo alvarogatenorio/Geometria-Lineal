@@ -1,87 +1,95 @@
-\chapter{Aplicaciones Proyectivas}
-\label{C4}
+\chapter{Aplicaciones proyectivas}
+\label{apro}
 En este capítulo vamos a tratar de extrapolar uno de los conceptos más centrales del álgebra lineal al contexto proyectivo. Tratamos de estudiar las aplicaciones entre espacios proyectivos cuyo comportamiento consideramos ``bueno''.
 
-En el mundo lineal, estas aplicaciones eran los llamados homomorfismos entre espacios vectoriales o símplemente aplicaciones lineales. Aquí, en el mundo de los rayos, las llamaremos \ti{aplicaciones proyectivas}.
+En el mundo lineal, estas aplicaciones eran los llamados homomorfismos entre espacios vectoriales, o, símplemente, aplicaciones lineales. Aquí, en el mundo de los rayos, las llamaremos \ti{aplicaciones proyectivas}.
 
-Las secciones \ref{C4_definicion} y \ref{C4_propiedadesElementales} están dedicadas a resultados teóricos elementales. Por su parte, las secciones \ref{C4_proyeccionesConicas} y \ref{C4_homografias} realizan un estudio elemental de algunas aplicaciones proyectivas notables, las llamadas \ti{proyecciones cónicas} (no inyectivas) y las \ti{homografías} (inyectivas) respectivamente. El capítulo finaliza con la sección \ref{C4_matrices}, que define el concepto de matriz asociada a una aplicación proyectiva y presenta algunos ejemplos útiles.
+Las secciones \ref{apro_definicion} y \ref{apro_propiedadesElementales} están dedicadas a resultados teóricos elementales. Por su parte, las secciones \ref{apro_proyeccionesConicas} y \ref{apro_homografias} realizan un estudio elemental de algunas aplicaciones proyectivas notables, las llamadas \ti{proyecciones cónicas} (no inyectivas) y las \ti{homografías} (inyectivas) respectivamente. El capítulo finaliza con la sección \ref{apro_matrices}, que define el concepto de matriz asociada a una aplicación proyectiva y presenta algunos ejemplos útiles.
 \section{Definición}
-\label{C4_definicion}
+\label{apro_definicion}
 Sean dos espacios proyectivos $X$ e $Y$ asociados a sendos espacios vectoriales, $\widehat{X}$ e $\widehat{Y}$ respectivamente.
 
-Nuestro objetivo es definir una aplicación, entre dos espacios proyectivos, a partir de una aplicación lineal entre sus respectivos espacios lineales, de forma natural. En resumidas cuentas, trataremos de seguir el diagrama
-\[\xymatrix{
-	\widehat{X} \ar[r]^{\widehat{h}} \ar@{~>}[d]^{\pi}& \widehat{Y} \ar@{~>}[d]^{\pi}\\
-	X \ar[r]^{h}& Y
-}
-\]
+Nuestro objetivo es definir una aplicación, entre dos espacios proyectivos, a partir de una aplicación lineal entre sus respectivos espacios lineales de forma natural. En resumidas cuentas, trataremos de seguir el diagrama
+\begin{equation*}
+	\xymatrix{
+		\widehat{X} \ar[r]^{\widehat{h}} \ar@{~>}[d]^{\pi}& \widehat{Y} \ar@{~>}[d]^{\pi}\\
+		X \ar[r]^{h}& Y
+	}
+\end{equation*}
 Intentémoslo y veamos qué dificultades se nos presentan.
 
 Sea $\widehat{h}:\widehat{X}\to\widehat{Y}$ una aplicación lineal arbitraria. Lo deseable sería definir la aplicación proyectiva asociada a $\widehat{h}$ como aquella que, a cada rayo le asigna el rayo engendrado por la imagen de uno de sus representantes. Visto formalmente, si $x=\class{u}$
-\[
-\xymatrix{
-{
-\begin{array}{rc}
-\widehat{h}:&\widehat{X}\to\widehat{Y}\\
-&u\mapsto\widehat{h}(u)
-\end{array}
-}
-\ar@{~>}[r]&
-{
-\begin{array}{rc}
-h: & X\to Y\\
-& x\mapsto\class{\widehat{h}(u)}
-\end{array}
-}
-}
-\]
+\begin{equation*}
+	\xymatrix{
+		{
+			\begin{array}{rc}
+			\widehat{h}:&\widehat{X}\to\widehat{Y}\\
+			&u\mapsto\widehat{h}(u)
+			\end{array}
+		}
+		\ar@{~>}[r]&
+		{
+			\begin{array}{rc}
+			h: & X\to Y\\
+			& x\mapsto\class{\widehat{h}(u)}
+			\end{array}
+		}
+	}
+\end{equation*}
 Este intento de definición tan intuitivo e inocente presenta dos problemas. El primero de ellos es que si $\widehat{h}(u)=0$ entonces el rayo $\class{\widehat{h}(u)}$ no está definido.
 
 Esto lo arreglamos de una forma natural, restringiendo el dominio de $\widehat{h}$ a los vectores de $\widehat{X}$ que no se anulan mediante $\widehat{h}$. Es decir, ahora $\widehat{h}$ queda definida en $\widehat{X}\setminus \ker\left(\widehat{h}\right)$.
 
 Trasladando esta restricción al contexto proyectivo obtenemos este segundo intento de definición de aplicación proyectiva asociada a cierta aplicación lineal
-\[\begin{array}{cc}
-h:&X\setminus\proy\left(\ker\left(\widehat{h}\right)\right)\to Y\\
-&x\mapsto\class{\widehat{h}(u)}
-\end{array}\]
+\begin{equation*}
+	\begin{array}{cc}
+	h:&X\setminus\proy\left(\ker\left(\widehat{h}\right)\right)\to Y\\
+	&x\mapsto\class{\widehat{h}(u)}
+	\end{array}
+\end{equation*}
 Antes de hacer algunas aclaraciones adicionales acerca de este primer problema que se nos ha presentado, demos una pequeña definición (por comodidad tipográfica).
 \begin{defi}[Centro]
-	\label{C4_def_centro}
-	Se denomina \ti{centro} de una aplicación $h$, dada la aplicación lineal asociada $\widehat{h}$ entre dos espacios lineales $\widehat{X}$ e $\widehat{Y}$, a la variedad proyectiva:
-	\[\mc{Z}:\equals{not.}\proy\left(\ker\left(\widehat{h}\right)\right)\]
+	\label{apro_def_centro}
+	Se denomina \ti{centro} de una aplicación $h$, dada la aplicación lineal asociada $\widehat{h}$ entre dos espacios lineales $\widehat{X}$ e $\widehat{Y}$, a la variedad proyectiva
+	\begin{equation*}
+		\mc{Z}:\equals{not.}\proy\left(\ker\left(\widehat{h}\right)\right)
+	\end{equation*}
 \end{defi}
 Tras este breve inciso sobre la notación, veamos que, en efecto, hemos resuelto el problema que se nos planteaba, es decir, hemos eliminado del dominio todos los rayos que no tenían imagen definida. Si hubiera algún rayo con imagen no definida, alguno de sus representantes debería pertenecer al núcleo de $\widehat{h}$ (y, por tanto, todos). Pero esto no es posible ya que el rayo engendrado por este representante estaría en el centro de $h$.
 
-El segundo problema que planteaba nuestra definición era saber si está bien definida. En efecto, siempre que definamos una aplicación y los elementos de nuestro conjunto de salida no tengan una representación única, debemos comprobar que la imagen de la función es independiente del representante escogido. En este caso es un juego de niños:
+El segundo problema que planteaba nuestra definición era saber si está bien definida. En efecto, siempre que definamos una aplicación y los elementos de nuestro conjunto de salida no tengan una representación única, debemos comprobar que la imagen de la función es independiente del representante escogido. En este caso es un juego de niños.
 
-Sean $\class{u'}=x=\class{u}$. Es evidente que $u' = \lambda u$ para cierto $\lambda$ no nulo. Entonces:
-\[\class{\widehat{h}(u')}=\class{\widehat{h}(\lambda u)}=\class{\lambda\widehat{h}(u)}=\class{\widehat{h}(u)}\]
-
+Sean $\class{u'}=x=\class{u}$. Es evidente que $u' = \lambda u$ para cierto $\lambda$ no nulo. Entonces
+\begin{equation*}
+	\class{\widehat{h}(u')}=\class{\widehat{h}(\lambda u)}=\class{\lambda\widehat{h}(u)}=\class{\widehat{h}(u)}
+\end{equation*}
 Tras estas comprobaciones ya podemos definir con todas las de la ley el concepto de aplicación proyectiva.
-\begin{defi}[Aplicación Proyectiva]
+\begin{defi}[Aplicación proyectiva]
 	Sean dos espacios proyectivos $X$ e $Y$.
 	
-	Una aplicación $h:X\to Y$ se dice \ti{aplicación proyectiva} si existe una aplicación lineal $\widehat{h}:\widehat{X}\to\widehat{Y}$ de manera que
-	\[\begin{array}{cc}
-	h:&X\setminus\proy\left(\ker\left(\widehat{h}\right)\right)\to Y\\
-	&x\mapsto\class{\widehat{h}(u)}
-	\end{array}\]
+	Una aplicación $h:X\to Y$ se dice \tbi[aplicación!proyectiva]{aplicación proyectiva} si existe una aplicación lineal $\widehat{h}:\widehat{X}\to\widehat{Y}$ de manera que
+	\begin{equation*}
+		\begin{array}{cc}
+		h:&X\setminus\proy\left(\ker\left(\widehat{h}\right)\right)\to Y\\
+		&x\mapsto\class{\widehat{h}(u)}
+		\end{array}
+	\end{equation*}
 \end{defi}
 Es claro que toda aplicación lineal tiene una única aplicación proyectiva asociada, sin embargo, debemos tener cuidado con un caso extemo.
-\begin{obs}[Aplicación Idénticamente Nula]
-	Si consideramos la aplicación lineal idénticamente nula entre dos espacios vectoriales, su aplicación proyectiva asociada quedará definida sobre el conjunto vacío. Por tanto, diremos que el homomorfismo lineal nulo no tiene aplicación proyectiva asociada.
+\begin{obs}[Aplicación idénticamente nula]
+	Si consideramos la aplicación lineal idénticamente nula entre dos espacios vectoriales, su aplicación proyectiva asociada quedará definida sobre el conjunto vacío. Por tanto, diremos que el homomorfismo lineal nulo \tb{no tiene} aplicación proyectiva asociada.
 \end{obs}
 Que la definición de aplicación proyectiva se apoye tanto en el concepto de homomorfismo lineal es una gran virtud, pues esto nos abre las puertas a usar a nuestro favor todos los resultados conocidos de aplicaciones lineales.
 
-Para terminar la sección advertimos de que en algunos textos, a la hora de representar una aplicación proyectiva omiten (abusando de notación) especificar que al espacio de partida se le extrae el centro $\mc{Z}$. 
-\section{Propiedades Elementales}
-\label{C4_propiedadesElementales}
+Para terminar la sección advertimos de que en algunos textos (posiblemente en este también), a la hora de representar una aplicación proyectiva omiten (abusando de notación) especificar que al espacio de partida se le extrae el centro $\mc{Z}$. 
+\section{Propiedades elementales}
+\label{apro_propiedadesElementales}
 En esta sección estudiaremos diversas propiedades básicas de las aplicaciones proyectivas.
 
 Comencemos viendo cuál es la relación entre las aplicaciones proyectivas inyectivas (y respectivamente sobreyectivas) y sus aplicaciones lineales asociadas.
-\begin{lem}[Inyectividad y Sobreyectividad]
-	\label{C4_lem_inyectividadSobreyectividad}
-	Sea $h$ una aplicación proyectiva. Se cumple:
+\begin{lem}[Inyectividad y sobreyectividad]
+	\label{apro_lem_inyectividadSobreyectividad}
+	Sea $h$ una aplicación proyectiva. Se cumple
 	\begin{enumerate}
 		\item $h$ es inyectiva si y solo si lo es $\widehat{h}$.
 		\item $h$ es sobreyectiva si y solo si lo es $\widehat{h}$.
@@ -91,57 +99,62 @@ Comencemos viendo cuál es la relación entre las aplicaciones proyectivas inyec
 	\begin{enumerate}
 		\item Suponiendo que $h$ es inyectiva, si $\widehat{h}$ no lo fuera, entonces tendría un núcleo no trivial, es decir, existiría cierto $u\not=0$ tal que $\widehat{h}(u)=0$. A su vez, como $\widehat{h}$ no puede ser la aplicación idénticamente nula, existirá un $v\not=0$ de manera que $\widehat{h}(v)\not=0$.
 		
-		La comprobación de que los vectores $v$ y $w=u+v$ son linealmente independientes es un ejercicio trivial. Hagámoslo rápidamente
-		\[
-		\alpha v + \beta(u+v)=0
-		\]
-		Si $\beta = 0$ entonces $\alpha v = 0$, y como $v\not=0$ tendríamos que $\alpha=0$.
-		
-		En caso contrario, si $\beta\not=0$ podemos despejar de la siguiente manera
+		La comprobación de que los vectores $v$ y $w=u+v$ son linealmente independientes es un ejercicio trivial. Hagámoslo rápidamente.
+		\begin{equation*}
+			\alpha v + \beta(u+v)=0
+		\end{equation*}
+		Si $\beta = 0$ entonces $\alpha v = 0$, y como $v\not=0$ tendríamos que $\alpha=0$. En caso contrario, si $\beta\not=0$, podemos despejar de la siguiente manera
 		\begin{equation*}\alpha v +\beta(u+v)=0\sii v(\alpha+\beta)+\beta u=0\sii v\frac{\alpha+\beta}{-\beta}=u\end{equation*}
-		Esta última igualdad implicaría que $u$ es múltiplo de $v$ y, por ende, $v\in\ker(\widehat{h})$, lo cual es absurdo.
-		
-		Esto quiere decir que los puntos proyectivos $x=\class{v}$ e $y=\class{w}$ son distintos. Sin embargo, al tomar sus imágenes por $h$ obtenemos:
-		\[h(y)=\class{\widehat{h}(w)}=\class{\widehat{h}(u+v)}=\class{\cancel{\widehat{h}(u)}+\widehat{h}(v)}=\class{\widehat{h}(v)}=h(x)\]
+		Esta última igualdad implicaría que $u$ es múltiplo de $v$ y, por ende, $v\in\ker(\widehat{h})$, lo cual es absurdo. Esto quiere decir que los puntos proyectivos $x=\class{v}$ e $y=\class{w}$ son distintos. Sin embargo, al tomar sus imágenes por $h$ obtenemos
+		\begin{equation*}
+			h(y)=\class{\widehat{h}(w)}=\class{\widehat{h}(u+v)}=\class{\cancel{\widehat{h}(u)}+\widehat{h}(v)}=\class{\widehat{h}(v)}=h(x)
+		\end{equation*}
 		Lo cual contradice nuestra hipótesis.
 		
-		Recíprocamente, si $\widehat{h}$ es inyectiva, usando la definción de aplicación proyectiva y la linealidad e inyectividad de $\widehat{h}$ tenemos que:
+		Recíprocamente, si $\widehat{h}$ es inyectiva, usando la definción de aplicación proyectiva y la linealidad e inyectividad de $\widehat{h}$ tenemos que
 		\begin{multline*}
 			h(x)=h(y)\stackrel{\mathrm{def.}}{\sii} h(\class{u})=h(\class{v})\stackrel{\mathrm{def.}}{\sii}\class{\widehat{h}(u)}=\class{\widehat{h}(v)}\sii\\\stackrel{\mathrm{def.}}{\sii}\widehat{h}(u)=\lambda \widehat{h}(v)\sii\widehat{h}(u)=\widehat{h}(\lambda v)\sii u = \lambda v\sii\class{u}=\class{v}\stackrel{\mathrm{def.}}{\sii} x=y
 		\end{multline*}
-		\item Suponiendo que $\widehat{h}$ es sobreyectiva, dado un $y\in Y$, veamos que existe un $x\in X\setminus\mc{Z}$ tal que $h(x)=y$. En efecto, $y=\class{v}$, como $\widehat{h}$ es sobreyectiva, existe un $u\in \widehat{X}$ tal que $\widehat{h}(u)=v$, luego, tomando clases:
-		\[h(x)=\class{\widehat{h}(u)}=\class{v}=y\]
-		Recíprocamente, si $h$ es sobreyectiva, dado $v\in\widehat{Y}$ es claro que existe un $x\in X\setminus\mc{Z}$ tal que: 
-		\[h(x)=\class{\widehat{h}(u)}=\class{v}\]
-		Luego $v=\widehat{h}(\lambda u)$, lo que prueba la sobreyectividad de $\widehat{h}$.
+		\item Suponiendo que $\widehat{h}$ es sobreyectiva, dado un $y\in Y$, veamos que existe un $x\in X\setminus\mc{Z}$ tal que $h(x)=y$. En efecto, $y=\class{v}$, como $\widehat{h}$ es sobreyectiva, existe un $u\in \widehat{X}$ tal que $\widehat{h}(u)=v$, luego, tomando clases (es decir, no haciendo pellas)
+		\begin{equation*}
+			h(x)=\class{\widehat{h}(u)}=\class{v}=y
+		\end{equation*}
+		Recíprocamente, si $h$ es sobreyectiva, dado $v\in\widehat{Y}$ es claro que existe un $x\in X\setminus\mc{Z}$ tal que
+		\begin{equation*}
+			h(x)=\class{\widehat{h}(u)}=\class{v}
+		\end{equation*}
+		Luego $v=\widehat{h}(\lambda u)$, lo que prueba la sobreyectividad de $\widehat{h}$.\qedhere
 	\end{enumerate}
 \end{proof}
 \begin{cor}[Biyectividad]\label{C4_cor_biyectividad}
 	Una aplicación proyectiva es biyectiva si y solo si su aplicación lineal asociada es un isomorfismo.
 \end{cor}
 \begin{proof}
-	Evidente, basta observar que para que una aplicación proyectiva sea inyectiva, su aplicación lineal subyacente debe ser inyectiva y sobreyectiva (luego isomorfismo).
+	Evidente, basta observar que para que una aplicación proyectiva sea biyectiva, su aplicación lineal subyacente debe ser inyectiva y sobreyectiva (luego isomorfismo).
 \end{proof}
 Cabe destacar que la inversa de una aplicación proyectiva biyectiva también es aplicación proyectiva (ya que la inversa de un isomorfismo también es isomorfismo).
 
 Veamos con un ejemplo que ya, con lo poco que sabemos podemos demostrar cosillas bastante interesantes.
-\begin{exa}[Aplicaciones No Inyectivas Constantes]
+\begin{exa}[No inyectividad en la recta]
 	Veamos que las aplicaciones proyectivas no inyectivas que parten de un subespacio proyectivo de dimensión $1$ son constantes.
 	
-	Para ello usamos el lema \ref{C4_lem_inyectividadSobreyectividad}. Si una aplicación cumpliera las características de nuestra hipótesis, su aplicación lineal correspondiente partiría de un espacio vectorial de dimensión $2$ y tampoco sería inyectiva, siendo su núcleo un subespacio de dimensión $1$ y su imagen otro subespacio de dimensión $1$. Al proyectivizar vemos que nuestra aplicación parte de un espacio proyectivo de dimensión $1$ (extrayendo el punto asociado al núcleo) y llega a un espacio proyectivo conformado por un único punto (el proyectivizado de la imagen de su aplicación lineal).
+	Para ello usamos el lema \ref{apro_lem_inyectividadSobreyectividad}. Si una aplicación cumpliera las características de nuestra hipótesis, su aplicación lineal correspondiente partiría de un espacio vectorial de dimensión $2$ y tampoco sería inyectiva, siendo su núcleo un subespacio de dimensión $1$ y su imagen otro subespacio de dimensión $1$ (fórmula de las dimensiones para aplicaciones lineales). Al proyectivizar vemos que nuestra aplicación parte de un espacio proyectivo de dimensión $1$ (extrayendo el punto asociado al núcleo) y llega a un espacio proyectivo conformado por un único punto (el proyectivizado de la imagen de su aplicación lineal).
 \end{exa}
 Veamos ahora que tanto la imagen como la imagen inversa de una variedad por una aplicación proyectiva es otra variedad.
-\begin{lem}[Preservación de Variedades]
-	\label{C4_lem_preservaVariedades}
-	Sea $h:X\setminus\mc{Z}\rightarrow Y$ una aplicación proyectiva se cumple que:
+\begin{lem}[Preservación de variedades]
+	\label{apro_lem_preservaVariedades}
+	Sea $h:X\setminus\mc{Z}\rightarrow Y$ una aplicación proyectiva se cumple que
 	\begin{enumerate}
-		\item Dada una variedad $W\subset X$, entonces $h(W\setminus\mc{Z})$ es una variedad de $Y$. Además, \[\pi^{-1}\left(h(W\setminus \mc{Z})\right)=\widehat{h}(\widehat{W})\]
-		\item Dada una variedad $W'\subset Y$, entonces $h^{-1}(W')\cup\mc{Z}$ es una variedad de $X$. Además: \[\pi^{-1}\left(h^{-1}(W')\cup\mc{Z}\right)=\widehat{h^{-1}}(\widehat{W'})\]
+		\item Dada una variedad $W\subset X$, entonces $h(W\setminus\mc{Z})$ es una variedad de $Y$. Además, \begin{equation*}
+			\pi^{-1}\left(h(W\setminus \mc{Z})\right)=\widehat{h}(\widehat{W})
+		\end{equation*}
+		\item Dada una variedad $W'\subset Y$, entonces $h^{-1}(W')\cup\mc{Z}$ es una variedad de $X$. Además, \begin{equation*}
+			\pi^{-1}\left(h^{-1}(W')\cup\mc{Z}\right)=\widehat{h^{-1}}(\widehat{W'})
+		\end{equation*}
 	\end{enumerate}
 \end{lem}
 \begin{proof}
 	Probemos en primer lugar el ``además'', de donde deduciremos automáticamente el resultado.
-	
 	\begin{enumerate}
 		\item[\ti{2.}] Sea $w\in \widehat{h^{-1}}(\widehat{W'})$. Esto es equivalente a decir que $\widehat{h}(w)\in\widehat{W'}$. En caso de que $\widehat{h}(w)=0$ tendríamos que $\class{w}\in\mc{Z}$. En caso contrario tenemos:
 		\[\class{\widehat{h}(w)}=h(\class{w})\in W'\sii\class{w}\in h^{-1}(W')\]
@@ -151,9 +164,10 @@ Veamos ahora que tanto la imagen como la imagen inversa de una variedad por una 
 		
 		Como $\widehat{h^{-1}}(\widehat{W'})$ es un subespacio vectorial, $\pi^{-1}\left(h^{-1}(W')\cup\mc{Z}\right)$ también lo es, y por ende, al proyectivizar obtendremos una variedad proyectiva, que es precisamente $h^{-1}(W')\cup\mc{Z}$.
 		\item[\ti{1.}] Análogamente a la demostración del apartado anterior, sea $y\in\widehat{h}(\widehat{W})$. Esto es equivalente a decir que existe un $x\in\widehat{W}$ tal que $\widehat{h}(x)=y$. Llegados a este punto, distinguimos casos. Si $\widehat{h}(x)=0$, entonces $\class{x}\in W\cap\mc{Z}$, y, por tanto, $h(\class{x})$ no está definido. Si, por el contrario, $h(x)\not=0$, entonces $\class{x}\in W$ y $h(\class{x})\in h(W)$. Con todo esto tenemos que $\class{y}\in W\setminus\mc{Z}$. Como todos los pasos que hemos hecho son reversibles, podemos concluir
-		\[\widehat{h}(\widehat{W})=\pi^{-1}(h(W\setminus\mc{Z}))\]
+		\begin{equation*}
+			\widehat{h}(\widehat{W})=\pi^{-1}(h(W\setminus\mc{Z}))\qedhere
+		\end{equation*}
 	\end{enumerate}
-	Con lo que concluye la demostración.
 \end{proof}
 
 Pasemos a comprobar que las aplicaciones proyectivas tienen un buen comportamiento respecto de la composición.

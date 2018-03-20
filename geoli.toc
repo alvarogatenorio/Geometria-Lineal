@@ -40,9 +40,9 @@
 \contentsline {subsubsection}{Intersecci\IeC {\'o}n de dos rectas proyectivas}{41}{section*.6}
 \contentsline {subsection}{\numberline {3.3.2}Haz de hiperplanos}{42}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Teorema de Pappus}{42}{section.3.4}
-\contentsline {chapter}{\numberline {4}Aplicaciones Proyectivas}{47}{chapter.4}
+\contentsline {chapter}{\numberline {4}Aplicaciones proyectivas}{47}{chapter.4}
 \contentsline {section}{\numberline {4.1}Definici\IeC {\'o}n}{47}{section.4.1}
-\contentsline {section}{\numberline {4.2}Propiedades Elementales}{48}{section.4.2}
+\contentsline {section}{\numberline {4.2}Propiedades elementales}{48}{section.4.2}
 \contentsline {section}{\numberline {4.3}Proyecciones C\IeC {\'o}nicas}{52}{section.4.3}
 \contentsline {section}{\numberline {4.4}Homograf\IeC {\'\i }as}{56}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Homograf\IeC {\'\i }as y Teor\IeC {\'\i }a de Grupos}{57}{subsection.4.4.1}

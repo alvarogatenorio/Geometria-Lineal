@@ -1,160 +1,87 @@
 \chapter{Repaso de geometría vectorial}
+\label{geovec}
 \section{Algunos resultados de álgebra matricial}
-MULTIPLICACIÓN DE MATRICES POR BLOQUES
+POR HACER
 \section{Coordenadas y cambios de base}
-\label{repasoVect_cambioBase}
-El objetivo de esta sección es servir como pequeño área de repaso a la hora de entrar en conceptos íntimamente ligados con los cambios de base en espacios vectoriales. Un ejemplo claro de esto son los cambios de referencia proyectiva.
-
-
-
-\begin{obs}[Coordenadas de un vector respecto de una base]
-	\label{A1_obs_coordenadasVector}
-	Es evidente que, \tb{fijada una base}, todo vector queda caracterizado por su escritura como combinación lineal de los vectores de dicha base. Es por este motivo que, dado un vector $u\in E$ cualquiera, emplearemos la siguiente notación:
-	\[
-		u = \alpha_1b_1+\dots+\alpha_nb_n\equals{not.}(\alpha_1,\dots,\alpha_n)_{\mc{B}}
-	\]
-	A la tupla de escalares $(\alpha_1,\dots,\alpha_n)$ la denominaremos \ti{coordenadas de $u$ respecto de la base $\mc{B}$}.
-\end{obs}
-Por supuesto, si decidimos tomar otra base $\mc{B}'$, las coordenadas de los vectores respecto de la base $\mc{B}'$ serán, en general, distintas a las coordenadas respecto de $\mc{B}$.
-
-Un problema interesante, consiste en encontrar una relación o ligadura entre ambas coordenadas.
-\subsection{Cambios de base}
-Sean $\mc{B}:=\{e_1,\dots,e_n\}$ y $\mc{B}':=\{e_1',\dots,e_n'\}$ dos bases de un espacio vectorial $E$.
-En estas condiciones, dado un vector cualquiera $u\in E$, podemos escribirlo de dos maneras distintas:
-\begin{gather}
-	u=\alpha_1e_1+\dots+\alpha_ne_n\\
-	\label{A1_eq_escritura2}
-	u=\beta_1e_1'+\dots+\beta_ne_n'
-\end{gather}
-Escribiendo cada vector de $\mc{B}'$ como combinación lineal de los vectores de $\mc{B}$, es decir, en coordenadas de $\mc{B}$ obtenemos (los exponentes son símplemente superíndices):
+\label{geovec_coordenadas}
+Sea $E$ un $\K$--espacio vectorial de dimensión $n$. Asimismo sea $\mc{B}:=\{e_1,\dots,e_n\}$ una base de $E$. Es claro (compruébese) que todo vector $x\in E$ puede escribirse de manera única como combinación lineal de los vectores de la base $\mc{B}$. Escrito con menos literatura, hay unos únicos $\alpha_1,\dots,\alpha_n\in\K$ de manera que
 \begin{equation}
-	e_i'=\gamma_1^ie_1+\dots+\gamma_n^ie_n
+	\label{geovec_eq_combinacionLineal}
+	x=\alpha_1e_1+\dots+\alpha_ne_n
 \end{equation}
-Uniendo las ecuaciones se tiene:
-\begin{multline}
-	u=\beta_1(\gamma_1^1e_1+\dots+\gamma_n^1e_n)+\dots+\beta_n(\gamma_1^ne_1+\dots+\gamma_n^ne_n)=\\
-	=(\beta_1\gamma_1^1e_1+\dots+\beta_1\gamma_n^1e_n)+\dots+(\beta_n\gamma_1^ne_1+\dots+\beta_n\gamma_n^ne_n)=\\
-	=(\beta_1\gamma_1^1+\dots+\beta_n\gamma_1^n)e_1+\dots+(\beta_1\gamma_n^1+\dots+\beta_n\gamma_n^n)e_n
-\end{multline}
-La traducción de esto a términos de coordenadas nos arroja (los corchetes son símplemente corchetes para una mejor visualización):
+De esta forma, usualmente se suele adoptar la notación $x=(\alpha_1,\dots,\alpha_n)_{\mc{B}}$. A esto lo llamamos \ti{escritura de $x$ en coordenadas de $\mc{B}$}. Escribiendo la ecuación \eqref{geovec_eq_combinacionLineal} de forma matricial, obtenemos
 \begin{equation}
-	u=(\alpha_1,\dots,\alpha_n)_{\mc{B}}=([\beta_1\gamma_1^1+\dots+\beta_n\gamma_1^n],\dots,[\beta_1\gamma_n^1+\dots+\beta_n\gamma_n^n])_{\mc{B}}
-\end{equation}
-Esto, por comodidad, lo interpretaremos como producto de matrices (compruébese):
-\begin{equation}
-	\begin{pmatrix}
-	\alpha_1\\
-	\vdots\\
-	\alpha_n
-	\end{pmatrix}=
-	\begin{pmatrix}
-	\gamma_1^1 & \cdots & \gamma_1^n\\
-	\vdots & \ddots & \vdots\\
-	\gamma_n^1 & \cdots & \gamma_n^n
-	\end{pmatrix}
-	\begin{pmatrix}
-	\beta_1\\
-	\vdots\\
-	\beta_n
-	\end{pmatrix}
-\end{equation}
-Usando una notación más compacta:
-\begin{equation}
-	X_{\mc{B}}=PX_{\mc{B}'}
-\end{equation}
-Obsérvese que la matriz $P$ es \tb{cuadrada} e \tb{invertible}, por ser la matriz formada al poner por columnas los vectores de la base $\mc{B}'$ respecto de la base $\mc{B}$.
-
-Por esta razón, podemos despejar $X_{\mc{B}'}$, obteniendo la relación inicialmente buscada:
-\begin{equation}
-	X_{\mc{B}'}=P^{-1}X_{\mc{B}}
-\end{equation}
-A la matriz $P^{-1}$ se la denomina \ti{matriz de cambio de base de $\mc{B}$ a $\mc{B}'$}. Es intersante comprobar que su inversa es la matriz de cambio entre las mismas bases en sentido contrario.
-
-Para cerrar la sección diremos, como curiosidad, que toda matriz invertible constituye una matriz de cambio entre ciertas bases.
-
-\section{Ecuaciones de Subespacios}
-El objetivo de esta sección será caracterizar un subespacio vectorial por el conjunto de soluciones de una ecuación o conjunto de ecuaciones (siempre lineales y homogéneas). A estas ecuaciones las denominaremos \ti{ecuaciones cartesianas}. Son de importancia capital en el estudio de la dualidad.
-\subsection{Existencia de las Ecuaciones Cartesianas}
-Sea $E$ un espacio vectorial de dimensión $n$ y sea $U$ un subespacio vectorial cualquiera de $E$.
-
-Sea $\mc{B}_U:=\{u_1,\dots,u_r\}$ una base de $U$.
-\subsubsection{Ecuaciones Paramétricas}
-Sea $x\in U$, entonces podemos escribirlo tanto en coordenadas de $\mc{B}_U$ como en coordenadas de la base del espacio total $\mc{B}$. Es decir:
-\begin{gather}
-	x = \alpha_1e_1+\dots+\alpha_ne_n\\
-	x = \beta_1u_1+\dots+\beta_ru_r
-\end{gather}
-Usando los mismos trucos que utilizamos para cálculo de la matriz de cambio de base, podemos escribir los vectores de la base $\mc{B}_U$ como combinación lineal de los vectores del espacio total:
-\begin{equation}
-	u_i=\gamma_1^ie_1+\dots+\gamma_n^ie_n
-\end{equation}
-Sustituyendo y reagrupando:
-\begin{multline}
-	x=\beta_1(\gamma_1^1e_1+\dots+\gamma_n^1e_n)+\dots+\beta_r(\gamma_1^ne_1+\dots+\gamma_n^ne_n)=\\
-	= (\beta_1\gamma_1^1e_1+\dots+\beta_1\gamma_n^1e_n)+\dots+(\beta_r\gamma_1^ne_1+\dots+\beta_r\gamma_n^ne_n)=\\
-	= (\beta_1\gamma_1^1+\dots+\beta_r\gamma_1^n)e_1+\dots+(\beta_1\gamma_n^1+\dots+\beta_r\gamma_n^n)e_n
-\end{multline}
-Expresado de forma matricial:
-\begin{equation}
-	\begin{pmatrix}
-	\alpha_1\\
-	\vdots\\
-	\alpha_n
-	\end{pmatrix}=\begin{pmatrix}
-	\gamma_1^1 & \cdots & \gamma_1^n\\
-	\vdots & \ddots & \vdots\\
-	\gamma_n^1 & \cdots & \gamma_n^n 
+	\label{geovec_eq_combinacionLinealMatrices}
+	x=\begin{pmatrix}
+	e_1 & \cdots & e_n
 	\end{pmatrix}\begin{pmatrix}
-	\beta_1\\
-	\vdots\\
-	\beta_r
+	\alpha_1\\
+	\cdots\\
+	\alpha_n
 	\end{pmatrix}
 \end{equation}
-Con una notación más compacta escribimos:
-\begin{equation}
-	X=P\Lambda
-\end{equation}
-Nótese que la matriz $P$ no es cuadrada por lo general, además, es la matriz resultante de poner por columnas las coordenadas de los vectores de $\mc{B}_U$ en la base $\mc{B}$.
-
-Reflexionemos un segundo acerca de lo que acabamos de hacer. Dado un subespacio $U$, queríamos caracterizarlo como el conjunto de vectores que verificaban un conjunto de ecuaciones.
-
-Pues bien, dada una base de $U$, hemos conseguido una serie de ecuaciones tales que, dado un vector $u=(u_1,\dots,u_n)_{\mc{B}}\in E$, nos escupen un sistema de $n$ ecuaciones lineales con $r$ incógnitas, que, en caso de resultar ser incompatible nos avisa de que $u\not\in U$, y en caso contrario, tras la resolución del sistema obtenemos las coordenadas de $u$ en la base $B_{U}$.
-
-Sin embargo, esto se puede afinar un poco más todavía. Es por eso que en el siguiente apartado se estudian las coordenadas cartesianas o implícitas.
-
-Nótese que el camino que hemos hecho también es de vuelta, ya que, dadas unas ecuaciones paramétricas de un subespacio, podemos hallar una base del mismo, basta tomar las columnas de la matriz de coeficientes.
-
-De momento tenemos:
+Normalmente denotaremos por $\mc{B}$ a la matriz fila de vectores de la ecuación \eqref{geovec_eq_combinacionLinealMatrices}. Nótese que esto es un abuso de notación, ya que $\mc{B}$ también denotaba al conjunto de los vectores de la base, sin embargo, el contexto dejará bastante claro a cual de las dos cosas nos referimos. Asimismo, denotaremos por $X_{\mc{B}}$ (o cosas similares) a la matriz columna de coeficientes de la ecuación anterior. De este modo tenemos, más escuetamente
 \begin{equation*}
-\doublebox{\textrm{BASE}}\rightleftarrows\doublebox{\textrm{EC. PARAMÉTRICAS}}
+	x=\mc{B}X
 \end{equation*}
-\subsubsection{Ecuaciones Cartesianas o Implícitas}
-Como dijimos en el apartado anterior, las ecuaciones paramétricas son un gran paso, pero deben afinarse un poco más, pues aún no son un conjunto de ecuaciones lineales homogéneas que caractericen por si solas al subespacio $U$.
+Si consideramos otra base de $E$, digamos $\mc{B}':=\{e_1',\dots,e_n'\}$, es claro que, al igual que pasaba con $\mc{B}$, todo vector de $E$, admitirá una escritura única en términos de $\mc{B}'$, es decir, para todo $x\in E$ tendremos que $x=\mc{B}'X'$.
 
-A continuación daremos dos métodos para hallar las ecuaciones cartesianas a partir de las ecuaciones paramétricas. A uno de ellos le bautizaremos cariñosamente como ``método ortopédico''.
+Nos planteamos el problema de, dado un vector $x\in E$, averiguar qué relaciones existen entre las dos escrituras de $x$ respecto de $\mc{B}$ y $\mc{B'}$. Es decir, como podemos pasar de $X$ a $X'$ y viceversa. Como siempre en matemáticas, cuando no se tiene ni idea de cómo resolver un problema, lo que hay que hacer es ponerse a escribir obviedades, a ver si se es capaz de obtener algo no del todo obvio.
 
-\paragraph{Método Ortopédico} Como ya aventuramos en el apartado anterior, si insertamos un vector $x\in U$ a las ecuaciones $X=P\Lambda$, se nos remitía a un sistema de ecuaciones lineales compatible determinado.
-
-Esto quiere decir, por el teorema de Rouché--Frobenius que: \[\mathrm{rg}(P\vert X)=\mathrm{rg}(P)\] Por ende ninguna submatriz cuadrada de la matriz ampliada $(P\vert X)$ es regular, es decir, todas tienen determinante nulo.
-
-Esto es maravilloso, puesto que proporciona un conjunto de ecuaciones lineales homogéneas (nunca podrán ser no lineales ya que las incógnitas se encuentran en la misma columna de la matriz ampliada).
-
-\paragraph{Observaciones}
-Dicho lo cual, si $x\in U$, insertando el vector en las ecuaciones obtenidas, las deberá verificar a la fuerza, con lo que lo hemos conseguido, hemos caracterizado a un subespacio mediante el conjunto de soluciones de un sistema homogéneo de ecuaciones lineales.
-
-Para realizar el camino de vuelta, es decir, deducir unas ecuaciones paramétricas a partir de unas implícitas, basta resolver el sistema de ecuaciones homogéneo (cosa siempre posible).
-
-Con lo que tenemos:
+Como primera obviedad, es claro que los vectores que conforman $\mc{B}'$ son vectores de $E$, luego admiten una escritura única en términos de $\mc{B}$. Escribamos estas escrituras únicas (valga la redundancia)
 \begin{equation*}
-	\doublebox{\textrm{BASE}}\rightleftarrows\doublebox{\textrm{EC. PARAMÉTRICAS}}\rightleftarrows\doublebox{\textrm{EC. CARTESIANAS}}
+	\begin{array}{c}
+		e_1' = \alpha_1^1e_1 +\dots+\alpha_n^1e_n\\
+		\cdots\\
+		e_n' = \alpha_1^ne_1 +\dots+\alpha_n^ne_n
+	\end{array}
 \end{equation*}
+Escrito así, nada parece tener sentido, sin embargo, si lo escribimos de forma matricial obtenemos
+\begin{equation*}
+	\begin{pmatrix}
+	e_1'\\
+	\cdots\\
+	e_n'
+	\end{pmatrix}=\begin{pmatrix}
+	\alpha_1^1 & \cdots & \alpha_n^1\\
+	\cdots & \cdots & \cdots\\
+	\alpha_1^n & \cdots & \alpha_n^n
+	\end{pmatrix}\begin{pmatrix}
+	e_1\\
+	\cdots\\
+	e_n
+	\end{pmatrix}
+\end{equation*}
+Antes nos aparecieron matrices fila cuyos coeficientes eran los vectores de una base, ahora nos aparecen vectores columna. Como ya introducimos una notación para el anterior caso y sería desagradable introducir más (la memoria humana es escasa), vamos a trasponer toda la ecuación, obteniendo
+\begin{equation*}
+	\begin{pmatrix}
+	e_1' & \cdots & e_n'
+	\end{pmatrix}=\begin{pmatrix}
+	e_1 & \cdots & e_n
+	\end{pmatrix}\begin{pmatrix}
+	\alpha_1^1 & \cdots & \alpha_1^n\\
+	\cdots & \cdots & \cdots\\
+	\alpha_n^1 & \cdots & \alpha_n^n
+	\end{pmatrix}
+\end{equation*}
+Denotando por $P$ a la matriz de coeficientes de la ecuación anterior obtenemos la expresión reducida
+\begin{equation*}
+	\mc{B}'=\mc{B}P
+\end{equation*}
+Sabemos que $x$ se escribe en términos de $\mc{B}'$ como $x=\mc{B'}X'$. Por la ecuación anterior tenemos que $x=\mc{B}PX'$. Además, por la ecritura de $x$ respecto de $\mc{B}$ sabemos que $x=\mc{B}X$. Combinando expresiones tenemos que
+\begin{equation*}
+	\mc{B}X=\mc{B}PX'\sii\mc{B}X-\mc{B}PX'=0\sii\mc{B}(X-PX')=0
+\end{equation*}
+Si nos fijamos, $X-PX'$ es un vector columna de coeficientes, a los que llamaremos $\beta_1,\dots,\beta_n$, luego tenemos que
+\begin{equation*}
+	\mc{B}(X-PX')=e_1\beta_1+\dots+e_n\beta_n=0
+\end{equation*}
+Como $\{e_1,\dots,e_n\}$ es una base, es un conjunto de vectores linealmente independientes, y, por tanto, a la fuerza se tiene que $\beta_1=\dots=\beta_n=0$, por lo que $X-PX'=0$. Dicho de otra forma, se tiene que
+\begin{equation*}
+	X = PX'
+\end{equation*}
+Para recordar esta sencilla fórmula, únicamente hay que fijarse en que las columnas de $P$ se corresponden con la escritura de los vectores de $\mc{B}'$ en función de la base $\mc{B}$. A partir de ahora llamaremos a la matriz $P$, \tbi[matriz!de cambio de base]{matriz de cambio de base}.
 
-Antes de meternos con el segundo método (que aligera los cálculos), necesitamos ver la relación que existe entre el número de ecuaciones cartesianas y la dimensión del subespacio al que caracterizan.
+Es importante notar que $P$ es una matriz invertible, ya que sus columnas son linealmente independientes (por ser $\mc{B}'$ una base de $E$).
 
-\begin{prop}[Ecuaciones Cartesianas y Dimensión]
-	Sea $U$ un subespacio vectorial de dimensión $r$ de $E$, el número de ecuaciones cartesianas esenciales que le caracteriza es igual a su codimensión.
-\end{prop}
-\begin{proof}
-	Dado un sistema homogéneo de $n$ ecuaciones lineales, para que su conjunto de soluciones dependa de $r$ parámetros, es decir, para que obtenegamos unas ecuaciones paramétricas con $r$ incógnitas, debe haber exactamente $n-r$ ``ecuaciones esenciales''.
-\end{proof}
-\paragraph{Método de Eliminación de Parámetros} Para obtener unas ecuaciones cartesianas a partir de unas ecuaciones paramétricas, basta interpretar a las ecuaciones paramétricas como la solución al sistema homogéneo de ecuaciones lineales que queremos encontrar. Es decir, deberemos aplicar el algoritmo de Gauss--Jordan al revés.
+Además, como cosa curiosa, se puede demostrar que todos las matrices regulares se corresponden con una matriz de cambio entre dos bases. Demostrarlo no es complicado y se deja al lector.

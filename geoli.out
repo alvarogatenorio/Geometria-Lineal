@@ -44,8 +44,8 @@
 \BOOKMARK [1][-]{section.4.3}{Proyecciones C\363nicas}{chapter.4}% 44
 \BOOKMARK [1][-]{section.4.4}{Homograf\355as}{chapter.4}% 45
 \BOOKMARK [2][-]{subsection.4.4.1}{Homograf\355as y Teor\355a de Grupos}{section.4.4}% 46
-\BOOKMARK [1][-]{section.4.5}{Aplicaciones Proyectivas y Matrices}{chapter.4}% 47
-\BOOKMARK [2][-]{subsection.4.5.1}{Recordatorio de \301lgebra Lineal}{section.4.5}% 48
+\BOOKMARK [1][-]{section.4.5}{Aplicaciones proyectivas y matrices}{chapter.4}% 47
+\BOOKMARK [2][-]{subsection.4.5.1}{Matrices y aplicaciones lineales \(breve recordatorio\)}{section.4.5}% 48
 \BOOKMARK [2][-]{subsection.4.5.2}{Matriz Asociada a una Aplicaci\363n Proyectiva}{section.4.5}% 49
 \BOOKMARK [2][-]{subsection.4.5.3}{Transformaciones de M\366bius}{section.4.5}% 50
 \BOOKMARK [0][-]{chapter.5}{Raz\363n Doble}{part.1}% 51
@@ -113,7 +113,4 @@
 \BOOKMARK [0][-]{appendix.Alph1}{Repaso de geometr\355a vectorial}{part.3}% 113
 \BOOKMARK [1][-]{section.Alph1.1}{Algunos resultados de \341lgebra matricial}{appendix.Alph1}% 114
 \BOOKMARK [1][-]{section.Alph1.2}{Coordenadas y cambios de base}{appendix.Alph1}% 115
-\BOOKMARK [2][-]{subsection.Alph1.2.1}{Cambios de base}{section.Alph1.2}% 116
-\BOOKMARK [1][-]{section.Alph1.3}{Ecuaciones de Subespacios}{appendix.Alph1}% 117
-\BOOKMARK [2][-]{subsection.Alph1.3.1}{Existencia de las Ecuaciones Cartesianas}{section.Alph1.3}% 118
-\BOOKMARK [0][-]{section*.29}{\315ndice general}{part.3}% 119
+\BOOKMARK [0][-]{section*.24}{\315ndice general}{part.3}% 116

@@ -209,7 +209,7 @@ Para el lector que haya optado por omitir la demostración del lema \ref{C2_lem_
 	\[W^\top:=\{u\in E\tq \alpha(u)=0\ \forall\alpha\in W\}\]
 \end{defi}
 
-Es claro que esto no es más que la imagen inversa de la aplicación del lema \ref{C2_lem_correspondenciaAnulador}, que asigna a cada subespacio de $E$ su anulador correspondiente. Como ese mismo lema demuestra que tal aplicación es biyectiva es trivial deducir que:
+Es claro que esto no es más que la imagen inversa de la aplicación del lema \ref{C2_lem_correspondenciaAnulador}, que asigna a cada subespacio de $E$ su anulador correspondiente. Como ese mismo lema demuestra que tal aplicación es biyectiva, es trivial deducir que:
 \begin{equation}
 	\label{C2_eq_involutividad}
 	(W^{\perp})^{\top}=W
@@ -242,7 +242,7 @@ Veamos a continuación una serie de propiedades que nos serán de gran ayuda cua
 \end{prop}
 \begin{proof}
 	\begin{enumerate}
-		\item \begin{itemize}
+		\item \ \ \begin{itemize}
 			\item[$\bra$] Dado un $\alpha\in U^\perp$, veamos que $\alpha\in W^\perp$. En efecto, $\alpha(u)=0$ para todo $u\in U$, pero como $W\subset U$ se tiene que $\alpha(w)=0$ para todo $w\in W$, luego $\alpha\in W^\perp$.
 			
 			\item[$\bla$] Sea $w\in W$, veamos que $w\in U$. Es claro que $\alpha(w)=0$ para toda $\alpha \in W^{\perp}$. Como $U^{\perp}\subset W^{\perp}$ se tiene que $\beta (w)=0$ para toda $\beta\in U^{\perp}$. Luego $w$ pertenece al antianulador del anulador de $U$. Por la ecuación \eqref{C2_eq_involutividad} se tiene que $w\in (U^\perp)^\top=U$.
@@ -253,13 +253,13 @@ Veamos a continuación una serie de propiedades que nos serán de gran ayuda cua
 		\item Dado $\alpha\in U^\perp + W^\perp$, veamos que $\alpha\in (U\cap W)^\perp$. Usando que $\alpha\in U^\perp + W^\perp$ tenemos que $\alpha=\beta+\gamma$ donde $\beta\in U^\perp$ y $\gamma\in W^\perp$. Para probar que pertenece al anulador de la intersección, tomemos un $\xi\in U\cap W$ arbitrario y veamos que $\alpha$ lo anula. En efecto:
 		\[\alpha(\xi)=(\beta+\gamma)(\xi)=\beta(\xi)+\gamma(\xi)=0\]
 		Acabamos de ver que $U^\perp+W^\perp\subset(U\cap W)^\perp$. Para ver la igualdad, veamos que ambos tienen la misma dimensión. Para ello usaremos la fórmula de Grassmann, el apartado anterior de esta demostración y la observación \ref{C2_obs_dim_anulador}:
-		\begin{multline}
-			\dim(U^\perp+W^\perp)=\dim(U^\perp)+\dim(W^\perp)-\dim(U^\perp\cap W^\perp)=\\
-			=\dim(U^\perp)+\dim(W^\perp)-\dim((U+ W)^\perp)=\\
-			=n-(\dim(U)+\dim(W)-\dim(U+W))=\\
-			=n-(\dim(U\cap W))=\\
-			=\dim((U\cap W)^\perp)
-		\end{multline}
+		\begin{align}
+			\dim(U^\perp+W^\perp)&=\dim(U^\perp)+\dim(W^\perp)-\dim(U^\perp\cap W^\perp)=\\
+			&=\dim(U^\perp)+\dim(W^\perp)-\dim((U+ W)^\perp)=\\
+			&=n-(\dim(U)+\dim(W)-\dim(U+W))=\\
+			&=n-(\dim(U\cap W))=\\
+			&=\dim((U\cap W)^\perp)
+		\end{align}
 	\end{enumerate}
 	Con lo que concluye la demostración.
 \end{proof}

@@ -253,13 +253,13 @@ Veamos a continuación una serie de propiedades que nos serán de gran ayuda cua
 		\item Dado $\alpha\in U^\perp + W^\perp$, veamos que $\alpha\in (U\cap W)^\perp$. Usando que $\alpha\in U^\perp + W^\perp$ tenemos que $\alpha=\beta+\gamma$ donde $\beta\in U^\perp$ y $\gamma\in W^\perp$. Para probar que pertenece al anulador de la intersección, tomemos un $\xi\in U\cap W$ arbitrario y veamos que $\alpha$ lo anula. En efecto:
 		\[\alpha(\xi)=(\beta+\gamma)(\xi)=\beta(\xi)+\gamma(\xi)=0\]
 		Acabamos de ver que $U^\perp+W^\perp\subset(U\cap W)^\perp$. Para ver la igualdad, veamos que ambos tienen la misma dimensión. Para ello usaremos la fórmula de Grassmann, el apartado anterior de esta demostración y la observación \ref{C2_obs_dim_anulador}:
-		\begin{align}
+		\begin{align*}
 			\dim(U^\perp+W^\perp)&=\dim(U^\perp)+\dim(W^\perp)-\dim(U^\perp\cap W^\perp)=\\
 			&=\dim(U^\perp)+\dim(W^\perp)-\dim((U+ W)^\perp)=\\
 			&=n-(\dim(U)+\dim(W)-\dim(U+W))=\\
 			&=n-(\dim(U\cap W))=\\
 			&=\dim((U\cap W)^\perp)
-		\end{align}
+		\end{align*}
 	\end{enumerate}
 	Con lo que concluye la demostración.
 \end{proof}
